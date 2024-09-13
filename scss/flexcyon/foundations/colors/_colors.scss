@@ -1,0 +1,31 @@
+body.theme-dark {
+    --flexcyon-cyan: #3cb9c2;
+    --flexcyon-lime-green: #a1c05c;
+    --flexcyon-orange: #cc8449;
+    --flexcyon-yellow: #c29e42;
+    --flexcyon-purple-lilac: #a461c8;
+    --flexcyon-red-salmon: #c03a47;
+    --flexcyon-blue: #5a8fcd;
+    --flexcyon-pink: #d458a3;
+}
+
+body:is(.theme-dark) {
+    /* ------------------------------ */
+    --color-red-rgb: 192, 58, 71;
+    --color-orange-rgb: 204, 132, 73;
+    --color-yellow-rgb: 194, 158, 66;
+    --color-green-rgb: 161, 192, 92;
+    --color-cyan-rgb: 60, 185, 194;
+    --color-blue-rgb: 90, 143, 205;
+    --color-purple-rgb: 164, 97, 200;
+    --color-pink-rgb: 212, 88, 163;
+    /* ------------------------------ */
+    --color-red: var(--flexcyon-red-salmon);
+    --color-orange: var(--flexcyon-orange);
+    --color-yellow: var(--flexcyon-yellow);
+    --color-green: var(--flexcyon-lime-green);
+    --color-cyan: var(--flexcyon-cyan);
+    --color-blue: var(--flexcyon-blue);
+    --color-purple: var(--flexcyon-purple-lilac);
+    --color-pink: var(--flexcyon-pink);
+}

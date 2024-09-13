@@ -1,0 +1,71 @@
+/* Modifications for alternate file tree plugin */
+@mixin unrender_tag($path_suffix) {
+    div.oz-nav-file-title[data-path$="#{$path_suffix}"] {
+        div svg {
+            display: none;
+        }
+
+        span.oz-nav-file-tag {
+            display: none;
+        }
+
+        div::after {
+            content: $path_suffix;
+            opacity: var(--dimmed);
+        }
+    }
+}
+
+body:where(.theme-dark) {
+    --oz-fta-folder-font-size: 0.875rem !important;
+
+    @include unrender_tag(".md");
+    @include unrender_tag(".pdf");
+    @include unrender_tag(".jpg");
+    @include unrender_tag(".png");
+    @include unrender_tag(".doc");
+
+    div.oz-folders-action-items.file-tree-header-fixed {
+        border-radius: unset;
+        background-color: var(--color-base-00);
+        border: unset;
+
+        svg {
+            scale: var(--upsize);
+        }
+    }
+
+    .oz-file-tree-header {
+        display: none;
+    }
+
+    .oz-icon-div {
+        svg {
+            display: none;
+        }
+
+        &::after {
+            content: "|";
+            margin-left: 1.5px;
+            color: var(--color-purple);
+            padding-inline-end: 10px;
+        }
+    }
+
+    .oz-folder-block {
+        padding-top: unset;
+        margin-inline-start: unset;
+    }
+    .oz-folder-contents{
+        border-left: unset;
+    }
+
+    .oz-folder-name {
+        transform: translateY(-2px);
+        margin: 2px 0px;
+    }
+
+    div.oz-folder-name.is-folder-active {
+        color: var(--color-blue) !important;
+    }
+}

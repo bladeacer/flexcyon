@@ -1,0 +1,15 @@
+// Base variables
+@use "./foundations/foundations";
+
+// Split by different parts of the workspace styled
+@use "./gutters/gutters";
+@use "./metadata/metadata";
+@use "./callouts/callouts";
+@use "./scrollbars/scrollbars";
+@use "./tab_containers/tab_container";
+@use "./file_explorer/file_explorer";
+@use "./collapse_icons/collapse_icons";
+@use "./workspace_tab_containers/workspace_tab_containers";
+
+// WIP move parts of this to split as defined below
+@use "./base";

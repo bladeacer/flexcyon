@@ -1,0 +1,26 @@
+body.theme-dark {
+    /* ------------------------------ */
+    --flexcyon-code-variable: var(--flexcyon-base-grey-dark);
+    --flexcyon-code-function: var(--flexcyon-yellow);
+    --flexcyon-code-operator: var(--flexcyon-orange);
+    --flexcyon-code-error: var(--flexcyon-red-salmon);
+    --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
+}
+
+body:where(.theme-dark) {
+    --code-background: var(--flexcyon-base-blue-01);
+    --code-normal: var(--flexcyon-cyan);
+    --code-comment: var(--text-faint);
+    --code-function: var(--flexcyon-code-function);
+    --code-important: var(--flexcyon-code-error);
+    --code-keyword: var(--flexcyon-code-keyword);
+    --code-property: var(--text-muted);
+    --code-operator: var(--flexcyon-code-operator);
+    --code-punctuation: var(--flexcyon-purple-lilac);
+    --code-string: var(--flexcyon-lime-green);
+    --code-tag: var(--flexcyon-base-grey-dark);
+
+    .cm-s-obsidian span.cm-inline-code {
+        color: var(--flexcyon-orange);
+    }
+}

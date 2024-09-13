@@ -1,0 +1,14 @@
+body:where(.theme-dark){
+    --tab-text-color: var(--flexcyon-base-blue-05);
+    --tab-text-color-focused: var(--flexcyon-base-blue-05);
+
+    /* Tone down this color */
+    --tab-text-color-active: var(--text-accent);
+    --tab-text-color-focused-active: var(--text-accent);
+    --tab-text-color-focused-active-current: var(--text-accent);
+    --tab-divider-color: var(--titlebar-background);
+    --tab-outline-width: 0px;
+    --tab-curve: 0px;
+    --tab-radius: 0px;
+    --tab-radius-active: 0px;
+}

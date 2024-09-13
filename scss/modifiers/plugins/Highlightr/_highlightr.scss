@@ -1,0 +1,67 @@
+body:is(.theme-dark) {
+    :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
+        background: rgba(var(--color-pink-rgb), 65%)
+    }
+
+    :is(.hltr-red, mark.hltr-red, .markdown-preview-view mark.hltr-red) {
+        background: rgba(var(--color-red-rgb), 65%)
+    }
+
+    :is(.hltr-orange, mark.hltr-orange, .markdown-preview-view mark.hltr-orange) {
+        background: rgba(var(--color-orange-rgb), 65%)
+    }
+
+    :is(.hltr-yellow, mark.hltr-yellow, .markdown-preview-view mark.hltr-yellow) {
+        background: rgba(var(--color-yellow-rgb), 65%)
+    }
+
+    :is(.hltr-green, mark.hltr-green, .markdown-preview-view mark.hltr-green) {
+        background: rgba(var(--color-green-rgb), 65%)
+    }
+
+    :is(.hltr-cyan, mark.hltr-cyan, .markdown-preview-view mark.hltr-cyan) {
+        background: rgba(var(--color-cyan-rgb), 65%)
+    }
+
+    :is(.hltr-blue, mark.hltr-blue, .markdown-preview-view mark.hltr-blue) {
+        background: rgba(var(--color-blue-rgb), 65%)
+    }
+
+    :is(.hltr-purple, mark.hltr-purple, .markdown-preview-view mark.hltr-purple) {
+        background: rgba(var(--color-purple-rgb), 65%)
+    }
+}
+
+// TODO: Refactor with @mixin to make this code less repetitive
+
+body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+body.theme-dark.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    --lowlight-background: var(--background-primary);
+    background-image: linear-gradient(0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important
+}
+
+body.theme-dark.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
+    --floating-background: var(--background-primary);
+    --floating-size: 20%;
+    padding-bottom: .1em;
+    background-image: linear-gradient(0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important
+}
+
+body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0;
+}

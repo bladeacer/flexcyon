@@ -1,0 +1,13 @@
+
+body.theme-dark {
+    --dimmed: 0.55;
+    --upsize: 103%;
+}
+
+/* ------------------------------ */
+body:where(.theme-dark) {
+    --icon-stroke: 2px;
+    --icon-color-active: var(--interactive-accent);
+    --icon-color-focused: var(--interactive-accent);
+    --clickable-icon-radius: 0;
+}

@@ -1,0 +1,14 @@
+// Display none scrollbar in settings container
+body:where(.theme-dark) {
+    --scrollbar-bg: transparent;
+    div.modal-content.vertical-tabs-container {
+        & ::-webkit-scrollbar-thumb {
+            display: none;
+        }
+    }
+}
+
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    background-color: var(--scrollbar-bg);
+    width: 7px;
+}

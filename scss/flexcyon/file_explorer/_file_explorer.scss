@@ -1,0 +1,19 @@
+@mixin unrender_tag($path_suffix){
+    div[data-path$="#{$path_suffix}"]{
+        div.nav-file-tag{
+            display: none;
+        }
+        div.nav-file-title-content::after{
+            content: $path_suffix;
+            opacity: var(--dimmed);
+        }
+    }
+}
+
+body:where(.theme-dark) {
+    @include unrender_tag(".md");
+    @include unrender_tag(".pdf");
+    @include unrender_tag(".jpg");
+    @include unrender_tag(".png");
+    @include unrender_tag(".doc");
+}

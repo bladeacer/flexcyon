@@ -1,0 +1,12 @@
+/* Modifications for tab containers */
+
+body:where(.theme-dark) {
+
+    .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active)>.workspace-tab-header-inner {
+        opacity: 1;
+    }
+
+    .workspace-tabs:not(.mod-stacked) .workspace-tab-header>.workspace-tab-header-inner {
+        opacity: var(--dimmed);
+    }
+}

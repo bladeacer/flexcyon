@@ -1,0 +1,12 @@
+body.theme-dark {
+    --flexcyon-accent: #92a871;
+    --flexcyon-accent-h: 107.5;
+    --flexcyon-accent-s: 74.5%;
+    --flexcyon-accent-l: 57.5%;
+}
+
+body:is(.theme-dark) {
+    --accent-h: var(--flexcyon-accent-h);
+    --accent-s: var(--flexcyon-accent-s);
+    --accent-l: var(--flexcyon-accent-l);
+}

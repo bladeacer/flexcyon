@@ -1,0 +1,40 @@
+body.theme-dark {
+    /* ------------------------------ */
+    --flexcyon-base-blue-01: #14161c;
+    --flexcyon-base-blue-02: #191d28;
+    --flexcyon-base-blue-03: #24262c;
+    --flexcyon-base-blue-04: #4d566b;
+    --flexcyon-base-blue-05: #6f7685;
+    /* ------------------------------ */
+    --flexcyon-base-grey-dark: #898c93;
+    --flexcyon-base-grey-light: #d3d5d3;
+    /* ------------------------------ */
+    --flexcyon-base-grey-tab: #71777f;
+    --flexyon-base-grey-token: #586582;
+    --flexcyon-base-grey-scroll: #3f495e;
+    --flexcyon-base-grey-scroll-hover: #5c6782;
+    /* ------------------------------ */
+
+    --flexcyon-base-blue-01-02-mix: color-mix(in hsl, var(--flexcyon-base-blue-01), var(--flexcyon-base-blue-02));
+    --flexcyon-base-blue-02-03-mix: color-mix(in hsl, var(--flexcyon-base-blue-02), var(--flexcyon-base-blue-03));
+    --flexcyon-base-blue-03-04-mix: color-mix(in hs1, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
+    --flexcyon-base-blue-04-05-mix: color-mix(in hs1, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
+
+    --flexcyon-base-grey-mix: color-mix(in hs1, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
+}
+
+body:is(.theme-dark) {
+    /* ------------------------------ */
+    --color-base-00: var(--flexcyon-base-blue-01);
+    --color-base-05: var(--flexcyon-base-blue-01-02-mix);
+    --color-base-10: var(--flexcyon-base-blue-02);
+    --color-base-20: var(--flexcyon-base-blue-02-03-mix);
+    --color-base-25: var(--flexcyon-base-blue-03);
+    --color-base-30: var(--flexcyon-base-blue-03-04-mix);
+    --color-base-35: var(--flexcyon-base-blue-04);
+    --color-base-40: var(--flexcyon-base-blue-04-05-mix);
+    --color-base-50: var(--flexcyon-base-blue-05);
+    --color-base-60: var(--flexcyon-base-grey-dark);
+    --color-base-70: var(--flexcyon-base-grey-mix);
+    --color-base-100: var(--flexcyon-base-grey-light);
+}

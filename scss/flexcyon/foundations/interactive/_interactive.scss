@@ -1,0 +1,9 @@
+
+body:is(.theme-dark) {
+    /* ------------------------------ */
+    --interactive-normal: color-mix(in hsl shorter hue, var(--background-primary) 75%, transparent);
+    --interactive-hover: var(--background-primary);
+    --interactive-accent: var(--flexcyon-accent);
+    --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+    --interactive-accent-hover: color-mix(in hsl shorter hue, var(--flexcyon-accent) 75%, transparent);
+}

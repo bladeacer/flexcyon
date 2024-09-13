@@ -1,0 +1,12 @@
+
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
+    color: var(--color-cyan);
+}
+
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-meta {
+    color: var(--color-orange);
+}
+
+body:where(.theme-dark) .cm-hmd-frontmatter {
+    color: var(--color-green);
+}

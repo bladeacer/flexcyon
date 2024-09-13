@@ -1,0 +1,10 @@
+body:where(.theme-dark) {
+    div.cm-contentContainer>div.cm-gutters {
+        padding-top: unset !important;
+    }
+
+    .cm-gutterElement.cm-active {
+        /* Active line changes colour */
+        color: rgba(var(--color-green-rgb), 60%);
+    }
+}

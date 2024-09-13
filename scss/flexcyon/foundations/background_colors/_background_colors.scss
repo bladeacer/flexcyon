@@ -1,0 +1,13 @@
+body:is(.theme-dark){
+    /* ------------------------------ */
+    --background-primary: var(--flexcyon-base-blue-02);
+    --background-primary-alt: var(--flexcyon-base-blue-03);
+    --background-secondary: var(--flexcyon-base-blue-01);
+    --background-secondary-alt: var(--flexcyon-base-blue-02);
+    --background-modifier-hover: var(--flexcyon-base-blue-03);
+    --background-modifier-active-hover: var(--flexcyon-base-blue-03);
+    --background-modifier-border: var(--flexcyon-base-blue-02-03-mix);
+    --background-modifier-border-hover: var(--flexcyon-accent);
+    --background-modifier-border-focus: var(--flexcyon-base-blue-04);
+    --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
+}

@@ -1,0 +1,9 @@
+body:where(.theme-dark) {
+    --link-color: var(--flexcyon-purple-lilac);
+    --link-color-hover: var(--flexcyon-palette-lilac-hover);
+    --link-unresolved-color: var(--flexcyon-purple-lilac);
+    --link-unresolved-decoration-style: dashed;
+    --link-unresolved-decoration-color: var(--flexcyon-purple-lilac);
+    --link-external-color: var(--flexcyon-purple-lilac);
+    --link-external-color-hover: var(--flexcyon-palette-lilac-hover);
+}
