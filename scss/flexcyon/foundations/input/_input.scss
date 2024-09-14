@@ -1,0 +1,10 @@
+body:where(.theme-dark) {
+    --input-radius: 0px;
+}
+
+body:is(.theme-dark) .metadata-input-longtext::selection,
+body:is(.theme-dark) input::selection,
+body:is(.theme-dark) textarea::selection {
+    background-color: var(--flexcyon-base-blue-03-04-mix);
+}
+

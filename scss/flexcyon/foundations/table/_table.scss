@@ -1,0 +1,10 @@
+body:where(.theme-dark) {
+    --table-background: var(--background-primary);
+    --table-header-background-hover: var(--table-background);
+    --table-header-size: larger;
+}
+
+body:is(.theme-dark) table:not(.table-view-table) {
+    width: 100%;
+}
+

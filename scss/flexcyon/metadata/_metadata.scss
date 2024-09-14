@@ -1,6 +1,6 @@
 /* Modifications to not display properties in reading mode */
 body:where(.theme-dark) {
-    --metadata-display-reading: none;
+    // --metadata-display-reading: none;
     --metadata-label-text-color: var(--flexcyon-purple-lilac);
     --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
 

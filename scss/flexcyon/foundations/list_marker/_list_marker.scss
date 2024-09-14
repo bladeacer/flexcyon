@@ -1,0 +1,6 @@
+body:where(.theme-dark) {
+    --list-marker-color: var(--flexcyon-purple-lilac);
+    --list-marker-color-hover: var(--flexcyon-palette-lilac-hover);
+    --list-marker-color-collapsed: var(--flexcyon-lime-green);
+}
+

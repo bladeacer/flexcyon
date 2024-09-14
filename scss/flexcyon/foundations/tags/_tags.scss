@@ -1,4 +1,3 @@
-
 body:where(.theme-dark) {
     --tag-size: var(--code-size);
     --tag-color: var(--flexcyon-cyan);
@@ -7,3 +6,8 @@ body:where(.theme-dark) {
     --tag-background: color-mix(in hsl shorter hue, var(--tag-color) 25%, transparent);
     --tag-background-hover: color-mix(in hsl shorter hue, var(--tag-color-hover) 25%, transparent);
 }
+
+.is-mobile.theme-dark {
+    --tag-background: color-mix(in hsl shorter hue, var(--tag-color) 25%, transparent);
+}
+

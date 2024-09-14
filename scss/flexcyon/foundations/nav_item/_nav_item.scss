@@ -1,0 +1,7 @@
+body:where(.theme-dark) {
+    --nav-item-color: var(--text-muted);
+    --nav-item-color-active: var(--interactive-accent);
+    --nav-item-color-selected: var(--flexcyon-orange);
+    --nav-item-background-selected: var(--flexcyon-base-blue-03);
+}
+

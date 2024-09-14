@@ -1,7 +1,15 @@
-body:where(.theme-dark) .checkbox-container {
-    background-color: var(--flexcyon-red-salmon);
+body:is(.theme-dark) {
+    --checkbox-color: var(--flexcyon-purple-lilac);
+    --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
+    --checkbox-border-color: var(--flexcyon-blue);
+    --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
 }
 
-body:where(.theme-dark) .checkbox-container.is-enabled {
+body:where(.theme-dark) {
+  .checkbox-container {
+    background-color: var(--flexcyon-red-salmon);
+  }
+  .checkbox-container.is-enabled {
     background-color: var(--flexcyon-lime-green);
+  }
 }

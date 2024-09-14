@@ -1,0 +1,6 @@
+body:where(.theme-dark) {
+    --graph-line: var(--flexcyon-base-blue-03);
+    --graph-node-unresolved: var(--flexcyon-red-salmon);
+    --graph-node-tag: var(--flexcyon-purple-lilac);
+}
+

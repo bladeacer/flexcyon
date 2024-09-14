@@ -1,0 +1,13 @@
+body:where(.theme-dark) {
+  .workspace-split.mod-left-split>.workspace-leaf-resize-handle {
+    border-right-width: 0px;
+  }
+  .workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+    border-left-width: 0px;
+  }
+
+  .workspace-split.mod-horizontal>*>.workspace-leaf-resize-handle {
+    border-bottom-width: 0px;
+  }
+}
+
