@@ -443,6 +443,7 @@ body:where(.theme-dark) .collapse-icon svg {
 }
 body:where(.theme-dark) .collapse-icon::after {
   content: "|";
+  scale: 1.25;
   margin-left: 1.5px;
   color: var(--color-purple);
 }
@@ -460,6 +461,50 @@ body:where(.theme-dark) .nav-folder-children .tree-item-children {
 }
 body:where(.theme-dark) .nav-folder-children .nav-folder-children .tree-item-children {
   border-inline-start: var(--nav-indentation-guide-width) solid rgba(var(--color-cyan-rgb), 0.4);
+}
+body:where(.theme-dark) .markdown-preview-view .collapse-indicator::after,
+body:where(.theme-dark) .cm-fold-indicator .collapse-indicator::after {
+  content: "-";
+  margin-inline-start: -1px;
+  font-size: inherit;
+  color: inherit;
+  scale: unset;
+}
+body:where(.theme-dark) .collapse-indicator {
+  transform: translateY(-100%);
+}
+body:where(.theme-dark) .list-collapse-indicator.collapse-indicator {
+  transform: unset;
+}
+body:where(.theme-dark) .list-collapse-indicator.collapse-indicator.is-collapsed {
+  transform: translateY(-0.25px);
+}
+body:where(.theme-dark) .cm-fold-indicator .collapse-indicator {
+  transform: translateY(-1px);
+}
+body:where(.theme-dark) .cm-fold-indicator .collapse-indicator.is-collapsed {
+  transform: translateY(-3px);
+}
+body:where(.theme-dark) .collapse-indicator.is-collapsed {
+  transform: translateY(-107.5%);
+}
+body:where(.theme-dark) .collapse-indicator.is-collapsed::after,
+body:where(.theme-dark) .cm-fold-indicator .collapse-indicator.is-collapsed::after {
+  content: "+";
+  scale: 0.95;
+}
+body:where(.theme-dark) .HyperMD-list-line .cm-fold-indicator .collapse-indicator {
+  transform: translateY(-2.35%);
+}
+body:where(.theme-dark) .HyperMD-list-line .cm-fold-indicator .collapse-indicator, body:where(.theme-dark) .list-collapse-indicator.collapse-indicator {
+  color: var(--text-accent);
+}
+body:where(.theme-dark) .HyperMD-list-line .cm-fold-indicator .collapse-indicator::after, body:where(.theme-dark) .list-collapse-indicator.collapse-indicator::after {
+  content: "|";
+}
+body:where(.theme-dark) .HyperMD-list-line .cm-fold-indicator .collapse-indicator,
+body:where(.theme-dark) .list-collapse-indicator.collapse-indicator.is-collapsed {
+  color: var(--color-purple);
 }
 
 body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {

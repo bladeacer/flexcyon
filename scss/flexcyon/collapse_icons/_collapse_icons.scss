@@ -6,6 +6,7 @@ body:where(.theme-dark) {
 
         &::after {
             content: "|";
+            scale: 1.25;
             margin-left: 1.5px;
             color: var(--color-purple);
         }
@@ -24,6 +25,7 @@ body:where(.theme-dark) {
     }
 
     $mild: 0.4;
+
     .tree-item-children {
         border-inline-start: var(--nav-indentation-guide-width) solid rgba(var(--color-blue-rgb), $mild);
     }
@@ -35,4 +37,65 @@ body:where(.theme-dark) {
     .nav-folder-children .nav-folder-children .tree-item-children {
         border-inline-start: var(--nav-indentation-guide-width) solid rgba(var(--color-cyan-rgb), $mild);
     }
+
+    .markdown-preview-view .collapse-indicator,
+    .cm-fold-indicator .collapse-indicator {
+        &::after {
+            content: "-";
+            margin-inline-start: -1px;
+            font-size: inherit;
+            color: inherit;
+            scale: unset;
+        }
+    }
+
+    .collapse-indicator {
+        transform: translateY(-100%);
+    }
+
+    .list-collapse-indicator.collapse-indicator {
+        transform: unset;
+    }
+
+    .list-collapse-indicator.collapse-indicator.is-collapsed {
+        transform: translateY(-0.25px);
+    }
+
+    .cm-fold-indicator .collapse-indicator {
+        transform: translateY(-1px);
+    }
+
+    .cm-fold-indicator .collapse-indicator.is-collapsed {
+        transform: translateY(-3px);
+    }
+
+    .collapse-indicator.is-collapsed {
+        transform: translateY(-107.5%);
+    }
+
+    .collapse-indicator.is-collapsed,
+    .cm-fold-indicator .collapse-indicator.is-collapsed {
+        &::after {
+            content: "+";
+            scale: 0.95;
+        }
+    }
+
+    .HyperMD-list-line .cm-fold-indicator .collapse-indicator{
+        transform: translateY(-2.35%);
+    }
+
+    .HyperMD-list-line .cm-fold-indicator .collapse-indicator, .list-collapse-indicator.collapse-indicator{
+        color: var(--text-accent);
+
+        &::after {
+            content: "|";
+        }
+    }
+
+    .HyperMD-list-line .cm-fold-indicator .collapse-indicator,
+    .list-collapse-indicator.collapse-indicator.is-collapsed {
+        color: var(--color-purple);
+    }
+
 }
