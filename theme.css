@@ -222,7 +222,7 @@ body:is(.theme-dark) {
   --background-modifier-hover: var(--flexcyon-base-blue-03);
   --background-modifier-active-hover: var(--flexcyon-base-blue-03);
   --background-modifier-border: var(--flexcyon-base-blue-02-03-mix);
-  --background-modifier-border-hover: hsla(var(--flexcyon-accent-h), var(--flexcyon-accent-s), var(--flexcyon-accent-l), 0.4);
+  --background-modifier-border-hover: hsla(var(--flexcyon-accent-h), var(--flexcyon-accent-s), var(--flexcyon-accent-l), var(--dimmed));
   --background-modifier-border-focus: var(--flexcyon-base-blue-04);
   --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
 }
@@ -448,6 +448,25 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
+body:where(.theme-dark) .cm-panel.cm-vim-panel {
+  font-weight: bold;
+}
+
+body:where(.theme-dark) .status-bar {
+  transform: translateX(83%);
+  transition: transform 0.3s ease;
+}
+body:where(.theme-dark) .status-bar::before {
+  content: "Show status bar";
+  margin-inline-start: 4px;
+}
+body:where(.theme-dark) .status-bar:hover, body:where(.theme-dark) .status-bar :active, body:where(.theme-dark) .status-bar :focus:focus-within {
+  transform: unset;
+}
+body:where(.theme-dark) .status-bar:hover::before, body:where(.theme-dark) .status-bar :active::before, body:where(.theme-dark) .status-bar :focus:focus-within::before {
+  display: none;
+}
+
 body:where(.theme-dark) {
   --radius-s: 2px;
   --radius-m: 4px;
@@ -602,7 +621,10 @@ body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
 
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) {
-  --oz-fta-folder-font-size: 0.875rem !important;
+  --oz-fta-folder-font-size: 1rem !important;
+}
+body:where(.theme-dark) div.oz-nav-file-title {
+  font-size: 0.9rem;
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".md"] div svg {
   display: none;
@@ -614,6 +636,9 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".md"] div::after {
   content: ".md";
   opacity: var(--dimmed);
 }
+body:where(.theme-dark) div.oz-nav-file-title {
+  font-size: 0.9rem;
+}
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".pdf"] div svg {
   display: none;
 }
@@ -623,6 +648,9 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".pdf"] span.oz-nav-fil
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".pdf"] div::after {
   content: ".pdf";
   opacity: var(--dimmed);
+}
+body:where(.theme-dark) div.oz-nav-file-title {
+  font-size: 0.9rem;
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".jpg"] div svg {
   display: none;
@@ -634,6 +662,9 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".jpg"] div::after {
   content: ".jpg";
   opacity: var(--dimmed);
 }
+body:where(.theme-dark) div.oz-nav-file-title {
+  font-size: 0.9rem;
+}
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".png"] div svg {
   display: none;
 }
@@ -643,6 +674,9 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".png"] span.oz-nav-fil
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".png"] div::after {
   content: ".png";
   opacity: var(--dimmed);
+}
+body:where(.theme-dark) div.oz-nav-file-title {
+  font-size: 0.9rem;
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".doc"] div svg {
   display: none;

@@ -1,0 +1,6 @@
+
+body:where(.theme-dark) {
+  .cm-panel.cm-vim-panel {
+    font-weight: bold;
+  }
+}

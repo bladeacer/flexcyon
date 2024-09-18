@@ -1,5 +1,8 @@
 /* Modifications for alternate file tree plugin */
 @mixin unrender_tag($path_suffix) {
+    div.oz-nav-file-title {
+      font-size: 0.9rem;
+    }
     div.oz-nav-file-title[data-path$="#{$path_suffix}"] {
         div svg {
             display: none;
@@ -17,7 +20,7 @@
 }
 
 body:where(.theme-dark) {
-    --oz-fta-folder-font-size: 0.875rem !important;
+    --oz-fta-folder-font-size: 1rem !important;
 
     @include unrender_tag(".md");
     @include unrender_tag(".pdf");

@@ -1,0 +1,16 @@
+body:where(.theme-dark) {
+  .status-bar {
+    transform: translateX(83%);
+    transition: transform 0.3s ease;
+    &::before{
+      content: "Show status bar";
+      margin-inline-start: 4px;
+    }
+    &:hover,:active,:focus:focus-within {
+      transform: unset;
+      &::before{
+        display: none;
+      }
+    } 
+  }
+}
