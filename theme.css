@@ -222,7 +222,7 @@ body:is(.theme-dark) {
   --background-modifier-hover: var(--flexcyon-base-blue-03);
   --background-modifier-active-hover: var(--flexcyon-base-blue-03);
   --background-modifier-border: var(--flexcyon-base-blue-02-03-mix);
-  --background-modifier-border-hover: hsla(var(--flexcyon-accent-h), var(--flexcyon-accent-s), var(--flexcyon-accent-l), var(--dimmed));
+  --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--flexcyon-base-blue-04);
   --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
 }
@@ -305,9 +305,6 @@ body:is(.theme-dark) textarea::selection {
   background-color: var(--flexcyon-base-blue-03-04-mix);
 }
 
-body:where(.theme-dark) div.cm-contentContainer > div.cm-gutters {
-  padding-top: unset !important;
-}
 body:where(.theme-dark) .cm-gutterElement.cm-active {
   /* Active line changes colour */
   color: rgba(var(--color-green-rgb), 60%);
@@ -450,21 +447,6 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
 
 body:where(.theme-dark) .cm-panel.cm-vim-panel {
   font-weight: bold;
-}
-
-body:where(.theme-dark) .status-bar {
-  transform: translateX(83%);
-  transition: transform 0.3s ease;
-}
-body:where(.theme-dark) .status-bar::before {
-  content: "Show status bar";
-  margin-inline-start: 4px;
-}
-body:where(.theme-dark) .status-bar:hover, body:where(.theme-dark) .status-bar :active, body:where(.theme-dark) .status-bar :focus:focus-within {
-  transform: unset;
-}
-body:where(.theme-dark) .status-bar:hover::before, body:where(.theme-dark) .status-bar :active::before, body:where(.theme-dark) .status-bar :focus:focus-within::before {
-  display: none;
 }
 
 body:where(.theme-dark) {
@@ -806,8 +788,5 @@ body:where(.theme-dark) div.card-content-container > div > * > :where(span[alt=b
 body:where(.theme-dark) .banner img[alt=banner] {
   margin: 1px;
   border-radius: 0px 0px 10px 10px;
-}
-
-body:has(*.banner) {
-  --banner-height: 235px;
+  z-index: 0;
 }
