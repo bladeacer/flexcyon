@@ -1,5 +1,4 @@
 body:where(.theme-dark) {
-    /* Active line changes colour */
     .cm-gutterElement.cm-active {
         /* Active line changes colour */
         color: rgba(var(--color-green-rgb), 60%);

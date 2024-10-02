@@ -306,9 +306,6 @@ body:is(.theme-dark) textarea::selection {
   background-color: var(--flexcyon-base-blue-03-04-mix);
 }
 
-body:where(.theme-dark) {
-  /* Active line changes colour */
-}
 body:where(.theme-dark) .cm-gutterElement.cm-active {
   /* Active line changes colour */
   color: rgba(var(--color-green-rgb), 60%);
@@ -448,6 +445,23 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
 
 body:where(.theme-dark) .cm-panel.cm-vim-panel {
   font-weight: bold;
+}
+
+body:where(.theme-dark) .backlink-pane .tree-item.search-result {
+  padding-inline-start: 8px;
+}
+body:where(.theme-dark) .backlink-pane .search-result-file-matches {
+  padding: 10px;
+}
+body:where(.theme-dark) .backlink-pane .search-result-file-title {
+  transform: translateX(-12.5px);
+  padding-block-start: 10px;
+}
+body:where(.theme-dark) .backlink-pane .search-result-file-title div.tree-item-flair-outer > span {
+  transform: translateX(13.5px);
+}
+body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
+  transform: translateX(-7px);
 }
 
 body:where(.theme-dark) {

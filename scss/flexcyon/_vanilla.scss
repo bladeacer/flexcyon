@@ -8,10 +8,10 @@
 @use "./scrollbars/scrollbars";
 @use "./tab_containers/tab_container";
 @use "./file_explorer/file_explorer";
-// @use "./collapse_icons/collapse_icons";
 @use "./workspace_tab_containers/workspace_tab_containers";
 @use "./resize_handler/resize_handler";
 @use "./cm_panels/cm_panels";
+@use "./link_panes/link_panes";
 
 // WIP move parts of this to split as defined below
 @use "./base";
