@@ -2,17 +2,13 @@
 body:where(.theme-dark) {
     --callout-padding: var(--size-4-3) var(--size-4-6);
 
-    .markdown-source-view:is(.is-live-preview) .callout-content>pre {
-        margin: 1em 0;
-    }
-
     div.callout {
         & .callout-title {
-            margin-bottom: 12.5px;
+            padding-bottom: 12.5px;
         }
 
         & .callout-content {
-            margin: 5px 0px;
+            padding: 1rem 0px;
         }
     }
 }

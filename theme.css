@@ -225,6 +225,7 @@ body:is(.theme-dark) {
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--flexcyon-base-blue-04);
   --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
+  --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
 }
 
 body:is(.theme-dark) {
@@ -305,6 +306,9 @@ body:is(.theme-dark) textarea::selection {
   background-color: var(--flexcyon-base-blue-03-04-mix);
 }
 
+body:where(.theme-dark) {
+  /* Active line changes colour */
+}
 body:where(.theme-dark) .cm-gutterElement.cm-active {
   /* Active line changes colour */
   color: rgba(var(--color-green-rgb), 60%);
@@ -339,14 +343,11 @@ body:is(.theme-dark) .metadata-properties-heading:focus:before {
 body:where(.theme-dark) {
   --callout-padding: var(--size-4-3) var(--size-4-6);
 }
-body:where(.theme-dark) .markdown-source-view:is(.is-live-preview) .callout-content > pre {
-  margin: 1em 0;
-}
 body:where(.theme-dark) div.callout .callout-title {
-  margin-bottom: 12.5px;
+  padding-bottom: 12.5px;
 }
 body:where(.theme-dark) div.callout .callout-content {
-  margin: 5px 0px;
+  padding: 1rem 0px;
 }
 
 body:where(.theme-dark) {
@@ -602,9 +603,6 @@ body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
 }
 
 /* Modifications for alternate file tree plugin */
-body:where(.theme-dark) {
-  --oz-fta-folder-font-size: 1rem !important;
-}
 body:where(.theme-dark) div.oz-nav-file-title {
   font-size: 0.9rem;
 }
@@ -699,10 +697,7 @@ body:where(.theme-dark) .oz-folder-contents {
 }
 body:where(.theme-dark) .oz-folder-name {
   transform: translateY(-2px);
-  margin: 2px 0px;
-}
-body:where(.theme-dark) div.oz-folder-name.is-folder-active {
-  color: var(--color-blue) !important;
+  padding: 2px 0px;
 }
 
 /* Modificatiions for MiniTabs plugin */
@@ -780,13 +775,13 @@ body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-prev
 }
 
 /* Modifications for note gallery plugin with banner snippet*/
-body:where(.theme-dark) div.card-content-container > div > * > :where(span[alt=banner]) {
-  display: none !important;
+body:where(.theme-dark) div.card-content-container img[alt=banner] {
+  display: none;
 }
 
 /* Modfiications for banner snippet */
 body:where(.theme-dark) .banner img[alt=banner] {
-  margin: 1px;
+  padding: 1px;
   border-radius: 0px 0px 10px 10px;
   z-index: 0;
 }

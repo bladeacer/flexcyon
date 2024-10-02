@@ -10,4 +10,5 @@ body:is(.theme-dark){
     --background-modifier-border-hover: transparent;
     --background-modifier-border-focus: var(--flexcyon-base-blue-04);
     --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
+    --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
 }

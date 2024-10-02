@@ -1,11 +1,11 @@
 /* Modifications for note gallery plugin with banner snippet*/
-body:where(.theme-dark) div.card-content-container>div>*> :where(span[alt=banner]) {
-    display: none !important;
+body:where(.theme-dark) div.card-content-container img[alt=banner] {
+    display: none;
 }
 
 /* Modfiications for banner snippet */
 body:where(.theme-dark) .banner img[alt='banner'] {
-    margin: 1px;
+    padding: 1px;
     border-radius: 0px 0px 10px 10px;
     z-index: 0;
 }

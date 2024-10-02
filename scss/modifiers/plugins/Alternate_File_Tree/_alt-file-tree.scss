@@ -20,8 +20,6 @@
 }
 
 body:where(.theme-dark) {
-    --oz-fta-folder-font-size: 1rem !important;
-
     @include unrender_tag(".md");
     @include unrender_tag(".pdf");
     @include unrender_tag(".jpg");
@@ -65,10 +63,7 @@ body:where(.theme-dark) {
 
     .oz-folder-name {
         transform: translateY(-2px);
-        margin: 2px 0px;
+        padding: 2px 0px;
     }
 
-    div.oz-folder-name.is-folder-active {
-        color: var(--color-blue) !important;
-    }
 }
