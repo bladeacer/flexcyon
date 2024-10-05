@@ -1,6 +1,29 @@
-
 body:where(.theme-dark) {
-  .cm-panel.cm-vim-panel {
+  .cm-panel {
     font-weight: bold;
   }
+
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
+    content: "INSERT";
+    position: fixed;
+    bottom: 0.25%;
+    left: 0.5%;
+    color: var(--color-green);
+  }
+
+  .cm-editor  .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before  {
+    content: "NORMAL";
+    position: fixed;
+    bottom: 0.25%;
+    left: 0.5%;
+    color: var(--color-orange);
+  }
+
+  .cm-editor > .cm-scroller + .cm-panels .cm-panel div div::before {
+    content: "COMMAND";
+    transform: translate(-5%, 18%);
+    color: var(--color-red);
+  }
+
+  
 }

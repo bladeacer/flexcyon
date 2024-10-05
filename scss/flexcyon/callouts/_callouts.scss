@@ -3,12 +3,9 @@ body:where(.theme-dark) {
     --callout-padding: var(--size-4-3) var(--size-4-6);
 
     div.callout {
-        & .callout-title {
-            padding-bottom: 12.5px;
-        }
-
-        & .callout-content {
-            padding: 1rem 0px;
+        & .callout-icon {
+            padding-inline-end: 4px;
+            margin-inline-start: -5px;
         }
     }
 }

@@ -1,0 +1,46 @@
+body:where(.theme-dark) {
+
+  :has(.is-right-sidedock-open) div.status-bar {
+    max-width: 497.5px;
+  } 
+
+  .status-bar-item {
+    opacity: var(--dimmed);
+    &:hover{
+      opacity: unset;
+      scale: var(--upsize);
+    }
+  }
+
+  .plugin-editor-status {
+    opacity: unset;
+
+    .status-bar-item-icon {
+      & svg {
+        display: none;
+      }
+    }
+
+    &::before{
+      font-weight: bold;
+    }
+
+  }
+
+  .plugin-editor-status[aria-label="Reading"]::before {
+    content: "READ";
+    color: var(--text-accent);
+  }
+
+  .plugin-editor-status[aria-label="Source mode"]::before {
+    content: "SOURCE";
+    color: var(--color-purple);
+  }
+
+  .plugin-editor-status[aria-label="Live Preview"]::before {
+    content: "LIVE";
+    color: var(--color-blue);
+   } 
+
+}
+

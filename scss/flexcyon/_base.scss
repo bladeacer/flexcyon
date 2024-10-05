@@ -6,11 +6,6 @@ body:where(.theme-dark) {
 }
 
 body:where(.theme-dark) {
-    --bold-color: var(--flexcyon-red-salmon);
-    --italic-color: var(--flexcyon-accent);
-}
-
-body:where(.theme-dark) {
     --modal-border-color: var(--flexcyon-base-blue-02)
 }
 
@@ -113,16 +108,8 @@ body:where(.theme-dark) .cm-formatting.cm-formatting-task {
     color: var(--flexcyon-purple-lilac);
 }
 
-body:where(.theme-dark) :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon>svg {
-    stroke: var(--flexcyon-accent);
-}
-
 body.theme-dark {
     text-underline-offset: .1em;
-}
-
-body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
-    border: 1px solid var(--table-header-border-color);
 }
 
 body:where(.theme-dark) .cm-line .ͼi {

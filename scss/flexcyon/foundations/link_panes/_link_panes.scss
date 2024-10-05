@@ -1,0 +1,3 @@
+body:where(.theme-dark) :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon>svg {
+    stroke: var(--flexcyon-accent);
+}

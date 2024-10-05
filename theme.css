@@ -72,29 +72,6 @@ body:is(.theme-dark) {
 }
 
 body.theme-dark {
-  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-  --flexcyon-text-muted: #6f768599;
-}
-
-body:is(.theme-dark) {
-  /* ------------------------------ */
-  --text-normal: var(--flexcyon-text-normal);
-  --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
-  --text-faint: var(--flexcyon-text-muted);
-  /* ------------------------------ */
-  --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--flexcyon-base-blue-03);
-  --text-accent-hover: var(--flexcyon-accent-hover);
-  /* ------------------------------ */
-  --text-error: var(--flexcyon-red-salmon);
-  --text-warning: var(--flexcyon-red-salmon);
-  --text-success: var(--flexcyon-lime-green);
-  /* ------------------------------ */
-  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
-  --text-highlight-bg: var(--flexcyon-base-blue-03);
-}
-
-body.theme-dark {
   --flexcyon-accent: #92a871;
   --flexcyon-accent-h: 107.5;
   --flexcyon-accent-s: 74.5%;
@@ -296,6 +273,10 @@ body:is(.theme-dark) table:not(.table-view-table) {
   width: 100%;
 }
 
+body:is(.theme-dark) .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
+  border: 1px solid var(--table-header-border-color);
+}
+
 body:where(.theme-dark) {
   --input-radius: 0px;
 }
@@ -304,6 +285,45 @@ body:is(.theme-dark) .metadata-input-longtext::selection,
 body:is(.theme-dark) input::selection,
 body:is(.theme-dark) textarea::selection {
   background-color: var(--flexcyon-base-blue-03-04-mix);
+}
+
+body:where(.theme-dark) :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
+  stroke: var(--flexcyon-accent);
+}
+
+body.theme-dark {
+  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
+  --flexcyon-text-muted: #6f768599;
+  --flexcyon-small-font: 0.9rem;
+}
+
+body:is(.theme-dark) {
+  /* ------------------------------ */
+  --text-normal: var(--flexcyon-text-normal);
+  --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
+  --text-faint: var(--flexcyon-text-muted);
+  /* ------------------------------ */
+  --text-accent: var(--flexcyon-accent);
+  --text-on-accent: var(--flexcyon-base-blue-03);
+  --text-accent-hover: var(--flexcyon-accent-hover);
+  /* ------------------------------ */
+  --text-error: var(--flexcyon-red-salmon);
+  --text-warning: var(--flexcyon-red-salmon);
+  --text-success: var(--flexcyon-lime-green);
+  /* ------------------------------ */
+  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
+  --text-highlight-bg: var(--flexcyon-base-blue-03);
+}
+
+body:where(.theme-dark) {
+  --bold-color: var(--flexcyon-red-salmon);
+  --italic-color: var(--flexcyon-accent);
+}
+body:where(.theme-dark) .cm-em.cm-quote {
+  color: var(--italic-color);
+}
+body:where(.theme-dark) .cm-strong.cm-quote {
+  color: var(--bold-color);
 }
 
 body:where(.theme-dark) .cm-gutterElement.cm-active {
@@ -340,11 +360,9 @@ body:is(.theme-dark) .metadata-properties-heading:focus:before {
 body:where(.theme-dark) {
   --callout-padding: var(--size-4-3) var(--size-4-6);
 }
-body:where(.theme-dark) div.callout .callout-title {
-  padding-bottom: 12.5px;
-}
-body:where(.theme-dark) div.callout .callout-content {
-  padding: 1rem 0px;
+body:where(.theme-dark) div.callout .callout-icon {
+  padding-inline-end: 4px;
+  margin-inline-start: -5px;
 }
 
 body:where(.theme-dark) {
@@ -443,8 +461,27 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
-body:where(.theme-dark) .cm-panel.cm-vim-panel {
+body:where(.theme-dark) .cm-panel {
   font-weight: bold;
+}
+body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
+  content: "INSERT";
+  position: fixed;
+  bottom: 0.25%;
+  left: 0.5%;
+  color: var(--color-green);
+}
+body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
+  content: "NORMAL";
+  position: fixed;
+  bottom: 0.25%;
+  left: 0.5%;
+  color: var(--color-orange);
+}
+body:where(.theme-dark) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div::before {
+  content: "COMMAND";
+  transform: translate(-5%, 18%);
+  color: var(--color-red);
 }
 
 body:where(.theme-dark) .backlink-pane .tree-item.search-result {
@@ -464,16 +501,43 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
 }
 
+body:where(.theme-dark) :has(.is-right-sidedock-open) div.status-bar {
+  max-width: 497.5px;
+}
+body:where(.theme-dark) .status-bar-item {
+  opacity: var(--dimmed);
+}
+body:where(.theme-dark) .status-bar-item:hover {
+  opacity: unset;
+  scale: var(--upsize);
+}
+body:where(.theme-dark) .plugin-editor-status {
+  opacity: unset;
+}
+body:where(.theme-dark) .plugin-editor-status .status-bar-item-icon svg {
+  display: none;
+}
+body:where(.theme-dark) .plugin-editor-status::before {
+  font-weight: bold;
+}
+body:where(.theme-dark) .plugin-editor-status[aria-label=Reading]::before {
+  content: "READ";
+  color: var(--text-accent);
+}
+body:where(.theme-dark) .plugin-editor-status[aria-label="Source mode"]::before {
+  content: "SOURCE";
+  color: var(--color-purple);
+}
+body:where(.theme-dark) .plugin-editor-status[aria-label="Live Preview"]::before {
+  content: "LIVE";
+  color: var(--color-blue);
+}
+
 body:where(.theme-dark) {
   --radius-s: 2px;
   --radius-m: 4px;
   --radius-l: 6px;
   --radius-xl: 8px;
-}
-
-body:where(.theme-dark) {
-  --bold-color: var(--flexcyon-red-salmon);
-  --italic-color: var(--flexcyon-accent);
 }
 
 body:where(.theme-dark) {
@@ -580,16 +644,8 @@ body:where(.theme-dark) .cm-formatting.cm-formatting-task {
   color: var(--flexcyon-purple-lilac);
 }
 
-body:where(.theme-dark) :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
-  stroke: var(--flexcyon-accent);
-}
-
 body.theme-dark {
   text-underline-offset: 0.1em;
-}
-
-body:is(.theme-dark) .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
-  border: 1px solid var(--table-header-border-color);
 }
 
 body:where(.theme-dark) .cm-line .ͼi {
@@ -618,7 +674,7 @@ body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
 
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) div.oz-nav-file-title {
-  font-size: 0.9rem;
+  font-size: var(--flexycon-small-font);
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".md"] div svg {
   display: none;
@@ -631,7 +687,7 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".md"] div::after {
   opacity: var(--dimmed);
 }
 body:where(.theme-dark) div.oz-nav-file-title {
-  font-size: 0.9rem;
+  font-size: var(--flexycon-small-font);
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".pdf"] div svg {
   display: none;
@@ -644,7 +700,7 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".pdf"] div::after {
   opacity: var(--dimmed);
 }
 body:where(.theme-dark) div.oz-nav-file-title {
-  font-size: 0.9rem;
+  font-size: var(--flexycon-small-font);
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".jpg"] div svg {
   display: none;
@@ -657,7 +713,7 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".jpg"] div::after {
   opacity: var(--dimmed);
 }
 body:where(.theme-dark) div.oz-nav-file-title {
-  font-size: 0.9rem;
+  font-size: var(--flexycon-small-font);
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".png"] div svg {
   display: none;
@@ -670,7 +726,7 @@ body:where(.theme-dark) div.oz-nav-file-title[data-path$=".png"] div::after {
   opacity: var(--dimmed);
 }
 body:where(.theme-dark) div.oz-nav-file-title {
-  font-size: 0.9rem;
+  font-size: var(--flexycon-small-font);
 }
 body:where(.theme-dark) div.oz-nav-file-title[data-path$=".doc"] div svg {
   display: none;

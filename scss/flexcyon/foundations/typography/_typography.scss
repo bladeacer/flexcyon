@@ -1,0 +1,37 @@
+body.theme-dark{
+    --flexcyon-text-normal: var(--flexcyon-base-grey-light);
+    --flexcyon-text-muted: #6f768599;
+    --flexcyon-small-font: 0.9rem;
+}
+
+body:is(.theme-dark){
+    /* ------------------------------ */
+    --text-normal: var(--flexcyon-text-normal);
+    --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
+    --text-faint: var(--flexcyon-text-muted);
+    /* ------------------------------ */
+    --text-accent: var(--flexcyon-accent);
+    --text-on-accent: var(--flexcyon-base-blue-03);
+    --text-accent-hover: var(--flexcyon-accent-hover);
+    /* ------------------------------ */
+    --text-error: var(--flexcyon-red-salmon);
+    --text-warning: var(--flexcyon-red-salmon);
+    --text-success: var(--flexcyon-lime-green);
+    /* ------------------------------ */
+    --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
+    --text-highlight-bg: var(--flexcyon-base-blue-03);
+}
+
+body:where(.theme-dark) {
+    --bold-color: var(--flexcyon-red-salmon);
+    --italic-color: var(--flexcyon-accent);
+
+  .cm-em.cm-quote {
+      color: var(--italic-color);
+  }
+
+  .cm-strong.cm-quote {
+      color: var(--bold-color);
+  }
+
+}

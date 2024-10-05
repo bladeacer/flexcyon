@@ -1,7 +1,6 @@
 /* Flexcyon: Made by mixing both the Flexoki and Halcyon color scheme */
 @use "./colors/colors";
 @use "./base_colors/base_colors";
-@use "./text_color/text_color";
 @use "./accent_color/accent";
 @use "./headings/headings";
 @use "./hover_colors/hover_colors";
@@ -21,3 +20,5 @@
 @use "./drag_ghost/drag_ghost";
 @use "./table/table";
 @use "./input/input";
+@use "./link_panes/link_panes";
+@use "./typography/typography";
