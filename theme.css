@@ -361,8 +361,10 @@ body:where(.theme-dark) {
   --callout-padding: var(--size-4-3) var(--size-4-6);
 }
 body:where(.theme-dark) div.callout .callout-icon {
-  padding-inline-end: 4px;
-  margin-inline-start: -5px;
+  padding-inline-end: 5px;
+}
+body:where(.theme-dark) div.callout .callout-content :first-child:is(pre) {
+  margin-top: 1rem;
 }
 
 body:where(.theme-dark) {
@@ -461,15 +463,13 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
-body:where(.theme-dark) .cm-panel {
-  font-weight: bold;
-}
 body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
   content: "INSERT";
   position: fixed;
   bottom: 0.25%;
   left: 0.5%;
   color: var(--color-green);
+  font-weight: bold;
 }
 body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
   content: "NORMAL";

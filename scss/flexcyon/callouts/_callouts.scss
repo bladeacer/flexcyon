@@ -3,9 +3,13 @@ body:where(.theme-dark) {
     --callout-padding: var(--size-4-3) var(--size-4-6);
 
     div.callout {
-        & .callout-icon {
-            padding-inline-end: 4px;
-            margin-inline-start: -5px;
+        .callout-icon {
+            padding-inline-end: 5px;
+        }
+
+        // TODO: Change this
+        .callout-content :first-child:is(pre) {
+            margin-top: 1rem;
         }
     }
 }
