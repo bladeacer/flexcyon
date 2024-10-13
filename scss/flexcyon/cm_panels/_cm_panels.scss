@@ -16,10 +16,16 @@ body:where(.theme-dark) {
     color: var(--color-orange);
   }
 
-  .cm-editor > .cm-scroller + .cm-panels .cm-panel div div::before {
+  .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
     content: "COMMAND";
     transform: translate(-5%, 18%);
-    color: var(--color-red);
+    color: var(--color-blue);
   }
-  
+
+  div.cm-vim-message {
+    // Blame inline styling :v
+    color: var(--color-red) !important;
+    font-weight: bold;
+  }
 }
+  

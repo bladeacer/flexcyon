@@ -13,6 +13,6 @@
 @use "./cm_panels/cm_panels";
 @use "./link_panes/link_panes";
 @use "./status_bar/status_bar";
+@use "./new_tab/new_tab";
+@use "./others/others";
 
-// WIP move parts of this to split as defined below
-@use "./base";

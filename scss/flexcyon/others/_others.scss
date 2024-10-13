@@ -1,0 +1,53 @@
+body:where(.theme-dark) {
+    --modal-border-color: var(--flexcyon-base-blue-02)
+}
+
+body:where(.theme-dark) {
+    --toggle-thumb-color: var(--text-on-accent);
+}
+
+body:where(.theme-dark) {
+    --file-line-width: 50rem
+}
+
+body:where(.theme-dark) {
+    --hr-color: color-mix(in hsl shorter hue, var(--text-faint), var(--background-modifier-border));
+}
+
+body:where(.theme-dark) {
+    --vault-name-font-size: 1em;
+    --vault-name-color: var(--interactive-accent);
+}
+
+body:where(.theme-dark) {
+    --ribbon-background-collapsed: var(--ribbon-background)
+}
+
+body:where(.theme-dark) {
+    --workspace-background-translucent: unset;
+}
+
+body:where(.theme-dark) .workspace-ribbon {
+    border-right: unset;
+}
+
+body:is(.theme-dark) :is(.cm-comment.cm-hmd-internal-link, .cm-comment.cm-link, .cm-comment.cm-string) {
+    color: var(--code-comment);
+}
+
+body:is(.theme-dark) :is(.cm-comment.cm-string, .cm-comment.cm-hmd-internal-link:hover, .cm-comment.cm-link:hover) {
+    text-decoration: none;
+}
+
+body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
+    all: unset;
+}
+
+body:where(.theme-dark):not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
+    color: var(--interactive-accent-hover);
+}
+
+body:where(.theme-dark) .cm-formatting.cm-formatting-task {
+    color: var(--flexcyon-purple-lilac);
+}
+

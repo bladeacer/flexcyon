@@ -1,0 +1,33 @@
+body:where(.theme-dark) {
+  --prompt-border-color: var(--flexcyon-base-blue-02-03-mix);
+  --search-clear-button-color: var(--flexcyon-red-salmon);
+  --search-icon-color: var(--flexcyon-accent);
+  .search-input-container>input {
+    background-color: var(--background-primary);
+  }
+
+  
+  .community-item .suggestion-highlight {
+    color: var(--text-accent);
+  }
+
+   .prompt>.prompt-results>.suggestion-item .suggestion-highlight {
+    color: var(--interactive-accent);
+  }
+
+  .prompt input.prompt-input {
+    color: var(--interactive-accent);
+    font-weight: bold;
+  }
+
+  .search-result:not(.is-collapsed) .search-result-file-title {
+    color: var(--text-normal);
+  }
+  
+  .search-result:not(.is-collapsed) .search-result-file-matched-text {
+    color: var(--text-accent);
+    font-weight: bold;
+  }
+
+}
+

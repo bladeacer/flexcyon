@@ -1,0 +1,16 @@
+body:where(.theme-dark) {
+    --blockquote-color: color-mix(in srgb, var(--flexcyon-yellow) 75%, var(--flexcyon-text-normal));
+
+  .cm-em.cm-quote {
+    color: var(--italic-color);
+  }
+
+  .cm-strong.cm-quote {
+    color: var(--bold-color);
+  }
+
+}
+
+body:is(.theme-dark) .markdown-rendered blockquote :is(pre, code) {
+    font-variant: normal;
+}
