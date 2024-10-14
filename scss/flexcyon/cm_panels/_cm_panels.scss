@@ -16,9 +16,23 @@ body:where(.theme-dark) {
     color: var(--color-orange);
   }
 
+  .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+    position: fixed;
+    bottom: -0.25%;
+    left: 67.5px;
+  }
+
+  .cm-panels .cm-panel div div:not(.cm-vim-message) span {
+    position: fixed;
+    bottom: 2.5%;
+    left: 0px;
+  }
+
   .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
     content: "COMMAND";
-    transform: translate(-5%, 18%);
+    position: fixed;
+    bottom: 0.25%;
+    left: 0.5%;
     color: var(--color-blue);
   }
 

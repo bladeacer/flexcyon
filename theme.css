@@ -386,6 +386,17 @@ body:where(.theme-dark) {
   --radius-x1: 8px;
 }
 
+body:where(.theme-dark) {
+  --prompt-border-color: var(--flexcyon-base-blue-02-03-mix);
+  --search-clear-button-color: var(--flexcyon-red-salmon);
+  --search-icon-color: var(--flexcyon-accent);
+}
+body:where(.theme-dark) .search-input-container > input {
+  background-color: var(--background-primary);
+}
+body:where(.theme-dark) .community-item .suggestion-highlight {
+  color: var(--text-accent);
+}
 body:where(.theme-dark) .prompt > .prompt-results > .suggestion-item .suggestion-highlight {
   color: var(--interactive-accent);
 }
@@ -553,9 +564,21 @@ body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels
   left: 0.5%;
   color: var(--color-orange);
 }
+body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+  position: fixed;
+  bottom: -0.25%;
+  left: 67.5px;
+}
+body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span {
+  position: fixed;
+  bottom: 2.5%;
+  left: 0px;
+}
 body:where(.theme-dark) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
   content: "COMMAND";
-  transform: translate(-5%, 18%);
+  position: fixed;
+  bottom: 0.25%;
+  left: 0.5%;
   color: var(--color-blue);
 }
 body:where(.theme-dark) div.cm-vim-message {
