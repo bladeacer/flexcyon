@@ -579,9 +579,6 @@ body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span:f
   bottom: 4px;
   left: 69px;
 }
-body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span {
-  opacity: var(--dimmed);
-}
 body:where(.theme-dark) .cm-panels .cm-panel {
   background-color: var(--color-base-00);
   padding-top: 5px;
@@ -621,28 +618,29 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
 body:where(.theme-dark) .status-bar {
   font-size: 0.9rem;
   border: unset;
-  border-radius: unset;
   z-index: 1;
-  transform: translateY(100px);
-  transition: transform 0.3s ease-in-out;
+  transform: translateX(1000px);
+  transition: transform 0.35s ease-in-out;
 }
 body:where(.theme-dark) .status-bar::before {
   content: "Show status bar";
-  margin: 8px;
-  padding-right: 2px;
+  background-color: var(--color-base-00);
+  border-radius: inherit;
+  margin-right: 2px;
+  padding: 8px;
   position: fixed;
   bottom: 0;
   right: 0;
-  transform: translateY(-100px);
-  transition: transform 0.3s ease-in-out;
+  transform: translateX(-1000px);
+  transition: transform 0.3s ease-in;
 }
 body:where(.theme-dark) .status-bar:hover::before {
-  opacity: 0;
-  transition: transform opacity 0.3s ease-in-out;
+  transform: translateY(50px);
+  transition: transform 0.3s ease-in;
 }
 body:where(.theme-dark) .status-bar:hover {
   transform: unset;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.35s ease-in-out;
 }
 body:where(.theme-dark) .plugin-editor-status .status-bar-item-icon svg {
   display: none;

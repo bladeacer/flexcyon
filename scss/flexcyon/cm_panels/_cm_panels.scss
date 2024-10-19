@@ -33,10 +33,6 @@ body:where(.theme-dark) {
     left: 69px;
   }
 
-  .cm-panels .cm-panel div div:not(.cm-vim-message) span {
-    opacity: var(--dimmed);
-  }
-
   .cm-panels .cm-panel {
     background-color: var(--color-base-00);
     padding-top: 5px;

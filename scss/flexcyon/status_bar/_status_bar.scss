@@ -2,28 +2,29 @@ body:where(.theme-dark) {
   .status-bar {
     font-size: 0.9rem;
     border: unset;
-    border-radius: unset;
     z-index: 1;
-    transform: translateY(100px);
-    transition: transform 0.3s ease-in-out;
+    transform: translateX(1000px);
+    transition: transform 0.35s ease-in-out;
 
     &::before{
       content: "Show status bar";
-      margin: 8px;
-      padding-right: 2px;
+      background-color: var(--color-base-00);
+      border-radius: inherit;
+      margin-right: 2px;
+      padding: 8px;
       position: fixed;
       bottom: 0;
       right: 0;
-      transform: translateY(-100px);
-      transition: transform 0.3s ease-in-out;
+      transform: translateX(-1000px);
+      transition: transform 0.3s ease-in;
     }
     &:hover::before {
-      opacity: 0;
-      transition: transform opacity 0.3s ease-in-out;
+      transform: translateY(50px);
+      transition: transform 0.3s ease-in;
     }
     &:hover {
       transform: unset;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.35s ease-in-out;
     }
   }
 
