@@ -1,38 +1,57 @@
 body:where(.theme-dark) {
+  .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+    border-top: unset;
+    padding-top: 6px;
+  }
+    
   .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
     content: "INSERT";
+    bottom: -6px;
+    left: 12px;
     position: fixed;
-    bottom: 0.25%;
-    left: 0.5%;
     color: var(--color-green);
     font-weight: bold;
+    width: 100vw;
+    height: 35px;
+    padding-left: 4px;
   }
 
   .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before  {
     content: "NORMAL";
     position: fixed;
-    bottom: 0.25%;
-    left: 0.5%;
+    font-weight: bold;
+    bottom: -6px;
+    left: 12px;
+    width: 100vw;
+    height: 35px;
+    padding-left: 4px;
     color: var(--color-orange);
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
-    position: fixed;
-    bottom: -0.25%;
-    left: 67.5px;
+    bottom: 4px;
+    left: 69px;
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span {
-    position: fixed;
-    bottom: 2.5%;
-    left: 0px;
+    opacity: var(--dimmed);
   }
+
+  .cm-panels .cm-panel {
+    background-color: var(--color-base-00);
+    padding-top: 5px;
+  }
+
+  .cm-panels input {
+    transform: translateY(-4.5px);
+    z-index: 16;
+  }
+
 
   .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
     content: "COMMAND";
-    position: fixed;
-    bottom: 0.25%;
-    left: 0.5%;
+    bottom: 12px;
+    padding-right: 4px;
     color: var(--color-blue);
   }
 

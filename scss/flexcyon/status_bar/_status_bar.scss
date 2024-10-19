@@ -1,14 +1,34 @@
 body:where(.theme-dark) {
-  .status-bar-item {
-    opacity: var(--dimmed);
-    &:hover{
-      opacity: unset;
-      scale: var(--upsize);
+  .status-bar {
+    font-size: 0.9rem;
+    border: unset;
+    border-radius: unset;
+    z-index: 1;
+    transform: translateY(100px);
+    transition: transform 0.3s ease-in-out;
+
+    &::before{
+      content: "Show status bar";
+      margin: 8px;
+      padding-right: 2px;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      transform: translateY(-100px);
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover::before {
+      opacity: 0;
+      transition: transform opacity 0.3s ease-in-out;
+    }
+    &:hover {
+      transform: unset;
+      transition: transform 0.3s ease-in-out;
     }
   }
 
+
   .plugin-editor-status {
-    opacity: unset;
 
     .status-bar-item-icon {
       & svg {

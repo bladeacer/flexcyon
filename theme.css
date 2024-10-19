@@ -549,36 +549,51 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
+body:where(.theme-dark) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+  border-top: unset;
+  padding-top: 6px;
+}
 body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
   content: "INSERT";
+  bottom: -6px;
+  left: 12px;
   position: fixed;
-  bottom: 0.25%;
-  left: 0.5%;
   color: var(--color-green);
   font-weight: bold;
+  width: 100vw;
+  height: 35px;
+  padding-left: 4px;
 }
 body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
   content: "NORMAL";
   position: fixed;
-  bottom: 0.25%;
-  left: 0.5%;
+  font-weight: bold;
+  bottom: -6px;
+  left: 12px;
+  width: 100vw;
+  height: 35px;
+  padding-left: 4px;
   color: var(--color-orange);
 }
 body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
-  position: fixed;
-  bottom: -0.25%;
-  left: 67.5px;
+  bottom: 4px;
+  left: 69px;
 }
 body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span {
-  position: fixed;
-  bottom: 2.5%;
-  left: 0px;
+  opacity: var(--dimmed);
+}
+body:where(.theme-dark) .cm-panels .cm-panel {
+  background-color: var(--color-base-00);
+  padding-top: 5px;
+}
+body:where(.theme-dark) .cm-panels input {
+  transform: translateY(-4.5px);
+  z-index: 16;
 }
 body:where(.theme-dark) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
   content: "COMMAND";
-  position: fixed;
-  bottom: 0.25%;
-  left: 0.5%;
+  bottom: 12px;
+  padding-right: 4px;
   color: var(--color-blue);
 }
 body:where(.theme-dark) div.cm-vim-message {
@@ -603,15 +618,31 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
 }
 
-body:where(.theme-dark) .status-bar-item {
-  opacity: var(--dimmed);
+body:where(.theme-dark) .status-bar {
+  font-size: 0.9rem;
+  border: unset;
+  border-radius: unset;
+  z-index: 1;
+  transform: translateY(100px);
+  transition: transform 0.3s ease-in-out;
 }
-body:where(.theme-dark) .status-bar-item:hover {
-  opacity: unset;
-  scale: var(--upsize);
+body:where(.theme-dark) .status-bar::before {
+  content: "Show status bar";
+  margin: 8px;
+  padding-right: 2px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateY(-100px);
+  transition: transform 0.3s ease-in-out;
 }
-body:where(.theme-dark) .plugin-editor-status {
-  opacity: unset;
+body:where(.theme-dark) .status-bar:hover::before {
+  opacity: 0;
+  transition: transform opacity 0.3s ease-in-out;
+}
+body:where(.theme-dark) .status-bar:hover {
+  transform: unset;
+  transition: transform 0.3s ease-in-out;
 }
 body:where(.theme-dark) .plugin-editor-status .status-bar-item-icon svg {
   display: none;
