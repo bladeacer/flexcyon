@@ -3,6 +3,10 @@ body:where(.theme-dark) div.card-content-container img[alt=banner] {
     display: none;
 }
 
+body:where(.theme-dark) .popover .banner img[alt=banner]{
+    display: none;
+}
+
 /* Modfiications for banner snippet */
 body:where(.theme-dark) .banner img[alt='banner'] {
     padding: 1px;
