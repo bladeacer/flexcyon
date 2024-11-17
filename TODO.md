@@ -10,7 +10,7 @@
 - [ ] Add minify directory and sass compile to minified css `.min.css`
 
 - [ ] Update README and add dark theme screenshot (path in update [manifest.json](./manifest.json) as well)
-   - Update with links to plugins/snippets supported
+   - Ensure screenshot size is 512 x 288 pixels
    - Update too when style settings support is fully added
 
 - [ ] Add the theme to BRAT
