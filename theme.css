@@ -620,7 +620,7 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
 }
 
 body:where(.theme-dark) .status-bar {
-  font-size: 0.9rem;
+  font-size: 0.825rem;
   border: unset;
   z-index: 1;
   transform: translateX(1000px);
@@ -663,6 +663,17 @@ body:where(.theme-dark) .plugin-editor-status[aria-label="Source mode"]::before 
 body:where(.theme-dark) .plugin-editor-status[aria-label="Live Preview"]::before {
   content: "LIVE";
   color: var(--color-blue);
+}
+
+div.empty-state-title {
+  display: none;
+}
+
+div.empty-state-action-list::before {
+  font-family: monospace;
+  content: " \a     /\\_____/\\ \a    /  o   o  \\ \a   ( ==  ^  == ) \a    )         (\a     \\_________/";
+  line-height: 1;
+  white-space: pre;
 }
 
 body:where(.theme-dark) {
@@ -718,6 +729,24 @@ body:where(.theme-dark) .cm-formatting.cm-formatting-task {
   color: var(--flexcyon-purple-lilac);
 }
 
+body:where(.theme-dark) div.modal-content.vertical-tabs-container > div.vertical-tab-header > div > div.vertical-tab-header-group-items div.vertical-tab-nav-item {
+  opacity: var(--dimmed);
+}
+body:where(.theme-dark) div.modal-content.vertical-tabs-container > div.vertical-tab-header > div > div.vertical-tab-header-group-items div.vertical-tab-nav-item.is-active {
+  opacity: 1;
+}
+
+/* @settings
+name: Flexcyon Style Settings 
+id: flexcyon
+settings:
+  -
+    id: heading-fonts
+    title: Fonts
+    type: heading
+    level: 1
+    collapsed: true
+ */
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) div.oz-nav-file-title {
   font-size: var(--flexycon-small-font);

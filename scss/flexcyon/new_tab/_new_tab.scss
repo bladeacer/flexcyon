@@ -1,43 +1,63 @@
 // TODO: This code was derived from Karp
 
-.workspace-leaf:has(.workspace-leaf-content[data-type="empty"])::before {
-    //content: "";
+// .workspace-leaf:has(.workspace-leaf-content[data-type="empty"])::before {
+    // content: "";
     //position: absolute;
+    //background-blend-mode: color;
     //top: 0; bottom: 0;
     //left: 0; right: 0;
     //background-color: rgb(109, 250, 255);
     //background-blend-mode: color;
-    //-webkit-mask-image: var(--durins-door);
-    //-webkit-mask-size: contain;
-    //-webkit-mask-repeat: no-repeat;
-    //-webkit-mask-position: bottom center;
     //opacity: 0.8;
-}
+// }
 
-.workspace-leaf-content[data-type="empty"] {
+// .workspace-leaf-content[data-type="empty"] {
     //backdrop-filter: blur(7px);
-}
+// }
 
-.workspace-leaf-content[data-type="empty"] .view-content {
+// .workspace-leaf-content[data-type="empty"] .view-content {
     //background: none;
-}
+// }
 
-.workspace-leaf-content[data-type="empty"]::before {
+// .workspace-leaf-content[data-type="empty"]::before {
     //content: "";
     //position: absolute;
     //top: 0; bottom: 0;
     //left: 0; right: 0;
     //background-color: rgb(161, 225, 255);
-    //background-blend-mode: color;
-    //-webkit-mask-image: var(--durins-door);
-    //-webkit-mask-size: contain;
-    //-webkit-mask-repeat: no-repeat;
-    //-webkit-mask-position: top center;
     //opacity: 0.5;
-}
+// }
 
-.empty-state-container {
+// .empty-state-container {
     //padding: 15px;
     //border-radius: var(--radius-l);
     //background: rgba(var(--mono-rgb-0), 0.8);
+// }
+
+
+$ascii_art: " \a\
+    /\\_____/\\ \a\
+   /  o   o  \\ \a\
+  ( ==  ^  == ) \a\
+   )         (\a\
+    \\_________/";
+
+    // content: "__  __                                       __         _ __
+// \ \/ /___  __  __   _________ _____     ____/ /___     (_) /_
+ // \  / __ \/ / / /  / ___/ __ `/ __ \   / __  / __ \   / / __/
+ // / / /_/ / /_/ /  / /__/ /_/ / / / /  / /_/ / /_/ /  / / /_
+// /_/\____/\__,_/   \___/\__,_/_/ /_/   \__,_/\____/  /_/\__/ ";
+
+div.empty-state-title {
+    display: none;
 }
+
+div.empty-state-action-list::before {
+    font-family: monospace;
+    content: $ascii_art;
+    // width: 20px;
+    line-height: 1;
+    white-space: pre;
+}
+
+

@@ -35,6 +35,7 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - [ ] Style settings options for alternate checkbox
 
 #### Plugins/snippets
+- [ ] Add support for Spaced Repetition
 - [ ] Add support for Breadcrumbs
 
 #### Other styling options

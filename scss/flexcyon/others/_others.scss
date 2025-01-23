@@ -54,3 +54,15 @@ body:where(.theme-dark) .cm-formatting.cm-formatting-task {
     color: var(--flexcyon-purple-lilac);
 }
 
+body:where(.theme-dark) {
+    div.modal-content.vertical-tabs-container>div.vertical-tab-header>div>div.vertical-tab-header-group-items {
+        & div.vertical-tab-nav-item {
+            opacity: var(--dimmed);
+        }
+
+        & div.vertical-tab-nav-item.is-active {
+            opacity: 1;
+        }
+    }
+
+}
