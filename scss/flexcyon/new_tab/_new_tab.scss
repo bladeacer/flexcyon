@@ -33,41 +33,58 @@
 //border-radius: var(--radius-l);
 //background: rgba(var(--mono-rgb-0), 0.8);
 // }
-
 body.theme-dark {
-    --flexcyon-ascii-art-1: " \a\
-    /\\_____/\\ \a\
-   /  o   o  \\ \a\
-  ( ==  ^  == ) \a\
-   )         (\a\
-    \\_________/\a\a";
 
-    --flexcyon-ascii-art-2: "__  __                                       __         _ __\a\
-    \ \/ /___  __  __   _________ _____     ____/ /___     (_) /_\a\
-    \  / __ \/ / / /  / ___/ __ `/ __ \   / __  / __ \   / / __/\a\
-    / / /_/ / /_/ /  / /__/ /_/ / / / /  / /_/ / /_/ /  / / /_\a\
-    /_/\____/\__,_/   \___/\__,_/_/ /_/   \__,_/\____/  /_/\__/ ";
-    .flexcyon-ascii-art-opt-1 {
-        --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-1);
+    --flexcyon-ascii-art: " \a\
+_______________                                       \a\
+___  ____/__  /________  ____________  ______________ \a\
+__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                /____/                \a\a\a ";
+
+    div.empty-state-action {
+        font-size: 1.05rem;
+        color: var(--text-accent);
+        opacity: 0.95;
     }
-    .flexcyon-ascii-art-opt-2 {
-        --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-2);
+    div.empty-state-title {
+        font-size: 1.25rem;
     }
 
-    --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-1);
+}
 
-    // div.empty-state-title {
-    //     display: none;
-    // }
+body.theme-dark.flexcyon-ascii-enable {
+    div.empty-state-title {
+        display: unset;
+    }
 
-    div.empty-state-title::before {
+    div.empty-state-container::before {
         font-family: monospace;
-        content: var(--flexcyon-new-tab-ascii-art);
-        // width: 20px;
+        content: var(--flexcyon-ascii-art);
+        font-weight: bold;
+        background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         line-height: 1;
         white-space: pre;
+        display: block;
+        margin-bottom: 2rem;
     }
+
     div.empty-state-container {
         transform: translateY(-115px);
+    }
+}
+
+body.theme-dark.flexcyon-empty-state-title-disable {
+    div.empty-state-title {
+        display: none;
+    }
+}
+
+body.theme-dark.flexcyon-empty-state-actions-disable {
+    div.empty-state-action-list {
+        display: none;
     }
 }

@@ -5,12 +5,12 @@ settings:
   -
     title: Typography
     type: heading
-    level: 1
+    level: 4
     collapsed: false
   -
     title: Vim Mode Text
     type: heading
-    level: 2
+    level: 5
     collapsed: true
   - 
     title: Insert Mode Text
@@ -37,25 +37,55 @@ settings:
   - 
     title: Icons
     type: heading
-    level: 1
+    level: 4
     collapsed: true
-  - title: Smiley Icons in Settings
-    description: Display smiley icons for settings
+  - title: Smiley Toggle Icons in Settings
+    description: Display smiley toggle icons for settings toggle buttons
     id: flexcyon-settings-smiley-icons-enabled
     type: class-toggle
     default: true
 
-  - title: ASCII Art
+  - 
+    title: New Tab Appearance
     type: heading
-    level: 1
+    level: 4
     collapsed: true
-
-  - title: New Tab ASCII Art
+  - title: Enable ASCII Art
+    id: flexcyon-ascii-enable
+    description: Enable ASCII art in new tab
+    type: class-toggle
+    default: true
+  - title: ASCII Art
+    id: flexcyon-ascii-art
     description: ASCII art to display in new tab
-    type: class-select
-    default: flexcyon-new-tab-ascii-art-opt1
+    type: variable-text
+    default: " \a\
+    _______________                                       \a\
+    ___  ____/__  /________  ____________  ______________ \a\
+    __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+    _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+    /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                    /____/                \a\a\a "
     quotes: true
-    options: 
-      - flexcyon-new-tab-ascii-art-opt1
-      - flexcyon-new-tab-ascii-art-opt2
+  - title: Disable Empty State title
+    id: flexcyon-empty-state-title-disable
+    description: Toggle the empty state title
+    type: class-toggle
+    default: true
+  - title: Disable Empty State Actions
+    id: flexcyon-empty-state-actions-disable
+    description: Toggle the empty state actions
+    type: class-toggle
+    default: false
  */
+
+
+
+// - title: New Tab ASCII Art
+//   description: ASCII art to display in new tab
+//   type: class-select
+//   default: flexcyon-new-tab-ascii-art-opt1
+//   quotes: true
+//   options: 
+//     - flexcyon-new-tab-ascii-art-opt1
+//     - flexcyon-new-tab-ascii-art-opt2
