@@ -1,9 +1,38 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body.theme-dark {
     --dimmed: 0.55;
     --upsize: 103%;
+    --expand: 110%;
+    --less-letter-spacing: -3px;
+}
+
+body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
+    div.checkbox-container {
+        background-color: var(--color-base-05);
+        box-shadow: unset;
+        font-weight: bolder;
+        scale: var(--upsize);
+
+    }
+
+    div.checkbox-container::after {
+        content: ':(';
+        width: max-content;
+        background-color: inherit;
+        color: var(--color-red);
+        box-shadow: unset;
+    }
+
+    div.checkbox-container.is-enabled::after {
+        content: ':)';
+        color: var(--color-green);
+    }
+
+    input.slider {
+        border-radius: unset;
+    }
 }
 
 /* ------------------------------ */
@@ -12,4 +41,93 @@ body:where(.theme-dark) {
     --icon-color-active: var(--interactive-accent);
     --icon-color-focused: var(--interactive-accent);
     --clickable-icon-radius: 0;
+
+    div.side-dock-actions {
+        scale: var(--upsize);
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        & :nth-of-type(5n):hover {
+            color: var(--color-blue);
+            scale: var(--expand);
+        }
+
+        & :nth-of-type(5n+1):hover {
+            color: var(--color-purple);
+            scale: var(--expand);
+        }
+
+        & :nth-of-type(5n+2):hover {
+            color: var(--color-cyan);
+            scale: var(--expand);
+        }
+
+        & :nth-of-type(5n+3):hover {
+            color: var(--color-pink);
+            scale: var(--expand);
+        }
+
+        & :nth-of-type(5n+4):hover {
+            color: var(--color-green);
+            scale: var(--expand);
+        }
+
+        & :nth-of-type(5n+5):hover {
+            color: var(--color-yellow);
+            scale: var(--expand);
+        }
+    }
+
+    // Menu items
+
+
+    [aria-label^="Uninstall"] {
+        color: rgba(var(--color-red-rgb), 0.9);
+    }
+
+    [aria-label^="Options"] {
+        color: rgba(var(--color-blue-rgb), 0.9);
+    }
+
+    [aria-label^="Hotkeys"] {
+        color: rgba(var(--color-green-rgb), 0.9);
+    }
+
+    [aria-label^="Donate to support"] {
+        color: var(--color-pink);
+    }
+
+    [aria-label^="Collapse results"] {
+        letter-spacing: var(--less-letter-spacing);
+    }
+
+    .titlebar-button.mod-minimize {
+        &:hover {
+            color: var(--color-cyan);
+
+        }
+    }
+
+    .titlebar-button.mod-maximize {
+        &:hover {
+            color: var(--color-blue);
+        }
+    }
+
+    .titlebar-button.mod-close {
+        &:hover {
+            color: var(--text-normal);
+        }
+    }
+
+    .titlebar-button {
+        &:hover {
+            opacity: unset;
+            scale: var(--expand);
+        }
+    }
+
 }

@@ -221,6 +221,29 @@ body:is(.theme-dark) {
 body.theme-dark {
   --dimmed: 0.55;
   --upsize: 103%;
+  --expand: 110%;
+  --less-letter-spacing: -3px;
+}
+
+body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container {
+  background-color: var(--color-base-05);
+  box-shadow: unset;
+  font-weight: bolder;
+  scale: var(--upsize);
+}
+body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container::after {
+  content: ":(";
+  width: max-content;
+  background-color: inherit;
+  color: var(--color-red);
+  box-shadow: unset;
+}
+body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container.is-enabled::after {
+  content: ":)";
+  color: var(--color-green);
+}
+body.flexcyon-settings-smiley-icons-enabled div.setting-item-control input.slider {
+  border-radius: unset;
 }
 
 /* ------------------------------ */
@@ -229,6 +252,65 @@ body:where(.theme-dark) {
   --icon-color-active: var(--interactive-accent);
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
+}
+body:where(.theme-dark) div.side-dock-actions {
+  scale: var(--upsize);
+  opacity: 0.7;
+}
+body:where(.theme-dark) div.side-dock-actions:hover {
+  opacity: 1;
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n):hover {
+  color: var(--color-blue);
+  scale: var(--expand);
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+1):hover {
+  color: var(--color-purple);
+  scale: var(--expand);
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+2):hover {
+  color: var(--color-cyan);
+  scale: var(--expand);
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+3):hover {
+  color: var(--color-pink);
+  scale: var(--expand);
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+4):hover {
+  color: var(--color-green);
+  scale: var(--expand);
+}
+body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+5):hover {
+  color: var(--color-yellow);
+  scale: var(--expand);
+}
+body:where(.theme-dark) [aria-label^=Uninstall] {
+  color: rgba(var(--color-red-rgb), 0.9);
+}
+body:where(.theme-dark) [aria-label^=Options] {
+  color: rgba(var(--color-blue-rgb), 0.9);
+}
+body:where(.theme-dark) [aria-label^=Hotkeys] {
+  color: rgba(var(--color-green-rgb), 0.9);
+}
+body:where(.theme-dark) [aria-label^="Donate to support"] {
+  color: var(--color-pink);
+}
+body:where(.theme-dark) [aria-label^="Collapse results"] {
+  letter-spacing: var(--less-letter-spacing);
+}
+body:where(.theme-dark) .titlebar-button.mod-minimize:hover {
+  color: var(--color-cyan);
+}
+body:where(.theme-dark) .titlebar-button.mod-maximize:hover {
+  color: var(--color-blue);
+}
+body:where(.theme-dark) .titlebar-button.mod-close:hover {
+  color: var(--text-normal);
+}
+body:where(.theme-dark) .titlebar-button:hover {
+  opacity: unset;
+  scale: var(--expand);
 }
 
 body:where(.theme-dark) {
@@ -300,6 +382,9 @@ body.theme-dark {
   --flexcyon-text-muted: #6f768599;
   --flexcyon-small-font: 0.9rem;
   text-underline-offset: 0.1em;
+  --flexcyon-vim-insert-text: "INSERT";
+  --flexcyon-vim-normal-text: "NORMAL";
+  --flexcyon-vim-command-text: "COMMAND";
 }
 
 body:is(.theme-dark) {
@@ -558,25 +643,25 @@ body:where(.theme-dark) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-botto
   padding-top: 6px;
 }
 body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
-  content: "INSERT";
-  bottom: -6px;
+  content: var(--flexcyon-vim-insert-text);
+  bottom: -9px;
   left: 12px;
   position: fixed;
   color: var(--color-green);
-  font-weight: bold;
   width: 100vw;
   height: 35px;
   padding-left: 4px;
 }
 body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
-  content: "NORMAL";
+  content: var(--flexcyon-vim-normal-text);
   position: fixed;
-  font-weight: bold;
-  bottom: -6px;
+  bottom: -9px;
   left: 12px;
   width: 100vw;
   height: 35px;
   padding-left: 4px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
   color: var(--color-orange);
 }
 body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
@@ -592,7 +677,7 @@ body:where(.theme-dark) .cm-panels input {
   z-index: 16;
 }
 body:where(.theme-dark) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
-  content: "COMMAND";
+  content: var(--flexcyon-vim-command-text);
   bottom: 12px;
   padding-right: 4px;
   color: var(--color-blue);
@@ -665,15 +750,25 @@ body:where(.theme-dark) .plugin-editor-status[aria-label="Live Preview"]::before
   color: var(--color-blue);
 }
 
-div.empty-state-title {
-  display: none;
+body.theme-dark {
+  --flexcyon-ascii-art-1: " \a     /\\_____/\\ \a    /  o   o  \\ \a   ( ==  ^  == ) \a    )         (\a     \\_________/\a \a";
+  --flexcyon-ascii-art-2: "__  __                                       __         _ __\a      / /___  __  __   _________ _____     ____/ /___     (_) /_\a       / __ / / / /  / ___/ __ `/ __    / __  / __    / / __/\a     / / /_/ / /_/ /  / /__/ /_/ / / / /  / /_/ / /_/ /  / / /_\a     /_/____/__,_/   ___/__,_/_/ /_/   __,_/____/  /_/__/ ";
+  --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-1);
 }
-
-div.empty-state-action-list::before {
+body.theme-dark .flexcyon-ascii-art-opt-1 {
+  --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-1);
+}
+body.theme-dark .flexcyon-ascii-art-opt-2 {
+  --flexcyon-new-tab-ascii-art: var(--flexcyon-ascii-art-2);
+}
+body.theme-dark div.empty-state-title::before {
   font-family: monospace;
-  content: " \a     /\\_____/\\ \a    /  o   o  \\ \a   ( ==  ^  == ) \a    )         (\a     \\_________/";
+  content: var(--flexcyon-new-tab-ascii-art);
   line-height: 1;
   white-space: pre;
+}
+body.theme-dark div.empty-state-container {
+  transform: translateY(-115px);
 }
 
 body:where(.theme-dark) {
@@ -741,11 +836,61 @@ name: Flexcyon Style Settings
 id: flexcyon
 settings:
   -
-    id: heading-fonts
-    title: Fonts
+    title: Typography
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    title: Vim Mode Text
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    title: Insert Mode Text
+    description: Text to display when in insert mode
+    id: flexcyon-vim-insert-text
+    type: variable-text
+    default: "INSERT"
+    quotes: true
+  - 
+    title: Normal Mode Text
+    description: Text to display when in normal mode
+    id: flexcyon-vim-normal-text
+    type: variable-text
+    default: "NORMAL"
+    quotes: true
+  - 
+    title: Command Mode Text
+    description: Text to display when in command mode
+    id: flexcyon-vim-command-text
+    type: variable-text
+    default: "COMMAND"
+    quotes: true
+
+  - 
+    title: Icons
     type: heading
     level: 1
     collapsed: true
+  - title: Smiley Icons in Settings
+    description: Display smiley icons for settings
+    id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: true
+
+  - title: ASCII Art
+    type: heading
+    level: 1
+    collapsed: true
+
+  - title: New Tab ASCII Art
+    description: ASCII art to display in new tab
+    type: class-select
+    default: flexcyon-new-tab-ascii-art-opt1
+    quotes: true
+    options: 
+      - flexcyon-new-tab-ascii-art-opt1
+      - flexcyon-new-tab-ascii-art-opt2
  */
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) div.oz-nav-file-title {

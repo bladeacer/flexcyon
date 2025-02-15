@@ -1,30 +1,31 @@
 body:where(.theme-dark) {
+
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
     padding-top: 6px;
   }
-    
+
   .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
-    content: "INSERT";
-    bottom: -6px;
+    content: var(--flexcyon-vim-insert-text);
+    bottom: -9px;
     left: 12px;
     position: fixed;
     color: var(--color-green);
-    font-weight: bold;
     width: 100vw;
     height: 35px;
     padding-left: 4px;
   }
 
-  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before  {
-    content: "NORMAL";
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
+    content: var(--flexcyon-vim-normal-text);
     position: fixed;
-    font-weight: bold;
-    bottom: -6px;
+    bottom: -9px;
     left: 12px;
     width: 100vw;
     height: 35px;
     padding-left: 4px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
     color: var(--color-orange);
   }
 
@@ -44,8 +45,8 @@ body:where(.theme-dark) {
   }
 
 
-  .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
-    content: "COMMAND";
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+    content: var(--flexcyon-vim-command-text);
     bottom: 12px;
     padding-right: 4px;
     color: var(--color-blue);
@@ -57,4 +58,3 @@ body:where(.theme-dark) {
     font-weight: bold;
   }
 }
-  

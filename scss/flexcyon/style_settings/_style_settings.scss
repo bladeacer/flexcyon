@@ -3,9 +3,59 @@ name: Flexcyon Style Settings
 id: flexcyon
 settings:
   -
-    id: heading-fonts
-    title: Fonts
+    title: Typography
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    title: Vim Mode Text
+    type: heading
+    level: 2
+    collapsed: true
+  - 
+    title: Insert Mode Text
+    description: Text to display when in insert mode
+    id: flexcyon-vim-insert-text
+    type: variable-text
+    default: "INSERT"
+    quotes: true
+  - 
+    title: Normal Mode Text
+    description: Text to display when in normal mode
+    id: flexcyon-vim-normal-text
+    type: variable-text
+    default: "NORMAL"
+    quotes: true
+  - 
+    title: Command Mode Text
+    description: Text to display when in command mode
+    id: flexcyon-vim-command-text
+    type: variable-text
+    default: "COMMAND"
+    quotes: true
+
+  - 
+    title: Icons
     type: heading
     level: 1
     collapsed: true
+  - title: Smiley Icons in Settings
+    description: Display smiley icons for settings
+    id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: true
+
+  - title: ASCII Art
+    type: heading
+    level: 1
+    collapsed: true
+
+  - title: New Tab ASCII Art
+    description: ASCII art to display in new tab
+    type: class-select
+    default: flexcyon-new-tab-ascii-art-opt1
+    quotes: true
+    options: 
+      - flexcyon-new-tab-ascii-art-opt1
+      - flexcyon-new-tab-ascii-art-opt2
  */

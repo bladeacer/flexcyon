@@ -1,33 +1,36 @@
 // The code snippets in this file are derived from the Halcyon theme 
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
-body.theme-dark{
-    --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-    --flexcyon-text-muted: #6f768599;
-    --flexcyon-small-font: 0.9rem;
-    text-underline-offset: .1em;
+body.theme-dark {
+  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
+  --flexcyon-text-muted: #6f768599;
+  --flexcyon-small-font: 0.9rem;
+  text-underline-offset: .1em;
+  --flexcyon-vim-insert-text: "INSERT";
+  --flexcyon-vim-normal-text: "NORMAL";
+  --flexcyon-vim-command-text: "COMMAND";
 }
 
-body:is(.theme-dark){
-    /* ------------------------------ */
-    --text-normal: var(--flexcyon-text-normal);
-    --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
-    --text-faint: var(--flexcyon-text-muted);
-    /* ------------------------------ */
-    --text-accent: var(--flexcyon-accent);
-    --text-on-accent: var(--flexcyon-base-blue-03);
-    --text-accent-hover: var(--flexcyon-accent-hover);
-    /* ------------------------------ */
-    --text-error: var(--flexcyon-red-salmon);
-    --text-warning: var(--flexcyon-red-salmon);
-    --text-success: var(--flexcyon-lime-green);
-    /* ------------------------------ */
-    --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
-    --text-highlight-bg: var(--flexcyon-base-blue-03);
+body:is(.theme-dark) {
+  /* ------------------------------ */
+  --text-normal: var(--flexcyon-text-normal);
+  --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
+  --text-faint: var(--flexcyon-text-muted);
+  /* ------------------------------ */
+  --text-accent: var(--flexcyon-accent);
+  --text-on-accent: var(--flexcyon-base-blue-03);
+  --text-accent-hover: var(--flexcyon-accent-hover);
+  /* ------------------------------ */
+  --text-error: var(--flexcyon-red-salmon);
+  --text-warning: var(--flexcyon-red-salmon);
+  --text-success: var(--flexcyon-lime-green);
+  /* ------------------------------ */
+  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
+  --text-highlight-bg: var(--flexcyon-base-blue-03);
 }
 
 body:where(.theme-dark) {
-    --bold-color: var(--flexcyon-red-salmon);
-    --italic-color: var(--flexcyon-accent);
+  --bold-color: var(--flexcyon-red-salmon);
+  --italic-color: var(--flexcyon-accent);
 
   .cm-em.cm-quote {
     color: var(--italic-color);
@@ -37,7 +40,7 @@ body:where(.theme-dark) {
     color: var(--bold-color);
   }
 
-    
+
   .cm-line .ͼi {
     color: var(--flexcyon-cyan);
   }
@@ -57,7 +60,7 @@ body:where(.theme-dark) {
   .cm-line .cm-matchingBracket {
     color: var(--flexcyon-purple-lilac);
   }
-    
+
   .cm-line .ͼi {
     color: var(--flexcyon-cyan);
   }
@@ -105,6 +108,5 @@ body:where(.theme-dark) {
 }
 
 body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
-    color: var(--text-normal);
+  color: var(--text-normal);
 }
-
