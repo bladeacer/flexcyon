@@ -1,5 +1,5 @@
 # Todo
-- [ ] Style empty new tab flexcyon
+- [x] Style empty new tab flexcyon
 - [ ] Review flexcyon modded plugins and themes
 
 - [ ] Add style settings support

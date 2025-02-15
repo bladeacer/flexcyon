@@ -1,16 +1,20 @@
 /* Callout modifications */
 // The code snippets in this file are derived from the Halcyon theme 
  // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+body.theme-dark {
+    --flexcyon-callout-icon-right-padding: 4px;
+    --flexcyon-callout-first-codeblock-margin-top: 1.25rem;
+}
 body:where(.theme-dark) {
     --callout-padding: var(--size-4-3) var(--size-4-6);
 
     div.callout {
         .callout-icon {
-            padding-inline-end: 5px;
+            padding-inline-end: var(--flexcyon-callout-icon-right-padding);
         }
 
         .callout-content :first-child:is(pre) {
-            margin-top: 1rem;
+            margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
         }
     }
 }
