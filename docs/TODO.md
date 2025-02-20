@@ -1,7 +1,7 @@
 # Todo
 - [x] Style empty new tab flexcyon
 - [ ] Change thumbnail image, looks goofy
-- [ ] Update README and add dark theme screenshot (path in update [manifest.json](./manifest.json) as well)
+- [ ] Update README and add dark theme screenshot (path in update [manifest.json](https://github.com/bladeacer/flexcyon/blob/master/manifest.json) as well)
    - Ensure screenshot size is 512 x 288 pixels
    - Update too when style settings support is fully added
 
