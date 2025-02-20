@@ -8,6 +8,9 @@ body.theme-dark {
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
   --flexcyon-vim-command-text: "COMMAND";
+  --flexcyon-status-reading-text: "READ";
+  --flexcyon-status-source-text: "SOURCE";
+  --flexcyon-status-live-text: "LIVE";
 }
 
 body:is(.theme-dark) {

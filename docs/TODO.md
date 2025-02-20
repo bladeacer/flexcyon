@@ -1,5 +1,10 @@
 # Todo
 - [x] Style empty new tab flexcyon
+- [ ] Change thumbnail image, looks goofy
+- [ ] Update README and add dark theme screenshot (path in update [manifest.json](./manifest.json) as well)
+   - Ensure screenshot size is 512 x 288 pixels
+   - Update too when style settings support is fully added
+
 - [ ] Review flexcyon modded plugins and themes
 
 - [ ] Add style settings support
@@ -9,11 +14,9 @@
 
 - [ ] Add minify directory and sass compile to minified css `.min.css`
 
-- [ ] Update README and add dark theme screenshot (path in update [manifest.json](./manifest.json) as well)
-   - Ensure screenshot size is 512 x 288 pixels
-   - Update too when style settings support is fully added
 
-- [ ] Add the theme to BRAT
+
+- [x] Add the theme to BRAT
 - [ ] Release the theme
   - Meaning make the PR to the Obsidian themes repo and wait
-- [ ] Add tags to organise PRs/FRs
+- [x] Add tags to organise PRs/FRs

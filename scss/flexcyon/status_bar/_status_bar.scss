@@ -1,33 +1,4 @@
-body:where(.theme-dark) {
-  .status-bar {
-    font-size: 0.825rem;
-    border: unset;
-    z-index: 1;
-    transform: translateX(1000px);
-    transition: transform 0.35s ease-in-out;
-
-    &::before{
-      content: "Show status bar";
-      background-color: var(--color-base-00);
-      border-radius: inherit;
-      margin-right: 2px;
-      padding: 8px;
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      transform: translateX(-1000px);
-      transition: transform 0.3s ease-in;
-    }
-    &:hover::before {
-      transform: translateY(50px);
-      transition: transform 0.3s ease-in;
-    }
-    &:hover {
-      transform: unset;
-      transition: transform 0.35s ease-in-out;
-    }
-  }
-
+body.flexcyon-status-text-mode {
 
   .plugin-editor-status {
 
@@ -37,26 +8,57 @@ body:where(.theme-dark) {
       }
     }
 
-    &::before{
+    &::before {
       font-weight: bold;
     }
 
   }
 
   .plugin-editor-status[aria-label="Reading"]::before {
-    content: "READ";
+    content: var(--flexcyon-status-reading-text);
     color: var(--text-accent);
   }
 
   .plugin-editor-status[aria-label="Source mode"]::before {
-    content: "SOURCE";
+    content: var(--flexcyon-status-source-text);
     color: var(--color-purple);
   }
 
   .plugin-editor-status[aria-label="Live Preview"]::before {
-    content: "LIVE";
+    content: var(--flexcyon-status-live-text);
     color: var(--color-blue);
-   } 
+  }
 
 }
 
+
+body.flexcyon-status-hide-until-hover .status-bar {
+  font-size: 0.825rem;
+  border: unset;
+  z-index: 1;
+  transform: translateX(1000px);
+  transition: transform 0.35s ease-in-out;
+
+  &::before {
+    content: "Show status bar";
+    background-color: var(--color-base-00);
+    border-radius: inherit;
+    margin-right: 2px;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-1000px);
+    transition: transform 0.3s ease-in;
+  }
+
+  &:hover::before {
+    transform: translateY(50px);
+    transition: transform 0.3s ease-in;
+  }
+
+  &:hover {
+    transform: unset;
+    transition: transform 0.35s ease-in-out;
+  }
+}

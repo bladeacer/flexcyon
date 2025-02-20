@@ -81,8 +81,32 @@ body:where(.theme-dark) {
         }
     }
 
-    // Menu items
+    [aria-label^="Collapse results"] {
+        letter-spacing: var(--less-letter-spacing);
+    }
 
+    
+}
+
+body {
+    span.flair.mod-pop {
+        margin-left: 1rem;
+    }
+    div.community-modal-search-results div.community-item {
+        opacity: 0.9;
+    }
+
+    div.community-item.is-selected {
+        background-color: var(--interactive-accent-hover);
+        font-weight: bold;
+    }
+    div.community-item.is-selected div.community-item-name span.flair.mod-pop {
+        background-color: var(--color-base-35);
+        color: var(--text-normal);
+    }
+}
+
+body.flexcyon-settings-coloured-icons {
 
     [aria-label^="Uninstall"] {
         color: rgba(var(--color-red-rgb), 0.9);
@@ -97,13 +121,20 @@ body:where(.theme-dark) {
     }
 
     [aria-label^="Donate to support"] {
-        color: var(--color-pink);
+        color: rgba(var(--color-pink-rgb), 0.9);
     }
 
-    [aria-label^="Collapse results"] {
-        letter-spacing: var(--less-letter-spacing);
+    [aria-label^="Reload plugins"] {
+        color: rgba(var(--color-cyan-rgb), 0.9);
+    }
+    [aria-label^="Open plugins folder"] {
+        color: rgba(var(--color-green-rgb), 0.9);
     }
 
+
+}
+
+body.flexcyon-titlebar-button-effects {
     .titlebar-button.mod-minimize {
         &:hover {
             color: var(--color-cyan);
@@ -129,5 +160,4 @@ body:where(.theme-dark) {
             scale: var(--expand);
         }
     }
-
 }

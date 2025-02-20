@@ -7,6 +7,8 @@ settings:
     type: heading
     level: 4
     collapsed: true
+    description: Callouts, status bar, title bar
+
   - title: Callouts
     type: heading
     level: 5
@@ -24,14 +26,61 @@ settings:
     default: 1.25
     format: rem
 
-  - 
-    title: Icons
+  - title: Status Bar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Hide until hover
+    id: flexcyon-status-hide-until-hover
+    description: Hide status bar until hover
+    type: class-toggle
+    default: false
+  - title: Use text instead of icons for mode status
+    id: flexcyon-status-text-mode
+    description: Use text instead of icons for mode status
+    type: class-toggle
+    default: false
+  - title: Reading Mode Text
+    id: flexcyon-status-reading-text
+    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "READ"
+    quotes: true
+  - title: Source Mode Text
+    id: flexcyon-status-source-text
+    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "SOURCE"
+    quotes: true
+  - title: Live Preview Mode Text
+    id: flexcyon-status-live-text
+    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "LIVE"
+    quotes: true
+  - title: Title Bar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Titlebar Button Effects
+    description: Enable hover effects on titlebar buttons
+    id: flexcyon-titlebar-button-effects
+    type: class-toggle
+    default: true
+
+  - title: Settings
     type: heading
     level: 4
     collapsed: true
+    description: Customise the appearance of settings
   - title: Smiley Toggle Icons in Settings
     description: Display smiley toggle icons for settings toggle buttons
     id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: true
+  - title: Coloured Icons in Settings
+    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
+    id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: true
 
@@ -39,13 +88,19 @@ settings:
     title: Others
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
+    description: Vim mode text, new tab appearance
   -
     title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings
     type: heading
     level: 5
-    collapsed: false
+    collapsed: true
+  - title: Enable Vim Mode Text
+    id: flexcyon-vim-mode-text-enable
+    description: Enable text for displaying current vim mode
+    type: class-toggle
+    default: true
   - 
     title: Insert Mode Text
     description: Text to display when in insert mode
@@ -67,11 +122,13 @@ settings:
     type: variable-text
     default: "COMMAND"
     quotes: true
+
   - 
     title: New Tab Appearance
     type: heading
     level: 5
     collapsed: true
+    description: Customise the appearance of new tabs
   - title: Enable ASCII Art
     id: flexcyon-ascii-enable
     description: Enable ASCII art in new tab
@@ -99,8 +156,5 @@ settings:
     description: Toggle the empty state actions
     type: class-toggle
     default: false
-
-
-
 
  */

@@ -284,31 +284,54 @@ body:where(.theme-dark) div.side-dock-actions :nth-of-type(5n+5):hover {
   color: var(--color-yellow);
   scale: var(--expand);
 }
-body:where(.theme-dark) [aria-label^=Uninstall] {
-  color: rgba(var(--color-red-rgb), 0.9);
-}
-body:where(.theme-dark) [aria-label^=Options] {
-  color: rgba(var(--color-blue-rgb), 0.9);
-}
-body:where(.theme-dark) [aria-label^=Hotkeys] {
-  color: rgba(var(--color-green-rgb), 0.9);
-}
-body:where(.theme-dark) [aria-label^="Donate to support"] {
-  color: var(--color-pink);
-}
 body:where(.theme-dark) [aria-label^="Collapse results"] {
   letter-spacing: var(--less-letter-spacing);
 }
-body:where(.theme-dark) .titlebar-button.mod-minimize:hover {
-  color: var(--color-cyan);
+
+body span.flair.mod-pop {
+  margin-left: 1rem;
 }
-body:where(.theme-dark) .titlebar-button.mod-maximize:hover {
-  color: var(--color-blue);
+body div.community-modal-search-results div.community-item {
+  opacity: 0.9;
 }
-body:where(.theme-dark) .titlebar-button.mod-close:hover {
+body div.community-item.is-selected {
+  background-color: var(--interactive-accent-hover);
+  font-weight: bold;
+}
+body div.community-item.is-selected div.community-item-name span.flair.mod-pop {
+  background-color: var(--color-base-35);
   color: var(--text-normal);
 }
-body:where(.theme-dark) .titlebar-button:hover {
+
+body.flexcyon-settings-coloured-icons [aria-label^=Uninstall] {
+  color: rgba(var(--color-red-rgb), 0.9);
+}
+body.flexcyon-settings-coloured-icons [aria-label^=Options] {
+  color: rgba(var(--color-blue-rgb), 0.9);
+}
+body.flexcyon-settings-coloured-icons [aria-label^=Hotkeys] {
+  color: rgba(var(--color-green-rgb), 0.9);
+}
+body.flexcyon-settings-coloured-icons [aria-label^="Donate to support"] {
+  color: rgba(var(--color-pink-rgb), 0.9);
+}
+body.flexcyon-settings-coloured-icons [aria-label^="Reload plugins"] {
+  color: rgba(var(--color-cyan-rgb), 0.9);
+}
+body.flexcyon-settings-coloured-icons [aria-label^="Open plugins folder"] {
+  color: rgba(var(--color-green-rgb), 0.9);
+}
+
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-minimize:hover {
+  color: var(--color-cyan);
+}
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-maximize:hover {
+  color: var(--color-blue);
+}
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-close:hover {
+  color: var(--text-normal);
+}
+body.flexcyon-titlebar-button-effects .titlebar-button:hover {
   opacity: unset;
   scale: var(--expand);
 }
@@ -385,6 +408,9 @@ body.theme-dark {
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
   --flexcyon-vim-command-text: "COMMAND";
+  --flexcyon-status-reading-text: "READ";
+  --flexcyon-status-source-text: "SOURCE";
+  --flexcyon-status-live-text: "LIVE";
 }
 
 body:is(.theme-dark) {
@@ -643,11 +669,11 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
-body:where(.theme-dark) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+body.flexcyon-vim-mode-text-enable .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
 }
-body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
+body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
   content: var(--flexcyon-vim-insert-text);
   bottom: -9px;
   left: 12px;
@@ -657,7 +683,7 @@ body:where(.theme-dark) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::befo
   height: 35px;
   padding-left: 4px;
 }
-body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
+body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
   content: var(--flexcyon-vim-normal-text);
   position: fixed;
   bottom: -9px;
@@ -669,25 +695,25 @@ body:where(.theme-dark) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels
   letter-spacing: 0.5px;
   color: var(--color-orange);
 }
-body:where(.theme-dark) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+body.flexcyon-vim-mode-text-enable .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
   bottom: 4px;
   left: 69px;
 }
-body:where(.theme-dark) .cm-panels .cm-panel {
+body.flexcyon-vim-mode-text-enable .cm-panels .cm-panel {
   background-color: var(--color-base-00);
   padding-top: 5px;
 }
-body:where(.theme-dark) .cm-panels input {
+body.flexcyon-vim-mode-text-enable .cm-panels input {
   transform: translateY(-4.5px);
   z-index: 16;
 }
-body:where(.theme-dark) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+body.flexcyon-vim-mode-text-enable .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
   content: var(--flexcyon-vim-command-text);
   bottom: 12px;
   padding-right: 4px;
   color: var(--color-blue);
 }
-body:where(.theme-dark) div.cm-vim-message {
+body.flexcyon-vim-mode-text-enable div.cm-vim-message {
   color: var(--color-red) !important;
   font-weight: bold;
 }
@@ -709,14 +735,33 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
 }
 
-body:where(.theme-dark) .status-bar {
+body.flexcyon-status-text-mode .plugin-editor-status .status-bar-item-icon svg {
+  display: none;
+}
+body.flexcyon-status-text-mode .plugin-editor-status::before {
+  font-weight: bold;
+}
+body.flexcyon-status-text-mode .plugin-editor-status[aria-label=Reading]::before {
+  content: var(--flexcyon-status-reading-text);
+  color: var(--text-accent);
+}
+body.flexcyon-status-text-mode .plugin-editor-status[aria-label="Source mode"]::before {
+  content: var(--flexcyon-status-source-text);
+  color: var(--color-purple);
+}
+body.flexcyon-status-text-mode .plugin-editor-status[aria-label="Live Preview"]::before {
+  content: var(--flexcyon-status-live-text);
+  color: var(--color-blue);
+}
+
+body.flexcyon-status-hide-until-hover .status-bar {
   font-size: 0.825rem;
   border: unset;
   z-index: 1;
   transform: translateX(1000px);
   transition: transform 0.35s ease-in-out;
 }
-body:where(.theme-dark) .status-bar::before {
+body.flexcyon-status-hide-until-hover .status-bar::before {
   content: "Show status bar";
   background-color: var(--color-base-00);
   border-radius: inherit;
@@ -728,31 +773,13 @@ body:where(.theme-dark) .status-bar::before {
   transform: translateX(-1000px);
   transition: transform 0.3s ease-in;
 }
-body:where(.theme-dark) .status-bar:hover::before {
+body.flexcyon-status-hide-until-hover .status-bar:hover::before {
   transform: translateY(50px);
   transition: transform 0.3s ease-in;
 }
-body:where(.theme-dark) .status-bar:hover {
+body.flexcyon-status-hide-until-hover .status-bar:hover {
   transform: unset;
   transition: transform 0.35s ease-in-out;
-}
-body:where(.theme-dark) .plugin-editor-status .status-bar-item-icon svg {
-  display: none;
-}
-body:where(.theme-dark) .plugin-editor-status::before {
-  font-weight: bold;
-}
-body:where(.theme-dark) .plugin-editor-status[aria-label=Reading]::before {
-  content: "READ";
-  color: var(--text-accent);
-}
-body:where(.theme-dark) .plugin-editor-status[aria-label="Source mode"]::before {
-  content: "SOURCE";
-  color: var(--color-purple);
-}
-body:where(.theme-dark) .plugin-editor-status[aria-label="Live Preview"]::before {
-  content: "LIVE";
-  color: var(--color-blue);
 }
 
 body.theme-dark {
@@ -863,6 +890,8 @@ settings:
     type: heading
     level: 4
     collapsed: true
+    description: Callouts, status bar, title bar
+
   - title: Callouts
     type: heading
     level: 5
@@ -880,14 +909,61 @@ settings:
     default: 1.25
     format: rem
 
-  - 
-    title: Icons
+  - title: Status Bar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Hide until hover
+    id: flexcyon-status-hide-until-hover
+    description: Hide status bar until hover
+    type: class-toggle
+    default: false
+  - title: Use text instead of icons for mode status
+    id: flexcyon-status-text-mode
+    description: Use text instead of icons for mode status
+    type: class-toggle
+    default: false
+  - title: Reading Mode Text
+    id: flexcyon-status-reading-text
+    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "READ"
+    quotes: true
+  - title: Source Mode Text
+    id: flexcyon-status-source-text
+    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "SOURCE"
+    quotes: true
+  - title: Live Preview Mode Text
+    id: flexcyon-status-live-text
+    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "LIVE"
+    quotes: true
+  - title: Title Bar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Titlebar Button Effects
+    description: Enable hover effects on titlebar buttons
+    id: flexcyon-titlebar-button-effects
+    type: class-toggle
+    default: true
+
+  - title: Settings
     type: heading
     level: 4
     collapsed: true
+    description: Customise the appearance of settings
   - title: Smiley Toggle Icons in Settings
     description: Display smiley toggle icons for settings toggle buttons
     id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: true
+  - title: Coloured Icons in Settings
+    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
+    id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: true
 
@@ -895,13 +971,19 @@ settings:
     title: Others
     type: heading
     level: 4
-    collapsed: false
+    collapsed: true
+    description: Vim mode text, new tab appearance
   -
     title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings
     type: heading
     level: 5
-    collapsed: false
+    collapsed: true
+  - title: Enable Vim Mode Text
+    id: flexcyon-vim-mode-text-enable
+    description: Enable text for displaying current vim mode
+    type: class-toggle
+    default: true
   - 
     title: Insert Mode Text
     description: Text to display when in insert mode
@@ -923,11 +1005,13 @@ settings:
     type: variable-text
     default: "COMMAND"
     quotes: true
+
   - 
     title: New Tab Appearance
     type: heading
     level: 5
     collapsed: true
+    description: Customise the appearance of new tabs
   - title: Enable ASCII Art
     id: flexcyon-ascii-enable
     description: Enable ASCII art in new tab
@@ -955,9 +1039,6 @@ settings:
     description: Toggle the empty state actions
     type: class-toggle
     default: false
-
-
-
 
  */
 /* Modifications for alternate file tree plugin */

@@ -19,6 +19,7 @@ For plugins/snippets that are not styled yet, feel free to open a PR/FR on it.
 ## Screenshots
 
 ## Installation
+To install, 
 Add after adding installation via BRAT.
 
 ## Style Settings
