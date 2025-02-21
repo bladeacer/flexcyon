@@ -35,14 +35,8 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
     }
 }
 
-/* ------------------------------ */
-body:where(.theme-dark) {
-    --icon-stroke: 2px;
-    --icon-color-active: var(--interactive-accent);
-    --icon-color-focused: var(--interactive-accent);
-    --clickable-icon-radius: 0;
 
-    div.side-dock-actions {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions {
         scale: var(--upsize);
         opacity: 0.7;
 
@@ -79,7 +73,12 @@ body:where(.theme-dark) {
             color: var(--color-yellow);
             scale: var(--expand);
         }
-    }
+}
+body:where(.theme-dark) {
+    --icon-stroke: 2px;
+    --icon-color-active: var(--interactive-accent);
+    --icon-color-focused: var(--interactive-accent);
+    --clickable-icon-radius: 0;
 
     [aria-label^="Collapse results"] {
         letter-spacing: var(--less-letter-spacing);
@@ -101,7 +100,7 @@ body {
         font-weight: bold;
     }
     div.community-item.is-selected div.community-item-name span.flair.mod-pop {
-        background-color: var(--color-base-35);
+        background-color: var(--color-base-25);
         color: var(--text-normal);
     }
 }

@@ -7,12 +7,20 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 Currently, Flexcyon is dark mode only. There are plans to add light mode support. For more details, see the [Roadmap](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
 
 ## Screenshots
+TODO: Add screenshots
 
 ## Installation
-To install, 
+TODO: Add when theme is added to community store.
+<!-- To install,  -->
 
 ### Installation via BRAT
-TODO: Add instruction for installing via BRAT.
+To install this theme via BRAT, navigate to `Settings > Community Plugins > Browse` 
+1. `Type "BRAT" in the search bar > Select it (the one by TftHacker) > Click install`
+2. Wait for installation to complete then click `Enable`
+3. Click `Options`
+4. Click `Add Beta Theme`
+5. Input `https://github.com/bladeacer/flexcyon` and then click `Add Theme`
+
 
 
 #### Supported plugins/snippets

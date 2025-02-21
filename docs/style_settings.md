@@ -6,6 +6,15 @@ Style Settings
 |--...
 |-- Flexcyon Style Settings
 |   |-- Editor
+|   |   |-- Colors
+|   |   |   |-- Cyan Color
+|   |   |   |-- Green Color
+|   |   |   |-- Orange Color
+|   |   |   |-- Yellow Color
+|   |   |   |-- Purple Color
+|   |   |   |-- Red Color
+|   |   |   |-- Blue Color
+|   |   |   |-- Pink Color
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -23,6 +32,8 @@ Style Settings
 |   |-- Others
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
+|   |   |   |-- Vim mode text left positioning
+|   |   |   |-- Vim mode text bottom positioning
 |   |   |   |-- Insert Mode Text
 |   |   |   |-- Normal Mode Text
 |   |   |   |-- Command Mode Text
@@ -31,5 +42,7 @@ Style Settings
 |   |   |   |-- ASCII Art
 |   |   |   |-- Disable Empty State title
 |   |   |   |-- Disable Empty State actions
+|   |   |-- Side Dock Icons
+|   |   |   |-- Enable side dock icon effects
 |-- ...
 ```
