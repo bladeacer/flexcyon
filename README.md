@@ -7,7 +7,13 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 Currently, Flexcyon is dark mode only. For more details, see the [Roadmap](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
 
 ## Screenshots
-TODO: Add screenshots
+![](./docs/screenshots/showcase1.png)
+
+![](./docs/screenshots/showcase2.png)
+
+![](./docs/screenshots/showcase3.png)
+
+<!-- ![](./docs/screenshots/showcase4.png) -->
 
 ## Installation
 TODO: Add when theme is added to community store.
