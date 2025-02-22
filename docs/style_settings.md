@@ -5,7 +5,7 @@
 Style Settings
 |--...
 |-- Flexcyon Style Settings
-|   |-- Editor
+|   |-- **Editor**
 |   |   |-- Colors
 |   |   |   |-- Cyan Color
 |   |   |   |-- Green Color
@@ -17,6 +17,9 @@ Style Settings
 |   |   |   |-- Pink Color
 |   |   |   |-- Accent Color
 |   |   |-- Typography
+|   |   |   |--  Muted text color
+|   |   |-- Files
+|   |   |   |--  Enable dimmed file extensions in file explorer
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -31,10 +34,10 @@ Style Settings
 |   |   |   |-- Live Preview Mode Text
 |   |   |-- Title Bar
 |   |   |   |-- Titlebar Button Effects
-|   |-- Settings
+|   |-- **Settings**
 |   |   |-- Smiley Toggle Icons in Settings
 |   |   |-- Coloured Icons in Settings
-|   |-- Plugins
+|   |-- **Plugins**
 |   |   |-- Alternate file tree
 |   |   |   |-- Folders font size
 |   |   |   |-- Folders font color
@@ -42,7 +45,10 @@ Style Settings
 |   |   |   |-- Files font size
 |   |   |   |-- Files font color
 |   |   |   |-- Disable folder icons
-|   |-- Others
+|   |   |   |-- Disable file tree header
+|   |   |   |-- Enable Alternate folder count
+|   |   |   |-- Enabled dimmed file extensions in file tree
+|   |-- **Others**
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
 |   |   |   |-- Vim mode text left positioning

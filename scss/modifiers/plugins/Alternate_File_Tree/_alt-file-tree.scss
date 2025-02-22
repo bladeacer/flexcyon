@@ -1,37 +1,24 @@
 /* Modifications for alternate file tree plugin */
-@mixin unrender_tag($path_suffix) {
 
-    div.oz-nav-file-title[data-path$="#{$path_suffix}"] {
-        div svg {
-            display: none;
-        }
-
-        span.oz-nav-file-tag {
-            display: none;
-        }
-
-        div::after {
-            content: $path_suffix;
-            opacity: var(--dimmed);
-        }
-    }
-}
-
-body {
+body:where(.theme-dark) {
     div.oz-folder-name {
         opacity: var(--dimmed);
     }
+
+    div.oz-folder-element {
+        overflow: hidden;
+        scrollbar-width: 1px;
+    }
+
     div.oz-folder-name.is-folder-active {
         font-weight: normal;
         opacity: unset;
     }
-    // Make this toggleable via style settings
-    @include unrender_tag(".md");
-    @include unrender_tag(".pdf");
-    @include unrender_tag(".jpg");
-    @include unrender_tag(".png");
-    @include unrender_tag(".doc");
-    @include unrender_tag(".txt");
+
+    div.oz-file-tree-header {
+        background-color: var(--color-base-00);
+    }
+
 
     div.oz-folders-action-items.file-tree-header-fixed {
         border-radius: unset;
@@ -43,23 +30,41 @@ body {
         }
     }
 
-    // .oz-file-tree-header {
-    //     display: none;
-    // }
+}
+
+body.flexcyon-oz-alternate-folder-count {
+    div.oz-folder-line {
+        transition: all 0.35s ease-in-out;
+
+        div.oz-folder-count {
+            transform: translateY(1000px);
+        }
+    }
+
+    div.oz-folder-line:hover {
+        max-width: max-content;
+
+        div.oz-folder-count {
+            span.oz-nav-file-tag {
+                background-color: unset;
+                font-size: calc(var(--oz-fta-folder-font-size) - 0.1rem);
+                margin-top: 0.5px;
+                font-weight: inherit;
+                transform: translateY(-1000px);
+                text-transform: none;
+                display: inline;
+                text-align: left;
+
+                &::before {
+                    content: "Count: ";
+                }
+            }
+
+        }
+    }
 
 
-    // .oz-folder-block {
-    //     padding-top: unset;
-    //     margin-inline-start: unset;
-    // }
-    // .oz-folder-contents{
-    //     border-left: unset;
-    // }
 
-    // .oz-folder-name {
-    //     transform: translateY(-2px);
-    //     padding: 2px 0px;
-    // }
 
 }
 
@@ -67,4 +72,51 @@ body.flexcyon-oz-folder-icons-disabled {
     div.oz-icon-div {
         display: none;
     }
+}
+
+body.flexcyon-oz-file-tree-header-disabled {
+    div.oz-file-tree-header {
+        display: none;
+    }
+}
+
+body.flexcyon-oz-dimmed-file-exts-enabled {
+    div.oz-nav-file-title[data-path$=".md"] {
+        div svg {
+            display: none;
+        }
+
+        span.oz-nav-file-tag {
+            display: none;
+        }
+
+        div::after {
+            content: ".md";
+            opacity: var(--dimmed);
+        }
+    }
+
+    div.oz-nav-file-title {
+        div.oz-nav-file-title-content {
+            width: unset;
+        }
+
+        span.oz-nav-file-tag {
+            text-transform: lowercase;
+            background-color: unset;
+            margin: unset;
+            border: unset;
+            padding: unset;
+            letter-spacing: unset;
+            color: var(--oz-fta-file-pane-file-name-color);
+            opacity: var(--dimmed);
+            font-size: calc(var(--oz-fta-file-font-size) - 0.05rem);
+            font-weight: unset;
+
+            &::before {
+                content: ".";
+            }
+        }
+    }
+
 }

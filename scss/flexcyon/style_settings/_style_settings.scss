@@ -7,7 +7,7 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Colors, Callouts, Typography, status bar, title bar
+    description: Colors, Callouts, Typography, Files, status bar, title bar
 
   - title: Colors
     type: heading
@@ -110,6 +110,15 @@ settings:
     opacity: true
     format: hex
     default: "#6f768599"
+
+  - title: Files
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable dimmed file extensions in file exploroer
+    id: flexcyon-file-exp-dimmed-file-exts-enabled 
+    type: class-toggle
+    default: true
 
   - title: Callouts
     type: heading
@@ -247,6 +256,21 @@ settings:
     description: Remove folder icons
     type: class-toggle
     default: false
+  - title: Disable file tree header
+    id: flexcyon-oz-file-tree-header-disabled
+    description: Remove file tree header
+    type: class-toggle
+    default: false
+  - title: Enable Alternate folder count
+    id: flexcyon-oz-alternate-folder-count
+    description: Alternate folder count style, shows count on hover
+    type: class-toggle
+    default: false
+
+  - title: Enable dimmed file extensions in file tree
+    id: flexcyon-oz-dimmed-file-exts-enabled
+    type: class-toggle
+    default: true
 
   -
     title: Others
@@ -350,3 +374,10 @@ body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);
   border: 1px rgba(var(--color-purple-rgb), var(--dimmed)) solid;
 }
+
+  // - title: Text max length
+  //   id: flexcyon-oz-text-max-length
+  //   description: Max length of folders and files
+  //   type: variable-text
+  //   default: "calc(100%-30px)"
+  //   quotes: true

@@ -629,40 +629,24 @@ body:where(.theme-dark) :is(.mod-left-split, .mod-right-split) .workspace-tab-he
   padding-left: 0;
 }
 
-body:where(.theme-dark) div[data-path$=".md"] div.nav-file-tag {
+body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
   display: none;
 }
-body:where(.theme-dark) div[data-path$=".md"] div.nav-file-title-content::after {
+body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-title-content::after {
   content: ".md";
   opacity: var(--dimmed);
 }
-body:where(.theme-dark) div[data-path$=".pdf"] div.nav-file-tag {
-  display: none;
-}
-body:where(.theme-dark) div[data-path$=".pdf"] div.nav-file-title-content::after {
-  content: ".pdf";
+body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag {
   opacity: var(--dimmed);
+  background-color: unset;
+  text-transform: lowercase;
+  font-size: calc(var(--nav-item-size) - 0.075rem);
+  margin: unset;
+  padding: unset;
+  font-weight: unset;
 }
-body:where(.theme-dark) div[data-path$=".jpg"] div.nav-file-tag {
-  display: none;
-}
-body:where(.theme-dark) div[data-path$=".jpg"] div.nav-file-title-content::after {
-  content: ".jpg";
-  opacity: var(--dimmed);
-}
-body:where(.theme-dark) div[data-path$=".png"] div.nav-file-tag {
-  display: none;
-}
-body:where(.theme-dark) div[data-path$=".png"] div.nav-file-title-content::after {
-  content: ".png";
-  opacity: var(--dimmed);
-}
-body:where(.theme-dark) div[data-path$=".doc"] div.nav-file-tag {
-  display: none;
-}
-body:where(.theme-dark) div[data-path$=".doc"] div.nav-file-title-content::after {
-  content: ".doc";
-  opacity: var(--dimmed);
+body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
+  content: ".";
 }
 
 body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -893,7 +877,7 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Colors, Callouts, Typography, status bar, title bar
+    description: Colors, Callouts, Typography, Files, status bar, title bar
 
   - title: Colors
     type: heading
@@ -996,6 +980,15 @@ settings:
     opacity: true
     format: hex
     default: "#6f768599"
+
+  - title: Files
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable dimmed file extensions in file exploroer
+    id: flexcyon-file-exp-dimmed-file-exts-enabled 
+    type: class-toggle
+    default: true
 
   - title: Callouts
     type: heading
@@ -1133,6 +1126,21 @@ settings:
     description: Remove folder icons
     type: class-toggle
     default: false
+  - title: Disable file tree header
+    id: flexcyon-oz-file-tree-header-disabled
+    description: Remove file tree header
+    type: class-toggle
+    default: false
+  - title: Enable Alternate folder count
+    id: flexcyon-oz-alternate-folder-count
+    description: Alternate folder count style, shows count on hover
+    type: class-toggle
+    default: false
+
+  - title: Enable dimmed file extensions in file tree
+    id: flexcyon-oz-dimmed-file-exts-enabled
+    type: class-toggle
+    default: true
 
   -
     title: Others
@@ -1237,84 +1245,87 @@ body.theme-dark div.pcr-app.visible {
 }
 
 /* Modifications for alternate file tree plugin */
-body div.oz-folder-name {
+body:where(.theme-dark) div.oz-folder-name {
   opacity: var(--dimmed);
 }
-body div.oz-folder-name.is-folder-active {
+body:where(.theme-dark) div.oz-folder-element {
+  overflow: hidden;
+  scrollbar-width: 1px;
+}
+body:where(.theme-dark) div.oz-folder-name.is-folder-active {
   font-weight: normal;
   opacity: unset;
 }
-body div.oz-nav-file-title[data-path$=".md"] div svg {
-  display: none;
+body:where(.theme-dark) div.oz-file-tree-header {
+  background-color: var(--color-base-00);
 }
-body div.oz-nav-file-title[data-path$=".md"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".md"] div::after {
-  content: ".md";
-  opacity: var(--dimmed);
-}
-body div.oz-nav-file-title[data-path$=".pdf"] div svg {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".pdf"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".pdf"] div::after {
-  content: ".pdf";
-  opacity: var(--dimmed);
-}
-body div.oz-nav-file-title[data-path$=".jpg"] div svg {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".jpg"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".jpg"] div::after {
-  content: ".jpg";
-  opacity: var(--dimmed);
-}
-body div.oz-nav-file-title[data-path$=".png"] div svg {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".png"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".png"] div::after {
-  content: ".png";
-  opacity: var(--dimmed);
-}
-body div.oz-nav-file-title[data-path$=".doc"] div svg {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".doc"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".doc"] div::after {
-  content: ".doc";
-  opacity: var(--dimmed);
-}
-body div.oz-nav-file-title[data-path$=".txt"] div svg {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".txt"] span.oz-nav-file-tag {
-  display: none;
-}
-body div.oz-nav-file-title[data-path$=".txt"] div::after {
-  content: ".txt";
-  opacity: var(--dimmed);
-}
-body div.oz-folders-action-items.file-tree-header-fixed {
+body:where(.theme-dark) div.oz-folders-action-items.file-tree-header-fixed {
   border-radius: unset;
   background-color: var(--color-base-00);
   border: unset;
 }
-body div.oz-folders-action-items.file-tree-header-fixed svg {
+body:where(.theme-dark) div.oz-folders-action-items.file-tree-header-fixed svg {
   scale: var(--upsize);
+}
+
+body.flexcyon-oz-alternate-folder-count div.oz-folder-line {
+  transition: all 0.35s ease-in-out;
+}
+body.flexcyon-oz-alternate-folder-count div.oz-folder-line div.oz-folder-count {
+  transform: translateY(1000px);
+}
+body.flexcyon-oz-alternate-folder-count div.oz-folder-line:hover {
+  max-width: max-content;
+}
+body.flexcyon-oz-alternate-folder-count div.oz-folder-line:hover div.oz-folder-count span.oz-nav-file-tag {
+  background-color: unset;
+  font-size: calc(var(--oz-fta-folder-font-size) - 0.1rem);
+  margin-top: 0.5px;
+  font-weight: inherit;
+  transform: translateY(-1000px);
+  text-transform: none;
+  display: inline;
+  text-align: left;
+}
+body.flexcyon-oz-alternate-folder-count div.oz-folder-line:hover div.oz-folder-count span.oz-nav-file-tag::before {
+  content: "Count: ";
 }
 
 body.flexcyon-oz-folder-icons-disabled div.oz-icon-div {
   display: none;
+}
+
+body.flexcyon-oz-file-tree-header-disabled div.oz-file-tree-header {
+  display: none;
+}
+
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title[data-path$=".md"] div svg {
+  display: none;
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title[data-path$=".md"] span.oz-nav-file-tag {
+  display: none;
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title[data-path$=".md"] div::after {
+  content: ".md";
+  opacity: var(--dimmed);
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title div.oz-nav-file-title-content {
+  width: unset;
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title span.oz-nav-file-tag {
+  text-transform: lowercase;
+  background-color: unset;
+  margin: unset;
+  border: unset;
+  padding: unset;
+  letter-spacing: unset;
+  color: var(--oz-fta-file-pane-file-name-color);
+  opacity: var(--dimmed);
+  font-size: calc(var(--oz-fta-file-font-size) - 0.05rem);
+  font-weight: unset;
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title span.oz-nav-file-tag::before {
+  content: ".";
 }
 
 /* Modificatiions for MiniTabs plugin */
@@ -1400,7 +1411,7 @@ body:where(.theme-dark) .popover .banner img[alt=banner] {
   display: none;
 }
 
-/* Modfiications for banner snippet */
+/* Modifications for banner snippet */
 body:where(.theme-dark) .banner img[alt=banner] {
   padding: 1px;
   border-radius: 0px 0px 10px 10px;

@@ -1,19 +1,42 @@
-@mixin unrender_tag($path_suffix){
-    div[data-path$="#{$path_suffix}"]{
+// @mixin unrender_tag($path_suffix){
+//     div[data-path$="#{$path_suffix}"]{
+//         div.nav-file-tag{
+//             display: none;
+//         }
+//         div.nav-file-title-content::after{
+//             content: $path_suffix;
+//             opacity: var(--dimmed);
+//         }
+//     }
+// }
+
+body.flexcyon-file-exp-dimmed-file-exts-enabled {
+    // @include unrender_tag(".md");
+    // @include unrender_tag(".pdf");
+    // @include unrender_tag(".jpg");
+    // @include unrender_tag(".png");
+    // @include unrender_tag(".doc");
+    div[data-path$=".md"]{
         div.nav-file-tag{
             display: none;
         }
         div.nav-file-title-content::after{
-            content: $path_suffix;
+            content: ".md";
             opacity: var(--dimmed);
         }
     }
-}
-
-body:where(.theme-dark) {
-    @include unrender_tag(".md");
-    @include unrender_tag(".pdf");
-    @include unrender_tag(".jpg");
-    @include unrender_tag(".png");
-    @include unrender_tag(".doc");
+    div {
+        div.nav-file-tag{
+            opacity: var(--dimmed);
+            background-color: unset;
+            text-transform: lowercase;
+            font-size: calc(var(--nav-item-size) - 0.075rem);
+            margin: unset;
+            padding: unset;
+            font-weight: unset;
+            &::before{
+                content: ".";
+            }
+        }
+    }
 }
