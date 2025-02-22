@@ -4,7 +4,7 @@ A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence, I decided to combine the two which started this theme.
 
 #### Dark Theme only
-Currently, Flexcyon is dark mode only. There are plans to add light mode support. For more details, see the [Roadmap](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
+Currently, Flexcyon is dark mode only. For more details, see the [Roadmap](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
 
 ## Screenshots
 TODO: Add screenshots
@@ -20,8 +20,6 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 3. Click `Options`
 4. Click `Add Beta Theme`
 5. Input `https://github.com/bladeacer/flexcyon` and then click `Add Theme`
-
-
 
 #### Supported plugins/snippets
 The following plugins/snippets have their appearance modified to improve the Flexcyon experience:

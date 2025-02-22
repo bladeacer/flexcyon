@@ -37,10 +37,10 @@ body.flexcyon-status-hide-until-hover .status-bar {
   border: unset;
   z-index: 1;
   transform: translateX(1000px);
-  transition: transform 0.35s ease-in-out;
+  transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 
   &::before {
-    content: "Show status bar";
+    content: var(--flexcyon-status-hide-until-hover-text);
     background-color: var(--color-base-00);
     border-radius: inherit;
     margin-right: 2px;
@@ -49,16 +49,16 @@ body.flexcyon-status-hide-until-hover .status-bar {
     bottom: 0;
     right: 0;
     transform: translateX(-1000px);
-    transition: transform 0.3s ease-in;
+    transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   }
 
   &:hover::before {
     transform: translateY(50px);
-    transition: transform 0.3s ease-in;
+    transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   }
 
   &:hover {
     transform: unset;
-    transition: transform 0.35s ease-in-out;
+    transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   }
 }

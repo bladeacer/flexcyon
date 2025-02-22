@@ -1,8 +1,6 @@
 /* Modifications for alternate file tree plugin */
 @mixin unrender_tag($path_suffix) {
-    div.oz-nav-file-title {
-      font-size: var(--flexycon-small-font);
-    }
+
     div.oz-nav-file-title[data-path$="#{$path_suffix}"] {
         div svg {
             display: none;
@@ -19,12 +17,21 @@
     }
 }
 
-body:where(.theme-dark) {
+body {
+    div.oz-folder-name {
+        opacity: var(--dimmed);
+    }
+    div.oz-folder-name.is-folder-active {
+        font-weight: normal;
+        opacity: unset;
+    }
+    // Make this toggleable via style settings
     @include unrender_tag(".md");
     @include unrender_tag(".pdf");
     @include unrender_tag(".jpg");
     @include unrender_tag(".png");
     @include unrender_tag(".doc");
+    @include unrender_tag(".txt");
 
     div.oz-folders-action-items.file-tree-header-fixed {
         border-radius: unset;
@@ -36,34 +43,28 @@ body:where(.theme-dark) {
         }
     }
 
-    .oz-file-tree-header {
+    // .oz-file-tree-header {
+    //     display: none;
+    // }
+
+
+    // .oz-folder-block {
+    //     padding-top: unset;
+    //     margin-inline-start: unset;
+    // }
+    // .oz-folder-contents{
+    //     border-left: unset;
+    // }
+
+    // .oz-folder-name {
+    //     transform: translateY(-2px);
+    //     padding: 2px 0px;
+    // }
+
+}
+
+body.flexcyon-oz-folder-icons-disabled {
+    div.oz-icon-div {
         display: none;
     }
-
-    .oz-icon-div {
-        svg {
-            display: none;
-        }
-
-        &::after {
-            content: "|";
-            margin-left: 1.5px;
-            color: var(--color-purple);
-            padding-inline-end: 10px;
-        }
-    }
-
-    .oz-folder-block {
-        padding-top: unset;
-        margin-inline-start: unset;
-    }
-    .oz-folder-contents{
-        border-left: unset;
-    }
-
-    .oz-folder-name {
-        transform: translateY(-2px);
-        padding: 2px 0px;
-    }
-
 }

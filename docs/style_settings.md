@@ -15,11 +15,16 @@ Style Settings
 |   |   |   |-- Red Color
 |   |   |   |-- Blue Color
 |   |   |   |-- Pink Color
+|   |   |   |-- Accent Color
+|   |   |-- Typography
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
 |   |   |-- Status Bar
 |   |   |   |-- Hide until hover
+|   |   |   |-- Text to show when hide until hover is enabled
+|   |   |   |-- Transition duration for showing status bar on hover
+|   |   |   |-- Transition timing function for showing status bar on hover
 |   |   |   |-- Use text instead of icons for mode status
 |   |   |   |-- Reading Mode Text
 |   |   |   |-- Source Mode Text
@@ -29,6 +34,14 @@ Style Settings
 |   |-- Settings
 |   |   |-- Smiley Toggle Icons in Settings
 |   |   |-- Coloured Icons in Settings
+|   |-- Plugins
+|   |   |-- Alternate file tree
+|   |   |   |-- Folders font size
+|   |   |   |-- Folders font color
+|   |   |   |-- Active folder color
+|   |   |   |-- Files font size
+|   |   |   |-- Files font color
+|   |   |   |-- Disable folder icons
 |   |-- Others
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
