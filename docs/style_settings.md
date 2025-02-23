@@ -6,7 +6,7 @@ Style Settings
 |--...
 |-- Flexcyon Style Settings
 |   |-- **Editor**
-|   |   |-- Colors
+|   |   |-- Accent Colors
 |   |   |   |-- Cyan Color
 |   |   |   |-- Green Color
 |   |   |   |-- Orange Color
@@ -16,7 +16,18 @@ Style Settings
 |   |   |   |-- Blue Color
 |   |   |   |-- Pink Color
 |   |   |   |-- Accent Color
-|   |   |-- Typography
+|   |   |-- Base Colors
+|   |   |   |--  Base Color 01
+|   |   |   |--  Base Color 02
+|   |   |   |--  Base Color 03
+|   |   |   |--  Base Color 04
+|   |   |   |--  Base Color 05
+|   |   |   |--  Base dark grey
+|   |   |   |--  Base light grey
+|   |   |   |--  Base grey tab
+|   |   |   |--  Base grey token
+|   |   |   |--  Base grey scroll
+|   |   |   |--  Base grey scroll hover
 |   |   |   |--  Muted text color
 |   |   |-- Files
 |   |   |   |--  Enable dimmed file extensions in file explorer
@@ -37,6 +48,8 @@ Style Settings
 |   |-- **Settings**
 |   |   |-- Smiley Toggle Icons in Settings
 |   |   |-- Coloured Icons in Settings
+|   |   |-- Enable community item effects
+|   |   |-- Installed tooltip left margin
 |   |-- **Plugins**
 |   |   |-- Alternate file tree
 |   |   |   |-- Folders font size

@@ -7,9 +7,9 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Colors, Callouts, Typography, Files, status bar, title bar
+    description: Accent Colors, Base Colors, Callouts, Typography, Files, status bar, title bar
 
-  - title: Colors
+  - title: Accent Colors
     type: heading
     level: 5
     collapsed: true
@@ -100,10 +100,76 @@ settings:
     format: hex
     default: "#92a871"
 
-  - title: Typography
+  - title: Base Colors
     type: heading
     level: 5
     collapsed: true
+  - id: flexcyon-base-blue-01
+    title: Base Color 01
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#14161c"
+  - id: flexcyon-base-blue-02
+    title: Base Color 02
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#191d28"
+  - id: flexcyon-base-blue-03
+    title: Base Color 03
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#24262c"
+  - id: flexcyon-base-blue-04
+    title: Base Color 04
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#4d566b"
+  - id: flexcyon-base-blue-05
+    title: Base Color 05
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#6f7685"
+  - id: flexcyon-base-grey-dark
+    title: Base dark grey
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#898c93"
+  - id: flexcyon-base-grey-light
+    title: Base light grey
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#d3d5d3"
+  - id: flexcyon-base-grey-tab
+    title: Base grey tab
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#71777f"
+  - id: flexcyon-base-grey-token
+    title: Base grey token
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#586582"
+  - id: flexcyon-base-grey-scroll
+    title: Base grey scroll
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#3f495e"
+  - id: flexcyon-base-grey-scroll-hover
+    title: Base grey scroll hover
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#5d6782"
   - title: Muted text color
     id: flexcyon-text-muted
     type: variable-color
@@ -211,7 +277,18 @@ settings:
     description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
+    default: false
+  - title: Enable community item effects
+    description: Enable installed tooltip effects such as subtle dimming of community items and fixing positioning of installed tooltip in community items.
+    id: flexcyon-settings-comm-item-enabled
+    type: class-toggle
     default: true
+  - title: Installed tooltip left margin
+    description: Control the left margin of the installed tooltip
+    id: flexcyon-settings-installed-tooltip-left-margin
+    type: variable-number
+    default: 1
+    format: rem
 
   - title: Plugins
     type: heading
@@ -370,7 +447,33 @@ settings:
 
  */
 
-body.theme-dark div.pcr-app.visible {
-  background-color: var(--color-base-30);
-  border: 1px rgba(var(--color-purple-rgb), var(--dimmed)) solid;
+body.theme-dark {
+  div.pcr-app.visible {
+    background-color: var(--color-base-30);
+    // border: 1px rgba(var(--color-purple-rgb), var(--dimmed)) solid;
+  }
+
+  .pcr-app .pcr-interaction {
+    .pcr-type {
+      color: var(--text-normal);
+      background: var(--color-base-50);
+      opacity: 0.85;
+    }
+
+    .pcr-type.active {
+      background: var(--text-accent);
+      border: unset;
+      opacity: unset;
+    }
+
+    .pcr-cancel {
+      color: var(--text-normal);
+      background: var(--color-red);
+    }
+
+    .pcr-save {
+      color: var(--text-normal);
+      background: var(--color-blue);
+    }
+  }
 }
