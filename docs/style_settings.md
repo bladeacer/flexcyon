@@ -28,9 +28,28 @@ Style Settings
 |   |   |   |--  Base grey token
 |   |   |   |--  Base grey scroll
 |   |   |   |--  Base grey scroll hover
+|   |   |-- Typography
 |   |   |   |--  Muted text color
+|   |   |   |--  Headings
+|   |   |   |   |--  Enabled coloured headings
+|   |   |   |   |--  Heading 1 font weight
+|   |   |   |   |--  Heading 2 font weight
+|   |   |   |   |--  Heading 3 font weight
+|   |   |   |   |--  Heading 4 font weight
+|   |   |   |   |--  Heading 5 font weight
+|   |   |   |   |--  Heading 6 font weight
+|   |   |   |--  UI Font sizes
+|   |   |   |   |--  Smaller UI Font size
+|   |   |   |   |--  Small UI Font size
+|   |   |   |   |--  Medium UI Font size
+|   |   |   |   |--  Large UI Font size
+|   |   |-- Table
+|   |   |   |-- Table border color
+|   |   |   |-- Width of table in reading mode
 |   |   |-- Files
 |   |   |   |--  Enable dimmed file extensions in file explorer
+|   |   |-- Workspace
+|   |   |   |--  File line width
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -50,6 +69,7 @@ Style Settings
 |   |   |-- Coloured Icons in Settings
 |   |   |-- Enable community item effects
 |   |   |-- Installed tooltip left margin
+|   |   |-- Do not show scrollbar in settings
 |   |-- **Plugins**
 |   |   |-- Alternate file tree
 |   |   |   |-- Folders font size

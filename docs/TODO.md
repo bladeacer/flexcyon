@@ -12,6 +12,7 @@
   - Support toggle showing of certain status bar for plugins like Pomodoro and Typing Speed etc (hide specific stuff, kinda pain to do)
   - Add breadcrumbs support
 
+- [ ] Add mobile support
 - [ ] Add minify directory and sass compile to minified css `.min.css`
 
 

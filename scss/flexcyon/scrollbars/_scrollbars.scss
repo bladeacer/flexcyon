@@ -1,5 +1,5 @@
 // Display none scrollbar in settings container
-body:where(.theme-dark) {
+body.flexcyon-settings-scrollbar-removed {
     --scrollbar-bg: transparent;
     div.modal-content.vertical-tabs-container {
         & ::-webkit-scrollbar-thumb {

@@ -4,13 +4,17 @@ body:where(.theme-dark) {
     --table-background: var(--background-primary);
     --table-header-background-hover: var(--table-background);
     --table-header-size: larger;
+    --table-border-color: #6f768555;
+}
+body.theme-dark {
+    --flexcyon-table-reading-mode-width: 100%;
 }
 
 body:is(.theme-dark) table:not(.table-view-table) {
-    width: 100%;
+    width: var(--flexcyon-table-reading-mode-width);
+    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width) )/ 2);
 }
 
 body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
     border: 1px solid var(--table-header-border-color);
 }
-
