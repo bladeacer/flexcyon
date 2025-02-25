@@ -50,6 +50,9 @@ Style Settings
 |   |   |   |--  Enable dimmed file extensions in file explorer
 |   |   |-- Workspace
 |   |   |   |--  File line width
+|   |   |   |--  Opacity of dimmed UI elements
+|   |   |   |--  Upscale percentage of icons 1
+|   |   |   |--  Upscale percentage of icons 2
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -68,6 +71,7 @@ Style Settings
 |   |   |-- Smiley Toggle Icons in Settings
 |   |   |-- Coloured Icons in Settings
 |   |   |-- Enable community item effects
+|   |   |-- Opacity of community items (unselected)
 |   |   |-- Installed tooltip left margin
 |   |   |-- Do not show scrollbar in settings
 |   |-- **Plugins**
@@ -81,6 +85,8 @@ Style Settings
 |   |   |   |-- Disable file tree header
 |   |   |   |-- Enable Alternate folder count
 |   |   |   |-- Enabled dimmed file extensions in file tree
+|   |   |-- Full Calendar
+|   |   |   |-- Opacity of dimmed full calendar items
 |   |-- **Others**
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
@@ -96,5 +102,10 @@ Style Settings
 |   |   |   |-- Disable Empty State actions
 |   |   |-- Side Dock Icons
 |   |   |   |-- Enable side dock icon effects
+|   |   |   |-- Tooltip radius
+|   |   |   |-- Small radius
+|   |   |   |-- Medium radius
+|   |   |   |-- Large radius
+|   |   |   |-- Extra large radius
 |-- ...
 ```

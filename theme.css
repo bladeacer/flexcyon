@@ -226,6 +226,7 @@ body.theme-dark {
   --upsize: 103%;
   --expand: 110%;
   --less-letter-spacing: -3px;
+  --flexcyon-comm-item-opacity: 0.89;
 }
 
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container {
@@ -295,7 +296,7 @@ body:where(.theme-dark) span.flair.mod-pop {
 }
 
 body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item {
-  opacity: 0.89;
+  opacity: var(--flexcyon-comm-item-opacity);
 }
 body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item.is-selected {
   opacity: unset;
@@ -1169,6 +1170,21 @@ settings:
     type: variable-number
     default: 50
     format: rem
+  - title: Opacity of dimmed elements
+    id: dimmed
+    description: Opacity of dimmed UI elements
+    type: variable-number
+    default: 0.55
+  - title: Upscale percentage of icons 1
+    id: upsize
+    description: Upscale percentage used in smiley icons and side dock icon effects
+    type: variable-text
+    default: 103%
+  - title: Upscale percentage of icons 2
+    id: expand
+    description: Upscale percentage used in side dock icon effects
+    type: variable-text
+    default: 110%
 
   - title: Callouts
     type: heading
@@ -1267,6 +1283,10 @@ settings:
     id: flexcyon-settings-comm-item-enabled
     type: class-toggle
     default: true
+  - title: Opacity of community items (unselected)
+    id: flexcyon-comm-item-opacity
+    type: variable-number
+    default: 0.89
   - title: Installed tooltip left margin
     description: Control the left margin of the installed tooltip
     id: flexcyon-settings-installed-tooltip-left-margin
@@ -1332,11 +1352,18 @@ settings:
     description: Alternate folder count style, shows count on hover
     type: class-toggle
     default: false
-
   - title: Enable dimmed file extensions in file tree
     id: flexcyon-oz-dimmed-file-exts-enabled
     type: class-toggle
     default: true
+  - title: Full Calendar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Opacity of dimmed full calendar items 
+    id: flexcyon-fc-dimmed-items-opacity
+    type: variable-number
+    default: 0.89
 
   -
     title: Others
@@ -1457,7 +1484,6 @@ settings:
     type: variable-number
     default: 8
     format: px
-
  */
 body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -1637,6 +1663,38 @@ body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-previe
 body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+body.theme-dark {
+  --flexcyon-fc-dimmed-items-opacity: 0.89;
+}
+body.theme-dark div.fc-daygrid-body div div a {
+  color: var(--color-blue);
+  opacity: var(--flexcyon-fc-dimmed-items-opacity);
+}
+body.theme-dark div.fc-daygrid-body td.fc-day-today div div a {
+  color: inherit;
+  opacity: unset;
+  font-weight: bold;
+  color: var(--text-accent);
+}
+body.theme-dark div.fc-button-group button.fc-button-active {
+  opacity: unset;
+}
+body.theme-dark div.fc-button-group button {
+  opacity: var(--flexcyon-fc-dimmed-items-opacity);
+}
+body.theme-dark th.fc-day-today div a {
+  font-weight: bold;
+  color: var(--text-accent);
+}
+body.theme-dark a.fc-timegrid-event {
+  background-color: var(--color-blue) !important;
+  border: unset;
+}
+body.theme-dark a.fc-timegrid-event.fc-event-today {
+  background-color: var(--color-green) !important;
+  border: unset;
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

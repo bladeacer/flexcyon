@@ -6,6 +6,7 @@ body.theme-dark {
     --upsize: 103%;
     --expand: 110%;
     --less-letter-spacing: -3px;
+    --flexcyon-comm-item-opacity: 0.89;
 }
 
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
@@ -92,7 +93,7 @@ body:where(.theme-dark) {
 
 body.flexcyon-settings-comm-item-enabled {
     div.community-modal-search-results div.community-item {
-        opacity: 0.89;
+        opacity: var(--flexcyon-comm-item-opacity);
     }
 
     div.community-modal-search-results div.community-item.is-selected {

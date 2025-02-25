@@ -273,6 +273,21 @@ settings:
     type: variable-number
     default: 50
     format: rem
+  - title: Opacity of dimmed elements
+    id: dimmed
+    description: Opacity of dimmed UI elements
+    type: variable-number
+    default: 0.55
+  - title: Upscale percentage of icons 1
+    id: upsize
+    description: Upscale percentage used in smiley icons and side dock icon effects
+    type: variable-text
+    default: 103%
+  - title: Upscale percentage of icons 2
+    id: expand
+    description: Upscale percentage used in side dock icon effects
+    type: variable-text
+    default: 110%
 
   - title: Callouts
     type: heading
@@ -371,6 +386,10 @@ settings:
     id: flexcyon-settings-comm-item-enabled
     type: class-toggle
     default: true
+  - title: Opacity of community items (unselected)
+    id: flexcyon-comm-item-opacity
+    type: variable-number
+    default: 0.89
   - title: Installed tooltip left margin
     description: Control the left margin of the installed tooltip
     id: flexcyon-settings-installed-tooltip-left-margin
@@ -436,11 +455,18 @@ settings:
     description: Alternate folder count style, shows count on hover
     type: class-toggle
     default: false
-
   - title: Enable dimmed file extensions in file tree
     id: flexcyon-oz-dimmed-file-exts-enabled
     type: class-toggle
     default: true
+  - title: Full Calendar
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Opacity of dimmed full calendar items 
+    id: flexcyon-fc-dimmed-items-opacity
+    type: variable-number
+    default: 0.89
 
   -
     title: Others
@@ -561,7 +587,6 @@ settings:
     type: variable-number
     default: 8
     format: px
-
  */
 
 body.theme-dark {

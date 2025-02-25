@@ -1,0 +1,38 @@
+body.theme-dark {
+    --flexcyon-fc-dimmed-items-opacity: 0.89;
+    // td.fc-daygrid-day.fc-day-today div div {
+    //     font-weight: bold;
+    //     color: white;
+    // }
+    div.fc-daygrid-body div div a {
+        color: var(--color-blue);
+        opacity: var(--flexcyon-fc-dimmed-items-opacity);
+    }
+    div.fc-daygrid-body td.fc-day-today div div a {
+        color: inherit;
+        opacity: unset;
+        font-weight: bold;
+        color: var(--text-accent);
+    }
+
+    div.fc-button-group button.fc-button-active {
+        opacity: unset;
+    }
+    div.fc-button-group button {
+        opacity: var(--flexcyon-fc-dimmed-items-opacity);
+    }
+
+    th.fc-day-today div a {
+        font-weight: bold;
+        color: var(--text-accent);
+    }
+    a.fc-timegrid-event {
+        background-color: var(--color-blue) !important;
+        border: unset;
+    }
+
+    a.fc-timegrid-event.fc-event-today{
+        background-color: var(--color-green) !important;
+        border: unset;
+    }
+}
