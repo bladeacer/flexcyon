@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /* 
 Flexcyon: Made by mixing both the Flexoki and Halcyon color scheme 
+Repository: 
 
-Credits: 
 */
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
@@ -237,10 +237,11 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbo
 }
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container::after {
   content: ":(";
-  width: max-content;
+  width: fit-content;
   background-color: inherit;
   color: var(--color-red);
   box-shadow: unset;
+  border-radius: 25%;
 }
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container.is-enabled::after {
   content: ":)";
@@ -248,6 +249,12 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbo
 }
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control input.slider {
   border-radius: unset;
+}
+
+body.is-mobile.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container::after {
+  padding-top: 1.5px;
+  padding-left: 1.5px;
+  scale: 100%;
 }
 
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
@@ -691,7 +698,7 @@ body.flexcyon-vim-mode-text-enable .markdown-source-view.mod-cm6 .cm-panels.cm-p
   border-top: unset;
   padding-top: 6px;
 }
-body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
+body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-insert-text);
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
@@ -700,7 +707,7 @@ body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-
   height: 35px;
   padding-left: 4px;
 }
-body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
+body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-normal-text);
   position: fixed;
   bottom: var(--flexcyon-vim-bottom-positioning);
@@ -733,6 +740,28 @@ body.flexcyon-vim-mode-text-enable div.cm-vim-message {
   font-weight: bold;
 }
 
+body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ div + div + .cm-vimCursorLayer)::before {
+  content: var(--flexcyon-vim-insert-text);
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  left: var(--flexcyon-vim-left-positioning);
+  position: fixed;
+  color: var(--color-green);
+  height: 35px;
+  padding-left: 4px;
+}
+body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ div + div + .cm-vimCursorLayer)::before {
+  content: var(--flexcyon-vim-normal-text);
+  position: fixed;
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  left: var(--flexcyon-vim-left-positioning);
+  height: 35px;
+  padding-left: 4px;
+  color: var(--color-orange);
+}
+body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor > .cm-scroller + .cm-panels .cm-panel {
+  transform: translateY(35px);
+}
+
 body:where(.theme-dark) .backlink-pane .tree-item.search-result {
   padding-inline-start: 8px;
 }
@@ -748,6 +777,10 @@ body:where(.theme-dark) .backlink-pane .search-result-file-title div.tree-item-f
 }
 body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
+}
+
+body.theme-dark div:has(.cm-vim-panel) + .status-bar {
+  margin-bottom: 32.5px;
 }
 
 body.flexcyon-status-text-mode .plugin-editor-status .status-bar-item-icon svg {
@@ -821,11 +854,19 @@ body.theme-dark.flexcyon-ascii-enable div.empty-state-container::before {
   -webkit-text-fill-color: transparent;
   line-height: 1;
   white-space: pre;
-  display: block;
   margin-bottom: 2rem;
+  text-align: center;
+  display: inline;
+  font-size: min(3vw - 3.25px, var(--font-ui-medium) - 1px);
 }
 body.theme-dark.flexcyon-ascii-enable div.empty-state-container {
   transform: translateY(-115px);
+}
+
+body.theme-dark.is-mobile.flexcyon-ascii-enable div.empty-state-container::before {
+  font-size: min(3vw - 3px, var(--font-ui-medium) - 1px);
+  margin-bottom: 1rem;
+  line-height: 0.8;
 }
 
 body.theme-dark.flexcyon-empty-state-title-disable div.empty-state-title {

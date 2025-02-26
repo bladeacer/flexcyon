@@ -1,38 +1,3 @@
-// TODO: This code was derived from Karp
-
-// .workspace-leaf:has(.workspace-leaf-content[data-type="empty"])::before {
-// content: "";
-//position: absolute;
-//background-blend-mode: color;
-//top: 0; bottom: 0;
-//left: 0; right: 0;
-//background-color: rgb(109, 250, 255);
-//background-blend-mode: color;
-//opacity: 0.8;
-// }
-
-// .workspace-leaf-content[data-type="empty"] {
-//backdrop-filter: blur(7px);
-// }
-
-// .workspace-leaf-content[data-type="empty"] .view-content {
-//background: none;
-// }
-
-// .workspace-leaf-content[data-type="empty"]::before {
-//content: "";
-//position: absolute;
-//top: 0; bottom: 0;
-//left: 0; right: 0;
-//background-color: rgb(161, 225, 255);
-//opacity: 0.5;
-// }
-
-// .empty-state-container {
-//padding: 15px;
-//border-radius: var(--radius-l);
-//background: rgba(var(--mono-rgb-0), 0.8);
-// }
 body.theme-dark {
 
     --flexcyon-ascii-art: " \a\
@@ -68,12 +33,21 @@ body.theme-dark.flexcyon-ascii-enable {
         -webkit-text-fill-color: transparent;
         line-height: 1;
         white-space: pre;
-        display: block;
         margin-bottom: 2rem;
+        text-align: center;
+        display: inline;
+        font-size: min(calc(3vw - 3.25px), var(--font-ui-medium) - 1px);
     }
 
     div.empty-state-container {
         transform: translateY(-115px);
+    }
+}
+body.theme-dark.is-mobile.flexcyon-ascii-enable {
+    div.empty-state-container::before {
+        font-size: min(calc(3vw - 3px), var(--font-ui-medium) - 1px);
+        margin-bottom: 1rem;
+        line-height: 0.8;
     }
 }
 

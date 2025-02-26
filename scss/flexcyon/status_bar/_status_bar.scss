@@ -1,3 +1,9 @@
+body.theme-dark {
+  div:has(.cm-vim-panel)+.status-bar{
+    margin-bottom: 32.5px;
+  }
+}
+
 body.flexcyon-status-text-mode {
 
   .plugin-editor-status {
@@ -13,6 +19,7 @@ body.flexcyon-status-text-mode {
     }
 
   }
+
 
   .plugin-editor-status[aria-label="Reading"]::before {
     content: var(--flexcyon-status-reading-text);

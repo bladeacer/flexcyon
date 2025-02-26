@@ -5,7 +5,7 @@ body.flexcyon-vim-mode-text-enable {
     padding-top: 6px;
   }
 
-  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer::before {
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-insert-text);
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
@@ -15,7 +15,7 @@ body.flexcyon-vim-mode-text-enable {
     padding-left: 4px;
   }
 
-  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer::before {
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-normal-text);
     position: fixed;
     bottom: var(--flexcyon-vim-bottom-positioning);
@@ -53,5 +53,31 @@ body.flexcyon-vim-mode-text-enable {
     // Blame inline styling :v
     color: var(--color-red) !important;
     font-weight: bold;
+  }
+}
+
+body.is-mobile.flexcyon-vim-mode-text-enable {
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ div + div +.cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-insert-text);
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    position: fixed;
+    color: var(--color-green);
+    height: 35px;
+    padding-left: 4px;
+  }
+
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ div + div +.cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-normal-text);
+    position: fixed;
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    height: 35px;
+    padding-left: 4px;
+    color: var(--color-orange);
+  }
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel {
+    transform: translateY(35px);
   }
 }
