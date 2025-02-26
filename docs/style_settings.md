@@ -1,4 +1,5 @@
 # Documentation for Flexcyon Style Settings
+[Back to documentation welcome page](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
 
 ## Markdown Navigation tree for Flexcyon's Style Settings
 ```md
