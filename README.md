@@ -38,8 +38,6 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - alternate checkboxes (I do not use them)
 - embedded fonts, svgs
 
-
-
 #### Supported plugins/snippets
 The following plugins/snippets are officially supported:
 ##### Plugins
@@ -58,6 +56,9 @@ Documentation for this theme can be found [here](https://github.com/bladeacer/fl
 
 #### Roadmap
 The Roadmap for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
+
+#### Questions, Issues?
+Feel free to talk about it at [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). Alternatively, you can open an issue at this repository.
 
 ## Style Settings
 This theme tries to be "reasonably opinionated" and decently lightweight, meaning:
