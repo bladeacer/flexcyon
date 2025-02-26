@@ -10,9 +10,10 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 
 ![](./docs/screenshots/showcase3.png)
 
-## Installation
-TODO: Add when theme is added to community store.
-<!-- To install,  -->
+## Installation via community store (recommended)
+To install this theme via the community store, navigate to  `Settings > Appearance`
+1. Under `Themes`, click Manage
+2. 
 
 ### Installation via BRAT
 To install this theme via BRAT, navigate to `Settings > Community Plugins > Browse` 
@@ -35,14 +36,18 @@ Currently, Flexcyon is dark mode only. For more details, see the [Roadmap](https
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
 - a light mode colour scheme :)
 - alternate checkboxes (I do not use them)
+- embedded fonts, svgs
 
 #### Supported plugins/snippets
 The following plugins/snippets are officially supported:
-- CSS Banners snippet by HandaArchitect
-- File Tree Alternative by Ozan Tellioglu
-- Highlightr by Chetachi
-- Minitabs by ssjy1919
-<!-- - Full Calendar -->
+##### Plugins
+- [File Tree Alternative by Ozan Tellioglu](https://github.com/ozntel/file-tree-alternative)
+- [Highlightr by Chetachi](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
+- [Minitabs by ssjy1919](https://github.com/ssjy1919/Obsidian-minitabs)
+- [Full Calendar by Davis Haupt](https://github.com/obsidian-community/obsidian-full-calendar)
+
+##### Snippets
+- [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
 
 For plugins/snippets that are not styled yet, feel free to open a PR/FR on it.
 
@@ -52,6 +57,7 @@ This theme tries to be "reasonably opinionated" and decently lightweight, meanin
 - (hopefully) sane defaults, customisable with style settings
 
 Documentation on style settings for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/style_settings.md)
+- Documentation on style settings can be found at https://github.com/mgmeyers/obsidian-style-settings
 
 ## License
 This theme is licensed under the [MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE)
