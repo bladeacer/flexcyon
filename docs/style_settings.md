@@ -91,6 +91,7 @@ Style Settings
 |   |   |   |-- Reading Mode Text
 |   |   |   |-- Source Mode Text
 |   |   |   |-- Live Preview Mode Text
+|   |   |   |-- Display status bar on mobile
 |   |   |-- Title Bar
 |   |   |   |-- Titlebar Button Effects
 |   |-- **Settings**
@@ -249,7 +250,7 @@ ___
 ## Typography
 Defined colors for muted text color, styling for headings, and controlling UI font sizes.
 
-Accepted Formats: HEX, px
+Accepted Formats: HEX, number, px
 
 ### Muted text color
 CSS Variable(s) targeted: `var(--flexcyon-text-muted)`
@@ -259,6 +260,8 @@ Default value: #6f768599
 ___
 
 ### Headings
+Defines CSS variables for styling related to headings like font weight.
+
 #### Enable coloured headings
 CSS Variable(s) targeted: `var(--flexcyon-headings-coloured-enabled)`
 
@@ -346,7 +349,7 @@ ___
 ## Workspace
 Defines file line width when readable line length is enabled, opacity of dimmed UI elements, upscale percentage of icons used in effects
 
-Accepted formats: %, x.y
+Accepted Formats: %, x.y
 
 ### File line width
 CSS Variable(s) targeted: `var(--file-line-width)`
@@ -370,15 +373,115 @@ Default value: 110%
 
 ___
 ## Callouts
+Configure styling of callouts 
+
+Accepted Formats: px, rem
+
+### Callout Icon Right padding
+CSS Variable(s) targeted: `var(--flexcyon-callout-icon-right-padding)`
+
+Default value: 4 (px)
+
+### First Codeblock Margin Top
+CSS Variable(s) targeted: `var(--flexcyon-callout-first-codeblock-margin-top)`
+
+Default value: 1.25 (rem)
 
 ___
 ## Status Bar
+Defines CSS variables to configure the status bar
+
+Accepted Formats: s, text
+
+### Hide until hover
+CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover)`
+
+Default value: false (class toggle)
+
+### Text when hide until hover enabled
+CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover-text)`
+
+Default value: "Show status"
+
+### Transition duration for showing status bar on hover
+CSS Variable(s) targeted: `var(--flexcyon-status-hide-hover-duration)`
+
+Default value: 0.35 (s)
+
+### Transition timing function for showing status bar on hover
+CSS Variable(s) targeted: `var(--flexcyon-status-hide-hover-function)`
+
+Default value: ease-out
+
+### Use text instead of icons for mode status
+CSS Variable(s) targeted: `var(--flexcyon-status-text-mode)`
+
+Default value: false (class toggle)
+
+### Reading Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-status-reading-text)`
+
+Default value: "READ"
+
+### Source Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-status-source-text)`
+
+Default value: "SOURCE"
+
+### Live Preview Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-status-live-text)`
+
+Default value: "LIVE"
+
+### Show status bar on mobile
+CSS Variable(s) targeted: `var(--flexcyon-status-mobile-enabled)`
+
+Default value: false (class toggle)
 
 ___
 ## Title Bar
+For configuration of the titlebar, enable hover effects on titlebar buttons
+
+### Titlebar Button Effects
+CSS Variable(s) targeted: `var(--flexcyon-titlebar-button-effects)`
+
+Default value: true (class toggle)
 
 ___
 # Settings Section
+Customise the appearance of settings
+
+Accepted Formats: %, x.y, rem
+
+## Smiley Toggle Icons in Settings
+CSS Variable(s) targeted: `var(--flexcyon-settings-smiley-icons-enabled)`
+
+Default value: true (class toggle)
+
+### Coloured Icons in Settings
+CSS Variable(s) targeted: `var(--flexcyon-settings-coloured-icons)`
+
+Default value: false (class toggle)
+
+### Enable community item effects
+CSS Variable(s) targeted: `var(--flexcyon-settings-comm-item-enabled)`
+
+Default value: true (class toggle)
+
+### Opacity of community items (unselected)
+CSS Variable(s) targeted: `var(--flexcyon-comm-item-opacity)`
+
+Default value: 0.89
+
+### Installed tooltip left margin
+CSS Variable(s) targeted: `var(--flexcyon-settings-installed-tooltip-left-margin)`
+
+Default: 1 (rem)
+
+### Do not show scrollbar in settings
+CSS Variable(s) targeted: `var(--flexcyon-settings-scrollbar-removed)`
+
+Default: true (class toggle)
 
 ___
 # Plugins Section

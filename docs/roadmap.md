@@ -10,7 +10,7 @@
 
 - [ ] Change thumbnail image, looks goofy
 - [ ] Review flexcyon modded plugins and themes
-- [ ] Add mobile support
+- [ ] Add mobile support (partial)
 - [ ] Add minify directory and sass compile to minified css `.min.css`
 - [ ] Add tags to organise PRs/FRs
 
@@ -26,3 +26,8 @@
 - [ ] PDF export styling
 - [ ] `publish.css`
 
+
+#### Next version changelog
+- Made ASCII art responsive 
+- Status bar does not overlap with command mode input text
+<!-- - Updated documentation for style settings -->

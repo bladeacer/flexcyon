@@ -36,7 +36,7 @@ body.flexcyon-vim-mode-text-enable {
   }
 
   .cm-panels input {
-    transform: translateY(-0.5px);
+    transform: translateY(-4px);
     font-size: 0.9rem;
     z-index: 16;
   }
@@ -77,7 +77,4 @@ body.is-mobile.flexcyon-vim-mode-text-enable {
     color: var(--color-orange);
   }
 
-  .cm-editor>.cm-scroller+.cm-panels .cm-panel {
-    transform: translateY(35px);
-  }
 }

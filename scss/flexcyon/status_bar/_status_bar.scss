@@ -50,7 +50,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
     content: var(--flexcyon-status-hide-until-hover-text);
     background-color: var(--color-base-00);
     border-radius: inherit;
-    margin-right: 2px;
+    margin-right: 8px;
     padding: 8px;
     position: fixed;
     bottom: 0;
@@ -68,4 +68,8 @@ body.flexcyon-status-hide-until-hover .status-bar {
     transform: unset;
     transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   }
+}
+
+body.is-mobile.flexcyon-status-mobile-enabled .status-bar{
+  display: block;
 }

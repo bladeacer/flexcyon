@@ -295,7 +295,7 @@ settings:
     collapsed: true
   - title: Callout Icon Right padding
     id: flexcyon-callout-icon-right-padding
-    description: Right for the callout icon
+    description: Right padding for the callout icon
     type: variable-number
     default: 4
     format: px
@@ -355,6 +355,10 @@ settings:
     type: variable-text
     default: "LIVE"
     quotes: true
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
 
   - title: Title Bar
     type: heading

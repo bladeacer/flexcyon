@@ -725,7 +725,7 @@ body.flexcyon-vim-mode-text-enable .cm-panels .cm-panel {
   padding-top: 5px;
 }
 body.flexcyon-vim-mode-text-enable .cm-panels input {
-  transform: translateY(-0.5px);
+  transform: translateY(-4px);
   font-size: 0.9rem;
   z-index: 16;
 }
@@ -757,9 +757,6 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:
   height: 35px;
   padding-left: 4px;
   color: var(--color-orange);
-}
-body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor > .cm-scroller + .cm-panels .cm-panel {
-  transform: translateY(35px);
 }
 
 body:where(.theme-dark) .backlink-pane .tree-item.search-result {
@@ -813,7 +810,7 @@ body.flexcyon-status-hide-until-hover .status-bar::before {
   content: var(--flexcyon-status-hide-until-hover-text);
   background-color: var(--color-base-00);
   border-radius: inherit;
-  margin-right: 2px;
+  margin-right: 8px;
   padding: 8px;
   position: fixed;
   bottom: 0;
@@ -828,6 +825,10 @@ body.flexcyon-status-hide-until-hover .status-bar:hover::before {
 body.flexcyon-status-hide-until-hover .status-bar:hover {
   transform: unset;
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
+}
+
+body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
+  display: block;
 }
 
 body.theme-dark {
@@ -1233,7 +1234,7 @@ settings:
     collapsed: true
   - title: Callout Icon Right padding
     id: flexcyon-callout-icon-right-padding
-    description: Right for the callout icon
+    description: Right padding for the callout icon
     type: variable-number
     default: 4
     format: px
@@ -1293,6 +1294,10 @@ settings:
     type: variable-text
     default: "LIVE"
     quotes: true
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
 
   - title: Title Bar
     type: heading
