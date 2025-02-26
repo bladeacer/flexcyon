@@ -81,6 +81,10 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
             scale: var(--expand);
         }
 }
+body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
+    display: none;
+}
+
 body:where(.theme-dark) {
     --icon-stroke: 2px;
     --icon-color-active: var(--interactive-accent);

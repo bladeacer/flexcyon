@@ -64,6 +64,12 @@ Style Settings
 |   |   |   |   |--  Heading 4 font weight
 |   |   |   |   |--  Heading 5 font weight
 |   |   |   |   |--  Heading 6 font weight
+|   |   |   |   |--  Heading 1 line height
+|   |   |   |   |--  Heading 2 line height
+|   |   |   |   |--  Heading 3 line height
+|   |   |   |   |--  Heading 4 line height
+|   |   |   |   |--  Heading 5 line height
+|   |   |   |   |--  Heading 6 line height
 |   |   |   |--  UI Font sizes
 |   |   |   |   |--  Smaller UI Font size
 |   |   |   |   |--  Small UI Font size
@@ -127,9 +133,11 @@ Style Settings
 |   |   |   |-- ASCII Art
 |   |   |   |-- Disable Empty State title
 |   |   |   |-- Disable Empty State actions
+|   |   |   |-- ASCII art font size limit
 |   |   |-- Side Dock Icons
 |   |   |   |-- Enable side dock icon effects
-|   |   |   |-- Tooltip radius
+|   |   |   |-- Hide the side dock ribbon
+|   |   |-- Tooltip radius
 |   |   |   |-- Small radius
 |   |   |   |-- Medium radius
 |   |   |   |-- Large radius
@@ -148,47 +156,47 @@ Accepted Formats: RGB, HEX
 ### Cyan Color
 CSS Variable(s) targeted: `var(--flexcyon-cyan)`, `var(--color-cyan-rgb)`
 
-Default value: #3cb9c2
+Default: #3cb9c2
 
 ### Green Color
 CSS Variable(s) targeted: `var(--flexcyon-lime-green)`, `var(--color-green-rgb)`
 
-Default value: #a1c05c
+Default: #a1c05c
 
 ### Orange Color
 CSS Variable(s) targeted: `var(--flexcyon-orange)`, `var(--color-orange-rgb)`
 
-Default value: #cc8449
+Default: #cc8449
 
 ### Yellow Color
 CSS Variable(s) targeted: `var(--flexcyon-yellow)`, `var(--color-yellow-rgb)`
 
-Default value: #c29e42
+Default: #c29e42
 
 ### Purple Color
 CSS Variable(s) targeted: `var(--flexcyon-purple-lilac)`, `var(--color-purple-rgb)`
 
-Default value: #a461c8
+Default: #a461c8
 
 ### Red Color
 CSS Variable(s) targeted: `var(--flexcyon-red-salmon)`, `var(--color-red-rgb)`
 
-Default value: #c03a47
+Default: #c03a47
 
 ### Blue Color
 CSS Variable(s) targeted: `var(--flexcyon-blue)`, `var(--color-blue-rgb)`
 
-Default value: #5a8fcd
+Default: #5a8fcd
 
 ### Pink Color
 CSS Variable(s) targeted: `var(--flexcyon-pink)`, `var(--color-pink-rgb)`
 
-Default value: #d458a3
+Default: #d458a3
 
 ### Accent Color
 CSS Variable(s) targeted: `var(--flexcyon-accent)`
 
-Default value: #92a871
+Default: #92a871
 
 ___
 ## Base Colors
@@ -198,52 +206,52 @@ Accepted Formats: HEX
 ### Base Color 01
 CSS Variable(s) targeted: `var(--flexcyon-base-blue-01)`
 
-Default value: #14161c
+Default: #14161c
 
 ### Base Color 02
 CSS Variable(s) targeted: `var(--flexcyon-base-blue-02)`
 
-Default value: #191d28
+Default: #191d28
 
 ### Base Color 03
 CSS Variable(s) targeted: `var(--flexcyon-base-blue-03)`
 
-Default value: #24262c
+Default: #24262c
 
 ### Base Color 04
 CSS Variable(s) targeted: `var(--flexcyon-base-blue-04)`
 
-Default value: #4d566b
+Default: #4d566b
 
 ### Base Color 05
 CSS Variable(s) targeted: `var(--flexcyon-base-blue-05)`
 
-Default value: #6f7685
+Default: #6f7685
 
 ### Base dark grey
 CSS Variable(s) targeted: `var(--flexcyon-base-grey-dark)`
 
-Default value: #898c93
+Default: #898c93
 
 ### Base light grey
 CSS Variable(s) targeted: `var(--flexcyon-base-grey-light)`
 
-Default value: #d3d5d3
+Default: #d3d5d3
 
 ### Base grey tab
 CSS Variable(s) targeted: `var(--flexcyon-base-grey-token)`
 
-Default value: #586582
+Default: #586582
 
 ### Base grey scroll 
 CSS Variable(s) targeted: `var(--flexcyon-base-grey-scroll)`
 
-Default value: #3f495e
+Default: #3f495e
 
 ### Base grey scroll hover
 CSS Variable(s) targeted: `var(--flexcyon-base-grey-scroll-hover)`
 
-Default value: #5d6782
+Default: #5d6782
 
 ___
 
@@ -255,7 +263,7 @@ Accepted Formats: HEX, number, px
 ### Muted text color
 CSS Variable(s) targeted: `var(--flexcyon-text-muted)`
 
-Default value: #6f768599
+Default: #6f768599
 
 ___
 
@@ -265,37 +273,67 @@ Defines CSS variables for styling related to headings like font weight.
 #### Enable coloured headings
 CSS Variable(s) targeted: `var(--flexcyon-headings-coloured-enabled)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 #### Heading 1 font weight
 CSS Variable(s) targeted: `var(--h1-weight)`
 
-Default value: 700
+Default: 700
 
 #### Heading 2 font weight
 CSS Variable(s) targeted: `var(--h2-weight)`
 
-Default value: 675
+Default: 675
 
 #### Heading 3 font weight
 CSS Variable(s) targeted: `var(--h3-weight)`
 
-Default value: 650
+Default: 650
 
 #### Heading 4 font weight
 CSS Variable(s) targeted: `var(--h4-weight)`
 
-Default value: 625
+Default: 625
 
 #### Heading 5 font weight
 CSS Variable(s) targeted: `var(--h5-weight)`
 
-Default value: 600
+Default: 600
 
 #### Heading 6 font weight
 CSS Variable(s) targeted: `var(--h6-weight)`
 
-Default value: 575
+Default: 575
+
+#### Heading 1 line height
+CSS Variable(s) targeted: `var(--h1-line-height)`
+
+Default: 1.2
+
+#### Heading 2 line height
+CSS Variable(s) targeted: `var(--h2-line-height)`
+
+Default: 1.2
+
+#### Heading 3 line height
+CSS Variable(s) targeted: `var(--h3-line-height)`
+
+Default: 1.3
+
+#### Heading 4 line height
+CSS Variable(s) targeted: `var(--h4-line-height)`
+
+Default: 1.4
+
+#### Heading 5 line height
+CSS Variable(s) targeted: `var(--h5-line-height)`
+
+Default: 1.5
+
+#### Heading 6 line height
+CSS Variable(s) targeted: `var(--h6-line-height)`
+
+Default: 1.5
 
 ___
 
@@ -305,22 +343,22 @@ Overrides default font sizes used in the interface.
 #### Smaller UI Font size
 CSS Variable(s) targeted: `var(--font-ui-smaller)`
 
-Default value: 12 (px)
+Default: 12 (px)
 
 #### Small UI Font size
 CSS Variable(s) targeted: `var(--font-ui-small)`
 
-Default value: 13 (px)
+Default: 13 (px)
 
 #### Medium UI Font size
 CSS Variable(s) targeted: `var(--font-ui-medium)`
 
-Default value: 15 (px)
+Default: 15 (px)
 
 #### Large UI Font size
 CSS Variable(s) targeted: `var(--font-ui-large)`
 
-Default value: 20 (px)
+Default: 20 (px)
 ___
 ## Table
 Define color for table borders, and the width of tables in reading mode.
@@ -330,12 +368,12 @@ Accepted formats: HEX, %, x.y
 ### Table border color
 CSS Variable(s) targeted: `var(--table-border-color)`
 
-Default value: #6f768555
+Default: #6f768555
 
 ### Width of table in reading mode
 CSS Variable(s) targeted: `var(--flexcyon-table-reading-mode-width)`
 
-Default value: 100%
+Default: 100%
 
 ___
 ## Files
@@ -343,7 +381,7 @@ ___
 ### Enable dimmed file extensions in file explorer
 CSS Variable(s) targeted: `var(--flexcyon-file-exp-dimmed-file-exts-enabled)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 ___
 ## Workspace
@@ -354,22 +392,27 @@ Accepted Formats: %, x.y
 ### File line width
 CSS Variable(s) targeted: `var(--file-line-width)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 ### Opacity of dimmed elements
 CSS Variable(s) targeted: `var(--dimmed)`
 
-Default value: 0.55
+Default: 0.55
 
 ### Upscale percentage of icons 1
 CSS Variable(s) targeted: `var(--upsize)`
 
-Default value: 103%
+Default: 103%
 
 ### Upscale percentage of icons 2
 CSS Variable(s) targeted: `var(--expand)`
 
-Default value: 110%
+Default: 110%
+
+### Top Actions alignment
+CSS Variable(s) targeted: `var(--flexcyon-file-exp-top-actions-alignment)`
+
+Default: center
 
 ___
 ## Callouts
@@ -380,12 +423,12 @@ Accepted Formats: px, rem
 ### Callout Icon Right padding
 CSS Variable(s) targeted: `var(--flexcyon-callout-icon-right-padding)`
 
-Default value: 4 (px)
+Default: 4 (px)
 
 ### First Codeblock Margin Top
 CSS Variable(s) targeted: `var(--flexcyon-callout-first-codeblock-margin-top)`
 
-Default value: 1.25 (rem)
+Default: 1.25 (rem)
 
 ___
 ## Status Bar
@@ -396,47 +439,47 @@ Accepted Formats: s, text
 ### Hide until hover
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover)`
 
-Default value: false (class toggle)
+Default: false (class toggle)
 
 ### Text when hide until hover enabled
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover-text)`
 
-Default value: "Show status"
+Default: "Show status"
 
 ### Transition duration for showing status bar on hover
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-hover-duration)`
 
-Default value: 0.35 (s)
+Default: 0.35 (s)
 
 ### Transition timing function for showing status bar on hover
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-hover-function)`
 
-Default value: ease-out
+Default: ease-out
 
 ### Use text instead of icons for mode status
 CSS Variable(s) targeted: `var(--flexcyon-status-text-mode)`
 
-Default value: false (class toggle)
+Default: false (class toggle)
 
 ### Reading Mode Text
 CSS Variable(s) targeted: `var(--flexcyon-status-reading-text)`
 
-Default value: "READ"
+Default: "READ"
 
 ### Source Mode Text
 CSS Variable(s) targeted: `var(--flexcyon-status-source-text)`
 
-Default value: "SOURCE"
+Default: "SOURCE"
 
 ### Live Preview Mode Text
 CSS Variable(s) targeted: `var(--flexcyon-status-live-text)`
 
-Default value: "LIVE"
+Default: "LIVE"
 
 ### Show status bar on mobile
 CSS Variable(s) targeted: `var(--flexcyon-status-mobile-enabled)`
 
-Default value: false (class toggle)
+Default: false (class toggle)
 
 ___
 ## Title Bar
@@ -445,7 +488,7 @@ For configuration of the titlebar, enable hover effects on titlebar buttons
 ### Titlebar Button Effects
 CSS Variable(s) targeted: `var(--flexcyon-titlebar-button-effects)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 ___
 # Settings Section
@@ -456,22 +499,22 @@ Accepted Formats: %, x.y, rem
 ## Smiley Toggle Icons in Settings
 CSS Variable(s) targeted: `var(--flexcyon-settings-smiley-icons-enabled)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 ### Coloured Icons in Settings
 CSS Variable(s) targeted: `var(--flexcyon-settings-coloured-icons)`
 
-Default value: false (class toggle)
+Default: false (class toggle)
 
 ### Enable community item effects
 CSS Variable(s) targeted: `var(--flexcyon-settings-comm-item-enabled)`
 
-Default value: true (class toggle)
+Default: true (class toggle)
 
 ### Opacity of community items (unselected)
 CSS Variable(s) targeted: `var(--flexcyon-comm-item-opacity)`
 
-Default value: 0.89
+Default: 0.89
 
 ### Installed tooltip left margin
 CSS Variable(s) targeted: `var(--flexcyon-settings-installed-tooltip-left-margin)`
@@ -485,22 +528,175 @@ Default: true (class toggle)
 
 ___
 # Plugins Section
+For configuration of officially supported plugins
+
+Accepted formats: HEX, rem, x.y, %
 
 ## Alternate file tree
+
+### Folders font size
+CSS Variable(s) targeted: `var(--oz-fta-folder-font-size)`
+
+Default: 0.925 (rem)
+
+### Folders font color
+CSS Variable(s) targeted: `var(--oz-fta-folder-pane-file-name-color)`
+
+Default: #d3d5d3
+
+### Active folder color
+CSS Variables(s) targeted: `var(--oz-fta-all-panes-active-text-color)`
+
+Default: #d3d5d3
+
+### Files font size
+CSS Variable(s) targeted: `var(--oz-fta-file-font-size)`
+
+Default: 0.9 (rem)
+
+### FIles font color
+CSS Variable(s) targeted: `var(--oz-fta-file-pane-file-name-color)`
+
+Default: #6f768599
+
+### Disable folder icons
+CSS Variable(s) targeted: `var(--flexcyon-oz-folder-icons-disabled)`
+
+Default: false (class toggle)
+
+### Disable file tree header
+CSS Variable(s) targeted: `var(--flexcyon-oz-file-tree-header-disabled)`
+
+Default: false (class toggle)
+
+### Enable Alternate folder count
+CSS Variable(s) targeted: `var(--flexcyon-oz-alternate-folder-count)`
+
+Default: false (class toggle)
+
+### Enabled dimmed file extensions in file tree
+CSS Variable(s) targeted: `var(--flexcyon-oz-dimmed-file-exts-enabled)`
+
+Default: true (class toggle)
 
 ___
 ## Full Calendar
 
+Accepted formats: x.y, %
+
+### Opacity of dimmed full calendar items
+CSS Variables(s) targeted: `var(--flexcyon-fc-dimmed-items-opacity)`
+
+Default: 0.89
+
 ___
 # Others Section
+For configuring vim mode text, new tab apperance (ASCII art), sidedock icons, tooltip radius
+
+Accepted formats: px, text
 
 ## Vim Mode Text
+### Enable Vim Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-vim-mode-text-enable)`
+
+Default: true (class toggle)
+
+### Vim mode text left positioning
+CSS Variable(s) targeted: `var(--flexcyon-vim-mode-left-positioning)`
+
+Default: 12 (px)
+
+### Vim mode text bottom positioning
+CSS Variable(s) targeted: `var(--flexcyon-vim-mode-left-positioning)`
+
+Default: -4 (px)
+
+### Insert Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-vim-insert-text)`
+
+Default: "INSERT"
+
+### Normal Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-vim-normal-text)`
+
+Default: "NORMAL"
+
+### Command Mode Text
+CSS Variable(s) targeted: `var(--flexcyon-vim-command-text)`
+
+Default: "COMMAND"
 
 ___
 ## New Tab Appearance
+Customize the apperance of new empty tabs
+
+### Enable ASCII Art
+CSS Variable(s) targeted: `var(--flexcyon-ascii-enable)`
+
+Default: true (class toggle)
+
+### ASCII Art
+CSS Variable(s) targeted: `var(--flexcyon-ascii-art)`
+
+Default: " \a\
+    _______________                                       \a\
+    ___  ____/__  /________  ____________  ______________ \a\
+    __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+    _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+    /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                    /____/                \a\a\a "
+
+> The ASCII art string needs to be escaped for CSS to render it, line breaks are escaped as \a and \ is escaped as \\
+
+### Disable Empty State title
+CSS Variable(s) targeted: `var(--flexcyon-empty-state-title-disable)`
+
+Default: true (class toggle)
+
+### Disable Empty State Actions
+CSS Variable(s) targeted: `var(--flexcyon-empty-state-actions-disable)`
+
+Default: false (class toggle)
+
+### ASCII art font size limit
+CSS Variable(s) targeted: `var(--flexcyon-ascii-max-font-size)`
+
+Default: 14 (px)
 
 ___
 ## Side Dock Icons
+Configure the side dock icons
+
+### Enable side dock icon effects
+CSS Variable(s) targeted: `var(--flexcyon-sidedock-icon-effects)`
+
+Default: true (class toggle)
+
+### Hide the side dock ribbon
+CSS Variable(s) targeted: `var(--flexcyon-sidedock-ribbon-hidden)`
+
+Default: false (class toggle)
 
 ___
 ## Tooltip radius
+Configure the tooltip radius
+
+### Small radius
+CSS Variable(s) targeted: `var(--radius-s)`
+
+Default: 2 (px)
+
+### Medium radius
+CSS Variable(s) targeted: `var(--radius-m)`
+
+Default: 4 (px)
+
+### Large radius
+CSS Variable(s) targeted: `var(--radius-l)`
+
+Default: 6 (px)
+
+### Extra large radius
+CSS Variable(s) targeted: `var(--radius-xl)`
+
+Default: 8 (px)

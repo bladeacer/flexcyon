@@ -1,6 +1,16 @@
 // The code snippets in this file are derived from the Halcyon theme 
  // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
+body.theme-dark {
+    --flexcyon-file-exp-top-actions-alignment: center;
+    div.nav-buttons-container {
+        justify-content: var(--flexcyon-file-exp-top-actions-alignment);
+    }
+    .oz-folders-action-items {
+        text-align: var(--flexcyon-file-exp-top-actions-alignment);
+    }
+}
+
 body:where(.theme-dark) {
     --modal-border-color: var(--flexcyon-base-blue-02)
 }

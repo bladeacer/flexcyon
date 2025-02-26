@@ -289,6 +289,10 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+5):hov
   scale: var(--expand);
 }
 
+body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
+  display: none;
+}
+
 body:where(.theme-dark) {
   --icon-stroke: 2px;
   --icon-color-active: var(--interactive-accent);
@@ -452,6 +456,8 @@ body.theme-dark {
   --flexcyon-status-source-text: "SOURCE";
   --flexcyon-status-live-text: "LIVE";
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
+  --h5-line-height: 1.5;
+  --h6-line-height: 1.5;
 }
 
 body:is(.theme-dark) {
@@ -832,6 +838,7 @@ body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
 }
 
 body.theme-dark {
+  --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-ascii-art: " \a_______________                                       \a___  ____/__  /________  ____________  ______________ \a__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a                                 /____/                \a \a \a";
 }
 body.theme-dark div.empty-state-action {
@@ -858,14 +865,14 @@ body.theme-dark.flexcyon-ascii-enable div.empty-state-container::before {
   margin-bottom: 2rem;
   text-align: center;
   display: inline;
-  font-size: min(3vw - 3.25px, var(--font-ui-medium) - 1px);
+  font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
 }
 body.theme-dark.flexcyon-ascii-enable div.empty-state-container {
   transform: translateY(-115px);
 }
 
 body.theme-dark.is-mobile.flexcyon-ascii-enable div.empty-state-container::before {
-  font-size: min(3vw - 3px, var(--font-ui-medium) - 1px);
+  font-size: min(3vw - 3px, var(--flexcyon-ascii-max-font-size));
   margin-bottom: 1rem;
   line-height: 0.8;
 }
@@ -876,6 +883,16 @@ body.theme-dark.flexcyon-empty-state-title-disable div.empty-state-title {
 
 body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list {
   display: none;
+}
+
+body.theme-dark {
+  --flexcyon-file-exp-top-actions-alignment: center;
+}
+body.theme-dark div.nav-buttons-container {
+  justify-content: var(--flexcyon-file-exp-top-actions-alignment);
+}
+body.theme-dark .oz-folders-action-items {
+  text-align: var(--flexcyon-file-exp-top-actions-alignment);
 }
 
 body:where(.theme-dark) {
@@ -1153,6 +1170,31 @@ settings:
     id: h6-weight
     type: variable-number
     default: 575
+  - title: Heading 1 line height
+    id: h1-line-height
+    type: variable-number
+    default: 1.2
+  - title: Heading 2 line height
+    id: h2-line-height
+    type: variable-number
+    default: 1.2
+  - title: Heading 3 line height
+    id: h3-line-height
+    type: variable-number
+    default: 1.3
+  - title: Heading 4 line height
+    id: h4-line-height
+    type: variable-number
+    default: 1.4
+  - title: Heading 5 line height
+    id: h5-line-height
+    type: variable-number
+    default: 1.5
+  - title: Heading 6 line height
+    id: h6-line-height
+    type: variable-number
+    default: 1.5
+
   - title: UI Font sizes
     type: heading
     level: 6
@@ -1202,6 +1244,7 @@ settings:
     type: class-toggle
     default: true
 
+
   - title: Workspace
     type: heading
     level: 5
@@ -1227,6 +1270,11 @@ settings:
     description: Upscale percentage used in side dock icon effects
     type: variable-text
     default: 110%
+  - title: Top Actions Alignment
+    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
+    id: flexcyon-file-exp-top-actions-alignment
+    type: variable-text
+    default: center
 
   - title: Callouts
     type: heading
@@ -1356,7 +1404,7 @@ settings:
     collapsed: true
   - title: Folders font size
     id: oz-fta-folder-font-size
-    description: Used in alternate file tree files
+    description: Used in alternate file tree folder
     type: variable-number
     default: 0.925
     format: rem
@@ -1411,8 +1459,7 @@ settings:
     type: variable-number
     default: 0.89
 
-  -
-    title: Others
+  - title: Others
     type: heading
     level: 4
     collapsed: true
@@ -1428,7 +1475,6 @@ settings:
     description: Enable text for displaying current vim mode
     type: class-toggle
     default: true
-
   - title: Vim mode text left positioning
     id: flexcyon-vim-left-positioning
     type: variable-number
@@ -1441,30 +1487,26 @@ settings:
     description: How far from the bottom of the screen the current vim mode text is (as the number gets greater, the text moves higher up the screen)
     default: -4
     format: px
-  - 
-    title: Insert Mode Text
+  - title: Insert Mode Text
     description: Text to display when in insert mode
     id: flexcyon-vim-insert-text
     type: variable-text
     default: "INSERT"
     quotes: true
-  - 
-    title: Normal Mode Text
+  - title: Normal Mode Text
     description: Text to display when in normal mode
     id: flexcyon-vim-normal-text
     type: variable-text
     default: "NORMAL"
     quotes: true
-  - 
-    title: Command Mode Text
+  - title: Command Mode Text
     description: Text to display when in command mode
     id: flexcyon-vim-command-text
     type: variable-text
     default: "COMMAND"
     quotes: true
 
-  - 
-    title: New Tab Appearance
+  - title: New Tab Appearance
     type: heading
     level: 5
     collapsed: true
@@ -1496,6 +1538,12 @@ settings:
     description: Toggle the empty state actions
     type: class-toggle
     default: false
+  - title: ASCII art font size limit
+    description: The maximum size of the ASCII art
+    id: flexcyon-ascii-max-font-size
+    type: variable-number
+    default: 14
+    format: px
 
   - title: Side Dock Icons
     type: heading
@@ -1506,6 +1554,11 @@ settings:
     description: Enable the colors, dim till hover effects for side dock icons
     type: class-toggle
     default: true
+  - title: Hide the side dock ribbon
+    id: flexcyon-sidedock-ribbon-hidden
+    type: class-toggle
+    default: false
+
   - title: Tooltip radius
     type: heading
     level: 5
@@ -1530,6 +1583,7 @@ settings:
     type: variable-number
     default: 8
     format: px
+
  */
 body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);

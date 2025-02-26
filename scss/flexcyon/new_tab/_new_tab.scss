@@ -1,4 +1,5 @@
 body.theme-dark {
+    --flexcyon-ascii-max-font-size: 14px;
 
     --flexcyon-ascii-art: " \a\
 _______________                                       \a\
@@ -36,7 +37,7 @@ body.theme-dark.flexcyon-ascii-enable {
         margin-bottom: 2rem;
         text-align: center;
         display: inline;
-        font-size: min(calc(3vw - 3.25px), var(--font-ui-medium) - 1px);
+        font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
     }
 
     div.empty-state-container {
@@ -45,7 +46,7 @@ body.theme-dark.flexcyon-ascii-enable {
 }
 body.theme-dark.is-mobile.flexcyon-ascii-enable {
     div.empty-state-container::before {
-        font-size: min(calc(3vw - 3px), var(--font-ui-medium) - 1px);
+        font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
         margin-bottom: 1rem;
         line-height: 0.8;
     }
