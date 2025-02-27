@@ -11,15 +11,12 @@
 - [ ] Change thumbnail image, looks goofy
 - [ ] Review flexcyon modded plugins and themes
 - [ ] Add mobile support (partial)
-- [ ] Add minify directory and sass compile to minified css `.min.css`
-- [ ] Add tags to organise PRs/FRs
 
 #### Style Settings
-<!-- - [ ] Style settings options for alternate checkbox -->
 - [ ] Add callout utilities
 
 #### Plugins/snippets
-- [ ] Add support for Spaced Repetition
+- [x] Add support for Spaced Repetition
 - [ ] Add support for Breadcrumbs
 
 #### Other styling options
@@ -28,12 +25,8 @@
 
 
 #### Next version changelog
-- Made ASCII art responsive, you can set a font size limit on it
-- Status bar does not overlap with command mode input text
-- Added option to enabled status bar on mobile
-- Added line height option in typography for headings
-- Add option to hide the left sidedock ribbon
-- Add option to align top actions globally
+- Added support for Spaced Repetition Plugin
+
 
 <!-- - Updated documentation for style settings -->
 <!-- --font-smallest -->

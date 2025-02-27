@@ -1,7 +1,7 @@
 #### Welcome to the documentation for Flexcyon
 
-#### Style Settings (WIP)
+#### Style Settings
 https://github.com/bladeacer/flexcyon/tree/master/docs/style_settings.md
 
-#### CSS Classes (not implemented)
+#### CSS Classes and other documentation (not implemented yet)
 https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md

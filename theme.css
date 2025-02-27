@@ -620,6 +620,70 @@ body:where(.theme-dark) div.callout .callout-content :first-child:is(pre) {
   margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
 }
 
+div.callout[data-callout-metadata*=empty] .callout-icon,
+div.callout[data-callout-metadata*=no-icon] .callout-icon {
+  display: none;
+}
+
+div.callout[data-callout-metadata*=empty] .callout-title-inner,
+div.callout[data-callout-metadata*=no-title] .callout-title-inner {
+  display: none;
+}
+
+div.callout[data-callout-metadata*=transparent-bg] {
+  background-color: transparent;
+}
+
+div.callout[data-callout-metadata*=center-all] div.callout-title,
+div.callout[data-callout-metadata*=center-title] div.callout-title {
+  justify-content: center;
+}
+
+div.callout[data-callout-metadata*=center-all] div.callout-content,
+div.callout[data-callout-metadata*=center-content] div.callout-content {
+  text-align: center;
+}
+
+div.callout[data-callout-metadata*=rtl-all] div.callout-title *,
+div.callout[data-callout-metadata*=rtl-all] div.callout-title,
+div.callout[data-callout-metadata*=rtl-title] div.callout-title *,
+div.callout[data-callout-metadata*=rtl-title] div.callout-title {
+  direction: rtl !important;
+  unicode-bidi: bidi-override;
+}
+
+div.callout[data-callout-metadata*=rtl-all] div.callout-content *,
+div.callout[data-callout-metadata*=rtl-content] div.callout-content * {
+  direction: rtl !important;
+  unicode-bidi: bidi-override;
+}
+div.callout[data-callout-metadata*=rtl-all] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=rtl-all] div.callout-content pre[class*=language-],
+div.callout[data-callout-metadata*=rtl-content] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=rtl-content] div.callout-content pre[class*=language-] {
+  text-align: right;
+}
+
+div.callout[data-callout-metadata*=ltr-all] div.callout-title *,
+div.callout[data-callout-metadata*=ltr-all] div.callout-title,
+div.callout[data-callout-metadata*=ltr-title] div.callout-title *,
+div.callout[data-callout-metadata*=ltr-title] div.callout-title {
+  direction: ltr !important;
+  unicode-bidi: bidi-override;
+}
+
+div.callout[data-callout-metadata*=ltr-all] div.callout-content * *,
+div.callout[data-callout-metadata*=ltr-content] div.callout-content * * {
+  direction: rtl !important;
+  unicode-bidi: bidi-override;
+}
+div.callout[data-callout-metadata*=ltr-all] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=ltr-all] div.callout-content * pre[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content * pre[class*=language-] {
+  text-align: left;
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -1607,6 +1671,29 @@ body.theme-dark .pcr-app .pcr-interaction .pcr-save {
   background: var(--color-blue);
 }
 
+.app-container .view-content:has(.tategaki) .markdown-preview-section {
+  writing-mode: vertical-rl;
+  overflow: scroll;
+  max-width: 95%;
+  padding-bottom: 0px !important;
+  padding-top: 7.5vh;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+}
+.app-container .view-content:has(.tategaki) .markdown-preview-section div > :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0 !important;
+  line-height: 1.667;
+}
+.app-container .view-content:has(.tategaki) .markdown-preview-section .footnotes p {
+  text-indent: 0;
+}
+.app-container .view-content:has(.tategaki) .markdown-preview-section .mod-header {
+  display: none;
+}
+
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) div.oz-folder-name {
   opacity: var(--dimmed);
@@ -1795,6 +1882,33 @@ body.theme-dark a.fc-timegrid-event {
 body.theme-dark a.fc-timegrid-event.fc-event-today {
   background-color: var(--color-green) !important;
   border: unset;
+}
+
+.sr-bg-green {
+  background-color: rgba(var(--color-green-rgb), 0.925) !important;
+}
+
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
+.sr-response-button.sr-bg-green:hover {
+  background-color: var(--color-green) !important;
+}
+
+.sr-bg-blue {
+  background-color: rgba(var(--color-blue-rgb), 0.925) !important;
+}
+
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
+.sr-response-button.sr-bg-blue:hover {
+  background-color: var(--color-blue) !important;
+}
+
+.sr-bg-red {
+  background-color: rgba(var(--color-red-rgb), 0.925) !important;
+}
+
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
+.sr-response-button.sr-bg-red:hover {
+  background-color: var(--color-red) !important;
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

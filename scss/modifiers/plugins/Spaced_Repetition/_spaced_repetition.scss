@@ -1,0 +1,26 @@
+
+.sr-bg-green {
+    background-color: rgba(var(--color-green-rgb), 0.925) !important;
+}
+
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
+.sr-response-button.sr-bg-green:hover {
+    background-color: var(--color-green) !important;
+}
+
+.sr-bg-blue {
+    background-color: rgba(var(--color-blue-rgb), 0.925) !important;
+}
+
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
+.sr-response-button.sr-bg-blue:hover {
+    background-color: var(--color-blue) !important;
+}
+
+.sr-bg-red {
+    background-color: rgba(var(--color-red-rgb), 0.925) !important; 
+}
+.sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
+.sr-response-button.sr-bg-red:hover {
+    background-color: var(--color-red) !important; 
+}
