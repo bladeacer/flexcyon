@@ -238,6 +238,30 @@ settings:
     id: h6-line-height
     type: variable-number
     default: 1.5
+  - title: Enable underline for Heading 1
+    id: flexcyon-h1-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 2
+    id: flexcyon-h2-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 3
+    id: flexcyon-h3-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 4
+    id: flexcyon-h4-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 5
+    id: flexcyon-h5-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 6
+    id: flexcyon-h6-underline-enabled
+    type: class-toggle
+    default: false
 
   - title: UI Font sizes
     type: heading
@@ -319,6 +343,24 @@ settings:
     id: flexcyon-file-exp-top-actions-alignment
     type: variable-text
     default: center
+  - title: Prompt width
+    description: Sets the width of prompts like the command prompt
+    id: prompt-width
+    type: variable-number
+    default: 700
+    format: px
+  - title: Prompt max width
+    description: Sets the maximum width of prompts like the command prompt
+    id: prompt-max-width
+    type: variable-number
+    default: 80
+    format: vw
+  - title: Prompt max height
+    description: Sets the maximum height of prompts like the command prompt
+    id: prompt-max-height
+    type: variable-number
+    default: 70
+    format: vh
 
   - title: Callouts
     type: heading
@@ -434,6 +476,10 @@ settings:
   - title: Do not show scrollbar in settings
     id: flexcyon-settings-scrollbar-removed
     description: Do not show scrollbar in settings
+    type: class-toggle
+    default: true
+  - title: Enable alternate active item effect in settings
+    id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
 

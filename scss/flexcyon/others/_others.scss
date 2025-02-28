@@ -1,11 +1,13 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body.theme-dark {
     --flexcyon-file-exp-top-actions-alignment: center;
+
     div.nav-buttons-container {
         justify-content: var(--flexcyon-file-exp-top-actions-alignment);
     }
+
     .oz-folders-action-items {
         text-align: var(--flexcyon-file-exp-top-actions-alignment);
     }
@@ -74,4 +76,23 @@ body:where(.theme-dark) {
         }
     }
 
+}
+
+body.flexcyon-enable-alt-active-item-effect {
+    .vertical-tab-nav-item {
+        padding-left: 0.5rem;
+        transform: padding ease-in-out 0.35s;
+    }
+    .vertical-tab-nav-item.search-settings-input {
+        padding-left: 0.1rem;
+    }
+
+    .vertical-tab-nav-item.is-active {
+        color: var(--text-accent);
+        background-color: var(--text-on-accent);
+        padding-left: 0.75rem;
+        &:hover {
+            font-weight: bold;
+        }
+    }
 }

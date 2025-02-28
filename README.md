@@ -75,3 +75,6 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 
 ## Credits
 A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
+
+#### Snippets
+<!-- - @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet -->

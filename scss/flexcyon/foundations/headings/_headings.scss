@@ -1,5 +1,5 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body:where(.theme-dark) {
     --h1-weight: 700;
@@ -17,5 +17,28 @@ body.flexcyon-headings-coloured-enabled {
     --h4-color: var(--flexcyon-pink);
     --h5-color: var(--flexcyon-lime-green);
     --h6-color: var(--flexcyon-yellow);
-}  
-  
+}
+
+body.flexcyon-h1-underline-enabled h1 {
+    border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid var(--h1-color);
+}
+
+body.flexcyon-h2-underline-enabled h2 {
+    border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid var(--h2-color);
+}
+
+body.flexcyon-h3-underline-enabled h3 {
+    border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid var(--h3-color);
+}
+
+body.flexcyon-h4-underline-enabled h4 {
+    border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid var(--h4-color);
+}
+
+body.flexcyon-h5-underline-enabled h5 {
+    border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid var(--h5-color);
+}
+
+body.flexcyon-h6-underline-enabled h6 {
+    border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
+}

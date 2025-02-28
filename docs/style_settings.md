@@ -70,6 +70,12 @@ Style Settings
 |   |   |   |   |--  Heading 4 line height
 |   |   |   |   |--  Heading 5 line height
 |   |   |   |   |--  Heading 6 line height
+|   |   |   |   |--  Enable underline for Heading 1
+|   |   |   |   |--  Enable underline for Heading 2
+|   |   |   |   |--  Enable underline for Heading 3
+|   |   |   |   |--  Enable underline for Heading 4
+|   |   |   |   |--  Enable underline for Heading 5
+|   |   |   |   |--  Enable underline for Heading 6
 |   |   |   |--  UI Font sizes
 |   |   |   |   |--  Smaller UI Font size
 |   |   |   |   |--  Small UI Font size
@@ -85,6 +91,10 @@ Style Settings
 |   |   |   |--  Opacity of dimmed UI elements
 |   |   |   |--  Upscale percentage of icons 1
 |   |   |   |--  Upscale percentage of icons 2
+|   |   |   |--  Top Actions Alignment
+|   |   |   |--  Prompt width
+|   |   |   |--  Prompt max width
+|   |   |   |--  Prompt max height
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -107,6 +117,7 @@ Style Settings
 |   |   |-- Opacity of community items (unselected)
 |   |   |-- Installed tooltip left margin
 |   |   |-- Do not show scrollbar in settings
+|   |   |-- Enable alternate active item effect in settings
 |   |-- **Plugins**
 |   |   |-- Alternate file tree
 |   |   |   |-- Folders font size
@@ -335,6 +346,37 @@ CSS Variable(s) targeted: `var(--h6-line-height)`
 
 Default: 1.5
 
+#### Enable underline for Heading 1
+CSS Variable(s) targeted: `var(--flexcyon-h1-underline-enabled)`
+
+Default: false (class toggle)
+> The size of the underline scales with your font weight
+
+#### Enable underline for Heading 2
+CSS Variable(s) targeted: `var(--flexcyon-h2-underline-enabled)`
+
+Default: false (class toggle)
+
+#### Enable underline for Heading 3
+CSS Variable(s) targeted: `var(--flexcyon-h3-underline-enabled)`
+
+Default: false (class toggle)
+
+#### Enable underline for Heading 4
+CSS Variable(s) targeted: `var(--flexcyon-h4-underline-enabled)`
+
+Default: false (class toggle)
+
+#### Enable underline for Heading 5
+CSS Variable(s) targeted: `var(--flexcyon-h5-underline-enabled)`
+
+Default: false (class toggle)
+
+#### Enable underline for Heading 6
+CSS Variable(s) targeted: `var(--flexcyon-h6-underline-enabled)`
+
+Default: false (class toggle)
+
 ___
 
 ### UI Font sizes
@@ -387,7 +429,7 @@ ___
 ## Workspace
 Defines file line width when readable line length is enabled, opacity of dimmed UI elements, upscale percentage of icons used in effects
 
-Accepted Formats: %, x.y
+Accepted Formats: %, x.y, px, vw, vh
 
 ### File line width
 CSS Variable(s) targeted: `var(--file-line-width)`
@@ -413,6 +455,21 @@ Default: 110%
 CSS Variable(s) targeted: `var(--flexcyon-file-exp-top-actions-alignment)`
 
 Default: center
+
+### Prompt width
+CSS Variable(s) targeted: `var(--prompt-width)`
+
+Default: 700 (px)
+
+### Prompt max width
+CSS Variable(s) targeted: `var(--prompt-max-width)`
+
+Default: 80 (vw)
+
+### Prompt max height
+CSS Variable(s) targeted: `var(--prompt-max-height)`
+
+Default: 70 (vh)
 
 ___
 ## Callouts
@@ -525,6 +582,11 @@ Default: 1 (rem)
 CSS Variable(s) targeted: `var(--flexcyon-settings-scrollbar-removed)`
 
 Default: true (class toggle)
+
+### Enabled alternate active item effect in settings
+CSS Variable(s) targeted: `var(--flexcyon-enable-alt-active-item-effect)`
+
+Default: true
 
 ___
 # Plugins Section
@@ -678,7 +740,6 @@ CSS Variable(s) targeted: `var(--flexcyon-sidedock-ribbon-hidden)`
 Default: false (class toggle)
 
 ___
-## Tooltip radius
 Configure the tooltip radius
 
 ### Small radius

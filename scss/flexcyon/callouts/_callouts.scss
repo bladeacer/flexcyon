@@ -61,6 +61,7 @@ div.callout[data-callout-metadata*="vertical-ltr"] {
 }
 
 div.callout[data-callout-metadata*="empty"],
+div.callout[data-callout*="empty"],
 div.callout[data-callout-metadata*="tategaki"],
 div.callout[data-callout-metadata*="vertical-ltr"],
 div.callout[data-callout-metadata*="no-icon"] {
@@ -71,6 +72,7 @@ div.callout[data-callout-metadata*="no-icon"] {
 
 div.callout[data-callout-metadata*="tategaki"],
 div.callout[data-callout-metadata*="empty"],
+div.callout[data-callout*="empty"],
 div.callout[data-callout-metadata*="vertical-ltr"],
 div.callout[data-callout-metadata*="no-title"] {
     .callout-title-inner {

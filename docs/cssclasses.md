@@ -61,6 +61,13 @@ Usage:
 > [!|empty] Neither the title and callout icon will show
 > Content is shown as usual
 ```
+
+Alternatively, you can use:
+```md
+> [!empty] Neither the title and callout icon will show
+> Content is shown as usual
+```
+
 ___
 #### Transparent Background
 Callout metadata: "transparent-bg"

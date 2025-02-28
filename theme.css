@@ -105,6 +105,30 @@ body.flexcyon-headings-coloured-enabled {
   --h6-color: var(--flexcyon-yellow);
 }
 
+body.flexcyon-h1-underline-enabled h1 {
+  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid var(--h1-color);
+}
+
+body.flexcyon-h2-underline-enabled h2 {
+  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid var(--h2-color);
+}
+
+body.flexcyon-h3-underline-enabled h3 {
+  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid var(--h3-color);
+}
+
+body.flexcyon-h4-underline-enabled h4 {
+  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid var(--h4-color);
+}
+
+body.flexcyon-h5-underline-enabled h5 {
+  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid var(--h5-color);
+}
+
+body.flexcyon-h6-underline-enabled h6 {
+  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
+}
+
 body.theme-dark {
   --flexcyon-accent-hover: var(--flexcyon-yellow);
   --flexcyon-palette-lilac-hover: color-mix(in hs1 shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
@@ -654,6 +678,7 @@ div.callout[data-callout-metadata*=vertical-ltr] div.callout-content :is(h1, h2,
 }
 
 div.callout[data-callout-metadata*=empty] .callout-icon,
+div.callout[data-callout*=empty] .callout-icon,
 div.callout[data-callout-metadata*=tategaki] .callout-icon,
 div.callout[data-callout-metadata*=vertical-ltr] .callout-icon,
 div.callout[data-callout-metadata*=no-icon] .callout-icon {
@@ -662,6 +687,7 @@ div.callout[data-callout-metadata*=no-icon] .callout-icon {
 
 div.callout[data-callout-metadata*=tategaki] .callout-title-inner,
 div.callout[data-callout-metadata*=empty] .callout-title-inner,
+div.callout[data-callout*=empty] .callout-title-inner,
 div.callout[data-callout-metadata*=vertical-ltr] .callout-title-inner,
 div.callout[data-callout-metadata*=no-title] .callout-title-inner {
   display: none;
@@ -1055,6 +1081,22 @@ body:where(.theme-dark) div.modal-content.vertical-tabs-container > div.vertical
   opacity: 1;
 }
 
+body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item {
+  padding-left: 0.5rem;
+  transform: padding ease-in-out 0.35s;
+}
+body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.search-settings-input {
+  padding-left: 0.1rem;
+}
+body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active {
+  color: var(--text-accent);
+  background-color: var(--text-on-accent);
+  padding-left: 0.75rem;
+}
+body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active:hover {
+  font-weight: bold;
+}
+
 /* @settings
 name: Flexcyon Style Settings 
 id: flexcyon
@@ -1295,6 +1337,30 @@ settings:
     id: h6-line-height
     type: variable-number
     default: 1.5
+  - title: Enable underline for Heading 1
+    id: flexcyon-h1-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 2
+    id: flexcyon-h2-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 3
+    id: flexcyon-h3-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 4
+    id: flexcyon-h4-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 5
+    id: flexcyon-h5-underline-enabled
+    type: class-toggle
+    default: false
+  - title: Enable underline for Heading 6
+    id: flexcyon-h6-underline-enabled
+    type: class-toggle
+    default: false
 
   - title: UI Font sizes
     type: heading
@@ -1376,6 +1442,24 @@ settings:
     id: flexcyon-file-exp-top-actions-alignment
     type: variable-text
     default: center
+  - title: Prompt width
+    description: Sets the width of prompts like the command prompt
+    id: prompt-width
+    type: variable-number
+    default: 700
+    format: px
+  - title: Prompt max width
+    description: Sets the maximum width of prompts like the command prompt
+    id: prompt-max-width
+    type: variable-number
+    default: 80
+    format: vw
+  - title: Prompt max height
+    description: Sets the maximum height of prompts like the command prompt
+    id: prompt-max-height
+    type: variable-number
+    default: 70
+    format: vh
 
   - title: Callouts
     type: heading
@@ -1491,6 +1575,10 @@ settings:
   - title: Do not show scrollbar in settings
     id: flexcyon-settings-scrollbar-removed
     description: Do not show scrollbar in settings
+    type: class-toggle
+    default: true
+  - title: Enable alternate active item effect in settings
+    id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
 

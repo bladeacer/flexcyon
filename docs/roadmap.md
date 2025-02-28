@@ -28,6 +28,8 @@
 #### Next version changelog
 - Added support for Spaced Repetition Plugin
 - Added support for Breadcrumbs Plugin
+- Added underline option for headings
+- Added alternate active item effects in settings
 - Added callout utilities for
   - No Icon
   - No Title
@@ -44,18 +46,4 @@
   - Tategaki
   - Vertical LTR
 
-
-
-<!-- - Updated documentation for style settings -->
-<!-- --font-smallest -->
-<!-- --font-smaller -->
-<!-- --font-small -->
-
-<!-- Font weights -->
-<!-- --font-thin -->
-<!-- --font-normal -->
-<!-- --font-medium -->
-<!-- --font-semibold -->
-<!-- --font-bold -->
-<!-- --font-extrabold -->
-<!-- --font-black -->
+Credits: @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
