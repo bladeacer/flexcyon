@@ -12,12 +12,13 @@
 - [ ] Review flexcyon modded plugins and themes
 - [ ] Add mobile support (partial)
 
-#### Style Settings
-- [ ] Add callout utilities
+#### Style Settings and stuff
+- [ ] Add callout utilities 
+- [ ] Add CSS classes
 
 #### Plugins/snippets
 - [x] Add support for Spaced Repetition
-- [ ] Add support for Breadcrumbs
+- [x] Add support for Breadcrumbs
 
 #### Other styling options
 - [ ] PDF export styling
@@ -26,6 +27,23 @@
 
 #### Next version changelog
 - Added support for Spaced Repetition Plugin
+- Added support for Breadcrumbs Plugin
+- Added callout utilities for
+  - No Icon
+  - No Title
+  - Transparent Background
+  - RTL Title
+  - RTL Content
+  - LTR Title
+  - LTR Content
+  - Center Title
+  - Center Content
+  - Tategaki
+  - Vertical LTR
+- Added cssclasses for
+  - Tategaki
+  - Vertical LTR
+
 
 
 <!-- - Updated documentation for style settings -->

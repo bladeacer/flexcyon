@@ -1,8 +1,7 @@
 @charset "UTF-8";
 /* 
 Flexcyon: Made by mixing both the Flexoki and Halcyon color scheme 
-Repository: 
-
+Repository: https://github.com/bladeacer/flexcyon 
 */
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
@@ -620,12 +619,50 @@ body:where(.theme-dark) div.callout .callout-content :first-child:is(pre) {
   margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
 }
 
+div.callout[data-callout-metadata*=tategaki] div.callout-content {
+  writing-mode: vertical-rl;
+  overflow: scroll;
+  max-width: 95%;
+  padding-top: 2vh;
+  padding-bottom: 0px !important;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+}
+div.callout[data-callout-metadata*=tategaki] div.callout-content :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  line-height: 1.667;
+}
+
+div.callout[data-callout-metadata*=vertical-ltr] div.callout-content {
+  writing-mode: vertical-lr;
+  overflow: scroll;
+  max-width: 95%;
+  padding-top: 2vh;
+  padding-bottom: 0px !important;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+}
+div.callout[data-callout-metadata*=vertical-ltr] div.callout-content :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  line-height: 1.667;
+}
+
 div.callout[data-callout-metadata*=empty] .callout-icon,
+div.callout[data-callout-metadata*=tategaki] .callout-icon,
+div.callout[data-callout-metadata*=vertical-ltr] .callout-icon,
 div.callout[data-callout-metadata*=no-icon] .callout-icon {
   display: none;
 }
 
+div.callout[data-callout-metadata*=tategaki] .callout-title-inner,
 div.callout[data-callout-metadata*=empty] .callout-title-inner,
+div.callout[data-callout-metadata*=vertical-ltr] .callout-title-inner,
 div.callout[data-callout-metadata*=no-title] .callout-title-inner {
   display: none;
 }
@@ -1684,13 +1721,36 @@ body.theme-dark .pcr-app .pcr-interaction .pcr-save {
   text-indent: 1rem;
 }
 .app-container .view-content:has(.tategaki) .markdown-preview-section div > :is(h1, h2, h3, h4, h5, h6) {
-  margin-top: 0 !important;
+  margin-top: 0;
   line-height: 1.667;
 }
 .app-container .view-content:has(.tategaki) .markdown-preview-section .footnotes p {
   text-indent: 0;
 }
 .app-container .view-content:has(.tategaki) .markdown-preview-section .mod-header {
+  display: none;
+}
+
+.app-container .view-content:has(.vertical-ltr) .markdown-preview-section {
+  writing-mode: vertical-lr;
+  overflow: scroll;
+  max-width: 95%;
+  padding-bottom: 0px !important;
+  padding-top: 7.5vh;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+}
+.app-container .view-content:has(.vertical-ltr) .markdown-preview-section div > :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  line-height: 1.667;
+}
+.app-container .view-content:has(.vertical-ltr) .markdown-preview-section .footnotes p {
+  text-indent: 0;
+}
+.app-container .view-content:has(.vertical-ltr) .markdown-preview-section .mod-header {
   display: none;
 }
 
@@ -1909,6 +1969,29 @@ body.theme-dark a.fc-timegrid-event.fc-event-today {
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
 .sr-response-button.sr-bg-red:hover {
   background-color: var(--color-red) !important;
+}
+
+.BC-trail, .BC-NextPrev-Container, .BC-next, .BC-prevs, .BC-trail-grid, .BC-grid-wrapper, .BC-trail-grid-item {
+  background-color: transparent !important;
+  border: unset !important;
+}
+
+.internal-link.BC-prev {
+  text-decoration: none;
+}
+.internal-link.BC-prev strong::before {
+  content: "◀️ ";
+}
+
+.internal-link.BC-next {
+  text-decoration: none;
+}
+.internal-link.BC-next strong::after {
+  content: " ▶️";
+}
+
+.BC-grid-options {
+  transform: translateY(-7px);
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

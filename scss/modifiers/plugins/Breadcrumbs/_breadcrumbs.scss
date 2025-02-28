@@ -1,0 +1,21 @@
+.BC-trail, .BC-NextPrev-Container, .BC-next, .BC-prevs, .BC-trail-grid, .BC-grid-wrapper, .BC-trail-grid-item {
+    background-color: transparent !important;
+    border: unset !important;
+}
+.internal-link.BC-prev {
+    text-decoration: none;
+    strong::before {
+        content: "◀️ ";
+    }
+}
+
+.internal-link.BC-next {
+    text-decoration: none;
+    strong::after {
+        content: " ▶️";
+    }
+}
+.BC-grid-options {
+    transform: translateY(-7px);
+}
+

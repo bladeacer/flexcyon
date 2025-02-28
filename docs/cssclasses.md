@@ -1,7 +1,28 @@
-## WIP, to implement later
 [Back to documentation welcome page](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
 
 ## CSS Classes
+### Table of Contents
+- [Callouts](#callouts)
+    - [Callout metadata](#callout-metadata)
+        - [No Icon](#no-icon)
+        - [No Title](#no-title)
+        - [Empty](#empty)
+        - [Transparent Background](#transparent-background)
+        - [RTL Title](#rtl-title)
+        - [RTL Content](#rtl-content)
+        - [RTL All](#rtl-all)
+        - [LTR Title](#ltr-title)
+        - [LTR Content](#ltr-content)
+        - [LTR All](#ltr-all)
+        - [Center Title](#center-title)
+        - [Center Content](#center-content)
+        - [Center All](#center-all)
+        - [Combined usage](#combined-usage)
+- [Tategaki](#tategaki)
+    - [Tategaki in callouts](#tategaki-in-callouts)
+- [Vertical LTR](#vertical-ltr)
+    - [Vertical LTR in callouts](#vertical-ltr-in-callouts)
+
 
 ## Callouts
 Defines utilities for callouts.
@@ -9,6 +30,7 @@ Defines utilities for callouts.
 ### Callout metadata
 > Note: you need at least `>[!|] your title` for Obsidian to render your callout. In this case where the callout type is not specified, it will render as if you typed `>[!note] your title`
 
+#### No Icon
 Callout metadata: "no-icon"
 
 Usage:
@@ -22,6 +44,7 @@ Usage:
 > Content
 ```
 
+#### No Title
 Callout metadata: "no-title"
 
 Usage: 
@@ -30,7 +53,7 @@ Usage:
 > [!info|no-title] This title will not show
 > Content wil show as usual
 ```
-___
+#### Empty
 Callout metadata: "empty"
 
 Usage: 
@@ -39,6 +62,7 @@ Usage:
 > Content is shown as usual
 ```
 ___
+#### Transparent Background
 Callout metadata: "transparent-bg"
 
 Usage: 
@@ -47,6 +71,7 @@ Usage:
 > Content and title is shown as usual
 ```
 ___
+#### RTL Title
 Callout metadata: "rtl-title"
 
 Usage:
@@ -55,6 +80,7 @@ Usage:
 > Content and title is shown as usual
 ```
 
+#### RTL Content
 Callout metadata: "rtl-content"
 
 Usage: 
@@ -63,6 +89,7 @@ Usage:
 > The content will be dispalyed as rtl
 ```
 
+#### RTL All
 Callout metadata: "rtl-all"
 
 Usage: 
@@ -71,6 +98,7 @@ Usage:
 > The content will be dispalyed as rtl
 ```
 ___
+#### LTR Title
 Callout metadata: "ltr-title"
 
 Usage:
@@ -79,6 +107,7 @@ Usage:
 > Content and title is shown as usual
 ```
 
+#### LTR Content
 Callout metadata: "ltr-content"
 
 Usage: 
@@ -87,6 +116,7 @@ Usage:
 > The content will be dispalyed as ltr
 ```
 
+#### LTR All
 Callout metadata: "ltr-all"
 
 Usage:
@@ -96,7 +126,7 @@ Usage:
 ```
 
 ___
-
+#### Center Title
 Callout metadata: "center-title"
 
 Usage:
@@ -105,7 +135,7 @@ Usage:
 > The content will display as usual
 ```
 
-
+#### Center Content
 Callout metadata: "center-content"
 > Note: this will not center text in codeblocks
 
@@ -115,6 +145,7 @@ Usage:
 > The content will be centered
 ```
 
+#### Center All
 Callout metadata: "center-all"
 > Note: this will not center text in codeblocks
 
@@ -132,3 +163,46 @@ ___
 ```
 
 The `ltr-*` variants will override the `rtl-*` variants if your language is left-to-right by default.
+
+___
+## Tategaki
+Vertical RTLs your notes in reading mode.
+
+Usage:
+```md
+---
+cssclasses:
+    - tategaki
+---
+
+Your content will render as vertical rtl  (text goes from top right to bottom right and towards the left)
+```
+
+### Tategaki in callouts
+There is also a callout metadata provider for tategaki
+
+Usage:
+```md
+>[!info|tategaki] The title will not display
+> The contents will be displayed as vertical rtl
+```
+
+## Vertical LTR
+Vertical LTRs your notes in reading mode
+
+Usage:
+```md
+cssclasses:
+    - vertical-ltr
+---
+
+Your content will render as vertical ltr  (text goes from top left to bottom left and towards the right)
+```
+
+### Vertical LTR in callouts
+There is also a callout metadata provider for Vertical LTR
+
+Usage:
+```md
+>[!info|vertical-ltr] The title will not display
+> The contents will be displayed as vertical ltr

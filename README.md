@@ -45,6 +45,8 @@ The following plugins/snippets are officially supported:
 - [Highlightr by Chetachi](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
 - [Minitabs by ssjy1919](https://github.com/ssjy1919/Obsidian-minitabs)
 - [Full Calendar by Davis Haupt](https://github.com/obsidian-community/obsidian-full-calendar)
+<!-- - [Breadcrumbs by SkepticMystic](https://github.com/SkepticMystic/breadcrumbs) -->
+<!-- - [Spaced Repetition by Stephen Mwangi](https://github.com/st3v3nmw/obsidian-spaced-repetition) -->
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
