@@ -26,3 +26,34 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
         }
     }
 }
+
+body.flexcyon-alt-file-exp-style {
+    .nav-folder {
+
+        .nav-folder-children {
+            border-inline-start: 1px solid var(--color-blue);
+        }
+
+        .collapse-icon svg {
+            color: var(--color-blue);
+        }
+
+    }
+    .nav-folder.is-collapsed {
+        .nav-folder-title-content {
+            color: unset;
+        }
+
+        .collapse-icon svg {
+            color: unset;
+        }
+    }
+
+    .nav-file-title {
+        transform: padding ease-in-out 0.35s;
+    }
+
+    .nav-file-title.is-active .nav-file-title-content {
+        margin-inline-start: 0.25rem;
+    }
+}

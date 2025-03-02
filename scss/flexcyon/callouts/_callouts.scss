@@ -148,3 +148,68 @@ div.callout[data-callout-metadata*="ltr-content"] {
         }
     }
 }
+div.callout[data-callout-metadata*="uppercase-all"],
+div.callout[data-callout-metadata*="uppercase-title"] {
+    div.callout-title .callout-title-inner {
+        text-transform: uppercase;
+    }
+}
+
+div.callout[data-callout-metadata*="uppercase-all"],
+div.callout[data-callout-metadata*="uppercase-content"] {
+    div.callout-content * {
+        text-transform: uppercase;
+        * {
+            text-transform: uppercase;
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            text-transform: uppercase;
+        }
+    }
+}
+
+div.callout[data-callout-metadata*="lowercase-all"],
+div.callout[data-callout-metadata*="lowercase-title"] {
+    div.callout-title .callout-title-inner {
+        text-transform: lowercase;
+    }
+}
+
+div.callout[data-callout-metadata*="lowercase-all"],
+div.callout[data-callout-metadata*="lowercase-content"] {
+    div.callout-content * {
+        text-transform: lowercase;
+        * {
+            text-transform: lowercase;
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            text-transform: lowercase;
+        }
+    }
+}
+
+div.callout[data-callout-metadata*="caps-all"],
+div.callout[data-callout-metadata*="caps-title"] {
+    div.callout-title .callout-title-inner {
+        text-transform: capitalize;
+    }
+}
+
+div.callout[data-callout-metadata*="caps-all"],
+div.callout[data-callout-metadata*="caps-content"] {
+    div.callout-content * {
+        text-transform: capitalize;
+        * {
+            text-transform: capitalize;
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            text-transform: capitalize;
+        }
+    }
+}

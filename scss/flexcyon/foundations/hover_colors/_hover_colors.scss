@@ -4,6 +4,6 @@
 // - https://github.com/kepano/flexoki-obsidian
 body.theme-dark{
     --flexcyon-accent-hover: var(--flexcyon-yellow);
-    --flexcyon-palette-lilac-hover: color-mix(in hs1 shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
-    --flexcyon-palette-cyan-hover: color-mix(in hs1 shorter hue, var(--flexcyon-cyan), var(--flexcyon-base-grey-dark));
+    --flexcyon-palette-lilac-hover: color-mix(in hsl shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
+    --flexcyon-palette-cyan-hover: color-mix(in hsl shorter hue, var(--flexcyon-cyan), var(--flexcyon-base-grey-dark));
 }

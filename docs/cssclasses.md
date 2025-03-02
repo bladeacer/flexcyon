@@ -17,6 +17,15 @@
         - [Center Title](#center-title)
         - [Center Content](#center-content)
         - [Center All](#center-all)
+        - [Uppercase Title](#uppercase-title)
+        - [Uppercase Content](#uppercase-content)
+        - [Uppercase All](#uppercase-all)
+        - [Lowercase Title](#lowercase-title)
+        - [Lowercase Content](#lowercase-content)
+        - [Lowercase All](#lowercase-all)
+        - [Capitalize Title](#capitalize-title)
+        - [Capitalize Content](#capitalize-content)
+        - [Capitalize All](#capitalize-all)
         - [Combined usage](#combined-usage)
 - [Tategaki](#tategaki)
     - [Tategaki in callouts](#tategaki-in-callouts)
@@ -161,6 +170,88 @@ Usage:
 > [!info|center-all] The title will be centered
 > The content will be centered
 ```
+___
+#### Uppercase title
+Callout metadata: "uppercase-title"
+
+Usage: 
+```md
+> [!info|uppercase-title] I will be uppercase in live preview/reading mode
+> Content is shown as usual
+```
+
+#### Uppercase content
+Callout metadata: "uppercase-content"
+
+Usage: 
+```md
+> [!info|uppercase-content] I will be display as usual
+> Content will be uppercase
+```
+
+#### Uppercase all
+Callout metadata: "uppercase-all"
+
+Usage:
+```md
+> [!info|uppercase-all] I will be uppercase
+> Content will be uppercase
+```
+
+#### Lowercase title
+Callout metadata: "lowercase-title"
+
+Usage: 
+```md
+> [!info|lowercase-title] I will be lowercase in live preview/reading mode
+> Content is shown as usual
+```
+
+#### Lowercase content
+Callout metadata: "lowercase-content"
+
+Usage: 
+```md
+> [!info|lowercase-content] I will be display as usual
+> Content will be lowercase
+```
+
+#### Lowercase all
+Callout metadata: "lowercase-all"
+
+Usage:
+```md
+> [!info|lowercase-all] I will be lowercase
+> Content will be lowercase
+```
+
+#### Capitalize title
+Callout metadata: "caps-title"
+
+Usage: 
+```md
+> [!info|caps-title] I will be capitalized in live preview/reading mode
+> Content is shown as usual
+```
+
+#### Capitalize content
+Callout metadata: "caps-content"
+
+Usage: 
+```md
+> [!info|caps-content] I will be display as usual
+> Content will be capitalized
+```
+
+#### Capitalize all
+Callout metadata: "caps-all"
+
+Usage:
+```md
+> [!info|caps-all] I will be capitalized
+> Content will be capitalized
+```
+
 
 ___
 ### Combined usage
@@ -186,7 +277,7 @@ Your content will render as vertical rtl  (text goes from top right to bottom ri
 ```
 
 ### Tategaki in callouts
-There is also a callout metadata provider for tategaki
+There is also a callout metadata provider for tategaki (which works in live preview)
 
 Usage:
 ```md

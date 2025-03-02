@@ -13,8 +13,8 @@
 - [ ] Add mobile support (partial)
 
 #### Style Settings and stuff
-- [ ] Add callout utilities 
-- [ ] Add CSS classes
+- [x] Add callout utilities 
+- [ ] Add CSS classes (partial)
 
 #### Plugins/snippets
 - [x] Add support for Spaced Repetition
@@ -26,24 +26,3 @@
 
 
 #### Next version changelog
-- Added support for Spaced Repetition Plugin
-- Added support for Breadcrumbs Plugin
-- Added underline option for headings
-- Added alternate active item effects in settings
-- Added callout utilities for
-  - No Icon
-  - No Title
-  - Transparent Background
-  - RTL Title
-  - RTL Content
-  - LTR Title
-  - LTR Content
-  - Center Title
-  - Center Content
-  - Tategaki
-  - Vertical LTR
-- Added cssclasses for
-  - Tategaki
-  - Vertical LTR
-
-Credits: @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet

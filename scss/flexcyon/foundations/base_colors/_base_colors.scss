@@ -21,10 +21,10 @@ body.theme-dark {
 
     --flexcyon-base-blue-01-02-mix: color-mix(in hsl, var(--flexcyon-base-blue-01), var(--flexcyon-base-blue-02));
     --flexcyon-base-blue-02-03-mix: color-mix(in hsl, var(--flexcyon-base-blue-02), var(--flexcyon-base-blue-03));
-    --flexcyon-base-blue-03-04-mix: color-mix(in hs1, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
-    --flexcyon-base-blue-04-05-mix: color-mix(in hs1, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
+    --flexcyon-base-blue-03-04-mix: color-mix(in hsl, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
+    --flexcyon-base-blue-04-05-mix: color-mix(in hsl, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
 
-    --flexcyon-base-grey-mix: color-mix(in hs1, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
+    --flexcyon-base-grey-mix: color-mix(in hsl, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
 }
 
 body:is(.theme-dark) {

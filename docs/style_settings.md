@@ -13,6 +13,8 @@
     - [Files](#files)
     - [Workspace](#workspace)
     - [Callouts](#callouts)
+    - [Checkboxes](#checkboxes)
+    - [Links](#links)
     - [Status Bar](#status-bar)
     - [Title Bar](#title-bar)
 - [Settings Section](#settings-section)
@@ -86,6 +88,7 @@ Style Settings
 |   |   |   |-- Width of table in reading mode
 |   |   |-- Files
 |   |   |   |--  Enable dimmed file extensions in file explorer
+|   |   |   |--  Alternate file explorer style
 |   |   |-- Workspace
 |   |   |   |--  File line width
 |   |   |   |--  Opacity of dimmed UI elements
@@ -98,6 +101,12 @@ Style Settings
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
+|   |   |-- Checkboxes
+|   |   |   |-- Enable ASCII checkboxes
+|   |   |-- Links
+|   |   |   |-- Internal link color
+|   |   |   |-- External link color
+|   |   |   |-- Unresolved link color
 |   |   |-- Status Bar
 |   |   |   |-- Hide until hover
 |   |   |   |-- Text to show when hide until hover is enabled
@@ -425,6 +434,11 @@ CSS Variable(s) targeted: `var(--flexcyon-file-exp-dimmed-file-exts-enabled)`
 
 Default: true (class toggle)
 
+### Alternate file explorer style
+CSS Variable(s) targeted: `var(--flexcyon-alt-file-exp-style)`
+
+Default: false (class toggle)
+
 ___
 ## Workspace
 Defines file line width when readable line length is enabled, opacity of dimmed UI elements, upscale percentage of icons used in effects
@@ -486,6 +500,36 @@ Default: 4 (px)
 CSS Variable(s) targeted: `var(--flexcyon-callout-first-codeblock-margin-top)`
 
 Default: 1.25 (rem)
+
+___
+## Checkboxes
+Configure checkboxes in the theme
+
+### Enable ASCII checkboxes
+CSS Variable(s) targeted: `var(--flexcyon-ascii-checkboxes-enabled)`
+
+Default: true (class toggle)
+
+___
+## Links
+Configure the color of links.
+
+Accepted formats: HEX
+
+### Internal Link Color
+CSS Variable(s) targeted: `var(--flexcyon-link-color)`
+
+Default: #a461c8
+
+### External Link Color
+CSS Variable(s) targeted: `var(--flexcyon-external-link-color)`
+
+Default: #5a8fcd
+
+### Unresolved Link Color
+CSS Variable(s) targeted: `var(--flexcyon-link-unresolved-color)`
+
+Default: #a461c8
 
 ___
 ## Status Bar
@@ -616,7 +660,7 @@ CSS Variable(s) targeted: `var(--oz-fta-file-font-size)`
 
 Default: 0.9 (rem)
 
-### FIles font color
+### Files font color
 CSS Variable(s) targeted: `var(--oz-fta-file-pane-file-name-color)`
 
 Default: #6f768599

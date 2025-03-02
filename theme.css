@@ -53,9 +53,9 @@ body.theme-dark {
   /* ------------------------------ */
   --flexcyon-base-blue-01-02-mix: color-mix(in hsl, var(--flexcyon-base-blue-01), var(--flexcyon-base-blue-02));
   --flexcyon-base-blue-02-03-mix: color-mix(in hsl, var(--flexcyon-base-blue-02), var(--flexcyon-base-blue-03));
-  --flexcyon-base-blue-03-04-mix: color-mix(in hs1, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
-  --flexcyon-base-blue-04-05-mix: color-mix(in hs1, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
-  --flexcyon-base-grey-mix: color-mix(in hs1, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
+  --flexcyon-base-blue-03-04-mix: color-mix(in hsl, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
+  --flexcyon-base-blue-04-05-mix: color-mix(in hsl, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
+  --flexcyon-base-grey-mix: color-mix(in hsl, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
 }
 
 body:is(.theme-dark) {
@@ -131,8 +131,8 @@ body.flexcyon-h6-underline-enabled h6 {
 
 body.theme-dark {
   --flexcyon-accent-hover: var(--flexcyon-yellow);
-  --flexcyon-palette-lilac-hover: color-mix(in hs1 shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
-  --flexcyon-palette-cyan-hover: color-mix(in hs1 shorter hue, var(--flexcyon-cyan), var(--flexcyon-base-grey-dark));
+  --flexcyon-palette-lilac-hover: color-mix(in hsl shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
+  --flexcyon-palette-cyan-hover: color-mix(in hsl shorter hue, var(--flexcyon-cyan), var(--flexcyon-base-grey-dark));
 }
 
 body.theme-dark {
@@ -199,6 +199,335 @@ body:where(.theme-dark) .checkbox-container {
 }
 body:where(.theme-dark) .checkbox-container.is-enabled {
   background-color: var(--flexcyon-lime-green);
+}
+
+body.theme-dark {
+  --flexcyon-ascii-checkboxes-font-size: 1.2rem;
+}
+
+body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked::after {
+  content: "!";
+  color: var(--color-red);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked::after {
+  content: ">";
+  color: var(--color-purple);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
+  content: "i";
+  color: var(--color-blue);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked::after {
+  content: "?";
+  color: var(--color-green);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::after {
+  content: "#";
+  color: var(--color-cyan);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked::after {
+  content: ".";
+  color: var(--color-orange);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::after {
+  content: "<";
+  color: var(--color-yellow);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after {
+  content: "$";
+  color: var(--text-accent);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked::after {
+  content: "*";
+  color: var(--color-red);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::after {
+  content: "'";
+  color: var(--color-green);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::after {
+  content: "@";
+  color: var(--color-blue);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked::after {
+  content: "“";
+  color: var(--color-green);
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::after {
+  content: "‘";
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
+  border: 1.5px solid var(--color-blue);
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
+  border-radius: 50%;
+  scale: 115%;
+  margin-inline-start: -1.5px;
+  top: -0.1rem;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked::after {
+  transform: scaleY(1.1);
+  top: -0.4rem;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked::after {
+  content: "...";
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
+  letter-spacing: -0.5px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+  top: -0.45rem;
 }
 
 body:where(.theme-dark) {
@@ -412,14 +741,22 @@ body:where(.theme-dark) {
   --titlebar-text-color-focused: var(--text-muted);
 }
 
+body.theme-dark {
+  --flexcyon-link-color: #a461c8;
+  --flexcyon-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-link-color), var(--flexcyon-base-grey-dark));
+  --flexcyon-link-unresolved-color: #a461c8;
+  --flexcyon-external-link-color: #5a8fcd;
+  --flexcyon-external-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-external-link-color), var(--flexcyon-base-grey-dark));
+}
+
 body:where(.theme-dark) {
-  --link-color: var(--flexcyon-purple-lilac);
-  --link-color-hover: var(--flexcyon-palette-lilac-hover);
-  --link-unresolved-color: var(--flexcyon-purple-lilac);
+  --link-color: var(--flexcyon-link-color);
+  --link-color-hover: var(--flexcyon-link-hover);
+  --link-unresolved-color: var(--flexcyon-link-unresolved-color);
   --link-unresolved-decoration-style: dashed;
-  --link-unresolved-decoration-color: var(--flexcyon-purple-lilac);
-  --link-external-color: var(--flexcyon-purple-lilac);
-  --link-external-color-hover: var(--flexcyon-palette-lilac-hover);
+  --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
+  --link-external-color: var(--flexcyon-external-link-color);
+  --link-external-color-hover: var(--flexcyon-external-link-hover);
 }
 
 body:where(.theme-dark) {
@@ -747,6 +1084,66 @@ div.callout[data-callout-metadata*=ltr-content] div.callout-content * pre[class*
   text-align: left;
 }
 
+div.callout[data-callout-metadata*=uppercase-all] div.callout-title .callout-title-inner,
+div.callout[data-callout-metadata*=uppercase-title] div.callout-title .callout-title-inner {
+  text-transform: uppercase;
+}
+
+div.callout[data-callout-metadata*=uppercase-all] div.callout-content *,
+div.callout[data-callout-metadata*=uppercase-content] div.callout-content * {
+  text-transform: uppercase;
+}
+div.callout[data-callout-metadata*=uppercase-all] div.callout-content * *,
+div.callout[data-callout-metadata*=uppercase-content] div.callout-content * * {
+  text-transform: uppercase;
+}
+div.callout[data-callout-metadata*=uppercase-all] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=uppercase-all] div.callout-content * pre[class*=language-],
+div.callout[data-callout-metadata*=uppercase-content] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=uppercase-content] div.callout-content * pre[class*=language-] {
+  text-transform: uppercase;
+}
+
+div.callout[data-callout-metadata*=lowercase-all] div.callout-title .callout-title-inner,
+div.callout[data-callout-metadata*=lowercase-title] div.callout-title .callout-title-inner {
+  text-transform: lowercase;
+}
+
+div.callout[data-callout-metadata*=lowercase-all] div.callout-content *,
+div.callout[data-callout-metadata*=lowercase-content] div.callout-content * {
+  text-transform: lowercase;
+}
+div.callout[data-callout-metadata*=lowercase-all] div.callout-content * *,
+div.callout[data-callout-metadata*=lowercase-content] div.callout-content * * {
+  text-transform: lowercase;
+}
+div.callout[data-callout-metadata*=lowercase-all] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=lowercase-all] div.callout-content * pre[class*=language-],
+div.callout[data-callout-metadata*=lowercase-content] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=lowercase-content] div.callout-content * pre[class*=language-] {
+  text-transform: lowercase;
+}
+
+div.callout[data-callout-metadata*=caps-all] div.callout-title .callout-title-inner,
+div.callout[data-callout-metadata*=caps-title] div.callout-title .callout-title-inner {
+  text-transform: capitalize;
+}
+
+div.callout[data-callout-metadata*=caps-all] div.callout-content *,
+div.callout[data-callout-metadata*=caps-content] div.callout-content * {
+  text-transform: capitalize;
+}
+div.callout[data-callout-metadata*=caps-all] div.callout-content * *,
+div.callout[data-callout-metadata*=caps-content] div.callout-content * * {
+  text-transform: capitalize;
+}
+div.callout[data-callout-metadata*=caps-all] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=caps-all] div.callout-content * pre[class*=language-],
+div.callout[data-callout-metadata*=caps-content] div.callout-content * code[class*=language-],
+div.callout[data-callout-metadata*=caps-content] div.callout-content * pre[class*=language-] {
+  text-transform: capitalize;
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -815,6 +1212,25 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag {
 }
 body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
   content: ".";
+}
+
+body.flexcyon-alt-file-exp-style .nav-folder .nav-folder-children {
+  border-inline-start: 1px solid var(--color-blue);
+}
+body.flexcyon-alt-file-exp-style .nav-folder .collapse-icon svg {
+  color: var(--color-blue);
+}
+body.flexcyon-alt-file-exp-style .nav-folder.is-collapsed .nav-folder-title-content {
+  color: unset;
+}
+body.flexcyon-alt-file-exp-style .nav-folder.is-collapsed .collapse-icon svg {
+  color: unset;
+}
+body.flexcyon-alt-file-exp-style .nav-file-title {
+  transform: padding ease-in-out 0.35s;
+}
+body.flexcyon-alt-file-exp-style .nav-file-title.is-active .nav-file-title-content {
+  margin-inline-start: 0.25rem;
 }
 
 body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -1106,7 +1522,7 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Accent Colors, Base Colors, Callouts, Typography, Table, Files, Workspace, Status bar, Title bar
+    description: Editor related style settings
 
   - title: Accent Colors
     type: heading
@@ -1410,7 +1826,11 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: true
-
+  - title: Alternate file explorer style
+    id: flexcyon-alt-file-exp-style
+    description: Adds padding for active file item, makes collapse icons and borders blue for active folders.
+    type: class-toggle
+    default: false
 
   - title: Workspace
     type: heading
@@ -1477,6 +1897,35 @@ settings:
     type: variable-number
     default: 1.25
     format: rem
+
+  - title: Checkboxes
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable ASCII checkboxes
+    type: class-toggle
+    id: flexcyon-ascii-checkboxes-enabled
+    default: true
+
+  - title: Links
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Link Color
+    id: flexcyon-link-color
+    type: variable-color
+    default: "#a461c8"
+    format: hex
+  - title: External Color
+    id: flexcyon-external-link-color
+    type: variable-color
+    format: hex
+    default: "#5a8fcd"
+  - title: Unresolved Link Color
+    id: flexcyon-link-unresolved-color
+    type: variable-color
+    format: hex
+    default: "#a461c8"
 
   - title: Status Bar
     type: heading
