@@ -17,12 +17,13 @@
 - [ ] Add CSS classes (partial)
 
 #### Plugins/snippets
-- [x] Add support for Spaced Repetition
-- [x] Add support for Breadcrumbs
 
 #### Other styling options
-- [ ] PDF export styling
+- [ ] Extended color palette
+- [ ] PDF export styling (class select)
 - [ ] `publish.css`
 
-
 #### Next version changelog
+- Added option to change ASCII checkboxes font size
+- Fixed smiley icons on mobile
+- Added title and background color callout metadata utilities

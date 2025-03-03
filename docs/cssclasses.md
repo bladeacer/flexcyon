@@ -4,29 +4,63 @@
 ### Table of Contents
 - [Callouts](#callouts)
     - [Callout metadata](#callout-metadata)
+        - ---------------------------------------------------
         - [No Icon](#no-icon)
         - [No Title](#no-title)
         - [Empty](#empty)
+        - ---------------------------------------------------
         - [Transparent Background](#transparent-background)
+        - [Blue Background](#blue-background)
+        - [Blue Title](#blue-title)
+        - [All Blue](#all-blue)
+        - [Red Background](#red-background)
+        - [Red Title](#red-title)
+        - [All Red](#all-red)
+        - [Purple Background](#purple-background)
+        - [Purple Title](#purple-title)
+        - [All Purple](#all-purple)
+        - [Cyan Background](#cyan-background)
+        - [Cyan Title](#cyan-title)
+        - [All Cyan](#all-cyan)
+        - [Pink Background](#pink-background)
+        - [Pink Title](#pink-title)
+        - [All Pink](#all-pink)
+        - [Green Background](#green-background)
+        - [Green Title](#green-title)
+        - [All Green](#all-green)
+        - [Orange Background](#orange-background)
+        - [Orange Title](#orange-title)
+        - [All Orange](#all-orange)
+        - [Yellow Background](#yellow-background)
+        - [Yellow Title](#yellow-title)
+        - [All Yellow](#all-yellow)     
+        - ---------------------------------------------------
         - [RTL Title](#rtl-title)
         - [RTL Content](#rtl-content)
         - [RTL All](#rtl-all)
+
         - [LTR Title](#ltr-title)
         - [LTR Content](#ltr-content)
         - [LTR All](#ltr-all)
+
         - [Center Title](#center-title)
         - [Center Content](#center-content)
         - [Center All](#center-all)
+        - ---------------------------------------------------
         - [Uppercase Title](#uppercase-title)
         - [Uppercase Content](#uppercase-content)
         - [Uppercase All](#uppercase-all)
+
         - [Lowercase Title](#lowercase-title)
         - [Lowercase Content](#lowercase-content)
         - [Lowercase All](#lowercase-all)
+
         - [Capitalize Title](#capitalize-title)
         - [Capitalize Content](#capitalize-content)
         - [Capitalize All](#capitalize-all)
+        - ---------------------------------------------------
         - [Combined usage](#combined-usage)
+        
 - [Tategaki](#tategaki)
     - [Tategaki in callouts](#tategaki-in-callouts)
 - [Vertical LTR](#vertical-ltr)
@@ -79,13 +113,227 @@ Alternatively, you can use:
 
 ___
 #### Transparent Background
-Callout metadata: "transparent-bg"
+Callout metadata: "transparent-bg" or "bg-transparent"
 
 Usage: 
 ```md
 > [!warning|transparent-bg] The background color will be transparent
 > Content and title is shown as usual
 ```
+or 
+```md
+> [!warning|bg-transparent] The background color will be transparent
+> Content and title is shown as usual
+```
+
+#### Blue Background
+Callout metadata: "bg-blue"
+
+```md
+> [!info|bg-blue] Title will display as usual
+> The background color will be blue
+```
+
+#### Blue Title
+Callout metadata: "title-blue"
+
+```md
+> [!info|title-blue] Title will be blue
+> The background color will display as usual
+```
+
+#### All Blue
+> Shorthand for both `bg-blue` and `title-blue`
+
+Callout metadata: "all-blue"
+
+```md
+> [!tip|all-blue] Title will be blue
+> The background color will be blue
+```
+
+#### Red Background
+Callout metadata: "bg-red"
+
+```md
+> [!info|bg-red] Title will display as usual
+> The background color will be red
+```
+
+#### Red Title
+Callout metadata: "title-red"
+
+```md
+> [!info|title-red] Title will be red
+> The background color will display as usual
+```
+
+#### All Red
+> Shorthand for both `bg-red` and `title-red`
+
+Callout metadata: "all-red"
+
+```md
+> [!tip|all-red] Title will be red
+> The background color will be red
+```
+
+#### Purple Background
+Callout metadata: "bg-purple"
+
+```md
+> [!info|bg-purple] Title will display as usual
+> The background color will be purple
+```
+
+#### Purple Title
+Callout metadata: "title-purple"
+
+```md
+> [!info|title-purple] Title will be purple
+> The background color will display as usual
+```
+
+#### All Purple
+> Shorthand for both `bg-purple` and `title-purple`
+
+Callout metadata: "all-purple"
+
+```md
+> [!tip|all-purple] Title will be purple
+> The background color will be purple
+```
+
+#### Cyan Background
+Callout metadata: "bg-cyan"
+
+```md
+> [!info|bg-cyan] Title will display as usual
+> The background color will be cyan
+```
+
+#### Cyan Title
+Callout metadata: "title-cyan"
+
+```md
+> [!info|title-cyan] Title will be cyan
+> The background color will display as usual
+```
+
+#### All Cyan
+> Shorthand for both `bg-cyan` and `title-cyan`
+
+Callout metadata: "all-cyan"
+
+```md
+> [!tip|all-cyan] Title will be cyan
+> The background color will be cyan
+```
+
+#### Pink Background
+Callout metadata: "bg-pink"
+
+```md
+> [!info|bg-pink] Title will display as usual
+> The background color will be pink
+```
+
+#### Pink Title
+Callout metadata: "title-pink"
+
+```md
+> [!info|title-pink] Title will be pink
+> The background color will display as usual
+```
+
+#### All Pink
+> Shorthand for both `bg-pink` and `title-pink`
+
+Callout metadata: "all-pink"
+
+```md
+> [!tip|all-pink] Title will be pink
+> The background color will be pink
+```
+
+#### Green Background
+Callout metadata: "bg-green"
+
+```md
+> [!info|bg-green] Title will display as usual
+> The background color will be green
+```
+
+#### Green Title
+Callout metadata: "title-green"
+
+```md
+> [!info|title-green] Title will be green
+> The background color will display as usual
+```
+
+#### All Green
+> Shorthand for both `bg-green` and `title-green`
+
+Callout metadata: "all-green"
+
+```md
+> [!tip|all-green] Title will be green
+> The background color will be green
+```
+
+#### Orange Background
+Callout metadata: "bg-orange"
+
+```md
+> [!info|bg-orange] Title will display as usual
+> The background color will be orange
+```
+
+#### Orange Title
+Callout metadata: "title-orange"
+
+```md
+> [!info|title-orange] Title will be orange
+> The background color will display as usual
+```
+
+#### All Orange
+> Shorthand for both `bg-orange` and `title-orange`
+
+Callout metadata: "all-orange"
+
+```md
+> [!tip|all-orange] Title will be orange
+> The background color will be orange
+```
+
+#### Yellow Background
+Callout metadata: "bg-yellow"
+
+```md
+> [!info|bg-yellow] Title will display as usual
+> The background color will be yellow
+```
+
+#### Yellow Title
+Callout metadata: "title-yellow"
+
+```md
+> [!info|title-yellow] Title will be yellow
+> The background color will display as usual
+```
+
+#### All Yellow
+> Shorthand for both `bg-yellow` and `title-yellow`
+
+Callout metadata: "all-yellow"
+
+```md
+> [!tip|all-yellow] Title will be yellow
+> The background color will be yellow
+```
+
 ___
 #### RTL Title
 Callout metadata: "rtl-title"

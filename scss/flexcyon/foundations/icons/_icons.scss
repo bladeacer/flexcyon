@@ -35,13 +35,6 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
         border-radius: unset;
     }
 }
-body.is-mobile.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
-    div.checkbox-container::after {
-        padding-top: 1.5px;
-        padding-left: 1.5px;
-        scale: 100%;
-    }
-}
 
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
         scale: var(--upsize);

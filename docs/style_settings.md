@@ -101,6 +101,7 @@ Style Settings
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
+|   |   |   |-- Callout Metadata Background Opacity
 |   |   |-- Checkboxes
 |   |   |   |-- Enable ASCII checkboxes
 |   |   |-- Links
@@ -501,14 +502,26 @@ CSS Variable(s) targeted: `var(--flexcyon-callout-first-codeblock-margin-top)`
 
 Default: 1.25 (rem)
 
+### Callout Metadata Background Opacity
+CSS Variable(s) targeted: `var(--flexcyon-callout-bg-opacity)`
+
+Default: 0.2
+
 ___
 ## Checkboxes
 Configure checkboxes in the theme
+
+Accepted formats: rem
 
 ### Enable ASCII checkboxes
 CSS Variable(s) targeted: `var(--flexcyon-ascii-checkboxes-enabled)`
 
 Default: true (class toggle)
+
+### ASCII checkboxes font size
+CSS Variable(s) targeted: `var(--flexcyon-ascii-checkboxes-font-size)`
+
+Default: 1.2 (rem)
 
 ___
 ## Links
@@ -630,7 +643,7 @@ Default: true (class toggle)
 ### Enabled alternate active item effect in settings
 CSS Variable(s) targeted: `var(--flexcyon-enable-alt-active-item-effect)`
 
-Default: true
+Default: true (class toggle)
 
 ___
 # Plugins Section

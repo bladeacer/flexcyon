@@ -603,12 +603,6 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control input.slide
   border-radius: unset;
 }
 
-body.is-mobile.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container::after {
-  padding-top: 1.5px;
-  padding-left: 1.5px;
-  scale: 100%;
-}
-
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   scale: var(--upsize);
   opacity: 0.7;
@@ -968,6 +962,7 @@ body:is(.theme-dark) .metadata-properties-heading:focus:before {
 body.theme-dark {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1.25rem;
+  --flexcyon-callout-bg-opacity: 0.2;
 }
 
 body:where(.theme-dark) {
@@ -1030,8 +1025,97 @@ div.callout[data-callout-metadata*=no-title] .callout-title-inner {
   display: none;
 }
 
+div.callout[data-callout-metadata*=bg-transparent],
 div.callout[data-callout-metadata*=transparent-bg] {
   background-color: transparent;
+}
+
+div.callout[data-callout-metadata*=all-blue],
+div.callout[data-callout-metadata*=bg-blue] {
+  background-color: rgba(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-red],
+div.callout[data-callout-metadata*=bg-red] {
+  background-color: rgba(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-purple],
+div.callout[data-callout-metadata*=bg-purple] {
+  background-color: rgba(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-cyan],
+div.callout[data-callout-metadata*=bg-cyan] {
+  background-color: rgba(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-pink],
+div.callout[data-callout-metadata*=bg-pink] {
+  background-color: rgba(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-green],
+div.callout[data-callout-metadata*=bg-green] {
+  background-color: rgba(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-orange],
+div.callout[data-callout-metadata*=bg-orange] {
+  background-color: rgba(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-yellow],
+div.callout[data-callout-metadata*=bg-yellow] {
+  background-color: rgba(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-blue] .callout-title, div.callout[data-callout-metadata*=all-blue] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-blue] .callout-title,
+div.callout[data-callout-metadata*=title-blue] .callout-icon .svg-icon {
+  color: var(--color-blue);
+}
+
+div.callout[data-callout-metadata*=all-red] .callout-title, div.callout[data-callout-metadata*=all-red] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-red] .callout-title,
+div.callout[data-callout-metadata*=title-red] .callout-icon .svg-icon {
+  color: var(--color-red);
+}
+
+div.callout[data-callout-metadata*=all-purple] .callout-title, div.callout[data-callout-metadata*=all-purple] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-purple] .callout-title,
+div.callout[data-callout-metadata*=title-purple] .callout-icon .svg-icon {
+  color: var(--color-purple);
+}
+
+div.callout[data-callout-metadata*=all-cyan] .callout-title, div.callout[data-callout-metadata*=all-cyan] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-cyan] .callout-title,
+div.callout[data-callout-metadata*=title-cyan] .callout-icon .svg-icon {
+  color: var(--color-cyan);
+}
+
+div.callout[data-callout-metadata*=all-pink] .callout-title, div.callout[data-callout-metadata*=all-pink] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-pink] .callout-title,
+div.callout[data-callout-metadata*=title-pink] .callout-icon .svg-icon {
+  color: var(--color-pink);
+}
+
+div.callout[data-callout-metadata*=all-green] .callout-title, div.callout[data-callout-metadata*=all-green] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-green] .callout-title,
+div.callout[data-callout-metadata*=title-green] .callout-icon .svg-icon {
+  color: var(--color-green);
+}
+
+div.callout[data-callout-metadata*=all-orange] .callout-title, div.callout[data-callout-metadata*=all-orange] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-orange] .callout-title,
+div.callout[data-callout-metadata*=title-orange] .callout-icon .svg-icon {
+  color: var(--color-orange);
+}
+
+div.callout[data-callout-metadata*=all-yellow] .callout-title, div.callout[data-callout-metadata*=all-yellow] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-yellow] .callout-title,
+div.callout[data-callout-metadata*=title-yellow] .callout-icon .svg-icon {
+  color: var(--color-yellow);
 }
 
 div.callout[data-callout-metadata*=center-all] div.callout-title,
@@ -1897,6 +1981,11 @@ settings:
     type: variable-number
     default: 1.25
     format: rem
+  - title: Callout Metadata Background Opacity
+    id: flexcyon-callout-bg-opacity
+    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
+    type: variable-number
+    default: 0.2
 
   - title: Checkboxes
     type: heading
@@ -1906,6 +1995,11 @@ settings:
     type: class-toggle
     id: flexcyon-ascii-checkboxes-enabled
     default: true
+  - title: ASCII checkboxes font size
+    id: flexcyon-ascii-checkboxes-font-size
+    type: variable-number
+    default: 1.2
+    format: rem
 
   - title: Links
     type: heading

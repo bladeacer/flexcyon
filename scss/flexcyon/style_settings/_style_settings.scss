@@ -382,6 +382,11 @@ settings:
     type: variable-number
     default: 1.25
     format: rem
+  - title: Callout Metadata Background Opacity
+    id: flexcyon-callout-bg-opacity
+    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
+    type: variable-number
+    default: 0.2
 
   - title: Checkboxes
     type: heading
@@ -391,6 +396,11 @@ settings:
     type: class-toggle
     id: flexcyon-ascii-checkboxes-enabled
     default: true
+  - title: ASCII checkboxes font size
+    id: flexcyon-ascii-checkboxes-font-size
+    type: variable-number
+    default: 1.2
+    format: rem
 
   - title: Links
     type: heading
