@@ -1,6 +1,5 @@
 /* Modifications to not display properties in reading mode */
 body:where(.theme-dark) {
-    // --metadata-display-reading: none;
     --metadata-label-text-color: var(--flexcyon-purple-lilac);
     --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
 
@@ -21,6 +20,12 @@ body:where(.theme-dark) {
     .metadata-property-icon {
         color: var(--flexcyon-cyan);
     }
+}
+body.flexcyon-metadata-display-reading-disabled {
+    --metadata-display-reading: none;
+}
+body.flexcyon-metadata-display-editing-disabled {
+    --metadata-display-editing: none;
 }
 
 body:is(.theme-dark) {

@@ -142,3 +142,22 @@ body.flexcyon-ascii-checkboxes-enabled {
   }
 
 }
+
+body.flexcyon-rainbow-bullet-points 
+{
+  ol > li:nth-of-type(6n+1)::marker, ul> li:nth-of-type(6n+1)::marker {
+    color: var(--color-blue);
+  }
+  ol > li:nth-of-type(6n+2)::marker, ul> li:nth-of-type(6n+2)::marker {
+    color: var(--color-cyan);
+  }
+  ol > li:nth-of-type(6n+3)::marker, ul> li:nth-of-type(6n+3)::marker {
+    color: var(--color-pink);
+  }
+  ol > li:nth-of-type(6n+4)::marker, ul> li:nth-of-type(6n+4)::marker {
+    color: var(--color-green);
+  }
+  ol > li:nth-of-type(6n+5)::marker, ul> li:nth-of-type(6n+5)::marker {
+    color: var(--color-yellow);
+  }
+}

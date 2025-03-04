@@ -402,6 +402,24 @@ settings:
     default: 1.2
     format: rem
 
+  - title: Bullet lists
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Rainbow bullet lists
+    type: class-toggle
+    id: flexcyon-rainbow-bullet-points
+    default: false
+  - title: Media
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Media Embed Vertical margin
+    type: variable-number
+    id: flexcyon-media-embed-vertical-margin
+    default: 8
+    format: px
+
   - title: Links
     type: heading
     level: 5
@@ -421,6 +439,19 @@ settings:
     type: variable-color
     format: hex
     default: "#a461c8"
+
+  - title: Properties
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Do not show properties in reading mode
+    id: flexcyon-metadata-display-reading-disabled
+    type: class-toggle
+    default: true
+  - title: Do not show properties in live preview mode
+    id: flexcyon-metadata-display-editing-disabled
+    type: class-toggle
+    default: false
 
   - title: Status Bar
     type: heading
@@ -591,6 +622,15 @@ settings:
     id: flexcyon-fc-dimmed-items-opacity
     type: variable-number
     default: 0.89
+  - title: Dataview
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Horizontal padding of dataview error messages
+    id: flexcyon-dataview-horizontal-padding
+    type: variable-number
+    default: 8
+    format: px
 
   - title: Others
     type: heading

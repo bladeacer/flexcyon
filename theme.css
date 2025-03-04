@@ -530,6 +530,22 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::af
   top: -0.45rem;
 }
 
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+1)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+1)::marker {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+2)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+2)::marker {
+  color: var(--color-cyan);
+}
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+3)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+3)::marker {
+  color: var(--color-pink);
+}
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+4)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+4)::marker {
+  color: var(--color-green);
+}
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+5)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+5)::marker {
+  color: var(--color-yellow);
+}
+
 body:where(.theme-dark) {
   --tag-size: var(--code-size);
   --tag-color: var(--flexcyon-cyan);
@@ -605,7 +621,7 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control input.slide
 
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   scale: var(--upsize);
-  opacity: 0.7;
+  opacity: var(--dimmed);
 }
 body.flexcyon-sidedock-icon-effects div.side-dock-actions:hover {
   opacity: 1;
@@ -708,6 +724,9 @@ body.flexcyon-titlebar-button-effects .titlebar-button.mod-maximize:hover {
 }
 body.flexcyon-titlebar-button-effects .titlebar-button.mod-close:hover {
   color: var(--text-normal);
+}
+body.flexcyon-titlebar-button-effects .titlebar-button {
+  opacity: var(--dimmed);
 }
 body.flexcyon-titlebar-button-effects .titlebar-button:hover {
   opacity: unset;
@@ -949,6 +968,14 @@ body:where(.theme-dark) .metadata-property :focus:before {
 }
 body:where(.theme-dark) .metadata-property-icon {
   color: var(--flexcyon-cyan);
+}
+
+body.flexcyon-metadata-display-reading-disabled {
+  --metadata-display-reading: none;
+}
+
+body.flexcyon-metadata-display-editing-disabled {
+  --metadata-display-editing: none;
 }
 
 body:is(.theme-dark) :is(textarea, input:not([type=checkbox]), input.metadata-input-text, select):is(:focus, :active, :focus-visible),
@@ -1514,12 +1541,27 @@ body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list
 
 body.theme-dark {
   --flexcyon-file-exp-top-actions-alignment: center;
+  --flexcyon-media-embed-vertical-margin: 8px;
+}
+body.theme-dark .clickable-icon {
+  opacity: var(--dimmed);
+}
+body.theme-dark .clickable-icon:hover {
+  opacity: unset;
 }
 body.theme-dark div.nav-buttons-container {
   justify-content: var(--flexcyon-file-exp-top-actions-alignment);
+  opacity: var(--dimmed);
+}
+body.theme-dark div.nav-buttons-container:hover {
+  opacity: unset;
 }
 body.theme-dark .oz-folders-action-items {
   text-align: var(--flexcyon-file-exp-top-actions-alignment);
+  opacity: var(--dimmed);
+}
+body.theme-dark .oz-folders-action-items:hover {
+  opacity: unset;
 }
 
 body:where(.theme-dark) {
@@ -1595,6 +1637,10 @@ body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active {
 }
 body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active:hover {
   font-weight: bold;
+}
+
+span.media-embed * {
+  margin: var(--flexcyon-media-embed-vertical-margin) 0px;
 }
 
 /* @settings
@@ -2001,6 +2047,24 @@ settings:
     default: 1.2
     format: rem
 
+  - title: Bullet lists
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Rainbow bullet lists
+    type: class-toggle
+    id: flexcyon-rainbow-bullet-points
+    default: false
+  - title: Media
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Media Embed Vertical margin
+    type: variable-number
+    id: flexcyon-media-embed-vertical-margin
+    default: 8
+    format: px
+
   - title: Links
     type: heading
     level: 5
@@ -2020,6 +2084,19 @@ settings:
     type: variable-color
     format: hex
     default: "#a461c8"
+
+  - title: Properties
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Do not show properties in reading mode
+    id: flexcyon-metadata-display-reading-disabled
+    type: class-toggle
+    default: true
+  - title: Do not show properties in live preview mode
+    id: flexcyon-metadata-display-editing-disabled
+    type: class-toggle
+    default: false
 
   - title: Status Bar
     type: heading
@@ -2190,6 +2267,15 @@ settings:
     id: flexcyon-fc-dimmed-items-opacity
     type: variable-number
     default: 0.89
+  - title: Dataview
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Horizontal padding of dataview error messages
+    id: flexcyon-dataview-horizontal-padding
+    type: variable-number
+    default: 8
+    format: px
 
   - title: Others
     type: heading
@@ -2485,6 +2571,9 @@ body:where(.theme-dark) div.TabsCodeBlock.TabsCodeBlock-buns button.active {
   color: var(--text-accent);
   opacity: 1;
 }
+body:where(.theme-dark) div.TabsCodeBlock-tabs-pages div.block-language-dataview:only-child {
+  padding: 0px var(--flexcyon-dataview-horizontal-padding);
+}
 
 body:is(.theme-dark) :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
   background: rgba(var(--color-pink-rgb), 65%);
@@ -2623,6 +2712,14 @@ body.theme-dark a.fc-timegrid-event.fc-event-today {
 
 .BC-grid-options {
   transform: translateY(-7px);
+}
+
+body.theme-dark {
+  --flexcyon-dataview-horizontal-padding: 8px;
+}
+
+div.dataview-error-box p.dataview-error-message {
+  padding: 0px var(--flexcyon-dataview-horizontal-padding);
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

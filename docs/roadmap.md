@@ -17,6 +17,7 @@
 - [ ] Add CSS classes (partial)
 
 #### Plugins/snippets
+- [x] Add option to disable metadata displayed in reading mode
 
 #### Other styling options
 - [ ] Extended color palette
@@ -24,6 +25,3 @@
 - [ ] `publish.css`
 
 #### Next version changelog
-- Added option to change ASCII checkboxes font size
-- Fixed smiley icons on mobile
-- Added title and background color callout metadata utilities

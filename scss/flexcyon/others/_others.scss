@@ -3,13 +3,29 @@
 
 body.theme-dark {
     --flexcyon-file-exp-top-actions-alignment: center;
+    --flexcyon-media-embed-vertical-margin: 8px;
+
+    .clickable-icon {
+        opacity: var(--dimmed);
+        &:hover {
+            opacity: unset;
+        }
+    }
 
     div.nav-buttons-container {
         justify-content: var(--flexcyon-file-exp-top-actions-alignment);
+        opacity: var(--dimmed);
+        &:hover {
+            opacity: unset;
+        }
     }
 
     .oz-folders-action-items {
         text-align: var(--flexcyon-file-exp-top-actions-alignment);
+        opacity: var(--dimmed);
+        &:hover {
+            opacity: unset;
+        }
     }
 }
 
@@ -95,4 +111,8 @@ body.flexcyon-enable-alt-active-item-effect {
             font-weight: bold;
         }
     }
+}
+
+span.media-embed * {
+    margin: var(--flexcyon-media-embed-vertical-margin) 0px;
 }

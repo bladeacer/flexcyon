@@ -14,13 +14,17 @@
     - [Workspace](#workspace)
     - [Callouts](#callouts)
     - [Checkboxes](#checkboxes)
+    - [Bullet lists](#bullet-lists)
+    - [Media](#media)
     - [Links](#links)
+    - [Properties](#properties)
     - [Status Bar](#status-bar)
     - [Title Bar](#title-bar)
 - [Settings Section](#settings-section)
 - [Plugins Section](#plugins-section)
     - [Alternate file tree](#alternate-file-tree)
     - [Full Calendar](#full-calendar)
+    - [Dataview](#dataview)
 - [Others Sections](#others-section)
     - [Vim Mode Text](#vim-mode-text)
     - [New Tab Apperance](#new-tab-appearance)
@@ -59,7 +63,7 @@ Style Settings
 |   |   |-- Typography
 |   |   |   |--  Muted text color
 |   |   |   |--  Headings
-|   |   |   |   |--  Enabled coloured headings
+|   |   |   |   |--  Enable coloured headings
 |   |   |   |   |--  Heading 1 font weight
 |   |   |   |   |--  Heading 2 font weight
 |   |   |   |   |--  Heading 3 font weight
@@ -104,10 +108,18 @@ Style Settings
 |   |   |   |-- Callout Metadata Background Opacity
 |   |   |-- Checkboxes
 |   |   |   |-- Enable ASCII checkboxes
+|   |   |   |-- Enable ASCII checkboxes
+|   |   |-- Bullet Lists
+|   |   |   |-- Enable rainbow bullet list
+|   |   |-- Media
+|   |   |   |-- Media embed vertical margin
 |   |   |-- Links
 |   |   |   |-- Internal link color
 |   |   |   |-- External link color
 |   |   |   |-- Unresolved link color
+|   |   |-- Properties
+|   |   |   |-- Do not show properties in reading mode
+|   |   |   |-- Do not show properties in live preview mode
 |   |   |-- Status Bar
 |   |   |   |-- Hide until hover
 |   |   |   |-- Text to show when hide until hover is enabled
@@ -141,6 +153,8 @@ Style Settings
 |   |   |   |-- Enabled dimmed file extensions in file tree
 |   |   |-- Full Calendar
 |   |   |   |-- Opacity of dimmed full calendar items
+|   |   |-- Dataview
+|   |   |   |-- Horizontal padding of dataview error messages
 |   |-- **Others**
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
@@ -524,6 +538,27 @@ CSS Variable(s) targeted: `var(--flexcyon-ascii-checkboxes-font-size)`
 Default: 1.2 (rem)
 
 ___
+## Bullet Lists
+Configure bullet lists in the theme
+
+
+### Enable rainbow bullet lists
+CSS Variable(s) targeted: `var(--flexcyon-rainbow-bullet-points)`
+
+Default: false (class toggle)
+
+___
+## Media
+Configure media related settings
+
+Accepted formats: px
+
+### Media Embed Vertical margin
+CSS Variable(s) targeted: `var(--flexcyon-media-embed-vertical-margin)`
+
+Default: 8 (px)
+
+___
 ## Links
 Configure the color of links.
 
@@ -543,6 +578,20 @@ Default: #5a8fcd
 CSS Variable(s) targeted: `var(--flexcyon-link-unresolved-color)`
 
 Default: #a461c8
+
+___
+## Properties
+Configures CSS variables for properties/metadata/YAML of files.
+
+### Do not show properties in reading mode
+CSS Variable(s) targeted: `var(--flexcyon-metadata-display-reading-disabled)`
+
+Default: true (class toggle)
+
+### Do not show properties in live preview mode
+CSS Variable(s) targeted: `var(--flexcyon-metadata-display-editing-disabled)`
+
+Default: false (class toggle)
 
 ___
 ## Status Bar
@@ -597,7 +646,7 @@ Default: false (class toggle)
 
 ___
 ## Title Bar
-For configuration of the titlebar, enable hover effects on titlebar buttons
+For configuration of the titlebar, enable rainbow hover effects on titlebar buttons
 
 ### Titlebar Button Effects
 CSS Variable(s) targeted: `var(--flexcyon-titlebar-button-effects)`
@@ -709,6 +758,17 @@ CSS Variables(s) targeted: `var(--flexcyon-fc-dimmed-items-opacity)`
 Default: 0.89
 
 ___
+## Dataview
+
+Accepted formats: px
+
+### Horizontal padding of dataview error messages
+CSS Variables(s) targeted: `var(--flexcyon-dataview-horizontal-padding)`
+
+Default: 8 (px)
+
+
+___
 # Others Section
 For configuring vim mode text, new tab apperance (ASCII art), sidedock icons, tooltip radius
 
@@ -787,6 +847,7 @@ ___
 Configure the side dock icons
 
 ### Enable side dock icon effects
+> Rainbow effect on hover
 CSS Variable(s) targeted: `var(--flexcyon-sidedock-icon-effects)`
 
 Default: true (class toggle)

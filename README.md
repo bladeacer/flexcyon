@@ -32,6 +32,9 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - subtle opacity effects for UI elements
 - a dark mode colour scheme
 - ASCII checkboxes 
+- Heading options like underline, numbered, coloured
+- Customisable with Style Settings
+
 ![](./docs/screenshots/ascii_checkboxes1.png)
 
 
@@ -55,6 +58,12 @@ The following plugins/snippets are officially supported:
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
 
 For plugins/snippets that are not styled yet, feel free to open a PR/FR on it.
+
+#### Recommended snippets
+Here are some recommended snippets to add to your vault and use alongside Flexcyon:
+- [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
+- [Obsidian FileLink Styling by felixqueisler](https://github.com/felixqueisler/Obsidian-FileLink-Styling)
+- [MCL Multi Column and Gallery Cards by efemkay](https://github.com/efemkay/obsidian-modular-css-layout)
 
 ## Documentation
 Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)

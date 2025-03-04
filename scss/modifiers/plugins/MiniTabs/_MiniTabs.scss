@@ -1,20 +1,28 @@
-
 /* Modificatiions for MiniTabs plugin */
 
-body:where(.theme-dark) div.TabsCodeBlock.TabsCodeBlock-buns {
-    border-radius: unset;
-    background-color: var(--color-base-20);
-
-    & button {
+body:where(.theme-dark) {
+    div.TabsCodeBlock.TabsCodeBlock-buns {
         border-radius: unset;
-        background-color: inherit;
-        opacity: var(--dimmed);
+        background-color: var(--color-base-20);
+
+        & button {
+            border-radius: unset;
+            background-color: inherit;
+            opacity: var(--dimmed);
+        }
+
+        & button.active {
+            background-color: var(--color-base-10);
+            font-weight: bold;
+            color: var(--text-accent);
+            opacity: 1;
+        }
+
     }
 
-    & button.active {
-        background-color: var(--color-base-10);
-        font-weight: bold;
-        color: var(--text-accent);
-        opacity: 1;
+    div.TabsCodeBlock-tabs-pages {
+        div.block-language-dataview:only-child {
+            padding: 0px var(--flexcyon-dataview-horizontal-padding);
+        }
     }
 }

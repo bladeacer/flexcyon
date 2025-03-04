@@ -1,5 +1,15 @@
 ## Changelog
 
+### Version 0.1.1 Hotfixes
+- Added option to change ASCII checkboxes font size
+- Fixed smiley icons on mobile
+- Added title and background color callout metadata utilities
+- Added options to toggle visibility of properties in reading mode and live preview
+- Added support for Dataview plugin
+- Added rainbow bullet points (disabled by default)
+- More UI elements are dimmed for consistency
+- Media embeds now have vertical margin which can be set
+
 ### Version 0.1.0: Utilities Update
 - Added support for Spaced Repetition Plugin
 - Added support for Breadcrumbs Plugin

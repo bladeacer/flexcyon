@@ -38,7 +38,7 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
 
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
         scale: var(--upsize);
-        opacity: 0.7;
+        opacity: var(--dimmed);
 
         &:hover {
             opacity: 1;
@@ -159,7 +159,6 @@ body.flexcyon-titlebar-button-effects {
     .titlebar-button.mod-minimize {
         &:hover {
             color: var(--color-cyan);
-
         }
     }
 
@@ -176,6 +175,7 @@ body.flexcyon-titlebar-button-effects {
     }
 
     .titlebar-button {
+        opacity: var(--dimmed);
         &:hover {
             opacity: unset;
             scale: var(--expand);
