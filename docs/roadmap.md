@@ -25,3 +25,7 @@
 - [ ] `publish.css`
 
 #### Next version changelog
+- Added callout vertical margin, border radius option
+- Added image border radius option
+- Added extended color palette (can be used as callout metadata utilities or in css variables)
+- See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 

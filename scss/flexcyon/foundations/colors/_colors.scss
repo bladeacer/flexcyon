@@ -11,6 +11,7 @@ body.theme-dark {
     --flexcyon-red-salmon: #c03a47;
     --flexcyon-blue: #5a8fcd;
     --flexcyon-pink: #d458a3;
+    --flexcyon-callout-bg-opacity: 20%;
 }
 
 body:is(.theme-dark) {
@@ -32,4 +33,88 @@ body:is(.theme-dark) {
     --color-blue: var(--flexcyon-blue);
     --color-purple: var(--flexcyon-purple-lilac);
     --color-pink: var(--flexcyon-pink);
+
+    --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
+    --color-red-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-orange-mix: color-mix(in hsl, var(--color-red), var(--color-orange));
+    --color-red-orange-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-orange)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-yellow-mix: color-mix(in hsl, var(--color-red), var(--color-yellow));
+    --color-red-yellow-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-yellow)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-green-mix: color-mix(in hsl, var(--color-red), var(--color-green));
+    --color-red-green-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-green)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-cyan-mix: color-mix(in hsl, var(--color-red), var(--color-cyan));
+    --color-red-cyan-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-cyan)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-purple-mix: color-mix(in hsl, var(--color-red), var(--color-purple));
+    --color-red-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-red-pink-mix: color-mix(in hsl, var(--color-red), var(--color-pink));
+    --color-red-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-yellow-mix: color-mix(in hsl, var(--color-orange), var(--color-yellow));
+    --color-orange-yellow-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-yellow)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-green-mix: color-mix(in hsl, var(--color-orange), var(--color-green));
+    --color-orange-green-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-green)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-cyan-mix: color-mix(in hsl, var(--color-orange), var(--color-cyan));
+    --color-orange-cyan-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-cyan)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-blue-mix: color-mix(in hsl, var(--color-orange), var(--color-blue));
+    --color-orange-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-purple-mix: color-mix(in hsl, var(--color-orange), var(--color-purple));
+    --color-orange-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-orange-pink-mix: color-mix(in hsl, var(--color-orange), var(--color-pink));
+    --color-orange-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-orange), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-yellow-green-mix: color-mix(in hsl, var(--color-yellow), var(--color-green));
+    --color-yellow-green-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-yellow), var(--color-green)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-yellow-cyan-mix: color-mix(in hsl, var(--color-yellow), var(--color-cyan));
+    --color-yellow-cyan-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-yellow), var(--color-cyan)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-yellow-blue-mix: color-mix(in hsl, var(--color-yellow), var(--color-blue));
+    --color-yellow-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-yellow), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-yellow-purple-mix: color-mix(in hsl, var(--color-yellow), var(--color-purple));
+    --color-yellow-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-yellow), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-yellow-pink-mix: color-mix(in hsl, var(--color-yellow), var(--color-pink));
+    --color-yellow-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-yellow), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-green-cyan-mix: color-mix(in hsl, var(--color-green), var(--color-cyan));
+    --color-green-cyan-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-green), var(--color-cyan)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-green-blue-mix: color-mix(in hsl, var(--color-green), var(--color-blue));
+    --color-green-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-green), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-green-purple-mix: color-mix(in hsl, var(--color-green), var(--color-purple));
+    --color-green-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-green), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-green-pink-mix: color-mix(in hsl, var(--color-green), var(--color-pink));
+    --color-green-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-green), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-cyan-blue-mix: color-mix(in hsl, var(--color-cyan), var(--color-blue));
+    --color-cyan-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-cyan), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-cyan-purple-mix: color-mix(in hsl, var(--color-cyan), var(--color-purple));
+    --color-cyan-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-cyan), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-cyan-pink-mix: color-mix(in hsl, var(--color-cyan), var(--color-pink));
+    --color-cyan-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-cyan), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-blue-purple-mix: color-mix(in hsl, var(--color-blue), var(--color-purple));
+    --color-blue-purple-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-blue), var(--color-purple)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-blue-pink-mix: color-mix(in hsl, var(--color-blue), var(--color-pink));
+    --color-blue-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-blue), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
+
+    --color-purple-pink-mix: color-mix(in hsl, var(--color-purple), var(--color-pink));
+    --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }

@@ -116,3 +116,7 @@ body.flexcyon-enable-alt-active-item-effect {
 span.media-embed * {
     margin: var(--flexcyon-media-embed-vertical-margin) 0px;
 }
+
+div.markdown-preview-section:last-child > div.el-hr {
+    display: none;
+}

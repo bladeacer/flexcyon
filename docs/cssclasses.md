@@ -34,6 +34,7 @@
         - [Yellow Background](#yellow-background)
         - [Yellow Title](#yellow-title)
         - [All Yellow](#all-yellow)     
+        - [Extened Color Palette](#extended-color-palette)
         - ---------------------------------------------------
         - [RTL Title](#rtl-title)
         - [RTL Content](#rtl-content)
@@ -332,6 +333,30 @@ Callout metadata: "all-yellow"
 ```md
 > [!tip|all-yellow] Title will be yellow
 > The background color will be yellow
+```
+
+#### Extended Color Palette
+When `color1-color2` does not work, use `color2-color1` instead
+
+> `bg-color1-color2-`
+Example Usage:
+```md
+> [!tip|all-red-blue] Title will display as usual
+> The background color will be the color mix of red and blue colors of this theme
+```
+
+> `title-color1-color2-`
+Example Usage: 
+```md
+> [!tip|title-red-blue] Title will be the color mix of red and blue colors of this theme
+> The background color will be as usual
+```
+
+> `all-color1-color2-`
+Example Usage: 
+```md
+> [!tip|all-red-blue] Title will be the color mix of red and blue colors of this theme
+> The background color will be the color mix of red and blue colors of this theme
 ```
 
 ___

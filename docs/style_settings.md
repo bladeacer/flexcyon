@@ -106,6 +106,8 @@ Style Settings
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
 |   |   |   |-- Callout Metadata Background Opacity
+|   |   |   |-- Callout Vertical Margin
+|   |   |   |-- Callout Border Radius
 |   |   |-- Checkboxes
 |   |   |   |-- Enable ASCII checkboxes
 |   |   |   |-- Enable ASCII checkboxes
@@ -113,6 +115,7 @@ Style Settings
 |   |   |   |-- Enable rainbow bullet list
 |   |   |-- Media
 |   |   |   |-- Media embed vertical margin
+|   |   |   |-- Image border radius
 |   |   |-- Links
 |   |   |   |-- Internal link color
 |   |   |   |-- External link color
@@ -458,7 +461,7 @@ ___
 ## Workspace
 Defines file line width when readable line length is enabled, opacity of dimmed UI elements, upscale percentage of icons used in effects
 
-Accepted Formats: %, x.y, px, vw, vh
+Accepted Formats: x.y, px, vw, vh
 
 ### File line width
 CSS Variable(s) targeted: `var(--file-line-width)`
@@ -504,7 +507,7 @@ ___
 ## Callouts
 Configure styling of callouts 
 
-Accepted Formats: px, rem
+Accepted Formats: px, rem, em
 
 ### Callout Icon Right padding
 CSS Variable(s) targeted: `var(--flexcyon-callout-icon-right-padding)`
@@ -514,12 +517,22 @@ Default: 4 (px)
 ### First Codeblock Margin Top
 CSS Variable(s) targeted: `var(--flexcyon-callout-first-codeblock-margin-top)`
 
-Default: 1.25 (rem)
+Default: 1 (rem)
 
 ### Callout Metadata Background Opacity
 CSS Variable(s) targeted: `var(--flexcyon-callout-bg-opacity)`
 
-Default: 0.2
+Default: 20%
+
+### Callout Vertical Margin
+CSS Variable(s) targeted: `var(--flexcyon-callout-vertical-margin)`
+
+Default: 1 (em)
+
+### Callout Border Radius
+CSS Variable(s) targeted: `var(--callout-radius)`
+
+Default: 2 (px)
 
 ___
 ## Checkboxes
@@ -557,6 +570,11 @@ Accepted formats: px
 CSS Variable(s) targeted: `var(--flexcyon-media-embed-vertical-margin)`
 
 Default: 8 (px)
+
+### Image border radius
+CSS Variable(s) targeted: `var(--img-border-radius)`
+
+Default: 15 (px)
 
 ___
 ## Links
@@ -657,7 +675,7 @@ ___
 # Settings Section
 Customise the appearance of settings
 
-Accepted Formats: %, x.y, rem
+Accepted Formats: x.y, rem
 
 ## Smiley Toggle Icons in Settings
 CSS Variable(s) targeted: `var(--flexcyon-settings-smiley-icons-enabled)`

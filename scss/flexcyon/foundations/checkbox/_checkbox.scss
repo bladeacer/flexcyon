@@ -141,6 +141,17 @@ body.flexcyon-ascii-checkboxes-enabled {
     top: -0.45rem;
   }
 
+  input[data-task="l"]:checked,
+  li[data-task="l"]>input:checked,
+  li[data-task="l"]>p>input:checked {
+    background-color: transparent;
+    // border: none;
+    font-weight: 900;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+  }
 }
 
 body.flexcyon-rainbow-bullet-points 

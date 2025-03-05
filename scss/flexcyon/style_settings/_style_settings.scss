@@ -378,15 +378,28 @@ settings:
     format: px
   - title: First Codeblock Margin Top
     id: flexcyon-callout-first-codeblock-margin-top
-    description: Margin top for the first codeblock in a callout
+    description: Margin top for the first codeblock in a callout, affects images too.
     type: variable-number
-    default: 1.25
+    default: 1
     format: rem
   - title: Callout Metadata Background Opacity
     id: flexcyon-callout-bg-opacity
     description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
+    type: variable-text
+    default: 20%
+
+  - title: Callout Vertical Margin
+    id: flexcyon-callout-vertical-margin
+    description: Configures the vertical margin of callouts
     type: variable-number
-    default: 0.2
+    default: 1
+    format: em
+  - title: Callout Border Radius
+    id: callout-radius
+    description: Configures the border radius of callouts
+    type: variable-number
+    default: 2
+    format: px
 
   - title: Checkboxes
     type: heading
@@ -418,6 +431,11 @@ settings:
     type: variable-number
     id: flexcyon-media-embed-vertical-margin
     default: 8
+    format: px
+  - title: Image Border Radius
+    type: variable-number
+    id: img-border-radius
+    default: 15
     format: px
 
   - title: Links
