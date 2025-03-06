@@ -4,6 +4,7 @@
 body.theme-dark {
     --flexcyon-file-exp-top-actions-alignment: center;
     --flexcyon-media-embed-vertical-margin: 8px;
+    --flexcyon-anim-duration: 0.2s;
 
     .clickable-icon {
         opacity: var(--dimmed);
@@ -14,7 +15,7 @@ body.theme-dark {
 
     div.nav-buttons-container {
         justify-content: var(--flexcyon-file-exp-top-actions-alignment);
-        opacity: var(--dimmed);
+        opacity: calc(var(--dimmed) + 0.2);
         &:hover {
             opacity: unset;
         }
@@ -22,7 +23,7 @@ body.theme-dark {
 
     .oz-folders-action-items {
         text-align: var(--flexcyon-file-exp-top-actions-alignment);
-        opacity: var(--dimmed);
+        opacity: calc(var(--dimmed) + 0.2);
         &:hover {
             opacity: unset;
         }
@@ -119,4 +120,108 @@ span.media-embed * {
 
 div.markdown-preview-section:last-child > div.el-hr {
     display: none;
+}
+
+body.flexcyon-anim-slideUp {
+    div.modal, div.prompt {
+        transition: all var(--flexcyon-anim-duration) ease-in;
+        animation: slideUp var(--flexcyon-anim-duration);
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            30% {
+                transform: translateY(80%);
+                opacity: 0.4;
+            }
+            80% {
+                transform: translateY(30%);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+body.flexcyon-anim-slideDown {
+    div.modal, div.prompt {
+        transition: all var(--flexcyon-anim-duration) ease-in;
+        animation: slideDown var(--flexcyon-anim-duration);
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            30% {
+                transform: translateY(-80%);
+                opacity: 0.4;
+            }
+            80% {
+                transform: translateY(-30%);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+body.flexcyon-anim-slideLeft {
+    div.modal, div.prompt {
+        transition: all var(--flexcyon-anim-duration) ease-in;
+        animation: slideLeft var(--flexcyon-anim-duration);
+
+        @keyframes slideLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            30% {
+                transform: translateX(-80%);
+                opacity: 0.4;
+            }
+            80% {
+                transform: translateX(-30%);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+body.flexcyon-anim-slideRight {
+    div.modal, div.prompt {
+        transition: all var(--flexcyon-anim-duration) ease-in;
+        animation: slideRight var(--flexcyon-anim-duration);
+
+        @keyframes slideRight {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            30% {
+                transform: translateX(80%);
+                opacity: 0.4;
+            }
+            80% {
+                transform: translateX(30%);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
 }

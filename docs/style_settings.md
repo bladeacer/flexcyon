@@ -96,12 +96,14 @@ Style Settings
 |   |   |-- Workspace
 |   |   |   |--  File line width
 |   |   |   |--  Opacity of dimmed UI elements
-|   |   |   |--  Upscale percentage of icons 1
-|   |   |   |--  Upscale percentage of icons 2
 |   |   |   |--  Top Actions Alignment
-|   |   |   |--  Prompt width
-|   |   |   |--  Prompt max width
-|   |   |   |--  Prompt max height
+|   |   |   |--  Upscale percentage of icons
+|   |   |   |   |--  Upscale percentage of icons 1
+|   |   |   |   |--  Upscale percentage of icons 2
+|   |   |   |--  Prompts
+|   |   |   |   |--  Prompt width
+|   |   |   |   |--  Prompt max width
+|   |   |   |   |--  Prompt max height
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -473,27 +475,29 @@ CSS Variable(s) targeted: `var(--dimmed)`
 
 Default: 0.55
 
-### Upscale percentage of icons 1
-CSS Variable(s) targeted: `var(--upsize)`
-
-Default: 103%
-
-### Upscale percentage of icons 2
-CSS Variable(s) targeted: `var(--expand)`
-
-Default: 110%
-
 ### Top Actions alignment
 CSS Variable(s) targeted: `var(--flexcyon-file-exp-top-actions-alignment)`
 
 Default: center
 
-### Prompt width
+### Upscale percentage of icons 
+#### Upscale percentage of icons 1
+CSS Variable(s) targeted: `var(--upsize)`
+
+Default: 103%
+
+#### Upscale percentage of icons 2
+CSS Variable(s) targeted: `var(--expand)`
+
+Default: 110%
+
+### Prompts
+#### Prompt width
 CSS Variable(s) targeted: `var(--prompt-width)`
 
 Default: 700 (px)
 
-### Prompt max width
+#### Prompt max width
 CSS Variable(s) targeted: `var(--prompt-max-width)`
 
 Default: 80 (vw)

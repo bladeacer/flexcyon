@@ -94,3 +94,4 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 #### Snippets
 - @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
 - @Tuck on the Obsidian Members' Group Discord for options to change link color
+- [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout

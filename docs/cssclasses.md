@@ -336,8 +336,6 @@ Callout metadata: "all-yellow"
 ```
 
 #### Extended Color Palette
-When `color1-color2` does not work, use `color2-color1` instead
-
 > `bg-color1-color2-`
 Example Usage:
 ```md

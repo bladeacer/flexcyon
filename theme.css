@@ -249,6 +249,7 @@ body:is(.theme-dark) {
   --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
   --checkbox-border-color: var(--flexcyon-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
+  --flexcyon-callout-pop-animation-duration: 0.2s;
 }
 
 body:where(.theme-dark) .checkbox-container {
@@ -598,20 +599,66 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > p > input:checked:hover
   filter: brightness(1.25);
 }
 
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+1)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+1)::marker {
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+1)::marker,
+body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+1)::marker {
   color: var(--color-blue);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+2)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+2)::marker {
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+2)::marker,
+body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+2)::marker {
   color: var(--color-cyan);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+3)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+3)::marker {
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+3)::marker,
+body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+3)::marker {
   color: var(--color-pink);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+4)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+4)::marker {
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+4)::marker,
+body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+4)::marker {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+5)::marker, body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+5)::marker {
+body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+5)::marker,
+body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+5)::marker {
   color: var(--color-yellow);
+}
+
+body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
+  margin-left: min(-5vw, -40px);
+  width: max(var(--file-line-width) / 2, 40vw);
+}
+
+.markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
+  visibility: visible;
+}
+
+.markdown-reading-view .callout[data-callout-metadata*="$pop"] {
+  display: block;
+  position: absolute;
+  margin-left: min(-3vw, -40px);
+  transform: translateY(-70px);
+  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  width: calc(var(--file-line-width) / 2 + min(3vw, 40px));
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"] .callout-title {
+  margin-top: 3px;
+  margin-left: 22px;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]:hover::before {
+  display: block;
+  border: none;
+  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]::before {
+  visibility: visible;
+  content: ">";
+  display: block;
+  position: absolute;
+  padding: 2px;
+  color: rgb(var(--callout-color));
+  z-index: 1;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
+  visibility: hidden;
 }
 
 body:where(.theme-dark) {
@@ -1337,17 +1384,6 @@ div.callout[data-callout-metadata*=title-red-blue] .callout-icon .svg-icon {
   color: var(--color-red-blue-mix);
 }
 
-div.callout[data-callout-metadata*=all-blue-red],
-div.callout[data-callout-metadata*=bg-blue-red] {
-  background-color: var(--color-red-blue-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-blue-red] .callout-title, div.callout[data-callout-metadata*=all-blue-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-blue-red] .callout-title,
-div.callout[data-callout-metadata*=title-blue-red] .callout-icon .svg-icon {
-  color: var(--color-red-blue-mix);
-}
-
 div.callout[data-callout-metadata*=all-red-orange],
 div.callout[data-callout-metadata*=bg-red-orange] {
   background-color: var(--color-red-orange-mix-bg);
@@ -1356,17 +1392,6 @@ div.callout[data-callout-metadata*=bg-red-orange] {
 div.callout[data-callout-metadata*=all-red-orange] .callout-title, div.callout[data-callout-metadata*=all-red-orange] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-red-orange] .callout-title,
 div.callout[data-callout-metadata*=title-red-orange] .callout-icon .svg-icon {
-  color: var(--color-red-orange-mix);
-}
-
-div.callout[data-callout-metadata*=all-orange-red],
-div.callout[data-callout-metadata*=bg-orange-red] {
-  background-color: var(--color-red-orange-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-orange-red] .callout-title, div.callout[data-callout-metadata*=all-orange-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-orange-red] .callout-title,
-div.callout[data-callout-metadata*=title-orange-red] .callout-icon .svg-icon {
   color: var(--color-red-orange-mix);
 }
 
@@ -1381,17 +1406,6 @@ div.callout[data-callout-metadata*=title-red-yellow] .callout-icon .svg-icon {
   color: var(--color-red-yellow-mix);
 }
 
-div.callout[data-callout-metadata*=all-yellow-red],
-div.callout[data-callout-metadata*=bg-yellow-red] {
-  background-color: var(--color-red-yellow-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-yellow-red] .callout-title, div.callout[data-callout-metadata*=all-yellow-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-yellow-red] .callout-title,
-div.callout[data-callout-metadata*=title-yellow-red] .callout-icon .svg-icon {
-  color: var(--color-red-yellow-mix);
-}
-
 div.callout[data-callout-metadata*=all-red-green],
 div.callout[data-callout-metadata*=bg-red-green] {
   background-color: var(--color-red-green-mix-bg);
@@ -1400,17 +1414,6 @@ div.callout[data-callout-metadata*=bg-red-green] {
 div.callout[data-callout-metadata*=all-red-green] .callout-title, div.callout[data-callout-metadata*=all-red-green] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-red-green] .callout-title,
 div.callout[data-callout-metadata*=title-red-green] .callout-icon .svg-icon {
-  color: var(--color-red-green-mix);
-}
-
-div.callout[data-callout-metadata*=all-green-red],
-div.callout[data-callout-metadata*=bg-green-red] {
-  background-color: var(--color-red-green-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-green-red] .callout-title, div.callout[data-callout-metadata*=all-green-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-green-red] .callout-title,
-div.callout[data-callout-metadata*=title-green-red] .callout-icon .svg-icon {
   color: var(--color-red-green-mix);
 }
 
@@ -1425,17 +1428,6 @@ div.callout[data-callout-metadata*=title-red-cyan] .callout-icon .svg-icon {
   color: var(--color-red-cyan-mix);
 }
 
-div.callout[data-callout-metadata*=all-cyan-red],
-div.callout[data-callout-metadata*=bg-cyan-red] {
-  background-color: var(--color-red-cyan-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-cyan-red] .callout-title, div.callout[data-callout-metadata*=all-cyan-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-cyan-red] .callout-title,
-div.callout[data-callout-metadata*=title-cyan-red] .callout-icon .svg-icon {
-  color: var(--color-red-cyan-mix);
-}
-
 div.callout[data-callout-metadata*=all-red-purple],
 div.callout[data-callout-metadata*=bg-red-purple] {
   background-color: var(--color-red-purple-mix-bg);
@@ -1444,17 +1436,6 @@ div.callout[data-callout-metadata*=bg-red-purple] {
 div.callout[data-callout-metadata*=all-red-purple] .callout-title, div.callout[data-callout-metadata*=all-red-purple] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-red-purple] .callout-title,
 div.callout[data-callout-metadata*=title-red-purple] .callout-icon .svg-icon {
-  color: var(--color-red-purple-mix);
-}
-
-div.callout[data-callout-metadata*=all-purple-red],
-div.callout[data-callout-metadata*=bg-purple-red] {
-  background-color: var(--color-red-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-red] .callout-title, div.callout[data-callout-metadata*=all-purple-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-red] .callout-title,
-div.callout[data-callout-metadata*=title-purple-red] .callout-icon .svg-icon {
   color: var(--color-red-purple-mix);
 }
 
@@ -1469,17 +1450,6 @@ div.callout[data-callout-metadata*=title-red-pink] .callout-icon .svg-icon {
   color: var(--color-red-pink-mix);
 }
 
-div.callout[data-callout-metadata*=all-pink-red],
-div.callout[data-callout-metadata*=bg-pink-red] {
-  background-color: var(--color-red-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-red] .callout-title, div.callout[data-callout-metadata*=all-pink-red] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-red] .callout-title,
-div.callout[data-callout-metadata*=title-pink-red] .callout-icon .svg-icon {
-  color: var(--color-red-pink-mix);
-}
-
 div.callout[data-callout-metadata*=all-orange-yellow],
 div.callout[data-callout-metadata*=bg-orange-yellow] {
   background-color: var(--color-orange-yellow-mix-bg);
@@ -1488,17 +1458,6 @@ div.callout[data-callout-metadata*=bg-orange-yellow] {
 div.callout[data-callout-metadata*=all-orange-yellow] .callout-title, div.callout[data-callout-metadata*=all-orange-yellow] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-orange-yellow] .callout-title,
 div.callout[data-callout-metadata*=title-orange-yellow] .callout-icon .svg-icon {
-  color: var(--color-orange-yellow-mix);
-}
-
-div.callout[data-callout-metadata*=all-yellow-orange],
-div.callout[data-callout-metadata*=bg-yellow-orange] {
-  background-color: var(--color-orange-yellow-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-yellow-orange] .callout-title, div.callout[data-callout-metadata*=all-yellow-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-yellow-orange] .callout-title,
-div.callout[data-callout-metadata*=title-yellow-orange] .callout-icon .svg-icon {
   color: var(--color-orange-yellow-mix);
 }
 
@@ -1513,17 +1472,6 @@ div.callout[data-callout-metadata*=title-orange-green] .callout-icon .svg-icon {
   color: var(--color-orange-green-mix);
 }
 
-div.callout[data-callout-metadata*=all-green-orange],
-div.callout[data-callout-metadata*=bg-green-orange] {
-  background-color: var(--color-orange-green-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-green-orange] .callout-title, div.callout[data-callout-metadata*=all-green-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-green-orange] .callout-title,
-div.callout[data-callout-metadata*=title-green-orange] .callout-icon .svg-icon {
-  color: var(--color-orange-green-mix);
-}
-
 div.callout[data-callout-metadata*=all-orange-cyan],
 div.callout[data-callout-metadata*=bg-orange-cyan] {
   background-color: var(--color-orange-cyan-mix-bg);
@@ -1532,17 +1480,6 @@ div.callout[data-callout-metadata*=bg-orange-cyan] {
 div.callout[data-callout-metadata*=all-orange-cyan] .callout-title, div.callout[data-callout-metadata*=all-orange-cyan] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-orange-cyan] .callout-title,
 div.callout[data-callout-metadata*=title-orange-cyan] .callout-icon .svg-icon {
-  color: var(--color-orange-cyan-mix);
-}
-
-div.callout[data-callout-metadata*=all-cyan-orange],
-div.callout[data-callout-metadata*=bg-cyan-orange] {
-  background-color: var(--color-orange-cyan-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-cyan-orange] .callout-title, div.callout[data-callout-metadata*=all-cyan-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-cyan-orange] .callout-title,
-div.callout[data-callout-metadata*=title-cyan-orange] .callout-icon .svg-icon {
   color: var(--color-orange-cyan-mix);
 }
 
@@ -1557,17 +1494,6 @@ div.callout[data-callout-metadata*=title-orange-blue] .callout-icon .svg-icon {
   color: var(--color-orange-blue-mix);
 }
 
-div.callout[data-callout-metadata*=all-blue-orange],
-div.callout[data-callout-metadata*=bg-blue-orange] {
-  background-color: var(--color-orange-blue-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-blue-orange] .callout-title, div.callout[data-callout-metadata*=all-blue-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-blue-orange] .callout-title,
-div.callout[data-callout-metadata*=title-blue-orange] .callout-icon .svg-icon {
-  color: var(--color-orange-blue-mix);
-}
-
 div.callout[data-callout-metadata*=all-orange-purple],
 div.callout[data-callout-metadata*=bg-orange-purple] {
   background-color: var(--color-orange-purple-mix-bg);
@@ -1576,17 +1502,6 @@ div.callout[data-callout-metadata*=bg-orange-purple] {
 div.callout[data-callout-metadata*=all-orange-purple] .callout-title, div.callout[data-callout-metadata*=all-orange-purple] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-orange-purple] .callout-title,
 div.callout[data-callout-metadata*=title-orange-purple] .callout-icon .svg-icon {
-  color: var(--color-orange-purple-mix);
-}
-
-div.callout[data-callout-metadata*=all-purple-orange],
-div.callout[data-callout-metadata*=bg-purple-orange] {
-  background-color: var(--color-orange-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-orange] .callout-title, div.callout[data-callout-metadata*=all-purple-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-orange] .callout-title,
-div.callout[data-callout-metadata*=title-purple-orange] .callout-icon .svg-icon {
   color: var(--color-orange-purple-mix);
 }
 
@@ -1601,17 +1516,6 @@ div.callout[data-callout-metadata*=title-orange-pink] .callout-icon .svg-icon {
   color: var(--color-orange-pink-mix);
 }
 
-div.callout[data-callout-metadata*=all-pink-orange],
-div.callout[data-callout-metadata*=bg-pink-orange] {
-  background-color: var(--color-orange-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-orange] .callout-title, div.callout[data-callout-metadata*=all-pink-orange] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-orange] .callout-title,
-div.callout[data-callout-metadata*=title-pink-orange] .callout-icon .svg-icon {
-  color: var(--color-orange-pink-mix);
-}
-
 div.callout[data-callout-metadata*=all-yellow-green],
 div.callout[data-callout-metadata*=bg-yellow-green] {
   background-color: var(--color-yellow-green-mix-bg);
@@ -1620,17 +1524,6 @@ div.callout[data-callout-metadata*=bg-yellow-green] {
 div.callout[data-callout-metadata*=all-yellow-green] .callout-title, div.callout[data-callout-metadata*=all-yellow-green] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-yellow-green] .callout-title,
 div.callout[data-callout-metadata*=title-yellow-green] .callout-icon .svg-icon {
-  color: var(--color-yellow-green-mix);
-}
-
-div.callout[data-callout-metadata*=all-green-yellow],
-div.callout[data-callout-metadata*=bg-green-yellow] {
-  background-color: var(--color-yellow-green-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-green-yellow] .callout-title, div.callout[data-callout-metadata*=all-green-yellow] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-green-yellow] .callout-title,
-div.callout[data-callout-metadata*=title-green-yellow] .callout-icon .svg-icon {
   color: var(--color-yellow-green-mix);
 }
 
@@ -1645,17 +1538,6 @@ div.callout[data-callout-metadata*=title-yellow-cyan] .callout-icon .svg-icon {
   color: var(--color-yellow-cyan-mix);
 }
 
-div.callout[data-callout-metadata*=all-cyan-yellow],
-div.callout[data-callout-metadata*=bg-cyan-yellow] {
-  background-color: var(--color-yellow-cyan-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-cyan-yellow] .callout-title, div.callout[data-callout-metadata*=all-cyan-yellow] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-cyan-yellow] .callout-title,
-div.callout[data-callout-metadata*=title-cyan-yellow] .callout-icon .svg-icon {
-  color: var(--color-yellow-cyan-mix);
-}
-
 div.callout[data-callout-metadata*=all-yellow-blue],
 div.callout[data-callout-metadata*=bg-yellow-blue] {
   background-color: var(--color-yellow-blue-mix-bg);
@@ -1664,17 +1546,6 @@ div.callout[data-callout-metadata*=bg-yellow-blue] {
 div.callout[data-callout-metadata*=all-yellow-blue] .callout-title, div.callout[data-callout-metadata*=all-yellow-blue] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-yellow-blue] .callout-title,
 div.callout[data-callout-metadata*=title-yellow-blue] .callout-icon .svg-icon {
-  color: var(--color-yellow-blue-mix);
-}
-
-div.callout[data-callout-metadata*=all-blue-yellow],
-div.callout[data-callout-metadata*=bg-blue-yellow] {
-  background-color: var(--color-yellow-blue-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-blue-yellow] .callout-title, div.callout[data-callout-metadata*=all-blue-yellow] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-blue-yellow] .callout-title,
-div.callout[data-callout-metadata*=title-blue-yellow] .callout-icon .svg-icon {
   color: var(--color-yellow-blue-mix);
 }
 
@@ -1689,17 +1560,6 @@ div.callout[data-callout-metadata*=title-yellow-purple] .callout-icon .svg-icon 
   color: var(--color-yellow-purple-mix);
 }
 
-div.callout[data-callout-metadata*=all-purple-yellow],
-div.callout[data-callout-metadata*=bg-purple-yellow] {
-  background-color: var(--color-yellow-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-yellow] .callout-title, div.callout[data-callout-metadata*=all-purple-yellow] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-yellow] .callout-title,
-div.callout[data-callout-metadata*=title-purple-yellow] .callout-icon .svg-icon {
-  color: var(--color-yellow-purple-mix);
-}
-
 div.callout[data-callout-metadata*=all-yellow-pink],
 div.callout[data-callout-metadata*=bg-yellow-pink] {
   background-color: var(--color-yellow-pink-mix-bg);
@@ -1708,17 +1568,6 @@ div.callout[data-callout-metadata*=bg-yellow-pink] {
 div.callout[data-callout-metadata*=all-yellow-pink] .callout-title, div.callout[data-callout-metadata*=all-yellow-pink] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-yellow-pink] .callout-title,
 div.callout[data-callout-metadata*=title-yellow-pink] .callout-icon .svg-icon {
-  color: var(--color-yellow-pink-mix);
-}
-
-div.callout[data-callout-metadata*=all-pink-yellow],
-div.callout[data-callout-metadata*=bg-pink-yellow] {
-  background-color: var(--color-yellow-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-yellow] .callout-title, div.callout[data-callout-metadata*=all-pink-yellow] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-yellow] .callout-title,
-div.callout[data-callout-metadata*=title-pink-yellow] .callout-icon .svg-icon {
   color: var(--color-yellow-pink-mix);
 }
 
@@ -1733,17 +1582,6 @@ div.callout[data-callout-metadata*=title-green-cyan] .callout-icon .svg-icon {
   color: var(--color-green-cyan-mix);
 }
 
-div.callout[data-callout-metadata*=all-cyan-green],
-div.callout[data-callout-metadata*=bg-cyan-green] {
-  background-color: var(--color-green-cyan-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-cyan-green] .callout-title, div.callout[data-callout-metadata*=all-cyan-green] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-cyan-green] .callout-title,
-div.callout[data-callout-metadata*=title-cyan-green] .callout-icon .svg-icon {
-  color: var(--color-green-cyan-mix);
-}
-
 div.callout[data-callout-metadata*=all-green-blue],
 div.callout[data-callout-metadata*=bg-green-blue] {
   background-color: var(--color-green-blue-mix-bg);
@@ -1752,17 +1590,6 @@ div.callout[data-callout-metadata*=bg-green-blue] {
 div.callout[data-callout-metadata*=all-green-blue] .callout-title, div.callout[data-callout-metadata*=all-green-blue] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-green-blue] .callout-title,
 div.callout[data-callout-metadata*=title-green-blue] .callout-icon .svg-icon {
-  color: var(--color-green-blue-mix);
-}
-
-div.callout[data-callout-metadata*=all-blue-green],
-div.callout[data-callout-metadata*=bg-blue-green] {
-  background-color: var(--color-green-blue-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-blue-green] .callout-title, div.callout[data-callout-metadata*=all-blue-green] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-blue-green] .callout-title,
-div.callout[data-callout-metadata*=title-blue-green] .callout-icon .svg-icon {
   color: var(--color-green-blue-mix);
 }
 
@@ -1777,17 +1604,6 @@ div.callout[data-callout-metadata*=title-green-purple] .callout-icon .svg-icon {
   color: var(--color-green-purple-mix);
 }
 
-div.callout[data-callout-metadata*=all-purple-green],
-div.callout[data-callout-metadata*=bg-purple-green] {
-  background-color: var(--color-green-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-green] .callout-title, div.callout[data-callout-metadata*=all-purple-green] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-green] .callout-title,
-div.callout[data-callout-metadata*=title-purple-green] .callout-icon .svg-icon {
-  color: var(--color-green-purple-mix);
-}
-
 div.callout[data-callout-metadata*=all-green-pink],
 div.callout[data-callout-metadata*=bg-green-pink] {
   background-color: var(--color-green-pink-mix-bg);
@@ -1796,17 +1612,6 @@ div.callout[data-callout-metadata*=bg-green-pink] {
 div.callout[data-callout-metadata*=all-green-pink] .callout-title, div.callout[data-callout-metadata*=all-green-pink] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-green-pink] .callout-title,
 div.callout[data-callout-metadata*=title-green-pink] .callout-icon .svg-icon {
-  color: var(--color-green-pink-mix);
-}
-
-div.callout[data-callout-metadata*=all-pink-green],
-div.callout[data-callout-metadata*=bg-pink-green] {
-  background-color: var(--color-green-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-green] .callout-title, div.callout[data-callout-metadata*=all-pink-green] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-green] .callout-title,
-div.callout[data-callout-metadata*=title-pink-green] .callout-icon .svg-icon {
   color: var(--color-green-pink-mix);
 }
 
@@ -1821,17 +1626,6 @@ div.callout[data-callout-metadata*=title-cyan-blue] .callout-icon .svg-icon {
   color: var(--color-cyan-blue-mix);
 }
 
-div.callout[data-callout-metadata*=all-blue-cyan],
-div.callout[data-callout-metadata*=bg-blue-cyan] {
-  background-color: var(--color-cyan-blue-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-blue-cyan] .callout-title, div.callout[data-callout-metadata*=all-blue-cyan] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-blue-cyan] .callout-title,
-div.callout[data-callout-metadata*=title-blue-cyan] .callout-icon .svg-icon {
-  color: var(--color-cyan-blue-mix);
-}
-
 div.callout[data-callout-metadata*=all-cyan-purple],
 div.callout[data-callout-metadata*=bg-cyan-purple] {
   background-color: var(--color-cyan-purple-mix-bg);
@@ -1840,17 +1634,6 @@ div.callout[data-callout-metadata*=bg-cyan-purple] {
 div.callout[data-callout-metadata*=all-cyan-purple] .callout-title, div.callout[data-callout-metadata*=all-cyan-purple] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-cyan-purple] .callout-title,
 div.callout[data-callout-metadata*=title-cyan-purple] .callout-icon .svg-icon {
-  color: var(--color-cyan-purple-mix);
-}
-
-div.callout[data-callout-metadata*=all-purple-cyan],
-div.callout[data-callout-metadata*=bg-purple-cyan] {
-  background-color: var(--color-cyan-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-cyan] .callout-title, div.callout[data-callout-metadata*=all-purple-cyan] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-cyan] .callout-title,
-div.callout[data-callout-metadata*=title-purple-cyan] .callout-icon .svg-icon {
   color: var(--color-cyan-purple-mix);
 }
 
@@ -1865,17 +1648,6 @@ div.callout[data-callout-metadata*=title-cyan-pink] .callout-icon .svg-icon {
   color: var(--color-cyan-pink-mix);
 }
 
-div.callout[data-callout-metadata*=all-pink-cyan],
-div.callout[data-callout-metadata*=bg-pink-cyan] {
-  background-color: var(--color-cyan-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-cyan] .callout-title, div.callout[data-callout-metadata*=all-pink-cyan] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-cyan] .callout-title,
-div.callout[data-callout-metadata*=title-pink-cyan] .callout-icon .svg-icon {
-  color: var(--color-cyan-pink-mix);
-}
-
 div.callout[data-callout-metadata*=all-blue-purple],
 div.callout[data-callout-metadata*=bg-blue-purple] {
   background-color: var(--color-blue-purple-mix-bg);
@@ -1884,17 +1656,6 @@ div.callout[data-callout-metadata*=bg-blue-purple] {
 div.callout[data-callout-metadata*=all-blue-purple] .callout-title, div.callout[data-callout-metadata*=all-blue-purple] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-blue-purple] .callout-title,
 div.callout[data-callout-metadata*=title-blue-purple] .callout-icon .svg-icon {
-  color: var(--color-blue-purple-mix);
-}
-
-div.callout[data-callout-metadata*=all-purple-blue],
-div.callout[data-callout-metadata*=bg-purple-blue] {
-  background-color: var(--color-blue-purple-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-purple-blue] .callout-title, div.callout[data-callout-metadata*=all-purple-blue] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-purple-blue] .callout-title,
-div.callout[data-callout-metadata*=title-purple-blue] .callout-icon .svg-icon {
   color: var(--color-blue-purple-mix);
 }
 
@@ -1909,17 +1670,6 @@ div.callout[data-callout-metadata*=title-blue-pink] .callout-icon .svg-icon {
   color: var(--color-blue-pink-mix);
 }
 
-div.callout[data-callout-metadata*=all-pink-blue],
-div.callout[data-callout-metadata*=bg-pink-blue] {
-  background-color: var(--color-blue-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-blue] .callout-title, div.callout[data-callout-metadata*=all-pink-blue] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-blue] .callout-title,
-div.callout[data-callout-metadata*=title-pink-blue] .callout-icon .svg-icon {
-  color: var(--color-blue-pink-mix);
-}
-
 div.callout[data-callout-metadata*=all-purple-pink],
 div.callout[data-callout-metadata*=bg-purple-pink] {
   background-color: var(--color-purple-pink-mix-bg);
@@ -1928,17 +1678,6 @@ div.callout[data-callout-metadata*=bg-purple-pink] {
 div.callout[data-callout-metadata*=all-purple-pink] .callout-title, div.callout[data-callout-metadata*=all-purple-pink] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-purple-pink] .callout-title,
 div.callout[data-callout-metadata*=title-purple-pink] .callout-icon .svg-icon {
-  color: var(--color-purple-pink-mix);
-}
-
-div.callout[data-callout-metadata*=all-pink-purple],
-div.callout[data-callout-metadata*=bg-pink-purple] {
-  background-color: var(--color-purple-pink-mix-bg);
-}
-
-div.callout[data-callout-metadata*=all-pink-purple] .callout-title, div.callout[data-callout-metadata*=all-pink-purple] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*=title-pink-purple] .callout-title,
-div.callout[data-callout-metadata*=title-pink-purple] .callout-icon .svg-icon {
   color: var(--color-purple-pink-mix);
 }
 
@@ -2229,6 +1968,7 @@ body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list
 body.theme-dark {
   --flexcyon-file-exp-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
+  --flexcyon-anim-duration: 0.2s;
 }
 body.theme-dark .clickable-icon {
   opacity: var(--dimmed);
@@ -2238,14 +1978,14 @@ body.theme-dark .clickable-icon:hover {
 }
 body.theme-dark div.nav-buttons-container {
   justify-content: var(--flexcyon-file-exp-top-actions-alignment);
-  opacity: var(--dimmed);
+  opacity: calc(var(--dimmed) + 0.2);
 }
 body.theme-dark div.nav-buttons-container:hover {
   opacity: unset;
 }
 body.theme-dark .oz-folders-action-items {
   text-align: var(--flexcyon-file-exp-top-actions-alignment);
-  opacity: var(--dimmed);
+  opacity: calc(var(--dimmed) + 0.2);
 }
 body.theme-dark .oz-folders-action-items:hover {
   opacity: unset;
@@ -2332,6 +2072,98 @@ span.media-embed * {
 
 div.markdown-preview-section:last-child > div.el-hr {
   display: none;
+}
+
+body.flexcyon-anim-slideUp div.modal, body.flexcyon-anim-slideUp div.prompt {
+  transition: all var(--flexcyon-anim-duration) ease-in;
+  animation: slideUp var(--flexcyon-anim-duration);
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(80%);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateY(30%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body.flexcyon-anim-slideDown div.modal, body.flexcyon-anim-slideDown div.prompt {
+  transition: all var(--flexcyon-anim-duration) ease-in;
+  animation: slideDown var(--flexcyon-anim-duration);
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-80%);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateY(-30%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body.flexcyon-anim-slideLeft div.modal, body.flexcyon-anim-slideLeft div.prompt {
+  transition: all var(--flexcyon-anim-duration) ease-in;
+  animation: slideLeft var(--flexcyon-anim-duration);
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(-80%);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateX(-30%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body.flexcyon-anim-slideRight div.modal, body.flexcyon-anim-slideRight div.prompt {
+  transition: all var(--flexcyon-anim-duration) ease-in;
+  animation: slideRight var(--flexcyon-anim-duration);
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(80%);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateX(30%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* @settings
@@ -2668,6 +2500,15 @@ settings:
     description: Opacity of dimmed UI elements
     type: variable-number
     default: 0.55
+  - title: Top Actions Alignment
+    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
+    id: flexcyon-file-exp-top-actions-alignment
+    type: variable-text
+    default: center
+  - title: Upscale percentage of icons
+    type: heading
+    level: 6
+    collapsed: true
   - title: Upscale percentage of icons 1
     id: upsize
     description: Upscale percentage used in smiley icons and side dock icon effects
@@ -2678,11 +2519,10 @@ settings:
     description: Upscale percentage used in side dock icon effects
     type: variable-text
     default: 110%
-  - title: Top Actions Alignment
-    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
-    id: flexcyon-file-exp-top-actions-alignment
-    type: variable-text
-    default: center
+  - title: Prompts
+    type: heading
+    level: 6
+    collapsed: true
   - title: Prompt width
     description: Sets the width of prompts like the command prompt
     id: prompt-width
@@ -2701,6 +2541,34 @@ settings:
     type: variable-number
     default: 70
     format: vh
+  - title: Animations
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Animation Type
+    description: Select the animation type for settings, prompts etc.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options:
+      - 
+        label: Slide Down to Up
+        value: flexcyon-anim-slideUp
+      - 
+        label: Slide Up to Down
+        value: flexcyon-anim-slideDown
+      - 
+        label: Slide Left to Right
+        value: flexcyon-anim-slideLeft
+      -
+        label: Slide Right to Left
+        value: flexcyon-anim-slideRight
+  - title: Animation duration
+    description: Animation duration for the animation type presets selected.
+    id: flexcyon-anim-duration
+    default: 0.2
+    format: s
 
   - title: Callouts
     type: heading
