@@ -311,9 +311,23 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: true
-  - title: Alternate file explorer style
-    id: flexcyon-alt-file-exp-style
-    description: Adds padding for active file item, makes collapse icons and borders blue for active folders.
+  - title: Select folder style
+    description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Rainbow folders
+        value: flexcyon-rainbow-folders
+
+      - 
+        label: Alternate folder style
+        value: flexcyon-alt-folder-style
+  - title: Enable minimalist trees
+    description: Removes left borders and collapse icons from trees in the app, this affects folder and outlines 
+    id: flexcyon-minimalist-tree
     type: class-toggle
     default: false
 
@@ -384,22 +398,20 @@ settings:
     allowEmpty: true
     default: none
     options:
-      - 
-        label: Slide Down to Up
+      - label: Slide Down to Up
         value: flexcyon-anim-slideUp
-      - 
-        label: Slide Up to Down
+      - label: Slide Up to Down
         value: flexcyon-anim-slideDown
-      - 
-        label: Slide Left to Right
+      - label: Slide Left to Right
         value: flexcyon-anim-slideLeft
-      -
-        label: Slide Right to Left
+      - label: Slide Right to Left
         value: flexcyon-anim-slideRight
+
   - title: Animation duration
-    description: Animation duration for the animation type presets selected.
+    description: Animation duration for the animation type presets selected. Will be instant (default behaviour) when none is selected.
     id: flexcyon-anim-duration
-    default: 0.2
+    type: variable-number
+    default: 0.25
     format: s
 
   - title: Callouts

@@ -249,7 +249,6 @@ body:is(.theme-dark) {
   --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
   --checkbox-border-color: var(--flexcyon-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
-  --flexcyon-callout-pop-animation-duration: 0.2s;
 }
 
 body:where(.theme-dark) .checkbox-container {
@@ -618,47 +617,6 @@ body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+4)::marker {
 body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+5)::marker,
 body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+5)::marker {
   color: var(--color-yellow);
-}
-
-body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
-  margin-left: min(-5vw, -40px);
-  width: max(var(--file-line-width) / 2, 40vw);
-}
-
-.markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
-  visibility: visible;
-}
-
-.markdown-reading-view .callout[data-callout-metadata*="$pop"] {
-  display: block;
-  position: absolute;
-  margin-left: min(-3vw, -40px);
-  transform: translateY(-70px);
-  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
-  width: calc(var(--file-line-width) / 2 + min(3vw, 40px));
-  backdrop-filter: blur(20px);
-  z-index: 999;
-}
-.markdown-reading-view .callout[data-callout-metadata*="$pop"] .callout-title {
-  margin-top: 3px;
-  margin-left: 22px;
-}
-.markdown-reading-view .callout[data-callout-metadata*="$pop"]:hover::before {
-  display: block;
-  border: none;
-  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
-}
-.markdown-reading-view .callout[data-callout-metadata*="$pop"]::before {
-  visibility: visible;
-  content: ">";
-  display: block;
-  position: absolute;
-  padding: 2px;
-  color: rgb(var(--callout-color));
-  z-index: 1;
-}
-.markdown-reading-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
-  visibility: hidden;
 }
 
 body:where(.theme-dark) {
@@ -1105,6 +1063,7 @@ body.theme-dark {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
+  --flexcyon-callout-pop-animation-duration: 0.2s;
 }
 
 body:where(.theme-dark) {
@@ -1681,6 +1640,47 @@ div.callout[data-callout-metadata*=title-purple-pink] .callout-icon .svg-icon {
   color: var(--color-purple-pink-mix);
 }
 
+body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
+  margin-left: min(-5vw, -40px);
+  width: max(var(--file-line-width) / 2, 40vw);
+}
+
+.markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
+  visibility: visible;
+}
+
+.markdown-reading-view .callout[data-callout-metadata*="$pop"] {
+  display: block;
+  position: absolute;
+  margin-left: min(-3vw, -40px);
+  transform: translateY(-70px);
+  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  width: calc(var(--file-line-width) / 2 + min(3vw, 40px));
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"] .callout-title {
+  margin-top: 3px;
+  margin-left: 22px;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]:hover::before {
+  display: block;
+  border: none;
+  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]::before {
+  visibility: visible;
+  content: ">";
+  display: block;
+  position: absolute;
+  padding: 2px;
+  color: rgb(var(--callout-color));
+  z-index: 1;
+}
+.markdown-reading-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
+  visibility: hidden;
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -1751,23 +1751,101 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
   content: ".";
 }
 
-body.flexcyon-alt-file-exp-style .nav-folder .nav-folder-children {
-  border-inline-start: 1px solid var(--color-blue);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-title {
+  color: var(--color-cyan);
 }
-body.flexcyon-alt-file-exp-style .nav-folder .collapse-icon svg {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-title .collapse-icon svg {
+  color: var(--color-cyan);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-cyan);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title {
   color: var(--color-blue);
 }
-body.flexcyon-alt-file-exp-style .nav-folder.is-collapsed .nav-folder-title-content {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title .collapse-icon svg {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-blue);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title {
+  color: var(--color-purple);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title .collapse-icon svg {
+  color: var(--color-purple);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-purple);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title {
+  color: var(--color-pink);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title .collapse-icon svg {
+  color: var(--color-pink);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-pink);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) {
+  color: var(--color-green);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-title {
+  color: var(--color-green);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-title .collapse-icon svg {
+  color: var(--color-green);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-green);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title {
+  color: var(--color-yellow);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title .collapse-icon svg {
+  color: var(--color-yellow);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-children {
+  border-inline-start: 2px solid var(--color-yellow);
+}
+
+body.flexcyon-alt-folder-style .nav-folder .nav-folder-children {
+  border-inline-start: 1px solid var(--color-blue);
+}
+body.flexcyon-alt-folder-style .nav-folder .collapse-icon svg {
+  color: var(--color-blue);
+}
+body.flexcyon-alt-folder-style .nav-folder .nav-folder-title {
+  color: var(--color-blue);
+}
+body.flexcyon-alt-folder-style .nav-folder.is-collapsed .nav-folder-title {
   color: unset;
 }
-body.flexcyon-alt-file-exp-style .nav-folder.is-collapsed .collapse-icon svg {
+body.flexcyon-alt-folder-style .nav-folder.is-collapsed .nav-folder-title-content {
   color: unset;
 }
-body.flexcyon-alt-file-exp-style .nav-file-title {
-  transform: padding ease-in-out 0.35s;
+body.flexcyon-alt-folder-style .nav-folder.is-collapsed .collapse-icon svg {
+  color: unset;
 }
-body.flexcyon-alt-file-exp-style .nav-file-title.is-active .nav-file-title-content {
+body.flexcyon-alt-folder-style .nav-file-title.is-active .nav-file-title-content {
+  transform: all ease-in-out 0.35s;
   margin-inline-start: 0.25rem;
+  font-weight: bold;
+}
+
+.tree-item-self.is-active {
+  background-color: transparent;
+  background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+}
+
+body.flexcyon-minimalist-tree .collapse-icon svg {
+  display: none;
+}
+body.flexcyon-minimalist-tree .tree-item-children {
+  border-inline-start: none;
+}
+body.flexcyon-minimalist-tree .nav-file-title {
+  opacity: 0.85;
 }
 
 body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -1968,7 +2046,7 @@ body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list
 body.theme-dark {
   --flexcyon-file-exp-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
-  --flexcyon-anim-duration: 0.2s;
+  --flexcyon-anim-duration: 0.25s;
 }
 body.theme-dark .clickable-icon {
   opacity: var(--dimmed);
@@ -2084,11 +2162,11 @@ body.flexcyon-anim-slideUp div.modal, body.flexcyon-anim-slideUp div.prompt {
     opacity: 0;
   }
   30% {
-    transform: translateY(80%);
+    transform: translateY(65%);
     opacity: 0.4;
   }
-  80% {
-    transform: translateY(30%);
+  60% {
+    transform: translateY(25%);
     opacity: 0.7;
   }
   100% {
@@ -2107,11 +2185,11 @@ body.flexcyon-anim-slideDown div.modal, body.flexcyon-anim-slideDown div.prompt 
     opacity: 0;
   }
   30% {
-    transform: translateY(-80%);
+    transform: translateY(-65%);
     opacity: 0.4;
   }
-  80% {
-    transform: translateY(-30%);
+  60% {
+    transform: translateY(-25%);
     opacity: 0.7;
   }
   100% {
@@ -2130,11 +2208,11 @@ body.flexcyon-anim-slideLeft div.modal, body.flexcyon-anim-slideLeft div.prompt 
     opacity: 0;
   }
   30% {
-    transform: translateX(-80%);
+    transform: translateX(-65%);
     opacity: 0.4;
   }
-  80% {
-    transform: translateX(-30%);
+  60% {
+    transform: translateX(-25%);
     opacity: 0.7;
   }
   100% {
@@ -2153,11 +2231,11 @@ body.flexcyon-anim-slideRight div.modal, body.flexcyon-anim-slideRight div.promp
     opacity: 0;
   }
   30% {
-    transform: translateX(80%);
+    transform: translateX(65%);
     opacity: 0.4;
   }
-  80% {
-    transform: translateX(30%);
+  60% {
+    transform: translateX(25%);
     opacity: 0.7;
   }
   100% {
@@ -2479,9 +2557,23 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: true
-  - title: Alternate file explorer style
-    id: flexcyon-alt-file-exp-style
-    description: Adds padding for active file item, makes collapse icons and borders blue for active folders.
+  - title: Select folder style
+    description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Rainbow folders
+        value: flexcyon-rainbow-folders
+
+      - 
+        label: Alternate folder style
+        value: flexcyon-alt-folder-style
+  - title: Enable minimalist trees
+    description: Removes left borders and collapse icons from trees in the app, this affects folder and outlines 
+    id: flexcyon-minimalist-tree
     type: class-toggle
     default: false
 
@@ -2552,22 +2644,20 @@ settings:
     allowEmpty: true
     default: none
     options:
-      - 
-        label: Slide Down to Up
+      - label: Slide Down to Up
         value: flexcyon-anim-slideUp
-      - 
-        label: Slide Up to Down
+      - label: Slide Up to Down
         value: flexcyon-anim-slideDown
-      - 
-        label: Slide Left to Right
+      - label: Slide Left to Right
         value: flexcyon-anim-slideLeft
-      -
-        label: Slide Right to Left
+      - label: Slide Right to Left
         value: flexcyon-anim-slideRight
+
   - title: Animation duration
-    description: Animation duration for the animation type presets selected.
+    description: Animation duration for the animation type presets selected. Will be instant (default behaviour) when none is selected.
     id: flexcyon-anim-duration
-    default: 0.2
+    type: variable-number
+    default: 0.25
     format: s
 
   - title: Callouts

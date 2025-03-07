@@ -22,9 +22,8 @@
 #### Other styling options
 - [x] Extended color palette
 - [x] Ukiyo theme pop up callout
-- [ ] File explorer background, sketchpad grid aesthetic
 - [x] Window animations etc
-  - Add docs for this
+- [ ] File explorer background, sketchpad grid aesthetic
 - [ ] Rainbow folders
 - [ ] PDF export styling (class select)
 - [ ] `publish.css`
@@ -36,10 +35,15 @@
 - Added popup callout, adapted from [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex
 - Fixed opacity of top actions like new note, new folder etc
 - Added window animations for modals, prompts and settings. Choose from the following options:
-  - None (Disables animations)
+  - None (Reverts to default behavior)
   - Slide Down to Up
   - Slide Up to Down
   - Slide Left to Right
   - Slide Right to Left
 - You can also configure the animation duration
+- Added option to toggle displaying of properties in reading mode and edit mode
+  - Do not show properties in reading mode is enabled by default
+  - Do not show properties in editing mode is disabled by default
+- Added option to enable minimalist (folder/outline) trees
+- Added rainbow folders
 - See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 

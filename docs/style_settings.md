@@ -92,7 +92,8 @@ Style Settings
 |   |   |   |-- Width of table in reading mode
 |   |   |-- Files
 |   |   |   |--  Enable dimmed file extensions in file explorer
-|   |   |   |--  Alternate file explorer style
+|   |   |   |--  Select folder style
+|   |   |   |--  Enable minimalist tree
 |   |   |-- Workspace
 |   |   |   |--  File line width
 |   |   |   |--  Opacity of dimmed UI elements
@@ -104,6 +105,9 @@ Style Settings
 |   |   |   |   |--  Prompt width
 |   |   |   |   |--  Prompt max width
 |   |   |   |   |--  Prompt max height
+|   |   |   |--  Animations
+|   |   |   |   |--  Animation Type
+|   |   |   |   |--  Animation Duration
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -454,8 +458,16 @@ CSS Variable(s) targeted: `var(--flexcyon-file-exp-dimmed-file-exts-enabled)`
 
 Default: true (class toggle)
 
-### Alternate file explorer style
-CSS Variable(s) targeted: `var(--flexcyon-alt-file-exp-style)`
+### Select folder style
+CSS Variable(s) targeted: `var(--flexcyon-rainbow-folders), var(--flexcyon-alt-folder-style)`
+
+Default: none (class select)
+Options:
+- Rainbow folders
+- Alternate folder style
+
+### Enable minimalist trees
+CSS Variable(s) targeted: `var(--flexcyon-minimalist-tree)`
 
 Default: false (class toggle)
 
@@ -506,6 +518,24 @@ Default: 80 (vw)
 CSS Variable(s) targeted: `var(--prompt-max-height)`
 
 Default: 70 (vh)
+
+### Animations
+Accepted Formats: s
+
+#### Animation Type
+CSS Variable(s) targeted: `var(--flexcyon-anim-slideUp), var(--flexcyon-anim-slideDown), var(--flexcyon-anim-slideLeft), var(--flexcyon-anim-slideRight)`
+
+Default: none (class select)
+Options:
+- Slide Down to Up
+- Slide Up to Down
+- Slide Left to Right
+- Slide Right to Left
+
+#### Animation duration
+CSS Variable(s) targeted: `var(--flexcyon-anim-duration)`
+
+Default: 0.25 (s)
 
 ___
 ## Callouts

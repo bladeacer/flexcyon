@@ -5,6 +5,7 @@ body.theme-dark {
     --flexcyon-callout-icon-right-padding: 4px;
     --flexcyon-callout-first-codeblock-margin-top: 1rem;
     --flexcyon-callout-vertical-margin: 1em;
+    --flexcyon-callout-pop-animation-duration: 0.2s;
 }
 
 body:where(.theme-dark) {
@@ -24,7 +25,6 @@ body:where(.theme-dark) {
     }
 }
 
-// div[data-callout="multi-column"].callout > .callout-content > div[data-callout-metadata*="wide-3"] { flex-grow: 3; }
 div.callout[data-callout-metadata*="tategaki"] {
     div.callout-content {
         writing-mode: vertical-rl;
@@ -285,3 +285,55 @@ div.callout[data-callout-metadata*="caps-content"] {
 @include callout-ext-color("blue-purple", "color-blue-purple-mix");
 @include callout-ext-color("blue-pink", "color-blue-pink-mix");
 @include callout-ext-color("purple-pink", "color-purple-pink-mix");
+
+body.is-mobile {
+
+  .markdown-reading-view {
+    .callout[data-callout-metadata*="$pop"] {
+      margin-left: min(-5vw, -40px);
+      width: max(calc(var(--file-line-width)/2), 40vw);
+    }
+  }
+}
+
+.markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
+  visibility: visible;
+}
+
+.markdown-reading-view {
+  .callout[data-callout-metadata*="$pop"] {
+    display: block;
+    position: absolute;
+    margin-left: min(-3vw, -40px);
+    transform: translateY(-70px);
+    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+    width: calc(var(--file-line-width)/2 + min(3vw, 40px));
+    backdrop-filter: blur(20px);
+    z-index: 999;
+
+    .callout-title {
+      margin-top: 3px;
+      margin-left: 22px;
+    }
+  }
+
+  .callout[data-callout-metadata*="$pop"]:hover::before {
+    display: block;
+    border: none;
+    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  }
+
+  .callout[data-callout-metadata*="$pop"]::before {
+    visibility: visible;
+    content: ">";
+    display: block;
+    position: absolute;
+    padding: 2px;
+    color: rgb(var(--callout-color));
+    z-index: 1;
+  }
+
+  .callout[data-callout-metadata*="$pop"]:not(:hover) {
+    visibility: hidden;
+  }
+}

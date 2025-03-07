@@ -4,7 +4,7 @@
 body.theme-dark {
     --flexcyon-file-exp-top-actions-alignment: center;
     --flexcyon-media-embed-vertical-margin: 8px;
-    --flexcyon-anim-duration: 0.2s;
+    --flexcyon-anim-duration: 0.25s;
 
     .clickable-icon {
         opacity: var(--dimmed);
@@ -133,11 +133,11 @@ body.flexcyon-anim-slideUp {
                 opacity: 0;
             }
             30% {
-                transform: translateY(80%);
+                transform: translateY(65%);
                 opacity: 0.4;
             }
-            80% {
-                transform: translateY(30%);
+            60% {
+                transform: translateY(25%);
                 opacity: 0.7;
             }
             100% {
@@ -159,11 +159,11 @@ body.flexcyon-anim-slideDown {
                 opacity: 0;
             }
             30% {
-                transform: translateY(-80%);
+                transform: translateY(-65%);
                 opacity: 0.4;
             }
-            80% {
-                transform: translateY(-30%);
+            60% {
+                transform: translateY(-25%);
                 opacity: 0.7;
             }
             100% {
@@ -185,11 +185,11 @@ body.flexcyon-anim-slideLeft {
                 opacity: 0;
             }
             30% {
-                transform: translateX(-80%);
+                transform: translateX(-65%);
                 opacity: 0.4;
             }
-            80% {
-                transform: translateX(-30%);
+            60% {
+                transform: translateX(-25%);
                 opacity: 0.7;
             }
             100% {
@@ -211,11 +211,11 @@ body.flexcyon-anim-slideRight {
                 opacity: 0;
             }
             30% {
-                transform: translateX(80%);
+                transform: translateX(65%);
                 opacity: 0.4;
             }
-            80% {
-                transform: translateX(30%);
+            60% {
+                transform: translateX(25%);
                 opacity: 0.7;
             }
             100% {

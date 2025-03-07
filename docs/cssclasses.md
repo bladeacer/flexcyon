@@ -4,6 +4,7 @@
 ### Table of Contents
 - [Callouts](#callouts)
     - [Callout metadata](#callout-metadata)
+        - [Popup Callout](#popup-callout)
         - ---------------------------------------------------
         - [No Icon](#no-icon)
         - [No Title](#no-title)
@@ -74,6 +75,16 @@ Defines utilities for callouts.
 ### Callout metadata
 > Note: you need at least `>[!|] your title` for Obsidian to render your callout. In this case where the callout type is not specified, it will render as if you typed `>[!note] your title`
 
+### Popup callout
+Callout metadata: "$pop"
+
+Usage:
+```md
+> [!info|$pop] The callout will be shown as normal in editing mode
+> The callout will be rendered as a popup ">" on the left side of the editor in reading mode, which will show its contents on hover
+```
+
+___
 #### No Icon
 Callout metadata: "no-icon"
 
@@ -356,6 +367,12 @@ Example Usage:
 > [!tip|all-red-blue] Title will be the color mix of red and blue colors of this theme
 > The background color will be the color mix of red and blue colors of this theme
 ```
+
+> You can also use this colors in your own css snippets, they take the form of:
+> - `var(--color-color1-color2-mix)`: E.g. `var(--color-red-blue-mix)`
+> - `var(--color-color1-color2-mix-bg)`: E.g. `var(--color-red-blue-mix-bg)`
+> If `var(--color-color1-color2-mix)` does not work, use `var(--color-color2-color1-mix)` instead
+
 
 ___
 #### RTL Title
