@@ -651,6 +651,24 @@ body:is(.theme-dark) {
   --background-modifier-border-focus: var(--flexcyon-base-blue-04);
   --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
   --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+  --flexcyon-editor-bg-width: 15px;
+  --flexcyon-editor-dot-size: 2px;
+}
+
+body.flexcyon-editor-grid .view-content [class*=markdown-] {
+  background-image: repeating-linear-gradient(to right, var(--color-base-00), transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(to bottom, var(--color-base-00), var(--color-base-00) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.flexcyon-editor-grid .view-content [class*=markdown-] * {
+  background-image: none;
+}
+
+body.flexcyon-editor-dots .view-content [class*=markdown-] {
+  background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
+  background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+}
+body.flexcyon-editor-dots .view-content [class*=markdown-] * {
+  background-image: none;
 }
 
 body:is(.theme-dark) {
@@ -1810,7 +1828,7 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6
 }
 
 body.flexcyon-alt-folder-style .nav-folder .nav-folder-children {
-  border-inline-start: 1px solid var(--color-blue);
+  border-inline-start: 2px solid var(--color-blue);
 }
 body.flexcyon-alt-folder-style .nav-folder .collapse-icon svg {
   color: var(--color-blue);
@@ -2652,13 +2670,41 @@ settings:
         value: flexcyon-anim-slideLeft
       - label: Slide Right to Left
         value: flexcyon-anim-slideRight
-
   - title: Animation duration
     description: Animation duration for the animation type presets selected. Will be instant (default behaviour) when none is selected.
     id: flexcyon-anim-duration
     type: variable-number
     default: 0.25
     format: s
+  - title: Editor Background
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Select Background Type
+    description: Select the background type for the editor
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Grid Background
+        value: flexcyon-editor-grid
+
+      - 
+        label: Dotted Background
+        value: flexcyon-editor-dots
+
+  - title: Width between each dot/line for grid/dotted background
+    id: flexcyon-editor-bg-width
+    type: variable-number
+    default: 15
+    format: px
+  - title: Size of dots for dotted background
+    id: flexcyon-editor-dot-size
+    type: variable-number
+    default: 2
+    format: px
 
   - title: Callouts
     type: heading

@@ -1,8 +1,8 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 // A huge shout out too to kepano's flexoki color scheme
 // - https://github.com/kepano/flexoki-obsidian
-body:is(.theme-dark){
+body:is(.theme-dark) {
     /* ------------------------------ */
     --background-primary: var(--flexcyon-base-blue-02);
     --background-primary-alt: var(--flexcyon-base-blue-03);
@@ -15,4 +15,33 @@ body:is(.theme-dark){
     --background-modifier-border-focus: var(--flexcyon-base-blue-04);
     --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
     --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+    --flexcyon-editor-bg-width: 15px;
+    --flexcyon-editor-dot-size: 2px;
+}
+
+body.flexcyon-editor-grid .view-content [class*=markdown-] {
+    background-image:
+        repeating-linear-gradient(to right,
+            var(--color-base-00),
+            transparent 1px,
+            transparent var(--flexcyon-editor-bg-width)),
+        repeating-linear-gradient(to bottom,
+            var(--color-base-00),
+            var(--color-base-00) 1px,
+            transparent 1px,
+            transparent var(--flexcyon-editor-bg-width));
+
+    * {
+        background-image: none;
+    }
+}
+
+body.flexcyon-editor-dots .view-content [class*=markdown-] {
+  background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
+  background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+
+    * {
+        background-image: none;
+    }
 }

@@ -406,13 +406,41 @@ settings:
         value: flexcyon-anim-slideLeft
       - label: Slide Right to Left
         value: flexcyon-anim-slideRight
-
   - title: Animation duration
     description: Animation duration for the animation type presets selected. Will be instant (default behaviour) when none is selected.
     id: flexcyon-anim-duration
     type: variable-number
     default: 0.25
     format: s
+  - title: Editor Background
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Select Background Type
+    description: Select the background type for the editor
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Grid Background
+        value: flexcyon-editor-grid
+
+      - 
+        label: Dotted Background
+        value: flexcyon-editor-dots
+
+  - title: Width between each dot/line for grid/dotted background
+    id: flexcyon-editor-bg-width
+    type: variable-number
+    default: 15
+    format: px
+  - title: Size of dots for dotted background
+    id: flexcyon-editor-dot-size
+    type: variable-number
+    default: 2
+    format: px
 
   - title: Callouts
     type: heading

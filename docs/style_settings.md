@@ -108,6 +108,10 @@ Style Settings
 |   |   |   |--  Animations
 |   |   |   |   |--  Animation Type
 |   |   |   |   |--  Animation Duration
+|   |   |   |--  Editor Background
+|   |   |   |   |--  Select background type
+|   |   |   |   |--  Width between each dot/line for grid/dotted background
+|   |   |   |   |--  Size of dots for dotted background
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -492,6 +496,7 @@ CSS Variable(s) targeted: `var(--flexcyon-file-exp-top-actions-alignment)`
 
 Default: center
 
+___
 ### Upscale percentage of icons 
 #### Upscale percentage of icons 1
 CSS Variable(s) targeted: `var(--upsize)`
@@ -502,6 +507,8 @@ Default: 103%
 CSS Variable(s) targeted: `var(--expand)`
 
 Default: 110%
+
+___
 
 ### Prompts
 #### Prompt width
@@ -518,6 +525,8 @@ Default: 80 (vw)
 CSS Variable(s) targeted: `var(--prompt-max-height)`
 
 Default: 70 (vh)
+
+___
 
 ### Animations
 Accepted Formats: s
@@ -536,6 +545,30 @@ Options:
 CSS Variable(s) targeted: `var(--flexcyon-anim-duration)`
 
 Default: 0.25 (s)
+
+___
+### Editor Background
+Accepted formats: px
+
+#### Select Background Type
+CSS Variable(s) targeted: `var(--flexcyon-editor-grid), var(--flexcyon-editor-dots)`
+
+Default: none (class select)
+Options:
+- Grid Background
+- Dotted Background
+
+
+#### Width between each dot/line for grid/dotted background
+CSS Variable(s) targeted: `var(--flexcyon-editor-bg-width)`
+
+Default: 15 (px)
+
+#### Size of dots for dotted background
+CSS Variable(s) targeted: `var(--flexcyon-editor-dot-size)`
+
+Default: 2 (px)
+
 
 ___
 ## Callouts
