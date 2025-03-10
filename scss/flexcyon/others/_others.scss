@@ -2,32 +2,22 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body.theme-dark {
-    --flexcyon-file-exp-top-actions-alignment: center;
+    --flexcyon-top-actions-alignment: center;
     --flexcyon-media-embed-vertical-margin: 8px;
-    --flexcyon-anim-duration: 0.25s;
-
-    .clickable-icon {
-        opacity: var(--dimmed);
-        &:hover {
-            opacity: unset;
-        }
-    }
-
+    --flexcyon-anim-duration: 0.35s;
     div.nav-buttons-container {
-        justify-content: var(--flexcyon-file-exp-top-actions-alignment);
+        justify-content: var(--flexcyon-top-actions-alignment);
         opacity: calc(var(--dimmed) + 0.2);
+
         &:hover {
             opacity: unset;
         }
+    }
+    .tree-item-flair {
+        color: var(--text-muted);
     }
 
-    .oz-folders-action-items {
-        text-align: var(--flexcyon-file-exp-top-actions-alignment);
-        opacity: calc(var(--dimmed) + 0.2);
-        &:hover {
-            opacity: unset;
-        }
-    }
+
 }
 
 body:where(.theme-dark) {
@@ -100,14 +90,16 @@ body.flexcyon-enable-alt-active-item-effect {
         padding-left: 0.5rem;
         transform: padding ease-in-out 0.35s;
     }
+
     .vertical-tab-nav-item.search-settings-input {
         padding-left: 0.1rem;
     }
 
     .vertical-tab-nav-item.is-active {
         color: var(--text-accent);
-        background-color: var(--text-on-accent);
+        background: linear-gradient(to right, transparent 0%, var(--text-on-accent) 10%, var(--text-on-accent) 90%, transparent 100%);
         padding-left: 0.75rem;
+
         &:hover {
             font-weight: bold;
         }
@@ -118,110 +110,6 @@ span.media-embed * {
     margin: var(--flexcyon-media-embed-vertical-margin) 0px;
 }
 
-div.markdown-preview-section:last-child > div.el-hr {
+div.markdown-preview-section:last-child>div.el-hr {
     display: none;
-}
-
-body.flexcyon-anim-slideUp {
-    div.modal, div.prompt {
-        transition: all var(--flexcyon-anim-duration) ease-in;
-        animation: slideUp var(--flexcyon-anim-duration);
-
-        @keyframes slideUp {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            30% {
-                transform: translateY(65%);
-                opacity: 0.4;
-            }
-            60% {
-                transform: translateY(25%);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    }
-}
-
-body.flexcyon-anim-slideDown {
-    div.modal, div.prompt {
-        transition: all var(--flexcyon-anim-duration) ease-in;
-        animation: slideDown var(--flexcyon-anim-duration);
-
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            30% {
-                transform: translateY(-65%);
-                opacity: 0.4;
-            }
-            60% {
-                transform: translateY(-25%);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    }
-}
-
-body.flexcyon-anim-slideLeft {
-    div.modal, div.prompt {
-        transition: all var(--flexcyon-anim-duration) ease-in;
-        animation: slideLeft var(--flexcyon-anim-duration);
-
-        @keyframes slideLeft {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            30% {
-                transform: translateX(-65%);
-                opacity: 0.4;
-            }
-            60% {
-                transform: translateX(-25%);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-    }
-}
-
-body.flexcyon-anim-slideRight {
-    div.modal, div.prompt {
-        transition: all var(--flexcyon-anim-duration) ease-in;
-        animation: slideRight var(--flexcyon-anim-duration);
-
-        @keyframes slideRight {
-            0% {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            30% {
-                transform: translateX(65%);
-                opacity: 0.4;
-            }
-            60% {
-                transform: translateX(25%);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-    }
 }

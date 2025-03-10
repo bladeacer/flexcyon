@@ -262,7 +262,23 @@ settings:
     id: flexcyon-h6-underline-enabled
     type: class-toggle
     default: false
-
+  - title: Inline title
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Inline title font size
+    id: inline-title-size
+    type: variable-number
+    default: 1.802
+    format: em
+  - title: Inline title font weight
+    id: inline-title-weight
+    type: variable-number
+    default: 700
+  - title: Inline title line height
+    id: inline-title-line-height
+    type: variable-number
+    default: 1.2
   - title: UI Font sizes
     type: heading
     level: 6
@@ -348,7 +364,7 @@ settings:
     default: 0.55
   - title: Top Actions Alignment
     description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
-    id: flexcyon-file-exp-top-actions-alignment
+    id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
   - title: Upscale percentage of icons
@@ -387,31 +403,7 @@ settings:
     type: variable-number
     default: 70
     format: vh
-  - title: Animations
-    type: heading
-    level: 6
-    collapsed: true
-  - title: Animation Type
-    description: Select the animation type for settings, prompts etc.
-    type: class-select
-    id: theme-variant
-    allowEmpty: true
-    default: none
-    options:
-      - label: Slide Down to Up
-        value: flexcyon-anim-slideUp
-      - label: Slide Up to Down
-        value: flexcyon-anim-slideDown
-      - label: Slide Left to Right
-        value: flexcyon-anim-slideLeft
-      - label: Slide Right to Left
-        value: flexcyon-anim-slideRight
-  - title: Animation duration
-    description: Animation duration for the animation type presets selected. Will be instant (default behaviour) when none is selected.
-    id: flexcyon-anim-duration
-    type: variable-number
-    default: 0.25
-    format: s
+
   - title: Editor Background
     type: heading
     level: 6
@@ -795,6 +787,17 @@ settings:
     /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                     /____/                \a\a\a "
     quotes: true
+  - title: ASCII art font size limit
+    description: The maximum size of the ASCII art
+    id: flexcyon-ascii-max-font-size
+    type: variable-number
+    default: 14
+    format: px
+  - title: ASCII art line height
+    description: The line height of the ASCII art
+    id: flexcyon-ascii-line-height
+    type: variable-number
+    default: 1
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title
@@ -805,12 +808,6 @@ settings:
     description: Toggle the empty state actions
     type: class-toggle
     default: false
-  - title: ASCII art font size limit
-    description: The maximum size of the ASCII art
-    id: flexcyon-ascii-max-font-size
-    type: variable-number
-    default: 14
-    format: px
 
   - title: Side Dock Icons
     type: heading

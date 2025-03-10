@@ -3,13 +3,11 @@ body:where(.theme-dark) {
     --metadata-label-text-color: var(--flexcyon-purple-lilac);
     --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
 
-    /* Modifications for metadata container */
     div.metadata-container div.metadata-property-value {
-        opacity: var(--dimmed);
+        opacity: calc(var(--dimmed) + 0.2);
     }
 
     .metadata-property {
-
         :focus,
         :focus-within,
         :focus:before {
@@ -18,8 +16,12 @@ body:where(.theme-dark) {
     }
 
     .metadata-property-icon {
-        color: var(--flexcyon-cyan);
+        color: var(--color-cyan);
     }
+    .metadata-add-button {
+        opacity: var(--dimmed);
+    }
+
 }
 // Add style settings for this
 body.flexcyon-metadata-display-reading-disabled {

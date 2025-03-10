@@ -31,4 +31,7 @@ body.theme-dark {
         background-color: var(--color-green) !important;
         border: unset;
     }
+    .fc .fc-list-empty {
+        background-color: var(--color-base-10);
+    }
 }

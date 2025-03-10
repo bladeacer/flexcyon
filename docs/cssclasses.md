@@ -67,7 +67,8 @@
     - [Tategaki in callouts](#tategaki-in-callouts)
 - [Vertical LTR](#vertical-ltr)
     - [Vertical LTR in callouts](#vertical-ltr-in-callouts)
-
+- [Dotted editor background](#dotted-editor-background)
+- [Grid editor background](#grid-editor-background)
 
 ## Callouts
 Defines utilities for callouts.
@@ -371,7 +372,6 @@ Example Usage:
 > You can also use this colors in your own css snippets, they take the form of:
 > - `var(--color-color1-color2-mix)`: E.g. `var(--color-red-blue-mix)`
 > - `var(--color-color1-color2-mix-bg)`: E.g. `var(--color-red-blue-mix-bg)`
-> If `var(--color-color1-color2-mix)` does not work, use `var(--color-color2-color1-mix)` instead
 
 
 ___
@@ -592,3 +592,28 @@ Usage:
 ```md
 >[!info|vertical-ltr] The title will not display
 > The contents will be displayed as vertical ltr
+```
+
+### Dotted editor background
+Adds repeating dots to your editor background. Size can be adjusted in style settings.
+
+Usage:
+```md
+cssclasses:
+    - editor-dots
+---
+
+Your content will render as usual
+```
+
+### Grid editor background
+Adds a grid to your editor background. Size can be adjusted in style settings.
+
+Usage:
+```md
+cssclasses:
+    - editor-grid
+---
+
+Your content will render as usual
+```

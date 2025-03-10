@@ -7,6 +7,20 @@ body.theme-dark {
     --expand: 110%;
     --less-letter-spacing: -3px;
     --flexcyon-comm-item-opacity: 0.89;
+
+    .clickable-icon {
+        opacity: var(--dimmed);
+        padding: 0px 8px;
+
+        &:hover {
+            opacity: unset;
+            scale: var(--upsize);
+        }
+    }
+    .graph-controls .clickable-icon, .clickable-icon.side-dock-ribbon-action {
+        padding: var(--size-2-2) var(--size-2-3);
+    }
+
 }
 
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
@@ -14,12 +28,12 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
         background-color: var(--color-base-05);
         box-shadow: unset;
         font-weight: bolder;
-        scale: var(--upsize);
     }
 
     div.checkbox-container::after {
         content: ':(';
-        width: fit-content;
+        width: max-content;
+        height: max-content;
         background-color: inherit;
         color: var(--color-red);
         box-shadow: unset;
@@ -37,43 +51,44 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
 }
 
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
-        scale: var(--upsize);
-        opacity: var(--dimmed);
+    opacity: var(--dimmed);
+    scale: var(--upsize);
 
-        &:hover {
-            opacity: 1;
-        }
+    &:hover {
+        opacity: 1;
+    }
 
-        & :nth-of-type(5n):hover {
-            color: var(--color-blue);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n):hover {
+        color: var(--color-blue);
+        scale: var(--expand);
+    }
 
-        & :nth-of-type(5n+1):hover {
-            color: var(--color-purple);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n+1):hover {
+        color: var(--color-purple);
+        scale: var(--expand);
+    }
 
-        & :nth-of-type(5n+2):hover {
-            color: var(--color-cyan);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n+2):hover {
+        color: var(--color-cyan);
+        scale: var(--expand);
+    }
 
-        & :nth-of-type(5n+3):hover {
-            color: var(--color-pink);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n+3):hover {
+        color: var(--color-pink);
+        scale: var(--expand);
+    }
 
-        & :nth-of-type(5n+4):hover {
-            color: var(--color-green);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n+4):hover {
+        color: var(--color-green);
+        scale: var(--expand);
+    }
 
-        & :nth-of-type(5n+5):hover {
-            color: var(--color-yellow);
-            scale: var(--expand);
-        }
+    & :nth-of-type(5n+5):hover {
+        color: var(--color-yellow);
+        scale: var(--expand);
+    }
 }
+
 body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
     display: none;
 }
@@ -91,7 +106,7 @@ body:where(.theme-dark) {
     span.flair.mod-pop {
         margin-left: var(--flexcyon-settings-installed-tooltip-left-margin);
     }
-    
+
 }
 
 body.flexcyon-settings-comm-item-enabled {
@@ -104,6 +119,7 @@ body.flexcyon-settings-comm-item-enabled {
         border: unset;
         font-weight: bold;
     }
+
     div.community-item div.community-item-name span.flair.mod-pop {
         position: absolute;
         right: 0.5rem;
@@ -139,15 +155,19 @@ body.flexcyon-settings-coloured-icons {
     [aria-label^="Reload plugins"] {
         color: rgba(var(--color-cyan-rgb), 0.9);
     }
+
     [aria-label^="Open plugins folder"] {
         color: rgba(var(--color-green-rgb), 0.9);
     }
+
     [aria-label^="Reload snippets"] {
         color: rgba(var(--color-cyan-rgb), 0.9);
     }
+
     [aria-label^="Open snippets folder"] {
         color: rgba(var(--color-green-rgb), 0.9);
     }
+
     [aria-label^="Restore default"] {
         color: rgba(var(--color-purple-rgb), 0.9);
     }
@@ -175,9 +195,14 @@ body.flexcyon-titlebar-button-effects {
 
     .titlebar-button {
         opacity: var(--dimmed);
+
         &:hover {
             opacity: unset;
             scale: var(--expand);
         }
     }
+}
+
+body.is-mobile.theme-dark .vertical-tab-content {
+    background-color: var(--color-base-05);
 }

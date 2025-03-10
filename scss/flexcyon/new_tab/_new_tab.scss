@@ -1,6 +1,6 @@
 body.theme-dark {
     --flexcyon-ascii-max-font-size: 14px;
-
+    --flexcyon-ascii-line-height: 1;
     --flexcyon-ascii-art: " \a\
 _______________                                       \a\
 ___  ____/__  /________  ____________  ______________ \a\
@@ -32,7 +32,7 @@ body.theme-dark.flexcyon-ascii-enable {
         background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        line-height: 1;
+        line-height: var(--flexcyon-ascii-line-height);
         white-space: pre;
         margin-bottom: 2rem;
         text-align: center;

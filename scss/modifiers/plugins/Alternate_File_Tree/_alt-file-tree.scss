@@ -1,5 +1,4 @@
 /* Modifications for alternate file tree plugin */
-
 body:where(.theme-dark) {
     div.oz-folder-name {
         opacity: var(--dimmed);
@@ -30,6 +29,27 @@ body:where(.theme-dark) {
         }
     }
 
+    .oz-nav-file-tag {
+        font-size: calc(var(--oz-fta-folder-font-size) - 0.35rem);
+        background-color: transparent;
+    }
+
+    .oz-folders-action-items {
+        text-align: var(--flexcyon-top-actions-alignment);
+        padding: 0;
+        &:hover {
+            opacity: unset;
+        }
+    }
+    .oz-nav-action-button {
+        margin-left: 0;
+        margin-right: 8px;
+        padding: 0px;
+        opacity: var(--dimmed);
+    }
+    .oz-file-tree-header {
+        text-align: var(--flexcyon-top-actions-alignment);
+    }
 }
 
 body.flexcyon-oz-alternate-folder-count {
@@ -46,8 +66,6 @@ body.flexcyon-oz-alternate-folder-count {
 
         div.oz-folder-count {
             span.oz-nav-file-tag {
-                background-color: unset;
-                font-size: calc(var(--oz-fta-folder-font-size) - 0.1rem);
                 margin-top: 0.5px;
                 font-weight: inherit;
                 transform: translateY(-1000px);
@@ -110,7 +128,6 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
             letter-spacing: unset;
             color: var(--oz-fta-file-pane-file-name-color);
             opacity: var(--dimmed);
-            font-size: calc(var(--oz-fta-file-font-size) - 0.05rem);
             font-weight: unset;
 
             &::before {
@@ -119,4 +136,18 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
         }
     }
 
+}
+
+
+div.oz-nav-file.is-active, div.oz-nav-file.is-active div.oz-nav-file-title, div.oz-nav-file.is-active div.oz-nav-file-title-content {
+    background: linear-gradient(to right, transparent 0%, 
+    var(--oz-fta-file-pane-active-file-background-color) 10%,
+    var(--oz-fta-file-pane-active-file-background-color) 90%, transparent 100%);
+    font-weight: bold;
+}
+
+// TODO: Fix this color, lower base color?
+.drag-entered, .oz-folder-element:hover, .oz-nav-file:hover {
+    background-color: var(--nav-item-background-hover);
+    color: var(--text-normal);
 }

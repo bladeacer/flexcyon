@@ -157,13 +157,12 @@ body.flexcyon-alt-folder-style {
 
 }
 
-.tree-item-self.is-active {
+.tree-item-self.is-active, .tree-item-self .is-active {
     background-color: transparent;
     background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
 }
 
-body.flexcyon-minimalist-tree
- {
+body.flexcyon-minimalist-tree {
     .collapse-icon svg {
         display: none;
     }

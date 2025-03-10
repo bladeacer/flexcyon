@@ -246,6 +246,11 @@ CSS Variable(s) targeted: `var(--flexcyon-accent)`
 
 Default: #92a871
 
+### Enabled Extended Colors
+CSS Variable(s) targeted: `var(--flexcyon-ext-colors-enabled)`
+
+Default: false
+
 ___
 ## Base Colors
 Defined colors overrides theme defaults for base colors used in the background and other UI elements.
@@ -415,6 +420,25 @@ CSS Variable(s) targeted: `var(--flexcyon-h6-underline-enabled)`
 Default: false (class toggle)
 
 ___
+### Inline title
+Accepted Formats: em
+
+#### Inline title font size
+CSS Variable(s) targeted: `var(--inline-title-size)`
+
+Default: 1.802 (em)
+
+#### Inline title font weight
+CSS Variable(s) targeted: `var(--inline-title-weight)`
+
+Default: 700
+
+#### Inline title font height
+CSS Variable(s) targeted: `var(--inline-title-height)`
+
+Default: 1.2
+
+___
 
 ### UI Font sizes
 Overrides default font sizes used in the interface.
@@ -492,7 +516,7 @@ CSS Variable(s) targeted: `var(--dimmed)`
 Default: 0.55
 
 ### Top Actions alignment
-CSS Variable(s) targeted: `var(--flexcyon-file-exp-top-actions-alignment)`
+CSS Variable(s) targeted: `var(--flexcyon-top-actions-alignment)`
 
 Default: center
 
@@ -529,22 +553,13 @@ Default: 70 (vh)
 ___
 
 ### Animations
-Accepted Formats: s
+This feature is deprecated.
 
 #### Animation Type
-CSS Variable(s) targeted: `var(--flexcyon-anim-slideUp), var(--flexcyon-anim-slideDown), var(--flexcyon-anim-slideLeft), var(--flexcyon-anim-slideRight)`
-
-Default: none (class select)
-Options:
-- Slide Down to Up
-- Slide Up to Down
-- Slide Left to Right
-- Slide Right to Left
+This feature is deprecated.
 
 #### Animation duration
-CSS Variable(s) targeted: `var(--flexcyon-anim-duration)`
-
-Default: 0.25 (s)
+This feature is deprecated.
 
 ___
 ### Editor Background
@@ -626,7 +641,7 @@ Configure bullet lists in the theme
 CSS Variable(s) targeted: `var(--flexcyon-rainbow-bullet-points)`
 
 Default: false (class toggle)
-
+ Might need app restart/reload to take effect.
 ___
 ## Media
 Configure media related settings
@@ -912,6 +927,17 @@ Default: " \a\
 
 > The ASCII art string needs to be escaped for CSS to render it, line breaks are escaped as \a and \ is escaped as \\
 
+
+### ASCII art font size limit
+CSS Variable(s) targeted: `var(--flexcyon-ascii-max-font-size)`
+
+Default: 14 (px)
+
+### ASCII art line height
+CSS Variable(s) targeted: `var(--flexcyon-ascii-line-height)`
+
+Default: 1
+
 ### Disable Empty State title
 CSS Variable(s) targeted: `var(--flexcyon-empty-state-title-disable)`
 
@@ -922,10 +948,6 @@ CSS Variable(s) targeted: `var(--flexcyon-empty-state-actions-disable)`
 
 Default: false (class toggle)
 
-### ASCII art font size limit
-CSS Variable(s) targeted: `var(--flexcyon-ascii-max-font-size)`
-
-Default: 14 (px)
 
 ___
 ## Side Dock Icons
