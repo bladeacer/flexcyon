@@ -38,6 +38,7 @@ body:is(.theme-dark) {
   /* ------------------------------ */
   --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
   --text-highlight-bg: var(--flexcyon-base-blue-03);
+
 }
 
 body:where(.theme-dark) {
@@ -69,7 +70,7 @@ body:where(.theme-dark) {
     color: var(--flexcyon-yellow);
   }
 
-  .cm-line .cm-matchingBracket {
+  .cm-line .cm-matchingbracket {
     color: var(--flexcyon-purple-lilac);
   }
 
@@ -89,7 +90,7 @@ body:where(.theme-dark) {
     color: var(--flexcyon-yellow);
   }
 
-  .cm-line .cm-matchingBracket {
+  .cm-line .cm-matchingbracket {
     color: var(--flexcyon-purple-lilac);
   }
 
@@ -113,7 +114,7 @@ body:where(.theme-dark) {
     color: var(--flexcyon-yellow);
   }
 
-  .cm-line .cm-matchingBracket {
+  .cm-line .cm-matchingbracket {
     color: var(--flexcyon-purple-lilac);
   }
 

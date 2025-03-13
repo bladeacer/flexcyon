@@ -19,7 +19,6 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
     }
 
 }
-
 body.theme-dark.flexcyon-ascii-enable {
     div.empty-state-title {
         display: unset;
@@ -44,6 +43,8 @@ body.theme-dark.flexcyon-ascii-enable {
         transform: translateY(-115px);
     }
 }
+
+
 body.theme-dark.is-mobile.flexcyon-ascii-enable {
     div.empty-state-container::before {
         font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));

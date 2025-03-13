@@ -1,4 +1,12 @@
 ## Changelog
+### Version 0.2.1 
+- Removed Window animations as they are not performant.
+- Updated Extended colors so that `*-color1-color2` and `*-color-2-color` will always return the same color mix when using in callout metadata utilities.
+- Made active file background effect more consistent
+- Added ASCII Art Line Height option
+- Added cssclasses for dotted and grid editor background options
+- Added styling options for inline title
+
 ### Version 0.2.0 Aesthetics Update
 - Added callout vertical margin, border radius option
 - Added image border radius option

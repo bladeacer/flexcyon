@@ -337,7 +337,6 @@ settings:
       - 
         label: Rainbow folders
         value: flexcyon-rainbow-folders
-
       - 
         label: Alternate folder style
         value: flexcyon-alt-folder-style
@@ -848,7 +847,18 @@ settings:
     default: 8
     format: px
 
+
  */
+
+  //  - title: PDF Export
+  //   type: class-select
+  //   id: theme-variant
+  //   allowEmpty: true
+  //   default: flexcyon-pdf-export-inherit-theme
+  //   options: 
+  //     - 
+  //       label: Inherit theme
+  //       value: flexcyon-pdf-export-inherit-theme
 
 body.theme-dark {
   div.pcr-app.visible {

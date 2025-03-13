@@ -277,6 +277,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked::after {
+  background-color: transparent;
   content: "!";
   color: var(--color-red);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -300,6 +301,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked::after {
+  background-color: transparent;
   content: ">";
   color: var(--color-purple);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -323,6 +325,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked:hover
 body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
+  background-color: transparent;
   content: "i";
   color: var(--color-blue);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -346,6 +349,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked::after {
+  background-color: transparent;
   content: "?";
   color: var(--color-green);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -369,6 +373,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::after {
+  background-color: transparent;
   content: "#";
   color: var(--color-cyan);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -392,6 +397,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked::after {
+  background-color: transparent;
   content: ".";
   color: var(--color-orange);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -415,6 +421,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::after {
+  background-color: transparent;
   content: "<";
   color: var(--color-yellow);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -438,6 +445,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after {
+  background-color: transparent;
   content: "$";
   color: var(--text-accent);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -461,6 +469,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked::after {
+  background-color: transparent;
   content: "*";
   color: var(--color-red);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -484,6 +493,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::after {
+  background-color: transparent;
   content: "'";
   color: var(--color-green);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -507,6 +517,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked:hov
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::after {
+  background-color: transparent;
   content: "@";
   color: var(--color-blue);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -518,7 +529,6 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::af
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
-  background-color: transparent;
   border: none;
   font-weight: 900;
 }
@@ -630,6 +640,10 @@ body:where(.theme-dark) {
 
 .is-mobile.theme-dark {
   --tag-background: color-mix(in hsl shorter hue, var(--tag-color) 25%, transparent);
+}
+
+body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
+  all: unset;
 }
 
 body:where(.theme-dark) {
@@ -979,7 +993,7 @@ body:where(.theme-dark) .cm-line .ͼc {
 body:where(.theme-dark) .cm-line .ͼb {
   color: var(--flexcyon-yellow);
 }
-body:where(.theme-dark) .cm-line .cm-matchingBracket {
+body:where(.theme-dark) .cm-line .cm-matchingbracket {
   color: var(--flexcyon-purple-lilac);
 }
 body:where(.theme-dark) .cm-line .ͼi {
@@ -994,7 +1008,7 @@ body:where(.theme-dark) .cm-line .ͼc {
 body:where(.theme-dark) .cm-line .ͼb {
   color: var(--flexcyon-yellow);
 }
-body:where(.theme-dark) .cm-line .cm-matchingBracket {
+body:where(.theme-dark) .cm-line .cm-matchingbracket {
   color: var(--flexcyon-purple-lilac);
 }
 body:where(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
@@ -1012,7 +1026,7 @@ body:where(.theme-dark) .cm-line .ͼc {
 body:where(.theme-dark) .cm-line .ͼb {
   color: var(--flexcyon-yellow);
 }
-body:where(.theme-dark) .cm-line .cm-matchingBracket {
+body:where(.theme-dark) .cm-line .cm-matchingbracket {
   color: var(--flexcyon-purple-lilac);
 }
 
@@ -2477,7 +2491,7 @@ body:where(.theme-dark) {
 }
 
 body:where(.theme-dark) {
-  --file-line-width: 50rem ;
+  --file-line-width: 50rem;
 }
 
 body:where(.theme-dark) {
@@ -2506,10 +2520,6 @@ body:is(.theme-dark) :is(.cm-comment.cm-hmd-internal-link, .cm-comment.cm-link, 
 
 body:is(.theme-dark) :is(.cm-comment.cm-string, .cm-comment.cm-hmd-internal-link:hover, .cm-comment.cm-link:hover) {
   text-decoration: none;
-}
-
-body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
-  all: unset;
 }
 
 body:where(.theme-dark):not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
@@ -2890,7 +2900,6 @@ settings:
       - 
         label: Rainbow folders
         value: flexcyon-rainbow-folders
-
       - 
         label: Alternate folder style
         value: flexcyon-alt-folder-style
@@ -3400,6 +3409,7 @@ settings:
     type: variable-number
     default: 8
     format: px
+
 
  */
 body.theme-dark div.pcr-app.visible {

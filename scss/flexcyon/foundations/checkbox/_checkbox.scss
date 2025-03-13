@@ -38,6 +38,7 @@ body.theme-dark {
   input[data-task="#{$data-task}"]:checked::after,
   li[data-task="#{$data-task}"]>input:checked::after,
   li[data-task="#{$data-task}"]>p>input:checked::after {
+    background-color: transparent;
     content: $data-task;
     color: $color;
     font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -68,7 +69,6 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task='"']:checked,
   li[data-task='"']>input:checked,
   li[data-task='"']>p>input:checked {
-    background-color: transparent;
     border: none;
     font-weight: 900;
 

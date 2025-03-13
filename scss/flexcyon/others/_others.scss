@@ -29,7 +29,7 @@ body:where(.theme-dark) {
 }
 
 body:where(.theme-dark) {
-    --file-line-width: 50rem
+    --file-line-width: 50rem;
 }
 
 body:where(.theme-dark) {
@@ -60,9 +60,7 @@ body:is(.theme-dark) :is(.cm-comment.cm-string, .cm-comment.cm-hmd-internal-link
     text-decoration: none;
 }
 
-body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
-    all: unset;
-}
+
 
 body:where(.theme-dark):not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
     color: var(--interactive-accent-hover);

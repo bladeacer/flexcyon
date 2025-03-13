@@ -13,3 +13,6 @@ body:where(.theme-dark) {
     --tag-background: color-mix(in hsl shorter hue, var(--tag-color) 25%, transparent);
 }
 
+body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
+    all: unset;
+}

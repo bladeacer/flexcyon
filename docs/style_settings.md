@@ -30,6 +30,7 @@
     - [New Tab Apperance](#new-tab-appearance)
     - [Side Dock Icons](#side-dock-icons)
     - [Tooltip radius](#tooltip-radius)
+    = [PDf Export](#pdf-export)
         
 
 ## Markdown Navigation tree for Flexcyon's Style Settings
@@ -986,3 +987,14 @@ Default: 6 (px)
 CSS Variable(s) targeted: `var(--radius-xl)`
 
 Default: 8 (px)
+
+___
+<!-- ## PDF Export
+Defines PDF export styling.
+
+### Select PDF export styling
+Targeted CSS Variable(s): `var(--flexcyon-pdf-export-inherit-theme)`
+
+Default: none (class select)
+Options:
+- Inherit theme -->

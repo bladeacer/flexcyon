@@ -19,6 +19,7 @@ body:is(.theme-dark) {
     --flexcyon-editor-dot-size: 2px;
 }
 
+
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
     background-image:
         repeating-linear-gradient(to right,
@@ -37,9 +38,9 @@ body:is(.theme-dark) {
 }
 
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
-  background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
-  background-repeat: repeat;
-  background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+    background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
+    background-repeat: repeat;
+    background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 
     * {
         background-image: none;
