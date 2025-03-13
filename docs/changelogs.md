@@ -1,5 +1,5 @@
 ## Changelog
-### Version 0.2.1 
+### Version 0.2.1 Small Update
 - Removed Window animations as they are not performant.
 - Updated Extended colors so that `*-color1-color2` and `*-color-2-color` will always return the same color mix when using in callout metadata utilities.
 - Made active file background effect more consistent

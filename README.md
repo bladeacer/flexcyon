@@ -26,9 +26,9 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 ## Features
 #### What this theme has
 - vim mode status (when using builtin vim keybinds)
-- hide status bar on hover
-- smiley toggle icons and other options for settings
-- ascii art in new empty tabs
+- Status bar options like Powerlevel10k inspired status bar styling
+- Smiley toggle icons and other options for settings
+- ASCII art in new empty tabs
 - subtle opacity effects for UI elements
 - a dark mode colour scheme
 - ASCII checkboxes 
@@ -53,6 +53,8 @@ The following plugins/snippets are officially supported:
 - [Full Calendar by Davis Haupt](https://github.com/obsidian-community/obsidian-full-calendar)
 - [Breadcrumbs by SkepticMystic](https://github.com/SkepticMystic/breadcrumbs)
 - [Spaced Repetition by Stephen Mwangi](https://github.com/st3v3nmw/obsidian-spaced-repetition)
+- [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
+- [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)

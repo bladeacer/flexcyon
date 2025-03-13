@@ -113,6 +113,8 @@ Style Settings
 |   |   |   |   |--  Select background type
 |   |   |   |   |--  Width between each dot/line for grid/dotted background
 |   |   |   |   |--  Size of dots for dotted background
+|   |   |   |--  Layout
+|   |   |   |   |--  Select workspace layout
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -144,6 +146,8 @@ Style Settings
 |   |   |   |-- Source Mode Text
 |   |   |   |-- Live Preview Mode Text
 |   |   |   |-- Display status bar on mobile
+|   |   |   |-- Status bar font size
+|   |   |   |-- Enable alternate status bar style
 |   |   |-- Title Bar
 |   |   |   |-- Titlebar Button Effects
 |   |-- **Settings**
@@ -585,6 +589,18 @@ CSS Variable(s) targeted: `var(--flexcyon-editor-dot-size)`
 
 Default: 2 (px)
 
+___
+### Layout
+Configure the workspace layout.
+
+#### Select workspace layout
+CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout)`
+
+Default: none (class select)
+
+Options:
+- Cards Layout
+
 
 ___
 ## Callouts
@@ -698,7 +714,7 @@ ___
 ## Status Bar
 Defines CSS variables to configure the status bar
 
-Accepted Formats: s, text
+Accepted Formats: s, text, px
 
 ### Hide until hover
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover)`
@@ -744,6 +760,17 @@ Default: "LIVE"
 CSS Variable(s) targeted: `var(--flexcyon-status-mobile-enabled)`
 
 Default: false (class toggle)
+
+### Status bar font size
+CSS Variable(s) targeted: `var(--status-bar-font-size)`
+
+Default: 12.5 (px)
+
+### Enable alternate status bar style
+CSS Variable(s) targeted: `var(--flexcyon-status-alternate-enabled)`
+
+Default: false (class toggle)
+
 
 ___
 ## Title Bar

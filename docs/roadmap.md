@@ -21,13 +21,11 @@
 
 #### Other styling options
 - [ ] Heading number before each header (cssclasses, setting)
-- [ ] Powerlevel 10K ish status bar???
 - [ ] Rainbow table or smth
 - [ ] Markdown tree codeblock/callout css
 - [ ] Rainbow metadata icons
 
-- [ ] PDF export styling (class select)
-- [ ] Codeblock in codeblock styling 🤡
+<!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 - [ ] Add more Dataview styling options
 - [ ] Support more plugins
   - Could look at:
@@ -40,3 +38,9 @@
 - [ ] `publish.css`
 
 #### Next version changelog
+- Fixed double quotes checkbox background color
+- Added status bar font size option
+- Added alternate status bar style (inspired by Powerlevel10k)
+- Added support for Vault Statistics plugin
+- Minor styling tweaks for community item effects
+- Added card option for workspace layout 

@@ -69,6 +69,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task='"']:checked,
   li[data-task='"']>input:checked,
   li[data-task='"']>p>input:checked {
+    background-color: transparent;
     border: none;
     font-weight: 900;
 

@@ -23,6 +23,15 @@ body.theme-dark {
 
 }
 
+body:not(.is-phone) .community-item.is-selected, body:not(.is-phone) .community-item.is-selected:hover {
+    .community-item-downloads {
+        color: var(--color-base-00);
+    }
+    .community-item-updated {
+        color: var(--color-base-25);
+    }
+}
+
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
     div.checkbox-container {
         background-color: var(--color-base-05);
@@ -132,7 +141,23 @@ body.flexcyon-settings-comm-item-enabled {
         background-color: var(--color-base-25);
         color: var(--text-normal);
     }
+
+    .community-item-name {
+        width: 75%;
+        overflow-wrap: break-word;
+    }
+    .community-item-downloads, .community-modal-info-downloads {
+        color: rgba(var(--color-cyan-rgb), 0.9);
+    }
+    .community-item-updated {
+        color: rgba(var(--color-blue-rgb), var(--flexcyon-comm-item-opacity));
+    }
+    .community-modal-info-version {
+        color: rgba(var(--color-green-rgb), var(--flexcyon-comm-item-opacity));
+    }
 }
+
+
 
 body.flexcyon-settings-coloured-icons {
 

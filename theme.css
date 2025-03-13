@@ -529,6 +529,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::af
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
+  background-color: transparent;
   border: none;
   font-weight: 900;
 }
@@ -713,6 +714,13 @@ body.theme-dark .graph-controls .clickable-icon, body.theme-dark .clickable-icon
   padding: var(--size-2-2) var(--size-2-3);
 }
 
+body:not(.is-phone) .community-item.is-selected .community-item-downloads, body:not(.is-phone) .community-item.is-selected:hover .community-item-downloads {
+  color: var(--color-base-00);
+}
+body:not(.is-phone) .community-item.is-selected .community-item-updated, body:not(.is-phone) .community-item.is-selected:hover .community-item-updated {
+  color: var(--color-base-25);
+}
+
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container {
   background-color: var(--color-base-05);
   box-shadow: unset;
@@ -802,6 +810,19 @@ body.flexcyon-settings-comm-item-enabled div.community-item div.community-item-n
 body.flexcyon-settings-comm-item-enabled div.community-item.is-selected div.community-item-name span.flair.mod-pop {
   background-color: var(--color-base-25);
   color: var(--text-normal);
+}
+body.flexcyon-settings-comm-item-enabled .community-item-name {
+  width: 75%;
+  overflow-wrap: break-word;
+}
+body.flexcyon-settings-comm-item-enabled .community-item-downloads, body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
+  color: rgba(var(--color-cyan-rgb), 0.9);
+}
+body.flexcyon-settings-comm-item-enabled .community-item-updated {
+  color: rgba(var(--color-blue-rgb), var(--flexcyon-comm-item-opacity));
+}
+body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
+  color: rgba(var(--color-green-rgb), var(--flexcyon-comm-item-opacity));
 }
 
 body.flexcyon-settings-coloured-icons [aria-label^=Uninstall] {
@@ -2152,6 +2173,28 @@ body:where(.theme-dark) :is(.mod-left-split, .mod-right-split) .workspace-tab-he
   gap: 1px;
   padding-left: 0;
 }
+body:where(.theme-dark) .workspace-leaf-content {
+  width: unset;
+}
+
+body.flexcyon-workspace-card-layout .workspace-leaf-content:not([data-type=markdown]) {
+  margin: 10px;
+}
+body.flexcyon-workspace-card-layout .workspace-tab-container {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+  margin: 8px;
+}
+body.flexcyon-workspace-card-layout .workspace-split.mod-vertical.mod-root .workspace-tab-container {
+  border: transparent;
+}
+body.flexcyon-workspace-card-layout .workspace-tabs.mod-active .workspace-tab-container {
+  border: 2px solid var(--text-on-accent);
+}
+
+.workspace-leaf-content[data-type=file-properties] .pane-empty::before {
+  content: "No properties found.";
+}
 
 body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
   display: none;
@@ -2362,6 +2405,9 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
 }
 
+body.theme-dark {
+  --status-bar-font-size: 12.5px;
+}
 body.theme-dark div:has(.cm-vim-panel) + .status-bar {
   margin-bottom: 32.5px;
 }
@@ -2415,6 +2461,27 @@ body.flexcyon-status-hide-until-hover .status-bar:hover {
 
 body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
   display: block;
+}
+
+body.flexcyon-status-alternate-enabled .status-bar {
+  background-color: transparent;
+  border: none;
+  border-radius: 0px;
+  gap: 0px;
+  margin: 0;
+}
+body.flexcyon-status-alternate-enabled .status-bar-item {
+  background-color: var(--color-base-20);
+  transform: skewX(-22.5deg);
+  padding: 4px 8px;
+  border-radius: 0px;
+}
+body.flexcyon-status-alternate-enabled .status-bar :nth-of-type(2n):is(.status-bar-item) {
+  background-color: var(--color-base-05);
+}
+
+body:not(.is-fullscreen) .status-bar {
+  padding-right: 0;
 }
 
 body.theme-dark {
@@ -2995,6 +3062,20 @@ settings:
     type: variable-number
     default: 2
     format: px
+  - title: Layout
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Select workspace layout
+    description: Select the workspace layout
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Cards Layout
+        value: flexcyon-workspace-card-layout
 
   - title: Callouts
     type: heading
@@ -3152,6 +3233,16 @@ settings:
     quotes: true
   - title: Show status bar on mobile
     id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
+  - title: Status bar font size
+    id: status-bar-font-size
+    type: variable-number
+    default: 12.5
+    format: px
+  - title: Enable alternate status bar style
+    description: Enable alternate status bar style (inspired by Powerlevel10k)
+    id: flexcyon-status-alternate-enabled
     type: class-toggle
     default: false
 
@@ -3759,6 +3850,10 @@ body.theme-dark {
 
 div.dataview-error-box p.dataview-error-message {
   padding: 0px var(--flexcyon-dataview-horizontal-padding);
+}
+
+.obsidian-vault-statistics--item {
+  margin: 0px 0.25rem;
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

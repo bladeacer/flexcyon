@@ -240,7 +240,8 @@
 //         --h6-line-height: 1.5;
 
 //         /* ------------------------------ */
-//         --text-normal: var(--flexcyon-text-normal) --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
+//         --text-normal: var(--flexcyon-text-normal);
+//         --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
 //         --text-faint: var(--flexcyon-text-muted);
 //         /* ------------------------------ */
 //         --text-accent: var(--flexcyon-accent);
@@ -269,15 +270,42 @@
 //         // ------------------------------------------------------------------------------------------------- //
 //         --hr-color: color-mix(in hsl shorter hue, var(--text-faint), var(--background-modifier-border));
 
+//         page-break-after: auto;
+
+
 //     }
 
 //     body.flexcyon-pdf-export-inherit-theme {
 
 //         * {
-//             color: #d3d5d3;
-//             background-color: #191d28;
+//             color: var(--text-normal);
+//             background-color: var(--color-base-10);
 //         }
 
+//         h1 {
+//             color: var(--flexcyon-blue);
+//         }
 
+//         h2 {
+//             color: var(--flexcyon-purple-lilac);
+//         }
+
+//         h3 {
+//             color: var(--flexcyon-cyan);
+//         }
+
+//         h4 {
+//             color: var(--flexcyon-pink);
+//         }
+
+//         h5 {
+//             color: var(--flexcyon-lime-green);
+//         }
+
+//         h6 {
+//             color: var(--flexcyon-yellow);
+//         }
 //     }
+
+
 // }

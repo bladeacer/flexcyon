@@ -432,6 +432,20 @@ settings:
     type: variable-number
     default: 2
     format: px
+  - title: Layout
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Select workspace layout
+    description: Select the workspace layout
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Cards Layout
+        value: flexcyon-workspace-card-layout
 
   - title: Callouts
     type: heading
@@ -589,6 +603,16 @@ settings:
     quotes: true
   - title: Show status bar on mobile
     id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
+  - title: Status bar font size
+    id: status-bar-font-size
+    type: variable-number
+    default: 12.5
+    format: px
+  - title: Enable alternate status bar style
+    description: Enable alternate status bar style (inspired by Powerlevel10k)
+    id: flexcyon-status-alternate-enabled
     type: class-toggle
     default: false
 
@@ -849,16 +873,6 @@ settings:
 
 
  */
-
-  //  - title: PDF Export
-  //   type: class-select
-  //   id: theme-variant
-  //   allowEmpty: true
-  //   default: flexcyon-pdf-export-inherit-theme
-  //   options: 
-  //     - 
-  //       label: Inherit theme
-  //       value: flexcyon-pdf-export-inherit-theme
 
 body.theme-dark {
   div.pcr-app.visible {

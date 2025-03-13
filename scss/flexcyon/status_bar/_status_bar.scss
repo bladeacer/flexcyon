@@ -1,5 +1,7 @@
 body.theme-dark {
-  div:has(.cm-vim-panel)+.status-bar{
+  --status-bar-font-size: 12.5px;
+
+  div:has(.cm-vim-panel)+.status-bar {
     margin-bottom: 32.5px;
   }
 }
@@ -38,7 +40,6 @@ body.flexcyon-status-text-mode {
 
 }
 
-
 body.flexcyon-status-hide-until-hover .status-bar {
   font-size: 0.825rem;
   border: unset;
@@ -70,6 +71,32 @@ body.flexcyon-status-hide-until-hover .status-bar {
   }
 }
 
-body.is-mobile.flexcyon-status-mobile-enabled .status-bar{
+body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
   display: block;
+}
+
+body.flexcyon-status-alternate-enabled {
+  .status-bar {
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    gap: 0px;
+    margin: 0;
+  }
+
+  .status-bar-item {
+    background-color: var(--color-base-20);
+    transform: skewX(-22.5deg);
+    padding: 4px 8px;
+    border-radius: 0px;
+  }
+
+  .status-bar :nth-of-type(2n):is(.status-bar-item) {
+    background-color: var(--color-base-05);
+  }
+
+}
+
+body:not(.is-fullscreen) .status-bar {
+  padding-right: 0;
 }
