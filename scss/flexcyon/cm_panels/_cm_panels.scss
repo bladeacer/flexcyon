@@ -1,5 +1,4 @@
-body.flexcyon-vim-mode-text-enable {
-
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
     padding-top: 6px;
@@ -10,19 +9,21 @@ body.flexcyon-vim-mode-text-enable {
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     position: fixed;
-    color: var(--color-green);
-    height: 35px;
-    padding-left: 4px;
+    background-color: var(--color-base-05);
+    color: var(--text-muted);
+    height: 30px;
+    padding: 0px 8px;
   }
 
   .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-normal-text);
     position: fixed;
+    background-color: var(--color-base-05);
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
-    height: 35px;
-    padding-left: 4px;
-    color: var(--color-orange);
+    height: 30px;
+    color: var(--text-muted);
+    padding: 0px 8px;
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
@@ -33,6 +34,7 @@ body.flexcyon-vim-mode-text-enable {
   .cm-panels .cm-panel {
     background-color: var(--color-base-00);
     padding-top: 5px;
+    font-weight: 500;
   }
 
   .cm-panels input {
@@ -46,7 +48,71 @@ body.flexcyon-vim-mode-text-enable {
     content: var(--flexcyon-vim-command-text);
     bottom: var(--flexcyon-vim-bottom-positioning);
     padding-right: 4px;
+  }
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div {
+    color: var(--text-muted);
+  }
+
+  div.cm-vim-message {
+    color: var(--color-red) !important;
+    font-weight: bold;
+  }
+}
+
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
+  markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+    border-top: unset;
+    padding-top: 6px;
+  }
+
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-insert-text);
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    position: fixed;
+    color: var(--text-accent);
+    height: 30px;
+    padding: 0px 8px;
+  }
+
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-normal-text);
+    position: fixed;
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    height: 30px;
+    color: var(--color-purple);
+    padding: 0px 8px;
+  }
+
+  .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: 75px;
+  }
+
+  .cm-panels .cm-panel {
+    background-color: var(--color-base-00);
+    padding-top: 5px;
+    font-weight: 500;
+  }
+
+  .cm-panels input {
+    transform: translateY(-4px);
+    font-size: 0.9rem;
+    z-index: 16;
+  }
+
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+    content: var(--flexcyon-vim-command-text);
+    bottom: var(--flexcyon-vim-bottom-positioning);
     color: var(--color-blue);
+    padding-right: 4px;
+  }
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div {
+    color: var(--text-muted);
   }
 
   div.cm-vim-message {
@@ -54,6 +120,7 @@ body.flexcyon-vim-mode-text-enable {
     color: var(--color-red) !important;
     font-weight: bold;
   }
+
 }
 
 body.is-mobile.flexcyon-vim-mode-text-enable {
@@ -62,8 +129,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable {
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     position: fixed;
-    color: var(--color-green);
-    height: 35px;
+    height: 30px;
     padding-left: 4px;
   }
 
@@ -72,9 +138,41 @@ body.is-mobile.flexcyon-vim-mode-text-enable {
     position: fixed;
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
-    height: 35px;
+    height: 30px;
     padding-left: 4px;
-    color: var(--color-orange);
   }
 
+}
+
+
+body.flexcyon-status-style-geometric {
+
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    background-color: var(--color-base-25);
+    transform: skewX(-22.5deg);
+  }
+
+  .cm-panels .cm-panel {
+    background-color: var(--color-base-05);
+  }
+
+}
+
+body.theme-dark.flexcyon-status-style-card {
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    border-radius: 16px;
+    border: 2px solid var(--color-base-20);
+    margin: 0px 8px;
+  }
+
+  .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom .cm-panel.cm-vim-panel {
+    border-radius: 16px;
+    border: 2px solid var(--color-base-20);
+    margin: 0px 8px;
+  }
+  div:has(.cm-vim-panel)+.status-bar {
+    margin-bottom: 50px;
+  }
 }

@@ -958,17 +958,6 @@ body.theme-dark {
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
   text-underline-offset: 0.1em;
-  --flexcyon-vim-insert-text: "INSERT";
-  --flexcyon-vim-normal-text: "NORMAL";
-  --flexcyon-vim-command-text: "COMMAND";
-  --flexcyon-vim-bottom-positioning: -4px;
-  --flexcyon-vim-left-positioning: 12px;
-  --flexcyon-status-hide-until-hover-text: "Show status";
-  --flexcyon-status-hide-hover-duration: 0.35s;
-  --flexcyon-status-hide-hover-function: ease-out;
-  --flexcyon-status-reading-text: "READ";
-  --flexcyon-status-source-text: "SOURCE";
-  --flexcyon-status-live-text: "LIVE";
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
@@ -2177,19 +2166,57 @@ body:where(.theme-dark) .workspace-leaf-content {
   width: unset;
 }
 
+body.flexcyon-workspace-card-layout {
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
+}
 body.flexcyon-workspace-card-layout .workspace-leaf-content:not([data-type=markdown]) {
   margin: 10px;
 }
-body.flexcyon-workspace-card-layout .workspace-tab-container {
+body.flexcyon-workspace-card-layout .workspace-tab-container,
+body.flexcyon-workspace-card-layout .workspace-tab-header-container {
   border-radius: 16px;
   border: 2px solid var(--color-base-20);
   margin: 8px;
 }
 body.flexcyon-workspace-card-layout .workspace-split.mod-vertical.mod-root .workspace-tab-container {
-  border: transparent;
+  border: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout .workspace-tabs.mod-active .workspace-tab-container {
-  border: 2px solid var(--text-on-accent);
+  border: 2px solid rgba(var(--color-green-rgb), var(--dimmed));
+}
+body.flexcyon-workspace-card-layout .workspace-split.mod-right-split :last-child .workspace-tab-container {
+  margin-bottom: 38px;
+}
+body.flexcyon-workspace-card-layout .titlebar {
+  margin-top: 9px;
+  margin-right: 16px;
+}
+body.flexcyon-workspace-card-layout .workspace-ribbon {
+  background-color: var(--color-base-00);
+  border-right: none;
+}
+body.flexcyon-workspace-card-layout .workspace-ribbon.mod-left {
+  margin-top: 50px;
+  border: none;
+}
+body.flexcyon-workspace-card-layout .workspace-ribbon.mod-left::before {
+  background-color: var(--color-base-00);
+}
+body.flexcyon-workspace-card-layout .sidebar-toggle-button.mod-left {
+  margin: 8px 0px;
+  background-color: var(--color-base-00);
+}
+body.flexcyon-workspace-card-layout .sidebar-toggle-button.mod-right {
+  margin-top: -2px;
+}
+body.flexcyon-workspace-card-layout .side-dock-actions {
+  margin-top: 2px;
+}
+body.flexcyon-workspace-card-layout .workspace-split .workspace-tabs .workspace-tab-header-container-inner > .workspace-tab-header,
+body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
+  padding: 3px;
+  transform: translateX(8px);
 }
 
 .workspace-leaf-content[data-type=file-properties] .pane-empty::before {
@@ -2323,48 +2350,103 @@ body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-re
   border-bottom-width: 0px;
 }
 
-body.flexcyon-vim-mode-text-enable .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
 }
-body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-insert-text);
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
   position: fixed;
-  color: var(--color-green);
-  height: 35px;
-  padding-left: 4px;
+  background-color: var(--color-base-05);
+  color: var(--text-muted);
+  height: 30px;
+  padding: 0px 8px;
 }
-body.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-normal-text);
   position: fixed;
+  background-color: var(--color-base-05);
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
-  height: 35px;
-  padding-left: 4px;
-  color: var(--color-orange);
+  height: 30px;
+  color: var(--text-muted);
+  padding: 0px 8px;
 }
-body.flexcyon-vim-mode-text-enable .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: 75px;
 }
-body.flexcyon-vim-mode-text-enable .cm-panels .cm-panel {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel {
   background-color: var(--color-base-00);
   padding-top: 5px;
+  font-weight: 500;
 }
-body.flexcyon-vim-mode-text-enable .cm-panels input {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels input {
   transform: translateY(-4px);
   font-size: 0.9rem;
   z-index: 16;
 }
-body.flexcyon-vim-mode-text-enable .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
   content: var(--flexcyon-vim-command-text);
   bottom: var(--flexcyon-vim-bottom-positioning);
   padding-right: 4px;
-  color: var(--color-blue);
 }
-body.flexcyon-vim-mode-text-enable div.cm-vim-message {
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
+  color: var(--text-muted);
+}
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) div.cm-vim-message {
+  color: var(--color-red) !important;
+  font-weight: bold;
+}
+
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+  border-top: unset;
+  padding-top: 6px;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+  content: var(--flexcyon-vim-insert-text);
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  left: var(--flexcyon-vim-left-positioning);
+  position: fixed;
+  color: var(--text-accent);
+  height: 30px;
+  padding: 0px 8px;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+  content: var(--flexcyon-vim-normal-text);
+  position: fixed;
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  left: var(--flexcyon-vim-left-positioning);
+  height: 30px;
+  color: var(--color-purple);
+  padding: 0px 8px;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  left: 75px;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-panels .cm-panel {
+  background-color: var(--color-base-00);
+  padding-top: 5px;
+  font-weight: 500;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-panels input {
+  transform: translateY(-4px);
+  font-size: 0.9rem;
+  z-index: 16;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+  content: var(--flexcyon-vim-command-text);
+  bottom: var(--flexcyon-vim-bottom-positioning);
+  color: var(--color-blue);
+  padding-right: 4px;
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
+  color: var(--text-muted);
+}
+body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color div.cm-vim-message {
   color: var(--color-red) !important;
   font-weight: bold;
 }
@@ -2374,8 +2456,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vim
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
   position: fixed;
-  color: var(--color-green);
-  height: 35px;
+  height: 30px;
   padding-left: 4px;
 }
 body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ div + div + .cm-vimCursorLayer)::before {
@@ -2383,9 +2464,32 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:
   position: fixed;
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
-  height: 35px;
+  height: 30px;
   padding-left: 4px;
-  color: var(--color-orange);
+}
+
+body.flexcyon-status-style-geometric .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+body.flexcyon-status-style-geometric .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+  background-color: var(--color-base-25);
+  transform: skewX(-22.5deg);
+}
+body.flexcyon-status-style-geometric .cm-panels .cm-panel {
+  background-color: var(--color-base-05);
+}
+
+body.theme-dark.flexcyon-status-style-card .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+body.theme-dark.flexcyon-status-style-card .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+  margin: 0px 8px;
+}
+body.theme-dark.flexcyon-status-style-card .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom .cm-panel.cm-vim-panel {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+  margin: 0px 8px;
+}
+body.theme-dark.flexcyon-status-style-card div:has(.cm-vim-panel) + .status-bar {
+  margin-bottom: 50px;
 }
 
 body:where(.theme-dark) .backlink-pane .tree-item.search-result {
@@ -2407,9 +2511,30 @@ body:where(.theme-dark) .outgoing-link-pane div.tree-item-flair-outer > span {
 
 body.theme-dark {
   --status-bar-font-size: 12.5px;
+  --flexcyon-vim-insert-text: "INSERT";
+  --flexcyon-vim-normal-text: "NORMAL";
+  --flexcyon-vim-command-text: "COMMAND";
+  --flexcyon-vim-bottom-positioning: -4px;
+  --flexcyon-vim-left-positioning: 6px;
+  --flexcyon-status-hide-until-hover-text: "Show status";
+  --flexcyon-status-hide-hover-duration: 0.35s;
+  --flexcyon-status-hide-hover-function: ease-out;
+  --flexcyon-status-reading-text: "READ";
+  --flexcyon-status-source-text: "SOURCE";
+  --flexcyon-status-live-text: "LIVE";
 }
 body.theme-dark div:has(.cm-vim-panel) + .status-bar {
-  margin-bottom: 32.5px;
+  margin-bottom: 36px;
+}
+
+body.flexcyon-status-text-enable-color .plugin-editor-status[aria-label=Reading]::before {
+  color: var(--text-accent);
+}
+body.flexcyon-status-text-enable-color .plugin-editor-status[aria-label="Source mode"]::before {
+  color: var(--color-purple);
+}
+body.flexcyon-status-text-enable-color .plugin-editor-status[aria-label="Live Preview"]::before {
+  color: var(--color-blue);
 }
 
 body.flexcyon-status-text-mode .plugin-editor-status .status-bar-item-icon svg {
@@ -2420,15 +2545,12 @@ body.flexcyon-status-text-mode .plugin-editor-status::before {
 }
 body.flexcyon-status-text-mode .plugin-editor-status[aria-label=Reading]::before {
   content: var(--flexcyon-status-reading-text);
-  color: var(--text-accent);
 }
 body.flexcyon-status-text-mode .plugin-editor-status[aria-label="Source mode"]::before {
   content: var(--flexcyon-status-source-text);
-  color: var(--color-purple);
 }
 body.flexcyon-status-text-mode .plugin-editor-status[aria-label="Live Preview"]::before {
   content: var(--flexcyon-status-live-text);
-  color: var(--color-blue);
 }
 
 body.flexcyon-status-hide-until-hover .status-bar {
@@ -2463,25 +2585,31 @@ body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
   display: block;
 }
 
-body.flexcyon-status-alternate-enabled .status-bar {
+body.flexcyon-status-style-geometric .status-bar {
   background-color: transparent;
   border: none;
   border-radius: 0px;
   gap: 0px;
   margin: 0;
 }
-body.flexcyon-status-alternate-enabled .status-bar-item {
+body.flexcyon-status-style-geometric .status-bar-item {
   background-color: var(--color-base-20);
   transform: skewX(-22.5deg);
   padding: 4px 8px;
   border-radius: 0px;
 }
-body.flexcyon-status-alternate-enabled .status-bar :nth-of-type(2n):is(.status-bar-item) {
+body.flexcyon-status-style-geometric .status-bar :nth-of-type(2n):is(.status-bar-item) {
   background-color: var(--color-base-05);
 }
 
 body:not(.is-fullscreen) .status-bar {
   padding-right: 0;
+}
+
+body.flexcyon-status-style-card .status-bar {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+  margin: 4px 8px;
 }
 
 body.theme-dark {
@@ -3067,7 +3195,7 @@ settings:
     level: 6
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout
+    description: Select the workspace layout. Card layout adds solid rounded borders. Geometric layout is inspired by Powerlevel10k.
     type: class-select
     id: theme-variant
     allowEmpty: true
@@ -3240,9 +3368,23 @@ settings:
     type: variable-number
     default: 12.5
     format: px
-  - title: Enable alternate status bar style
-    description: Enable alternate status bar style (inspired by Powerlevel10k)
-    id: flexcyon-status-alternate-enabled
+  - title: Select status bar style
+    description: Geometric status bar style is inspired by Powerlevel10k
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Geometric
+        value: flexcyon-status-style-geometric
+      - 
+        label: Cards
+        value: flexcyon-status-style-card
+
+  - title: Enable status text color
+    id: flexcyon-status-text-enable-color
+    description: Affects text colors for vim mode status text as well.
     type: class-toggle
     default: false
 
@@ -3378,7 +3520,7 @@ settings:
     description: Vim mode text, new tab appearance, side dock icons, tooltip radius
   -
     title: Vim Mode Text
-    description: Text to display modes when using built-in vim bindings
+    description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
     type: heading
     level: 5
     collapsed: true
@@ -3391,7 +3533,7 @@ settings:
     id: flexcyon-vim-left-positioning
     type: variable-number
     description: How far from the left of the screen the current vim mode text is (as the number gets greater, the text moves to the right of the screen)
-    default: 12
+    default: 6
     format: px
   - title: Vim mode text bottom positioning
     id: flexcyon-vim-bottom-positioning

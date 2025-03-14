@@ -147,7 +147,8 @@ Style Settings
 |   |   |   |-- Live Preview Mode Text
 |   |   |   |-- Display status bar on mobile
 |   |   |   |-- Status bar font size
-|   |   |   |-- Enable alternate status bar style
+|   |   |   |-- Select status bar style
+|   |   |   |-- Enable status bar color
 |   |   |-- Title Bar
 |   |   |   |-- Titlebar Button Effects
 |   |-- **Settings**
@@ -766,8 +767,16 @@ CSS Variable(s) targeted: `var(--status-bar-font-size)`
 
 Default: 12.5 (px)
 
-### Enable alternate status bar style
-CSS Variable(s) targeted: `var(--flexcyon-status-alternate-enabled)`
+### Select status bar style
+CSS Variable(s) targeted: `var(--flexcyon-status-style-geometric), var(--felxcyon-status-style-card)`
+
+Default: none (class select)
+Options:
+- Geometric (inspired by Powerlevel10k)
+- Cards
+
+### Enable status text color
+CSS Variable(s) targeted: `var(--flexcyon-status-text-enable-color)`
 
 Default: false (class toggle)
 
@@ -911,7 +920,7 @@ Default: true (class toggle)
 ### Vim mode text left positioning
 CSS Variable(s) targeted: `var(--flexcyon-vim-mode-left-positioning)`
 
-Default: 12 (px)
+Default: 6 (px)
 
 ### Vim mode text bottom positioning
 CSS Variable(s) targeted: `var(--flexcyon-vim-mode-left-positioning)`
