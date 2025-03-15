@@ -595,13 +595,15 @@ ___
 Configure the workspace layout.
 
 #### Select workspace layout
-CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout)`
+CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout), var(--flexcyon-workspace-angled-layout)`
 
 Default: none (class select)
 
 Options:
 - Cards Layout
+- Angled Layout
 
+> Workspace layout changes may need app reload or restart to take effect
 
 ___
 ## Callouts
@@ -768,18 +770,17 @@ CSS Variable(s) targeted: `var(--status-bar-font-size)`
 Default: 12.5 (px)
 
 ### Select status bar style
-CSS Variable(s) targeted: `var(--flexcyon-status-style-geometric), var(--felxcyon-status-style-card)`
+CSS Variable(s) targeted: `var(--flexcyon-status-style-angled), var(--flexcyon-status-style-card)`
 
 Default: none (class select)
 Options:
-- Geometric (inspired by Powerlevel10k)
+- angled (inspired by Powerlevel10k)
 - Cards
 
 ### Enable status text color
 CSS Variable(s) targeted: `var(--flexcyon-status-text-enable-color)`
 
 Default: false (class toggle)
-
 
 ___
 ## Title Bar

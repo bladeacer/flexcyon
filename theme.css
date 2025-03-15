@@ -2179,11 +2179,15 @@ body.flexcyon-workspace-card-layout .workspace-tab-header-container {
   border: 2px solid var(--color-base-20);
   margin: 8px;
 }
+body.flexcyon-workspace-card-layout div.oz-folders-action-items.file-tree-header-fixed {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+}
 body.flexcyon-workspace-card-layout .workspace-split.mod-vertical.mod-root .workspace-tab-container {
   border: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout .workspace-tabs.mod-active .workspace-tab-container {
-  border: 2px solid rgba(var(--color-green-rgb), var(--dimmed));
+body.flexcyon-workspace-card-layout .workspace-tabs.mod-active .workspace-tab-header-container {
+  border: 2px solid var(--text-on-accent);
 }
 body.flexcyon-workspace-card-layout .workspace-split.mod-right-split :last-child .workspace-tab-container {
   margin-bottom: 38px;
@@ -2217,6 +2221,20 @@ body.flexcyon-workspace-card-layout .workspace-split .workspace-tabs .workspace-
 body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
   padding: 3px;
   transform: translateX(8px);
+}
+
+body.flexcyon-workspace-angled-layout .side-dock-actions,
+body.flexcyon-workspace-angled-layout .sidebar-toggle-button {
+  transform: skewY(-2.5deg);
+}
+body.flexcyon-workspace-angled-layout .nav-header,
+body.flexcyon-workspace-angled-layout div.oz-folders-action-items.file-tree-header-fixed,
+body.flexcyon-workspace-angled-layout div.oz-nav-buttons-right-block,
+body.flexcyon-workspace-angled-layout div.oz-nav-action-button,
+body.flexcyon-workspace-angled-layout .workspace-drawer-vault-actions,
+body.flexcyon-workspace-angled-layout .setting-item-control,
+body.flexcyon-workspace-angled-layout .workspace-tab-header-container-inner {
+  transform: skewX(-7.5deg);
 }
 
 .workspace-leaf-content[data-type=file-properties] .pane-empty::before {
@@ -2468,12 +2486,12 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:
   padding-left: 4px;
 }
 
-body.flexcyon-status-style-geometric .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-body.flexcyon-status-style-geometric .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+body.flexcyon-status-style-angled .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+body.flexcyon-status-style-angled .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   background-color: var(--color-base-25);
   transform: skewX(-22.5deg);
 }
-body.flexcyon-status-style-geometric .cm-panels .cm-panel {
+body.flexcyon-status-style-angled .cm-panels .cm-panel {
   background-color: var(--color-base-05);
 }
 
@@ -2585,20 +2603,20 @@ body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
   display: block;
 }
 
-body.flexcyon-status-style-geometric .status-bar {
+body.flexcyon-status-style-angled .status-bar {
   background-color: transparent;
   border: none;
   border-radius: 0px;
   gap: 0px;
   margin: 0;
 }
-body.flexcyon-status-style-geometric .status-bar-item {
+body.flexcyon-status-style-angled .status-bar-item {
   background-color: var(--color-base-20);
   transform: skewX(-22.5deg);
   padding: 4px 8px;
   border-radius: 0px;
 }
-body.flexcyon-status-style-geometric .status-bar :nth-of-type(2n):is(.status-bar-item) {
+body.flexcyon-status-style-angled .status-bar :nth-of-type(2n):is(.status-bar-item) {
   background-color: var(--color-base-05);
 }
 
@@ -3195,7 +3213,7 @@ settings:
     level: 6
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Geometric layout is inspired by Powerlevel10k.
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is inspired by Powerlevel10k.
     type: class-select
     id: theme-variant
     allowEmpty: true
@@ -3204,6 +3222,9 @@ settings:
       - 
         label: Cards Layout
         value: flexcyon-workspace-card-layout
+      - 
+        label: Angled Layout
+        value: flexcyon-workspace-angled-layout
 
   - title: Callouts
     type: heading
@@ -3369,15 +3390,15 @@ settings:
     default: 12.5
     format: px
   - title: Select status bar style
-    description: Geometric status bar style is inspired by Powerlevel10k
+    description: angled status bar style is inspired by Powerlevel10k
     type: class-select
     id: theme-variant
     allowEmpty: true
     default: none
     options: 
       - 
-        label: Geometric
-        value: flexcyon-status-style-geometric
+        label: angled
+        value: flexcyon-status-style-angled
       - 
         label: Cards
         value: flexcyon-status-style-card
@@ -3642,8 +3663,6 @@ settings:
     type: variable-number
     default: 8
     format: px
-
-
  */
 body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -3727,6 +3746,10 @@ body:where(.theme-dark) div.oz-folder-name.is-folder-active {
 }
 body:where(.theme-dark) div.oz-file-tree-header {
   background-color: var(--color-base-00);
+}
+body:where(.theme-dark) div.oz-folder-pane {
+  position: relative;
+  top: -4px;
 }
 body:where(.theme-dark) div.oz-folders-action-items.file-tree-header-fixed {
   border-radius: unset;

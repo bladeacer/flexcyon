@@ -70,12 +70,17 @@ body.flexcyon-workspace-card-layout {
         margin: 8px;
     }
 
+    div.oz-folders-action-items.file-tree-header-fixed {
+        border-radius: 16px;
+        border: 2px solid var(--color-base-20);
+    }
+
     .workspace-split.mod-vertical.mod-root .workspace-tab-container {
         border: var(--color-base-00);
     }
 
-    .workspace-tabs.mod-active .workspace-tab-container {
-        border: 2px solid rgba(var(--color-green-rgb), var(--dimmed));
+    .workspace-tabs.mod-active .workspace-tab-header-container {
+        border: 2px solid var(--text-on-accent);
     }
 
     .workspace-split.mod-right-split :last-child .workspace-tab-container {
@@ -117,6 +122,23 @@ body.flexcyon-workspace-card-layout {
     .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner>.workspace-tab-header {
         padding: 3px;
         transform: translateX(8px);
+    }
+}
+
+body.flexcyon-workspace-angled-layout {
+    .side-dock-actions,
+    .sidebar-toggle-button {
+        transform: skewY(-2.5deg);
+    }
+
+    .nav-header,
+    div.oz-folders-action-items.file-tree-header-fixed,
+    div.oz-nav-buttons-right-block,
+    div.oz-nav-action-button,
+    .workspace-drawer-vault-actions,
+    .setting-item-control,
+    .workspace-tab-header-container-inner {
+        transform: skewX(-7.5deg);
     }
 }
 

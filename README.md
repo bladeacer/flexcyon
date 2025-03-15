@@ -26,8 +26,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 ## Features
 #### What this theme has
 - vim mode status (when using builtin vim keybinds)
-<!-- - Status bar options like Powerlevel10k inspired status bar styling -->
-- Status bar styling options 
+- Status bar options like Powerlevel10k inspired status bar styling
 - Smiley toggle icons and other options for settings
 - ASCII art in new empty tabs
 - subtle opacity effects for UI elements

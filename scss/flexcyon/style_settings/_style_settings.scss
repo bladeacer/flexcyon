@@ -437,7 +437,7 @@ settings:
     level: 6
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Geometric layout is inspired by Powerlevel10k.
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is inspired by Powerlevel10k.
     type: class-select
     id: theme-variant
     allowEmpty: true
@@ -446,6 +446,9 @@ settings:
       - 
         label: Cards Layout
         value: flexcyon-workspace-card-layout
+      - 
+        label: Angled Layout
+        value: flexcyon-workspace-angled-layout
 
   - title: Callouts
     type: heading
@@ -611,15 +614,15 @@ settings:
     default: 12.5
     format: px
   - title: Select status bar style
-    description: Geometric status bar style is inspired by Powerlevel10k
+    description: angled status bar style is inspired by Powerlevel10k
     type: class-select
     id: theme-variant
     allowEmpty: true
     default: none
     options: 
       - 
-        label: Geometric
-        value: flexcyon-status-style-geometric
+        label: angled
+        value: flexcyon-status-style-angled
       - 
         label: Cards
         value: flexcyon-status-style-card
@@ -884,8 +887,6 @@ settings:
     type: variable-number
     default: 8
     format: px
-
-
  */
 
 body.theme-dark {

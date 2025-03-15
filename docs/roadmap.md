@@ -38,13 +38,3 @@
 - [ ] `publish.css`
 
 #### Next version changelog
-- Fixed double quotes checkbox background color
-- Added support for Vault Statistics plugin
-- Minor styling tweaks for community item effects
-- Added card option for workspace layout 
-  - Need app reload or restart if you wish to change back to the default layout
-- Vim mode status text and status bar mode (reading/live preview etc) text now has a color option:
-  - Toggled off by default
-- Add card, geometric (inspired by Powerlevel10k) styles for status bar
-  - Affects vim mode status text as well
-- Added status bar font size option
