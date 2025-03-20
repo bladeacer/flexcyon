@@ -115,6 +115,7 @@ Style Settings
 |   |   |   |   |--  Size of dots for dotted background
 |   |   |   |--  Layout
 |   |   |   |   |--  Select workspace layout
+|   |   |   |   |--  Enable TUI add-on for cards layout
 |   |   |-- Callouts
 |   |   |   |-- Callout Icon Right padding
 |   |   |   |-- First Codeblock Margin Top
@@ -477,7 +478,7 @@ Accepted formats: HEX, %, x.y
 ### Table border color
 CSS Variable(s) targeted: `var(--table-border-color)`
 
-Default: #6f768555
+Default: #6f768566
 
 ### Width of table in reading mode
 CSS Variable(s) targeted: `var(--flexcyon-table-reading-mode-width)`
@@ -604,6 +605,11 @@ Options:
 - Angled Layout
 
 > Workspace layout changes may need app reload or restart to take effect
+
+#### Enable TUI add-on for cards layout
+CSS Variable(s) targeted: `var(--flexcyon-workspace-cards-tui-ext)`
+
+Default: true (class toggle)
 
 ___
 ## Callouts

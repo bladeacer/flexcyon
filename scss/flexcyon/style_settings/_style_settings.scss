@@ -313,7 +313,7 @@ settings:
     type: variable-color
     opacity: true
     format: hex
-    default: "#6f768555"
+    default: "#6f768566"
   - title: Width of table in reading mode
     id: flexcyon-table-reading-mode-width
     type: variable-text
@@ -449,6 +449,11 @@ settings:
       - 
         label: Angled Layout
         value: flexcyon-workspace-angled-layout
+  - title: Enable TUI add-on for cards layout
+    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
+    id: flexcyon-workspace-cards-tui-ext
+    type: class-toggle
+    default: true
 
   - title: Callouts
     type: heading

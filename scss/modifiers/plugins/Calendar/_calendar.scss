@@ -1,0 +1,23 @@
+body.theme-dark {
+    table.calendar {
+        thead tr th {
+            color: var(--link-color);
+            text-transform: capitalize;
+        }
+    }
+    [id=calendar-container] {
+        scale: 105%;
+        * {
+            font-size: var(--font-ui-small);
+        }
+    }
+    h3.title span.year {
+        color: var(--color-text-title);
+    }
+    div.day.today {
+        font-weight: bold;
+    }
+    .reset-button {
+        transform: translateY(2px);
+    }
+}

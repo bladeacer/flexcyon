@@ -1,7 +1,7 @@
 body.theme-dark {
     --flexcyon-fc-dimmed-items-opacity: 0.89;
     div.fc-daygrid-body div div a {
-        color: var(--color-blue);
+        color: var(--text-normal);
         opacity: var(--flexcyon-fc-dimmed-items-opacity);
     }
     div.fc-daygrid-body td.fc-day-today div div a {
@@ -33,5 +33,15 @@ body.theme-dark {
     }
     .fc .fc-list-empty {
         background-color: var(--color-base-10);
+    }
+    .fc .fc-toolbar-title {
+        font-size: 1.2rem;
+        color: var(--text-normal);
+    }
+    .fc .fc-toolbar-chunk {
+        padding: 0px 8px;
+    }
+    .fc {
+        font-size: var(--font-ui-small);
     }
 }

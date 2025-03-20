@@ -42,3 +42,77 @@ body.flexcyon-h5-underline-enabled h5 {
 body.flexcyon-h6-underline-enabled h6 {
     border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
 }
+
+.headings-indicator-all,
+.headings-indicator-h1 {
+    h1:not(:hover)::before,
+    .HyperMD-header-1::before {
+        position: relative;
+        content: "h1";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}
+
+.headings-indicator-all,
+.headings-indicator-h2 {
+    h2:not(:hover)::before,
+    .HyperMD-header-2::before {
+        position: relative;
+        content: "h2";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}
+
+.headings-indicator-all,
+.headings-indicator-h3 {
+    h3:not(:hover)::before,
+    .HyperMD-header-3::before {
+        position: relative;
+        content: "h3";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}
+
+.headings-indicator-all,
+.headings-indicator-h4 {
+    h4:not(:hover)::before,
+    .HyperMD-header-4::before {
+        position: relative;
+        content: "h4";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}
+
+
+.headings-indicator-all,
+.headings-indicator-h5 {
+    h5:not(:hover)::before,
+    .HyperMD-header-5::before {
+        position: relative;
+        content: "h5";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}
+
+
+.headings-indicator-all,
+.headings-indicator-h6 {
+    h6:not(:hover)::before,
+    .HyperMD-header-6::before {
+        position: relative;
+        content: "h6";
+        color: var(--text-faint);
+        font-size: var(--font-ui-medium);
+        padding-right: 8px;
+    }
+}

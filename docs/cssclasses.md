@@ -69,6 +69,7 @@
     - [Vertical LTR in callouts](#vertical-ltr-in-callouts)
 - [Dotted editor background](#dotted-editor-background)
 - [Grid editor background](#grid-editor-background)
+- [Heading indicators](#heading-indicators)
 
 ## Callouts
 Defines utilities for callouts.
@@ -616,4 +617,104 @@ cssclasses:
 ---
 
 Your content will render as usual
+```
+
+___
+## Heading indicators
+Add a heading indicator for all headings. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-all
+---
+
+# I will have an indicator before me
+## I will have an indicator before me
+### I will have an indicator before me
+#### I will have an indicator before me
+##### I will have an indicator before me
+###### I will have an indicator before me
+```
+
+### Heading indicators - h1
+Add a heading indicator for heading 1s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h1
+---
+
+# I will have an indicator before me
+Others headings display as usual
+```
+
+
+### Heading indicators - h2
+Add a heading indicator for heading 2s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h2
+---
+
+## I will have an indicator before me
+Others headings display as usual
+```
+
+
+### Heading indicators - h3
+Add a heading indicator for heading 3s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h3
+---
+
+### I will have an indicator before me
+Others headings display as usual
+```
+
+
+### Heading indicators - h4
+Add a heading indicator for heading 4s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h4
+---
+
+#### I will have an indicator before me
+Others headings display as usual
+```
+
+
+### Heading indicators - h5
+Add a heading indicator for heading 5s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h5
+---
+
+##### I will have an indicator before me
+Others headings display as usual
+```
+
+### Heading indicators - h6
+Add a heading indicator for heading 6s. Will appear in reading, editing and source mode.
+
+Usage:
+```md
+cssclasses:
+    - headings-indicator-h6
+---
+
+###### I will have an indicator before me
+Others headings display as usual
 ```

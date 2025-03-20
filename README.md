@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="https://img.shields.io/badge/downloads-400+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
+    <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
+</p>
+
 ## About Flexcyon
 A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 
@@ -55,6 +61,7 @@ The following plugins/snippets are officially supported:
 - [Spaced Repetition by Stephen Mwangi](https://github.com/st3v3nmw/obsidian-spaced-repetition)
 - [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
 - [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
+<!-- - [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin) -->
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)

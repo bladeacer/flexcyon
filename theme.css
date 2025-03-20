@@ -186,6 +186,72 @@ body.flexcyon-h6-underline-enabled h6 {
   border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
 }
 
+.headings-indicator-all h1:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-1::before,
+.headings-indicator-h1 h1:not(:hover)::before,
+.headings-indicator-h1 .HyperMD-header-1::before {
+  position: relative;
+  content: "h1";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
+.headings-indicator-all h2:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-2::before,
+.headings-indicator-h2 h2:not(:hover)::before,
+.headings-indicator-h2 .HyperMD-header-2::before {
+  position: relative;
+  content: "h2";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
+.headings-indicator-all h3:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-3::before,
+.headings-indicator-h3 h3:not(:hover)::before,
+.headings-indicator-h3 .HyperMD-header-3::before {
+  position: relative;
+  content: "h3";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
+.headings-indicator-all h4:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-4::before,
+.headings-indicator-h4 h4:not(:hover)::before,
+.headings-indicator-h4 .HyperMD-header-4::before {
+  position: relative;
+  content: "h4";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
+.headings-indicator-all h5:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-5::before,
+.headings-indicator-h5 h5:not(:hover)::before,
+.headings-indicator-h5 .HyperMD-header-5::before {
+  position: relative;
+  content: "h5";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
+.headings-indicator-all h6:not(:hover)::before,
+.headings-indicator-all .HyperMD-header-6::before,
+.headings-indicator-h6 h6:not(:hover)::before,
+.headings-indicator-h6 .HyperMD-header-6::before {
+  position: relative;
+  content: "h6";
+  color: var(--text-faint);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+}
+
 body.theme-dark {
   --flexcyon-accent-hover: var(--flexcyon-yellow);
   --flexcyon-palette-lilac-hover: color-mix(in hsl shorter hue, var(--flexcyon-purple-lilac), var(--flexcyon-base-grey-dark));
@@ -816,13 +882,13 @@ body.flexcyon-settings-comm-item-enabled .community-item-name {
   overflow-wrap: break-word;
 }
 body.flexcyon-settings-comm-item-enabled .community-item-downloads, body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
-  color: rgba(var(--color-cyan-rgb), 0.9);
+  color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
 }
 body.flexcyon-settings-comm-item-enabled .community-item-updated {
-  color: rgba(var(--color-blue-rgb), var(--flexcyon-comm-item-opacity));
+  color: rgba(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
-  color: rgba(var(--color-green-rgb), var(--flexcyon-comm-item-opacity));
+  color: rgba(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 
 body.flexcyon-settings-coloured-icons [aria-label^=Uninstall] {
@@ -922,7 +988,7 @@ body:where(.theme-dark) {
   --table-background: var(--background-primary);
   --table-header-background-hover: var(--table-background);
   --table-header-size: larger;
-  --table-border-color: #6f768555;
+  --table-border-color: #6f768566;
 }
 
 body.theme-dark {
@@ -936,6 +1002,19 @@ body:is(.theme-dark) table:not(.table-view-table) {
 
 body:is(.theme-dark) .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
   border: 1px solid var(--table-header-border-color);
+}
+
+body.theme-dark {
+  --table-header-background: var(--table-background);
+  --table-row-alt-background: var(--color-base-20);
+  --table-column-alt-background: var(--table-background);
+}
+body.theme-dark thead tr th {
+  background-color: var(--table-column-alt-background);
+}
+body.theme-dark .cm-html-embed tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2),
+body.theme-dark .markdown-rendered tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2) {
+  background-color: var(--table-row-alt-background);
 }
 
 body:where(.theme-dark) {
@@ -2173,15 +2252,18 @@ body.flexcyon-workspace-card-layout {
 body.flexcyon-workspace-card-layout .workspace-leaf-content:not([data-type=markdown]) {
   margin: 10px;
 }
+body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
+  border-radius: 16px;
+  border: 2px solid var(--color-base-20);
+}
+body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container .metadata-content {
+  padding: 0px 8px;
+}
 body.flexcyon-workspace-card-layout .workspace-tab-container,
 body.flexcyon-workspace-card-layout .workspace-tab-header-container {
   border-radius: 16px;
   border: 2px solid var(--color-base-20);
   margin: 8px;
-}
-body.flexcyon-workspace-card-layout div.oz-folders-action-items.file-tree-header-fixed {
-  border-radius: 16px;
-  border: 2px solid var(--color-base-20);
 }
 body.flexcyon-workspace-card-layout .workspace-split.mod-vertical.mod-root .workspace-tab-container {
   border: var(--color-base-00);
@@ -2239,6 +2321,208 @@ body.flexcyon-workspace-angled-layout .workspace-tab-header-container-inner {
 
 .workspace-leaf-content[data-type=file-properties] .pane-empty::before {
   content: "No properties found.";
+}
+
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
+  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading {
+  position: absolute;
+  top: -15px;
+  left: 32px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading * {
+  color: rgba(var(--color-purple-rgb), 0.9);
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading div.collapse-indicator,
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading .metadata-properties-title {
+  background-color: var(--color-base-10);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-content {
+  margin-top: 4px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
+  content: "Files";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-blue-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
+  content: "Alternate File Tree";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-purple-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
+  content: "Bookmarks";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-cyan-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
+  content: "All Properties";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-pink-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
+  content: "Outline";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-green-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
+  content: "Full Calendar | Sidebar";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-yellow-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
+  content: "Backlinks";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-orange-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-red-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
+  content: "Review Queue";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-red-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
+  content: "Properties";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-blue-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
+  content: "Outgoing Links";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-purple-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
+  content: "Graph View";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-cyan-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
+  content: "Full Calendar";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-pink-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
+  content: "Local Graph";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-green-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
+  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+}
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
+  content: "Calendar";
+  position: absolute;
+  top: 56px;
+  left: 32px;
+  z-index: 1;
+  color: rgba(var(--color-yellow-rgb), 0.85);
+  background-color: var(--color-base-00);
+  padding: 0px 8px;
 }
 
 body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
@@ -3089,7 +3373,7 @@ settings:
     type: variable-color
     opacity: true
     format: hex
-    default: "#6f768555"
+    default: "#6f768566"
   - title: Width of table in reading mode
     id: flexcyon-table-reading-mode-width
     type: variable-text
@@ -3225,6 +3509,11 @@ settings:
       - 
         label: Angled Layout
         value: flexcyon-workspace-angled-layout
+  - title: Enable TUI add-on for cards layout
+    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
+    id: flexcyon-workspace-cards-tui-ext
+    type: class-toggle
+    default: true
 
   - title: Callouts
     type: heading
@@ -3924,11 +4213,31 @@ body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-prev
   padding-bottom: 0;
 }
 
+body.theme-dark table.calendar thead tr th {
+  color: var(--link-color);
+  text-transform: capitalize;
+}
+body.theme-dark [id=calendar-container] {
+  scale: 105%;
+}
+body.theme-dark [id=calendar-container] * {
+  font-size: var(--font-ui-small);
+}
+body.theme-dark h3.title span.year {
+  color: var(--color-text-title);
+}
+body.theme-dark div.day.today {
+  font-weight: bold;
+}
+body.theme-dark .reset-button {
+  transform: translateY(2px);
+}
+
 body.theme-dark {
   --flexcyon-fc-dimmed-items-opacity: 0.89;
 }
 body.theme-dark div.fc-daygrid-body div div a {
-  color: var(--color-blue);
+  color: var(--text-normal);
   opacity: var(--flexcyon-fc-dimmed-items-opacity);
 }
 body.theme-dark div.fc-daygrid-body td.fc-day-today div div a {
@@ -3957,6 +4266,16 @@ body.theme-dark a.fc-timegrid-event.fc-event-today {
 }
 body.theme-dark .fc .fc-list-empty {
   background-color: var(--color-base-10);
+}
+body.theme-dark .fc .fc-toolbar-title {
+  font-size: 1.2rem;
+  color: var(--text-normal);
+}
+body.theme-dark .fc .fc-toolbar-chunk {
+  padding: 0px 8px;
+}
+body.theme-dark .fc {
+  font-size: var(--font-ui-small);
 }
 
 .sr-bg-green {

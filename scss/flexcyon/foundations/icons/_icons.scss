@@ -147,13 +147,13 @@ body.flexcyon-settings-comm-item-enabled {
         overflow-wrap: break-word;
     }
     .community-item-downloads, .community-modal-info-downloads {
-        color: rgba(var(--color-cyan-rgb), 0.9);
+        color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
     }
     .community-item-updated {
-        color: rgba(var(--color-blue-rgb), var(--flexcyon-comm-item-opacity));
+        color: rgba(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
     }
     .community-modal-info-version {
-        color: rgba(var(--color-green-rgb), var(--flexcyon-comm-item-opacity));
+        color: rgba(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
     }
 }
 

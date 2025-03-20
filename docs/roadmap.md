@@ -1,40 +1,31 @@
 ## Roadmap
 
 #### Misc
-- [x] Style empty new tab flexcyon
-- [x] Add the theme to BRAT
-- [x] Release the theme
-- [x] Add style settings support
-  - Add option to select between showing status bar, hide status bar until hover on smaller devices or hide status bar until hover
-  <!-- - Support toggle showing of certain status bar for plugins like Pomodoro and Typing Speed etc (hide specific stuff, kinda pain to do) -->
-
-- [ ] Change thumbnail image, looks goofy
-- [ ] Review flexcyon modded plugins and themes
-- [ ] Add mobile support (partial)
 
 #### Style Settings and stuff
-- [x] Add callout utilities 
-- [x] Add more CSS classes
-  - The grid and dot background as a cssclass :) (.class-name <rest of code> type structure)
+- [ ] Add more CSS classes
 
 #### Plugins/snippets
-
-#### Other styling options
-- [ ] Heading number before each header (cssclasses, setting)
-- [ ] Rainbow table or smth
-- [ ] Markdown tree codeblock/callout css
-- [ ] Rainbow metadata icons
-
-<!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 - [ ] Add more Dataview styling options
+- [ ] Add support for core Canvas plugin
 - [ ] Support more plugins
-  - Could look at:
-    - Templater
+  - Could also look at:
     - Tasks
-    - Calendar
     - Excalidraw
     - QuickAdd (override default css variables)
     - Vertical Tabs etc
 - [ ] `publish.css`
 
+#### Other styling options
+- [ ] Markdown tree codeblock/callout css
+- [ ] Rainbow metadata icons
+
+<!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
+
 #### Next version changelog
+- TUI inspired add-on to cards layout
+- Changes to table styling
+- Added cssclasses for heading indicators
+- Added support for Calendar plugin
+- Tweaked exisitng styling for Full Calendar plugin
+- Tweaked community item styling

@@ -4,7 +4,7 @@ body:where(.theme-dark) {
     --table-background: var(--background-primary);
     --table-header-background-hover: var(--table-background);
     --table-header-size: larger;
-    --table-border-color: #6f768555;
+    --table-border-color: #6f768566;
 }
 body.theme-dark {
     --flexcyon-table-reading-mode-width: 100%;
@@ -17,4 +17,18 @@ body:is(.theme-dark) table:not(.table-view-table) {
 
 body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
     border: 1px solid var(--table-header-border-color);
+}
+
+body.theme-dark {
+    --table-header-background: var(--table-background);
+    --table-row-alt-background: var(--color-base-20);
+    --table-column-alt-background: var(--table-background);
+
+    thead tr th {
+        background-color: var(--table-column-alt-background);
+    }
+    .cm-html-embed tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2), 
+    .markdown-rendered tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2) {
+        background-color:  var(--table-row-alt-background);
+    }
 }
