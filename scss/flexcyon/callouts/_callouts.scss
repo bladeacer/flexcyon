@@ -407,3 +407,20 @@ body.is-mobile {
         visibility: hidden;
     }
 }
+
+
+div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout-metadata*="tilt-title"] {
+    .callout-title {
+        transform: skewX(-7.5deg);
+    }
+}
+
+div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout-metadata*="tilt-content"] {
+    .callout-content {
+        transform: skewX(-7.5deg);
+    }
+}
+
+

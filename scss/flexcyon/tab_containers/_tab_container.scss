@@ -134,15 +134,22 @@ body.flexcyon-workspace-angled-layout {
 
     .side-dock-actions,
     .sidebar-toggle-button {
-        transform: skewY(-2.5deg);
+        transform: skewY(-1.5deg);
     }
 
+    .modal-container {
+        transform: skewX(-1deg);
+    }
+
+    .titlebar-button-container.mod-right,
+    .workspace-tab-header-tab-list span.clickable-icon svg,
+    span.clickable-icon[aria-label="New tab"] svg,
     .nav-header,
     div.oz-folders-action-items.file-tree-header-fixed,
     div.oz-nav-buttons-right-block,
     div.oz-nav-action-button,
     .workspace-drawer-vault-actions,
-    .setting-item-control,
+    button,
     .workspace-tab-header-container-inner {
         transform: skewX(-7.5deg);
     }

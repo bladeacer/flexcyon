@@ -45,3 +45,11 @@ body.theme-dark {
         font-size: var(--font-ui-small);
     }
 }
+
+
+body.flexcyon-workspace-angled-layout {
+    .oz-explorer-container .oz-file-tree-files div,
+    div.oz-folder-line {
+        transform: skewX(-5deg);
+    }
+}

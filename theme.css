@@ -776,14 +776,17 @@ body.theme-dark .clickable-icon:hover {
   opacity: unset;
   scale: var(--upsize);
 }
-body.theme-dark .graph-controls .clickable-icon, body.theme-dark .clickable-icon.side-dock-ribbon-action {
+body.theme-dark .graph-controls .clickable-icon,
+body.theme-dark .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
 }
 
-body:not(.is-phone) .community-item.is-selected .community-item-downloads, body:not(.is-phone) .community-item.is-selected:hover .community-item-downloads {
+body:not(.is-phone) .community-item.is-selected .community-item-downloads,
+body:not(.is-phone) .community-item.is-selected:hover .community-item-downloads {
   color: var(--color-base-00);
 }
-body:not(.is-phone) .community-item.is-selected .community-item-updated, body:not(.is-phone) .community-item.is-selected:hover .community-item-updated {
+body:not(.is-phone) .community-item.is-selected .community-item-updated,
+body:not(.is-phone) .community-item.is-selected:hover .community-item-updated {
   color: var(--color-base-25);
 }
 
@@ -794,8 +797,9 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbo
 }
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container::after {
   content: ":(";
-  width: max-content;
-  height: max-content;
+  transform: translateY(-0.5px);
+  width: fit-content;
+  height: fit-content;
   background-color: inherit;
   color: var(--color-red);
   box-shadow: unset;
@@ -881,7 +885,8 @@ body.flexcyon-settings-comm-item-enabled .community-item-name {
   width: 75%;
   overflow-wrap: break-word;
 }
-body.flexcyon-settings-comm-item-enabled .community-item-downloads, body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
+body.flexcyon-settings-comm-item-enabled .community-item-downloads,
+body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
   color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
 }
 body.flexcyon-settings-comm-item-enabled .community-item-updated {
@@ -940,10 +945,21 @@ body.is-mobile.theme-dark .vertical-tab-content {
   background-color: var(--color-base-05);
 }
 
+body.flexcyon-workspace-angled-layout .collapse-icon.is-collapsed svg.svg-icon {
+  transform: rotate(calc(var(--direction) * -1 * 90deg)) skewX(-5deg);
+}
+body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
+  transform: skewX(7.5deg);
+}
+
 body:where(.theme-dark) {
   --graph-line: var(--flexcyon-base-blue-03);
   --graph-node-unresolved: var(--flexcyon-red-salmon);
   --graph-node-tag: var(--flexcyon-purple-lilac);
+}
+
+body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
+  transform: skewY(-5deg);
 }
 
 body:where(.theme-dark) {
@@ -1005,9 +1021,10 @@ body:is(.theme-dark) .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
 }
 
 body.theme-dark {
-  --table-header-background: var(--table-background);
-  --table-row-alt-background: var(--color-base-20);
+  --table-header-background: var(--color-base-20);
+  --table-row-alt-background: var(--color-base-15);
   --table-column-alt-background: var(--table-background);
+  --table-add-button-background: var(--color-base-15);
 }
 body.theme-dark thead tr th {
   background-color: var(--table-column-alt-background);
@@ -1156,9 +1173,33 @@ body:where(.theme-dark) .search-result:not(.is-collapsed) .search-result-file-ma
   font-weight: bold;
 }
 
+body.flexcyon-prompt-align-bottom-left .modal-container .prompt {
+  top: 30vh;
+  left: 0px;
+}
+
+body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
+  top: 30vh;
+}
+
+body.flexcyon-prompt-align-center-left .modal-container .prompt {
+  left: 0px;
+}
+
+body.flexcyon-prompt-align-top-left .modal-container .prompt {
+  left: 0px;
+  top: 0px;
+}
+
+body.flexcyon-prompt-align-top-center .modal-container .prompt {
+  top: 0px;
+}
+
 body:where(.theme-dark) .cm-gutterElement.cm-active {
   /* Active line changes colour */
   color: rgba(var(--color-green-rgb), 60%);
+  font-weight: 900;
+  font-size: var(--font-ui-small);
 }
 
 /* Modifications to not display properties in reading mode */
@@ -2192,6 +2233,16 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
   visibility: hidden;
 }
 
+div.callout[data-callout-metadata*=tilt-all] .callout-title,
+div.callout[data-callout-metadata*=tilt-title] .callout-title {
+  transform: skewX(-7.5deg);
+}
+
+div.callout[data-callout-metadata*=tilt-all] .callout-content,
+div.callout[data-callout-metadata*=tilt-content] .callout-content {
+  transform: skewX(-7.5deg);
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -2307,14 +2358,20 @@ body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-r
 
 body.flexcyon-workspace-angled-layout .side-dock-actions,
 body.flexcyon-workspace-angled-layout .sidebar-toggle-button {
-  transform: skewY(-2.5deg);
+  transform: skewY(-1.5deg);
 }
+body.flexcyon-workspace-angled-layout .modal-container {
+  transform: skewX(-1deg);
+}
+body.flexcyon-workspace-angled-layout .titlebar-button-container.mod-right,
+body.flexcyon-workspace-angled-layout .workspace-tab-header-tab-list span.clickable-icon svg,
+body.flexcyon-workspace-angled-layout span.clickable-icon[aria-label="New tab"] svg,
 body.flexcyon-workspace-angled-layout .nav-header,
 body.flexcyon-workspace-angled-layout div.oz-folders-action-items.file-tree-header-fixed,
 body.flexcyon-workspace-angled-layout div.oz-nav-buttons-right-block,
 body.flexcyon-workspace-angled-layout div.oz-nav-action-button,
 body.flexcyon-workspace-angled-layout .workspace-drawer-vault-actions,
-body.flexcyon-workspace-angled-layout .setting-item-control,
+body.flexcyon-workspace-angled-layout button,
 body.flexcyon-workspace-angled-layout .workspace-tab-header-container-inner {
   transform: skewX(-7.5deg);
 }
@@ -2640,6 +2697,10 @@ body.flexcyon-minimalist-tree .tree-item-children {
 }
 body.flexcyon-minimalist-tree .nav-file-title {
   opacity: 0.85;
+}
+
+body.flexcyon-workspace-angled-layout .nav-folder-title-content {
+  transform: skewX(-5deg);
 }
 
 body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
@@ -3462,6 +3523,28 @@ settings:
     type: variable-number
     default: 70
     format: vh
+  - title: Prompt alignment
+    description: Configure the alignment of prompt such as the command prompt and Omnisearch search prompt
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Top left
+        value: flexcyon-prompt-align-top-left
+      - 
+        label: Top center
+        value: flexcyon-prompt-align-top-center
+      -
+        label: Center left
+        value: flexcyon-prompt-align-center-left
+      -
+        label: Bottom left
+        value: flexcyon-prompt-align-bottom-left
+      -
+        label: Bottom center 
+        value: flexcyon-prompt-align-bottom-center
 
   - title: Editor Background
     type: heading
@@ -4233,6 +4316,10 @@ body.theme-dark .reset-button {
   transform: translateY(2px);
 }
 
+body.flexcyon-workspace-angled-layout #calendar-container > div > div {
+  transform: skewX(-7.5deg);
+}
+
 body.theme-dark {
   --flexcyon-fc-dimmed-items-opacity: 0.89;
 }
@@ -4276,6 +4363,11 @@ body.theme-dark .fc .fc-toolbar-chunk {
 }
 body.theme-dark .fc {
   font-size: var(--font-ui-small);
+}
+
+body.flexcyon-workspace-angled-layout .oz-explorer-container .oz-file-tree-files div,
+body.flexcyon-workspace-angled-layout div.oz-folder-line {
+  transform: skewX(-5deg);
 }
 
 .sr-bg-green {

@@ -402,6 +402,28 @@ settings:
     type: variable-number
     default: 70
     format: vh
+  - title: Prompt alignment
+    description: Configure the alignment of prompt such as the command prompt and Omnisearch search prompt
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Top left
+        value: flexcyon-prompt-align-top-left
+      - 
+        label: Top center
+        value: flexcyon-prompt-align-top-center
+      -
+        label: Center left
+        value: flexcyon-prompt-align-center-left
+      -
+        label: Bottom left
+        value: flexcyon-prompt-align-bottom-left
+      -
+        label: Bottom center 
+        value: flexcyon-prompt-align-bottom-center
 
   - title: Editor Background
     type: heading

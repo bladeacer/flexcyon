@@ -106,6 +106,7 @@ Style Settings
 |   |   |   |   |--  Prompt width
 |   |   |   |   |--  Prompt max width
 |   |   |   |   |--  Prompt max height
+|   |   |   |   |--  Prompt alignment
 |   |   |   |--  Animations
 |   |   |   |   |--  Animation Type
 |   |   |   |   |--  Animation Duration
@@ -556,6 +557,17 @@ Default: 80 (vw)
 CSS Variable(s) targeted: `var(--prompt-max-height)`
 
 Default: 70 (vh)
+
+### Prompt alignment
+CSS Variable(s) targeted: `var(--flexcyon-prompt-align-bottom-left), var(--flexcyon-prompt-align-bottom-center), var(--flexcyon-prompt-align-center-left), var(--flexcyon-prompt-align-top-left), var(--flexcyon-prompt-align-top-center)`
+
+Default: none (class select)
+Options:
+  - Top left
+  - Top center
+  - Center left
+  - Bottom left
+  - Bottom center
 
 ___
 

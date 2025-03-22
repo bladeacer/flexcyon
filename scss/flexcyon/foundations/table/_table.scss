@@ -1,18 +1,19 @@
 // The code snippets in this file are derived from the Halcyon theme 
- //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+//- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body:where(.theme-dark) {
     --table-background: var(--background-primary);
     --table-header-background-hover: var(--table-background);
     --table-header-size: larger;
     --table-border-color: #6f768566;
 }
+
 body.theme-dark {
     --flexcyon-table-reading-mode-width: 100%;
 }
 
 body:is(.theme-dark) table:not(.table-view-table) {
     width: var(--flexcyon-table-reading-mode-width);
-    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width) )/ 2);
+    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width))/ 2);
 }
 
 body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
@@ -20,15 +21,17 @@ body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
 }
 
 body.theme-dark {
-    --table-header-background: var(--table-background);
-    --table-row-alt-background: var(--color-base-20);
+    --table-header-background: var(--color-base-20);
+    --table-row-alt-background: var(--color-base-15);
     --table-column-alt-background: var(--table-background);
+    --table-add-button-background: var(--color-base-15);
 
     thead tr th {
         background-color: var(--table-column-alt-background);
     }
-    .cm-html-embed tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2), 
-    .markdown-rendered tbody tr:nth-of-type(2n+1) > td:nth-of-type(2n+2) {
-        background-color:  var(--table-row-alt-background);
+
+    .cm-html-embed tbody tr:nth-of-type(2n+1)>td:nth-of-type(2n+2),
+    .markdown-rendered tbody tr:nth-of-type(2n+1)>td:nth-of-type(2n+2) {
+        background-color: var(--table-row-alt-background);
     }
 }

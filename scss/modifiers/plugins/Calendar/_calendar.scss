@@ -5,19 +5,30 @@ body.theme-dark {
             text-transform: capitalize;
         }
     }
+
     [id=calendar-container] {
         scale: 105%;
+
         * {
             font-size: var(--font-ui-small);
         }
     }
+
     h3.title span.year {
         color: var(--color-text-title);
     }
+
     div.day.today {
         font-weight: bold;
     }
+
     .reset-button {
         transform: translateY(2px);
+    }
+}
+
+body.flexcyon-workspace-angled-layout {
+    #calendar-container>div>div {
+        transform: skewX(-7.5deg);
     }
 }

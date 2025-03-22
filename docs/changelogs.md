@@ -1,4 +1,23 @@
 ## Changelog
+### Version 0.3.0 TUI Layout
+- Added TUI inspired add-on to cards layout
+  - Enabled by default
+- Changes to table styling
+- Added cssclasses for heading indicators, callout metadata for tilting callout title and content
+- Added support for Calendar plugin
+- Tweaked exisitng styling for Full Calendar plugin
+- Tweaked community item styling
+- Fixed smiley icons alignment issue
+- Angled layout applies to more UI elements now
+- Active line gutter should now be more visible
+- Added prompt alignment options, configure using style settings:
+  - Top left
+  - Top center
+  - Center left
+  - Bottom left
+  - Bottom center
+- See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 
+
 ### Version 0.2.2 Layout styling
 - Fixed double quotes checkbox background color
 - Added support for Vault Statistics plugin

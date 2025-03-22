@@ -61,6 +61,10 @@
         - [Capitalize Content](#capitalize-content)
         - [Capitalize All](#capitalize-all)
         - ---------------------------------------------------
+        - [Tilt Title](#tilt-title)
+        - [Tilt Content](#tilt-content)
+        - [Tilt All](#tilt-all)
+        - ---------------------------------------------------
         - [Combined usage](#combined-usage)
         
 - [Tategaki](#tategaki)
@@ -541,6 +545,33 @@ Usage:
 > Content will be capitalized
 ```
 
+___
+#### Tilt title
+Callout metadata: "tilt-title"
+
+Usage: 
+```md
+> [!info|tilt-title] I will be tilted in live preview/reading mode
+> Content is shown as usual
+```
+
+#### Tilt content
+Callout metadata: "tilt-content"
+
+Usage: 
+```md
+> [!info|tilt-content] I will be display as usual
+> Content will be titlted
+```
+
+#### Tilt all
+Callout metadata: "tilt-all"
+
+Usage:
+```md
+> [!info|tilted-all] I will be tilted
+> Content will be tilted
+```
 
 ___
 ### Combined usage

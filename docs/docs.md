@@ -3,7 +3,7 @@
 ### Style Settings
 https://github.com/bladeacer/flexcyon/tree/master/docs/style_settings.md
 
-### CSS Classes and other documentation (not implemented yet)
+### CSS Classes and other documentation 
 https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md
 
 ### Checkboxes

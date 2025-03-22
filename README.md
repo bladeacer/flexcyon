@@ -61,7 +61,7 @@ The following plugins/snippets are officially supported:
 - [Spaced Repetition by Stephen Mwangi](https://github.com/st3v3nmw/obsidian-spaced-repetition)
 - [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
 - [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
-<!-- - [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin) -->
+- [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin)
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
@@ -101,6 +101,7 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
 
 #### Snippets
-- @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
-- @Tuck on the Obsidian Members' Group Discord for options to change link color
+- `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
+- `@Tuck` on the Obsidian Members' Group Discord for options to change link color
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
+- `@TundraMoonlight` for the TUI inspired layout

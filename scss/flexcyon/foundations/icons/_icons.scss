@@ -17,16 +17,20 @@ body.theme-dark {
             scale: var(--upsize);
         }
     }
-    .graph-controls .clickable-icon, .clickable-icon.side-dock-ribbon-action {
+
+    .graph-controls .clickable-icon,
+    .clickable-icon.side-dock-ribbon-action {
         padding: var(--size-2-2) var(--size-2-3);
     }
 
 }
 
-body:not(.is-phone) .community-item.is-selected, body:not(.is-phone) .community-item.is-selected:hover {
+body:not(.is-phone) .community-item.is-selected,
+body:not(.is-phone) .community-item.is-selected:hover {
     .community-item-downloads {
         color: var(--color-base-00);
     }
+
     .community-item-updated {
         color: var(--color-base-25);
     }
@@ -41,8 +45,9 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
 
     div.checkbox-container::after {
         content: ':(';
-        width: max-content;
-        height: max-content;
+        transform: translateY(-0.5px);
+        width: fit-content;
+        height: fit-content;
         background-color: inherit;
         color: var(--color-red);
         box-shadow: unset;
@@ -146,12 +151,16 @@ body.flexcyon-settings-comm-item-enabled {
         width: 75%;
         overflow-wrap: break-word;
     }
-    .community-item-downloads, .community-modal-info-downloads {
+
+    .community-item-downloads,
+    .community-modal-info-downloads {
         color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
     }
+
     .community-item-updated {
         color: rgba(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
     }
+
     .community-modal-info-version {
         color: rgba(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
     }
@@ -230,4 +239,14 @@ body.flexcyon-titlebar-button-effects {
 
 body.is-mobile.theme-dark .vertical-tab-content {
     background-color: var(--color-base-05);
+}
+
+
+body.flexcyon-workspace-angled-layout {
+    .collapse-icon.is-collapsed svg.svg-icon {
+        transform: rotate(calc(var(--direction) * -1 * 90deg)) skewX(-5deg);
+    }
+    .tree-item-self .collapse-icon svg {
+        transform: skewX(7.5deg);
+    }
 }

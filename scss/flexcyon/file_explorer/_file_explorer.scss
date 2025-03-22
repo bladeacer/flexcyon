@@ -173,3 +173,10 @@ body.flexcyon-minimalist-tree {
         opacity: 0.85;
     }
 }
+
+
+body.flexcyon-workspace-angled-layout {
+    .nav-folder-title-content {
+        transform: skewX(-5deg);
+    }
+}

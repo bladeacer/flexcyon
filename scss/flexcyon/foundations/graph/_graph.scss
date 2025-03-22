@@ -6,3 +6,9 @@ body:where(.theme-dark) {
     --graph-node-tag: var(--flexcyon-purple-lilac);
 }
 
+
+body.flexcyon-workspace-angled-layout {
+    div.graph-controls.is-close {
+        transform: skewY(-5deg);
+    }
+}
