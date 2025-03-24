@@ -64,6 +64,44 @@
         - [Tilt Title](#tilt-title)
         - [Tilt Content](#tilt-content)
         - [Tilt All](#tilt-all)
+
+        - [Italic Title](#italic-title)
+        - [Italic Content](#italic-content)
+        - [Italic All](#italic-all)
+
+        - [Oblique Title](#oblique-title)
+        - [Oblique Content](#oblique-content)
+        - [Oblique All](#oblique-all)
+
+        - [Dashed Title](#dashed-title)
+        - [Dashed Content](#dashed-content)
+        - [Dashed All](#dashed-all)
+
+        - [Overline Title](#overline-title)
+        - [Overline Content](#overline-content)
+        - [Overline All](#overline-all)
+
+        - [Underline Title](#underline-title)
+        - [Underline Content](#underline-content)
+        - [Underline All](#underline-all)
+
+        - [Strikethrough Title](#strikethrough-title)
+        - [Strikethrough Content](#strikethrough-content)
+        - [Strikethrough All](#strikethrough-all)
+
+        - ---------------------------------------------------
+        - [Font Weight Title](#font-weight-title)
+        - [Font Weight Content](#font-weight-content)
+        - [Font Weight All](#font-weight-all)
+
+        - ---------------------------------------------------
+        - [Heading 1 Title](#heading-1-title)
+        - [Heading 2 Title](#heading-2-title)
+        - [Heading 3 Title](#heading-3-title)
+        - [Heading 4 Title](#heading-4-title)
+        - [Heading 5 Title](#heading-5-title)
+        - [Heading 6 Title](#heading-6-title)
+
         - ---------------------------------------------------
         - [Combined usage](#combined-usage)
         
@@ -71,8 +109,8 @@
     - [Tategaki in callouts](#tategaki-in-callouts)
 - [Vertical LTR](#vertical-ltr)
     - [Vertical LTR in callouts](#vertical-ltr-in-callouts)
-- [Dotted editor background](#dotted-editor-background)
-- [Grid editor background](#grid-editor-background)
+- [Dotted background](#dotted-background)
+- [Grid background](#grid-background)
 - [Heading indicators](#heading-indicators)
 
 ## Callouts
@@ -469,7 +507,7 @@ Callout metadata: "uppercase-title"
 
 Usage: 
 ```md
-> [!info|uppercase-title] I will be uppercase in live preview/reading mode
+> [!info|uppercase-title] I will be uppercase in live preview and reading mode/reading mode
 > Content is shown as usual
 ```
 
@@ -496,7 +534,7 @@ Callout metadata: "lowercase-title"
 
 Usage: 
 ```md
-> [!info|lowercase-title] I will be lowercase in live preview/reading mode
+> [!info|lowercase-title] I will be lowercase in live preview and reading mode/reading mode
 > Content is shown as usual
 ```
 
@@ -523,7 +561,7 @@ Callout metadata: "caps-title"
 
 Usage: 
 ```md
-> [!info|caps-title] I will be capitalized in live preview/reading mode
+> [!info|caps-title] I will be capitalized in live preview and reading mode/reading mode
 > Content is shown as usual
 ```
 
@@ -551,7 +589,7 @@ Callout metadata: "tilt-title"
 
 Usage: 
 ```md
-> [!info|tilt-title] I will be tilted in live preview/reading mode
+> [!info|tilt-title] I will be tilted in live preview and reading mode/reading mode
 > Content is shown as usual
 ```
 
@@ -574,7 +612,276 @@ Usage:
 ```
 
 ___
+#### Italic title
+Callout metadata: "italic-title"
+
+Usage: 
+```md
+> [!info|italic-title] I will be italic in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Italic content
+Callout metadata: "italic-content"
+
+Usage: 
+```md
+> [!info|italic-content] I will be display as usual
+> Content will be italic
+```
+
+#### Italic all
+Callout metadata: "italic-all"
+
+Usage:
+```md
+> [!info|italic-all] I will be italic
+> Content will be italic
+```
+
+___
+#### Oblique title
+Callout metadata: "oblique-title"
+
+Usage: 
+```md
+> [!info|oblique-title] I will be oblique in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Oblique content
+Callout metadata: "oblique-content"
+
+Usage: 
+```md
+> [!info|oblique-content] I will be display as usual
+> Content will be oblique
+```
+
+#### Oblique all
+Callout metadata: "oblique-all"
+
+Usage:
+```md
+> [!info|oblique-all] I will be oblique
+> Content will be oblique
+```
+
+___
+#### Dashed title
+Callout metadata: "dashed-title"
+
+Usage: 
+```md
+> [!info|dashed-title] I will be dashed in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Dashed content
+Callout metadata: "dashed-content"
+
+Usage: 
+```md
+> [!info|dashed-content] I will be display as usual
+> Content will be dashed
+```
+
+#### Dashed all
+Callout metadata: "dashed-all"
+
+Usage:
+```md
+> [!info|dashed-all] I will be dashed
+> Content will be dashed
+```
+
+___
+#### Overline title
+Callout metadata: "overline-title"
+
+Usage: 
+```md
+> [!info|overline-title] I will be overline in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Overline content
+Callout metadata: "overline-content"
+
+Usage: 
+```md
+> [!info|overline-content] I will be display as usual
+> Content will be overline
+```
+
+#### Overline all
+Callout metadata: "overline-all"
+
+Usage:
+```md
+> [!info|overline-all] I will be overline
+> Content will be overline
+```
+
+___
+#### Underline title
+Callout metadata: "underline-title"
+
+Usage: 
+```md
+> [!info|underline-title] I will be underline in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Underline content
+Callout metadata: "underline-content"
+
+Usage: 
+```md
+> [!info|underline-content] I will be display as usual
+> Content will be underline
+```
+
+#### Underline all
+Callout metadata: "underline-all"
+
+Usage:
+```md
+> [!info|underline-all] I will be underline
+> Content will be underline
+```
+
+___
+#### Strikethrough title
+Callout metadata: "line-through-title"
+
+Usage: 
+```md
+> [!info|line-through-title] I will be strikethrough in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Strikethrough content
+Callout metadata: "line-through-content"
+
+Usage: 
+```md
+> [!info|line-through-content] I will be display as usual
+> Content will be strikethrough
+```
+
+#### Strikethrough all
+Callout metadata: "line-through-all"
+
+Usage:
+```md
+> [!info|line-through-all] I will be strikethrough
+> Content will be strikethrough
+```
+
+___
+#### Font weight title
+Callout metadata: "w-`value`-title"
+
+Accepted values for `value`:
+- 100 to 900 (in increments of 100)
+- bold
+- bolder
+- lighter
+
+Usage: 
+```md
+> [!info|w-900-title] I will have a font weight of 900 in live preview and reading mode/reading mode
+> Content is shown as usual
+```
+
+#### Font weight content
+Callout metadata: "w-`value`-content"
+
+Accepted values for `value`:
+- 100 to 900 (in increments of 100)
+- bold
+- bolder
+- lighter
+
+Usage: 
+```md
+> [!info|w-bold-content] I will be display as usual
+> Content will have a bold font weight
+```
+
+#### Font weight all
+Callout metadata: "w-`value`-content"
+
+Accepted values for `value`:
+- 100 to 900 (in increments of 100)
+- bold
+- bolder
+- lighter
+
+Usage:
+```md
+> [!info|w-lighter-all] I will have a lighter font weight 
+> Content will have a lighter font weight
+```
+___
+#### Heading 1 Title
+Callout metadata: "h1-title"
+
+Usage:
+```md
+> [!info|h1-title] I will display inheriting the style of Heading 1s in this theme
+> Content will display as usual
+```
+
+#### Heading 2 Title
+Callout metadata: "h2-title"
+
+Usage:
+```md
+> [!info|h2-title] I will display inheriting the style of Heading 2s in this theme
+> Content will display as usual
+```
+
+#### Heading 3 Title
+Callout metadata: "h3-title"
+
+Usage:
+```md
+> [!info|h3-title] I will display inheriting the style of Heading 3s in this theme
+> Content will display as usual
+```
+
+#### Heading 4 Title
+Callout metadata: "h4-title"
+
+Usage:
+```md
+> [!info|h4-title] I will display inheriting the style of Heading 4s in this theme
+> Content will display as usual
+```
+
+#### Heading 5 Title
+Callout metadata: "h5-title"
+
+Usage:
+```md
+> [!info|h5-title] I will display inheriting the style of Heading 5s in this theme
+> Content will display as usual
+```
+
+#### Heading 6 Title
+Callout metadata: "h6-title"
+
+Usage:
+```md
+> [!info|h6-title] I will display inheriting the style of Heading 6s in this theme
+> Content will display as usual
+```
+
+___
 ### Combined usage
+E.g. 
 ```md
 > [!info|ltr-content rtl-title transparent-bg center-content] RTL Title
 > LTR and centered content, transparent background
@@ -597,7 +904,7 @@ Your content will render as vertical rtl  (text goes from top right to bottom ri
 ```
 
 ### Tategaki in callouts
-There is also a callout metadata provider for tategaki (which works in live preview)
+There is also a callout metadata provider for tategaki (which works in live preview and reading mode)
 
 Usage:
 ```md
@@ -626,7 +933,7 @@ Usage:
 > The contents will be displayed as vertical ltr
 ```
 
-### Dotted editor background
+### Dotted background
 Adds repeating dots to your editor background. Size can be adjusted in style settings.
 
 Usage:
@@ -638,7 +945,15 @@ cssclasses:
 Your content will render as usual
 ```
 
-### Grid editor background
+### Dotted background in callouts
+There is also a callout metadata provider for dotted background (which works in live preview and reading mode)
+
+```md
+>[!note|bg-grid] I will display as usual
+> I will have a dotted background
+```
+
+### Grid background
 Adds a grid to your editor background. Size can be adjusted in style settings.
 
 Usage:
@@ -648,6 +963,14 @@ cssclasses:
 ---
 
 Your content will render as usual
+```
+
+### Grid background in callouts
+There is also a callout metadata provider for grid background (which works in live preview and reading mode)
+
+```md
+>[!note|bg-grid] I will display as usual
+> I will have a grid background
 ```
 
 ___

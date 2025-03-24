@@ -134,128 +134,100 @@ div.callout[data-callout-metadata*="center-content"] {
     }
 }
 
+@mixin callout-dir($dir) {
 
-div.callout[data-callout-metadata*="rtl-all"],
-div.callout[data-callout-metadata*="rtl-title"] {
+    div.callout[data-callout-metadata*="#{$dir}-all"],
+    div.callout[data-callout-metadata*="#{$dir}-title"] {
 
-    div.callout-title *,
-    div.callout-title {
-        direction: rtl !important;
-        unicode-bidi: bidi-override;
-    }
-}
-
-div.callout[data-callout-metadata*="rtl-all"],
-div.callout[data-callout-metadata*="rtl-content"] {
-    div.callout-content {
-        * {
-            direction: rtl !important;
+        div.callout-title *,
+        div.callout-title {
+            direction: $dir !important;
             unicode-bidi: bidi-override;
         }
-
-        code[class*="language-"],
-        pre[class*="language-"] {
-            text-align: right;
-        }
-
     }
-}
 
-div.callout[data-callout-metadata*="ltr-all"],
-div.callout[data-callout-metadata*="ltr-title"] {
+    div.callout[data-callout-metadata*="#{$dir}-all"],
+    div.callout[data-callout-metadata*="#{$dir}-content"] {
+        div.callout-content {
+            * {
+                direction: $dir !important;
+                unicode-bidi: bidi-override;
+            }
 
-    div.callout-title *,
-    div.callout-title {
-        direction: ltr !important;
-        unicode-bidi: bidi-override;
-    }
-}
+            code[class*="language-"],
+            pre[class*="language-"] {
+                @if $dir =="rtl" {
+                    text-align: right;
+                }
 
-div.callout[data-callout-metadata*="ltr-all"],
-div.callout[data-callout-metadata*="ltr-content"] {
-    div.callout-content * {
-        * {
-            direction: rtl !important;
-            unicode-bidi: bidi-override;
-        }
+                @else {
+                    text-align: left;
+                }
+            }
 
-        code[class*="language-"],
-        pre[class*="language-"] {
-            text-align: left;
         }
     }
 }
 
-div.callout[data-callout-metadata*="uppercase-all"],
-div.callout[data-callout-metadata*="uppercase-title"] {
-    div.callout-title .callout-title-inner {
-        text-transform: uppercase;
-    }
-}
+@include callout-dir(rtl);
+@include callout-dir(ltr);
 
-div.callout[data-callout-metadata*="uppercase-all"],
-div.callout[data-callout-metadata*="uppercase-content"] {
-    div.callout-content * {
-        text-transform: uppercase;
+@mixin callout-text-transform($transform) {
 
-        * {
-            text-transform: uppercase;
-        }
+    div.callout[data-callout-metadata*="#{$transform}-all"],
+    div.callout[data-callout-metadata*="#{$transform}-title"] {
+        div.callout-title .callout-title-inner {
+            @if $transform =="caps" {
+                text-transform: capitalize;
+            }
 
-        code[class*="language-"],
-        pre[class*="language-"] {
-            text-transform: uppercase;
+            @else {
+                text-transform: $transform;
+            }
         }
     }
-}
 
-div.callout[data-callout-metadata*="lowercase-all"],
-div.callout[data-callout-metadata*="lowercase-title"] {
-    div.callout-title .callout-title-inner {
-        text-transform: lowercase;
-    }
-}
+    div.callout[data-callout-metadata*="#{$transform}-all"],
+    div.callout[data-callout-metadata*="#{$transform}-content"] {
+        div.callout-content * {
+            @if $transform =="caps" {
+                text-transform: capitalize;
+            }
 
-div.callout[data-callout-metadata*="lowercase-all"],
-div.callout[data-callout-metadata*="lowercase-content"] {
-    div.callout-content * {
-        text-transform: lowercase;
+            @else {
+                text-transform: $transform;
+            }
 
-        * {
-            text-transform: lowercase;
-        }
+            * {
+                @if $transform =="caps" {
+                    text-transform: capitalize;
+                }
 
-        code[class*="language-"],
-        pre[class*="language-"] {
-            text-transform: lowercase;
-        }
-    }
-}
+                @else {
+                    text-transform: $transform;
+                }
+            }
 
-div.callout[data-callout-metadata*="caps-all"],
-div.callout[data-callout-metadata*="caps-title"] {
-    div.callout-title .callout-title-inner {
-        text-transform: capitalize;
-    }
-}
+            code[class*="language-"],
+            pre[class*="language-"] {
+                @if $transform =="caps" {
+                    text-transform: capitalize;
+                }
 
-div.callout[data-callout-metadata*="caps-all"],
-div.callout[data-callout-metadata*="caps-content"] {
-    div.callout-content * {
-        text-transform: capitalize;
-
-        * {
-            text-transform: capitalize;
-        }
-
-        code[class*="language-"],
-        pre[class*="language-"] {
-            text-transform: capitalize;
+                @else {
+                    text-transform: $transform;
+                }
+            }
         }
     }
 }
+
+@include callout-text-transform(uppercase);
+@include callout-text-transform(lowercase);
+@include callout-text-transform(caps);
 
 @mixin callout-ext-color($color-name, $color-var) {
+
     div.callout[data-callout-metadata*="all-#{$color-name}"],
     div.callout[data-callout-metadata*="bg-#{$color-name}"] {
         background-color: var(--#{$color-var}-bg);
@@ -408,7 +380,6 @@ body.is-mobile {
     }
 }
 
-
 div.callout[data-callout-metadata*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-title"] {
     .callout-title {
@@ -424,3 +395,99 @@ div.callout[data-callout-metadata*="tilt-content"] {
 }
 
 
+@mixin callout-font-style($style) {
+    div.callout[data-callout-metadata*="#{$style}-all"],
+    div.callout[data-callout-metadata*="#{$style}-title"] {
+        .callout-title {
+            font-style: $style;
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$style}-all"],
+    div.callout[data-callout-metadata*="#{$style}-content"] {
+        .callout-content {
+            font-style: $style;
+        }
+    }
+}
+
+@include callout-font-style(italic);
+@include callout-font-style(oblique);
+
+@mixin callout-text-decor($callout-name) {
+
+    div.callout[data-callout-metadata*="#{$callout-name}-all"],
+    div.callout[data-callout-metadata*="#{$callout-name}-content"] {
+        .callout-content {
+            text-decoration: #{$callout-name};
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$callout-name}-all"],
+    div.callout[data-callout-metadata*="#{$callout-name}-title"] {
+        .callout-title {
+            text-decoration: #{$callout-name};
+        }
+    }
+}
+
+@include callout-text-decor(dashed);
+@include callout-text-decor(dotted);
+@include callout-text-decor(double);
+@include callout-text-decor(overline);
+@include callout-text-decor(underline);
+@include callout-text-decor(line-through);
+
+@mixin callout-title-heading($heading_no) {
+    div.callout[data-callout-metadata*="#{$heading_no}-title"] {
+        .callout-title {
+            font-size: var(--#{$heading_no}-size);
+            color: var(--#{$heading_no}-color);
+        }
+        .callout-icon svg {
+            color: var(--#{$heading_no}-color);
+        }
+    }
+}
+
+@include callout-title-heading(h1);
+@include callout-title-heading(h2);
+@include callout-title-heading(h3);
+@include callout-title-heading(h4);
+@include callout-title-heading(h5);
+@include callout-title-heading(h6);
+
+@mixin callout-text-font-weight($font-weight) {
+    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+    div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
+        .callout-title {
+            font-weight: $font-weight;
+        }
+    }
+
+    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+    div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
+        .callout-content {
+            font-weight: $font-weight;
+        }
+    }
+}
+
+@include callout-text-font-weight(100);
+@include callout-text-font-weight(200);
+@include callout-text-font-weight(300);
+@include callout-text-font-weight(400);
+@include callout-text-font-weight(500);
+@include callout-text-font-weight(600);
+@include callout-text-font-weight(700);
+@include callout-text-font-weight(800);
+@include callout-text-font-weight(900);
+@include callout-text-font-weight(bold);
+@include callout-text-font-weight(bolder);
+@include callout-text-font-weight(lighter);
+
+div.callout[data-callout-metadata*="bg-grid"] .callout-content,
+div.callout[data-callout-metadata*="bg-dots"] .callout-content {
+    margin-top: 16px;
+    padding: 0px 8px;
+}

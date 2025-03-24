@@ -39,7 +39,11 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - a dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
+- A [plethora of cssclasses and callout customisation options](https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md)
+- Workspace Layouts like card layouts, TUI inspired add-on
+<!-- - Configure left and right sidebar background images -->
 - Customisable with Style Settings
+
 
 ![](./docs/screenshots/ascii_checkboxes1.png)
 
@@ -47,7 +51,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
 - a light mode colour scheme :)
-- alternate checkboxes (I do not use them)
+- alternate checkboxes
 - embedded fonts, svgs
 
 #### Supported plugins/snippets
@@ -102,6 +106,11 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 
 #### Snippets
 - `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
-- `@Tuck` on the Obsidian Members' Group Discord for options to change link color
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
-- `@TundraMoonlight` for the TUI inspired layout
+- `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
+
+#### Ideas, Feedback
+- `@Tuck` on the Obsidian Members' Group Discord for options to change link color
+- `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
+- `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
+- `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities

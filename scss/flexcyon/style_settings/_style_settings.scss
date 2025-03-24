@@ -190,6 +190,36 @@ settings:
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
     default: true
+  - title: Heading 1 font size
+    id: h1-size
+    type: variable-number
+    default: 1.802
+    format: em
+  - title: Heading 2 font size
+    id: h2-size
+    type: variable-number
+    default: 1.602
+    format: em
+  - title: Heading 3 font size
+    id: h3-size
+    type: variable-number
+    default: 1.424
+    format: em
+  - title: Heading 4 font size
+    id: h4-size
+    type: variable-number
+    default: 1.266
+    format: em
+  - title: Heading 5 font size
+    id: h5-size
+    type: variable-number
+    default: 1.125
+    format: em
+  - title: Heading 6 font size
+    id: h6-size
+    type: variable-number
+    default: 1
+    format: em
   - title: Heading 1 font weight
     id: h1-weight
     type: variable-number
@@ -789,7 +819,7 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Vim mode text, new tab appearance, side dock icons, tooltip radius
+    description: Vim mode text, new tab appearance, side dock icons, tooltip radius, background images
   -
     title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
@@ -914,6 +944,38 @@ settings:
     type: variable-number
     default: 8
     format: px
+
+  - title: Background images
+    type: heading
+    description: Configure background images in the left and right sidebars
+    level: 5
+    collapsed: true
+  - title: Left background image url
+    id: flexcyon-bg-image-sidebar-left-url
+    type: variable-text
+    default: url("")
+  - title: Right background image url
+    id: flexcyon-bg-image-sidebar-right-url
+    type: variable-text
+    default: url("")
+  - title: Background image blend mode
+    id: flexcyon-bg-image-blend-mode
+    type: variable-text
+    default: darken
+  - title: Background image repeat
+    id: flexcyon-bg-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Background image blur
+    id: flexcyon-bg-image-blur
+    type: variable-number
+    default: 1
+    format: px
+  - title: Background image brightness
+    id: flexcyon-bg-image-brightness
+    type: variable-text
+    default: 55%
+
  */
 
 body.theme-dark {

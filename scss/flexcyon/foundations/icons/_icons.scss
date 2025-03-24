@@ -57,6 +57,7 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
     div.checkbox-container.is-enabled::after {
         content: ':)';
         color: var(--color-green);
+        transform: translate(16px, -0.5px);
     }
 
     input.slider {

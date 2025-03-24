@@ -736,18 +736,22 @@ body:is(.theme-dark) {
   --flexcyon-editor-dot-size: 2px;
 }
 
+div.callout[data-callout-metadata*=bg-grid] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
   background-image: repeating-linear-gradient(to right, var(--color-base-00), transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(to bottom, var(--color-base-00), var(--color-base-00) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
+div.callout[data-callout-metadata*=bg-grid] .callout-content *,
 .editor-grid *, body.flexcyon-editor-grid .view-content [class*=markdown-] * {
   background-image: none;
 }
 
+div.callout[data-callout-metadata*=bg-dots] .callout-content,
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
   background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
   background-repeat: repeat;
   background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 }
+div.callout[data-callout-metadata*=bg-dots] .callout-content *,
 .editor-dots *, body.flexcyon-editor-dots .view-content [class*=markdown-] * {
   background-image: none;
 }
@@ -808,6 +812,7 @@ body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbo
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control div.checkbox-container.is-enabled::after {
   content: ":)";
   color: var(--color-green);
+  transform: translate(16px, -0.5px);
 }
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control input.slider {
   border-radius: unset;
@@ -1448,15 +1453,15 @@ div.callout[data-callout-metadata*=ltr-title] div.callout-title {
   unicode-bidi: bidi-override;
 }
 
-div.callout[data-callout-metadata*=ltr-all] div.callout-content * *,
-div.callout[data-callout-metadata*=ltr-content] div.callout-content * * {
-  direction: rtl !important;
+div.callout[data-callout-metadata*=ltr-all] div.callout-content *,
+div.callout[data-callout-metadata*=ltr-content] div.callout-content * {
+  direction: ltr !important;
   unicode-bidi: bidi-override;
 }
-div.callout[data-callout-metadata*=ltr-all] div.callout-content * code[class*=language-],
-div.callout[data-callout-metadata*=ltr-all] div.callout-content * pre[class*=language-],
-div.callout[data-callout-metadata*=ltr-content] div.callout-content * code[class*=language-],
-div.callout[data-callout-metadata*=ltr-content] div.callout-content * pre[class*=language-] {
+div.callout[data-callout-metadata*=ltr-all] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=ltr-all] div.callout-content pre[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content pre[class*=language-] {
   text-align: left;
 }
 
@@ -2241,6 +2246,260 @@ div.callout[data-callout-metadata*=tilt-title] .callout-title {
 div.callout[data-callout-metadata*=tilt-all] .callout-content,
 div.callout[data-callout-metadata*=tilt-content] .callout-content {
   transform: skewX(-7.5deg);
+}
+
+div.callout[data-callout-metadata*=italic-all] .callout-title,
+div.callout[data-callout-metadata*=italic-title] .callout-title {
+  font-style: italic;
+}
+
+div.callout[data-callout-metadata*=italic-all] .callout-content,
+div.callout[data-callout-metadata*=italic-content] .callout-content {
+  font-style: italic;
+}
+
+div.callout[data-callout-metadata*=oblique-all] .callout-title,
+div.callout[data-callout-metadata*=oblique-title] .callout-title {
+  font-style: oblique;
+}
+
+div.callout[data-callout-metadata*=oblique-all] .callout-content,
+div.callout[data-callout-metadata*=oblique-content] .callout-content {
+  font-style: oblique;
+}
+
+div.callout[data-callout-metadata*=dashed-all] .callout-content,
+div.callout[data-callout-metadata*=dashed-content] .callout-content {
+  text-decoration: dashed;
+}
+
+div.callout[data-callout-metadata*=dashed-all] .callout-title,
+div.callout[data-callout-metadata*=dashed-title] .callout-title {
+  text-decoration: dashed;
+}
+
+div.callout[data-callout-metadata*=dotted-all] .callout-content,
+div.callout[data-callout-metadata*=dotted-content] .callout-content {
+  text-decoration: dotted;
+}
+
+div.callout[data-callout-metadata*=dotted-all] .callout-title,
+div.callout[data-callout-metadata*=dotted-title] .callout-title {
+  text-decoration: dotted;
+}
+
+div.callout[data-callout-metadata*=double-all] .callout-content,
+div.callout[data-callout-metadata*=double-content] .callout-content {
+  text-decoration: double;
+}
+
+div.callout[data-callout-metadata*=double-all] .callout-title,
+div.callout[data-callout-metadata*=double-title] .callout-title {
+  text-decoration: double;
+}
+
+div.callout[data-callout-metadata*=overline-all] .callout-content,
+div.callout[data-callout-metadata*=overline-content] .callout-content {
+  text-decoration: overline;
+}
+
+div.callout[data-callout-metadata*=overline-all] .callout-title,
+div.callout[data-callout-metadata*=overline-title] .callout-title {
+  text-decoration: overline;
+}
+
+div.callout[data-callout-metadata*=underline-all] .callout-content,
+div.callout[data-callout-metadata*=underline-content] .callout-content {
+  text-decoration: underline;
+}
+
+div.callout[data-callout-metadata*=underline-all] .callout-title,
+div.callout[data-callout-metadata*=underline-title] .callout-title {
+  text-decoration: underline;
+}
+
+div.callout[data-callout-metadata*=line-through-all] .callout-content,
+div.callout[data-callout-metadata*=line-through-content] .callout-content {
+  text-decoration: line-through;
+}
+
+div.callout[data-callout-metadata*=line-through-all] .callout-title,
+div.callout[data-callout-metadata*=line-through-title] .callout-title {
+  text-decoration: line-through;
+}
+
+div.callout[data-callout-metadata*=h1-title] .callout-title {
+  font-size: var(--h1-size);
+  color: var(--h1-color);
+}
+div.callout[data-callout-metadata*=h1-title] .callout-icon svg {
+  color: var(--h1-color);
+}
+
+div.callout[data-callout-metadata*=h2-title] .callout-title {
+  font-size: var(--h2-size);
+  color: var(--h2-color);
+}
+div.callout[data-callout-metadata*=h2-title] .callout-icon svg {
+  color: var(--h2-color);
+}
+
+div.callout[data-callout-metadata*=h3-title] .callout-title {
+  font-size: var(--h3-size);
+  color: var(--h3-color);
+}
+div.callout[data-callout-metadata*=h3-title] .callout-icon svg {
+  color: var(--h3-color);
+}
+
+div.callout[data-callout-metadata*=h4-title] .callout-title {
+  font-size: var(--h4-size);
+  color: var(--h4-color);
+}
+div.callout[data-callout-metadata*=h4-title] .callout-icon svg {
+  color: var(--h4-color);
+}
+
+div.callout[data-callout-metadata*=h5-title] .callout-title {
+  font-size: var(--h5-size);
+  color: var(--h5-color);
+}
+div.callout[data-callout-metadata*=h5-title] .callout-icon svg {
+  color: var(--h5-color);
+}
+
+div.callout[data-callout-metadata*=h6-title] .callout-title {
+  font-size: var(--h6-size);
+  color: var(--h6-color);
+}
+div.callout[data-callout-metadata*=h6-title] .callout-icon svg {
+  color: var(--h6-color);
+}
+
+div.callout[data-callout-metadata*=w-100-all] .callout-title,
+div.callout[data-callout-metadata*=w-100-title] .callout-title {
+  font-weight: 100;
+}
+
+div.callout[data-callout-metadata*=w-100-all] .callout-content,
+div.callout[data-callout-metadata*=w-100-content] .callout-content {
+  font-weight: 100;
+}
+
+div.callout[data-callout-metadata*=w-200-all] .callout-title,
+div.callout[data-callout-metadata*=w-200-title] .callout-title {
+  font-weight: 200;
+}
+
+div.callout[data-callout-metadata*=w-200-all] .callout-content,
+div.callout[data-callout-metadata*=w-200-content] .callout-content {
+  font-weight: 200;
+}
+
+div.callout[data-callout-metadata*=w-300-all] .callout-title,
+div.callout[data-callout-metadata*=w-300-title] .callout-title {
+  font-weight: 300;
+}
+
+div.callout[data-callout-metadata*=w-300-all] .callout-content,
+div.callout[data-callout-metadata*=w-300-content] .callout-content {
+  font-weight: 300;
+}
+
+div.callout[data-callout-metadata*=w-400-all] .callout-title,
+div.callout[data-callout-metadata*=w-400-title] .callout-title {
+  font-weight: 400;
+}
+
+div.callout[data-callout-metadata*=w-400-all] .callout-content,
+div.callout[data-callout-metadata*=w-400-content] .callout-content {
+  font-weight: 400;
+}
+
+div.callout[data-callout-metadata*=w-500-all] .callout-title,
+div.callout[data-callout-metadata*=w-500-title] .callout-title {
+  font-weight: 500;
+}
+
+div.callout[data-callout-metadata*=w-500-all] .callout-content,
+div.callout[data-callout-metadata*=w-500-content] .callout-content {
+  font-weight: 500;
+}
+
+div.callout[data-callout-metadata*=w-600-all] .callout-title,
+div.callout[data-callout-metadata*=w-600-title] .callout-title {
+  font-weight: 600;
+}
+
+div.callout[data-callout-metadata*=w-600-all] .callout-content,
+div.callout[data-callout-metadata*=w-600-content] .callout-content {
+  font-weight: 600;
+}
+
+div.callout[data-callout-metadata*=w-700-all] .callout-title,
+div.callout[data-callout-metadata*=w-700-title] .callout-title {
+  font-weight: 700;
+}
+
+div.callout[data-callout-metadata*=w-700-all] .callout-content,
+div.callout[data-callout-metadata*=w-700-content] .callout-content {
+  font-weight: 700;
+}
+
+div.callout[data-callout-metadata*=w-800-all] .callout-title,
+div.callout[data-callout-metadata*=w-800-title] .callout-title {
+  font-weight: 800;
+}
+
+div.callout[data-callout-metadata*=w-800-all] .callout-content,
+div.callout[data-callout-metadata*=w-800-content] .callout-content {
+  font-weight: 800;
+}
+
+div.callout[data-callout-metadata*=w-900-all] .callout-title,
+div.callout[data-callout-metadata*=w-900-title] .callout-title {
+  font-weight: 900;
+}
+
+div.callout[data-callout-metadata*=w-900-all] .callout-content,
+div.callout[data-callout-metadata*=w-900-content] .callout-content {
+  font-weight: 900;
+}
+
+div.callout[data-callout-metadata*=w-bold-all] .callout-title,
+div.callout[data-callout-metadata*=w-bold-title] .callout-title {
+  font-weight: bold;
+}
+
+div.callout[data-callout-metadata*=w-bold-all] .callout-content,
+div.callout[data-callout-metadata*=w-bold-content] .callout-content {
+  font-weight: bold;
+}
+
+div.callout[data-callout-metadata*=w-bolder-all] .callout-title,
+div.callout[data-callout-metadata*=w-bolder-title] .callout-title {
+  font-weight: bolder;
+}
+
+div.callout[data-callout-metadata*=w-bolder-all] .callout-content,
+div.callout[data-callout-metadata*=w-bolder-content] .callout-content {
+  font-weight: bolder;
+}
+
+div.callout[data-callout-metadata*=w-lighter-all] .callout-title,
+div.callout[data-callout-metadata*=w-lighter-title] .callout-title {
+  font-weight: lighter;
+}
+
+div.callout[data-callout-metadata*=w-lighter-all] .callout-content,
+div.callout[data-callout-metadata*=w-lighter-content] .callout-content {
+  font-weight: lighter;
+}
+
+div.callout[data-callout-metadata*=bg-grid] .callout-content,
+div.callout[data-callout-metadata*=bg-dots] .callout-content {
+  margin-top: 16px;
+  padding: 0px 8px;
 }
 
 body.flexcyon-settings-scrollbar-removed {
@@ -3311,6 +3570,36 @@ settings:
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
     default: true
+  - title: Heading 1 font size
+    id: h1-size
+    type: variable-number
+    default: 1.802
+    format: em
+  - title: Heading 2 font size
+    id: h2-size
+    type: variable-number
+    default: 1.602
+    format: em
+  - title: Heading 3 font size
+    id: h3-size
+    type: variable-number
+    default: 1.424
+    format: em
+  - title: Heading 4 font size
+    id: h4-size
+    type: variable-number
+    default: 1.266
+    format: em
+  - title: Heading 5 font size
+    id: h5-size
+    type: variable-number
+    default: 1.125
+    format: em
+  - title: Heading 6 font size
+    id: h6-size
+    type: variable-number
+    default: 1
+    format: em
   - title: Heading 1 font weight
     id: h1-weight
     type: variable-number
@@ -3910,7 +4199,7 @@ settings:
     type: heading
     level: 4
     collapsed: true
-    description: Vim mode text, new tab appearance, side dock icons, tooltip radius
+    description: Vim mode text, new tab appearance, side dock icons, tooltip radius, background images
   -
     title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
@@ -4035,6 +4324,38 @@ settings:
     type: variable-number
     default: 8
     format: px
+
+  - title: Background images
+    type: heading
+    description: Configure background images in the left and right sidebars
+    level: 5
+    collapsed: true
+  - title: Left background image url
+    id: flexcyon-bg-image-sidebar-left-url
+    type: variable-text
+    default: url("")
+  - title: Right background image url
+    id: flexcyon-bg-image-sidebar-right-url
+    type: variable-text
+    default: url("")
+  - title: Background image blend mode
+    id: flexcyon-bg-image-blend-mode
+    type: variable-text
+    default: darken
+  - title: Background image repeat
+    id: flexcyon-bg-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Background image blur
+    id: flexcyon-bg-image-blur
+    type: variable-number
+    default: 1
+    format: px
+  - title: Background image brightness
+    id: flexcyon-bg-image-brightness
+    type: variable-text
+    default: 55%
+
  */
 body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -4104,6 +4425,52 @@ body.theme-dark .pcr-app .pcr-interaction .pcr-save {
   display: none;
 }
 
+body.theme-dark {
+  image-rendering: auto;
+  --flexcyon-bg-image-sidebar-left-url: url("");
+  --flexcyon-bg-image-sidebar-right-url: url("");
+  --flexcyon-bg-image-blend-mode: darken;
+  --flexcyon-bg-image-repeat: no-repeat;
+  --flexcyon-bg-image-blur: 1px;
+  --flexcyon-bg-image-brightness: 55%;
+}
+body.theme-dark .mod-left-split .workspace-leaf-content {
+  background-image: var(--flexcyon-bg-image-sidebar-left-url);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+}
+body.theme-dark .mod-left-split .workspace-leaf-content * {
+  backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
+}
+body.theme-dark .mod-left-split .workspace-leaf-content div.oz-nav-buttons-right-block {
+  backdrop-filter: none;
+}
+body.theme-dark .mod-right-split .workspace-leaf-content {
+  background-image: var(--flexcyon-bg-image-sidebar-right-url);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+}
+body.theme-dark .mod-right-split .workspace-leaf-content * {
+  backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
+}
+body.theme-dark .mod-right-split .workspace-leaf-content div.oz-nav-buttons-right-block {
+  backdrop-filter: none;
+}
+@container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+  body.theme-dark .mod-left-split .workspace-leaf-content *,
+  body.theme-dark .mod-left-split .workspace-tab-header-container {
+    background-color: var(--color-base-05);
+  }
+}
+@container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+  body.theme-dark .mod-right-split .workspace-leaf-content *,
+  body.theme-dark .mod-right-split .workspace-tab-header-container {
+    background-color: var(--color-base-05);
+  }
+}
+
 /* Modifications for alternate file tree plugin */
 body:where(.theme-dark) div.oz-folder-name {
   opacity: var(--dimmed);
@@ -4118,6 +4485,12 @@ body:where(.theme-dark) div.oz-folder-name.is-folder-active {
 }
 body:where(.theme-dark) div.oz-file-tree-header {
   background-color: var(--color-base-00);
+  padding: 8px 5px;
+  margin-top: 0;
+  text-align: var(--flexcyon-top-actions-alignment);
+}
+body:where(.theme-dark) .oz-folders-action-items, body:where(.theme-dark) .oz-flex-container {
+  margin-bottom: 0;
 }
 body:where(.theme-dark) div.oz-folder-pane {
   position: relative;
@@ -4147,9 +4520,6 @@ body:where(.theme-dark) .oz-nav-action-button {
   margin-right: 8px;
   padding: 0px;
   opacity: var(--dimmed);
-}
-body:where(.theme-dark) .oz-file-tree-header {
-  text-align: var(--flexcyon-top-actions-alignment);
 }
 
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line {

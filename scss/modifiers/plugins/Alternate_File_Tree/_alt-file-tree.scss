@@ -1,6 +1,6 @@
 /* Modifications for alternate file tree plugin */
+
 body:where(.theme-dark) {
-    // Add fix for file tree header fixed
     div.oz-folder-name {
         opacity: var(--dimmed);
     }
@@ -17,6 +17,13 @@ body:where(.theme-dark) {
 
     div.oz-file-tree-header {
         background-color: var(--color-base-00);
+        padding: 8px 5px;
+        margin-top: 0;
+        text-align: var(--flexcyon-top-actions-alignment);
+    }
+
+    .oz-folders-action-items, .oz-flex-container {
+        margin-bottom: 0;
     }
 
     div.oz-folder-pane {
@@ -51,9 +58,6 @@ body:where(.theme-dark) {
         margin-right: 8px;
         padding: 0px;
         opacity: var(--dimmed);
-    }
-    .oz-file-tree-header {
-        text-align: var(--flexcyon-top-actions-alignment);
     }
 }
 

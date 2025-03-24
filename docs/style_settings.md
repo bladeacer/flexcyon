@@ -30,7 +30,7 @@
     - [New Tab Apperance](#new-tab-appearance)
     - [Side Dock Icons](#side-dock-icons)
     - [Tooltip radius](#tooltip-radius)
-    = [PDf Export](#pdf-export)
+    - [Background images](#background-images)
         
 
 ## Markdown Navigation tree for Flexcyon's Style Settings
@@ -65,6 +65,12 @@ Style Settings
 |   |   |   |--  Muted text color
 |   |   |   |--  Headings
 |   |   |   |   |--  Enable coloured headings
+|   |   |   |   |--  Heading 1 font size
+|   |   |   |   |--  Heading 2 font size
+|   |   |   |   |--  Heading 3 font size
+|   |   |   |   |--  Heading 4 font size
+|   |   |   |   |--  Heading 5 font size
+|   |   |   |   |--  Heading 6 font size
 |   |   |   |   |--  Heading 1 font weight
 |   |   |   |   |--  Heading 2 font weight
 |   |   |   |   |--  Heading 3 font weight
@@ -198,6 +204,13 @@ Style Settings
 |   |   |   |-- Medium radius
 |   |   |   |-- Large radius
 |   |   |   |-- Extra large radius
+|   |   |-- Background images
+|   |   |   |-- Left background image url
+|   |   |   |-- Right background image url
+|   |   |   |-- Background image blend mode
+|   |   |   |-- Background image repeat
+|   |   |   |-- Background image blur
+|   |   |   |-- Backgroud image brightness
 |-- ...
 ```
 
@@ -1021,6 +1034,7 @@ CSS Variable(s) targeted: `var(--flexcyon-sidedock-ribbon-hidden)`
 Default: false (class toggle)
 
 ___
+## Tooltip radius
 Configure the tooltip radius
 
 ### Small radius
@@ -1044,12 +1058,41 @@ CSS Variable(s) targeted: `var(--radius-xl)`
 Default: 8 (px)
 
 ___
-<!-- ## PDF Export
-Defines PDF export styling.
 
-### Select PDF export styling
-Targeted CSS Variable(s): `var(--flexcyon-pdf-export-inherit-theme)`
+## Background images
+Configure background images in the left and right sidebars.
 
-Default: none (class select)
-Options:
-- Inherit theme -->
+Accepted Formats: px, %
+
+
+### Left background image url
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-sidebar-left-url)`
+
+Default: url("")
+> For urls to work, add your URL between the double quotes e.g. a value of:
+`url("https://fake_domain/not_a_real_image.png")`
+
+### Right background image url
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-sidebar-right-url)`
+
+Default: url("")
+
+### Background image blend mode
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-blend-mode)`
+
+Default: darken
+
+### Background image repeat
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-repeat)`
+
+Default: no-repeat
+
+### Background image blur
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-blur)`
+
+Default: 1px
+
+### Background image brightness
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-brightness)`
+
+Default: 55%
