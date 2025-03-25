@@ -157,18 +157,62 @@ body.flexcyon-alt-folder-style {
 
 }
 
-.tree-item-self.is-active, .tree-item-self .is-active {
+body:not(.is-grabbing) .nav-file-title.is-active:hover,
+body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
     background-color: transparent;
-    background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+}
+
+@container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+    .mod-left-split {
+
+        .tree-item-self.is-active,
+        .tree-item-self .is-active {
+            background-color: transparent;
+            background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+        }
+
+        .nav-file-title.is-active:hover,
+        body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+        .nav-file-title.is-active,
+        .nav-folder-title.is-active {
+            color: var(--nav-item-color-active);
+            background-color: var(--nav-item-background-active);
+            font-weight: var(--nav-item-weight-active);
+        }
+    }
+}
+
+@container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+    .mod-right-split {
+
+        .tree-item-self.is-active,
+        .tree-item-self .is-active {
+            background-color: transparent;
+            background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+        }
+
+        .nav-file-title.is-active:hover,
+        body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+        .nav-file-title.is-active,
+        .nav-folder-title.is-active {
+            color: var(--nav-item-color-active);
+            background-color: var(--nav-item-background-active);
+            font-weight: var(--nav-item-weight-active);
+        }
+    }
 }
 
 body.flexcyon-minimalist-tree {
     .collapse-icon svg {
         display: none;
     }
+
     .tree-item-children {
         border-inline-start: none;
     }
+
     .nav-file-title {
         opacity: 0.85;
     }

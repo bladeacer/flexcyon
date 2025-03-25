@@ -32,3 +32,4 @@
 - Added headings font size option
 - Fixed smiley icons (hopefully for the last time)
 - Added options to add and configure image backgrounds in the left and right sidebar
+- Slight modifications to navigation items on hover, Calendar plugin styling

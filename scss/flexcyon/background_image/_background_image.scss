@@ -1,17 +1,22 @@
 body.theme-dark {
-    image-rendering: auto;
+    image-rendering: crisp-edges;
     --flexcyon-bg-image-sidebar-left-url: url("");
+    // --flexcyon-bg-image-sidebar-left-url: url("https://w.wallhaven.cc/full/xl/wallhaven-xljz8d.png");
+
     --flexcyon-bg-image-sidebar-right-url: url("");
 
     --flexcyon-bg-image-blend-mode: darken;
     --flexcyon-bg-image-repeat: no-repeat;
-    --flexcyon-bg-image-blur: 1px;
+    --flexcyon-bg-image-blur: 0px;
     --flexcyon-bg-image-brightness: 55%;
+    --flexcyon-bg-image-size: contain;
+    --flexcyon-bg-image-position: center;
+    --nav-item-background-hover: transparent;
 
     .mod-left-split .workspace-leaf-content {
         background-image: var(--flexcyon-bg-image-sidebar-left-url);
-        background-size: cover;
-        background-position: center;
+        background-size: var(--flexcyon-bg-image-size);
+        background-position: var(--flexcyon-bg-image-position);
         background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 
         * {
@@ -21,12 +26,15 @@ body.theme-dark {
         div.oz-nav-buttons-right-block {
             backdrop-filter: none;
         }
+        .tree-item-self.is-clickable:hover {
+            background-color: var(--nav-item-background-hover);
+        }
     }
 
     .mod-right-split .workspace-leaf-content {
         background-image: var(--flexcyon-bg-image-sidebar-right-url);
-        background-size: cover;
-        background-position: center;
+        background-size: var(--flexcyon-bg-image-size);
+        background-position: var(--flexcyon-bg-image-position);
         background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 
         * {
@@ -44,14 +52,29 @@ body.theme-dark {
             .workspace-tab-header-container {
                 background-color: var(--color-base-05);
             }
+            .oz-folders-action-items *, .oz-flex-container *, .fc *, .fc,
+            .nav-header *, .tree-item, .tree-item-self, .tree-item-inner, .tree-item-children {
+                backdrop-filter: none;
+            }
+            .tree-item-inner, .tree-item-icon::before {
+                background-color: transparent;
+            }
         }
     }
+
 
     @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
         .mod-right-split  {
             .workspace-leaf-content *,
-            .workspace-tab-header-container {
+            .workspace-leaf-content .workspace-tab-header-container {
                 background-color: var(--color-base-05);
+            }
+            .oz-folders-action-items *, .oz-flex-container *, .fc *, .fc,
+            .nav-header *, .tree-item, .tree-item-self, .tree-item-inner, .tree-item-children {
+                backdrop-filter: none;
+            }
+            .tree-item-inner, .tree-item-icon::before {
+                background-color: transparent;
             }
         }
     }

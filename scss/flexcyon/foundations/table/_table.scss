@@ -34,4 +34,8 @@ body.theme-dark {
     .markdown-rendered tbody tr:nth-of-type(2n+1)>td:nth-of-type(2n+2) {
         background-color: var(--table-row-alt-background);
     }
+
+    table {
+        border-color: var(--table-border-color);
+    }
 }

@@ -1,4 +1,6 @@
 ## Changelog
+### Version 0.3.1 
+
 ### Version 0.3.0 TUI Layout
 - Added TUI inspired add-on to cards layout
   - Enabled by default

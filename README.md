@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://img.shields.io/badge/downloads-400+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
-    <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
+    <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
 </p>
 
 ## About Flexcyon
@@ -80,6 +80,7 @@ Here are some recommended snippets to add to your vault and use alongside Flexcy
 
 ## Documentation
 Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
+> If there is a new feature in the documentation that cannot be found within the theme itself, said feature are WIP and may be released next update
 
 #### Roadmap
 The Roadmap for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).

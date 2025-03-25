@@ -6,6 +6,10 @@ body.theme-dark {
         }
     }
 
+    .workspace-leaf-content[data-type*="calendar"] * {
+        backdrop-filter: none;
+    }
+
     [id=calendar-container] {
         scale: 105%;
 
@@ -24,6 +28,9 @@ body.theme-dark {
 
     .reset-button {
         transform: translateY(2px);
+    }
+    .day {
+        padding: 8px 4px;
     }
 }
 
