@@ -1,5 +1,22 @@
 ## Changelog
-### Version 0.3.1 
+### Version 0.3.1 Tidying Up
+- Added callout metadata utilities for:
+  - grid and dotted background
+  - italic and oblique title and content
+  - dashed, dotted, double, overline, underline and line-through for title and content
+  - Apply Heading 1 to 6 styles for title
+  - font weight for title and content
+- Added headings font size option
+- Fixed smiley icons (hopefully for the last time)
+- Added options to add and configure image backgrounds in the left and right sidebars
+- Slight modifications to navigation items on hover, Calendar plugin styling
+- Slight tweaks to editor background dotted and grid background styling. 
+- Tab title bar now adapts to the layout style selected
+- Added option to blur inactive Canvas nodes for core Canvas plugin
+- Editor background changes now affect the core Canvas plugin.
+  - May need app reload/restart for Style Settings changes to show up in the Canvas
+- Tweaked styling of canvas controls and card menu
+- Changed breadcrumbs styling to use ASCII instead of emoji
 
 ### Version 0.3.0 TUI Layout
 - Added TUI inspired add-on to cards layout

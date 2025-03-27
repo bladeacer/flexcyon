@@ -1,7 +1,7 @@
 {
   "name": "flexcyon",
   "repo": "bladeacer/flexcyon",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "minAppVersion": "1.6.3",
   "author": "bladeacer",
   "screenshot" : "./docs/dark.png",

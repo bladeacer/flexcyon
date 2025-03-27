@@ -3,8 +3,6 @@
 body:where(.theme-dark){
     --tab-text-color: var(--flexcyon-base-blue-05);
     --tab-text-color-focused: var(--flexcyon-base-blue-05);
-
-    /* Tone down this color */
     --tab-text-color-active: var(--text-accent);
     --tab-text-color-focused-active: var(--text-accent);
     --tab-text-color-focused-active-current: var(--text-accent);
@@ -13,4 +11,33 @@ body:where(.theme-dark){
     --tab-curve: 0px;
     --tab-radius: 0px;
     --tab-radius-active: 0px;
+}
+
+body.flexcyon-workspace-angled-layout {
+    .view-header-breadcrumb-separator {
+        display: none;
+    }
+    .view-header div span, .view-header-title {
+        transform: skewX(-22.5deg);
+        padding: 4px 8px;
+        border-radius: 0px;
+    }
+
+    .view-header-title {
+        background-color: var(--color-base-20);
+    }
+
+}
+
+body.flexcyon-workspace-card-layout {
+    .view-header {
+        border: 2px solid var(--color-base-20);
+        border-radius: 16px;
+    }
+}
+
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
+    .view-header {
+        border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
+    }
 }

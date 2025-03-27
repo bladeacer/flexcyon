@@ -5,17 +5,18 @@
 .internal-link.BC-prev {
     text-decoration: none;
     strong::before {
-        content: "◀️ ";
+        content: "<";
+        transform: scaleY(1.1);
     }
 }
 
 .internal-link.BC-next {
     text-decoration: none;
     strong::after {
-        content: " ▶️";
+        content: ">";
+        transform: scaleY(1.1);
     }
 }
 .BC-grid-options {
     transform: translateY(-7px);
 }
-

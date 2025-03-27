@@ -1,8 +1,21 @@
 body.theme-dark {
     --flexcyon-fc-dimmed-items-opacity: 0.89;
 
-    .workspace-leaf-content[data-type*="full-calendar"] * {
-        backdrop-filter: none;
+    @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+        .mod-left-split {
+            .workspace-leaf-content[data-type*="full-calendar"] * {
+                backdrop-filter: none;
+            }
+        }
+    }
+
+
+    @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+        .mod-right-split {
+            .workspace-leaf-content[data-type*="full-calendar"] * {
+                backdrop-filter: none;
+            }
+        }
     }
 
     div.fc-daygrid-body div div a {

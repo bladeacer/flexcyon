@@ -6,8 +6,21 @@ body.theme-dark {
         }
     }
 
-    .workspace-leaf-content[data-type*="calendar"] * {
-        backdrop-filter: none;
+    @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+        .mod-left-split {
+            .workspace-leaf-content[data-type*="calendar"] * {
+                backdrop-filter: none;
+            }
+        }
+    }
+
+
+    @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+        .mod-right-split {
+            .workspace-leaf-content[data-type*="calendar"] * {
+                backdrop-filter: none;
+            }
+        }
     }
 
     [id=calendar-container] {
@@ -29,6 +42,7 @@ body.theme-dark {
     .reset-button {
         transform: translateY(2px);
     }
+
     .day {
         padding: 8px 4px;
     }

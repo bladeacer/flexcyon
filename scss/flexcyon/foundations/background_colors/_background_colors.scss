@@ -16,20 +16,21 @@ body:is(.theme-dark) {
     --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
     --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
     --flexcyon-editor-bg-width: 15px;
-    --flexcyon-editor-dot-size: 2px;
+    --flexcyon-editor-dot-size: 2.5px;
+    --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
 }
 
-
+body.flexcyon-editor-grid .canvas-background,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
     background-image:
         repeating-linear-gradient(to right,
-            var(--color-base-00),
+            var(--flexcyon-editor-bg-color),
             transparent 1px,
             transparent var(--flexcyon-editor-bg-width)),
         repeating-linear-gradient(to bottom,
-            var(--color-base-00),
-            var(--color-base-00) 1px,
+            var(--flexcyon-editor-bg-color),
+            var(--flexcyon-editor-bg-color) 1px,
             transparent 1px,
             transparent var(--flexcyon-editor-bg-width));
 
@@ -38,9 +39,10 @@ div.callout[data-callout-metadata*="bg-grid"] .callout-content,
     }
 }
 
+body.flexcyon-editor-dots .canvas-background,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content,
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
-    background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
+    background-image: radial-gradient(var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size), transparent 1px);
     background-repeat: repeat;
     background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 

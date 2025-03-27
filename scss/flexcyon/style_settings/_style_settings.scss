@@ -482,7 +482,7 @@ settings:
   - title: Size of dots for dotted background
     id: flexcyon-editor-dot-size
     type: variable-number
-    default: 2
+    default: 2.5
     format: px
   - title: Layout
     type: heading
@@ -671,14 +671,14 @@ settings:
     default: 12.5
     format: px
   - title: Select status bar style
-    description: angled status bar style is inspired by Powerlevel10k
+    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
     type: class-select
     id: theme-variant
     allowEmpty: true
     default: none
     options: 
       - 
-        label: angled
+        label: Angled
         value: flexcyon-status-style-angled
       - 
         label: Cards
@@ -813,6 +813,22 @@ settings:
     id: flexcyon-dataview-horizontal-padding
     type: variable-number
     default: 8
+    format: px
+
+  - title: Canvas
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Blur inactive Canvas nodes
+    id: flexcyon-canvas-blur-inactive-nodes
+    description: Toggle the blur effect of inactive canvas nodes.
+    type: class-toggle
+    default: false
+  - title: Blur intensity for inactive nodes
+    id: flexcyon-canvas-blur-intensity
+    description: How intense the blur effect is when the blur inactive canvas nodes mode is on
+    type: variable-number
+    default: 1
     format: px
 
   - title: Others

@@ -2,7 +2,7 @@
 [Back to documentation welcome page](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
 
 ## Map of Contents
--  [Documentation for Flexcyon Style Settings](#documentation-for-flexcyon-style-settings)
+- [Documentation for Flexcyon Style Settings](#documentation-for-flexcyon-style-settings)
 - [Table Of Contents](#table-of-contents)
 - [Markdown Navigation tree for Flexcyon's Style Settings](#markdown-navigation-tree-for-flexcyons-style-settings)
 - [Editor Section](#editor-section)
@@ -25,6 +25,7 @@
     - [Alternate file tree](#alternate-file-tree)
     - [Full Calendar](#full-calendar)
     - [Dataview](#dataview)
+    - [Canvas](#canvas)
 - [Others Sections](#others-section)
     - [Vim Mode Text](#vim-mode-text)
     - [New Tab Apperance](#new-tab-appearance)
@@ -182,6 +183,9 @@ Style Settings
 |   |   |   |-- Opacity of dimmed full calendar items
 |   |   |-- Dataview
 |   |   |   |-- Horizontal padding of dataview error messages
+|   |   |-- Canvas
+|   |   |   |-- Blur inactive canvas nodes
+|   |   |   |-- Blur intensity for inactive canvas nodes
 |   |-- **Others**
 |   |   |-- Vim Mode Text
 |   |   |   |-- Enable Vim Mode Text
@@ -935,6 +939,58 @@ Accepted formats: px
 CSS Variables(s) targeted: `var(--flexcyon-dataview-horizontal-padding)`
 
 Default: 8 (px)
+
+## Canvas
+Defines styles for the core Canvas plugin.
+
+Accepted formats: px, RGB
+
+### Blur inactive Canvas nodes
+CSS Variable(s) targeted: `var(--flexcyon-canvas-blur-inactive-nodes)`
+
+Default: false (class toggle)
+
+### Blur intensity for inactive nodes
+Used with the previous setting to set the blur intensity of inactive canvas nodes and all arrows/edges.
+
+CSS Variable(s) targeted: `var(--flexcyon-canvas-blur-intensity)`
+
+Default: 1 (px)
+
+### Canvas node color
+CSS Variable(s) targeted: `var(--canvas-color)`
+
+Default: 126, 126, 126 (RGB)
+
+### Canvas color 1
+CSS Variable(s) targeted `var(--canvas-color-1)`
+
+Default: 192, 58, 71 (RGB)
+
+### Canvas color 2
+CSS Variable(s) targeted `var(--canvas-color-2)`
+
+Default: 194, 158, 66 (RGB)
+
+### Canvas color 3
+CSS Variable(s) targeted `var(--canvas-color-3)`
+
+Default: 161, 192, 92 (RGB)
+
+### Canvas color 4
+CSS Variable(s) targeted `var(--canvas-color-4)`
+
+Default: 212, 88, 143 (RGB)
+
+### Canvas color 5
+CSS Variable(s) targeted `var(--canvas-color-5)`
+
+Default: 60, 185, 194 (RGB)
+
+### Canvas color 6
+CSS Variable(s) targeted `var(--canvas-color-6)`
+
+Default: 90, 143, 205 (RGB)
 
 
 ___

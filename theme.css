@@ -12,7 +12,6 @@ body.theme-dark {
   --flexcyon-red-salmon: #c03a47;
   --flexcyon-blue: #5a8fcd;
   --flexcyon-pink: #d458a3;
-  --flexcyon-callout-bg-opacity: 20%;
 }
 
 body:is(.theme-dark) {
@@ -287,7 +286,6 @@ body:where(.theme-dark) .cm-s-obsidian span.cm-inline-code {
 body:where(.theme-dark) {
   --tab-text-color: var(--flexcyon-base-blue-05);
   --tab-text-color-focused: var(--flexcyon-base-blue-05);
-  /* Tone down this color */
   --tab-text-color-active: var(--text-accent);
   --tab-text-color-focused-active: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
@@ -296,6 +294,27 @@ body:where(.theme-dark) {
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
+}
+
+body.flexcyon-workspace-angled-layout .view-header-breadcrumb-separator {
+  display: none;
+}
+body.flexcyon-workspace-angled-layout .view-header div span, body.flexcyon-workspace-angled-layout .view-header-title {
+  transform: skewX(-22.5deg);
+  padding: 4px 8px;
+  border-radius: 0px;
+}
+body.flexcyon-workspace-angled-layout .view-header-title {
+  background-color: var(--color-base-20);
+}
+
+body.flexcyon-workspace-card-layout .view-header {
+  border: 2px solid var(--color-base-20);
+  border-radius: 16px;
+}
+
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .view-header {
+  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
 }
 
 body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
@@ -733,24 +752,29 @@ body:is(.theme-dark) {
   --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
   --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
   --flexcyon-editor-bg-width: 15px;
-  --flexcyon-editor-dot-size: 2px;
+  --flexcyon-editor-dot-size: 2.5px;
+  --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
 }
 
+body.flexcyon-editor-grid .canvas-background,
 div.callout[data-callout-metadata*=bg-grid] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
-  background-image: repeating-linear-gradient(to right, var(--color-base-00), transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(to bottom, var(--color-base-00), var(--color-base-00) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+  background-image: repeating-linear-gradient(to right, var(--flexcyon-editor-bg-color), transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(to bottom, var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
+body.flexcyon-editor-grid .canvas-background *,
 div.callout[data-callout-metadata*=bg-grid] .callout-content *,
 .editor-grid *, body.flexcyon-editor-grid .view-content [class*=markdown-] * {
   background-image: none;
 }
 
+body.flexcyon-editor-dots .canvas-background,
 div.callout[data-callout-metadata*=bg-dots] .callout-content,
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
-  background-image: radial-gradient(var(--color-base-00) var(--flexcyon-editor-dot-size), transparent 1px);
+  background-image: radial-gradient(var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size), transparent 1px);
   background-repeat: repeat;
   background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 }
+body.flexcyon-editor-dots .canvas-background *,
 div.callout[data-callout-metadata*=bg-dots] .callout-content *,
 .editor-dots *, body.flexcyon-editor-dots .view-content [class*=markdown-] * {
   background-image: none;
@@ -1247,6 +1271,7 @@ body:is(.theme-dark) .metadata-properties-heading:focus:before {
 
 /* Callout modifications */
 body.theme-dark {
+  --flexcyon-callout-bg-opacity: 20%;
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
@@ -2576,7 +2601,7 @@ body.flexcyon-workspace-card-layout .workspace-tab-container,
 body.flexcyon-workspace-card-layout .workspace-tab-header-container {
   border-radius: 16px;
   border: 2px solid var(--color-base-20);
-  margin: 8px;
+  margin: 4px 8px;
 }
 body.flexcyon-workspace-card-layout .workspace-split.mod-vertical.mod-root .workspace-tab-container {
   border: var(--color-base-00);
@@ -2667,7 +2692,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   content: "Files";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-blue-rgb), 0.85);
@@ -2680,7 +2705,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   content: "Alternate File Tree";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-purple-rgb), 0.85);
@@ -2693,7 +2718,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   content: "Bookmarks";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-cyan-rgb), 0.85);
@@ -2706,7 +2731,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   content: "All Properties";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-pink-rgb), 0.85);
@@ -2719,7 +2744,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   content: "Outline";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-green-rgb), 0.85);
@@ -2732,7 +2757,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   content: "Full Calendar | Sidebar";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-yellow-rgb), 0.85);
@@ -2745,7 +2770,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   content: "Backlinks";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-orange-rgb), 0.85);
@@ -2758,7 +2783,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   content: "Review Queue";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-red-rgb), 0.85);
@@ -2771,7 +2796,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   content: "Properties";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-blue-rgb), 0.85);
@@ -2784,7 +2809,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   content: "Outgoing Links";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-purple-rgb), 0.85);
@@ -2797,7 +2822,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   content: "Graph View";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-cyan-rgb), 0.85);
@@ -2810,7 +2835,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   content: "Full Calendar";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-pink-rgb), 0.85);
@@ -2823,7 +2848,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   content: "Local Graph";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-green-rgb), 0.85);
@@ -2836,7 +2861,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   content: "Calendar";
   position: absolute;
-  top: 56px;
+  top: 44px;
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-yellow-rgb), 0.85);
@@ -3897,7 +3922,7 @@ settings:
   - title: Size of dots for dotted background
     id: flexcyon-editor-dot-size
     type: variable-number
-    default: 2
+    default: 2.5
     format: px
   - title: Layout
     type: heading
@@ -4086,14 +4111,14 @@ settings:
     default: 12.5
     format: px
   - title: Select status bar style
-    description: angled status bar style is inspired by Powerlevel10k
+    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
     type: class-select
     id: theme-variant
     allowEmpty: true
     default: none
     options: 
       - 
-        label: angled
+        label: Angled
         value: flexcyon-status-style-angled
       - 
         label: Cards
@@ -4228,6 +4253,22 @@ settings:
     id: flexcyon-dataview-horizontal-padding
     type: variable-number
     default: 8
+    format: px
+
+  - title: Canvas
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Blur inactive Canvas nodes
+    id: flexcyon-canvas-blur-inactive-nodes
+    description: Toggle the blur effect of inactive canvas nodes.
+    type: class-toggle
+    default: false
+  - title: Blur intensity for inactive nodes
+    id: flexcyon-canvas-blur-intensity
+    description: How intense the blur effect is when the blur inactive canvas nodes mode is on
+    type: variable-number
+    default: 1
     format: px
 
   - title: Others
@@ -4461,7 +4502,7 @@ body.theme-dark .pcr-app .pcr-interaction .pcr-save {
 }
 
 body.theme-dark {
-  image-rendering: crisp-edges;
+  image-rendering: auto;
   --flexcyon-bg-image-sidebar-left-url: url("");
   --flexcyon-bg-image-sidebar-right-url: url("");
   --flexcyon-bg-image-blend-mode: darken;
@@ -4725,8 +4766,15 @@ body.theme-dark table.calendar thead tr th {
   color: var(--link-color);
   text-transform: capitalize;
 }
-body.theme-dark .workspace-leaf-content[data-type*=calendar] * {
-  backdrop-filter: none;
+@container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+  body.theme-dark .mod-left-split .workspace-leaf-content[data-type*=calendar] * {
+    backdrop-filter: none;
+  }
+}
+@container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+  body.theme-dark .mod-right-split .workspace-leaf-content[data-type*=calendar] * {
+    backdrop-filter: none;
+  }
 }
 body.theme-dark [id=calendar-container] {
   scale: 105%;
@@ -4754,8 +4802,15 @@ body.flexcyon-workspace-angled-layout #calendar-container > div > div {
 body.theme-dark {
   --flexcyon-fc-dimmed-items-opacity: 0.89;
 }
-body.theme-dark .workspace-leaf-content[data-type*=full-calendar] * {
-  backdrop-filter: none;
+@container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+  body.theme-dark .mod-left-split .workspace-leaf-content[data-type*=full-calendar] * {
+    backdrop-filter: none;
+  }
+}
+@container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+  body.theme-dark .mod-right-split .workspace-leaf-content[data-type*=full-calendar] * {
+    backdrop-filter: none;
+  }
 }
 body.theme-dark div.fc-daygrid-body div div a {
   color: var(--text-normal);
@@ -4839,14 +4894,16 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
   text-decoration: none;
 }
 .internal-link.BC-prev strong::before {
-  content: "◀️ ";
+  content: "<";
+  transform: scaleY(1.1);
 }
 
 .internal-link.BC-next {
   text-decoration: none;
 }
 .internal-link.BC-next strong::after {
-  content: " ▶️";
+  content: ">";
+  transform: scaleY(1.1);
 }
 
 .BC-grid-options {
@@ -4863,6 +4920,44 @@ div.dataview-error-box p.dataview-error-message {
 
 .obsidian-vault-statistics--item {
   margin: 0px 0.25rem;
+}
+
+body.theme-dark {
+  --color-accent: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--dimmed));
+  --flexcyon-canvas-blur-intensity: 1px;
+  --canvas-color-1: 192, 58, 71;
+  --canvas-color-2: 194, 158, 66;
+  --canvas-color-3: 161, 192, 92;
+  --canvas-color-4: 212, 88, 163;
+  --canvas-color-5: 60, 185, 194;
+  --canvas-color-6: 90, 143, 205;
+}
+
+.canvas-background pattern {
+  display: none;
+}
+
+.canvas-controls {
+  top: 24px;
+  gap: 8px;
+}
+
+.canvas-controls {
+  scale: var(--expand);
+}
+
+.canvas-card-menu {
+  scale: var(--upsize);
+}
+
+@media (hover: hover) {
+  .canvas-control-item:hover {
+    color: var(--text-accent);
+  }
+}
+body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-edges,
+body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
+  filter: blur(var(--flexcyon-canvas-blur-intensity));
 }
 
 /* Modifications for note gallery plugin with banner snippet*/

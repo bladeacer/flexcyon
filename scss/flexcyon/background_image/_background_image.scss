@@ -1,8 +1,6 @@
 body.theme-dark {
-    image-rendering: crisp-edges;
+    image-rendering: auto;
     --flexcyon-bg-image-sidebar-left-url: url("");
-    // --flexcyon-bg-image-sidebar-left-url: url("https://w.wallhaven.cc/full/xl/wallhaven-xljz8d.png");
-
     --flexcyon-bg-image-sidebar-right-url: url("");
 
     --flexcyon-bg-image-blend-mode: darken;
