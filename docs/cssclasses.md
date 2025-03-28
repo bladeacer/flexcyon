@@ -424,7 +424,7 @@ Callout metadata: "rtl-title"
 Usage:
 ```md
 > [!info|rtl-title] The title will be displayed as rtl
-> Content and title is shown as usual
+> Content is shown as usual
 ```
 
 #### RTL Content
@@ -451,7 +451,7 @@ Callout metadata: "ltr-title"
 Usage:
 ```md
 > [!info|ltr-title] The title will be displayed as ltr
-> Content and title is shown as usual
+> Content is shown as usual
 ```
 
 #### LTR Content

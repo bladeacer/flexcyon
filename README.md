@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/downloads-400+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/badge/downloads-500+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
 </p>
@@ -115,3 +115,4 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
+- `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation
