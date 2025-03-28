@@ -115,8 +115,10 @@ Style Settings
 |   |   |   |   |--  Prompt max height
 |   |   |   |   |--  Prompt alignment
 |   |   |   |--  Animations
-|   |   |   |   |--  Animation Type
-|   |   |   |   |--  Animation Duration
+|   |   |   |   |--  Animation type
+|   |   |   |   |--  Animation duration
+|   |   |   |   |--  Animation easing function
+|   |   |   |   |--  Animation slide amount
 |   |   |   |--  Editor Background
 |   |   |   |   |--  Select background type
 |   |   |   |   |--  Width between each dot/line for grid/dotted background
@@ -589,13 +591,32 @@ Options:
 ___
 
 ### Animations
-This feature is deprecated.
+Configure transition animations of prompts, modals and tab container.
 
-#### Animation Type
-This feature is deprecated.
+Accepted Formats: s
+
+#### Animation type
+CSS Variable(s) targeted: `var(--flexcyon-anims-slide-rtl), var(--flexcyon-anims-slide-ltr), var(--flexcyon-anims-slide-tb), var(--flexcyon-anims-slide-bt)`
+> Changes may need an app reload/restart to take effect
+
+Default: none (class select)
+Options: 
+  - Slide in Left to Right
+  - Slide in Right to Left
+  - Slide in Top to Bottom
+  - Slide in Bottom to Top
+
 
 #### Animation duration
-This feature is deprecated.
+CSS Variable(s) targeted: `var(--flexcyon-anim-duration)`
+
+Default: 0.5s
+
+#### Animation easing function
+CSS Variable(s) targeted: `var(--flexcyon-anim-easing)`
+
+Default: ease-in-out
+
 
 ___
 ### Editor Background

@@ -41,7 +41,8 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - Heading options like underline, numbered, coloured
 - A [plethora of cssclasses and callout customisation options](https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md)
 - Workspace Layouts like card layouts, TUI inspired add-on
-<!-- - Configure left and right sidebar background images -->
+- Configure left and right sidebar background images
+<!-- - Animation options for tabs  -->
 - Customisable with Style Settings
 
 
@@ -109,6 +110,7 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
+- `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
 
 #### Ideas, Feedback
 - `@Tuck` on the Obsidian Members' Group Discord for options to change link color

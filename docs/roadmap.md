@@ -10,7 +10,7 @@
 - [ ] Support more plugins
   - Could also look at:
     - Tasks
-    - Excalidraw
+    - Excalidraw (too difficult to style)
     - QuickAdd (override default css variables)
     - Vertical Tabs etc
 - [ ] `publish.css`
@@ -21,3 +21,9 @@
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 #### Next version changelog
+- Styling Tweaks to community store item
+- Animations are back, current options include:
+  - Slide in Left to Right
+  - Slide in Right to Left
+  - Slide in Top to Bottom
+  - Slide in Bottom to Top

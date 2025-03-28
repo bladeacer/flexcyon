@@ -23,6 +23,61 @@ body.theme-dark {
         padding: var(--size-2-2) var(--size-2-3);
     }
 
+    .community-modal-info hr {
+        display: none;
+    }
+    .setting-item {
+        border-top: none;
+    }
+    .setting-item.setting-item-heading {
+        border-bottom: 1px solid var(--background-modifier-border);
+    }
+
+}
+body.flexcyon-workspace-card-layout {
+    .community-modal-info-name {
+        border: 2px solid var(--text-faint);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-bottom: 0px;
+        padding: 3px 16px;
+        padding-top: 16px;
+        margin-bottom: 0px;
+        margin-top: 8px;
+
+    }
+    .community-modal-info-downloads, .community-modal-info-version, 
+    .community-modal-info-author, .community-modal-info-repo,
+    .community-modal-info-desc {
+        border: 2px solid var(--text-faint);
+        border-top: 0px;
+        border-bottom: 0px;
+        padding: 3px 16px;
+        overflow-wrap: break-word;
+    }
+    .community-modal-info-desc {
+        margin-top: 0px;
+    }
+    .community-modal-info-downloads {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .community-modal-button-container {
+        border: 2px solid var(--text-faint);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top: 0px;
+        padding: 16px;
+        padding-bottom: 24px;
+        margin: 0px;
+    }
+    .community-modal-readme {
+        margin-top: 32px;
+    }
+    // .community-modal-info {
+    //     border: 2px solid rgba(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
+    // }
 }
 
 body:not(.is-phone) .community-item.is-selected,

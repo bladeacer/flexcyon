@@ -1,6 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file 
-body:where(.theme-dark){
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file 
+body:where(.theme-dark) {
     --tab-text-color: var(--flexcyon-base-blue-05);
     --tab-text-color-focused: var(--flexcyon-base-blue-05);
     --tab-text-color-active: var(--text-accent);
@@ -11,13 +11,18 @@ body:where(.theme-dark){
     --tab-curve: 0px;
     --tab-radius: 0px;
     --tab-radius-active: 0px;
+    --flexcyon-anim-duration: 0.5s;
+    --flexcyon-anim-easing: ease-in-out;
+    --flexcyon-anim-slide-amount: 50px;
 }
 
 body.flexcyon-workspace-angled-layout {
     .view-header-breadcrumb-separator {
         display: none;
     }
-    .view-header div span, .view-header-title {
+
+    .view-header div span,
+    .view-header-title {
         transform: skewX(-22.5deg);
         padding: 4px 8px;
         border-radius: 0px;
@@ -39,5 +44,80 @@ body.flexcyon-workspace-card-layout {
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
     .view-header {
         border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
+    }
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(var(--flexcyon-anim-slide-amount));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-tb {
+    0% {
+        opacity: 0;
+        transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes slide-in-bt {
+    0% {
+        opacity: 0;
+        transform: translateY(var(--flexcyon-anim-slide-amount));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body.flexcyon-anims-slide-rtl {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+    }
+}
+
+body.flexcyon-anims-slide-ltr {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+    }
+}
+
+body.flexcyon-anims-slide-tb {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+    }
+}
+
+body.flexcyon-anims-slide-bt {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
 }

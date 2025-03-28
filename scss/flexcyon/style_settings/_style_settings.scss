@@ -454,6 +454,48 @@ settings:
       -
         label: Bottom center 
         value: flexcyon-prompt-align-bottom-center
+  
+  - title: Animations
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Animation type
+    description: Configure animation type for transitions of prompts, modals and tab containers.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Slide in Left to Right
+        value: flexcyon-anims-slide-ltr
+      - 
+        label: Slide in Right to Left
+        value: flexcyon-anims-slide-rtl
+      - 
+        label: Slide in Top to Bottom
+        value: flexcyon-anims-slide-tb
+      - 
+        label: Slide in Bottom to Top
+        value: flexcyon-anims-slide-bt
+
+  - title: Animation duration
+    id: flexcyon-anim-duration
+    description: Transition duration for animations
+    type: variable-number
+    default: 0.5
+    format: s
+  - title: Animation easing function
+    id: flexcyon-anim-easing
+    description: Transition easing fucntion for animations
+    type: variable-text
+    default: ease-in-out
+  - title: Animation slide amount
+    id: flexcyon-anim-slide-amount
+    description: The amount of pixels the slide animations will slide
+    type: variable-number
+    default: 50
+    format: px
 
   - title: Editor Background
     type: heading

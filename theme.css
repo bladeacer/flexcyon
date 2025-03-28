@@ -294,12 +294,16 @@ body:where(.theme-dark) {
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
+  --flexcyon-anim-duration: 0.5s;
+  --flexcyon-anim-easing: ease-in-out;
+  --flexcyon-anim-slide-amount: 50px;
 }
 
 body.flexcyon-workspace-angled-layout .view-header-breadcrumb-separator {
   display: none;
 }
-body.flexcyon-workspace-angled-layout .view-header div span, body.flexcyon-workspace-angled-layout .view-header-title {
+body.flexcyon-workspace-angled-layout .view-header div span,
+body.flexcyon-workspace-angled-layout .view-header-title {
   transform: skewX(-22.5deg);
   padding: 4px 8px;
   border-radius: 0px;
@@ -315,6 +319,62 @@ body.flexcyon-workspace-card-layout .view-header {
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .view-header {
   border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(var(--flexcyon-anim-slide-amount));
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-tb {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in-bt {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--flexcyon-anim-slide-amount));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.flexcyon-anims-slide-rtl .workspace-leaf-content, body.flexcyon-anims-slide-rtl .modal, body.flexcyon-anims-slide-rtl .prompt {
+  animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-slide-ltr .workspace-leaf-content, body.flexcyon-anims-slide-ltr .modal, body.flexcyon-anims-slide-ltr .prompt {
+  animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-slide-tb .workspace-leaf-content, body.flexcyon-anims-slide-tb .modal, body.flexcyon-anims-slide-tb .prompt {
+  animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-slide-bt .workspace-leaf-content, body.flexcyon-anims-slide-bt .modal, body.flexcyon-anims-slide-bt .prompt {
+  animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
@@ -807,6 +867,54 @@ body.theme-dark .clickable-icon:hover {
 body.theme-dark .graph-controls .clickable-icon,
 body.theme-dark .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
+}
+body.theme-dark .community-modal-info hr {
+  display: none;
+}
+body.theme-dark .setting-item {
+  border-top: none;
+}
+body.theme-dark .setting-item.setting-item-heading {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+body.flexcyon-workspace-card-layout .community-modal-info-name {
+  border: 2px solid var(--text-faint);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom: 0px;
+  padding: 3px 16px;
+  padding-top: 16px;
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-downloads, body.flexcyon-workspace-card-layout .community-modal-info-version,
+body.flexcyon-workspace-card-layout .community-modal-info-author, body.flexcyon-workspace-card-layout .community-modal-info-repo,
+body.flexcyon-workspace-card-layout .community-modal-info-desc {
+  border: 2px solid var(--text-faint);
+  border-top: 0px;
+  border-bottom: 0px;
+  padding: 3px 16px;
+  overflow-wrap: break-word;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-desc {
+  margin-top: 0px;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-downloads {
+  width: 100%;
+  margin-top: 0px;
+}
+body.flexcyon-workspace-card-layout .community-modal-button-container {
+  border: 2px solid var(--text-faint);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top: 0px;
+  padding: 16px;
+  padding-bottom: 24px;
+  margin: 0px;
+}
+body.flexcyon-workspace-card-layout .community-modal-readme {
+  margin-top: 32px;
 }
 
 body:not(.is-phone) .community-item.is-selected .community-item-downloads,
@@ -2613,7 +2721,7 @@ body.flexcyon-workspace-card-layout .workspace-split.mod-right-split :last-child
   margin-bottom: 38px;
 }
 body.flexcyon-workspace-card-layout .titlebar {
-  margin-top: 9px;
+  margin-top: 4px;
   margin-right: 16px;
 }
 body.flexcyon-workspace-card-layout .workspace-ribbon {
@@ -3894,6 +4002,48 @@ settings:
       -
         label: Bottom center 
         value: flexcyon-prompt-align-bottom-center
+
+  - title: Animations
+    type: heading
+    level: 6
+    collapsed: true
+  - title: Animation type
+    description: Configure animation type for transitions of prompts, modals and tab containers.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Slide in Left to Right
+        value: flexcyon-anims-slide-ltr
+      - 
+        label: Slide in Right to Left
+        value: flexcyon-anims-slide-rtl
+      - 
+        label: Slide in Top to Bottom
+        value: flexcyon-anims-slide-tb
+      - 
+        label: Slide in Bottom to Top
+        value: flexcyon-anims-slide-bt
+
+  - title: Animation duration
+    id: flexcyon-anim-duration
+    description: Transition duration for animations
+    type: variable-number
+    default: 0.5
+    format: s
+  - title: Animation easing function
+    id: flexcyon-anim-easing
+    description: Transition easing fucntion for animations
+    type: variable-text
+    default: ease-in-out
+  - title: Animation slide amount
+    id: flexcyon-anim-slide-amount
+    description: The amount of pixels the slide animations will slide
+    type: variable-number
+    default: 50
+    format: px
 
   - title: Editor Background
     type: heading
