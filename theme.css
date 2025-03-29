@@ -302,14 +302,70 @@ body:where(.theme-dark) {
 body.flexcyon-workspace-angled-layout .view-header-breadcrumb-separator {
   display: none;
 }
-body.flexcyon-workspace-angled-layout .view-header div span,
 body.flexcyon-workspace-angled-layout .view-header-title {
   transform: skewX(-22.5deg);
-  padding: 4px 8px;
   border-radius: 0px;
-}
-body.flexcyon-workspace-angled-layout .view-header-title {
   background-color: var(--color-base-20);
+  padding: 4px 12px;
+}
+body.flexcyon-workspace-angled-layout .view-header-title-parent {
+  transform: skewX(-22.5deg);
+}
+body.flexcyon-workspace-angled-layout .view-header-title-parent .view-header-breadcrumb {
+  padding: 4px 12px;
+  background-color: var(--color-base-05);
+}
+
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n+1) {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n+1)::after {
+  background-color: var(--color-base-25);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n+3) {
+  background-color: var(--color-base-25);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n+3)::after {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n) {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n)::after {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :has(+ :last-child)::after {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent :first-child.view-header-breadcrumb {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding-left: 12px;
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-breadcrumb {
+  padding: 4px 0px;
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-breadcrumb::after {
+  padding: 4px 6px;
+  content: "e";
+  position: relative;
+  width: inherit;
+  height: inherit;
+  color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-title {
+  padding: 4px 0px;
+  padding-right: 12px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-pl10k-layout .view-header-breadcrumb-separator {
+  display: none;
+}
+body.flexcyon-workspace-pl10k-layout .view-header, body.flexcyon-workspace-pl10k-layout .view-header-title-container {
+  gap: 0px;
 }
 
 body.flexcyon-workspace-card-layout .view-header {
@@ -361,19 +417,27 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .view-heade
     transform: translateY(0);
   }
 }
-body.flexcyon-anims-slide-rtl .workspace-leaf-content, body.flexcyon-anims-slide-rtl .modal, body.flexcyon-anims-slide-rtl .prompt {
+body.flexcyon-anims-slide-rtl .workspace-leaf-content,
+body.flexcyon-anims-slide-rtl .modal,
+body.flexcyon-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-ltr .workspace-leaf-content, body.flexcyon-anims-slide-ltr .modal, body.flexcyon-anims-slide-ltr .prompt {
+body.flexcyon-anims-slide-ltr .workspace-leaf-content,
+body.flexcyon-anims-slide-ltr .modal,
+body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-tb .workspace-leaf-content, body.flexcyon-anims-slide-tb .modal, body.flexcyon-anims-slide-tb .prompt {
+body.flexcyon-anims-slide-tb .workspace-leaf-content,
+body.flexcyon-anims-slide-tb .modal,
+body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-bt .workspace-leaf-content, body.flexcyon-anims-slide-bt .modal, body.flexcyon-anims-slide-bt .prompt {
+body.flexcyon-anims-slide-bt .workspace-leaf-content,
+body.flexcyon-anims-slide-bt .modal,
+body.flexcyon-anims-slide-bt .prompt {
   animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
@@ -1384,6 +1448,8 @@ body.theme-dark {
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
   --flexcyon-callout-pop-animation-duration: 0.2s;
+  --flexcyon-callouts-flashcard-width: 250px;
+  --flexcyon-callouts-flashcard-height: 250px;
 }
 
 body:where(.theme-dark) {
@@ -2638,6 +2704,35 @@ div.callout[data-callout-metadata*=bg-dots] .callout-content {
   padding: 0px 8px;
 }
 
+div.callout[data-callout-metadata*=flashcard] {
+  width: var(--flexcyon-callouts-flashcard-width);
+  height: var(--flexcyon-callouts-flashcard-height);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+div.callout[data-callout-metadata*=flashcard] .callout-content {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+div.callout[data-callout-metadata*=flashcard] .callout-title {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  flex-direction: column; /* For stacking content if needed */
+  align-items: center;
+  justify-content: center;
+}
+div.callout[data-callout-metadata*=flashcard]:hover {
+  transform: rotateY(180deg);
+}
+div.callout[data-callout-metadata*=flashcard]:hover .callout-title {
+  opacity: 0;
+}
+div.callout[data-callout-metadata*=flashcard]:hover .callout-content {
+  opacity: 1;
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -2975,6 +3070,20 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   color: rgba(var(--color-yellow-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0px 8px;
+}
+
+body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header-container-inner :first-child.workspace-tab-header {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding-left: 8px;
+}
+body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header-container-inner :last-child.workspace-tab-header {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-right: 8px;
+}
+body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header {
+  padding: 0px 4px;
 }
 
 body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
@@ -3400,6 +3509,54 @@ body.flexcyon-status-style-card .status-bar {
   border-radius: 16px;
   border: 2px solid var(--color-base-20);
   margin: 4px 8px;
+}
+
+body.flexcyon-status-style-pl10k .status-bar {
+  border: transparent;
+  background-color: transparent;
+  gap: 0px;
+  scale: 1.15;
+}
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item .status-bar-item-icon {
+  transform: translateX(-1px);
+}
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
+  padding: 0px;
+}
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
+  padding: 4px 1px;
+  content: "e";
+  position: relative;
+  width: inherit;
+  height: inherit;
+  color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
+}
+body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding-left: 6px;
+}
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n+1).status-bar-item {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n+1).status-bar-item::after {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n).status-bar-item {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n).status-bar-item::after {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding-right: 6px;
+  margin-right: 40px;
+}
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after {
+  display: none;
 }
 
 body.theme-dark {
@@ -4091,6 +4248,9 @@ settings:
       - 
         label: Angled Layout
         value: flexcyon-workspace-angled-layout
+      - 
+        label: Powerlevel10k Layout
+        value: flexcyon-workspace-pl10k-layout
   - title: Enable TUI add-on for cards layout
     description: Makes Files, properties and other items adopt styling inspired by TUIs. 
     id: flexcyon-workspace-cards-tui-ext
@@ -4130,6 +4290,18 @@ settings:
     description: Configures the border radius of callouts
     type: variable-number
     default: 2
+    format: px
+  - title: Flashcard callout width
+    id: flexcyon-callouts-flashcard-width
+    description: Configures the width of flashcard callouts
+    type: variable-number
+    default: 250
+    format: px
+  - title: Flashcard callout height
+    id: flexcyon-callouts-flashcard-height
+    description: Configures the height of flashcard callouts
+    type: variable-number
+    default: 250
     format: px
 
   - title: Checkboxes
@@ -4273,6 +4445,9 @@ settings:
       - 
         label: Cards
         value: flexcyon-status-style-card
+      -
+        label: Powerlevel10k
+        value: flexcyon-status-style-pl10k
 
   - title: Enable status text color
     id: flexcyon-status-text-enable-color

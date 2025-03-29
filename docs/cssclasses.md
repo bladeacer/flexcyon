@@ -4,6 +4,7 @@
 ### Table of Contents
 - [Callouts](#callouts)
     - [Callout metadata](#callout-metadata)
+        - [Flashcard Callout](#flashcard-callout)
         - [Popup Callout](#popup-callout)
         - ---------------------------------------------------
         - [No Icon](#no-icon)
@@ -119,7 +120,16 @@ Defines utilities for callouts.
 ### Callout metadata
 > Note: you need at least `>[!|] your title` for Obsidian to render your callout. In this case where the callout type is not specified, it will render as if you typed `>[!note] your title`
 
-### Popup callout
+#### Flashcard callout
+Callout metadata: "flashcard"
+
+Usage:
+```md
+> [!info|$pop] The title and the callout will styled nicely to resemble a card
+> The contents will be flipped in reading mode or live preview, which will show on hover
+```
+
+#### Popup callout
 Callout metadata: "$pop"
 
 Usage:
@@ -167,7 +177,7 @@ Alternatively, you can use:
 > Content is shown as usual
 ```
 
-___
+__
 #### Transparent Background
 Callout metadata: "transparent-bg" or "bg-transparent"
 

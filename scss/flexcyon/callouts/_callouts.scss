@@ -7,6 +7,8 @@ body.theme-dark {
     --flexcyon-callout-first-codeblock-margin-top: 1rem;
     --flexcyon-callout-vertical-margin: 1em;
     --flexcyon-callout-pop-animation-duration: 0.2s;
+    --flexcyon-callouts-flashcard-width: 250px;
+    --flexcyon-callouts-flashcard-height: 250px;
 }
 
 body:where(.theme-dark) {
@@ -491,4 +493,37 @@ div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content {
     margin-top: 16px;
     padding: 0px 8px;
+}
+
+div.callout[data-callout-metadata*="flashcard"] {
+    width: var(--flexcyon-callouts-flashcard-width);
+    height: var(--flexcyon-callouts-flashcard-height);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out; 
+
+    .callout-content {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .callout-title {
+        position: absolute;
+        top: 25%;
+        display: flex;
+        flex-direction: column; /* For stacking content if needed */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &:hover {
+        transform: rotateY(180deg);
+        .callout-title {
+            opacity: 0;
+        }
+        .callout-content {
+            opacity: 1;
+        }
+    }
+
 }

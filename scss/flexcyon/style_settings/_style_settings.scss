@@ -543,6 +543,9 @@ settings:
       - 
         label: Angled Layout
         value: flexcyon-workspace-angled-layout
+      - 
+        label: Powerlevel10k Layout
+        value: flexcyon-workspace-pl10k-layout
   - title: Enable TUI add-on for cards layout
     description: Makes Files, properties and other items adopt styling inspired by TUIs. 
     id: flexcyon-workspace-cards-tui-ext
@@ -582,6 +585,18 @@ settings:
     description: Configures the border radius of callouts
     type: variable-number
     default: 2
+    format: px
+  - title: Flashcard callout width
+    id: flexcyon-callouts-flashcard-width
+    description: Configures the width of flashcard callouts
+    type: variable-number
+    default: 250
+    format: px
+  - title: Flashcard callout height
+    id: flexcyon-callouts-flashcard-height
+    description: Configures the height of flashcard callouts
+    type: variable-number
+    default: 250
     format: px
 
   - title: Checkboxes
@@ -725,6 +740,9 @@ settings:
       - 
         label: Cards
         value: flexcyon-status-style-card
+      -
+        label: Powerlevel10k
+        value: flexcyon-status-style-pl10k
 
   - title: Enable status text color
     id: flexcyon-status-text-enable-color

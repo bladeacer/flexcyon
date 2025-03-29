@@ -32,7 +32,6 @@
     - [Side Dock Icons](#side-dock-icons)
     - [Tooltip radius](#tooltip-radius)
     - [Background images](#background-images)
-        
 
 ## Markdown Navigation tree for Flexcyon's Style Settings
 ```md
@@ -132,6 +131,8 @@ Style Settings
 |   |   |   |-- Callout Metadata Background Opacity
 |   |   |   |-- Callout Vertical Margin
 |   |   |   |-- Callout Border Radius
+|   |   |   |-- Flashcard Callout width
+|   |   |   |-- Flashcard Callout height
 |   |   |-- Checkboxes
 |   |   |   |-- Enable ASCII checkboxes
 |   |   |   |-- Enable ASCII checkboxes
@@ -646,13 +647,14 @@ ___
 Configure the workspace layout.
 
 #### Select workspace layout
-CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout), var(--flexcyon-workspace-angled-layout)`
+CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout), var(--flexcyon-workspace-angled-layout), var(--flexcyon-workspace-pl10k-layout)`
 
 Default: none (class select)
 
 Options:
 - Cards Layout
 - Angled Layout
+- Powerlevel10k Layout
 
 > Workspace layout changes may need app reload or restart to take effect
 
@@ -691,6 +693,16 @@ Default: 1 (em)
 CSS Variable(s) targeted: `var(--callout-radius)`
 
 Default: 2 (px)
+
+### Flashcard callout width
+CSS Variable(s) targeted: `var(--flexcyon-callouts-flashcard-width)`
+
+Default: 250 (px)
+
+### Flashcard callout height
+CSS Variable(s) targeted: `var(--flexcyon-callouts-flashcard-height)`
+
+Default: 250 (px)
 
 ___
 ## Checkboxes
@@ -826,12 +838,13 @@ CSS Variable(s) targeted: `var(--status-bar-font-size)`
 Default: 12.5 (px)
 
 ### Select status bar style
-CSS Variable(s) targeted: `var(--flexcyon-status-style-angled), var(--flexcyon-status-style-card)`
+CSS Variable(s) targeted: `var(--flexcyon-status-style-angled), var(--flexcyon-status-style-card), var(--flexcyon-status-style-pl10k)`
 
 Default: none (class select)
 Options:
-- angled (inspired by Powerlevel10k)
+- Angled
 - Cards
+- Powerlevel10k 
 
 ### Enable status text color
 CSS Variable(s) targeted: `var(--flexcyon-status-text-enable-color)`
@@ -977,7 +990,7 @@ Used with the previous setting to set the blur intensity of inactive canvas node
 CSS Variable(s) targeted: `var(--flexcyon-canvas-blur-intensity)`
 
 Default: 1 (px)
-
+<!-- 
 ### Canvas node color
 CSS Variable(s) targeted: `var(--canvas-color)`
 
@@ -1012,7 +1025,7 @@ Default: 60, 185, 194 (RGB)
 CSS Variable(s) targeted `var(--canvas-color-6)`
 
 Default: 90, 143, 205 (RGB)
-
+ -->
 
 ___
 # Others Section

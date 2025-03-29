@@ -172,6 +172,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
         * {
             color: rgba(var(--color-purple-rgb), 0.9);
         }
+
         div.collapse-indicator,
         .metadata-properties-title {
             background-color: var(--color-base-10);
@@ -217,4 +218,26 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
     @include tab-container-style("calendar", "yellow", "Calendar");
 
 
+}
+
+body.flexcyon-workspace-pl10k-layout {
+
+    .workspace-split.mod-sidedock {
+
+        .workspace-tab-header-container-inner :first-child.workspace-tab-header {
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            padding-left: 8px;
+        }
+        .workspace-tab-header-container-inner :last-child.workspace-tab-header {
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            padding-right: 8px;
+        }
+
+        .workspace-tab-header {
+            padding: 0px 4px;
+        }
+
+    }
 }
