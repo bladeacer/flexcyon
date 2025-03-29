@@ -7,7 +7,6 @@
 - [ ] Card callout metadata?
 
 #### Plugins/snippets
-- [x] Add support for core Canvas plugin
 - [ ] Support more plugins
   - Could also look at:
     - Tasks
@@ -19,6 +18,7 @@
 #### Other styling options
 - [ ] Markdown tree codeblock/callout css
 - [ ] Rainbow metadata icons
+- [ ] Spinny prompt animation because funny
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 #### Next version changelog
@@ -28,5 +28,7 @@
   - Slide in Right to Left
   - Slide in Top to Bottom
   - Slide in Bottom to Top
+  - Rotate in Bottom to Top
+  - Rotate in Right to Left
 - Added layout and status style for Powerlevel10k
 - Added flashcard callout metadata utility

@@ -297,6 +297,7 @@ body:where(.theme-dark) {
   --flexcyon-anim-duration: 0.5s;
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 50px;
+  --flexcyon-anim-rotate-amount: 50deg;
 }
 
 body.flexcyon-workspace-angled-layout .view-header-breadcrumb-separator {
@@ -417,28 +418,48 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .view-heade
     transform: translateY(0);
   }
 }
-body.flexcyon-anims-slide-rtl .workspace-leaf-content,
-body.flexcyon-anims-slide-rtl .modal,
-body.flexcyon-anims-slide-rtl .prompt {
+@keyframes spin-in-rl {
+  0% {
+    opacity: 0;
+    transform: rotateY(var(--flexcyon-anim-rotate-amount));
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
+@keyframes spin-in-bt {
+  0% {
+    opacity: 0;
+    transform: rotateX(var(--flexcyon-anim-rotate-amount));
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+body.flexcyon-anims-slide-rtl .workspace-leaf-content, body.flexcyon-anims-slide-rtl .modal, body.flexcyon-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-ltr .workspace-leaf-content,
-body.flexcyon-anims-slide-ltr .modal,
-body.flexcyon-anims-slide-ltr .prompt {
+body.flexcyon-anims-slide-ltr .workspace-leaf-content, body.flexcyon-anims-slide-ltr .modal, body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-tb .workspace-leaf-content,
-body.flexcyon-anims-slide-tb .modal,
-body.flexcyon-anims-slide-tb .prompt {
+body.flexcyon-anims-slide-tb .workspace-leaf-content, body.flexcyon-anims-slide-tb .modal, body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-bt .workspace-leaf-content,
-body.flexcyon-anims-slide-bt .modal,
-body.flexcyon-anims-slide-bt .prompt {
-  animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+body.flexcyon-anims-slide-bt .workspace-leaf-content, body.flexcyon-anims-slide-bt .modal, body.flexcyon-anims-slide-bt .prompt {
+  animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-spin-rl .workspace-leaf-content, body.flexcyon-anims-spin-rl .modal, body.flexcyon-anims-spin-rl .prompt {
+  animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-spin-bt .workspace-leaf-content, body.flexcyon-anims-spin-bt .modal, body.flexcyon-anims-spin-bt .prompt {
+  animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
@@ -2746,6 +2767,9 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 }
 
 /* Modifications for tab containers */
+body:where(.theme-dark) .workspace-tab-header {
+  padding: 0px 4px;
+}
 body:where(.theme-dark) .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active) > .workspace-tab-header-inner {
   opacity: 1;
 }
@@ -3072,18 +3096,18 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   padding: 0px 8px;
 }
 
-body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header-container-inner :first-child.workspace-tab-header {
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  padding-left: 8px;
+body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header.is-active {
+  aspect-ratio: 0.8660254038;
+  clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
 }
-body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header-container-inner :last-child.workspace-tab-header {
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-  padding-right: 8px;
+body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-bottom: none;
 }
-body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header {
-  padding: 0px 4px;
+body.flexcyon-workspace-pl10k-layout .workspace-tab-header.is-active {
+  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+}
+body.flexcyon-workspace-pl10k-layout .workspace-tab-header.is-active .workspace-tab-header-inner {
+  border-bottom: none;
 }
 
 body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
@@ -4183,6 +4207,12 @@ settings:
       - 
         label: Slide in Bottom to Top
         value: flexcyon-anims-slide-bt
+      - 
+        label: Rotate in Bottom to Top
+        value: flexcyon-anims-spin-bt
+      - 
+        label: Rotate in Right to Left
+        value: flexcyon-anims-spin-rl
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -4236,7 +4266,7 @@ settings:
     level: 6
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is inspired by Powerlevel10k.
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
     type: class-select
     id: theme-variant
     allowEmpty: true

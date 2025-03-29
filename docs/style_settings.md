@@ -597,7 +597,7 @@ Configure transition animations of prompts, modals and tab container.
 Accepted Formats: s
 
 #### Animation type
-CSS Variable(s) targeted: `var(--flexcyon-anims-slide-rtl), var(--flexcyon-anims-slide-ltr), var(--flexcyon-anims-slide-tb), var(--flexcyon-anims-slide-bt)`
+CSS Variable(s) targeted: `var(--flexcyon-anims-slide-rtl), var(--flexcyon-anims-slide-ltr), var(--flexcyon-anims-slide-tb), var(--flexcyon-anims-slide-bt), var(--flexcyon-anims-spin-bt), var(--flexcyon-anims-spin-rl)`
 > Changes may need an app reload/restart to take effect
 
 Default: none (class select)
@@ -605,7 +605,8 @@ Options:
   - Slide in Left to Right
   - Slide in Right to Left
   - Slide in Top to Bottom
-  - Slide in Bottom to Top
+  - Rotate in Bottom to Top
+  - Rotate in Right to Left 
 
 
 #### Animation duration

@@ -14,6 +14,7 @@ body:where(.theme-dark) {
     --flexcyon-anim-duration: 0.5s;
     --flexcyon-anim-easing: ease-in-out;
     --flexcyon-anim-slide-amount: 50px;
+    --flexcyon-anim-rotate-amount: 50deg;
 }
 
 body.flexcyon-workspace-angled-layout {
@@ -38,7 +39,6 @@ body.flexcyon-workspace-angled-layout {
     }
 }
 
-// zsh/comfy style, rewrite this as another layout
 body.flexcyon-workspace-pl10k-layout {
     .view-header-title-parent {
         :nth-of-type(5n+1) {
@@ -165,39 +165,62 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
     }
 }
 
+@keyframes spin-in-rl {
+    0% {
+        opacity: 0;
+        transform: rotateY(var(--flexcyon-anim-rotate-amount));
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+@keyframes spin-in-bt {
+    0% {
+        opacity: 0;
+        transform: rotateX(var(--flexcyon-anim-rotate-amount));
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
 
 body.flexcyon-anims-slide-rtl {
-
-    .workspace-leaf-content,
-    .modal,
-    .prompt {
+    .workspace-leaf-content, .modal, .prompt {
         animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
 }
 
 body.flexcyon-anims-slide-ltr {
-
-    .workspace-leaf-content,
-    .modal,
-    .prompt {
+    .workspace-leaf-content, .modal, .prompt {
         animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
 }
 
 body.flexcyon-anims-slide-tb {
-
-    .workspace-leaf-content,
-    .modal,
-    .prompt {
+    .workspace-leaf-content, .modal, .prompt {
         animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
 }
 
 body.flexcyon-anims-slide-bt {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+    }
+}
 
-    .workspace-leaf-content,
-    .modal,
-    .prompt {
-        animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+body.flexcyon-anims-spin-rl {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+    }
+}
+
+body.flexcyon-anims-spin-bt {
+    .workspace-leaf-content, .modal, .prompt {
+        animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
 }

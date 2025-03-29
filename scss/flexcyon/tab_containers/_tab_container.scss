@@ -3,6 +3,10 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body:where(.theme-dark) {
+    .workspace-tab-header {
+        padding: 0px 4px;
+    }
+
     .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active)>.workspace-tab-header-inner {
         opacity: 1;
     }
@@ -221,23 +225,28 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
 }
 
 body.flexcyon-workspace-pl10k-layout {
-
-    .workspace-split.mod-sidedock {
-
-        .workspace-tab-header-container-inner :first-child.workspace-tab-header {
-            border-top-left-radius: 16px;
-            border-bottom-left-radius: 16px;
-            padding-left: 8px;
-        }
-        .workspace-tab-header-container-inner :last-child.workspace-tab-header {
-            border-top-right-radius: 16px;
-            border-bottom-right-radius: 16px;
-            padding-right: 8px;
-        }
-
-        .workspace-tab-header {
-            padding: 0px 4px;
-        }
-
+    .workspace-split.mod-sidedock .workspace-tab-header.is-active {
+        aspect-ratio: cos(30deg);
+        clip-path: polygon(-50% 50%,
+                50% 100%,
+                150% 50%,
+                50% 0);
     }
+
+    .workspace-split.mod-sidedock .workspace-tab-header.is-active {
+        .workspace-tab-header-inner {
+            border-bottom: none;
+        }
+    }
+
+    .workspace-tab-header.is-active {
+        clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+
+        .workspace-tab-header-inner {
+            border-bottom: none;
+        }
+    }
+
 }
+
+

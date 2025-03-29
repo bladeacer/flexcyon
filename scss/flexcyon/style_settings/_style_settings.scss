@@ -478,6 +478,12 @@ settings:
       - 
         label: Slide in Bottom to Top
         value: flexcyon-anims-slide-bt
+      - 
+        label: Rotate in Bottom to Top
+        value: flexcyon-anims-spin-bt
+      - 
+        label: Rotate in Right to Left
+        value: flexcyon-anims-spin-rl
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -531,7 +537,7 @@ settings:
     level: 6
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is inspired by Powerlevel10k.
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
     type: class-select
     id: theme-variant
     allowEmpty: true
