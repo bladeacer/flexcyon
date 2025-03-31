@@ -1,6 +1,8 @@
 body.theme-dark {
     --flexcyon-ascii-max-font-size: 14px;
+    --flexcyon-quote-font-size: 24px;
     --flexcyon-ascii-line-height: 1;
+    --flexcyon-quote-val: "Never gonna give you up \a\a - Rick Astley";
     --flexcyon-ascii-art: " \a\
 _______________                                       \a\
 ___  ____/__  /________  ____________  ______________ \a\
@@ -62,5 +64,27 @@ body.theme-dark.flexcyon-empty-state-title-disable {
 body.theme-dark.flexcyon-empty-state-actions-disable {
     div.empty-state-action-list {
         display: none;
+    }
+}
+
+body.theme-dark.flexcyon-quote-enable {
+    div.empty-state-container::before {
+        content: var(--flexcyon-quote-val);
+        font-weight: bold;
+        background: var(--text-faint);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: var(--flexcyon-ascii-line-height);
+        white-space: pre;
+        text-align: center;
+        display: inline;
+        font-size: var(--flexcyon-quote-font-size);
+    }
+
+    div.empty-state-container {
+        transform: translateY(-105px);
+    }
+    div.empty-state-action-list {
+        margin-top: 32px;
     }
 }

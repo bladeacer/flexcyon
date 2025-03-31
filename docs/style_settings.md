@@ -198,7 +198,9 @@ Style Settings
 |   |   |   |-- Normal Mode Text
 |   |   |   |-- Command Mode Text
 |   |   |-- New Tab Apperance
-|   |   |   |-- Enable ASCII Art
+|   |   |   |-- Add before Empty State title
+|   |   |   |-- Quote
+|   |   |   |-- Quote max font size
 |   |   |   |-- ASCII Art
 |   |   |   |-- Disable Empty State title
 |   |   |   |-- Disable Empty State actions
@@ -211,13 +213,23 @@ Style Settings
 |   |   |   |-- Medium radius
 |   |   |   |-- Large radius
 |   |   |   |-- Extra large radius
-|   |   |-- Background images
-|   |   |   |-- Left background image url
-|   |   |   |-- Right background image url
-|   |   |   |-- Background image blend mode
-|   |   |   |-- Background image repeat
-|   |   |   |-- Background image blur
-|   |   |   |-- Backgroud image brightness
+|   |   |-- Sidebar Background images
+|   |   |   |-- Left sidebar background image url
+|   |   |   |-- Right sidebar background image url
+|   |   |   |-- Sidebar Background image blend mode
+|   |   |   |-- Sidebar Background image repeat
+|   |   |   |-- Sidebar Background image blur
+|   |   |   |-- Sidebar Backgroud image brightness
+|   |   |   |-- Sidebar Backgroud image size
+|   |   |   |-- Sidebar Backgroud image position
+|   |   |-- Modal Background image
+|   |   |   |-- Modal Background image url
+|   |   |   |-- Modal Background image blend mode
+|   |   |   |-- Modal Background image repeat
+|   |   |   |-- Modal Background image blur
+|   |   |   |-- Modal Background image brightness
+|   |   |   |-- Modal Backgroud image size
+|   |   |   |-- Modal Backgroud image position
 |-- ...
 ```
 
@@ -622,7 +634,7 @@ Default: ease-in-out
 
 ___
 ### Editor Background
-Accepted formats: px
+Accepted formats: px, deg
 
 #### Select Background Type
 CSS Variable(s) targeted: `var(--flexcyon-editor-grid), var(--flexcyon-editor-dots)`
@@ -632,6 +644,10 @@ Options:
 - Grid Background
 - Dotted Background
 
+#### Rotation value for grid background
+CSS Variable(s) targeted: `var(--flexcyon-editor-bg-rotation)`
+
+Default: 0 (deg)
 
 #### Width between each dot/line for grid/dotted background
 CSS Variable(s) targeted: `var(--flexcyon-editor-bg-width)`
@@ -1069,10 +1085,25 @@ ___
 ## New Tab Appearance
 Customize the apperance of new empty tabs
 
-### Enable ASCII Art
-CSS Variable(s) targeted: `var(--flexcyon-ascii-enable)`
+Accepted Formats: px
 
-Default: true (class toggle)
+### Add before empty state title
+CSS Variable(s) targeted: `var(--flexcyon-ascii-enable), var(--flexcyon-quote-enable)`
+
+Default: none (class select)
+Options:
+- ASCII Art
+- Quote
+
+### Quote
+CSS Variable(s) targeted: `var(--flexcyon-quote-val)`
+Default: ""
+
+### Quote font size
+CSS Variable(s) targeted: `var(--flexcyon-quote-font-size)`
+Default: 24px
+
+> Line breaks are escaped as `\a` and `\` is escaped as `\\`
 
 ### ASCII Art
 CSS Variable(s) targeted: `var(--flexcyon-ascii-art)`
@@ -1085,7 +1116,7 @@ Default: " \a\
     /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                     /____/                \a\a\a "
 
-> The ASCII art string needs to be escaped for CSS to render it, line breaks are escaped as \a and \ is escaped as \\
+> The ASCII art string needs to be escaped for CSS to render it, line breaks are escaped as `\a` and `\` is escaped as `\\`
 
 
 ### ASCII art font size limit
@@ -1095,6 +1126,7 @@ Default: 14 (px)
 
 ### ASCII art line height
 CSS Variable(s) targeted: `var(--flexcyon-ascii-line-height)`
+> Changes line height for quote as welll
 
 Default: 1
 
@@ -1150,40 +1182,98 @@ Default: 8 (px)
 
 ___
 
-## Background images
+## Sidebar Background images
 Configure background images in the left and right sidebars.
 
 Accepted Formats: px, %
 
 
-### Left background image url
+### Left sidebar background image url
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-sidebar-left-url)`
 
 Default: url("")
 > For urls to work, add your URL between the double quotes e.g. a value of:
 `url("https://fake_domain/not_a_real_image.png")`
 
-### Right background image url
+### Right sidebar background image url
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-sidebar-right-url)`
 
 Default: url("")
+> For urls to work, add your URL between the double quotes e.g. a value of:
+`url("https://fake_domain/not_a_real_image.png")`
 
-### Background image blend mode
+### Sidebar Background image blend mode
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-blend-mode)`
 
 Default: darken
 
-### Background image repeat
+### Sidebar Background image repeat
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-repeat)`
 
 Default: no-repeat
 
-### Background image blur
+### Sidebar Background image blur
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-blur)`
 
 Default: 1px
 
-### Background image brightness
+### Sidebar Background image brightness
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-brightness)`
 
 Default: 55%
+
+### Sidebar Background image size
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-size)`
+
+Default: contain
+
+### Sidebar Background image position
+CSS Variable(s) targeted: `var(--flexcyon-bg-image-position)`
+
+Default: center
+
+
+___
+## Modal Background images
+Configure background images in the background of settings menu, prompts etc
+
+Accepted Formats: px, %
+
+
+### Modal Background image url
+CSS Variable(s) targeted: `var(--flexcyon-modal-bg-url)`
+
+Default: url("")
+> For urls to work, add your URL between the double quotes e.g. a value of:
+`url("https://fake_domain/not_a_real_image.png")`
+
+
+### Modal Background image blend mode
+CSS Variable(s) targeted: `var(--flexcyon-modal-image-blend-mode)`
+
+Default: lighten
+
+### Modal Background image repeat
+CSS Variable(s) targeted: `var(--flexcyon-modal-image-repeat)`
+
+Default: no-repeat
+
+### Modal Background image blur
+CSS Variable(s) targeted: `var(--flexcyon-modal-image-blur)`
+
+Default: 1px
+
+### Modal Background image brightness
+CSS Variable(s) targeted: `var(--flexcyon-bg-modal-brightness)`
+
+Default: 55%
+
+### Modal background image size
+CSS Variable(s) targeted: `var(--flexcyon-modal-image-size)`
+
+Default: cover
+
+### Modal background image position
+CSS Variable(s) targeted: `var(--flexcyon-modal-image-position)`
+
+Default: center

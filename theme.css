@@ -338,6 +338,9 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :nth-of-type(5n):
 body.flexcyon-workspace-pl10k-layout .view-header-title-parent :has(+ :last-child)::after {
   background-color: var(--color-base-05);
 }
+body.flexcyon-workspace-pl10k-layout .view-header-title-container:not(:has(.view-header-breadcrumb)) .view-header-title {
+  border-radius: 16px;
+}
 body.flexcyon-workspace-pl10k-layout .view-header-title-parent :first-child.view-header-breadcrumb {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -347,7 +350,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-brea
   padding: 4px 0px;
 }
 body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-breadcrumb::after {
-  padding: 4px 6px;
+  padding: 10px 6px;
   content: "e";
   position: relative;
   width: inherit;
@@ -356,8 +359,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-brea
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
 }
 body.flexcyon-workspace-pl10k-layout .view-header-title {
-  padding: 4px 0px;
-  padding-right: 12px;
+  padding: 4px 12px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: var(--color-base-05);
@@ -369,13 +371,35 @@ body.flexcyon-workspace-pl10k-layout .view-header, body.flexcyon-workspace-pl10k
   gap: 0px;
 }
 
-body.flexcyon-workspace-card-layout .view-header {
-  border: 2px solid var(--color-base-20);
-  border-radius: 16px;
+body.flexcyon-workspace-card-layout .view-header-breadcrumb-separator {
+  display: none;
 }
-
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .view-header {
-  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
+body.flexcyon-workspace-card-layout .view-header-breadcrumb {
+  border-radius: 16px;
+  padding: 4px 8px;
+}
+body.flexcyon-workspace-card-layout .view-header-title-container {
+  gap: 8px;
+}
+body.flexcyon-workspace-card-layout .view-header-title-parent {
+  gap: 8px;
+}
+body.flexcyon-workspace-card-layout .view-header-title-parent :nth-of-type(5n+1) {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-workspace-card-layout .view-header-title-parent :nth-of-type(5n+3) {
+  background-color: var(--color-base-25);
+}
+body.flexcyon-workspace-card-layout .view-header-title-parent :nth-of-type(5n) {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-card-layout .view-header-title-parent :has(+ :last-child)::after {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-workspace-card-layout .view-header-title {
+  padding: 4px 8px;
+  background-color: var(--color-base-05);
+  border-radius: 16px;
 }
 
 @keyframes slide-in-left {
@@ -899,12 +923,13 @@ body:is(.theme-dark) {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
   --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
+  --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.flexcyon-editor-grid .canvas-background,
 div.callout[data-callout-metadata*=bg-grid] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
-  background-image: repeating-linear-gradient(to right, var(--flexcyon-editor-bg-color), transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(to bottom, var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+  background-image: repeating-linear-gradient(var(--flexcyon-editor-bg-rotation), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
 body.flexcyon-editor-grid .canvas-background *,
 div.callout[data-callout-metadata*=bg-grid] .callout-content *,
@@ -3103,12 +3128,6 @@ body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-ta
 body.flexcyon-workspace-pl10k-layout .workspace-split.mod-sidedock .workspace-tab-header.is-active .workspace-tab-header-inner {
   border-bottom: none;
 }
-body.flexcyon-workspace-pl10k-layout .workspace-tab-header.is-active {
-  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
-}
-body.flexcyon-workspace-pl10k-layout .workspace-tab-header.is-active .workspace-tab-header-inner {
-  border-bottom: none;
-}
 
 body.flexcyon-file-exp-dimmed-file-exts-enabled div[data-path$=".md"] div.nav-file-tag {
   display: none;
@@ -3530,25 +3549,44 @@ body:not(.is-fullscreen) .status-bar {
 }
 
 body.flexcyon-status-style-card .status-bar {
-  border-radius: 16px;
-  border: 2px solid var(--color-base-20);
+  border: none;
   margin: 4px 8px;
+  gap: 8px;
+  background-color: transparent;
+  right: 10px;
+}
+body.flexcyon-status-style-card .status-bar :nth-of-type(2n).status-bar-item {
+  background-color: var(--color-base-05);
+  border-radius: 16px;
+  padding: 4px 8px;
+}
+body.flexcyon-status-style-card .status-bar :nth-of-type(2n+1).status-bar-item {
+  background-color: var(--color-base-25);
+  border-radius: 16px;
+  padding: 4px 8px;
 }
 
 body.flexcyon-status-style-pl10k .status-bar {
   border: transparent;
   background-color: transparent;
   gap: 0px;
-  scale: 1.15;
+  scale: var(--expand);
 }
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item .status-bar-item-icon {
   transform: translateX(-1px);
+}
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item[style="display: none;"]::after {
+  display: none;
+}
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item[style="display: none;"] + .status-bar-item {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
   padding: 0px;
 }
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
-  padding: 4px 1px;
+  padding: 4px 4px;
   content: "e";
   position: relative;
   width: inherit;
@@ -3556,28 +3594,32 @@ body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
   color: transparent;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
 }
+body.flexcyon-status-style-pl10k .status-bar :first-child:empty,
 body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   padding-left: 6px;
 }
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n+1).status-bar-item {
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item:empty {
+  display: flex;
+}
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n+1).status-bar-item {
   background-color: var(--color-base-20);
 }
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n+1).status-bar-item::after {
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n+1).status-bar-item::after {
   background-color: var(--color-base-05);
 }
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n).status-bar-item {
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n).status-bar-item {
   background-color: var(--color-base-05);
 }
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(3n).status-bar-item::after {
+body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n).status-bar-item::after {
   background-color: var(--color-base-20);
 }
 body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item {
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   padding-right: 6px;
-  margin-right: 40px;
+  margin-right: 46px;
 }
 body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after {
   display: none;
@@ -3585,7 +3627,9 @@ body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after 
 
 body.theme-dark {
   --flexcyon-ascii-max-font-size: 14px;
+  --flexcyon-quote-font-size: 24px;
   --flexcyon-ascii-line-height: 1;
+  --flexcyon-quote-val: "Never gonna give you up \a \a- Rick Astley";
   --flexcyon-ascii-art: " \a_______________                                       \a___  ____/__  /________  ____________  ______________ \a__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a                                 /____/                \a \a \a";
 }
 body.theme-dark div.empty-state-action {
@@ -3630,6 +3674,25 @@ body.theme-dark.flexcyon-empty-state-title-disable div.empty-state-title {
 
 body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list {
   display: none;
+}
+
+body.theme-dark.flexcyon-quote-enable div.empty-state-container::before {
+  content: var(--flexcyon-quote-val);
+  font-weight: bold;
+  background: var(--text-faint);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: var(--flexcyon-ascii-line-height);
+  white-space: pre;
+  text-align: center;
+  display: inline;
+  font-size: var(--flexcyon-quote-font-size);
+}
+body.theme-dark.flexcyon-quote-enable div.empty-state-container {
+  transform: translateY(-105px);
+}
+body.theme-dark.flexcyon-quote-enable div.empty-state-action-list {
+  margin-top: 32px;
 }
 
 body.theme-dark {
@@ -4250,6 +4313,12 @@ settings:
       - 
         label: Dotted Background
         value: flexcyon-editor-dots
+  - title: Rotation value for grid background
+    description: How many degrees the grid background will be rotated
+    id: flexcyon-editor-bg-rotation
+    type: variable-number
+    default: 0
+    format: deg
 
   - title: Width between each dot/line for grid/dotted background
     id: flexcyon-editor-bg-width
@@ -4678,11 +4747,29 @@ settings:
     level: 5
     collapsed: true
     description: Customise the appearance of new tabs
-  - title: Enable ASCII Art
-    id: flexcyon-ascii-enable
-    description: Enable ASCII art in new tab
-    type: class-toggle
-    default: true
+  - title: Add before empty state title
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: flexcyon-ascii-enable
+    options: 
+      - 
+        label: ASCII art
+        value: flexcyon-ascii-enable
+      - 
+        label: Quote
+        value: flexcyon-quote-enable
+  - title: Quote
+    id: flexcyon-quote-val
+    description: The quote that will be displayed
+    type: variable-text
+    default: ""
+    quotes: true
+  - title: Quote font size
+    id: flexcyon-quote-font-size
+    type: variable-number
+    default: 24
+    format: px
   - title: ASCII Art
     id: flexcyon-ascii-art
     description: ASCII art to display in new tab
@@ -4702,7 +4789,7 @@ settings:
     default: 14
     format: px
   - title: ASCII art line height
-    description: The line height of the ASCII art
+    description: The line height of the ASCII art and quotes.
     id: flexcyon-ascii-line-height
     type: variable-number
     default: 1
@@ -4756,36 +4843,79 @@ settings:
     default: 8
     format: px
 
-  - title: Background images
+  - title: Sidebar Background images
     type: heading
     description: Configure background images in the left and right sidebars
     level: 5
     collapsed: true
-  - title: Left background image url
+  - title: Left sidebar background image url
     id: flexcyon-bg-image-sidebar-left-url
     type: variable-text
     default: url("")
-  - title: Right background image url
+  - title: Right sidebar background image url
     id: flexcyon-bg-image-sidebar-right-url
     type: variable-text
     default: url("")
-  - title: Background image blend mode
+  - title: Sidebar Background image blend mode
     id: flexcyon-bg-image-blend-mode
     type: variable-text
     default: darken
-  - title: Background image repeat
+  - title: Sidebar Background image repeat
     id: flexcyon-bg-image-repeat
     type: variable-text
     default: no-repeat
-  - title: Background image blur
+  - title: Sidebar Background image blur
     id: flexcyon-bg-image-blur
     type: variable-number
     default: 1
     format: px
-  - title: Background image brightness
+  - title: Sidebar Background image brightness
     id: flexcyon-bg-image-brightness
     type: variable-text
     default: 55%
+  - title: Sidebar Background image size
+    id: flexcyon-bg-image-size
+    type: variable-text
+    default: contain
+  - title: Sidebar Background image position
+    id: flexcyon-bg-image-position
+    type: variable-text
+    default: center
+
+  - title: Modal Background image
+    type: heading
+    description: Configure background images in the background of settings menu, prompts etc
+    level: 5
+    collapsed: true
+  - title: Modal Background image url
+    id: flexcyon-modal-bg-url
+    type: variable-text
+    default: url("")
+  - title: Modal background image blend mode
+    id: flexcyon-modal-image-blend-mode
+    type: variable-text
+    default: lighten
+  - title: Modal Background image repeat
+    id: flexcyon-modal-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Modal Background image blur
+    id: flexcyon-modal-image-blur
+    type: variable-number
+    default: 1
+    format: px
+  - title: Modal Background image brightness
+    id: flexcyon-modal-image-brightness
+    type: variable-text
+    default: 55%
+  - title: Modal Background image size
+    id: flexcyon-modal-image-size
+    type: variable-text
+    default: cover
+  - title: Modal Background image position
+    id: flexcyon-modal-image-position
+    type: variable-text
+    default: center
 
  */
 body.theme-dark div.pcr-app.visible {
@@ -4862,10 +4992,17 @@ body.theme-dark {
   --flexcyon-bg-image-sidebar-right-url: url("");
   --flexcyon-bg-image-blend-mode: darken;
   --flexcyon-bg-image-repeat: no-repeat;
-  --flexcyon-bg-image-blur: 0px;
+  --flexcyon-bg-image-blur: 1px;
   --flexcyon-bg-image-brightness: 55%;
   --flexcyon-bg-image-size: contain;
   --flexcyon-bg-image-position: center;
+  --flexcyon-modal-bg-url: url("");
+  --flexcyon-modal-image-blend-mode: lighten;
+  --flexcyon-modal-image-repeat: no-repeat;
+  --flexcyon-modal-image-blur: 1px;
+  --flexcyon-modal-image-brightness: 55%;
+  --flexcyon-modal-image-size: cover;
+  --flexcyon-modal-image-position: center;
   --nav-item-background-hover: transparent;
 }
 body.theme-dark .mod-left-split .workspace-leaf-content {
@@ -4920,6 +5057,13 @@ body.theme-dark .mod-right-split .workspace-leaf-content div.oz-nav-buttons-righ
   body.theme-dark .mod-right-split .tree-item-inner, body.theme-dark .mod-right-split .tree-item-icon::before {
     background-color: transparent;
   }
+}
+body.theme-dark .modal-bg {
+  background-image: var(--flexcyon-modal-bg-url);
+  background-size: var(--flexcyon-modal-image-size);
+  background-position: var(--flexcyon-modal-image-position);
+  background-blend-mode: var(--flexcyon-modal-image-blend-mode);
+  filter: brightness(var(--flexcyon-modal-image-brightness)) blur(var(--flexcyon-modal-image-blur));
 }
 
 /* Modifications for alternate file tree plugin */

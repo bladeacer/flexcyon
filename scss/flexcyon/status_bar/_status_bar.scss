@@ -127,9 +127,21 @@ body:not(.is-fullscreen) .status-bar {
 
 body.flexcyon-status-style-card {
   .status-bar {
-    border-radius: 16px;
-    border: 2px solid var(--color-base-20);
+    border: none;
     margin: 4px 8px;
+    gap: 8px;
+    background-color: transparent;
+    right: 10px;
+  }
+  .status-bar :nth-of-type(2n).status-bar-item {
+    background-color: var(--color-base-05);
+    border-radius: 16px;
+    padding: 4px 8px;
+  }
+  .status-bar :nth-of-type(2n+1).status-bar-item {
+    background-color: var(--color-base-25);
+    border-radius: 16px;
+    padding: 4px 8px;
   }
 }
 
@@ -138,16 +150,23 @@ body.flexcyon-status-style-pl10k {
     border: transparent;
     background-color: transparent;
     gap: 0px;
-    scale: 1.15;
+    scale: var(--expand);
 
     .status-bar-item .status-bar-item-icon {
       transform: translateX(-1px);
+    }
+    .status-bar-item[style="display: none;"]::after {
+      display: none;
+    }
+    .status-bar-item[style="display: none;"] + .status-bar-item {
+      border-top-left-radius: 16px;
+      border-bottom-left-radius: 16px;
     }
 
     .status-bar-item {
       padding: 0px;
       &::after {
-        padding: 4px 1px;
+        padding: 4px 4px;
         content: "e";
         position: relative;
         width: inherit;
@@ -157,13 +176,17 @@ body.flexcyon-status-style-pl10k {
       }
 
     }
+    :first-child:empty,
     :first-child.status-bar-item {
       border-top-left-radius: 16px;
       border-bottom-left-radius: 16px;
       padding-left: 6px;
     }
+    .status-bar-item:empty {
+      display: flex;
+    }
 
-    :nth-of-type(3n+1).status-bar-item {
+    :nth-of-type(2n+1).status-bar-item {
       background-color: var(--color-base-20);
 
       &::after {
@@ -171,15 +194,7 @@ body.flexcyon-status-style-pl10k {
       }
     }
 
-    // :nth-of-type(3n+2).status-bar-item{
-    //   background-color: var(--color-base-25);
-
-    //   &::after {
-    //     background-color: var(--color-base-20);
-    //   }
-    // }
-
-    :nth-of-type(3n).status-bar-item {
+    :nth-of-type(2n).status-bar-item {
       background-color: var(--color-base-05);
 
       &::after {
@@ -191,7 +206,7 @@ body.flexcyon-status-style-pl10k {
       border-top-right-radius: 16px;
       border-bottom-right-radius: 16px;
       padding-right: 6px;
-      margin-right: 40px;
+      margin-right: 46px;
     }
     :last-child.status-bar-item::after {
       display: none;

@@ -1,5 +1,19 @@
 ## Changelog
-### Version 0.3.2 
+### Version 0.3.2 Animations
+- Styling Tweaks to community store item, existing layouts
+- Animations are back, current options include:
+  - Slide in Left to Right
+  - Slide in Right to Left
+  - Slide in Top to Bottom
+  - Slide in Bottom to Top
+  - Rotate in Bottom to Top
+  - Rotate in Right to Left
+- Added layout and status style for Powerlevel10k
+- Added flashcard callout metadata utility
+- Added option to add custom quote before empty state title
+  - Is not selectable with ASCII art, ASCII art is selected by default
+- Added option to angle grid editor background 
+- Added background image option for modals (background image for settings, prompts etc)
 
 ### Version 0.3.1 Tidying Up
 - Added callout metadata utilities for:

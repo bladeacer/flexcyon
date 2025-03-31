@@ -521,6 +521,12 @@ settings:
       - 
         label: Dotted Background
         value: flexcyon-editor-dots
+  - title: Rotation value for grid background
+    description: How many degrees the grid background will be rotated
+    id: flexcyon-editor-bg-rotation
+    type: variable-number
+    default: 0
+    format: deg
 
   - title: Width between each dot/line for grid/dotted background
     id: flexcyon-editor-bg-width
@@ -949,11 +955,29 @@ settings:
     level: 5
     collapsed: true
     description: Customise the appearance of new tabs
-  - title: Enable ASCII Art
-    id: flexcyon-ascii-enable
-    description: Enable ASCII art in new tab
-    type: class-toggle
-    default: true
+  - title: Add before empty state title
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: flexcyon-ascii-enable
+    options: 
+      - 
+        label: ASCII art
+        value: flexcyon-ascii-enable
+      - 
+        label: Quote
+        value: flexcyon-quote-enable
+  - title: Quote
+    id: flexcyon-quote-val
+    description: The quote that will be displayed
+    type: variable-text
+    default: ""
+    quotes: true
+  - title: Quote font size
+    id: flexcyon-quote-font-size
+    type: variable-number
+    default: 24
+    format: px
   - title: ASCII Art
     id: flexcyon-ascii-art
     description: ASCII art to display in new tab
@@ -973,7 +997,7 @@ settings:
     default: 14
     format: px
   - title: ASCII art line height
-    description: The line height of the ASCII art
+    description: The line height of the ASCII art and quotes.
     id: flexcyon-ascii-line-height
     type: variable-number
     default: 1
@@ -1027,36 +1051,79 @@ settings:
     default: 8
     format: px
 
-  - title: Background images
+  - title: Sidebar Background images
     type: heading
     description: Configure background images in the left and right sidebars
     level: 5
     collapsed: true
-  - title: Left background image url
+  - title: Left sidebar background image url
     id: flexcyon-bg-image-sidebar-left-url
     type: variable-text
     default: url("")
-  - title: Right background image url
+  - title: Right sidebar background image url
     id: flexcyon-bg-image-sidebar-right-url
     type: variable-text
     default: url("")
-  - title: Background image blend mode
+  - title: Sidebar Background image blend mode
     id: flexcyon-bg-image-blend-mode
     type: variable-text
     default: darken
-  - title: Background image repeat
+  - title: Sidebar Background image repeat
     id: flexcyon-bg-image-repeat
     type: variable-text
     default: no-repeat
-  - title: Background image blur
+  - title: Sidebar Background image blur
     id: flexcyon-bg-image-blur
     type: variable-number
     default: 1
     format: px
-  - title: Background image brightness
+  - title: Sidebar Background image brightness
     id: flexcyon-bg-image-brightness
     type: variable-text
     default: 55%
+  - title: Sidebar Background image size
+    id: flexcyon-bg-image-size
+    type: variable-text
+    default: contain
+  - title: Sidebar Background image position
+    id: flexcyon-bg-image-position
+    type: variable-text
+    default: center
+
+  - title: Modal Background image
+    type: heading
+    description: Configure background images in the background of settings menu, prompts etc
+    level: 5
+    collapsed: true
+  - title: Modal Background image url
+    id: flexcyon-modal-bg-url
+    type: variable-text
+    default: url("")
+  - title: Modal background image blend mode
+    id: flexcyon-modal-image-blend-mode
+    type: variable-text
+    default: lighten
+  - title: Modal Background image repeat
+    id: flexcyon-modal-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Modal Background image blur
+    id: flexcyon-modal-image-blur
+    type: variable-number
+    default: 1
+    format: px
+  - title: Modal Background image brightness
+    id: flexcyon-modal-image-brightness
+    type: variable-text
+    default: 55%
+  - title: Modal Background image size
+    id: flexcyon-modal-image-size
+    type: variable-text
+    default: cover
+  - title: Modal Background image position
+    id: flexcyon-modal-image-position
+    type: variable-text
+    default: center
 
  */
 

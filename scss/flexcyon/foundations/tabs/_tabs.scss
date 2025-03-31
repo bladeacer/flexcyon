@@ -15,6 +15,7 @@ body:where(.theme-dark) {
     --flexcyon-anim-easing: ease-in-out;
     --flexcyon-anim-slide-amount: 50px;
     --flexcyon-anim-rotate-amount: 50deg;
+
 }
 
 body.flexcyon-workspace-angled-layout {
@@ -65,6 +66,9 @@ body.flexcyon-workspace-pl10k-layout {
             background-color: var(--color-base-05);
         }
     }
+    .view-header-title-container:not(:has(.view-header-breadcrumb)) .view-header-title {
+        border-radius: 16px;
+    }
 
     .view-header-title-parent :first-child.view-header-breadcrumb {
         border-top-left-radius: 16px;
@@ -76,7 +80,7 @@ body.flexcyon-workspace-pl10k-layout {
         padding: 4px 0px;
 
         &::after {
-            padding: 4px 6px;
+            padding: 10px 6px;
             content: "e";
             position: relative;
             width: inherit;
@@ -87,8 +91,7 @@ body.flexcyon-workspace-pl10k-layout {
     }
 
     .view-header-title {
-        padding: 4px 0px;
-        padding-right: 12px;
+        padding: 4px 12px;
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
         background-color: var(--color-base-05);
@@ -103,18 +106,40 @@ body.flexcyon-workspace-pl10k-layout {
 }
 
 body.flexcyon-workspace-card-layout {
-    .view-header {
-        border: 2px solid var(--color-base-20);
+    .view-header-breadcrumb-separator {
+        display: none;
+    }
+    .view-header-breadcrumb {
+        border-radius: 16px;
+        padding: 4px 8px;
+    }
+    .view-header-title-container {
+        gap: 8px;
+    }
+
+    .view-header-title-parent {
+        gap: 8px;
+        :nth-of-type(5n+1) {
+            background-color: var(--color-base-20);
+        }
+
+        :nth-of-type(5n+3) {
+            background-color: var(--color-base-25);
+        }
+
+        :nth-of-type(5n) {
+            background-color: var(--color-base-05);
+        }
+        :has(+ :last-child)::after {
+            background-color: var(--color-base-05);
+        }
+    }
+    .view-header-title {
+        padding: 4px 8px;
+        background-color: var(--color-base-05);
         border-radius: 16px;
     }
 }
-
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-    .view-header {
-        border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.2));
-    }
-}
-
 
 @keyframes slide-in-left {
     0% {

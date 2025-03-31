@@ -18,17 +18,19 @@ body:is(.theme-dark) {
     --flexcyon-editor-bg-width: 15px;
     --flexcyon-editor-dot-size: 2.5px;
     --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
+    --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.flexcyon-editor-grid .canvas-background,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
     background-image:
-        repeating-linear-gradient(to right,
+        repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
             var(--flexcyon-editor-bg-color),
+            var(--flexcyon-editor-bg-color) 1px,
             transparent 1px,
             transparent var(--flexcyon-editor-bg-width)),
-        repeating-linear-gradient(to bottom,
+        repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
             var(--flexcyon-editor-bg-color),
             var(--flexcyon-editor-bg-color) 1px,
             transparent 1px,

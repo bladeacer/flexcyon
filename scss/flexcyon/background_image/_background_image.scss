@@ -2,13 +2,21 @@ body.theme-dark {
     image-rendering: auto;
     --flexcyon-bg-image-sidebar-left-url: url("");
     --flexcyon-bg-image-sidebar-right-url: url("");
-
     --flexcyon-bg-image-blend-mode: darken;
     --flexcyon-bg-image-repeat: no-repeat;
-    --flexcyon-bg-image-blur: 0px;
+    --flexcyon-bg-image-blur: 1px;
     --flexcyon-bg-image-brightness: 55%;
     --flexcyon-bg-image-size: contain;
     --flexcyon-bg-image-position: center;
+
+    --flexcyon-modal-bg-url: url("");
+    --flexcyon-modal-image-blend-mode: lighten;
+    --flexcyon-modal-image-repeat: no-repeat;
+    --flexcyon-modal-image-blur: 1px;
+    --flexcyon-modal-image-brightness: 55%;
+    --flexcyon-modal-image-size: cover;
+    --flexcyon-modal-image-position: center;
+
     --nav-item-background-hover: transparent;
 
     .mod-left-split .workspace-leaf-content {
@@ -75,6 +83,15 @@ body.theme-dark {
                 background-color: transparent;
             }
         }
+    }
+
+    .modal-bg {
+        background-image: var(--flexcyon-modal-bg-url);
+        background-size: var(--flexcyon-modal-image-size);
+        background-position: var(--flexcyon-modal-image-position);
+        background-blend-mode: var(--flexcyon-modal-image-blend-mode);
+
+        filter: brightness(var(--flexcyon-modal-image-brightness)) blur(var(--flexcyon-modal-image-blur));
     }
 
 }

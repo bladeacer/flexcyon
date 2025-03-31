@@ -34,15 +34,15 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - vim mode status (when using builtin vim keybinds)
 - Status bar options like Powerlevel10k inspired status bar styling
 - Smiley toggle icons and other options for settings
-- ASCII art in new empty tabs
+- ASCII art or custom quote in new empty tabs
 - subtle opacity effects for UI elements
 - a dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
 - A [plethora of cssclasses and callout customisation options](https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md)
-- Workspace Layouts like card layouts, TUI inspired add-on
-- Configure left and right sidebar background images
-<!-- - Animation options for tabs  -->
+- Workspace Layouts like card layout with TUI inspired add-on, angled layout
+- Configure left, right sidebar and modal background images
+- Animation options for tabs 
 - Customisable with Style Settings
 
 
