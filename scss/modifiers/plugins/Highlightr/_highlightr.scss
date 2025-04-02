@@ -50,14 +50,14 @@ body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-prev
 
 body.theme-dark.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
     --lowlight-background: var(--background-primary);
-    background-image: linear-gradient(0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important
+    background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important
 }
 
 body.theme-dark.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
     --floating-background: var(--background-primary);
     --floating-size: 20%;
     padding-bottom: .1em;
-    background-image: linear-gradient(0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important
+    background-image: linear-gradient(to right, 0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important
 }
 
 body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark) {

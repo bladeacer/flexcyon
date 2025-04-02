@@ -2779,6 +2779,14 @@ div.callout[data-callout-metadata*=flashcard]:hover .callout-content {
   opacity: 1;
 }
 
+.editor-writing .cm-line,
+div.callout[data-callout-metadata*=writing] .callout-content p {
+  text-indent: 16px;
+  white-space: initial;
+  word-wrap: break-word;
+  margin-block-end: calc(1.25 * var(--p-spacing));
+}
+
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
@@ -3155,17 +3163,11 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-title .collapse-icon svg {
   color: var(--color-cyan);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-cyan);
-}
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title {
   color: var(--color-blue);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title .collapse-icon svg {
   color: var(--color-blue);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-blue);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title {
   color: var(--color-purple);
@@ -3173,17 +3175,11 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title .collapse-icon svg {
   color: var(--color-purple);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-purple);
-}
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title {
   color: var(--color-pink);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title .collapse-icon svg {
   color: var(--color-pink);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-pink);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) {
   color: var(--color-green);
@@ -3194,22 +3190,13 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-title .collapse-icon svg {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-green);
-}
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title {
   color: var(--color-yellow);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title .collapse-icon svg {
   color: var(--color-yellow);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-children {
-  border-inline-start: 2px solid var(--color-yellow);
-}
 
-body.flexcyon-alt-folder-style .nav-folder .nav-folder-children {
-  border-inline-start: 2px solid var(--color-blue);
-}
 body.flexcyon-alt-folder-style .nav-folder .collapse-icon svg {
   color: var(--color-blue);
 }
@@ -3227,7 +3214,6 @@ body.flexcyon-alt-folder-style .nav-folder.is-collapsed .collapse-icon svg {
 }
 body.flexcyon-alt-folder-style .nav-file-title.is-active .nav-file-title-content {
   transform: all ease-in-out 0.35s;
-  margin-inline-start: 0.25rem;
   font-weight: bold;
 }
 
@@ -3241,7 +3227,6 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
   .mod-left-split .tree-item-self.is-active,
   .mod-left-split .tree-item-self .is-active {
-    background-color: transparent;
     background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
   }
   .mod-left-split .nav-file-title.is-active:hover,
@@ -3256,7 +3241,6 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
   .mod-right-split .tree-item-self.is-active,
   .mod-right-split .tree-item-self .is-active {
-    background-color: transparent;
     background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
   }
   .mod-right-split .nav-file-title.is-active:hover,
@@ -3788,6 +3772,10 @@ span.media-embed * {
 
 div.markdown-preview-section:last-child > div.el-hr {
   display: none;
+}
+
+body {
+  --flexcyon-style-settings-indent-width: 4px;
 }
 
 /* @settings
@@ -4603,6 +4591,21 @@ settings:
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
+  - title: Style Settings
+    type: heading
+    level: 5
+    collapsed: true
+    description: Configure the appearance for style settings
+  - title: Indentation width between style setting headings
+    type: variable-number
+    id: flexcyon-style-settings-indent-width
+    default: 4
+    format: px
+  - title: Dim collapsed style settings headings
+    description: Dims collapsed Style Settings headings, useful for navigating larger or heavily nested Style Settings.
+    type: class-toggle
+    id: flexcyon-style-settings-dim-collapsed-headings
+    default: true
 
   - title: Plugins
     type: heading
@@ -4940,6 +4943,49 @@ body.theme-dark .pcr-app .pcr-interaction .pcr-save {
   background: var(--color-blue);
 }
 
+.setting-item-heading[data-level="0"],
+.setting-item-heading[data-level="0"] + .style-settings-container {
+  margin-left: calc(1 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="1"],
+.setting-item-heading[data-level="1"] + .style-settings-container {
+  margin-left: calc(2 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="2"],
+.setting-item-heading[data-level="2"] + .style-settings-container {
+  margin-left: calc(3 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="3"],
+.setting-item-heading[data-level="3"] + .style-settings-container {
+  margin-left: calc(4 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="4"],
+.setting-item-heading[data-level="4"] + .style-settings-container {
+  margin-left: calc(5 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="5"],
+.setting-item-heading[data-level="5"] + .style-settings-container {
+  margin-left: calc(6 * var(--flexcyon-style-settings-indent-width));
+}
+
+.setting-item-heading[data-level="6"],
+.setting-item-heading[data-level="6"] + .style-settings-container {
+  margin-left: calc(7 * var(--flexcyon-style-settings-indent-width));
+}
+
+.style-settings-collapse-indicator svg {
+  scale: calc(var(--expand) + 20%);
+}
+
+body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-collapsed {
+  opacity: calc(var(--dimmed) + 0.05);
+}
+
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
   writing-mode: vertical-rl;
   overflow: scroll;
@@ -5241,14 +5287,14 @@ body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-prev
 
 body.theme-dark.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
-  background-image: linear-gradient(0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important;
+  background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important;
 }
 
 body.theme-dark.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
   --floating-background: var(--background-primary);
   --floating-size: 20%;
   padding-bottom: 0.1em;
-  background-image: linear-gradient(0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important;
+  background-image: linear-gradient(to right, 0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important;
 }
 
 body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark) {

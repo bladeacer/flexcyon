@@ -38,9 +38,6 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-cyan);
-            }
         }
 
         .nav-folder:nth-of-type(6n+2) {
@@ -52,9 +49,6 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-blue);
-            }
         }
 
         .nav-folder:nth-of-type(6n+3) {
@@ -66,9 +60,6 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-purple);
-            }
         }
 
         .nav-folder:nth-of-type(6n+4) {
@@ -80,9 +71,6 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-pink);
-            }
         }
 
         .nav-folder:nth-of-type(6n+5) {
@@ -96,9 +84,6 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-green);
-            }
         }
 
         .nav-folder:nth-of-type(6n) {
@@ -110,20 +95,13 @@ body.flexcyon-rainbow-folders {
                 }
             }
 
-            .nav-folder-children {
-                border-inline-start: 2px solid var(--color-yellow);
-            }
 
         }
     }
 }
 
-// TODO: Make alt folder and rainbow affect alternate file tree too
 body.flexcyon-alt-folder-style {
     .nav-folder {
-        .nav-folder-children {
-            border-inline-start: 2px solid var(--color-blue);
-        }
 
         // TODO: Make this color toggleable
         .collapse-icon svg {
@@ -151,7 +129,7 @@ body.flexcyon-alt-folder-style {
 
     .nav-file-title.is-active .nav-file-title-content {
         transform: all ease-in-out 0.35s;
-        margin-inline-start: 0.25rem;
+        // margin-inline-start: 0.25rem;
         font-weight: bold;
     }
 
@@ -169,7 +147,6 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 
         .tree-item-self.is-active,
         .tree-item-self .is-active {
-            background-color: transparent;
             background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
         }
 
@@ -189,7 +166,6 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 
         .tree-item-self.is-active,
         .tree-item-self .is-active {
-            background-color: transparent;
             background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
         }
 
@@ -217,7 +193,6 @@ body.flexcyon-minimalist-tree {
         opacity: 0.85;
     }
 }
-
 
 body.flexcyon-workspace-angled-layout {
     .nav-folder-title-content {

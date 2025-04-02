@@ -113,6 +113,7 @@
 - [Dotted background](#dotted-background)
 - [Grid background](#grid-background)
 - [Heading indicators](#heading-indicators)
+- [Writing Mode](#writing-mode)
 
 ## Callouts
 Defines utilities for callouts.
@@ -125,7 +126,7 @@ Callout metadata: "flashcard"
 
 Usage:
 ```md
-> [!info|$pop] The title and the callout will styled nicely to resemble a card
+> [!info|flashcard] The title and the callout will styled nicely to resemble a card
 > The contents will be flipped in reading mode or live preview, which will show on hover
 ```
 
@@ -1081,4 +1082,25 @@ cssclasses:
 
 ###### I will have an indicator before me
 Others headings display as usual
+```
+-
+
+## Writing mode 
+Adds text indent and increased paragraph spacing to your editor. Size can be adjusted in style settings.
+
+Usage:
+```md
+cssclasses:
+    - editor-writing
+---
+
+Your content will have increased text indent and paragraph spacing 
+```
+
+### Writing mode in callouts
+There is also a callout metadata provider for writing (which works in live preview and reading mode)
+
+```md
+>[!note|writing] I will display as usual
+> I will have increased text indent and paragraph spacing 
 ```

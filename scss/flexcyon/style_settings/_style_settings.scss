@@ -1,3 +1,8 @@
+body {
+  --flexcyon-style-settings-indent-width: 4px;
+}
+
+
 /* @settings
 name: Flexcyon Style Settings 
 id: flexcyon
@@ -811,6 +816,21 @@ settings:
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
+  - title: Style Settings
+    type: heading
+    level: 5
+    collapsed: true
+    description: Configure the appearance for style settings
+  - title: Indentation width between style setting headings
+    type: variable-number
+    id: flexcyon-style-settings-indent-width
+    default: 4
+    format: px
+  - title: Dim collapsed style settings headings
+    description: Dims collapsed Style Settings headings, useful for navigating larger or heavily nested Style Settings.
+    type: class-toggle
+    id: flexcyon-style-settings-dim-collapsed-headings
+    default: true
 
   - title: Plugins
     type: heading
@@ -1154,5 +1174,30 @@ body.theme-dark {
       color: var(--text-normal);
       background: var(--color-blue);
     }
+  }
+}
+
+@mixin setting-item-heading-margin($data-level) {
+  .setting-item-heading[data-level="#{$data-level}"],
+  .setting-item-heading[data-level="#{$data-level}"] + .style-settings-container {
+    margin-left: calc(($data-level + 1) * var(--flexcyon-style-settings-indent-width));
+  }
+}
+
+@include setting-item-heading-margin(0);
+@include setting-item-heading-margin(1);
+@include setting-item-heading-margin(2);
+@include setting-item-heading-margin(3);
+@include setting-item-heading-margin(4);
+@include setting-item-heading-margin(5);
+@include setting-item-heading-margin(6);
+
+.style-settings-collapse-indicator svg {
+  scale: calc(var(--expand) + 20%);
+}
+
+body.flexcyon-style-settings-dim-collapsed-headings {
+  .style-settings-heading.is-collapsed {
+    opacity: calc(var(--dimmed) + 0.05);
   }
 }

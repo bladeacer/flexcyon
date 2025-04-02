@@ -1,4 +1,7 @@
 ## Changelog
+### Version 0.
+
+
 ### Version 0.3.2 Animations
 - Styling Tweaks to community store item, existing layouts
 - Animations are back, current options include:

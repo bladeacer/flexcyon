@@ -21,6 +21,7 @@
     - [Status Bar](#status-bar)
     - [Title Bar](#title-bar)
 - [Settings Section](#settings-section)
+    - [Style Settings](#style-settings)
 - [Plugins Section](#plugins-section)
     - [Alternate file tree](#alternate-file-tree)
     - [Full Calendar](#full-calendar)
@@ -171,6 +172,9 @@ Style Settings
 |   |   |-- Installed tooltip left margin
 |   |   |-- Do not show scrollbar in settings
 |   |   |-- Enable alternate active item effect in settings
+|   |   |-- Style Settings
+|   |   |   |-- Indentation width betwen style setting headings
+|   |   |   |-- Dim collapsed style settings headings
 |   |-- **Plugins**
 |   |   |-- Alternate file tree
 |   |   |   |-- Folders font size
@@ -917,6 +921,21 @@ Default: true (class toggle)
 CSS Variable(s) targeted: `var(--flexcyon-enable-alt-active-item-effect)`
 
 Default: true (class toggle)
+
+### Style Settings
+Configure the appearance for style settings
+
+Accepted Formats: px
+
+#### Indentation width between style settings headings
+CSS Variable(s) targeted: `var(--flexcyon-style-settings-indent-width)`
+
+Default: 4 (px)
+
+#### Dim collapsed style settings headings
+CSS Variable(s) targeted: `var(--flexcyon-style-settings-dim-collapsed-headings)`
+
+Default: true
 
 ___
 # Plugins Section

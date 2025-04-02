@@ -527,3 +527,12 @@ div.callout[data-callout-metadata*="flashcard"] {
     }
 
 }
+
+// Make these configurable in style settings
+.editor-writing .cm-line,
+div.callout[data-callout-metadata*="writing"] .callout-content p {
+    text-indent: 16px;
+    white-space: initial;
+    word-wrap: break-word;
+    margin-block-end: calc(1.25 * var(--p-spacing));
+}
