@@ -121,7 +121,8 @@ Style Settings
 |   |   |   |   |--  Animation slide amount
 |   |   |   |--  Editor Background
 |   |   |   |   |--  Select background type
-|   |   |   |   |--  Width between each dot/line for grid/dotted background
+|   |   |   |   |--  Rotation value for grid and rhombus background
+|   |   |   |   |--  Width between each dot/line for editor background
 |   |   |   |   |--  Size of dots for dotted background
 |   |   |   |--  Layout
 |   |   |   |   |--  Select workspace layout
@@ -217,7 +218,8 @@ Style Settings
 |   |   |   |-- Medium radius
 |   |   |   |-- Large radius
 |   |   |   |-- Extra large radius
-|   |   |-- Sidebar Background images
+|   |   |-- Sidebar Background
+|   |   |   |-- Select background in sidebar
 |   |   |   |-- Left sidebar background image url
 |   |   |   |-- Right sidebar background image url
 |   |   |   |-- Sidebar Background image blend mode
@@ -226,7 +228,7 @@ Style Settings
 |   |   |   |-- Sidebar Backgroud image brightness
 |   |   |   |-- Sidebar Backgroud image size
 |   |   |   |-- Sidebar Backgroud image position
-|   |   |-- Modal Background image
+|   |   |-- Modal Background
 |   |   |   |-- Modal Background image url
 |   |   |   |-- Modal Background image blend mode
 |   |   |   |-- Modal Background image repeat
@@ -641,14 +643,15 @@ ___
 Accepted formats: px, deg
 
 #### Select Background Type
-CSS Variable(s) targeted: `var(--flexcyon-editor-grid), var(--flexcyon-editor-dots)`
+CSS Variable(s) targeted: `var(--flexcyon-editor-grid), var(--flexcyon-editor-dots), var(--flexcyon-editor-rhombus)`
 
 Default: none (class select)
 Options:
 - Grid Background
 - Dotted Background
+- Rhombus Background
 
-#### Rotation value for grid background
+#### Rotation value for grid and rhombus background
 CSS Variable(s) targeted: `var(--flexcyon-editor-bg-rotation)`
 
 Default: 0 (deg)
@@ -1201,11 +1204,20 @@ Default: 8 (px)
 
 ___
 
-## Sidebar Background images
+## Sidebar Background 
 Configure background images in the left and right sidebars.
 
 Accepted Formats: px, %
 
+### Select background in sidebar
+CSS Variable(s) targeted: `var(--flexcyon-sidebar-bg-dots), var(--flexcyon-sidebar-bg-grid), var(--flexcyon-sidebar-bg-rhombus)`
+> Overrides background image declaration below, configures in both left and right sidebar
+
+Default: none (class select)
+Options:
+- Grid
+- Dotted
+- Rhombus
 
 ### Left sidebar background image url
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-sidebar-left-url)`
@@ -1253,7 +1265,7 @@ Default: center
 
 
 ___
-## Modal Background images
+## Modal Background
 Configure background images in the background of settings menu, prompts etc
 
 Accepted Formats: px, %

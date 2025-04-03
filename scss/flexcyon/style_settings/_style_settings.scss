@@ -522,18 +522,19 @@ settings:
       - 
         label: Grid Background
         value: flexcyon-editor-grid
-
       - 
         label: Dotted Background
         value: flexcyon-editor-dots
-  - title: Rotation value for grid background
+      - 
+        label: Rhombus Background
+        value: flexcyon-editor-rhombus
+  - title: Rotation value for grid and rhombus background
     description: How many degrees the grid background will be rotated
     id: flexcyon-editor-bg-rotation
     type: variable-number
     default: 0
     format: deg
-
-  - title: Width between each dot/line for grid/dotted background
+  - title: Width between each dot/line for editor background
     id: flexcyon-editor-bg-width
     type: variable-number
     default: 15
@@ -991,7 +992,7 @@ settings:
     id: flexcyon-quote-val
     description: The quote that will be displayed
     type: variable-text
-    default: ""
+    default: "This is a placeholder quote\a\a - bladeacer"
     quotes: true
   - title: Quote font size
     id: flexcyon-quote-font-size
@@ -1071,11 +1072,28 @@ settings:
     default: 8
     format: px
 
-  - title: Sidebar Background images
+  - title: Sidebar Background
     type: heading
     description: Configure background images in the left and right sidebars
     level: 5
     collapsed: true
+  - title: Select background in sidebar
+    description: Overrides background image declaration below, configures in both left and right sidebar
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Grid
+        value: flexcyon-sidebar-bg-grid
+      - 
+        label: Dotted
+        value: flexcyon-sidebar-bg-dots
+      - 
+        label: Rhombus
+        value: flexcyon-sidebar-bg-rhombus
+
   - title: Left sidebar background image url
     id: flexcyon-bg-image-sidebar-left-url
     type: variable-text
@@ -1110,7 +1128,7 @@ settings:
     type: variable-text
     default: center
 
-  - title: Modal Background image
+  - title: Modal Background
     type: heading
     description: Configure background images in the background of settings menu, prompts etc
     level: 5

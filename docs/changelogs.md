@@ -1,5 +1,5 @@
 ## Changelog
-### Version 0.
+### Version 0.3.3 QOL Update
 
 
 ### Version 0.3.2 Animations

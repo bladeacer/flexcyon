@@ -923,21 +923,34 @@ body:is(.theme-dark) {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
   --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
+  --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.flexcyon-editor-grid .canvas-background,
+body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*=bg-grid] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
   background-image: repeating-linear-gradient(var(--flexcyon-editor-bg-rotation), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
 body.flexcyon-editor-grid .canvas-background *,
+body.flexcyon-editor-grid .kanban-plugin div *,
 div.callout[data-callout-metadata*=bg-grid] .callout-content *,
 .editor-grid *, body.flexcyon-editor-grid .view-content [class*=markdown-] * {
   background-image: none;
 }
 
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content *,
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content * {
+  background-image: repeating-linear-gradient(var(--flexcyon-editor-bg-rotation), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content * *,
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content * * {
+  background-image: none;
+}
+
 body.flexcyon-editor-dots .canvas-background,
+body.flexcyon-editor-dots .kanban-plugin div,
 div.callout[data-callout-metadata*=bg-dots] .callout-content,
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
   background-image: radial-gradient(var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size), transparent 1px);
@@ -945,8 +958,42 @@ div.callout[data-callout-metadata*=bg-dots] .callout-content,
   background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 }
 body.flexcyon-editor-dots .canvas-background *,
+body.flexcyon-editor-dots .kanban-plugin div *,
 div.callout[data-callout-metadata*=bg-dots] .callout-content *,
 .editor-dots *, body.flexcyon-editor-dots .view-content [class*=markdown-] * {
+  background-image: none;
+}
+
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content *,
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content * {
+  background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
+  background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+}
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content * *,
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content * * {
+  background-image: none;
+}
+
+body.flexcyon-editor-rhombus .canvas-background,
+body.flexcyon-editor-rhombus .kanban-plugin div,
+div.callout[data-callout-metadata*=bg-rhombus] .callout-content,
+.editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
+  background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.flexcyon-editor-rhombus .canvas-background *,
+body.flexcyon-editor-rhombus .kanban-plugin div *,
+div.callout[data-callout-metadata*=bg-rhombus] .callout-content *,
+.editor-rhombus *, body.flexcyon-editor-rhombus .view-content [class*=markdown-] * {
+  background-image: none;
+}
+
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content *,
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content * {
+  background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content * *,
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content * * {
   background-image: none;
 }
 
@@ -3613,7 +3660,7 @@ body.theme-dark {
   --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-quote-font-size: 24px;
   --flexcyon-ascii-line-height: 1;
-  --flexcyon-quote-val: "Never gonna give you up \a \a- Rick Astley";
+  --flexcyon-quote-val: "This is a placeholder quote\a \a- bladeacer";
   --flexcyon-ascii-art: " \a_______________                                       \a___  ____/__  /________  ____________  ______________ \a__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a                                 /____/                \a \a \a";
 }
 body.theme-dark div.empty-state-action {
@@ -3663,7 +3710,7 @@ body.theme-dark.flexcyon-empty-state-actions-disable div.empty-state-action-list
 body.theme-dark.flexcyon-quote-enable div.empty-state-container::before {
   content: var(--flexcyon-quote-val);
   font-weight: bold;
-  background: var(--text-faint);
+  background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: var(--flexcyon-ascii-line-height);
@@ -4297,18 +4344,19 @@ settings:
       - 
         label: Grid Background
         value: flexcyon-editor-grid
-
       - 
         label: Dotted Background
         value: flexcyon-editor-dots
-  - title: Rotation value for grid background
+      - 
+        label: Rhombus Background
+        value: flexcyon-editor-rhombus
+  - title: Rotation value for grid and rhombus background
     description: How many degrees the grid background will be rotated
     id: flexcyon-editor-bg-rotation
     type: variable-number
     default: 0
     format: deg
-
-  - title: Width between each dot/line for grid/dotted background
+  - title: Width between each dot/line for editor background
     id: flexcyon-editor-bg-width
     type: variable-number
     default: 15
@@ -4766,7 +4814,7 @@ settings:
     id: flexcyon-quote-val
     description: The quote that will be displayed
     type: variable-text
-    default: ""
+    default: "This is a placeholder quote\a\a - bladeacer"
     quotes: true
   - title: Quote font size
     id: flexcyon-quote-font-size
@@ -4846,11 +4894,28 @@ settings:
     default: 8
     format: px
 
-  - title: Sidebar Background images
+  - title: Sidebar Background
     type: heading
     description: Configure background images in the left and right sidebars
     level: 5
     collapsed: true
+  - title: Select background in sidebar
+    description: Overrides background image declaration below, configures in both left and right sidebar
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Grid
+        value: flexcyon-sidebar-bg-grid
+      - 
+        label: Dotted
+        value: flexcyon-sidebar-bg-dots
+      - 
+        label: Rhombus
+        value: flexcyon-sidebar-bg-rhombus
+
   - title: Left sidebar background image url
     id: flexcyon-bg-image-sidebar-left-url
     type: variable-text
@@ -4885,7 +4950,7 @@ settings:
     type: variable-text
     default: center
 
-  - title: Modal Background image
+  - title: Modal Background
     type: heading
     description: Configure background images in the background of settings menu, prompts etc
     level: 5

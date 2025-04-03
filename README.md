@@ -43,11 +43,9 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs 
-- Customisable with Style Settings
-
+- And many more...
 
 ![](./docs/screenshots/ascii_checkboxes1.png)
-
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
@@ -67,6 +65,7 @@ The following plugins/snippets are officially supported:
 - [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
 - [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
 - [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin)
+<!-- - [Kanban by mgmyers](https://github.com/mgmeyers/obsidian-kanban) -->
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
@@ -92,10 +91,17 @@ The Changelogs for this theme can be found [here](https://github.com/bladeacer/f
 #### Questions, Issues?
 Feel free to talk about it at [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). Alternatively, you can open an issue at this repository.
 
+## Design Principles
+This theme tries to:
+- be "reasonably opinionated" 
+- be decently lightweight, meaning:
+    - fonts, svgs and the like are not embedded in this theme
+    - (hopefully) sane defaults, customisable with style settings
+- dim inactive or unfocused UI elements to reduce information overload
+- have a decent feature set of style settings for customisation
+- bundle numerous callout metadata utilites
+
 ## Style Settings
-This theme tries to be "reasonably opinionated" and decently lightweight, meaning:
-- fonts, svgs and the like are not embedded in this theme
-- (hopefully) sane defaults, customisable with style settings
 Documentation for style settings of this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/style_settings.md)
 
 Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
@@ -113,7 +119,8 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
 
 #### Ideas, Feedback
-- `@Tuck` on the Obsidian Members' Group Discord for options to change link color
+- `@Tuck` on the Obsidian Members' Group Discord for options to change link color 
+<!-- and indentation of Style Settings headings -->
 - `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities

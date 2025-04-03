@@ -18,10 +18,12 @@ body:is(.theme-dark) {
     --flexcyon-editor-bg-width: 15px;
     --flexcyon-editor-dot-size: 2.5px;
     --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
+    --flexcyon-editor-bg-color-2: var(--color-base-20);
     --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.flexcyon-editor-grid .canvas-background,
+body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
     background-image:
@@ -41,7 +43,30 @@ div.callout[data-callout-metadata*="bg-grid"] .callout-content,
     }
 }
 
+
+body.theme-dark.flexcyon-sidebar-bg-grid {
+    div .mod-left-split .workspace-leaf-content *,
+    div .mod-right-split .workspace-leaf-content * {
+        background-image:
+            repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
+                var(--flexcyon-editor-bg-color-2),
+                var(--flexcyon-editor-bg-color-2) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width)),
+            repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color-2),
+                var(--flexcyon-editor-bg-color-2) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width));
+
+        * {
+            background-image: none;
+        }
+    }
+}
+
 body.flexcyon-editor-dots .canvas-background,
+body.flexcyon-editor-dots .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content,
 .editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
     background-image: radial-gradient(var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size), transparent 1px);
@@ -53,4 +78,58 @@ div.callout[data-callout-metadata*="bg-dots"] .callout-content,
     }
 }
 
+body.theme-dark.flexcyon-sidebar-bg-dots {
+    div .mod-left-split .workspace-leaf-content *,
+    div .mod-right-split .workspace-leaf-content * {
+        background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
+        background-repeat: repeat;
+        background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 
+        * {
+            background-image: none;
+        }
+    }
+}
+
+body.flexcyon-editor-rhombus .canvas-background,
+body.flexcyon-editor-rhombus .kanban-plugin div,
+div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
+.editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
+    background-image:
+        repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
+            var(--flexcyon-editor-bg-color),
+            var(--flexcyon-editor-bg-color) 1px,
+            transparent 1px,
+            transparent var(--flexcyon-editor-bg-width)),
+        repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
+            var(--flexcyon-editor-bg-color),
+            var(--flexcyon-editor-bg-color) 1px,
+            transparent 1px,
+            transparent var(--flexcyon-editor-bg-width));
+
+    * {
+        background-image: none;
+    }
+}
+
+
+body.theme-dark.flexcyon-sidebar-bg-rhombus {
+    div .mod-left-split .workspace-leaf-content *,
+    div .mod-right-split .workspace-leaf-content * {
+        background-image:
+            repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color-2),
+                var(--flexcyon-editor-bg-color-2) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width)),
+            repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color-2),
+                var(--flexcyon-editor-bg-color-2) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width));
+
+        * {
+            background-image: none;
+        }
+    }
+}

@@ -2,7 +2,7 @@ body.theme-dark {
     --flexcyon-ascii-max-font-size: 14px;
     --flexcyon-quote-font-size: 24px;
     --flexcyon-ascii-line-height: 1;
-    --flexcyon-quote-val: "Never gonna give you up \a\a - Rick Astley";
+    --flexcyon-quote-val: "This is a placeholder quote\a\a - bladeacer";
     --flexcyon-ascii-art: " \a\
 _______________                                       \a\
 ___  ____/__  /________  ____________  ______________ \a\
@@ -71,7 +71,7 @@ body.theme-dark.flexcyon-quote-enable {
     div.empty-state-container::before {
         content: var(--flexcyon-quote-val);
         font-weight: bold;
-        background: var(--text-faint);
+        background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
         background-clip: text;
         -webkit-text-fill-color: transparent;
         line-height: var(--flexcyon-ascii-line-height);
