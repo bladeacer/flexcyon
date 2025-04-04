@@ -1,6 +1,19 @@
 ## Changelog
 ### Version 0.3.3 QOL Update
-
+- Added configurable indentation factor and dimming of collapsed headers for Style Settings menu
+- Added dotted file separator option for File explorer
+- Added writing mode callout metadata utility, it increases text indent and paragraph spacing
+  - It also has a CSS class provider which allows you to apply the same text indent and paragraph spacing increments to the target note
+- Add rhombus editor background option
+- You can now use grid, dotted or rhombus as background options for the left and right sidebar
+  - These override the left and right sidebar background url options
+- Quote now uses the same color as the ASCII art
+  - Default quote is updated to not be a rickroll
+- Added support for Kanban plugin
+- Add before new tab empty state title now default to none:
+  - If you are using quotes or ASCII art, do re-enable it
+  - You can now configure the background color for the quotes or ASCII art
+  - Changes may need an app reload/restart to take effect
 
 ### Version 0.3.2 Animations
 - Styling Tweaks to community store item, existing layouts

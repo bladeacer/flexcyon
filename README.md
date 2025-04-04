@@ -65,7 +65,7 @@ The following plugins/snippets are officially supported:
 - [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
 - [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
 - [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin)
-<!-- - [Kanban by mgmyers](https://github.com/mgmeyers/obsidian-kanban) -->
+- [Kanban by mgmyers](https://github.com/mgmeyers/obsidian-kanban)
 
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
@@ -119,8 +119,7 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
 
 #### Ideas, Feedback
-- `@Tuck` on the Obsidian Members' Group Discord for options to change link color 
-<!-- and indentation of Style Settings headings -->
+- `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings
 - `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities

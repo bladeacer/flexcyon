@@ -204,6 +204,7 @@ Style Settings
 |   |   |   |-- Command Mode Text
 |   |   |-- New Tab Apperance
 |   |   |   |-- Add before Empty State title
+|   |   |   |-- Background color for add before empty state title
 |   |   |   |-- Quote
 |   |   |   |-- Quote max font size
 |   |   |   |-- ASCII Art
@@ -1111,11 +1112,17 @@ Accepted Formats: px
 
 ### Add before empty state title
 CSS Variable(s) targeted: `var(--flexcyon-ascii-enable), var(--flexcyon-quote-enable)`
+> Changing this may take an app reload/restart to take effect
 
 Default: none (class select)
 Options:
 - ASCII Art
 - Quote
+
+### Background for add before empty state title
+CSS Variable(s) targeted: `var(--flexcyon-new-tab-bg-wrapper)`
+
+Default: `linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan))`
 
 ### Quote
 CSS Variable(s) targeted: `var(--flexcyon-quote-val)`

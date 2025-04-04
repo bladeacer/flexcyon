@@ -10,6 +10,7 @@ __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
 _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
 /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                 /____/                \a\a\a ";
+    --flexcyon-new-tab-bg-wrapper: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
 
     div.empty-state-action {
         font-size: 1.05rem;
@@ -30,7 +31,7 @@ body.theme-dark.flexcyon-ascii-enable {
         font-family: monospace;
         content: var(--flexcyon-ascii-art);
         font-weight: bold;
-        background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
+        background: var(--flexcyon-new-tab-bg-wrapper);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         line-height: var(--flexcyon-ascii-line-height);
@@ -71,7 +72,7 @@ body.theme-dark.flexcyon-quote-enable {
     div.empty-state-container::before {
         content: var(--flexcyon-quote-val);
         font-weight: bold;
-        background: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
+        background: var(--flexcyon-new-tab-bg-wrapper);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         line-height: var(--flexcyon-ascii-line-height);

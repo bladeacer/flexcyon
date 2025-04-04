@@ -980,7 +980,7 @@ settings:
     type: class-select
     id: theme-variant
     allowEmpty: true
-    default: flexcyon-ascii-enable
+    default: none
     options: 
       - 
         label: ASCII art
@@ -988,6 +988,11 @@ settings:
       - 
         label: Quote
         value: flexcyon-quote-enable
+  - title: Background for add before empty state title
+    description: Background color for the add before empty state title, accepts CSS variables.
+    type: variable-text
+    id: flexcyon-new-tab-bg-wrapper
+    default: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan))
   - title: Quote
     id: flexcyon-quote-val
     description: The quote that will be displayed
