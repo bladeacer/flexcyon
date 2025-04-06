@@ -1,7 +1,6 @@
 ## Changelog
 ### Version 0.3.3 QOL Update
 - Added configurable indentation factor and dimming of collapsed headers for Style Settings menu
-- Added dotted file separator option for File explorer
 - Added writing mode callout metadata utility, it increases text indent and paragraph spacing
   - It also has a CSS class provider which allows you to apply the same text indent and paragraph spacing increments to the target note
 - Add rhombus editor background option

@@ -702,6 +702,12 @@ settings:
     type: variable-text
     default: "Show status"
     quotes: true
+  - title: Translation for showing status bar on hover
+    id: flexcyon-status-hide-until-hover-translation
+    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 1500
+    format: px
   - title: Transition duration for showing status bar on hover
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.

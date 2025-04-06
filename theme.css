@@ -3490,6 +3490,7 @@ body.theme-dark {
   --flexcyon-vim-bottom-positioning: -4px;
   --flexcyon-vim-left-positioning: 6px;
   --flexcyon-status-hide-until-hover-text: "Show status";
+  --flexcyon-status-hide-until-hover-translation: 1500px;
   --flexcyon-status-hide-hover-duration: 0.35s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
@@ -3530,7 +3531,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
   font-size: 0.825rem;
   border: unset;
   z-index: 1;
-  transform: translateX(1000px);
+  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 }
 body.flexcyon-status-hide-until-hover .status-bar::before {
@@ -3542,7 +3543,7 @@ body.flexcyon-status-hide-until-hover .status-bar::before {
   position: fixed;
   bottom: 0;
   right: 0;
-  transform: translateX(-1000px);
+  transform: translateX(calc(-1 * var(--flexcyon-status-hide-until-hover-translation)));
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 }
 body.flexcyon-status-hide-until-hover .status-bar:hover::before {
@@ -4525,6 +4526,12 @@ settings:
     type: variable-text
     default: "Show status"
     quotes: true
+  - title: Translation for showing status bar on hover
+    id: flexcyon-status-hide-until-hover-translation
+    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 1500
+    format: px
   - title: Transition duration for showing status bar on hover
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
@@ -4812,7 +4819,7 @@ settings:
         label: Quote
         value: flexcyon-quote-enable
   - title: Background for add before empty state title
-    description: Background for the add before empty state title
+    description: Background color for the add before empty state title, accepts CSS variables.
     type: variable-text
     id: flexcyon-new-tab-bg-wrapper
     default: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan))

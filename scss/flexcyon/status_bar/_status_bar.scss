@@ -7,6 +7,7 @@ body.theme-dark {
   --flexcyon-vim-left-positioning: 6px;
 
   --flexcyon-status-hide-until-hover-text: "Show status";
+  --flexcyon-status-hide-until-hover-translation: 1500px;
   --flexcyon-status-hide-hover-duration: 0.35s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
@@ -68,7 +69,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
   font-size: 0.825rem;
   border: unset;
   z-index: 1;
-  transform: translateX(1000px);
+  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 
   &::before {
@@ -80,7 +81,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
     position: fixed;
     bottom: 0;
     right: 0;
-    transform: translateX(-1000px);
+    transform: translateX(calc(-1 * var(--flexcyon-status-hide-until-hover-translation)));
     transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   }
 

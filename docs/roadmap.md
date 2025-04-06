@@ -20,3 +20,4 @@
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 #### Next version changelog
+- Made translation for hide until hover status bar configurable, useful for longer status bars

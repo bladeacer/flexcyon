@@ -153,6 +153,7 @@ Style Settings
 |   |   |-- Status Bar
 |   |   |   |-- Hide until hover
 |   |   |   |-- Text to show when hide until hover is enabled
+|   |   |   |-- Trnaslation for showing status bar on hover
 |   |   |   |-- Transition duration for showing status bar on hover
 |   |   |   |-- Transition timing function for showing status bar on hover
 |   |   |   |-- Use text instead of icons for mode status
@@ -821,6 +822,11 @@ Default: false (class toggle)
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover-text)`
 
 Default: "Show status"
+
+### Translation for showing status bar on hover
+CSS Variable(s) targeted: `var(--flexcyon-status-hide-until-hover-translation)`
+
+Default: 1500px
 
 ### Transition duration for showing status bar on hover
 CSS Variable(s) targeted: `var(--flexcyon-status-hide-hover-duration)`
