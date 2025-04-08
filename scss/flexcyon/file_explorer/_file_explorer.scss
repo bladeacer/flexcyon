@@ -142,6 +142,49 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
     background-color: transparent;
 }
 
+body.flexcyon-md-file-tree-style {
+    .nav-file, .nav-folder, .nav-folder-children {
+        position: relative;
+        padding-left: 2px;
+    }
+
+    .nav-file::before,
+    .nav-file::before,
+    .nav-folder-children::before {
+        content: '';
+        position: absolute;
+        background: var(--nav-collapse-icon-color);
+    }
+
+    .tree-item.nav-file::before,
+    .tree-item.nav-folder::before {
+        height: 1px;
+        width: 20px;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-inline-start: -3px;
+    }
+
+    .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
+        bottom: 6px;
+    }
+
+    .tree-item-children.nav-folder-children {
+        border-left-width: 0;
+        &::before {
+            left: 0;
+            top: 0;
+            bottom: 12px;
+            width: 1px;
+        }
+    }
+
+    .nav-files-container > div > .tree-item.nav-file::before,
+    .nav-files-container > div > .tree-item.nav-folder::before {
+        content: none;
+    }
+}
+
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
     .mod-left-split {
 

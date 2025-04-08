@@ -21,3 +21,5 @@
 
 #### Next version changelog
 - Made translation for hide until hover status bar configurable, useful for longer status bars
+- Fixed file explorer background being broken
+- Added markdown file tree option for folder style

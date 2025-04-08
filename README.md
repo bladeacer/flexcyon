@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/downloads-500+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/badge/downloads-600+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
 </p>
@@ -117,6 +117,7 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
 - `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
+<!-- - [Enhanced File Explorer Theme] by LennZone for the markdown file tree style -->
 
 #### Ideas, Feedback
 - `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings

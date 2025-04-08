@@ -3271,6 +3271,42 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
   background-color: transparent;
 }
 
+body.flexcyon-md-file-tree-style .nav-file, body.flexcyon-md-file-tree-style .nav-folder, body.flexcyon-md-file-tree-style .nav-folder-children {
+  position: relative;
+  padding-left: 2px;
+}
+body.flexcyon-md-file-tree-style .nav-file::before,
+body.flexcyon-md-file-tree-style .nav-file::before,
+body.flexcyon-md-file-tree-style .nav-folder-children::before {
+  content: "";
+  position: absolute;
+  background: var(--nav-collapse-icon-color);
+}
+body.flexcyon-md-file-tree-style .tree-item.nav-file::before,
+body.flexcyon-md-file-tree-style .tree-item.nav-folder::before {
+  height: 1px;
+  width: 20px;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin-inline-start: -3px;
+}
+body.flexcyon-md-file-tree-style .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
+  bottom: 6px;
+}
+body.flexcyon-md-file-tree-style .tree-item-children.nav-folder-children {
+  border-left-width: 0;
+}
+body.flexcyon-md-file-tree-style .tree-item-children.nav-folder-children::before {
+  left: 0;
+  top: 0;
+  bottom: 12px;
+  width: 1px;
+}
+body.flexcyon-md-file-tree-style .nav-files-container > div > .tree-item.nav-file::before,
+body.flexcyon-md-file-tree-style .nav-files-container > div > .tree-item.nav-folder::before {
+  content: none;
+}
+
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
   .mod-left-split .tree-item-self.is-active,
   .mod-left-split .tree-item-self .is-active {
@@ -4199,6 +4235,9 @@ settings:
       - 
         label: Alternate folder style
         value: flexcyon-alt-folder-style
+      - 
+        label: Markdown file tree style
+        value: flexcyon-md-file-tree-style
   - title: Enable minimalist trees
     description: Removes left borders and collapse icons from trees in the app, this affects folder and outlines 
     id: flexcyon-minimalist-tree
@@ -5157,9 +5196,8 @@ body.theme-dark .mod-right-split .workspace-leaf-content div.oz-nav-buttons-righ
   backdrop-filter: none;
 }
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-  body.theme-dark .mod-left-split .workspace-leaf-content *,
-  body.theme-dark .mod-left-split .workspace-tab-header-container {
-    background-color: var(--color-base-05);
+  body.theme-dark .mod-left-split .workspace-leaf {
+    background-color: var(--color-base-20);
   }
   body.theme-dark .mod-left-split .oz-folders-action-items *, body.theme-dark .mod-left-split .oz-flex-container *, body.theme-dark .mod-left-split .fc *, body.theme-dark .mod-left-split .fc,
   body.theme-dark .mod-left-split .nav-header *, body.theme-dark .mod-left-split .tree-item, body.theme-dark .mod-left-split .tree-item-self, body.theme-dark .mod-left-split .tree-item-inner, body.theme-dark .mod-left-split .tree-item-children {
@@ -5170,9 +5208,8 @@ body.theme-dark .mod-right-split .workspace-leaf-content div.oz-nav-buttons-righ
   }
 }
 @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-  body.theme-dark .mod-right-split .workspace-leaf-content *,
-  body.theme-dark .mod-right-split .workspace-leaf-content .workspace-tab-header-container {
-    background-color: var(--color-base-05);
+  body.theme-dark .workspace-leaf {
+    background-color: var(--color-base-20);
   }
   body.theme-dark .mod-right-split .oz-folders-action-items *, body.theme-dark .mod-right-split .oz-flex-container *, body.theme-dark .mod-right-split .fc *, body.theme-dark .mod-right-split .fc,
   body.theme-dark .mod-right-split .nav-header *, body.theme-dark .mod-right-split .tree-item, body.theme-dark .mod-right-split .tree-item-self, body.theme-dark .mod-right-split .tree-item-inner, body.theme-dark .mod-right-split .tree-item-children {
