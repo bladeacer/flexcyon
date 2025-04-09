@@ -162,17 +162,6 @@ Usage:
 > ...
 ```
 
-> `ol-style_type-ins`
-
-Usage:
-```md
->[!info|ol-lower-greek-ins] Your title as usual
-> 1. The number 1 render as the greek letter alpha in reading/live preview, inside the list item along with the text.
-> 2. The number 2 will render as the greek letter beta in reading/live preview, inside the list item along with the text.
-> 3. The number 3 will render as the greek letter gamma in reading/live preview, inside the list item along with the text.
-> ...
-```
-
 - There is no standard implementation for upper Greek
 
 What does "inside the list item along with the text mean"?
@@ -202,17 +191,6 @@ Usage:
 > ...
 ```
 
-> `ul-style_type-ins`
-
-Usage:
-```md
->[!info|ul-lower-roman-ins] Your title as usual
-> - The bullet point will render as the roman numeral i in reading/live preview, inside the list item along with the text.
-> - The bullet point will render as the roman numeral ii in reading/live preview, inside the list item along with the text.
-> - The bullet point will render as the roman numeral iii in reading/live preview, inside the list item along with the text.
-> ...
-```
-
 ##### Callout Lists: Ordered + Unordered Lists
 Accepted values for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
 
@@ -228,20 +206,6 @@ Usage:
 > 
 > - The bullet point will render as the roman numeral I in reading/live preview
 > - The bullet point will render as the roman numeral II in reading/live preview
-> ...
-```
-
-> `li-style_type-ins`
-
-Usage:
-```md
->[!info|li-upper-roman-ins] Your title as usual
-> 1. The number 1 render as the roman numeral I in reading/live preview, inside the list item along with the text.
-> 2. The number 2 will render as the roman numeral II in reading/live preview, inside the list item along with the text.
-> 3. The number 3 will render as the roman numeral III in reading/live preview, inside the list item along with the text.
->
-> - The bullet point will render as the roman numeral I in reading/live preview, inside the list item along with the text.
-> - The bullet point will render as the roman numeral II in reading/live preview, inside the list item along with the text.
 > ...
 ```
 

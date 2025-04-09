@@ -9,7 +9,6 @@ body.theme-dark {
     --flexcyon-callout-pop-animation-duration: 0.2s;
     --flexcyon-callouts-flashcard-width: 250px;
     --flexcyon-callouts-flashcard-height: 250px;
-    --flexcyon-callouts-list-style-left-margin: 32px;
 }
 
 body:where(.theme-dark) {
@@ -545,36 +544,17 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 }
 
 @mixin callout-list($style-type) {
-    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
     div.callout[data-callout-metadata*="li-#{$style-type}"],
-    div.callout[data-callout-metadata*="ol-#{$style-type}-ins"],
     div.callout[data-callout-metadata*="ol-#{$style-type}"] {
         ol {
             list-style-type: $style-type;
-            margin-left: var(--flexcyon-callouts-list-style-left-margin);
-        }
-    }
-
-    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
-    div.callout[data-callout-metadata*="ol-#{$style-type}-ins"] {
-        ol {
             list-style-position: inside;
         }
     }
-
-    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
     div.callout[data-callout-metadata*="li-#{$style-type}"],
-    div.callout[data-callout-metadata*="ul-#{$style-type}-ins"],
     div.callout[data-callout-metadata*="ul-#{$style-type}"] {
         ul {
             list-style-type: $style-type;
-            margin-left: 32px;
-        }
-    }
-
-    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
-    div.callout[data-callout-metadata*="ul-#{$style-type}-ins"] {
-        ul {
             list-style-position: inside;
         }
     }

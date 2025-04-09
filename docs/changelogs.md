@@ -1,4 +1,6 @@
 ## Changelog
+### Version 0.3.4
+
 ### Version 0.3.3 QOL Update
 - Added configurable indentation factor and dimming of collapsed headers for Style Settings menu
 - Added writing mode callout metadata utility, it increases text indent and paragraph spacing
