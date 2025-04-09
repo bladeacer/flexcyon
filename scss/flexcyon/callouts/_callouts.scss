@@ -9,6 +9,7 @@ body.theme-dark {
     --flexcyon-callout-pop-animation-duration: 0.2s;
     --flexcyon-callouts-flashcard-width: 250px;
     --flexcyon-callouts-flashcard-height: 250px;
+    --flexcyon-callouts-list-style-left-margin: 32px;
 }
 
 body:where(.theme-dark) {
@@ -399,6 +400,7 @@ div.callout[data-callout-metadata*="tilt-content"] {
 
 
 @mixin callout-font-style($style) {
+
     div.callout[data-callout-metadata*="#{$style}-all"],
     div.callout[data-callout-metadata*="#{$style}-title"] {
         .callout-title {
@@ -447,6 +449,7 @@ div.callout[data-callout-metadata*="tilt-content"] {
             font-size: var(--#{$heading_no}-size);
             color: var(--#{$heading_no}-color);
         }
+
         .callout-icon svg {
             color: var(--#{$heading_no}-color);
         }
@@ -461,6 +464,7 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-title-heading(h6);
 
 @mixin callout-text-font-weight($font-weight) {
+
     div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
     div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
         .callout-title {
@@ -500,7 +504,7 @@ div.callout[data-callout-metadata*="flashcard"] {
     height: var(--flexcyon-callouts-flashcard-height);
     perspective: 1000px;
     transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out; 
+    transition: all 0.5s ease-in-out;
 
     .callout-content {
         transform: rotateY(180deg);
@@ -511,16 +515,19 @@ div.callout[data-callout-metadata*="flashcard"] {
         position: absolute;
         top: 25%;
         display: flex;
-        flex-direction: column; /* For stacking content if needed */
+        flex-direction: column;
+        /* For stacking content if needed */
         align-items: center;
         justify-content: center;
     }
-    
+
     &:hover {
         transform: rotateY(180deg);
+
         .callout-title {
             opacity: 0;
         }
+
         .callout-content {
             opacity: 1;
         }
@@ -536,3 +543,97 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
     word-wrap: break-word;
     margin-block-end: calc(1.25 * var(--p-spacing));
 }
+
+@mixin callout-list($style-type) {
+    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="li-#{$style-type}"],
+    div.callout[data-callout-metadata*="ol-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="ol-#{$style-type}"] {
+        ol {
+            list-style-type: $style-type;
+            margin-left: var(--flexcyon-callouts-list-style-left-margin);
+        }
+    }
+
+    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="ol-#{$style-type}-ins"] {
+        ol {
+            list-style-position: inside;
+        }
+    }
+
+    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="li-#{$style-type}"],
+    div.callout[data-callout-metadata*="ul-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="ul-#{$style-type}"] {
+        ul {
+            list-style-type: $style-type;
+            margin-left: 32px;
+        }
+    }
+
+    div.callout[data-callout-metadata*="li-#{$style-type}-ins"],
+    div.callout[data-callout-metadata*="ul-#{$style-type}-ins"] {
+        ul {
+            list-style-position: inside;
+        }
+    }
+}
+
+@include callout-list(none);
+@include callout-list(disc);
+@include callout-list(circle);
+@include callout-list(square);
+@include callout-list(decimal);
+@include callout-list(cjk-decimal);
+@include callout-list(decimal-leading-zero);
+@include callout-list(lower-roman);
+@include callout-list(upper-roman);
+@include callout-list(lower-greek);
+@include callout-list(lower-alpha);
+@include callout-list(lower-latin);
+@include callout-list(upper-alpha);
+@include callout-list(upper-latin);
+@include callout-list(arabic-indic);
+@include callout-list(armenian);
+@include callout-list(bengali);
+@include callout-list(cambodian);
+@include callout-list(khmer);
+@include callout-list(cjk-earthly-branch);
+@include callout-list(cjk-heavenly-branch);
+@include callout-list(cjk-ideographic);
+@include callout-list(devanagari);
+@include callout-list(ethiopic-numeric);
+@include callout-list(georgian);
+@include callout-list(gujarati);
+@include callout-list(gurmukhi);
+@include callout-list(hebrew);
+@include callout-list(hiragana);
+@include callout-list(hiragana-iroha);
+@include callout-list(japanese-formal);
+@include callout-list(japanese-informal);
+@include callout-list(kannada);
+@include callout-list(kannada-iroha);
+@include callout-list(katakana);
+@include callout-list(katakana-iroha);
+@include callout-list(korean-hangul-formal);
+@include callout-list(korean-hanja-formal);
+@include callout-list(korean-hanja-informal);
+@include callout-list(lao);
+@include callout-list(lower-armenian);
+@include callout-list(malayalam);
+@include callout-list(mongolian);
+@include callout-list(myanmar);
+@include callout-list(oriya);
+@include callout-list(persian);
+@include callout-list(simp-chinese-formal);
+@include callout-list(simp-chinese-informal);
+@include callout-list(tamil);
+@include callout-list(telugu);
+@include callout-list(thai);
+@include callout-list(tibetan);
+@include callout-list(trad-chinese-formal);
+@include callout-list(trad-chinese-informal);
+@include callout-list(upper-armenian);
+@include callout-list(disclosure-open);
+@include callout-list(disclosure-open);

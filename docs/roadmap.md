@@ -4,6 +4,8 @@
 
 #### Style Settings and stuff
 > Add more CSS classes
+- [ ] Light theme color theme flexoki + velocity
+- [x] Style ol ul
 
 #### Plugins/snippets
 - [ ] Support more plugins

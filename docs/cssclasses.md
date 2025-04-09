@@ -4,6 +4,8 @@
 ### Table of Contents
 - [Callouts](#callouts)
     - [Callout metadata](#callout-metadata)
+        - [Callout Lists](#callout-lists)
+        - ---------------------------------------------------
         - [Flashcard Callout](#flashcard-callout)
         - [Popup Callout](#popup-callout)
         - ---------------------------------------------------
@@ -121,6 +123,127 @@ Defines utilities for callouts.
 
 ### Callout metadata
 > Note: you need at least `>[!|] your title` for Obsidian to render your callout. In this case where the callout type is not specified, it will render as if you typed `>[!note] your title`
+
+#### Callout Lists
+These are some utilities for styling ordered and unordered lists in Obsidian.
+
+Accepted values for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
+> Why are the `style_type` names so long? Well they are standardised style types available in major browsers
+
+###### Note
+To write an ordered list in Obsidian, use:
+```md
+1. Never
+2. Gonna
+3. Give
+4. ...
+```
+
+To write an unordered list in Obsidian. use:
+```md
+- Never
+- Gonna
+- Give
+- ...
+```
+
+Accepted values for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
+- yes there are quite a bit of them
+
+##### Callout Lists: Ordered Lists
+> `ol-style_type`
+
+Usage:
+```md
+>[!info|ol-lower-greek] Your title as usual
+> 1. The number 1 will render as the greek letter alpha in reading/live preview
+> 2. The number 2 render as the greek letter beta in reading/live preview
+> 3. The number 3 render as the greek letter gamma in reading/live preview
+> ...
+```
+
+> `ol-style_type-ins`
+
+Usage:
+```md
+>[!info|ol-lower-greek-ins] Your title as usual
+> 1. The number 1 render as the greek letter alpha in reading/live preview, inside the list item along with the text.
+> 2. The number 2 will render as the greek letter beta in reading/live preview, inside the list item along with the text.
+> 3. The number 3 will render as the greek letter gamma in reading/live preview, inside the list item along with the text.
+> ...
+```
+
+- There is no standard implementation for upper Greek
+
+What does "inside the list item along with the text mean"?
+> Effectively, the list item number/letter/whatever will inherit the indentation of the list item. Think of writing:
+```md
+  1. Never
+  2. Gonna
+  3. Give
+```
+
+instead of 
+```
+1. Never
+2. Gonna
+3. Give
+```
+
+##### Callout Lists: Unordered Lists
+> `ul-style_type`
+
+Usage:
+```md
+>[!info|ul-lower-roman] Your title as usual
+> 1. The bullet point will render as the roman numeral i in reading/live preview
+> 2. The bullet point render as the roman numeral ii in reading/live preview
+> 3. The bullet point render as the roman numeral iii in reading/live preview
+> ...
+```
+
+> `ul-style_type-ins`
+
+Usage:
+```md
+>[!info|ul-lower-roman-ins] Your title as usual
+> - The bullet point will render as the roman numeral i in reading/live preview, inside the list item along with the text.
+> - The bullet point will render as the roman numeral ii in reading/live preview, inside the list item along with the text.
+> - The bullet point will render as the roman numeral iii in reading/live preview, inside the list item along with the text.
+> ...
+```
+
+##### Callout Lists: Ordered + Unordered Lists
+Accepted values for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
+
+Use when you want to apply the same style to both ordered and unordered lists 
+> `li-style_type`
+
+Usage:
+```md
+>[!info|li-upper-roman] Your title as usual
+> 1. The number 1 will render as the roman numeral I in reading/live preview
+> 2. The number 2 render as the roman numeral II in reading/live preview
+> 3. The number 3 render as the roman numeral III in reading/live preview
+> 
+> - The bullet point will render as the roman numeral I in reading/live preview
+> - The bullet point will render as the roman numeral II in reading/live preview
+> ...
+```
+
+> `li-style_type-ins`
+
+Usage:
+```md
+>[!info|li-upper-roman-ins] Your title as usual
+> 1. The number 1 render as the roman numeral I in reading/live preview, inside the list item along with the text.
+> 2. The number 2 will render as the roman numeral II in reading/live preview, inside the list item along with the text.
+> 3. The number 3 will render as the roman numeral III in reading/live preview, inside the list item along with the text.
+>
+> - The bullet point will render as the roman numeral I in reading/live preview, inside the list item along with the text.
+> - The bullet point will render as the roman numeral II in reading/live preview, inside the list item along with the text.
+> ...
+```
 
 #### Flashcard callout
 Callout metadata: "flashcard"
@@ -404,21 +527,21 @@ Callout metadata: "all-yellow"
 
 #### Extended Color Palette
 > `bg-color1-color2-`
-Example Usage:
+Usage:
 ```md
 > [!tip|all-red-blue] Title will display as usual
 > The background color will be the color mix of red and blue colors of this theme
 ```
 
 > `title-color1-color2-`
-Example Usage: 
+Usage: 
 ```md
 > [!tip|title-red-blue] Title will be the color mix of red and blue colors of this theme
 > The background color will be as usual
 ```
 
 > `all-color1-color2-`
-Example Usage: 
+Usage: 
 ```md
 > [!tip|all-red-blue] Title will be the color mix of red and blue colors of this theme
 > The background color will be the color mix of red and blue colors of this theme
