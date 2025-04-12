@@ -1,7 +1,11 @@
 <p align="center">
     <img src="https://img.shields.io/badge/downloads-600+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
-    <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
-    <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
+    <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
+    </a>
+    <a href="https://github.com/bladeacer/flexcyon/releases">
+        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
+    </a>
 </p>
 
 ## About Flexcyon
@@ -46,6 +50,14 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - And many more...
 
 ![](./docs/screenshots/ascii_checkboxes1.png)
+
+###### Easter Egg
+1. Enable Easter Egg mode in Style Settings to start.
+2. Total of 5 challenges to uncover. Once a challenge is done, it will provide a hint to the next challenge at the bottom right of the screen in Obsidian (outside of source mode).
+3. As I cannot and will not obsfucate the source code. Please do not clone the repository and search up for the answers :)
+4. The first 5 to DM me on Discord (user `@data_in_void`) with the full set of hints and their corresponding answers (in correct order) for each of the challenges will get a shoutout in this README.
+
+The hint for the first challenge is: colors of pi. Good luck!
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
@@ -117,7 +129,7 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
 - `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
-<!-- - [Enhanced File Explorer Theme] by LennZone for the markdown file tree style -->
+- [Enhanced File Explorer](https://github.com/LennZone/enhanced-file-explorer-tree) Theme by LennZone for the markdown file tree style
 
 #### Ideas, Feedback
 - `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings

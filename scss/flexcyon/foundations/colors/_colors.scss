@@ -117,3 +117,27 @@ body:is(.theme-dark) {
     --color-purple-pink-mix: color-mix(in hsl, var(--color-purple), var(--color-pink));
     --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }
+
+body.flexcyon-easter-egg-mode {
+    @container style(--color-red: #030e9f) and style(--color-orange: #030e9f) 
+    and style(--color-yellow: #030e9f) and style(--color-green: #030e9f)
+    and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f)
+    and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
+        .app-container::after {
+            content: " \a\
+            Well Done! Do reset the styles to their default after each challenge \a\
+            henceforth or I will not show up again after you complete the next challenge. \a\
+            The hint for the second challenge is: \a\
+            When the stars align, nothing will be left on top.\a\
+            When the cards are drawn, thy fate intertwine.\a\
+            Where angles intersect, and colors divide.\a\
+            Thus I shall end, this quote in time.\a\
+            \a";
+            font-size: 1.1rem;
+            width: 50vw;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}
+

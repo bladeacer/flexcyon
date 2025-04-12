@@ -267,6 +267,26 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-ext-color("red-pink", "color-red-pink-mix");
 @include callout-ext-color("pink-red", "color-red-pink-mix");
 
+body.flexcyon-easter-egg-mode {
+    .app-container:has(
+div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"] 
+    )::after {
+        content: " \a\
+        Very nice. Here is the very last challenge:\a\
+        You are nearly at the end\a\
+        but you might want to go back to where it all began\a\
+        the answer is right in front of,\a\
+        it is but rhetorical\a\
+        DM me the answers, once you have all of them\a\
+        This is @data_in_void on Discord, signing off. \a\
+        \a";
+        font-size: 1.1rem;
+        width: 50vw;
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+}
+
 @include callout-ext-color("orange-yellow", "color-orange-yellow-mix");
 @include callout-ext-color("yellow-orange", "color-orange-yellow-mix");
 

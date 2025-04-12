@@ -5,7 +5,11 @@
 #### Style Settings and stuff
 > Add more CSS classes
 - [ ] Light theme color theme flexoki + velocity
-- [x] Style ol ul
+- [ ] Add soft glow option to headings
+- [ ] CSS class for hiding 
+- [ ] Add easter eggs
+
+
 
 #### Plugins/snippets
 - [ ] Support more plugins
@@ -26,3 +30,4 @@
 - Fixed file explorer background being broken
 - Added markdown file tree option for folder style
 - Added list style callout metadata utilities
+- Added toggleable Easter egg mode

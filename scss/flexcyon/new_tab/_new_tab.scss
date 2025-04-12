@@ -89,3 +89,21 @@ body.theme-dark.flexcyon-quote-enable {
         margin-top: 32px;
     }
 }
+
+
+@container style(--flexcyon-top-actions-alignment: right)  {
+    body.flexcyon-easter-egg-mode.flexcyon-workspace-card-layout.flexcyon-status-style-angled.flexcyon-headings-coloured-enabled.flexcyon-quote-enable {
+        .app-container::after {
+            content: " \a\
+            Woah, you actually got it :D \a\
+            Here is the hint for the third challenge: \a\
+            I am documented somewhere, where information lies\a\
+            I pertain the context, of your notes defined.\a\
+            \a";
+            font-size: 1.1rem;
+            width: 50vw;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}

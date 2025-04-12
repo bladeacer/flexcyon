@@ -33,6 +33,7 @@
     - [Side Dock Icons](#side-dock-icons)
     - [Tooltip radius](#tooltip-radius)
     - [Background images](#background-images)
+    - [Easter Egg Mode](#easter-egg-mode)
 
 ## Markdown Navigation tree for Flexcyon's Style Settings
 ```md
@@ -808,6 +809,17 @@ CSS Variable(s) targeted: `var(--flexcyon-metadata-display-editing-disabled)`
 
 Default: false (class toggle)
 
+<!-- 
+You have found it!
+Here is the hint to the fourth challenge:
+what am I to be?
+a pointless declaration,
+a separation of spaces,
+a trifle of languages?
+a common ancestor without formalities, 
+calling out to you in alphabetical order.
+ -->
+
 ___
 ## Status Bar
 Defines CSS variables to configure the status bar
@@ -1322,3 +1334,13 @@ Default: cover
 CSS Variable(s) targeted: `var(--flexcyon-modal-image-position)`
 
 Default: center
+
+___
+## Easter egg mode
+Toggles Easter egg mode
+
+### Enable Easter Egg Mode
+CSS Variable(s) targeted: `var(--flexcyon-easter-egg-mode)`
+> If you are searching for answers, I am not giving hints here '_'
+
+Default: false (class toggle)

@@ -91,6 +91,19 @@ body:is(.theme-dark) {
   --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }
 
+@container style(--color-red: #030e9f) and style(--color-orange: #030e9f)
+    and style(--color-yellow: #030e9f) and style(--color-green: #030e9f)
+    and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f)
+    and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
+  body.flexcyon-easter-egg-mode .app-container::after {
+    content: " \a             Well Done! Do reset the styles to their default after each challenge \a             henceforth or I will not show up again after you complete the next challenge. \a             The hint for the second challenge is: \a             When the stars align, nothing will be left on top.\a             When the cards are drawn, thy fate intertwine.\a             Where angles intersect, and colors divide.\a             Thus I shall end, this quote in time.\a             \a";
+    font-size: 1.1rem;
+    width: 50vw;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
+
 body.theme-dark {
   /* ------------------------------ */
   --flexcyon-base-blue-01: #14161c;
@@ -1988,6 +2001,14 @@ div.callout[data-callout-metadata*=title-pink-red] .callout-icon .svg-icon {
   color: var(--color-red-pink-mix);
 }
 
+body.flexcyon-easter-egg-mode .app-container:has(div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"])::after {
+  content: " \a         Very nice. Here is the very last challenge:\a         You are nearly at the end\a         but you might want to go back to where it all began\a         the answer is right in front of,\a         it is but rhetorical\a         DM me the answers, once you have all of them\a         This is @data_in_void on Discord, signing off. \a         \a";
+  font-size: 1.1rem;
+  width: 50vw;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
 div.callout[data-callout-metadata*=all-orange-yellow],
 div.callout[data-callout-metadata*=bg-orange-yellow] {
   background-color: var(--color-orange-yellow-mix-bg);
@@ -3688,7 +3709,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-blue-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
@@ -3701,7 +3722,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-purple-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
@@ -3714,7 +3735,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-cyan-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
@@ -3727,7 +3748,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-pink-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
@@ -3740,7 +3761,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-green-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
@@ -3753,7 +3774,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-yellow-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
@@ -3766,7 +3787,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-orange-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
@@ -3779,7 +3800,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-red-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
@@ -3792,7 +3813,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-blue-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
@@ -3805,7 +3826,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-purple-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
@@ -3818,7 +3839,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-cyan-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
@@ -3831,7 +3852,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-pink-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
@@ -3844,7 +3865,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-green-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
@@ -3857,7 +3878,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   left: 32px;
   z-index: 1;
   color: rgba(var(--color-yellow-rgb), 0.85);
-  background-color: var(--color-base-00);
+  background-color: var(--color-base-10);
   padding: 0px 8px;
 }
 
@@ -4449,6 +4470,15 @@ body.theme-dark.flexcyon-quote-enable div.empty-state-action-list {
   margin-top: 32px;
 }
 
+@container style(--flexcyon-top-actions-alignment: right) {
+  body.flexcyon-easter-egg-mode.flexcyon-workspace-card-layout.flexcyon-status-style-angled.flexcyon-headings-coloured-enabled.flexcyon-quote-enable .app-container::after {
+    content: " \a             Woah, you actually got it :D \a             Here is the hint for the third challenge: \a             I am documented somewhere, where information lies\a             I pertain the context, of your notes defined.\a             \a";
+    font-size: 1.1rem;
+    width: 50vw;
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+}
 body.theme-dark {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
@@ -5721,6 +5751,14 @@ settings:
     id: flexcyon-modal-image-position
     type: variable-text
     default: center
+  - title: Easter egg mode
+    type: heading
+    description: Configure Easter egg mode
+    level: 5
+  - title: Enable Easter Egg mode
+    id: flexcyon-easter-egg-mode
+    type: class-toggle
+    default: true
 
  */
 body.theme-dark div.pcr-app.visible {
