@@ -1,5 +1,10 @@
 ## Changelog
-### Version 0.3.4
+### Version 0.3.4 Easter Egg Mode
+- Made translation for hide until hover status bar configurable, useful for longer status bars
+- Fixed file explorer background being broken
+- Added markdown file tree option for folder style
+- Added list style callout metadata utilities
+- Added toggleable Easter egg mode
 
 ### Version 0.3.3 QOL Update
 - Added configurable indentation factor and dimming of collapsed headers for Style Settings menu

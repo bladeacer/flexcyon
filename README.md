@@ -59,6 +59,8 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 The hint for the first challenge is: colors of pi. Good luck!
 
+**Disclaimer: Either back up your vault's Style Settings or do the challenges in a test vault, as they may mess with your existing configurations. **
+
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
 - a light mode colour scheme :)
