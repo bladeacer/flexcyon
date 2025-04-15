@@ -1,20 +1,68 @@
 site_name: Flexcyon Theme Docs
-site: https://bladeacer.github.io/flexcyon/
+site_url: https://bladeacer.github.io/flexcyon
 repo_url: https://github.com/bladeacer/flexcyon
-repo_name: bladeacer/flexcyon
+copyright: >
+  Copyright &copy; bladeacer 2025
+plugins:
+  - search
+  - tags
+  - meta
+  - git-revision-date-localized:
+      enable_creation_date: true
 theme:
   name: material
+  custom_dir: docs/overrides
   icon:
-    repo: fontawesome/brands/github 
+    repo: material/github
+    logo: material/file-document
+    tag:
+      style_settings: material/tag
   palette:
-      # Palette toggle for light mode
     - scheme: default
+      primary: indigo
+      accent: deep-purple
       toggle:
-        icon: material/weather-night 
+        icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
+      primary: indigo
+      accent: deep-purple
       toggle:
-        icon: material/weather-sunny
+        icon: material/brightness-4
         name: Switch to light mode
+  font:
+    text: Source Sans Pro
+    code: Source Code Pro
+  features:
+    - navigation.instant.preview
+    - navigation.path
+    - navigation.instant
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.follow
+    - toc.integrate
+    - content.action.view
+    - content.code.copy
+  markdown_extensions:
+    - attr_list
+    - toc:
+        permalink: true
+    - md_in_html
+    - def_list
+    - pymdownx.tasklist:
+      custom_checkbox: true 
+  extra:
+    tags:
+      style_settings: Style Settings
+  nav:
+    - Home: index.md
+    - License: license.md
+    - Style Settings:
+      - Style-Settings/index.md
+      Test:
+    - Credits: credits.md
+    - Changelogs: changelogs.md
+copyright: "Copyright &copy; bladeacer 2025"

@@ -1,4 +1,10 @@
-## Changelog
+---
+icon: material/book
+---
+
+#### Note
+The changelogs show versions in order of most recent to least recent.
+
 ### Version 0.3.4 Easter Egg Mode
 - Made translation for hide until hover status bar configurable, useful for longer status bars
 - Fixed file explorer background being broken
@@ -150,8 +156,10 @@
 - See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 
 
 Credits: 
-- @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
-- @Tuck on the Obsidian Members' Group Discord for options to change link color
+
+- `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
+
+- `@Tuck` on the Obsidian Members' Group Discord for options to change link color
 
 ### Version 0.0.5: Minor Changes
 - Made ASCII art responsive, you can set a font size limit on it

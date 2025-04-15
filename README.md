@@ -14,11 +14,11 @@ A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence, I decided to combine the two which started this theme.
 
 ## Screenshots
-![](./docs/screenshots/showcase1.png)
+![](./docs/docs/assets/screenshots/showcase1.png)
 
-![](./docs/screenshots/showcase2.png)
+![](./docs/docs/assets/screenshots/showcase2.png)
 
-![](./docs/screenshots/showcase3.png)
+![](./docs/assets/screenshots/showcase3.png)
 
 ## Installation via community store (recommended)
 To install this theme via the community store, navigate to  `Settings > Appearance`
@@ -49,7 +49,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 - Animation options for tabs 
 - And many more...
 
-![](./docs/screenshots/ascii_checkboxes1.png)
+![](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
 
 ###### Easter Egg
 1. Enable Easter Egg mode in Style Settings to start.
@@ -93,12 +93,15 @@ Here are some recommended snippets to add to your vault and use alongside Flexcy
 - [MCL Multi Column and Gallery Cards by efemkay](https://github.com/efemkay/obsidian-modular-css-layout)
 
 ## Documentation
-Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
 > If there is a new feature in the documentation that cannot be found within the theme itself, said feature are WIP and may be released next update
 
-<!-- 
+
 A huge thanks to ReadTheDocs for hosting the documentation
- -->
+- WIP atm: https://flexcyon.readthedocs.io/en/latest/ 
+
+>[!warning] Will be depracated
+> Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
+
 
 #### Roadmap
 The Roadmap for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
@@ -143,3 +146,22 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
 - `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation, Powerlevel10k layout
+
+#### Software
+This theme would not be possible without the use of the following tools/dependencies/software:
+
+##### Text Editors
+- Vim 
+- VS Code
+- Vim Emulation on VSCode
+
+##### Version Control
+- Git
+- GitHub
+
+##### Documentation
+- MkDocs
+    - and the awesome ecosystem built around it
+- Material for MkDocs 
+- ReadTheDocs
+- Giscus

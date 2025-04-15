@@ -19,6 +19,9 @@
 #### Other styling options
 - [ ] Markdown tree codeblock/callout css
 - [ ] Rainbow metadata icons
+- [ ] Accessibility option, configure contrast filter for body
+- [ ] Mermaid Chart Styling
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 #### Next version changelog
+- Documentation now has its own site. Check it out at https://flexcyon.readthedocs.io.
