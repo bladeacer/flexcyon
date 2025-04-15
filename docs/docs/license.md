@@ -6,7 +6,7 @@ The theme is licensed under the [MIT License](https://mit-license.org) which can
 
 Alternatively, you can view it here.
 
-#### License from the source code
+## License from the source code
 
 ```md
 MIT License

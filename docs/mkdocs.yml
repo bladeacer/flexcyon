@@ -18,18 +18,19 @@ theme:
     tag:
       style_settings: material/tag
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
       primary: indigo
       accent: deep-purple
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: dark)"
       primary: indigo
       accent: deep-purple
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to dark mode
   font:
     text: Source Sans Pro
     code: Source Code Pro
@@ -43,26 +44,27 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.follow
-    - toc.integrate
     - content.action.view
     - content.code.copy
   markdown_extensions:
     - attr_list
     - toc:
         permalink: true
-    - md_in_html
-    - def_list
-    - pymdownx.tasklist:
-      custom_checkbox: true 
+    - footnotes
+
+
   extra:
     tags:
       style_settings: Style Settings
   nav:
-    - Home: index.md
+    - README:
+      - README/index.md
+      - Page 1: README/page-1.md
+      - Page 2: README/page-2.md
+      - Page 3: README/page-3.md
     - License: license.md
     - Style Settings:
       - Style-Settings/index.md
-      Test:
     - Credits: credits.md
     - Changelogs: changelogs.md
 copyright: "Copyright &copy; bladeacer 2025"

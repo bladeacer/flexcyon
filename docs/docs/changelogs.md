@@ -5,6 +5,9 @@ icon: material/book
 #### Note
 The changelogs show versions in order of most recent to least recent.
 
+___
+## Version 0.3.x
+
 ### Version 0.3.4 Easter Egg Mode
 - Made translation for hide until hover status bar configurable, useful for longer status bars
 - Fixed file explorer background being broken
@@ -81,6 +84,8 @@ The changelogs show versions in order of most recent to least recent.
   - Bottom center
 - See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 
 
+___
+## Version 0.2.x
 ### Version 0.2.2 Layout styling
 - Fixed double quotes checkbox background color
 - Added support for Vault Statistics plugin
@@ -122,7 +127,8 @@ The changelogs show versions in order of most recent to least recent.
 - Added dotted and grid background options
 - See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 
 
-
+___
+## Version 0.1.x
 ### Version 0.1.1 Hotfixes
 - Added option to change ASCII checkboxes font size
 - Fixed smiley icons on mobile
