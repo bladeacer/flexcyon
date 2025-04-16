@@ -1,9 +1,10 @@
 ---
-icon: material/book
+icon: material/script-text
+title: Changelogs
 ---
 
 #### Note
-The changelogs show versions in order of most recent to least recent.
+The changelogs show versions in order of most recent to least recent. Or, if you prefer the changelogs in chronological order, you can use sidebar or hamburger menu to view the relevant sub-pages.
 
 ___
 ## Version 0.3.x

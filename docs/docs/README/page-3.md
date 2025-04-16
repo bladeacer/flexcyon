@@ -1,6 +1,10 @@
 ---
 title: Supported Extensions
 icon: material/hexagon-multiple-outline
+tags:
+    - plugins
+    - snippets
+    - styling
 ---
 
 The following plugins/snippets are officially supported

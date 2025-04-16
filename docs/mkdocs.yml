@@ -1,6 +1,7 @@
 site_name: Flexcyon Theme Docs
 site_url: https://bladeacer.github.io/flexcyon
 repo_url: https://github.com/bladeacer/flexcyon
+repo_name: bladeacer/flexcyon
 copyright: >
   Copyright &copy; bladeacer 2025
 plugins:
@@ -15,8 +16,7 @@ theme:
   icon:
     repo: material/github
     logo: material/file-document
-    tag:
-      style_settings: material/tag
+
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: slate
@@ -52,19 +52,35 @@ theme:
         permalink: true
     - footnotes
 
-
   extra:
     tags:
-      style_settings: Style Settings
+      Style Settings: style_settings
+      README: readme
+      Logs: logs
+      Plugins: plugins
+      Snippets: snippets
+      Styling: styling
   nav:
     - README:
       - README/index.md
+      - README/license.md
       - Page 1: README/page-1.md
       - Page 2: README/page-2.md
       - Page 3: README/page-3.md
-    - License: license.md
-    - Style Settings:
-      - Style-Settings/index.md
-    - Credits: credits.md
-    - Changelogs: changelogs.md
+      - Page 4: README/page-4.md
+      - Page 5: README/page-5.md
+    - Styling:
+      - styling/index.md
+      - Style Settings:
+        - styling/Style-Settings/index.md
+      - Callout Metadata:
+        - styling/Callout-Metadata/index.md
+      - CSS Classes:
+        - styling/CSS-Classes/index.md
+    - Credits: 
+      - credits/index.md
+      - Page 1: credits/page-1.md
+    - Changelogs: 
+      - changelogs/index.md
+    - CSS Class
 copyright: "Copyright &copy; bladeacer 2025"

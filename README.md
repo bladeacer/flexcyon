@@ -33,6 +33,14 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 4. Click `Add Beta Theme`
 5. Input `https://github.com/bladeacer/flexcyon` and then click `Add Theme`
 
+## Documentation
+A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io
+> If there is a new feature in the documentation that cannot be found within the theme itself, said feature is WIP and may be released next update
+
+### Will be depracated
+> Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
+
+
 ## Features
 #### What this theme has
 - vim mode status (when using builtin vim keybinds)
@@ -91,16 +99,6 @@ Here are some recommended snippets to add to your vault and use alongside Flexcy
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
 - [Obsidian FileLink Styling by felixqueisler](https://github.com/felixqueisler/Obsidian-FileLink-Styling)
 - [MCL Multi Column and Gallery Cards by efemkay](https://github.com/efemkay/obsidian-modular-css-layout)
-
-## Documentation
-> If there is a new feature in the documentation that cannot be found within the theme itself, said feature are WIP and may be released next update
-
-
-A huge thanks to ReadTheDocs for hosting the documentation
-- WIP atm: https://flexcyon.readthedocs.io/en/latest/ 
-
->[!warning] Will be depracated
-> Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
 
 
 #### Roadmap

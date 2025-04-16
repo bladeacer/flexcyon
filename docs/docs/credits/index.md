@@ -1,5 +1,6 @@
 ---
 icon: material/heart
+title: Credits
 ---
 
 A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
@@ -18,20 +19,5 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
 - `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation, Powerlevel10k layout
 
-## Software
-This theme would not be possible without the use of the following tools/dependencies/software:
-
-### Text Editors
-- Vim 
-- VS Code 
-
-### Version Control
-- Git 
-- GitHub 
-
-### Documentation
-- MkDocs 
-    - and the awesome ecosystem built around it
-- Material for MkDocs 
-- ReadTheDocs
-- Giscus
+___
+Last but not least, *you* for using the theme and reading the documentation :D
