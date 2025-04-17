@@ -6,6 +6,7 @@ tags:
 ---
 
 This theme sets out to achieve the following
+
 1. Be "reasonably opinionated", bundle features users use and cover some niche ones too.
 
 2. Be decently lightweight, this means *no embeds* (no fonts, SVGs)

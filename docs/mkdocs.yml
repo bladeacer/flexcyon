@@ -45,7 +45,7 @@ theme:
     - navigation.tabs.sticky
     - toc.follow
     - content.action.view
-    - content.code.copy
+    - content.code.cojy
   markdown_extensions:
     - attr_list
     - toc:
@@ -60,27 +60,35 @@ theme:
       Plugins: plugins
       Snippets: snippets
       Styling: styling
+      Callouts: callouts
   nav:
     - README:
       - README/index.md
       - README/license.md
-      - Page 1: README/page-1.md
-      - Page 2: README/page-2.md
-      - Page 3: README/page-3.md
-      - Page 4: README/page-4.md
-      - Page 5: README/page-5.md
     - Styling:
       - styling/index.md
       - Style Settings:
         - styling/Style-Settings/index.md
       - Callout Metadata:
         - styling/Callout-Metadata/index.md
+        - Title Styling:
+          - styling/Callout-Metadata/title-styling/index.md
+        - Background Styling:
+          - styling/Callout-Metadata/bg-styling/index.md
+        - Combined Styling:
+          - styling/Callout-Metadata/combined-styling/index.md
+        - List Styling:
+          - styling/Callout-Metadata/list-styling/index.md
       - CSS Classes:
         - styling/CSS-Classes/index.md
+        - Vertical Alignment:
+          - styling/CSS-Classes/vertical-alignment/index.md
+        - Editor Background:
+          - styling/CSS-Classes/editor-background/index.md
+        - Heading Indicators:
+          - styling/CSS-Classes/heading-indicators/index.md
     - Credits: 
       - credits/index.md
-      - Page 1: credits/page-1.md
     - Changelogs: 
       - changelogs/index.md
-    - CSS Class
 copyright: "Copyright &copy; bladeacer 2025"

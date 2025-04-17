@@ -8,6 +8,7 @@ tags:
 
 ### Style Settings and stuff
 > Add more CSS classes
+
 - Light theme color theme flexoki + velocity
 - Add soft glow option to headings
 
