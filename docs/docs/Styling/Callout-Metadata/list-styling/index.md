@@ -8,7 +8,7 @@ In this sub-page, you can find usage examples for changing the styling of ordere
 ## Callout Lists
 These are some utilities for styling ordered and unordered lists in Obsidian.
 
-Accepted values for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
+Accepted Formats for `style_type`: The [values that are defined in the MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#Values)
 
 ### Note
 To write an ordered list in Obsidian, use:

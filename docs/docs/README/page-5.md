@@ -13,4 +13,4 @@ tags:
 
 The hint for the first challenge is: colors of pi. Good luck!
 
-**Disclaimer: Either back up your vault's Style Settings or do the challenges in a test vault, as they may mess with your existing configurations.**
+**Try putting your styling changes into a toggleable CSS snippet**

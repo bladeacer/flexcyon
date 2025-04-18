@@ -34,11 +34,16 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 5. Input `https://github.com/bladeacer/flexcyon` and then click `Add Theme`
 
 ## Documentation
-A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io
+A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io/en/latest
 > If there is a new feature in the documentation that cannot be found within the theme itself, said feature is WIP and may be released next update
 
 ### Will be deprecated
-> Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
+<details>
+    <summary>Click to expand</summary>
+    <p>
+        Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
+    </p>
+<details>
 
 
 ## Features
@@ -51,7 +56,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 - a dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
-- A [plethora of cssclasses and callout customisation options](https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md)
+- A [plethora of cssclasses and callout customisation options](https://flexcyon.readthedocs.io/en/latest/Styling/CSS-Classes/)
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs 
@@ -59,15 +64,8 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 
 ![](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
 
-###### Easter Egg
-1. Enable Easter Egg mode in Style Settings to start.
-2. Total of 5 challenges to uncover. Once a challenge is done, it will provide a hint to the next challenge at the bottom right of the screen in Obsidian (outside of source mode).
-3. As I cannot and will not obsfucate the source code. Please do not clone the repository and search up for the answers :)
-4. The first 5 to DM me on Discord (user `@data_in_void`) with the full set of hints and their corresponding answers (in correct order) for each of the challenges will get a shoutout in this README.
-
-The hint for the first challenge is: colors of pi. Good luck!
-
-**Disclaimer: Either back up your vault's Style Settings or do the challenges in a test vault, as they may mess with your existing configurations. **
+#### Easter Egg Mode
+View details at https://flexcyon.readthedocs.io/en/latest/README/page-5/ 
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
@@ -102,10 +100,10 @@ Here are some recommended snippets to add to your vault and use alongside Flexcy
 
 
 #### Roadmap
-The Roadmap for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/roadmap.md).
+The Roadmap for this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/README/roadmap/).
 
 #### Changelogs
-The Changelogs for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/changelogs.md)
+The Changelogs for this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/changelogs/)
 
 #### Questions, Issues?
 Feel free to talk about it at [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). Alternatively, you can open an issue at this repository.
@@ -121,7 +119,7 @@ This theme tries to:
 - bundle numerous callout metadata utilites
 
 ## Style Settings
-Documentation for style settings of this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/style_settings.md)
+Documentation for style settings of this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/Styling/Style-Settings)
 
 Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
 

@@ -3,7 +3,6 @@ title: README
 icon: material/book-open-blank-variant-outline
 ---
 
-
 <img src="https://img.shields.io/badge/downloads-700+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
 <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
@@ -27,20 +26,14 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 - a dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
-- A [plethora of cssclasses and callout customisation options](https://github.com/bladeacer/flexcyon/tree/master/docs/cssclasses.md)
+- A [plethora of cssclasses and callout customisation options](../Styling/CSS-Classes/index.md)
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs 
 - And many more...
 
-<figure markdown="span">
-    <img src="../assets/screenshots/ascii_checkboxes1.png" width="800">
-    <figcaption>Figure 1: ASCII Checkboxes</figcaption>
-</figure>
-
-
 ## What this theme does not have
-- multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
+- multiple colour schemes (though you can override the existing one with your own, see [Style Settings](../Styling/Style-Settings/index.md))
 - a light mode colour scheme :)
 - alternate checkboxes
 - embedded fonts, svgs

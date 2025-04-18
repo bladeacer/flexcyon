@@ -5,7 +5,7 @@ icon: material/format-bold
 
 Callout metadata: "w-`value`-all"
 
-Accepted values for `value`:
+Accepted Formats for `value`:
 - 100 to 900 (in increments of 100)
 - bold
 - bolder

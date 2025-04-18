@@ -69,6 +69,8 @@ theme:
       - styling/index.md
       - Style Settings:
         - styling/Style-Settings/index.md
+        - Editor:
+          - styling/Style-Settings/Editor/index.md
       - Callout Metadata:
         - styling/Callout-Metadata/index.md
         - styling/Callout-Metadata/flashcard.md
