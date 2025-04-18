@@ -1,12 +1,20 @@
 ---
-title: All Blue
+title: Empty
+icon: material/cancel
 ---
 
-Callout metadata: "all-blue"
+Callout metadata: "empty"
 
+Usage: 
 ```md
-> [!tip|all-blue] Title will be blue
-> The background color will be blue
+> [!|empty] Neither the title and callout icon will show
+> Content is shown as usual
 ```
 
-> Shorthand for both ["bg-blue"](../bg-styling/page-2.md) and ["title-blue"](../title-styling/page-1.md)
+Alternatively, you can use:
+```md
+> [!info|empty] Neither the title and callout icon will show
+> Content is shown as usual
+```
+
+> Shorthand for both ["no-icon"](../icon-styling/page-1.md) and ["no-title"](../title-styling/page-1.md)

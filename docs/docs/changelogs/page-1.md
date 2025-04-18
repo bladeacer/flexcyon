@@ -1,5 +1,6 @@
 ---
 title: Version 0.1.x and below
+icon: material/numeric-1-box-outline
 ---
 
 Versions below 0.0.5 are not documented as they lack notable features.
@@ -32,7 +33,6 @@ Versions below 0.0.5 are not documented as they lack notable features.
 - Added cssclasses for
   - Tategaki (Vertical RTL)
   - Vertical LTR
-- See the [documentation](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md) for more details 
 
 Credits: 
 

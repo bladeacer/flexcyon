@@ -1,5 +1,6 @@
 ---
 title: Transparent Background
+icon: material/layers-off-outline
 ---
 
 Callout metadata: "transparent-bg" or "bg-transparent"

@@ -1,5 +1,6 @@
 ---
 title: Version 0.3.x
+icon: material/numeric-3-box-outline
 ---
 
 ### Version 0.3.0 TUI Layout

@@ -1,5 +1,6 @@
 ---
 title: Version 0.2.x
+icon: material/numeric-2-box-outline
 ---
 
 ## Version 0.2.0 Aesthetics Update

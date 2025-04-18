@@ -262,7 +262,7 @@ Usage:
 
 Alternatively, you can use:
 ```md
-> [!empty] Neither the title and callout icon will show
+> [!info|empty] Neither the title and callout icon will show
 > Content is shown as usual
 ```
 
@@ -493,7 +493,7 @@ Callout metadata: "all-yellow"
 > `bg-color1-color2-`
 Usage:
 ```md
-> [!tip|all-red-blue] Title will display as usual
+> [!tip|bg-red-blue] Title will display as usual
 > The background color will be the color mix of red and blue colors of this theme
 ```
 
@@ -532,7 +532,7 @@ Callout metadata: "rtl-content"
 Usage: 
 ```md
 > [!info|rtl-content] The title will be displayed as usual
-> The content will be dispalyed as rtl
+> The content will be displayed as rtl
 ```
 
 #### RTL All
@@ -541,7 +541,7 @@ Callout metadata: "rtl-all"
 Usage: 
 ```md
 > [!info|rtl-all] The title will be displayed as rtl
-> The content will be dispalyed as rtl
+> The content will be displayed as rtl
 ```
 ___
 #### LTR Title
@@ -559,7 +559,7 @@ Callout metadata: "ltr-content"
 Usage: 
 ```md
 > [!info|ltr-content] The title will be displayed as usual
-> The content will be dispalyed as ltr
+> The content will be displayed as ltr
 ```
 
 #### LTR All
@@ -568,7 +568,7 @@ Callout metadata: "ltr-all"
 Usage:
 ```md
 > [!info|ltr-all] The title will be displayed as ltr
-> The content will be dispalyed as ltr
+> The content will be displayed as ltr
 ```
 
 ___
