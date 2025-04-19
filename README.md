@@ -36,15 +36,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 ## Documentation
 A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io/en/latest
 > If there is a new feature in the documentation that cannot be found within the theme itself, said feature is WIP and may be released next update
-
-### Will be deprecated
-<details>
-    <summary>Click to expand</summary>
-    <p>
-        Documentation for this theme can be found [here](https://github.com/bladeacer/flexcyon/tree/master/docs/docs.md)
-    </p>
-<details>
-
+> The old documentation is now fully deprecated.
 
 ## Features
 #### What this theme has

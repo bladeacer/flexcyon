@@ -5,7 +5,6 @@ tags:
 ---
 
 ## Misc
-Finish the documentation site
 
 ### Style Settings and stuff
 > Add more CSS classes
