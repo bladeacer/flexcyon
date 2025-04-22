@@ -29,6 +29,11 @@ CSS Variable(s) targeted: `var(--flexcyon-headings-coloured-enabled)`
 
 Default: true (class toggle)
 
+### Enable soft glow for headings
+CSS Variable(s) targeted: `var(--flexcyon-headings-glow-enabled)`
+
+Default: false (class toggle)
+
 ___
 ### Font weight
 

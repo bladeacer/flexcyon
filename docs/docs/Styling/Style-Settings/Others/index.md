@@ -269,3 +269,22 @@ CSS Variable(s) targeted: `var(--flexcyon-easter-egg-mode)`
 > If you are searching for answers, I am not giving hints here '_'
 
 Default: false (class toggle)
+
+___
+### Accessibility
+Toggle accessibility options
+> Note that changing these will change how the entire theme renders. 
+>
+> Tweaking these values too much may make the theme look ugly
+
+### Global brightness ratio
+CSS Variable(s) targeted: `var(--flexcyon-brightness-ratio)`
+
+Default: 1
+
+### Global contrast ratio
+CSS Variable(s) targeted: `var(--flexcyon-contrast-ratio)`
+
+Default: 1
+
+> E.g. if you want slightly more contrast, try values between 1 to 1.5

@@ -195,6 +195,10 @@ settings:
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
     default: true
+  - title: Enable soft glow for headings
+    id: flexcyon-headings-glow-enabled
+    type: class-toggle
+    default: false
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
@@ -687,6 +691,10 @@ settings:
     default: true
   - title: Do not show properties in live preview mode
     id: flexcyon-metadata-display-editing-disabled
+    type: class-toggle
+    default: false
+  - title: Enable rainbow metadata icons
+    id: flexcyon-metadata-rainbow-icons
     type: class-toggle
     default: false
 
@@ -1184,7 +1192,18 @@ settings:
     id: flexcyon-easter-egg-mode
     type: class-toggle
     default: true
-
+  - title: Accessibility
+    type: heading
+    description: Toggle accessibility options
+    level: 5
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
+    default: 1
+  - title: Global contrast ratio
+    type: variable-number
+    id: flexcyon-contrast-ratio
+    default: 1
  */
 
 body.theme-dark {

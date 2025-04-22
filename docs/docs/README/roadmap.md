@@ -10,7 +10,6 @@ tags:
 > Add more CSS classes
 
 - Light theme color theme flexoki + velocity
-- Add soft glow option to headings
 
 
 ### Plugins/snippets
@@ -25,8 +24,6 @@ tags:
 ### Other styling options
 - Markdown tree codeblock/callout css
 
-- Rainbow metadata icons
-
 - Accessibility option, configure contrast filter for body
 
 - Mermaid Chart Styling
@@ -34,3 +31,6 @@ tags:
 
 ### Next version changelog
 - Documentation now has its own site. Check it out at https://flexcyon.readthedocs.io.
+- Added soft glow option for headings
+- Added toggleable rainbow metadata icons
+- Added accessibility options for global brightness and contrast ratios

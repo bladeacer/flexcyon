@@ -1,0 +1,8 @@
+body {
+    --flexcyon-contrast-ratio: 1;
+    --flexcyon-brightness-ratio: 1;
+}
+
+body {
+    filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio));
+}

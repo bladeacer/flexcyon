@@ -30,6 +30,11 @@ CSS Variable(s) targeted: `var(--flexcyon-metadata-display-editing-disabled)`
 
 Default: false (class toggle)
 
+### Enable rainbow metadata icons
+CSS Variable(s) targeted: `var(--flexcyon-metadata-rainbow-icons)`
+
+Default: false (class toggle)
+
 <details>
     <summary>?</summary>
     <p>

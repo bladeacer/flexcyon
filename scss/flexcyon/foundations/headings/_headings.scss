@@ -1,4 +1,5 @@
 // The code snippets in this file are derived from the Halcyon theme 
+
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body:where(.theme-dark) {
@@ -17,6 +18,30 @@ body.flexcyon-headings-coloured-enabled {
     --h4-color: var(--flexcyon-pink);
     --h5-color: var(--flexcyon-lime-green);
     --h6-color: var(--flexcyon-yellow);
+}
+
+body.flexcyon-headings-glow-enabled {
+    h1, .cm-header-1 {
+        text-shadow: 2px 2px 4px var(--h1-color); 
+    }
+    h2, .cm-header-2 {
+        text-shadow: 1.75px 1.75px 3.5px var(--h2-color); 
+    }
+    h3, .cm-header-3 {
+        text-shadow: 1.5px 1.5px 3px var(--h3-color); 
+    }
+    h4, .cm-header-4 {
+        text-shadow: 1.25px 1.25px 2.5px var(--h4-color); 
+    }
+    h5, .cm-header-5 {
+        text-shadow: 1px 1px 2px var(--h5-color); 
+    }
+    h6, .cm-header-6 {
+        text-shadow: 0.75px 0.75px 1.5px var(--h6-color); 
+    }
+    .cm-formatting-header {
+        text-shadow: none;
+    }
 }
 
 body.flexcyon-h1-underline-enabled h1 {
@@ -45,6 +70,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h1 {
+
     h1:not(:hover)::before,
     .HyperMD-header-1::before {
         position: relative;
@@ -57,6 +83,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h2 {
+
     h2:not(:hover)::before,
     .HyperMD-header-2::before {
         position: relative;
@@ -69,6 +96,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h3 {
+
     h3:not(:hover)::before,
     .HyperMD-header-3::before {
         position: relative;
@@ -81,6 +109,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h4 {
+
     h4:not(:hover)::before,
     .HyperMD-header-4::before {
         position: relative;
@@ -94,6 +123,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h5 {
+
     h5:not(:hover)::before,
     .HyperMD-header-5::before {
         position: relative;
@@ -107,6 +137,7 @@ body.flexcyon-h6-underline-enabled h6 {
 
 .headings-indicator-all,
 .headings-indicator-h6 {
+
     h6:not(:hover)::before,
     .HyperMD-header-6::before {
         position: relative;

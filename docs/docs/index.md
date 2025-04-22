@@ -18,5 +18,7 @@ Here are some links you may be looking for.
 ### Styling
 - [Style Settings](./Styling/Style-Settings/index.md)
 
+> If there is documentation for features not currently in the theme, there are plans to include them in the next update.
+
 ### About Comments
 Comments on this website uses the GitHub discussions in the source code repository as a back-end.

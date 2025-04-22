@@ -174,6 +174,28 @@ body.flexcyon-headings-coloured-enabled {
   --h6-color: var(--flexcyon-yellow);
 }
 
+body.flexcyon-headings-glow-enabled h1, body.flexcyon-headings-glow-enabled .cm-header-1 {
+  text-shadow: 2px 2px 4px var(--h1-color);
+}
+body.flexcyon-headings-glow-enabled h2, body.flexcyon-headings-glow-enabled .cm-header-2 {
+  text-shadow: 1.75px 1.75px 3.5px var(--h2-color);
+}
+body.flexcyon-headings-glow-enabled h3, body.flexcyon-headings-glow-enabled .cm-header-3 {
+  text-shadow: 1.5px 1.5px 3px var(--h3-color);
+}
+body.flexcyon-headings-glow-enabled h4, body.flexcyon-headings-glow-enabled .cm-header-4 {
+  text-shadow: 1.25px 1.25px 2.5px var(--h4-color);
+}
+body.flexcyon-headings-glow-enabled h5, body.flexcyon-headings-glow-enabled .cm-header-5 {
+  text-shadow: 1px 1px 2px var(--h5-color);
+}
+body.flexcyon-headings-glow-enabled h6, body.flexcyon-headings-glow-enabled .cm-header-6 {
+  text-shadow: 0.75px 0.75px 1.5px var(--h6-color);
+}
+body.flexcyon-headings-glow-enabled .cm-formatting-header {
+  text-shadow: none;
+}
+
 body.flexcyon-h1-underline-enabled h1 {
   border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid var(--h1-color);
 }
@@ -1512,7 +1534,6 @@ body:where(.theme-dark) .cm-gutterElement.cm-active {
   font-size: var(--font-ui-small);
 }
 
-/* Modifications to not display properties in reading mode */
 body:where(.theme-dark) {
   --metadata-label-text-color: var(--flexcyon-purple-lilac);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
@@ -1545,6 +1566,39 @@ body:is(.theme-dark) .metadata-property:is(:focus, :focus-within),
 body:is(.theme-dark) .text-icon-button:focus,
 body:is(.theme-dark) .metadata-properties-heading:focus:before {
   box-shadow: 0 0 0 1px var(--interactive-accent);
+}
+
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-forward, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-forward {
+  color: var(--color-cyan);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-binary, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-binary {
+  color: var(--color-blue);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-text, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-text {
+  color: var(--color-green);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-list, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-list {
+  color: var(--color-orange);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-tags, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-tags {
+  color: var(--color-red);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-check-square, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-check-square {
+  color: var(--color-yellow);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-calendar, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-calendar {
+  color: var(--text-accent);
+  opacity: calc(var(--dimmed) + 0.2);
+}
+body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-file-question, body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-file-question {
+  color: var(--color-purple);
+  opacity: calc(var(--dimmed) + 0.2);
 }
 
 /* Callout modifications */
@@ -4770,6 +4824,10 @@ settings:
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
     default: true
+  - title: Enable soft glow for headings
+    id: flexcyon-headings-glow-enabled
+    type: class-toggle
+    default: false
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
@@ -5262,6 +5320,10 @@ settings:
     default: true
   - title: Do not show properties in live preview mode
     id: flexcyon-metadata-display-editing-disabled
+    type: class-toggle
+    default: false
+  - title: Enable rainbow metadata icons
+    id: flexcyon-metadata-rainbow-icons
     type: class-toggle
     default: false
 
@@ -5759,7 +5821,18 @@ settings:
     id: flexcyon-easter-egg-mode
     type: class-toggle
     default: true
-
+  - title: Accessibility
+    type: heading
+    description: Toggle accessibility options
+    level: 5
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
+    default: 1
+  - title: Global contrast ratio
+    type: variable-number
+    id: flexcyon-contrast-ratio
+    default: 1
  */
 body.theme-dark div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -5948,6 +6021,15 @@ body.theme-dark .modal-bg {
   background-position: var(--flexcyon-modal-image-position);
   background-blend-mode: var(--flexcyon-modal-image-blend-mode);
   filter: brightness(var(--flexcyon-modal-image-brightness)) blur(var(--flexcyon-modal-image-blur));
+}
+
+body {
+  --flexcyon-contrast-ratio: 1;
+  --flexcyon-brightness-ratio: 1;
+}
+
+body {
+  filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio));
 }
 
 /* Modifications for alternate file tree plugin */
