@@ -199,6 +199,30 @@ settings:
     id: flexcyon-headings-glow-enabled
     type: class-toggle
     default: false
+  - title: Enable heading indicators globally for Heading 1
+    id: flexcyon-headings-indicator-h1
+    type: class-toggle
+    default: false
+  - title: Enable heading indicators globally for Heading 2
+    id: flexcyon-headings-indicator-h2
+    type: class-toggle
+    default: false
+  - title: Enable heading indicators globally for Heading 3
+    id: flexcyon-headings-indicator-h3
+    type: class-toggle
+    default: false
+  - title: Enable heading indicators globally for Heading 4
+    id: flexcyon-headings-indicator-h4
+    type: class-toggle
+    default: false
+  - title: Enable heading indicators globally for Heading 5
+    id: flexcyon-headings-indicator-h5
+    type: class-toggle
+    default: false
+  - title: Enable heading indicators globally for Heading 6
+    id: flexcyon-headings-indicator-h6
+    type: class-toggle
+    default: false
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
@@ -623,6 +647,16 @@ settings:
     type: variable-number
     default: 250
     format: px
+  - title: Flashcard callout animation duration
+    id: flexcyon-callout-flashcard-animation-duration
+    type: variable-number
+    default: 0.5
+    format: s
+  - title: Popup callout animation duration
+    type: variable-number
+    id: flexcyon-callout-pop-animation-duration
+    default: 0.2
+    format: s
 
   - title: Checkboxes
     type: heading
@@ -1203,6 +1237,10 @@ settings:
   - title: Global contrast ratio
     type: variable-number
     id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global saturation ratio
+    type: variable-number
+    id: flexcyon-saturation-ratio
     default: 1
  */
 

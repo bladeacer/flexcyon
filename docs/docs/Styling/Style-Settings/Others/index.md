@@ -287,4 +287,11 @@ CSS Variable(s) targeted: `var(--flexcyon-contrast-ratio)`
 
 Default: 1
 
-> E.g. if you want slightly more contrast, try values between 1 to 1.5
+> E.g. if you want slightly more contrast like on an OLED screen, try values between 1 to 1.5
+
+### Global saturation ratio
+CSS Variable(s) targeted: `var(--flexcyon-saturation-ratio)`
+
+Default: 1
+
+> Use to modify the saturation of colors

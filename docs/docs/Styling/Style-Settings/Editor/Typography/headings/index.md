@@ -34,6 +34,51 @@ CSS Variable(s) targeted: `var(--flexcyon-headings-glow-enabled)`
 
 Default: false (class toggle)
 
+### Enable heading indicators globally
+Customise which headings have heading indicators before them globally. If you are looking to apply them on a per-note basis, [click here](../../../../CSS-Classes/heading-indicators/index.md)
+
+#### For Heading 1
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h1)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-1.md)
+
+#### For Heading 2
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h2)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-2.md)
+
+#### For Heading 3
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h3)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-3.md)
+
+#### For Heading 4
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h4)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-4.md)
+
+#### For Heading 5
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h5)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-5.md)
+
+#### For Heading 6
+CSS Variable(s) targeted: `var(--flexcyon-headings-indicator-h6)`
+
+Default: false (class toggle)
+
+> The CSS Class equivalent can be [found here](../../../../CSS-Classes/heading-indicators/page-6.md)
+
 ___
 ### Font weight
 

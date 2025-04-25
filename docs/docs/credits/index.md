@@ -18,6 +18,6 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
 - `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation, Powerlevel10k layout
-
+- `@Michael` on the Obisidian Members' Group Discord for global heading indicators
 ___
 Last but not least, *you* for using the theme and reading the documentation :D

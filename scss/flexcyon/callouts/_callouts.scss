@@ -9,6 +9,7 @@ body.theme-dark {
     --flexcyon-callout-pop-animation-duration: 0.2s;
     --flexcyon-callouts-flashcard-width: 250px;
     --flexcyon-callouts-flashcard-height: 250px;
+    --flexcyon-callout-flashcard-animation-duration: 0.5s;
 }
 
 body:where(.theme-dark) {
@@ -268,9 +269,7 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-ext-color("pink-red", "color-red-pink-mix");
 
 body.flexcyon-easter-egg-mode {
-    .app-container:has(
-div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"] 
-    )::after {
+    .app-container:has(div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"])::after {
         content: " \a\
         Very nice. Here is the very last challenge:\a\
         You are nearly at the end\a\
@@ -523,7 +522,8 @@ div.callout[data-callout-metadata*="flashcard"] {
     height: var(--flexcyon-callouts-flashcard-height);
     perspective: 1000px;
     transform-style: preserve-3d;
-    transition: all 0.5s ease-in-out;
+    transition: all var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
+
 
     .callout-content {
         transform: rotateY(180deg);
@@ -535,7 +535,6 @@ div.callout[data-callout-metadata*="flashcard"] {
         top: 25%;
         display: flex;
         flex-direction: column;
-        /* For stacking content if needed */
         align-items: center;
         justify-content: center;
     }
@@ -554,7 +553,6 @@ div.callout[data-callout-metadata*="flashcard"] {
 
 }
 
-// Make these configurable in style settings
 .editor-writing .cm-line,
 div.callout[data-callout-metadata*="writing"] .callout-content p {
     text-indent: 16px;
@@ -564,6 +562,7 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 }
 
 @mixin callout-list($style-type) {
+
     div.callout[data-callout-metadata*="li-#{$style-type}"],
     div.callout[data-callout-metadata*="ol-#{$style-type}"] {
         ol {
@@ -571,6 +570,7 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
             list-style-position: inside;
         }
     }
+
     div.callout[data-callout-metadata*="li-#{$style-type}"],
     div.callout[data-callout-metadata*="ul-#{$style-type}"] {
         ul {

@@ -15,3 +15,4 @@ cssclasses:
 Others headings display as usual
 ```
 
+The Style Settings equivalent to enabling this globally can be [found here](../../Style-Settings/Editor/Typography/headings/index.md#for-heading-1)
