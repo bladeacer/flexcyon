@@ -20,6 +20,8 @@ Style Settings
 
 ## Configuration Options
 
+Accepted Formats: px
+
 ### Do not show properties in reading mode
 CSS Variable(s) targeted: `var(--flexcyon-metadata-display-reading-disabled)`
 
@@ -48,3 +50,8 @@ Default: false (class toggle)
         calling out to you in alphabetical order.<br>
     </p>
 </details>
+
+### Metadata container left padding
+CSS Variable(s) targeted: `var(--flexcyon-meta-container-padding-left)`
+
+Default: 14 (px)

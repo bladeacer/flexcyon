@@ -95,6 +95,9 @@ body.flexcyon-editor-rhombus .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
 .editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
+    .canvas-background {
+        display: none;
+    }
     background-image:
         repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
             var(--flexcyon-editor-bg-color),

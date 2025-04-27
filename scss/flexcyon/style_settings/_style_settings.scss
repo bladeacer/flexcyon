@@ -620,9 +620,8 @@ settings:
   - title: Callout Metadata Background Opacity
     id: flexcyon-callout-bg-opacity
     description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
-    type: variable-text
+    type: variable-text;
     default: 20%
-
   - title: Callout Vertical Margin
     id: flexcyon-callout-vertical-margin
     description: Configures the vertical margin of callouts
@@ -731,6 +730,11 @@ settings:
     id: flexcyon-metadata-rainbow-icons
     type: class-toggle
     default: false
+  - title: Metadata container left padding
+    id: flexcyon-meta-container-padding-left
+    type: variable-number
+    default: 14
+    format: px
 
   - title: Status Bar
     type: heading

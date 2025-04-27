@@ -77,3 +77,13 @@ icon: material/numeric-3-box-outline
 - Added markdown file tree option for folder style
 - Added list style callout metadata utilities
 - Added toggleable Easter egg mode
+
+### Version 0.3.5 Configuration Update
+- Documentation now has its own site.
+- Added soft glow option for headings
+- Added toggleable rainbow metadata icons
+- Added accessibility options for global brightness, contrast and saturation ratios
+- Added option to enable heading indicators globally, customisable for different heading levels.
+  - Heading indicators now better inherit from the heading's base color
+- Added option to configure popup callout animation duration
+- Added option to configure metadata container left padding
