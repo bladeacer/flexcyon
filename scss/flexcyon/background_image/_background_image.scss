@@ -19,7 +19,7 @@ body.theme-dark {
 
     --nav-item-background-hover: transparent;
 
-    .mod-left-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type="undefined"]) {
+    .mod-left-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type*="undefined"]):not([data-type*="calendar"]) {
         background-image: var(--flexcyon-bg-image-sidebar-left-url);
         background-size: var(--flexcyon-bg-image-size);
         background-position: var(--flexcyon-bg-image-position);
@@ -37,7 +37,7 @@ body.theme-dark {
         }
     }
 
-    .mod-right-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type="undefined"]) {
+    .mod-right-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type*="undefined"]):not([data-type*="calendar"]) {
         background-image: var(--flexcyon-bg-image-sidebar-right-url);
         background-size: var(--flexcyon-bg-image-size);
         background-position: var(--flexcyon-bg-image-position);

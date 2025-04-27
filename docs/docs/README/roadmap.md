@@ -26,3 +26,5 @@ tags:
 
 ### Next version changelog
 - Fixed backdrop-filter applying to graph views, full calendar and backlinks/outgoing links view
+
+- Prevented heading indicators from showing up outside markdown editor instances

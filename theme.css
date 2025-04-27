@@ -220,12 +220,12 @@ body.flexcyon-h6-underline-enabled h6 {
   border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
 }
 
-body.flexcyon-headings-indicator-h1 h1:not(:hover)::before,
-body.flexcyon-headings-indicator-h1 .HyperMD-header-1::before,
-.headings-indicator-all h1:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-1::before,
-.headings-indicator-h1 h1:not(:hover)::before,
-.headings-indicator-h1 .HyperMD-header-1::before {
+body.flexcyon-headings-indicator-h1 .workspace-leaf-content[data-type=markdown] h1:not(:hover)::before,
+body.flexcyon-headings-indicator-h1 .workspace-leaf-content[data-type=markdown] .HyperMD-header-1::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h1:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-1::before,
+.headings-indicator-h1 .workspace-leaf-content[data-type=markdown] h1:not(:hover)::before,
+.headings-indicator-h1 .workspace-leaf-content[data-type=markdown] .HyperMD-header-1::before {
   position: relative;
   content: "h1";
   color: var(--h1-color);
@@ -234,12 +234,12 @@ body.flexcyon-headings-indicator-h1 .HyperMD-header-1::before,
   padding-right: 8px;
 }
 
-body.flexcyon-headings-indicator-h2 h2:not(:hover)::before,
-body.flexcyon-headings-indicator-h2 .HyperMD-header-2::before,
-.headings-indicator-all h2:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-2::before,
-.headings-indicator-h2 h2:not(:hover)::before,
-.headings-indicator-h2 .HyperMD-header-2::before {
+body.flexcyon-headings-indicator-h2 .workspace-leaf-content[data-type=markdown] h2:not(:hover)::before,
+body.flexcyon-headings-indicator-h2 .workspace-leaf-content[data-type=markdown] .HyperMD-header-2::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h2:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-2::before,
+.headings-indicator-h2 .workspace-leaf-content[data-type=markdown] h2:not(:hover)::before,
+.headings-indicator-h2 .workspace-leaf-content[data-type=markdown] .HyperMD-header-2::before {
   position: relative;
   content: "h2";
   color: var(--h2-color);
@@ -248,12 +248,12 @@ body.flexcyon-headings-indicator-h2 .HyperMD-header-2::before,
   padding-right: 8px;
 }
 
-body.flexcyon-headings-indicator-h3 h3:not(:hover)::before,
-body.flexcyon-headings-indicator-h3 .HyperMD-header-3::before,
-.headings-indicator-all h3:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-3::before,
-.headings-indicator-h3 h3:not(:hover)::before,
-.headings-indicator-h3 .HyperMD-header-3::before {
+body.flexcyon-headings-indicator-h3 .workspace-leaf-content[data-type=markdown] h3:not(:hover)::before,
+body.flexcyon-headings-indicator-h3 .workspace-leaf-content[data-type=markdown] .HyperMD-header-3::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h3:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-3::before,
+.headings-indicator-h3 .workspace-leaf-content[data-type=markdown] h3:not(:hover)::before,
+.headings-indicator-h3 .workspace-leaf-content[data-type=markdown] .HyperMD-header-3::before {
   position: relative;
   content: "h3";
   color: var(--h3-color);
@@ -262,12 +262,12 @@ body.flexcyon-headings-indicator-h3 .HyperMD-header-3::before,
   padding-right: 8px;
 }
 
-body.flexcyon-headings-indicator-h4 h4:not(:hover)::before,
-body.flexcyon-headings-indicator-h4 .HyperMD-header-4::before,
-.headings-indicator-all h4:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-4::before,
-.headings-indicator-h4 h4:not(:hover)::before,
-.headings-indicator-h4 .HyperMD-header-4::before {
+body.flexcyon-headings-indicator-h4 .workspace-leaf-content[data-type=markdown] h4:not(:hover)::before,
+body.flexcyon-headings-indicator-h4 .workspace-leaf-content[data-type=markdown] .HyperMD-header-4::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h4:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-4::before,
+.headings-indicator-h4 .workspace-leaf-content[data-type=markdown] h4:not(:hover)::before,
+.headings-indicator-h4 .workspace-leaf-content[data-type=markdown] .HyperMD-header-4::before {
   position: relative;
   content: "h4";
   color: var(--h4-color);
@@ -276,27 +276,26 @@ body.flexcyon-headings-indicator-h4 .HyperMD-header-4::before,
   padding-right: 8px;
 }
 
-body.flexcyon-headings-indicator-h5 h5:not(:hover)::before,
-body.flexcyon-headings-indicator-h5 .HyperMD-header-5::before,
-.headings-indicator-all h5:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-5::before,
-.headings-indicator-h5 h5:not(:hover)::before,
-.headings-indicator-h5 .HyperMD-header-5::before {
+body.flexcyon-headings-indicator-h5 .workspace-leaf-content[data-type=markdown] h5:not(:hover)::before,
+body.flexcyon-headings-indicator-h5 .workspace-leaf-content[data-type=markdown] .HyperMD-header-5::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h5:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-5::before,
+.headings-indicator-h5 .workspace-leaf-content[data-type=markdown] h5:not(:hover)::before,
+.headings-indicator-h5 .workspace-leaf-content[data-type=markdown] .HyperMD-header-5::before {
   position: relative;
   content: "h5";
-  color: var(--text-faint);
   color: var(--h5-color);
   opacity: calc(var(--dimmed) + 0.25);
   font-size: var(--font-ui-medium);
   padding-right: 8px;
 }
 
-body.flexcyon-headings-indicator-h6 h6:not(:hover)::before,
-body.flexcyon-headings-indicator-h6 .HyperMD-header-6::before,
-.headings-indicator-all h6:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-6::before,
-.headings-indicator-h6 h6:not(:hover)::before,
-.headings-indicator-h6 .HyperMD-header-6::before {
+body.flexcyon-headings-indicator-h6 .workspace-leaf-content[data-type=markdown] h6:not(:hover)::before,
+body.flexcyon-headings-indicator-h6 .workspace-leaf-content[data-type=markdown] .HyperMD-header-6::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] h6:not(:hover)::before,
+.headings-indicator-all .workspace-leaf-content[data-type=markdown] .HyperMD-header-6::before,
+.headings-indicator-h6 .workspace-leaf-content[data-type=markdown] h6:not(:hover)::before,
+.headings-indicator-h6 .workspace-leaf-content[data-type=markdown] .HyperMD-header-6::before {
   position: relative;
   content: "h6";
   color: var(--h6-color);
@@ -6038,31 +6037,31 @@ body.theme-dark {
   --flexcyon-modal-image-position: center;
   --nav-item-background-hover: transparent;
 }
-body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) {
   background-image: var(--flexcyon-bg-image-sidebar-left-url);
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 }
-body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) * {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
 }
-body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) div.oz-nav-buttons-right-block {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) div.oz-nav-buttons-right-block {
   backdrop-filter: none;
 }
-body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) .tree-item-self.is-clickable:hover {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) .tree-item-self.is-clickable:hover {
   background-color: var(--nav-item-background-hover);
 }
-body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) {
   background-image: var(--flexcyon-bg-image-sidebar-right-url);
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 }
-body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) * {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
 }
-body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) div.oz-nav-buttons-right-block {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type*=undefined]):not([data-type*=calendar]) div.oz-nav-buttons-right-block {
   backdrop-filter: none;
 }
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
