@@ -1068,12 +1068,12 @@ div.callout[data-callout-metadata*=bg-grid] .callout-content *,
   background-image: none;
 }
 
-body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content *,
-body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content * {
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content:not([data-type=graph]) *,
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * {
   background-image: repeating-linear-gradient(var(--flexcyon-editor-bg-rotation), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
-body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content * *,
-body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content * * {
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * *,
+body.theme-dark.flexcyon-sidebar-bg-grid div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * * {
   background-image: none;
 }
 
@@ -1092,28 +1092,28 @@ div.callout[data-callout-metadata*=bg-dots] .callout-content *,
   background-image: none;
 }
 
-body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content *,
-body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content * {
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content:not([data-type=graph]) *,
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * {
   background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
   background-repeat: repeat;
   background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 }
-body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content * *,
-body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content * * {
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * *,
+body.theme-dark.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * * {
   background-image: none;
 }
 
-body.flexcyon-editor-rhombus .canvas-background,
-body.flexcyon-editor-rhombus .kanban-plugin div,
-div.callout[data-callout-metadata*=bg-rhombus] .callout-content,
-.editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
-  background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
-}
 body.flexcyon-editor-rhombus .canvas-background .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div .canvas-background,
 div.callout[data-callout-metadata*=bg-rhombus] .callout-content .canvas-background,
 .editor-rhombus .canvas-background, body.flexcyon-editor-rhombus .view-content [class*=markdown-] .canvas-background {
   display: none;
+}
+body.flexcyon-editor-rhombus .canvas-background,
+body.flexcyon-editor-rhombus .kanban-plugin div,
+div.callout[data-callout-metadata*=bg-rhombus] .callout-content,
+.editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
+  background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
 body.flexcyon-editor-rhombus .canvas-background *,
 body.flexcyon-editor-rhombus .kanban-plugin div *,
@@ -1122,12 +1122,12 @@ div.callout[data-callout-metadata*=bg-rhombus] .callout-content *,
   background-image: none;
 }
 
-body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content *,
-body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content * {
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content:not([data-type=graph]) *,
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * {
   background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
-body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content * *,
-body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content * * {
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * *,
+body.theme-dark.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * * {
   background-image: none;
 }
 
@@ -6038,31 +6038,31 @@ body.theme-dark {
   --flexcyon-modal-image-position: center;
   --nav-item-background-hover: transparent;
 }
-body.theme-dark .mod-left-split .workspace-leaf-content {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) {
   background-image: var(--flexcyon-bg-image-sidebar-left-url);
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 }
-body.theme-dark .mod-left-split .workspace-leaf-content * {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
 }
-body.theme-dark .mod-left-split .workspace-leaf-content div.oz-nav-buttons-right-block {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) div.oz-nav-buttons-right-block {
   backdrop-filter: none;
 }
-body.theme-dark .mod-left-split .workspace-leaf-content .tree-item-self.is-clickable:hover {
+body.theme-dark .mod-left-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) .tree-item-self.is-clickable:hover {
   background-color: var(--nav-item-background-hover);
 }
-body.theme-dark .mod-right-split .workspace-leaf-content {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) {
   background-image: var(--flexcyon-bg-image-sidebar-right-url);
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 }
-body.theme-dark .mod-right-split .workspace-leaf-content * {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
 }
-body.theme-dark .mod-right-split .workspace-leaf-content div.oz-nav-buttons-right-block {
+body.theme-dark .mod-right-split .workspace-leaf-content:not([data-type*=graph]):not([data-type*=link]):not([data-type=undefined]) div.oz-nav-buttons-right-block {
   backdrop-filter: none;
 }
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {

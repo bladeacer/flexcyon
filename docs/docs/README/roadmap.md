@@ -25,3 +25,4 @@ tags:
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 ### Next version changelog
+- Fixed backdrop-filter applying to graph views, full calendar and backlinks/outgoing links view

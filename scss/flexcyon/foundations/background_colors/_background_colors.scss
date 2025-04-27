@@ -26,18 +26,20 @@ body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
-    background-image:
-        repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
-            var(--flexcyon-editor-bg-color),
-            var(--flexcyon-editor-bg-color) 1px,
-            transparent 1px,
-            transparent var(--flexcyon-editor-bg-width)),
-        repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
-            var(--flexcyon-editor-bg-color),
-            var(--flexcyon-editor-bg-color) 1px,
-            transparent 1px,
-            transparent var(--flexcyon-editor-bg-width));
+    & {
+        background-image:
+            repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
+                var(--flexcyon-editor-bg-color),
+                var(--flexcyon-editor-bg-color) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width)),
+            repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color),
+                var(--flexcyon-editor-bg-color) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width));
 
+    }
     * {
         background-image: none;
     }
@@ -45,19 +47,21 @@ div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 
 
 body.theme-dark.flexcyon-sidebar-bg-grid {
-    div .mod-left-split .workspace-leaf-content *,
-    div .mod-right-split .workspace-leaf-content * {
-        background-image:
-            repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
-                var(--flexcyon-editor-bg-color-2),
-                var(--flexcyon-editor-bg-color-2) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width)),
-            repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color-2),
-                var(--flexcyon-editor-bg-color-2) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width));
+    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
+        & {
+            background-image:
+                repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
+                    var(--flexcyon-editor-bg-color-2),
+                    var(--flexcyon-editor-bg-color-2) 1px,
+                    transparent 1px,
+                    transparent var(--flexcyon-editor-bg-width)),
+                repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
+                    var(--flexcyon-editor-bg-color-2),
+                    var(--flexcyon-editor-bg-color-2) 1px,
+                    transparent 1px,
+                    transparent var(--flexcyon-editor-bg-width));
+        }
 
         * {
             background-image: none;
@@ -79,8 +83,8 @@ div.callout[data-callout-metadata*="bg-dots"] .callout-content,
 }
 
 body.theme-dark.flexcyon-sidebar-bg-dots {
-    div .mod-left-split .workspace-leaf-content *,
-    div .mod-right-split .workspace-leaf-content * {
+    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
         background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
         background-repeat: repeat;
         background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
@@ -98,18 +102,20 @@ div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
     .canvas-background {
         display: none;
     }
-    background-image:
-        repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
-            var(--flexcyon-editor-bg-color),
-            var(--flexcyon-editor-bg-color) 1px,
-            transparent 1px,
-            transparent var(--flexcyon-editor-bg-width)),
-        repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
-            var(--flexcyon-editor-bg-color),
-            var(--flexcyon-editor-bg-color) 1px,
-            transparent 1px,
-            transparent var(--flexcyon-editor-bg-width));
+    & {
+        background-image:
+            repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color),
+                var(--flexcyon-editor-bg-color) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width)),
+            repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
+                var(--flexcyon-editor-bg-color),
+                var(--flexcyon-editor-bg-color) 1px,
+                transparent 1px,
+                transparent var(--flexcyon-editor-bg-width));
 
+    }
     * {
         background-image: none;
     }
@@ -117,19 +123,21 @@ div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
 
 
 body.theme-dark.flexcyon-sidebar-bg-rhombus {
-    div .mod-left-split .workspace-leaf-content *,
-    div .mod-right-split .workspace-leaf-content * {
-        background-image:
-            repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color-2),
-                var(--flexcyon-editor-bg-color-2) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width)),
-            repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color-2),
-                var(--flexcyon-editor-bg-color-2) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width));
+    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
+        & {
+            background-image:
+                repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
+                    var(--flexcyon-editor-bg-color-2),
+                    var(--flexcyon-editor-bg-color-2) 1px,
+                    transparent 1px,
+                    transparent var(--flexcyon-editor-bg-width)),
+                repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
+                    var(--flexcyon-editor-bg-color-2),
+                    var(--flexcyon-editor-bg-color-2) 1px,
+                    transparent 1px,
+                    transparent var(--flexcyon-editor-bg-width));
+        }
 
         * {
             background-image: none;
