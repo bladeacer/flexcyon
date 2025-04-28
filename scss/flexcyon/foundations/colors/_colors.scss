@@ -23,7 +23,9 @@ body:is(.theme-dark) {
     --color-blue-rgb: 90, 143, 205;
     --color-purple-rgb: 164, 97, 200;
     --color-pink-rgb: 212, 88, 163;
-    /* ------------------------------ */
+}
+
+body {
     --color-red: var(--flexcyon-red-salmon);
     --color-orange: var(--flexcyon-orange);
     --color-yellow: var(--flexcyon-yellow);
@@ -118,6 +120,14 @@ body:is(.theme-dark) {
     --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }
 
+// body.theme-light {
+
+// }
+
+// body:is(.theme-light) {
+
+// }
+
 body.flexcyon-easter-egg-mode {
     @container style(--color-red: #030e9f) and style(--color-orange: #030e9f) 
     and style(--color-yellow: #030e9f) and style(--color-green: #030e9f)
@@ -140,4 +150,3 @@ body.flexcyon-easter-egg-mode {
         }
     }
 }
-

@@ -1,30 +1,38 @@
 // The code snippets in this file are derived from the Halcyon theme 
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body:where(.theme-dark) {
-    --table-background: var(--background-primary);
-    --table-header-background-hover: var(--table-background);
-    --table-header-size: larger;
     --table-border-color: #6f768566;
 }
 
-body.theme-dark {
-    --flexcyon-table-reading-mode-width: 100%;
-}
+// body:where(.theme-light) {
 
-body:is(.theme-dark) table:not(.table-view-table) {
-    width: var(--flexcyon-table-reading-mode-width);
-    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width))/ 2);
-}
-
-body:is(.theme-dark) .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
-    border: 1px solid var(--table-header-border-color);
-}
+// }
 
 body.theme-dark {
     --table-header-background: var(--color-base-20);
     --table-row-alt-background: var(--color-base-15);
     --table-column-alt-background: var(--table-background);
     --table-add-button-background: var(--color-base-15);
+}
+
+// body.theme-light {
+
+// }
+
+body {
+    --table-background: var(--background-primary);
+    --table-header-background-hover: var(--table-background);
+    --table-header-size: larger;
+    --flexcyon-table-reading-mode-width: 100%;
+
+    table:not(.table-view-table) {
+        width: var(--flexcyon-table-reading-mode-width);
+        margin-left: calc((100% - var(--flexcyon-table-reading-mode-width))/ 2);
+    }
+
+    .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
+        border: 1px solid var(--table-header-border-color);
+    }
 
     thead tr th {
         background-color: var(--table-column-alt-background);

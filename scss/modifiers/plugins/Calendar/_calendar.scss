@@ -1,25 +1,8 @@
-body.theme-dark {
+body {
     table.calendar {
         thead tr th {
             color: var(--link-color);
             text-transform: capitalize;
-        }
-    }
-
-    @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-        .mod-left-split {
-            .workspace-leaf-content[data-type*="calendar"] * {
-                backdrop-filter: none;
-            }
-        }
-    }
-
-
-    @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-        .mod-right-split {
-            .workspace-leaf-content[data-type*="calendar"] * {
-                backdrop-filter: none;
-            }
         }
     }
 

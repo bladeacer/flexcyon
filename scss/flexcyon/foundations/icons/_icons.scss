@@ -1,7 +1,7 @@
 // The code snippets in this file are derived from the Halcyon theme 
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
-body.theme-dark {
+body {
     --dimmed: 0.55;
     --upsize: 103%;
     --expand: 110%;
@@ -34,6 +34,7 @@ body.theme-dark {
     }
 
 }
+
 body.flexcyon-workspace-card-layout {
     .community-modal-info-name {
         border: 2px solid var(--text-faint);
@@ -75,9 +76,6 @@ body.flexcyon-workspace-card-layout {
     .community-modal-readme {
         margin-top: 32px;
     }
-    // .community-modal-info {
-    //     border: 2px solid rgba(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
-    // }
 }
 
 body:not(.is-phone) .community-item.is-selected,
@@ -163,7 +161,7 @@ body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
     display: none;
 }
 
-body:where(.theme-dark) {
+body {
     --icon-stroke: 2px;
     --icon-color-active: var(--interactive-accent);
     --icon-color-focused: var(--interactive-accent);
@@ -293,7 +291,7 @@ body.flexcyon-titlebar-button-effects {
     }
 }
 
-body.is-mobile.theme-dark .vertical-tab-content {
+body.is-mobile .vertical-tab-content {
     background-color: var(--color-base-05);
 }
 

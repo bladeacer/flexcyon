@@ -1,6 +1,6 @@
 /* Modifications for alternate file tree plugin */
 
-body:where(.theme-dark) {
+body {
     div.oz-folder-name {
         opacity: var(--dimmed);
     }
@@ -86,13 +86,8 @@ body.flexcyon-oz-alternate-folder-count {
                     content: "Count: ";
                 }
             }
-
         }
     }
-
-
-
-
 }
 
 body.flexcyon-oz-folder-icons-disabled {
@@ -155,7 +150,6 @@ div.oz-nav-file.is-active, div.oz-nav-file.is-active div.oz-nav-file-title, div.
     font-weight: bold;
 }
 
-// TODO: Fix this color, lower base color?
 .drag-entered, .oz-folder-element:hover, .oz-nav-file:hover {
     background-color: var(--nav-item-background-hover);
     color: var(--text-normal);

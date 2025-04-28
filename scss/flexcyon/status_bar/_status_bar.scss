@@ -1,4 +1,4 @@
-body.theme-dark {
+body {
   --status-bar-font-size: 12.5px;
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
@@ -20,7 +20,6 @@ body.theme-dark {
 }
 
 body.flexcyon-status-text-enable-color {
-
   .plugin-editor-status[aria-label="Reading"]::before {
     color: var(--text-accent);
   }
@@ -38,7 +37,6 @@ body.flexcyon-status-text-enable-color {
 body.flexcyon-status-text-mode {
 
   .plugin-editor-status {
-
     .status-bar-item-icon {
       & svg {
         display: none;
@@ -48,7 +46,6 @@ body.flexcyon-status-text-mode {
     &::before {
       font-weight: bold;
     }
-
   }
 
   .plugin-editor-status[aria-label="Reading"]::before {

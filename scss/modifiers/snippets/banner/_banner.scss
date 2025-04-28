@@ -1,15 +1,18 @@
-/* Modifications for note gallery plugin with banner snippet*/
-body:where(.theme-dark) div.card-content-container img[alt=banner] {
-    display: none;
-}
-
-body:where(.theme-dark) .popover .banner img[alt=banner]{
-    display: none;
-}
-
 /* Modifications for banner snippet */
-body:where(.theme-dark) .banner img[alt='banner'] {
-    padding: 1px;
-    border-radius: 0px 0px 10px 10px;
-    z-index: 0;
+body  {
+    div.card-content-container img[alt=banner] {
+        display: none;
+    }
+    
+
+    .popover .banner img[alt=banner]{
+        display: none;
+    }
+
+
+    .banner img[alt='banner'] {
+        padding: 1px;
+        border-radius: 0px 0px 10px 10px;
+        z-index: 0;
+    }
 }

@@ -1,6 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme 
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
-body:where(.theme-dark) {
+body {
   --prompt-border-color: var(--flexcyon-base-blue-02-03-mix);
   --search-clear-button-color: var(--flexcyon-red-salmon);
   --search-icon-color: var(--flexcyon-accent);

@@ -9,7 +9,11 @@ body.theme-dark {
     --flexcyon-accent-l: 57.5%;
 }
 
-body:is(.theme-dark) {
+// body.theme-light {
+
+// }
+
+body {
     --accent-h: var(--flexcyon-accent-h);
     --accent-s: var(--flexcyon-accent-s);
     --accent-l: var(--flexcyon-accent-l);

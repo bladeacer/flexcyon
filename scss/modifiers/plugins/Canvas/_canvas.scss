@@ -1,12 +1,6 @@
-body.theme-dark {
+body {
     --color-accent: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--dimmed));
     --flexcyon-canvas-blur-intensity: 1px;
-    // --canvas-color-1: 192, 58, 71;
-    // --canvas-color-2: 194, 158, 66;
-    // --canvas-color-3: 161, 192, 92;
-    // --canvas-color-4: 212, 88, 163;
-    // --canvas-color-5: 60, 185, 194;
-    // --canvas-color-6: 90, 143, 205;
 }
 
 .canvas-background {
@@ -38,48 +32,3 @@ body.flexcyon-canvas-blur-inactive-nodes {
         filter: blur(var(--flexcyon-canvas-blur-intensity));
     }
 }
-
-// Add options to style card menu alignment etc in style settings
-//   - id: canvas-color
-//     title: Canvas node color
-//     type: variable-color
-//     format: rgb-values
-//     opacity: false
-//     default: 136, 136, 136
-
-//   - id: canvas-color-1
-//     title: Canvas color 1
-//     type: variable-color
-//     format: rgb-values
-//     opacity: false
-//     default: 192, 58, 71
-//   - title: Canvas color 2
-//     id: canvas-color-2
-//     type: variable-color
-//     opacity: false
-//     format: rgb-values
-//     default: 194, 158, 66
-//   - title: Canvas color 3
-//     id: canvas-color-3
-//     type: variable-color
-//     opacity: false
-//     format: rgb-values
-//     default: 161, 192, 92
-//   - title: Canvas color 4
-//     id: canvas-color-4
-//     type: variable-color
-//     opacity: false
-//     format: rgb-values
-//     default: 212, 88, 143
-//   - title: Canvas color 5
-//     id: canvas-color-5
-//     type: variable-color
-//     opacity: false
-//     format: rgb-values
-//     default: 60, 185, 194
-//   - title: Canvas color 6
-//     id: canvas-color-6
-//     type: variable-color
-//     opacity: false
-//     format: rgb-values
-//     default: 90, 143, 205

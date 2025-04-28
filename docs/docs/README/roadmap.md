@@ -9,7 +9,7 @@ tags:
 ### Style Settings and stuff
 > Add more CSS classes
 
-- Light theme color theme flexoki + velocity
+- Light theme color theme flexoki + velocity + origami
 
 ### Plugins/snippets
 - Support more plugins
@@ -25,6 +25,8 @@ tags:
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 ### Next version changelog
-- Fixed backdrop-filter applying to graph views, full calendar and backlinks/outgoing links view
+- Fixed backdrop-filter applying to graph views, full calendar and backlinks/outjcgoing links view
 
 - Prevented heading indicators from showing up outside markdown editor instances
+
+- Minor codebase refactor

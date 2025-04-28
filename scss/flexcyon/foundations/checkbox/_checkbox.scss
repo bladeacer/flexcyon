@@ -1,13 +1,12 @@
 // The code snippets in this file are derived from the Halcyon theme 
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
-body:is(.theme-dark) {
+body {
   --checkbox-color: var(--flexcyon-purple-lilac);
   --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
   --checkbox-border-color: var(--flexcyon-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
-}
+  --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 
-body:where(.theme-dark) {
   .checkbox-container {
     background-color: var(--flexcyon-red-salmon);
   }
@@ -15,10 +14,6 @@ body:where(.theme-dark) {
   .checkbox-container.is-enabled {
     background-color: var(--flexcyon-lime-green);
   }
-}
-
-body.theme-dark {
-  --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 }
 
 @mixin flexcyon-ascii-checkbox($data-task, $color) {

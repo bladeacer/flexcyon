@@ -1,4 +1,4 @@
-body.theme-dark {
+body {
     --flexcyon-ascii-max-font-size: 14px;
     --flexcyon-quote-font-size: 24px;
     --flexcyon-ascii-line-height: 1;
@@ -22,7 +22,8 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
     }
 
 }
-body.theme-dark.flexcyon-ascii-enable {
+
+body.flexcyon-ascii-enable {
     div.empty-state-title {
         display: unset;
     }
@@ -48,7 +49,7 @@ body.theme-dark.flexcyon-ascii-enable {
 }
 
 
-body.theme-dark.is-mobile.flexcyon-ascii-enable {
+body.is-mobile.flexcyon-ascii-enable {
     div.empty-state-container::before {
         font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
         margin-bottom: 1rem;
@@ -56,19 +57,19 @@ body.theme-dark.is-mobile.flexcyon-ascii-enable {
     }
 }
 
-body.theme-dark.flexcyon-empty-state-title-disable {
+body.flexcyon-empty-state-title-disable {
     div.empty-state-title {
         display: none;
     }
 }
 
-body.theme-dark.flexcyon-empty-state-actions-disable {
+body.flexcyon-empty-state-actions-disable {
     div.empty-state-action-list {
         display: none;
     }
 }
 
-body.theme-dark.flexcyon-quote-enable {
+body.flexcyon-quote-enable {
     div.empty-state-container::before {
         content: var(--flexcyon-quote-val);
         font-weight: bold;
@@ -89,7 +90,6 @@ body.theme-dark.flexcyon-quote-enable {
         margin-top: 32px;
     }
 }
-
 
 @container style(--flexcyon-top-actions-alignment: right)  {
     body.flexcyon-easter-egg-mode.flexcyon-workspace-card-layout.flexcyon-status-style-angled.flexcyon-headings-coloured-enabled.flexcyon-quote-enable {

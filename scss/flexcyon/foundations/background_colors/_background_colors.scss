@@ -22,6 +22,10 @@ body:is(.theme-dark) {
     --flexcyon-editor-bg-rotation: 0deg;
 }
 
+// body:is(.theme-light) {
+
+// }
+
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
@@ -46,7 +50,7 @@ div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 }
 
 
-body.theme-dark.flexcyon-sidebar-bg-grid {
+body.flexcyon-sidebar-bg-grid {
     div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
     div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
         & {
@@ -82,7 +86,7 @@ div.callout[data-callout-metadata*="bg-dots"] .callout-content,
     }
 }
 
-body.theme-dark.flexcyon-sidebar-bg-dots {
+body.flexcyon-sidebar-bg-dots {
     div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
     div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
         background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
@@ -122,7 +126,7 @@ div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
 }
 
 
-body.theme-dark.flexcyon-sidebar-bg-rhombus {
+body.flexcyon-sidebar-bg-rhombus {
     div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
     div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
         & {

@@ -1,6 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme 
  // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
-body:where(.theme-dark) {
+body {
     --list-marker-color: var(--flexcyon-purple-lilac);
     --list-marker-color-hover: var(--flexcyon-palette-lilac-hover);
     --list-marker-color-collapsed: var(--flexcyon-lime-green);

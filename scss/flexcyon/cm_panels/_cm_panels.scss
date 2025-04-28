@@ -159,7 +159,7 @@ body.flexcyon-status-style-angled {
 
 }
 
-body.theme-dark.flexcyon-status-style-card {
+body.flexcyon-status-style-card {
   .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
   .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     border-radius: 16px;

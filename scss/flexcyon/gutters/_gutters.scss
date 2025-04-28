@@ -1,8 +1,17 @@
-body:where(.theme-dark) {
+body {
     .cm-gutterElement.cm-active {
-        /* Active line changes colour */
-        color: rgba(var(--color-green-rgb), 60%);
         font-weight: 900;
         font-size: var(--font-ui-small);
     }
 }
+
+body:where(.theme-dark) {
+    .cm-gutterElement.cm-active {
+        /* Active line changes colour */
+        color: rgba(var(--color-green-rgb), 60%);
+    }
+}
+
+// body:where(.theme-light) {
+
+// }

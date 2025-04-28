@@ -1,4 +1,4 @@
-body.theme-dark {
+body {
     image-rendering: auto;
     --flexcyon-bg-image-sidebar-left-url: url("");
     --flexcyon-bg-image-sidebar-right-url: url("");
@@ -19,7 +19,7 @@ body.theme-dark {
 
     --nav-item-background-hover: transparent;
 
-    .mod-left-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type*="undefined"]):not([data-type*="calendar"]) {
+    .mod-left-split .workspace-leaf-content {
         background-image: var(--flexcyon-bg-image-sidebar-left-url);
         background-size: var(--flexcyon-bg-image-size);
         background-position: var(--flexcyon-bg-image-position);
@@ -37,7 +37,21 @@ body.theme-dark {
         }
     }
 
-    .mod-right-split .workspace-leaf-content:not([data-type*="graph"]):not([data-type*="link"]):not([data-type*="undefined"]):not([data-type*="calendar"]) {
+
+    .mod-left-split .workspace-leaf-content:is(
+        [data-type*="graph"],
+        [data-type*="link"], 
+        [data-type*="undefined"], 
+        [data-type*="calendar"]
+        ) {
+        background-image: none;
+
+        * {
+            backdrop-filter: none;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content {
         background-image: var(--flexcyon-bg-image-sidebar-right-url);
         background-size: var(--flexcyon-bg-image-size);
         background-position: var(--flexcyon-bg-image-position);
@@ -48,6 +62,19 @@ body.theme-dark {
         }
 
         div.oz-nav-buttons-right-block {
+            backdrop-filter: none;
+        }
+    }
+
+    .mod-right-split .workspace-leaf-content:is(
+        [data-type*="graph"],
+        [data-type*="link"], 
+        [data-type*="undefined"], 
+        [data-type*="calendar"]
+        ) {
+        background-image: none;
+
+        * {
             backdrop-filter: none;
         }
     }

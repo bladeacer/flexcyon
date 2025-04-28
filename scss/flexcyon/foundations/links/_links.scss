@@ -8,7 +8,11 @@ body.theme-dark {
     --flexcyon-external-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-external-link-color), var(--flexcyon-base-grey-dark));
 }
 
-body:where(.theme-dark) {
+// body.theme-light {
+
+// }
+
+body {
     --link-color: var(--flexcyon-link-color);
     --link-color-hover: var(--flexcyon-link-hover);
 

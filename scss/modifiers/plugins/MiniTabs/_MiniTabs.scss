@@ -1,6 +1,5 @@
 /* Modificatiions for MiniTabs plugin */
-
-body:where(.theme-dark) {
+body {
     div.TabsCodeBlock.TabsCodeBlock-buns {
         border-radius: unset;
         background-color: var(--color-base-20);
