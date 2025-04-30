@@ -147,9 +147,9 @@ body:is(.theme-dark) {
 
 body.theme-dark {
   --flexcyon-accent: #92a871;
-  --flexcyon-accent-h: 107.5;
-  --flexcyon-accent-s: 74.5%;
-  --flexcyon-accent-l: 57.5%;
+  --flexcyon-accent-h: 105.5;
+  --flexcyon-accent-s: 77.5%;
+  --flexcyon-accent-l: 59.5%;
 }
 
 body {
@@ -5978,8 +5978,8 @@ body {
   --flexcyon-bg-image-sidebar-right-url: url("");
   --flexcyon-bg-image-blend-mode: darken;
   --flexcyon-bg-image-repeat: no-repeat;
-  --flexcyon-bg-image-blur: 1px;
-  --flexcyon-bg-image-brightness: 55%;
+  --flexcyon-bg-image-blur: 0px;
+  --flexcyon-bg-image-brightness: 100%;
   --flexcyon-bg-image-size: contain;
   --flexcyon-bg-image-position: center;
   --flexcyon-modal-bg-url: url("");
@@ -5996,6 +5996,7 @@ body .mod-left-split .workspace-leaf-content {
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+  background-color: var(--color-base-05);
 }
 body .mod-left-split .workspace-leaf-content * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
@@ -6006,40 +6007,17 @@ body .mod-left-split .workspace-leaf-content div.oz-nav-buttons-right-block {
 body .mod-left-split .workspace-leaf-content .tree-item-self.is-clickable:hover {
   background-color: var(--nav-item-background-hover);
 }
-body .mod-left-split .workspace-leaf-content:is([data-type*=graph],
-[data-type*=link],
-[data-type*=undefined],
-[data-type*=calendar]) {
-  background-image: none;
-}
-body .mod-left-split .workspace-leaf-content:is([data-type*=graph],
-[data-type*=link],
-[data-type*=undefined],
-[data-type*=calendar]) * {
-  backdrop-filter: none;
-}
 body .mod-right-split .workspace-leaf-content {
   background-image: var(--flexcyon-bg-image-sidebar-right-url);
   background-size: var(--flexcyon-bg-image-size);
   background-position: var(--flexcyon-bg-image-position);
   background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+  background-color: var(--color-base-05);
 }
 body .mod-right-split .workspace-leaf-content * {
   backdrop-filter: brightness(var(--flexcyon-bg-image-brightness)) blur(var(--flexcyon-bg-image-blur));
 }
 body .mod-right-split .workspace-leaf-content div.oz-nav-buttons-right-block {
-  backdrop-filter: none;
-}
-body .mod-right-split .workspace-leaf-content:is([data-type*=graph],
-[data-type*=link],
-[data-type*=undefined],
-[data-type*=calendar]) {
-  background-image: none;
-}
-body .mod-right-split .workspace-leaf-content:is([data-type*=graph],
-[data-type*=link],
-[data-type*=undefined],
-[data-type*=calendar]) * {
   backdrop-filter: none;
 }
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
@@ -6273,7 +6251,7 @@ body [id=calendar-container] {
   scale: 105%;
 }
 body [id=calendar-container] * {
-  font-size: var(--font-ui-small);
+  font-size: var(--font-ui-medium);
 }
 body h3.title span.year {
   color: var(--color-text-title);

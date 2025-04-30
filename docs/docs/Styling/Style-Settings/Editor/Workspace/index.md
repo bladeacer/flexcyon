@@ -5,7 +5,7 @@ icon: material/layers-triple-outline
 
 Defines file line width when readable line length is enabled, opacity of dimmed UI elements, upscale percentage of icons used in effects
 
-Accepted Formats: x.y, px, vw, vh
+Accepted Formats: x.y, rem
 
 ## Navigation
 ```md
@@ -25,7 +25,7 @@ Style Settings
 ### File line width
 CSS Variable(s) targeted: `var(--file-line-width)`
 
-Default: true (class toggle)
+Default: 50 (rem)
 
 ### Opacity of dimmed elements
 CSS Variable(s) targeted: `var(--dimmed)`

@@ -201,11 +201,13 @@ Default: no-repeat
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-blur)`
 
 Default: 1px
+> Will be changed to 0px next update
 
 #### Sidebar Background image brightness
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-brightness)`
 
 Default: 55%
+> Will be changed to 100% next update
 
 #### Sidebar Background image size
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-size)`
