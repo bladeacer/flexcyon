@@ -45,7 +45,7 @@ theme:
     - navigation.tabs.sticky
     - toc.follow
     - content.action.view
-    - content.code.cojy
+    - content.code.copy
   markdown_extensions:
     - attr_list
     - toc:
