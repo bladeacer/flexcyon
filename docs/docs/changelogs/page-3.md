@@ -87,3 +87,10 @@ icon: material/numeric-3-box-outline
   - Heading indicators now better inherit from the heading's base color
 - Added option to configure popup callout animation duration
 - Added option to configure metadata container left padding
+
+### Version 0.3.6 Canvas Menu Update
+- Fixed sidebar background issues
+- Prevented heading indicators from showing up outside markdown editor instances
+- Minor codebase refactor
+- Slight change in accent color
+- Added canvas card menu alignment options (plenty of options)

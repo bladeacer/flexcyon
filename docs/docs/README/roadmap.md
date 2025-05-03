@@ -25,10 +25,3 @@ tags:
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 ### Next version changelog
-- Fixed sidebar background issues
-
-- Prevented heading indicators from showing up outside markdown editor instances
-
-- Minor codebase refactor
-
-- Slight change in accent color

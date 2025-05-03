@@ -41,7 +41,7 @@ CSS Variable(s) targeted: `var(--prompt-max-height)`
 Default: 70 (vh)
 
 ### Prompt alignment
-CSS Variable(s) targeted: `var(--flexcyon-prompt-align-bottom-left), var(--flexcyon-prompt-align-bottom-center), var(--flexcyon-prompt-align-center-left), var(--flexcyon-prompt-align-top-left), var(--flexcyon-prompt-align-top-center)`
+CSS Classe(s) targeted: `.flexcyon-prompt-align-bottom-left, .flexcyon-prompt-align-bottom-center, .flexcyon-prompt-align-center-left, .flexcyon-prompt-align-top-left, .flexcyon-prompt-align-top-center`
 
 Default: none (class select)
 Options:

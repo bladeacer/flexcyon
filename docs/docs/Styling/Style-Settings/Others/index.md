@@ -56,7 +56,7 @@ Customize the apperance of new empty tabs
 Accepted Formats: px
 
 #### Add before empty state title
-CSS Variable(s) targeted: `var(--flexcyon-ascii-enable), var(--flexcyon-quote-enable)`
+CSS Classe(s) targeted: `.flexcyon-ascii-enable, .flexcyon-quote-enable`
 > Changing this may take an app reload/restart to take effect
 
 Default: none (class select)
@@ -164,7 +164,7 @@ Configure background images in the left and right sidebars.
 Accepted Formats: px, %
 
 #### Select background in sidebar
-CSS Variable(s) targeted: `var(--flexcyon-sidebar-bg-dots), var(--flexcyon-sidebar-bg-grid), var(--flexcyon-sidebar-bg-rhombus)`
+CSS Classe(s) targeted: `.flexcyon-sidebar-bg-dots, .flexcyon-sidebar-bg-grid, flexcyon-sidebar-bg-rhombus`
 > Overrides background image declaration below, configures in both left and right sidebar
 
 Default: none (class select)

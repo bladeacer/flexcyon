@@ -3,7 +3,7 @@ title: README
 icon: material/book-open-blank-variant-outline
 ---
 
-<img src="https://img.shields.io/badge/downloads-700+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+<img src="https://img.shields.io/badge/downloads-800+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
 <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
 </a>
@@ -54,7 +54,11 @@ The Roadmap for this theme can be found [here](https://github.com/bladeacer/flex
 The Changelogs for this theme can be found [here](../changelogs/index.md)
 
 ### Questions, Issues?
-Feel free to talk about it at [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). Alternatively, you can open an issue at this repository.
+Feel free to talk about it at:
+- [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). 
+- [this Obsidian forum topic](https://forum.obsidian.md/t/flexcyon-a-dark-theme-for-obsidian/99869)
+
+Alternatively, you can open an issue at [the repository](https://github.com/bladeacer/flexcyon/issues) or [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) here.
 
 ## Design Principles
 See [here](./page-4.md)

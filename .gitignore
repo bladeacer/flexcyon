@@ -1,3 +1,4 @@
 *.swp
 ./TODO.md
 ./docs/site
+./docs/.venv

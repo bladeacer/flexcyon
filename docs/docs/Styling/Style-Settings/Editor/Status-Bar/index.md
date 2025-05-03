@@ -86,7 +86,7 @@ CSS Variable(s) targeted: `var(--status-bar-font-size)`
 Default: 12.5 (px)
 
 #### Select status bar style
-CSS Variable(s) targeted: `var(--flexcyon-status-style-angled), var(--flexcyon-status-style-card), var(--flexcyon-status-style-pl10k)`
+CSS Classe(s) targeted: `.flexcyon-status-style-angled, .flexcyon-status-style-card, .flexcyon-status-style-pl10k`
 
 Default: none (class select)
 Options:

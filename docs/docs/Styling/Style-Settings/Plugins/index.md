@@ -103,3 +103,35 @@ Used with the previous setting to set the blur intensity of inactive canvas node
 CSS Variable(s) targeted: `var(--flexcyon-canvas-blur-intensity)`
 
 Default: 1 (px)
+
+#### Canvas card menu alignment
+Configure the alignment of the canvas card menu.
+
+CSS Classe(s) targeted: `.flexcyon-canvas-menu-bottom-left, .flexcyon-canvas-menu-bottom-right, .flexcyon-canvas-menu-top-center, .flexcyon-canvas-menu-top-left, .flexcyon-canvas-menu-top-right, .flexcyon-canvas-menu-lcenter-center, .flexcyon-canvas-menu-lcenter-top, .flexcyon-canvas-menu-lcenter-bottom, .flexcyon-canvas-menu-rcenter-center, .flexcyon-canvas-menu-rcenter-top, .flexcyon-canvas-menu-rcenter-bottom, .flexcyon-canvas-menu-recenter-align`
+
+Default: none (class select)
+
+Options:
+- Bottom left
+
+- Bottom right
+
+- Top center
+
+- Top left
+
+- Top right
+
+- Left aligned center
+
+- Left aligned top
+
+- Left aligned bottom
+
+- Right aligned center
+
+- Right aligned top
+
+- Right aligned bottom
+
+- Right aligned center align

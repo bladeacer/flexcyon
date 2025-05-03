@@ -1129,8 +1129,8 @@ body.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:no
   background-image: none;
 }
 
-body {
-  --interactive-normal: color-mix(in hsl shorter hue, var(--background-primary) 75%, transparent);
+body.theme-dark {
+  --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
   --interactive-accent: var(--flexcyon-accent);
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
@@ -5592,6 +5592,48 @@ settings:
     type: variable-number
     default: 1
     format: px
+  - title: Canvas card menu alignment
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Bottom left
+        value: flexcyon-canvas-menu-bottom-left
+      - 
+        label: Bottom right
+        value: flexcyon-canvas-menu-bottom-right
+      - 
+        label: Top center
+        value: flexcyon-canvas-menu-top-center
+      - 
+        label: Top left
+        value: flexcyon-canvas-menu-top-left
+      - 
+        label: Top right
+        value: flexcyon-canvas-menu-top-right
+      -
+        label: Left aligned center
+        value: flexcyon-canvas-menu-lcenter-center
+      -
+        label: Left aligned top
+        value: flexcyon-canvas-menu-lcenter-top
+      -
+        label: Left aligned bottom
+        value: flexcyon-canvas-menu-lcenter-bottom
+      -
+        label: Right aligned center
+        value: flexcyon-canvas-menu-rcenter-center
+      -
+        label: Right aligned top
+        value: flexcyon-canvas-menu-rcenter-top
+      -
+        label: Right aligned bottom
+        value: flexcyon-canvas-menu-rcenter-bottom
+      -
+        label: Right aligned center align
+        value: flexcyon-canvas-menu-rcenter-align
 
   - title: Others
     type: heading
@@ -6405,9 +6447,6 @@ body {
 .canvas-controls {
   top: 24px;
   gap: 8px;
-}
-
-.canvas-controls {
   scale: var(--expand);
 }
 
@@ -6423,6 +6462,81 @@ body {
 body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-edges,
 body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
   filter: blur(var(--flexcyon-canvas-blur-intensity));
+}
+
+body.flexcyon-canvas-menu-bottom-left .canvas-card-menu {
+  left: 1%;
+  transform: none;
+}
+
+body.flexcyon-canvas-menu-bottom-right .canvas-card-menu {
+  left: 89%;
+  transform: none;
+}
+
+body.flexcyon-canvas-menu-top-center .canvas-card-menu {
+  bottom: 94%;
+}
+
+body.flexcyon-canvas-menu-top-left .canvas-card-menu {
+  bottom: 94%;
+  left: 1%;
+  transform: none;
+}
+
+body.flexcyon-canvas-menu-top-right .canvas-card-menu {
+  bottom: 94%;
+  left: 87.5%;
+  transform: none;
+}
+
+body.flexcyon-canvas-menu-lcenter-center .canvas-card-menu {
+  left: 1%;
+  bottom: 50%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-lcenter-top .canvas-card-menu {
+  left: 1%;
+  bottom: 82.5%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-lcenter-bottom .canvas-card-menu {
+  left: 1%;
+  bottom: 2.5%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-rcenter-bottom .canvas-card-menu {
+  left: 96.1%;
+  bottom: 7.5%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-rcenter-align .canvas-card-menu {
+  left: 96.1%;
+  bottom: 40%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-rcenter-center .canvas-card-menu {
+  left: 96.1%;
+  bottom: 40%;
+  transform: none;
+  flex-direction: column;
+}
+
+body.flexcyon-canvas-menu-rcenter-top .canvas-card-menu {
+  left: 96.1%;
+  bottom: 82.5%;
+  transform: none;
+  flex-direction: column;
 }
 
 /* Modifications for banner snippet */

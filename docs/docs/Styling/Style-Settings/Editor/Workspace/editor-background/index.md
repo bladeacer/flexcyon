@@ -25,7 +25,7 @@ Style Settings
 ## Configuration Options
 
 ### Select Background Type
-CSS Variable(s) targeted: `var(--flexcyon-editor-grid), var(--flexcyon-editor-dots), var(--flexcyon-editor-rhombus)`
+CSS Classe(s) targeted: `.flexcyon-editor-grid, .flexcyon-editor-dots, .flexcyon-editor-rhombus`
 
 Default: none (class select)
 Options:

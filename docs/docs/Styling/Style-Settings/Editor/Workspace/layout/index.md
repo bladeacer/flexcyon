@@ -23,7 +23,7 @@ Style Settings
 ## Configuration Options
 
 ### Select workspace layout
-CSS Variable(s) targeted: `var(--flexcyon-workspace-card-layout), var(--flexcyon-workspace-angled-layout), var(--flexcyon-workspace-pl10k-layout)`
+CSS Classe(s) targeted: `.flexcyon-workspace-card-layout, .flexcyon-workspace-angled-layout, .flexcyon-workspace-pl10k-layout`
 
 Default: none (class select)
 

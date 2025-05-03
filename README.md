@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/downloads-700+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/badge/downloads-800+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     </a>
@@ -24,6 +24,8 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 To install this theme via the community store, navigate to  `Settings > Appearance`
 1. Under `Themes`, click Manage
 2. `Type "Flexcyon in the search bar > Select it > Click "Install and Use"`
+
+Installation of [Style Settings](#style-settings) is highly recommended for this theme.
 
 ### Installation via BRAT
 To install this theme via BRAT, navigate to `Settings > Community Plugins > Browse` 
@@ -98,7 +100,11 @@ The Roadmap for this theme can be found [here](https://flexcyon.readthedocs.io/e
 The Changelogs for this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/changelogs/)
 
 #### Questions, Issues?
-Feel free to talk about it at [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). Alternatively, you can open an issue at this repository.
+Feel free to talk about it at:
+- [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357). 
+- [this Obsidian forum topic](https://forum.obsidian.md/t/flexcyon-a-dark-theme-for-obsidian/99869)
+
+Alternatively, you can open an issue at [the repository](https://github.com/bladeacer/flexcyon/issues) or [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) here.
 
 ## Design Principles
 This theme tries to:

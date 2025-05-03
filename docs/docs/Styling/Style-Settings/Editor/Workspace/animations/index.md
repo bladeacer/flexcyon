@@ -26,7 +26,7 @@ Style Settings
 ## Configuration Options
 
 ### Animation type
-CSS Variable(s) targeted: `var(--flexcyon-anims-slide-rtl), var(--flexcyon-anims-slide-ltr), var(--flexcyon-anims-slide-tb), var(--flexcyon-anims-slide-bt), var(--flexcyon-anims-spin-bt), var(--flexcyon-anims-spin-rl)`
+CSS Classe(s) targeted: `.flexcyon-anims-slide-rtl, .flexcyon-anims-slide-ltr, .flexcyon-anims-slide-tb, .flexcyon-anims-slide-bt, .flexcyon-anims-spin-bt, .flexcyon-anims-spin-rl`
 > Changes may need an app reload/restart to take effect
 
 Default: none (class select)

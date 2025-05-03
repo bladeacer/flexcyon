@@ -8,6 +8,13 @@ The changelogs show versions in order of most recent to least recent. Or, if you
 
 ___
 ## Version 0.3.x
+### Version 0.3.6 Canvas Menu Update
+- Fixed sidebar background issues
+- Prevented heading indicators from showing up outside markdown editor instances
+- Minor codebase refactor
+- Slight change in accent color
+- Added canvas card menu alignment options (plenty of options)
+
 ### Version 0.3.5 Configuration Update
 - Documentation now has its own site.
 - Added soft glow option for headings
