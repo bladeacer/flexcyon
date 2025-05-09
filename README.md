@@ -18,7 +18,7 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 
 ![](./docs/docs/assets/screenshots/showcase2.png)
 
-![](./docs/assets/screenshots/showcase3.png)
+![](./docs/docs/assets/screenshots/showcase3.png)
 
 ## Installation via community store (recommended)
 To install this theme via the community store, navigate to  `Settings > Appearance`

@@ -5,7 +5,7 @@ body {
     --flexcyon-bg-image-blend-mode: darken;
     --flexcyon-bg-image-repeat: no-repeat;
     --flexcyon-bg-image-blur: 0px;
-    --flexcyon-bg-image-brightness: 100%;
+    --flexcyon-bg-image-brightness: unset;
     --flexcyon-bg-image-size: contain;
     --flexcyon-bg-image-position: center;
 
@@ -13,7 +13,7 @@ body {
     --flexcyon-modal-image-blend-mode: lighten;
     --flexcyon-modal-image-repeat: no-repeat;
     --flexcyon-modal-image-blur: 1px;
-    --flexcyon-modal-image-brightness: 55%;
+    --flexcyon-modal-image-brightness: unset;
     --flexcyon-modal-image-size: cover;
     --flexcyon-modal-image-position: center;
 

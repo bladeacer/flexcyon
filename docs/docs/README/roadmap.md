@@ -9,7 +9,9 @@ tags:
 ### Style Settings and stuff
 > Add more CSS classes
 
-- Light theme color theme flexoki + velocity + origami
+- Light theme color theme flexoki + velocity + origami (currently being worked on)
+
+- Remove Easter Egg mode
 
 ### Plugins/snippets
 - Support more plugins
@@ -25,3 +27,4 @@ tags:
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
 
 ### Next version changelog
+- Changed sidebar background brighteness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.

@@ -5834,7 +5834,7 @@ settings:
   - title: Sidebar Background image brightness
     id: flexcyon-bg-image-brightness
     type: variable-text
-    default: 55%
+    default: unset
   - title: Sidebar Background image size
     id: flexcyon-bg-image-size
     type: variable-text
@@ -5869,7 +5869,7 @@ settings:
   - title: Modal Background image brightness
     id: flexcyon-modal-image-brightness
     type: variable-text
-    default: 55%
+    default: unset
   - title: Modal Background image size
     id: flexcyon-modal-image-size
     type: variable-text
@@ -6021,14 +6021,14 @@ body {
   --flexcyon-bg-image-blend-mode: darken;
   --flexcyon-bg-image-repeat: no-repeat;
   --flexcyon-bg-image-blur: 0px;
-  --flexcyon-bg-image-brightness: 100%;
+  --flexcyon-bg-image-brightness: unset;
   --flexcyon-bg-image-size: contain;
   --flexcyon-bg-image-position: center;
   --flexcyon-modal-bg-url: url("");
   --flexcyon-modal-image-blend-mode: lighten;
   --flexcyon-modal-image-repeat: no-repeat;
   --flexcyon-modal-image-blur: 1px;
-  --flexcyon-modal-image-brightness: 55%;
+  --flexcyon-modal-image-brightness: unset;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
   --nav-item-background-hover: transparent;

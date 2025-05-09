@@ -206,8 +206,8 @@ Default: 1px
 #### Sidebar Background image brightness
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-brightness)`
 
-Default: 55%
-> Will be changed to 100% next update
+Default: unset
+> Accepts percentage values like 55%
 
 #### Sidebar Background image size
 CSS Variable(s) targeted: `var(--flexcyon-bg-image-size)`
@@ -250,7 +250,8 @@ Default: 1px
 #### Modal Background image brightness
 CSS Variable(s) targeted: `var(--flexcyon-bg-modal-brightness)`
 
-Default: 55%
+Default: unset
+> Accepts percentage values like 55%
 
 #### Modal background image size
 CSS Variable(s) targeted: `var(--flexcyon-modal-image-size)`
