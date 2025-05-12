@@ -23,27 +23,27 @@ Style Settings
 ## Configuration Options
 
 ### Base Color 01
-CSS Variable(s) targeted: `var(--flexcyon-base-blue-01)`
+CSS Variable(s) targeted: `var(--flexcyon-base-01)`
 
 Default: #14161c
 
 ### Base Color 02
-CSS Variable(s) targeted: `var(--flexcyon-base-blue-02)`
+CSS Variable(s) targeted: `var(--flexcyon-base-02)`
 
 Default: #191d28
 
 ### Base Color 03
-CSS Variable(s) targeted: `var(--flexcyon-base-blue-03)`
+CSS Variable(s) targeted: `var(--flexcyon-base-03)`
 
 Default: #24262c
 
 ### Base Color 04
-CSS Variable(s) targeted: `var(--flexcyon-base-blue-04)`
+CSS Variable(s) targeted: `var(--flexcyon-base-04)`
 
 Default: #4d566b
 
 ### Base Color 05
-CSS Variable(s) targeted: `var(--flexcyon-base-blue-05)`
+CSS Variable(s) targeted: `var(--flexcyon-base-05)`
 
 Default: #6f7685
 

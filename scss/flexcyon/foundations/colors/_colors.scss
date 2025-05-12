@@ -1,5 +1,5 @@
 // The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 // A huge shout out too to kepano's flexoki color scheme
 // - https://github.com/kepano/flexoki-obsidian
 body.theme-dark {
@@ -14,7 +14,6 @@ body.theme-dark {
 }
 
 body:is(.theme-dark) {
-    /* ------------------------------ */
     --color-red-rgb: 192, 58, 71;
     --color-orange-rgb: 204, 132, 73;
     --color-yellow-rgb: 194, 158, 66;
@@ -23,6 +22,28 @@ body:is(.theme-dark) {
     --color-blue-rgb: 90, 143, 205;
     --color-purple-rgb: 164, 97, 200;
     --color-pink-rgb: 212, 88, 163;
+}
+
+body.theme-light {
+    --flexcyon-red-salmon: #eb5325;
+    --flexcyon-orange: #ed8126;
+    --flexcyon-yellow: #e8c62a;
+    --flexcyon-lime-green: #689523;
+    --flexcyon-cyan: #3b9ba1;
+    --flexcyon-blue: #5c9fe4;
+    --flexcyon-purple-lilac: #6f49ae;
+    --flexcyon-pink: #e389ca;
+}
+
+body:is(.theme-light) {
+    --color-red-rgb: 235, 83, 87;
+    --color-orange-rgb: 237, 129, 38;
+    --color-yellow-rgb: 232. 198, 42;
+    --color-green-rgb: 104, 149, 35;
+    --color-cyan-rgb: 59, 155, 161;
+    --color-blue-rgb: 92, 159, 228;
+    --color-purple-rgb: 111, 73, 174;
+    --color-pink-rgb: 227, 137, 202;
 }
 
 body {
@@ -120,19 +141,8 @@ body {
     --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }
 
-// body.theme-light {
-
-// }
-
-// body:is(.theme-light) {
-
-// }
-
 body.flexcyon-easter-egg-mode {
-    @container style(--color-red: #030e9f) and style(--color-orange: #030e9f) 
-    and style(--color-yellow: #030e9f) and style(--color-green: #030e9f)
-    and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f)
-    and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
+    @container style(--color-red: #030e9f) and style(--color-orange: #030e9f) and style(--color-yellow: #030e9f) and style(--color-green: #030e9f) and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f) and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
         .app-container::after {
             content: " \a\
             Well Done! Do reset the styles to their default after each challenge \a\

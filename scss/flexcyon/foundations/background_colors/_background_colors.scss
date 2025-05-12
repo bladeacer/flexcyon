@@ -4,16 +4,16 @@
 // - https://github.com/kepano/flexoki-obsidian
 body:is(.theme-dark) {
     /* ------------------------------ */
-    --background-primary: var(--flexcyon-base-blue-02);
-    --background-primary-alt: var(--flexcyon-base-blue-03);
-    --background-secondary: var(--flexcyon-base-blue-01);
-    --background-secondary-alt: var(--flexcyon-base-blue-02);
-    --background-modifier-hover: var(--flexcyon-base-blue-03);
-    --background-modifier-active-hover: var(--flexcyon-base-blue-03);
-    --background-modifier-border: var(--flexcyon-base-blue-02-03-mix);
+    --background-primary: var(--flexcyon-base-02);
+    --background-primary-alt: var(--flexcyon-base-03);
+    --background-secondary: var(--flexcyon-base-01);
+    --background-secondary-alt: var(--flexcyon-base-02);
+    --background-modifier-hover: var(--flexcyon-base-03);
+    --background-modifier-active-hover: var(--flexcyon-base-03);
+    --background-modifier-border: var(--flexcyon-base-02-03-mix);
     --background-modifier-border-hover: transparent;
-    --background-modifier-border-focus: var(--flexcyon-base-blue-04);
-    --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
+    --background-modifier-border-focus: var(--flexcyon-base-04);
+    --background-modifier-message: var(--flexcyon-base-02-03-mix);
     --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
     --flexcyon-editor-bg-width: 15px;
     --flexcyon-editor-dot-size: 2.5px;

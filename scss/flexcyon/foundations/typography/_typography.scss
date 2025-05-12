@@ -14,18 +14,21 @@ body {
   --text-faint: var(--flexcyon-text-muted);
 
   --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--flexcyon-base-blue-03);
+  --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
  
   --text-error: var(--flexcyon-red-salmon);
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
   
-  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
-  --text-highlight-bg: var(--flexcyon-base-blue-03);
+  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-04) 20%, transparent);
+  --text-highlight-bg: var(--flexcyon-base-03);
 
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
+
+  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
+  --flexcyon-text-muted: #6f768599;
 
   .cm-em.cm-quote {
     color: var(--italic-color);
@@ -103,12 +106,3 @@ body {
     color: var(--text-normal);
   }
 }
-
-body.theme-dark {
-  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-  --flexcyon-text-muted: #6f768599;
-}
-
-// body.theme-light {
-
-// }

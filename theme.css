@@ -15,7 +15,6 @@ body.theme-dark {
 }
 
 body:is(.theme-dark) {
-  /* ------------------------------ */
   --color-red-rgb: 192, 58, 71;
   --color-orange-rgb: 204, 132, 73;
   --color-yellow-rgb: 194, 158, 66;
@@ -24,6 +23,28 @@ body:is(.theme-dark) {
   --color-blue-rgb: 90, 143, 205;
   --color-purple-rgb: 164, 97, 200;
   --color-pink-rgb: 212, 88, 163;
+}
+
+body.theme-light {
+  --flexcyon-red-salmon: #eb5325;
+  --flexcyon-orange: #ed8126;
+  --flexcyon-yellow: #e8c62a;
+  --flexcyon-lime-green: #689523;
+  --flexcyon-cyan: #3b9ba1;
+  --flexcyon-blue: #5c9fe4;
+  --flexcyon-purple-lilac: #6f49ae;
+  --flexcyon-pink: #e389ca;
+}
+
+body:is(.theme-light) {
+  --color-red-rgb: 235, 83, 87;
+  --color-orange-rgb: 237, 129, 38;
+  --color-yellow-rgb: 232. 198, 42;
+  --color-green-rgb: 104, 149, 35;
+  --color-cyan-rgb: 59, 155, 161;
+  --color-blue-rgb: 92, 159, 228;
+  --color-purple-rgb: 111, 73, 174;
+  --color-pink-rgb: 227, 137, 202;
 }
 
 body {
@@ -93,10 +114,7 @@ body {
   --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
 }
 
-@container style(--color-red: #030e9f) and style(--color-orange: #030e9f)
-    and style(--color-yellow: #030e9f) and style(--color-green: #030e9f)
-    and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f)
-    and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
+@container style(--color-red: #030e9f) and style(--color-orange: #030e9f) and style(--color-yellow: #030e9f) and style(--color-green: #030e9f) and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f) and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
   body.flexcyon-easter-egg-mode .app-container::after {
     content: " \a             Well Done! Do reset the styles to their default after each challenge \a             henceforth or I will not show up again after you complete the next challenge. \a             The hint for the second challenge is: \a             When the stars align, nothing will be left on top.\a             When the cards are drawn, thy fate intertwine.\a             Where angles intersect, and colors divide.\a             Thus I shall end, this quote in time.\a             \a";
     font-size: 1.1rem;
@@ -107,39 +125,46 @@ body {
 }
 
 body.theme-dark {
-  /* ------------------------------ */
-  --flexcyon-base-blue-01: #14161c;
-  --flexcyon-base-blue-02: #191d28;
-  --flexcyon-base-blue-03: #24262c;
-  --flexcyon-base-blue-04: #4d566b;
-  --flexcyon-base-blue-05: #6f7685;
-  /* ------------------------------ */
+  --flexcyon-base-01: #14161c;
+  --flexcyon-base-02: #191d28;
+  --flexcyon-base-03: #24262c;
+  --flexcyon-base-04: #4d566b;
+  --flexcyon-base-05: #6f7685;
   --flexcyon-base-grey-dark: #898c93;
   --flexcyon-base-grey-light: #d3d5d3;
+}
+
+body.theme-light {
+  --flexcyon-base-01: #faf7ef;
+  --flexcyon-base-02: #edebe5;
+  --flexcyon-base-03: #dddcd6;
+  --flexcyon-base-04: #d3d3ce;
+  --flexcyon-base-05: #b4b3af;
   /* ------------------------------ */
+  --flexcyon-base-grey-dark: #797876;
+  --flexcyon-base-grey-light: #080808;
+}
+
+body:is(.theme-dark, .theme-light) {
   --flexcyon-base-grey-tab: #71777f;
   --flexyon-base-grey-token: #586582;
   --flexcyon-base-grey-scroll: #3f495e;
   --flexcyon-base-grey-scroll-hover: #5c6782;
   /* ------------------------------ */
-  --flexcyon-base-blue-01-02-mix: color-mix(in hsl, var(--flexcyon-base-blue-01), var(--flexcyon-base-blue-02));
-  --flexcyon-base-blue-02-03-mix: color-mix(in hsl, var(--flexcyon-base-blue-02), var(--flexcyon-base-blue-03));
-  --flexcyon-base-blue-03-04-mix: color-mix(in hsl, var(--flexcyon-base-blue-03), var(--flexcyon-base-blue-04));
-  --flexcyon-base-blue-04-05-mix: color-mix(in hsl, var(--flexcyon-base-blue-04), var(--flexcyon-base-blue-05));
+  --flexcyon-base-01-02-mix: color-mix(in hsl, var(--flexcyon-base-01), var(--flexcyon-base-02));
+  --flexcyon-base-02-03-mix: color-mix(in hsl, var(--flexcyon-base-02), var(--flexcyon-base-03));
+  --flexcyon-base-03-04-mix: color-mix(in hsl, var(--flexcyon-base-03), var(--flexcyon-base-04));
+  --flexcyon-base-04-05-mix: color-mix(in hsl, var(--flexcyon-base-04), var(--flexcyon-base-05));
   --flexcyon-base-grey-mix: color-mix(in hsl, var(--flexcyon-base-grey-light), var(--flexcyon-base-grey-dark));
-}
-
-body:is(.theme-dark) {
-  /* ------------------------------ */
-  --color-base-00: var(--flexcyon-base-blue-01);
-  --color-base-05: var(--flexcyon-base-blue-01-02-mix);
-  --color-base-10: var(--flexcyon-base-blue-02);
-  --color-base-20: var(--flexcyon-base-blue-02-03-mix);
-  --color-base-25: var(--flexcyon-base-blue-03);
-  --color-base-30: var(--flexcyon-base-blue-03-04-mix);
-  --color-base-35: var(--flexcyon-base-blue-04);
-  --color-base-40: var(--flexcyon-base-blue-04-05-mix);
-  --color-base-50: var(--flexcyon-base-blue-05);
+  --color-base-00: var(--flexcyon-base-01);
+  --color-base-05: var(--flexcyon-base-01-02-mix);
+  --color-base-10: var(--flexcyon-base-02);
+  --color-base-20: var(--flexcyon-base-02-03-mix);
+  --color-base-25: var(--flexcyon-base-03);
+  --color-base-30: var(--flexcyon-base-03-04-mix);
+  --color-base-35: var(--flexcyon-base-04);
+  --color-base-40: var(--flexcyon-base-04-05-mix);
+  --color-base-50: var(--flexcyon-base-05);
   --color-base-60: var(--flexcyon-base-grey-dark);
   --color-base-70: var(--flexcyon-base-grey-mix);
   --color-base-100: var(--flexcyon-base-grey-light);
@@ -150,6 +175,13 @@ body.theme-dark {
   --flexcyon-accent-h: 105.5;
   --flexcyon-accent-s: 77.5%;
   --flexcyon-accent-l: 59.5%;
+}
+
+body.theme-light {
+  --flexcyon-accent: #5770b9;
+  --accent-h: 225;
+  --accent-s: 41%;
+  --accent-l: 53%;
 }
 
 body {
@@ -319,7 +351,7 @@ body {
   --flexcyon-code-operator: var(--flexcyon-orange);
   --flexcyon-code-error: var(--flexcyon-red-salmon);
   --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
-  --code-background: var(--flexcyon-base-blue-01);
+  --code-background: var(--flexcyon-base-01);
   --code-normal: var(--flexcyon-cyan);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
@@ -342,8 +374,8 @@ body :is(.cm-comment.cm-string, .cm-comment.cm-hmd-internal-link:hover, .cm-comm
 }
 
 body {
-  --tab-text-color: var(--flexcyon-base-blue-05);
-  --tab-text-color-focused: var(--flexcyon-base-blue-05);
+  --tab-text-color: var(--flexcyon-base-05);
+  --tab-text-color-focused: var(--flexcyon-base-05);
   --tab-text-color-active: var(--text-accent);
   --tab-text-color-focused-active: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
@@ -1035,16 +1067,16 @@ body {
 
 body:is(.theme-dark) {
   /* ------------------------------ */
-  --background-primary: var(--flexcyon-base-blue-02);
-  --background-primary-alt: var(--flexcyon-base-blue-03);
-  --background-secondary: var(--flexcyon-base-blue-01);
-  --background-secondary-alt: var(--flexcyon-base-blue-02);
-  --background-modifier-hover: var(--flexcyon-base-blue-03);
-  --background-modifier-active-hover: var(--flexcyon-base-blue-03);
-  --background-modifier-border: var(--flexcyon-base-blue-02-03-mix);
+  --background-primary: var(--flexcyon-base-02);
+  --background-primary-alt: var(--flexcyon-base-03);
+  --background-secondary: var(--flexcyon-base-01);
+  --background-secondary-alt: var(--flexcyon-base-02);
+  --background-modifier-hover: var(--flexcyon-base-03);
+  --background-modifier-active-hover: var(--flexcyon-base-03);
+  --background-modifier-border: var(--flexcyon-base-02-03-mix);
   --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--flexcyon-base-blue-04);
-  --background-modifier-message: var(--flexcyon-base-blue-02-03-mix);
+  --background-modifier-border-focus: var(--flexcyon-base-04);
+  --background-modifier-message: var(--flexcyon-base-02-03-mix);
   --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
@@ -1378,7 +1410,7 @@ body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
 }
 
 body {
-  --graph-line: var(--flexcyon-base-blue-03);
+  --graph-line: var(--flexcyon-base-03);
   --graph-node-unresolved: var(--flexcyon-red-salmon);
   --graph-node-tag: var(--flexcyon-purple-lilac);
 }
@@ -1391,7 +1423,7 @@ body {
   --nav-item-color: var(--text-muted);
   --nav-item-color-active: var(--interactive-accent);
   --nav-item-color-selected: var(--flexcyon-orange);
-  --nav-item-background-selected: var(--flexcyon-base-blue-03);
+  --nav-item-background-selected: var(--flexcyon-base-03);
 }
 
 body {
@@ -1421,7 +1453,7 @@ body {
 }
 
 body {
-  --drag-ghost-background: var(--flexcyon-base-blue-03);
+  --drag-ghost-background: var(--flexcyon-base-03);
   --drag-ghost-text-color: var(--interactive-accent) ;
 }
 
@@ -1466,7 +1498,7 @@ body {
 body .metadata-input-longtext::selection,
 body input::selection,
 body textarea::selection {
-  background-color: var(--flexcyon-base-blue-03-04-mix);
+  background-color: var(--flexcyon-base-03-04-mix);
 }
 
 body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
@@ -1484,15 +1516,17 @@ body {
   --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--flexcyon-base-blue-03);
+  --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
   --text-error: var(--flexcyon-red-salmon);
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
-  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-blue-04) 20%, transparent);
-  --text-highlight-bg: var(--flexcyon-base-blue-03);
+  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-04) 20%, transparent);
+  --text-highlight-bg: var(--flexcyon-base-03);
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
+  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
+  --flexcyon-text-muted: #6f768599;
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
@@ -1552,11 +1586,6 @@ body .markdown-source-view:is(.is-live-preview) mark {
   color: var(--text-normal);
 }
 
-body.theme-dark {
-  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-  --flexcyon-text-muted: #6f768599;
-}
-
 body {
   --radius-s: 2px;
   --radius-m: 4px;
@@ -1565,7 +1594,7 @@ body {
 }
 
 body {
-  --prompt-border-color: var(--flexcyon-base-blue-02-03-mix);
+  --prompt-border-color: var(--flexcyon-base-02-03-mix);
   --search-clear-button-color: var(--flexcyon-red-salmon);
   --search-icon-color: var(--flexcyon-accent);
 }
@@ -4555,7 +4584,7 @@ body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
   --flexcyon-anim-duration: 0.35s;
-  --modal-border-color: var(--flexcyon-base-blue-02)
+  --modal-border-color: var(--flexcyon-base-02)
   --toggle-thumb-color: var(--text-on-accent);
   --file-line-width: 50rem;
   --hr-color: color-mix(in hsl shorter hue, var(--text-faint), var(--background-modifier-border));
@@ -4723,31 +4752,31 @@ settings:
     type: heading
     level: 5
     collapsed: true
-  - id: flexcyon-base-blue-01
+  - id: flexcyon-base-01
     title: Base Color 01
     type: variable-color
     opacity: false
     format: hex
     default: "#14161c"
-  - id: flexcyon-base-blue-02
+  - id: flexcyon-base-02
     title: Base Color 02
     type: variable-color
     opacity: false
     format: hex
     default: "#191d28"
-  - id: flexcyon-base-blue-03
+  - id: flexcyon-base-03
     title: Base Color 03
     type: variable-color
     opacity: false
     format: hex
     default: "#24262c"
-  - id: flexcyon-base-blue-04
+  - id: flexcyon-base-04
     title: Base Color 04
     type: variable-color
     opacity: false
     format: hex
     default: "#4d566b"
-  - id: flexcyon-base-blue-05
+  - id: flexcyon-base-05
     title: Base Color 05
     type: variable-color
     opacity: false
