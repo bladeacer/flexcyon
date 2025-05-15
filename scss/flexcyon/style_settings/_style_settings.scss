@@ -20,90 +20,103 @@ settings:
     collapsed: true
   - id: flexcyon-cyan
     title: Cyan Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#3cb9c2"
+    default-light: "#3b9ba1"
+    default-dark: "#3cb9c2"
     alt-format:
       -
         id: color-cyan-rgb
         format: rgb
   - id: flexcyon-lime-green
     title: Green Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#a1c05c"
+    default-light: "#689523"
+    default-dark: "#a1c05c"
     alt-format:
       -
         id: color-green-rgb
         format: rgb
   - id: flexcyon-orange
     title: Orange Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#cc8449"
+    default-light: "#ed8126"
+    default-dark: "#cc8449"
     alt-format:
       -
         id: color-orange-rgb
         format: rgb
   - id: flexcyon-yellow
     title: Yellow Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#c29e42"
+    default-light: "#e8c62a"
+    default-dark: "#c29e42"
     alt-format:
       -
         id: color-yellow-rgb
         format: rgb
   - id: flexcyon-purple-lilac
     title: Purple Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
+    default-light: "#6f49ae"
+    default-dark: "#a461c8"
     alt-format:
       -
         id: color-purple-rgb
         format: rgb
-    default: "#a461c8"
   - id: flexcyon-red-salmon
     title: Red Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#c03a47"
+    default-light: "#eb5325"
+    default-dark: "#c03a47"
     alt-format:
       -
         id: color-red-rgb
         format: rgb
   - id: flexcyon-blue
     title: Blue Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#5a8fcd"
+    default-light: "5c9fe4"
+    default-dark: "#5a8fcd"
     alt-format:
       -
         id: color-blue-rgb
         format: rgb
   - id: flexcyon-pink
     title: Pink Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#d458a3"
+    default-light: "#e389ca"
+    default-dark: "#d458a3"
     alt-format:
       -
         id: color-pink-rgb
         format: rgb
   - id: flexcyon-accent
     title: Accent Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#92a871"
+    default-light: "#5770b9"
+    default-dark: "#92a871"
+  - title: Enable Extended Color Palette
+    id: flexcyon-ext-colors-enabled
+    type: class-toggle
+    default: true
 
   - title: Base Colors
     type: heading

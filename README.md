@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/downloads-800+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/badge/downloads-900+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     </a>
@@ -25,7 +25,7 @@ To install this theme via the community store, navigate to  `Settings > Appearan
 1. Under `Themes`, click Manage
 2. `Type "Flexcyon in the search bar > Select it > Click "Install and Use"`
 
-Installation of [Style Settings](#style-settings) is highly recommended for this theme.
+Installation of [Style Settings](#style-settings) is highly recommended for this theme, as most customisation and functionality is built around it.
 
 ### Installation via BRAT
 To install this theme via BRAT, navigate to `Settings > Community Plugins > Browse` 

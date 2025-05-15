@@ -2,6 +2,15 @@
  // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 // A huge shout out too to kepano's flexoki color scheme
 // - https://github.com/kepano/flexoki-obsidian
+
+body.theme-dark {
+    --code-background: var(--flexcyon-base-01);
+}
+
+body.theme-light {
+    --code-background: var(--flexcyon-base-01-02-mix);
+}
+
 body {
     /* ------------------------------ */
     --flexcyon-code-variable: var(--flexcyon-base-grey-dark);
@@ -10,7 +19,6 @@ body {
     --flexcyon-code-error: var(--flexcyon-red-salmon);
     --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
 
-    --code-background: var(--flexcyon-base-01);
     --code-normal: var(--flexcyon-cyan);
     --code-comment: var(--text-faint);
     --code-function: var(--flexcyon-code-function);

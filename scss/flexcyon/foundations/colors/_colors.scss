@@ -25,13 +25,13 @@ body:is(.theme-dark) {
 }
 
 body.theme-light {
-    --flexcyon-red-salmon: #eb5325;
+    --flexcyon-cyan: #3b9ba1;
+    --flexcyon-lime-green: #689523;
     --flexcyon-orange: #ed8126;
     --flexcyon-yellow: #e8c62a;
-    --flexcyon-lime-green: #689523;
-    --flexcyon-cyan: #3b9ba1;
-    --flexcyon-blue: #5c9fe4;
     --flexcyon-purple-lilac: #6f49ae;
+    --flexcyon-red-salmon: #eb5325;
+    --flexcyon-blue: #5c9fe4;
     --flexcyon-pink: #e389ca;
 }
 
@@ -55,7 +55,9 @@ body {
     --color-blue: var(--flexcyon-blue);
     --color-purple: var(--flexcyon-purple-lilac);
     --color-pink: var(--flexcyon-pink);
+}
 
+body.flexcyon-ext-colors-enabled {
     --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
     --color-red-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
 

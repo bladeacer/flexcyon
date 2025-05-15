@@ -26,13 +26,13 @@ body:is(.theme-dark) {
 }
 
 body.theme-light {
-  --flexcyon-red-salmon: #eb5325;
+  --flexcyon-cyan: #3b9ba1;
+  --flexcyon-lime-green: #689523;
   --flexcyon-orange: #ed8126;
   --flexcyon-yellow: #e8c62a;
-  --flexcyon-lime-green: #689523;
-  --flexcyon-cyan: #3b9ba1;
-  --flexcyon-blue: #5c9fe4;
   --flexcyon-purple-lilac: #6f49ae;
+  --flexcyon-red-salmon: #eb5325;
+  --flexcyon-blue: #5c9fe4;
   --flexcyon-pink: #e389ca;
 }
 
@@ -56,6 +56,9 @@ body {
   --color-blue: var(--flexcyon-blue);
   --color-purple: var(--flexcyon-purple-lilac);
   --color-pink: var(--flexcyon-pink);
+}
+
+body.flexcyon-ext-colors-enabled {
   --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
   --color-red-blue-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-red), var(--color-blue)) var(--flexcyon-callout-bg-opacity), transparent);
   --color-red-orange-mix: color-mix(in hsl, var(--color-red), var(--color-orange));
@@ -344,6 +347,14 @@ body {
   --flexcyon-palette-cyan-hover: color-mix(in hsl shorter hue, var(--flexcyon-cyan), var(--flexcyon-base-grey-dark));
 }
 
+body.theme-dark {
+  --code-background: var(--flexcyon-base-01);
+}
+
+body.theme-light {
+  --code-background: var(--flexcyon-base-01-02-mix);
+}
+
 body {
   /* ------------------------------ */
   --flexcyon-code-variable: var(--flexcyon-base-grey-dark);
@@ -351,7 +362,6 @@ body {
   --flexcyon-code-operator: var(--flexcyon-orange);
   --flexcyon-code-error: var(--flexcyon-red-salmon);
   --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
-  --code-background: var(--flexcyon-base-01);
   --code-normal: var(--flexcyon-cyan);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
@@ -1434,15 +1444,12 @@ body {
   --titlebar-text-color-focused: var(--text-muted);
 }
 
-body.theme-dark {
-  --flexcyon-link-color: #a461c8;
-  --flexcyon-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-link-color), var(--flexcyon-base-grey-dark));
-  --flexcyon-link-unresolved-color: #a461c8;
-  --flexcyon-external-link-color: #5a8fcd;
-  --flexcyon-external-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-external-link-color), var(--flexcyon-base-grey-dark));
-}
-
 body {
+  --flexcyon-link-color: var(--color-purple);
+  --flexcyon-link-unresolved-color: var(--color-purple);
+  --flexcyon-external-link-color: var(--color-blue);
+  --flexcyon-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-link-color), var(--flexcyon-base-grey-dark));
+  --flexcyon-external-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-external-link-color), var(--flexcyon-base-grey-dark));
   --link-color: var(--flexcyon-link-color);
   --link-color-hover: var(--flexcyon-link-hover);
   --link-unresolved-color: var(--flexcyon-link-unresolved-color);
@@ -1505,6 +1512,14 @@ body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-
   stroke: var(--flexcyon-accent);
 }
 
+body.theme-light {
+  --text-highlight-bg: var(--flexcyon-base-02);
+}
+
+body.theme-dark {
+  --text-highlight-bg: var(--flexcyon-base-03);
+}
+
 body {
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
@@ -1522,7 +1537,6 @@ body {
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
   --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-04) 20%, transparent);
-  --text-highlight-bg: var(--flexcyon-base-03);
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
   --flexcyon-text-normal: var(--flexcyon-base-grey-light);
@@ -4663,90 +4677,103 @@ settings:
     collapsed: true
   - id: flexcyon-cyan
     title: Cyan Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#3cb9c2"
+    default-light: "#3b9ba1"
+    default-dark: "#3cb9c2"
     alt-format:
       -
         id: color-cyan-rgb
         format: rgb
   - id: flexcyon-lime-green
     title: Green Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#a1c05c"
+    default-light: "#689523"
+    default-dark: "#a1c05c"
     alt-format:
       -
         id: color-green-rgb
         format: rgb
   - id: flexcyon-orange
     title: Orange Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#cc8449"
+    default-light: "#ed8126"
+    default-dark: "#cc8449"
     alt-format:
       -
         id: color-orange-rgb
         format: rgb
   - id: flexcyon-yellow
     title: Yellow Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#c29e42"
+    default-light: "#e8c62a"
+    default-dark: "#c29e42"
     alt-format:
       -
         id: color-yellow-rgb
         format: rgb
   - id: flexcyon-purple-lilac
     title: Purple Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
+    default-light: "#6f49ae"
+    default-dark: "#a461c8"
     alt-format:
       -
         id: color-purple-rgb
         format: rgb
-    default: "#a461c8"
   - id: flexcyon-red-salmon
     title: Red Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#c03a47"
+    default-light: "#eb5325"
+    default-dark: "#c03a47"
     alt-format:
       -
         id: color-red-rgb
         format: rgb
   - id: flexcyon-blue
     title: Blue Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#5a8fcd"
+    default-light: "5c9fe4"
+    default-dark: "#5a8fcd"
     alt-format:
       -
         id: color-blue-rgb
         format: rgb
   - id: flexcyon-pink
     title: Pink Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#d458a3"
+    default-light: "#e389ca"
+    default-dark: "#d458a3"
     alt-format:
       -
         id: color-pink-rgb
         format: rgb
   - id: flexcyon-accent
     title: Accent Color
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#92a871"
+    default-light: "#5770b9"
+    default-dark: "#92a871"
+  - title: Enable Extended Color Palette
+    id: flexcyon-ext-colors-enabled
+    type: class-toggle
+    default: true
 
   - title: Base Colors
     type: heading

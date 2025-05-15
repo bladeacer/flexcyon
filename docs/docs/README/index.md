@@ -3,7 +3,7 @@ title: README
 icon: material/book-open-blank-variant-outline
 ---
 
-<img src="https://img.shields.io/badge/downloads-800+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+<img src="https://img.shields.io/badge/downloads-900+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
 <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
 </a>
