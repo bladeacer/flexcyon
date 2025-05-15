@@ -11,6 +11,7 @@ tags:
 
 - Light theme color theme flexoki + velocity + origami (currently being worked on)
   - fix style settings and other things in the light theme (done accent colors, to move on to base colors)
+<!-- display colors that are written in the docs -->
 
 - Remove Easter Egg mode
 
@@ -33,5 +34,6 @@ tags:
 - Changed sidebar background brighteness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
 - WIP light theme (mixes flexoki light + origami colour palette)
 - Added toggle for extended color palette, on by default
+
 
 <!-- Probably name next update Light Mode update -->
