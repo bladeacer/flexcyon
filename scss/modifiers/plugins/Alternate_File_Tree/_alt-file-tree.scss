@@ -1,5 +1,15 @@
 /* Modifications for alternate file tree plugin */
 
+body.theme-dark {
+    --oz-fta-all-panes-active-text-color: #d3d5d3;
+    --oz-fta-folder-panes-file-name-color: #d3d5d3;
+}
+
+body.theme-light {
+    --oz-fta-all-panes-active-text-color: #080808;
+    --oz-fta-folder-panes-file-name-color: #080808;
+}
+
 body {
     div.oz-folder-name {
         opacity: var(--dimmed);

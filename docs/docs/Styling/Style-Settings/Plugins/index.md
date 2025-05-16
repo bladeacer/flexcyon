@@ -26,25 +26,31 @@ CSS Variable(s) targeted: `var(--oz-fta-folder-font-size)`
 
 Default: 0.925 (rem)
 
+<span style="font-size: 0.925rem">Sample Alternate file tree Folders font size</span>
+
 #### Folders font color
 CSS Variable(s) targeted: `var(--oz-fta-folder-pane-file-name-color)`
 
-Default: #d3d5d3
+Default (light mode): <span class="col-sqr" style="background-color: #080808"></span> #080808
+Default (dark mode):<span class="col-sqr" style="background-color: #d3d5d3"></span> #d3d5d3
 
 #### Active folder color
 CSS Variables(s) targeted: `var(--oz-fta-all-panes-active-text-color)`
 
-Default: #d3d5d3
+Default (light mode): <span class="col-sqr" style="background-color: #080808"></span> #080808
+Default (dark mode): <span class="col-sqr" style="background-color: #d3d5d3"></span> #d3d5d3
 
 #### Files font size
 CSS Variable(s) targeted: `var(--oz-fta-file-font-size)`
 
 Default: 0.9 (rem)
 
+<span style="font-size: 0.9rem">Sample Alternate file tree Files font size</san>
+
 #### Files font color
 CSS Variable(s) targeted: `var(--oz-fta-file-pane-file-name-color)`
 
-Default: #6f768599
+Default: <span class="col-sqr" style="background-color: #6f768599"></span> #6f768599
 
 #### Disable folder icons
 CSS Variable(s) targeted: `var(--flexcyon-oz-folder-icons-disabled)`
@@ -75,6 +81,8 @@ Accepted formats: x.y, %
 CSS Variables(s) targeted: `var(--flexcyon-fc-dimmed-items-opacity)`
 
 Default: 0.89
+
+<span style="opacity: 0.89">Sample opacity of dimmed full calendar items</span>
 
 ___
 ### Dataview

@@ -25,4 +25,4 @@ Style Settings
 ### Muted text color
 CSS Variable(s) targeted: `var(--flexcyon-text-muted)`
 
-Default: #6f768599
+Default: <span class="col-sqr" style="background-color: #6f768599"></span> #6f768599

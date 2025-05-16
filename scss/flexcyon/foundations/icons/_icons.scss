@@ -89,6 +89,15 @@ body:not(.is-phone) .community-item.is-selected:hover {
     }
 }
 
+
+body.theme-light.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
+    div.checkbox-container::after {
+        filter: saturate(2.5);
+        font-weight: bold;
+    }
+}
+
+
 body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
     div.checkbox-container {
         background-color: var(--color-base-05);

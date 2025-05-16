@@ -41,3 +41,5 @@ Default: true (class toggle)
 CSS Variable(s) targeted: `var(--flexcyon-ascii-checkboxes-font-size)`
 
 Default: 1.2 (rem)
+
+<span style="font-size: 1.2rem">Sample ASCII checkboxes font size</span>

@@ -39,6 +39,8 @@ CSS Variable(s) targeted: `var(--flexcyon-callout-bg-opacity)`
 
 Default: 20%
 
+<span style="opacity: 20%">Sample Background Opacity</span>
+
 ### Callout Vertical Margin
 CSS Variable(s) targeted: `var(--flexcyon-callout-vertical-margin)`
 

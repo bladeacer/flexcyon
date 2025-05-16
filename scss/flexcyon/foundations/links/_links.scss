@@ -1,9 +1,18 @@
 // The code snippets in this file are derived from the Halcyon theme 
  // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+body.theme-dark {
+    --flexcyon-link-color: #a461c8;
+    --flexcyon-link-unresolved-color: #a461c8;
+    --flexcyon-external-link-color: #5a8fcd;
+}
+
+body.theme-light {
+    --flexcyon-link-color: #6f49ae;
+    --flexcyon-link-unresolved-color: #6f49ae;
+    --flexcyon-external-link-color: #5c9fe4;
+}
+
 body {
-    --flexcyon-link-color: var(--color-purple);
-    --flexcyon-link-unresolved-color: var(--color-purple);
-    --flexcyon-external-link-color: var(--color-blue);
     --flexcyon-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-link-color), var(--flexcyon-base-grey-dark));
     --flexcyon-external-link-hover: color-mix(in hsl shorter hue, var(--flexcyon-external-link-color), var(--flexcyon-base-grey-dark));
 

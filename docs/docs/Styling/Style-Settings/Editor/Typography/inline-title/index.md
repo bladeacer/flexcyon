@@ -23,6 +23,8 @@ Style Settings
 
 ## Configuration Options
 
+<span style="font-size: 1.802em; font-weight: 700; line-height: 1.2;">Sample inline title</span>
+
 ### Inline title font size
 CSS Variable(s) targeted: `var(--inline-title-size)`
 

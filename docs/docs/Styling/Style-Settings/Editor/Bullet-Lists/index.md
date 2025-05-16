@@ -24,4 +24,5 @@ Style Settings
 CSS Variable(s) targeted: `var(--flexcyon-rainbow-bullet-points)`
 
 Default: false (class toggle)
-- Might need app restart/reload to take effect.
+
+> Might need app restart/reload to take effect.

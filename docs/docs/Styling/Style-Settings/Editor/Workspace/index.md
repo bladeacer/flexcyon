@@ -32,6 +32,8 @@ CSS Variable(s) targeted: `var(--dimmed)`
 
 Default: 0.55
 
+<span style="opacity: 0.55">Sample dimmed element</span>
+
 ### Top Actions alignment
 CSS Variable(s) targeted: `var(--flexcyon-top-actions-alignment)`
 
