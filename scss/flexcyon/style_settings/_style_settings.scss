@@ -124,46 +124,53 @@ settings:
     collapsed: true
   - id: flexcyon-base-01
     title: Base Color 01
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#14161c"
+    default-light: "#faf7ef"
+    default-dark: "#14161c"
   - id: flexcyon-base-02
     title: Base Color 02
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#191d28"
+    default-light: "#edebe5"
+    default-dark: "#191d28"
   - id: flexcyon-base-03
     title: Base Color 03
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#24262c"
+    default-light: "#dddcd6"
+    default-dark: "#24262c"
   - id: flexcyon-base-04
     title: Base Color 04
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#4d566b"
+    default-light: "#d3d3ce"
+    default-dark: "#4d566b"
   - id: flexcyon-base-05
     title: Base Color 05
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#6f7685"
+    default-light: "#b4b3af"
+    default-dark: "#6f7685"
   - id: flexcyon-base-grey-dark
     title: Base dark grey
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#898c93"
+    default-light: "#797876"
+    default-dark: "#898c93"
   - id: flexcyon-base-grey-light
     title: Base light grey
-    type: variable-color
+    type: variable-themed-color
     opacity: false
     format: hex
-    default: "#d3d5d3"
+    default-light: "#080808"
+    default-dark: "#d3d5d3"
   - id: flexcyon-base-grey-tab
     title: Base grey tab
     type: variable-color
