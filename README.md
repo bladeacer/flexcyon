@@ -41,6 +41,9 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 > The old documentation is now fully deprecated.
 
 ## Features
+[Here is a web showcase](https://share.note.sx/1bk28c9k) of the features this theme has to offer.
+- Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
+
 #### What this theme has
 - vim mode status (when using builtin vim keybinds)
 - Status bar options like Powerlevel10k inspired status bar styling
@@ -59,7 +62,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 ![](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
 
 #### Easter Egg Mode
-View details at https://flexcyon.readthedocs.io/en/latest/README/page-5/ 
+**Deprecated**, View details at https://flexcyon.readthedocs.io/en/latest/README/page-5/ 
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
@@ -143,6 +146,9 @@ A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcy
 
 #### Software
 This theme would not be possible without the use of the following tools/dependencies/software:
+
+##### Web Showcase
+- Obsidian Share Note plugin
 
 ##### Text Editors
 - Vim 

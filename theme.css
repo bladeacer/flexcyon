@@ -39,7 +39,7 @@ body.theme-light {
 body:is(.theme-light) {
   --color-red-rgb: 235, 83, 87;
   --color-orange-rgb: 237, 129, 38;
-  --color-yellow-rgb: 232. 198, 42;
+  --color-yellow-rgb: 232, 198, 42;
   --color-green-rgb: 104, 149, 35;
   --color-cyan-rgb: 59, 155, 161;
   --color-blue-rgb: 92, 159, 228;
@@ -115,16 +115,6 @@ body.flexcyon-ext-colors-enabled {
   --color-blue-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-blue), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
   --color-purple-pink-mix: color-mix(in hsl, var(--color-purple), var(--color-pink));
   --color-purple-pink-mix-bg: color-mix(in hsl, color-mix(in hsl, var(--color-purple), var(--color-pink)) var(--flexcyon-callout-bg-opacity), transparent);
-}
-
-@container style(--color-red: #030e9f) and style(--color-orange: #030e9f) and style(--color-yellow: #030e9f) and style(--color-green: #030e9f) and style(--color-cyan: #030e9f) and style(--color-blue: #030e9f) and style(--color-purple: #030e9f) and style(--color-pink: #030e9f) {
-  body.flexcyon-easter-egg-mode .app-container::after {
-    content: " \a             Well Done! Do reset the styles to their default after each challenge \a             henceforth or I will not show up again after you complete the next challenge. \a             The hint for the second challenge is: \a             When the stars align, nothing will be left on top.\a             When the cards are drawn, thy fate intertwine.\a             Where angles intersect, and colors divide.\a             Thus I shall end, this quote in time.\a             \a";
-    font-size: 1.1rem;
-    width: 50vw;
-    margin-left: 20px;
-    margin-bottom: 5px;
-  }
 }
 
 body.theme-dark {
@@ -2123,14 +2113,6 @@ div.callout[data-callout-metadata*=all-pink-red] .callout-icon .svg-icon,
 div.callout[data-callout-metadata*=title-pink-red] .callout-title,
 div.callout[data-callout-metadata*=title-pink-red] .callout-icon .svg-icon {
   color: var(--color-red-pink-mix);
-}
-
-body.flexcyon-easter-egg-mode .app-container:has(div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"])::after {
-  content: " \a         Very nice. Here is the very last challenge:\a         You are nearly at the end\a         but you might want to go back to where it all began\a         the answer is right in front of,\a         it is but rhetorical\a         DM me the answers, once you have all of them\a         This is @data_in_void on Discord, signing off. \a         \a";
-  font-size: 1.1rem;
-  width: 50vw;
-  margin-left: 20px;
-  margin-bottom: 5px;
 }
 
 div.callout[data-callout-metadata*=all-orange-yellow],
@@ -4593,15 +4575,6 @@ body.flexcyon-quote-enable div.empty-state-action-list {
   margin-top: 32px;
 }
 
-@container style(--flexcyon-top-actions-alignment: right) {
-  body.flexcyon-easter-egg-mode.flexcyon-workspace-card-layout.flexcyon-status-style-angled.flexcyon-headings-coloured-enabled.flexcyon-quote-enable .app-container::after {
-    content: " \a             Woah, you actually got it :D \a             Here is the hint for the third challenge: \a             I am documented somewhere, where information lies\a             I pertain the context, of your notes defined.\a             \a";
-    font-size: 1.1rem;
-    width: 50vw;
-    margin-left: 20px;
-    margin-bottom: 5px;
-  }
-}
 body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
@@ -5959,14 +5932,6 @@ settings:
     id: flexcyon-modal-image-position
     type: variable-text
     default: center
-  - title: Easter egg mode
-    type: heading
-    description: Configure Easter egg mode
-    level: 5
-  - title: Enable Easter Egg mode
-    id: flexcyon-easter-egg-mode
-    type: class-toggle
-    default: true
   - title: Accessibility
     type: heading
     description: Toggle accessibility options

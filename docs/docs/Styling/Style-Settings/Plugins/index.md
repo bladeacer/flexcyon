@@ -32,12 +32,14 @@ Default: 0.925 (rem)
 CSS Variable(s) targeted: `var(--oz-fta-folder-pane-file-name-color)`
 
 Default (light mode): <span class="col-sqr" style="background-color: #080808"></span> #080808
+
 Default (dark mode):<span class="col-sqr" style="background-color: #d3d5d3"></span> #d3d5d3
 
 #### Active folder color
 CSS Variables(s) targeted: `var(--oz-fta-all-panes-active-text-color)`
 
 Default (light mode): <span class="col-sqr" style="background-color: #080808"></span> #080808
+i
 Default (dark mode): <span class="col-sqr" style="background-color: #d3d5d3"></span> #d3d5d3
 
 #### Files font size

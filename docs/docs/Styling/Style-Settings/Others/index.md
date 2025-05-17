@@ -265,13 +265,7 @@ Default: center
 
 ___
 ### Easter egg mode
-Toggles Easter egg mode
-
-#### Enable Easter Egg Mode
-CSS Variable(s) targeted: `var(--flexcyon-easter-egg-mode)`
-> If you are searching for answers, I am not giving hints here '_'
-
-Default: false (class toggle)
+Deprecated. See [here for reasons](../../../README/page-5.md).
 
 ___
 ### Accessibility

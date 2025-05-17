@@ -5,15 +5,10 @@ tags:
 ---
 
 ## Misc
+- Add better screenshots
 
 ### Style Settings and stuff
 > Add more CSS classes
-
-- Light theme color theme flexoki + velocity + origami (currently being worked on)
-  - fix style settings and other things in the light theme (done accent colors, to move on to base colors)
-<!-- display colors that are written in the docs -->
-
-- Remove Easter Egg mode
 
 ### Plugins/snippets
 - Support more plugins
@@ -26,6 +21,7 @@ tags:
 
 ### Other styling options
 - Ultra Minimalist Mode 
+<!-- Style color picker for light and dark mode options -->
 <!-- Return to Zero, big 0 on ASCII art -->
 - Mermaid Chart Styling
 <!-- - [ ] PDF export styling (class select). Not happening when it is impossible to debug -->
@@ -33,10 +29,12 @@ tags:
 ### Next version changelog
 - Changed sidebar background brighteness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
 - WIP light theme (mixes flexoki light + origami colour palette)
-- Updated documentation to show a small preview of colors/opacity applied by the theme
 - Others misc changes
   - Added toggle for extended color palette, on by default
   - Added table header size option 
+  - Updated documentation to show a small preview of colors/opacity applied by the theme
+  - Added web showcase of the theme's features
+  - Remove Easter Egg mode
 
 <!-- Probably name next update Light Mode update -->
 <!-- Remember to make a PR to change the flexcyon entry community json thingy by adding light mode -->

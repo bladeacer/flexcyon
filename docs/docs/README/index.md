@@ -17,6 +17,9 @@ A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence, I decided to combine the two which started this theme.
 
 # Features
+[Here is a web showcase](https://share.note.sx/1bk28c9k) of the features this theme has to offer.
+- Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
+
 ## What this theme has
 - vim mode status (when using builtin vim keybinds)
 - Status bar options like Powerlevel10k inspired status bar styling
@@ -39,7 +42,7 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 - embedded fonts, svgs
 
 ### Easter Egg Mode
-See [here](./page-5.md)
+**Deprecated**, see [here](./page-5.md)
 
 ### Recommended snippets
 Here are some recommended snippets to add to your vault and use alongside Flexcyon:

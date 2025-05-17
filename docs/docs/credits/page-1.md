@@ -8,6 +8,9 @@ The following tools and software were indispensible in the making of the theme a
 ### Base application
 - Obsidian
 
+### Web Showcase
+- Obsidian Share Note plugin
+
 ### Web Technologies
 - CSS
 - SCSS
