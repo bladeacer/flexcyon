@@ -50,7 +50,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 - Smiley toggle icons and other options for settings
 - ASCII art or custom quote in new empty tabs
 - subtle opacity effects for UI elements
-- a dark mode colour scheme
+- a light and dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
 - A [plethora of cssclasses and callout customisation options](https://flexcyon.readthedocs.io/en/latest/Styling/CSS-Classes/)
@@ -66,7 +66,6 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
-- a light mode colour scheme :)
 - alternate checkboxes
 - embedded fonts, svgs
 

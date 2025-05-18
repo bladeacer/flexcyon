@@ -20,7 +20,7 @@ ___
 - Style color picker for light and dark mode options
 - ASCII Art and quotes now inherit from the interface font
 - Improved prompt styling and tree item padding
-- Return to Zero (ultra minimalist mode) inspired by Shimmering Focus
+- Return to Zero (ultra minimalist mode) inspired by Shimmering Focus theme
 
 ## Version 0.3.x
 ### Version 0.3.6 Canvas Menu Update
