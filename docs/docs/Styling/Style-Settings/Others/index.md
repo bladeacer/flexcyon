@@ -292,3 +292,11 @@ CSS Variable(s) targeted: `var(--flexcyon-saturation-ratio)`
 Default: 1
 
 > Use to modify the saturation of colors
+
+___
+### Return to Zero mode
+> Extreme minimalism inspired by the Shimmering Focus theme. Most UI elements are not displayed until hovered on. Will not recommend on mobile.
+
+CSS Variable(s) targeted: `var(--flexcyon-rtz-mode)`
+
+Default: false (class toggle)

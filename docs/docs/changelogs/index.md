@@ -7,6 +7,21 @@ title: Changelogs
 The changelogs show versions in order of most recent to least recent. Or, if you prefer the changelogs in chronological order, you can use sidebar or hamburger menu to view the relevant sub-pages.
 
 ___
+## Version 0.4.x
+### Version 0.4.0 Light Mode Update
+- Changed sidebar background brighteness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
+- WIP light theme (mixes flexoki light + origami colour palette)
+- Others misc changes
+  - Added toggle for extended color palette, on by default
+  - Added table header size option 
+  - Updated documentation to show a small preview of colors/opacity applied by the theme
+  - Added web showcase of the theme's features
+  - Remove Easter Egg mode
+- Style color picker for light and dark mode options
+- ASCII Art and quotes now inherit from the interface font
+- Improved prompt styling and tree item padding
+- Return to Zero (ultra minimalist mode) inspired by Shimmering Focus
+
 ## Version 0.3.x
 ### Version 0.3.6 Canvas Menu Update
 - Fixed sidebar background issues

@@ -9,9 +9,12 @@ body {
     background-color: var(--background-primary);
   }
 
+  .suggestion-title {
+    padding: 2px 8px;
+  }
 
   .community-item .suggestion-highlight {
-    color: var(--text-accent);
+    color: var(--text-highlight-bg);
   }
 
   .prompt>.prompt-results>.suggestion-item .suggestion-highlight {
@@ -66,3 +69,47 @@ body.flexcyon-prompt-align-top-center {
   }
 }
 
+.suggestion-item {
+  padding: var(--size-4-2) var(--size-4-3);
+}
+
+body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {
+  color: var(--color-cyan);
+}
+
+body.theme-light .suggestion-item.mod-complex .suggestion-prefix {
+  color: var(--color-green);
+}
+
+.suggestion-item.mod-complex {
+  font-size: calc(var(--font-ui-medium) - 0.5px);
+
+  &.is-selected {
+    font-size: var(--font-ui-medium);
+  }
+
+  .suggestion-hotkey {
+    opacity: calc(var(--dimmed) + 0.15);
+  }
+
+  .suggestion-prefix {
+    background-color: transparent;
+    opacity: calc(var(--dimmed) + 0.15);
+    margin-right: 16px;
+
+    &::after {
+      display: none;
+    }
+  }
+  
+  &.is-selected .suggestion-hotkey {
+    font-size: var(--font-ui-small);
+    font-weight: bold;
+    opacity: unset;
+  }
+  &.is-selected .suggestion-prefix {
+    opacity: unset;
+    font-weight: bold;
+  }
+
+}

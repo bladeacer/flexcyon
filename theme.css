@@ -47,7 +47,7 @@ body:is(.theme-light) {
   --color-pink-rgb: 227, 137, 202;
 }
 
-body {
+body.theme-light, body.theme-dark {
   --color-red: var(--flexcyon-red-salmon);
   --color-orange: var(--flexcyon-orange);
   --color-yellow: var(--flexcyon-yellow);
@@ -172,9 +172,9 @@ body.theme-dark {
 
 body.theme-light {
   --flexcyon-accent: #5770b9;
-  --accent-h: 225;
-  --accent-s: 41%;
-  --accent-l: 53%;
+  --flexcyon-accent-h: 225;
+  --flexcyon-accent-s: 41%;
+  --flexcyon-accent-l: 53%;
 }
 
 body {
@@ -1197,6 +1197,22 @@ body .setting-item {
 body .setting-item.setting-item-heading {
   border-bottom: 1px solid var(--background-modifier-border);
 }
+body .setting-item + div > .setting-item-heading, body .setting-item + .setting-item-heading {
+  margin-top: 1.5em;
+}
+body .horizontal-tab-nav-item, body .vertical-tab-nav-item {
+  padding: calc(var(--size-4-1) + 1px) var(--size-4-2);
+  margin-bottom: 1px;
+  font-size: calc(var(--font-ui-small) + 1.25px);
+}
+body .LazyLoad.is-visible {
+  height: unset !important;
+}
+body .oz-folder-line,
+body .oz-nav-file,
+body .tree-item {
+  padding: 0.75px 8px;
+}
 
 body.flexcyon-workspace-card-layout .community-modal-info-name {
   border: 2px solid var(--text-faint);
@@ -1613,8 +1629,11 @@ body {
 body .search-input-container > input {
   background-color: var(--background-primary);
 }
+body .suggestion-title {
+  padding: 2px 8px;
+}
 body .community-item .suggestion-highlight {
-  color: var(--text-accent);
+  color: var(--text-highlight-bg);
 }
 body .prompt > .prompt-results > .suggestion-item .suggestion-highlight {
   color: var(--interactive-accent);
@@ -1651,6 +1670,45 @@ body.flexcyon-prompt-align-top-left .modal-container .prompt {
 
 body.flexcyon-prompt-align-top-center .modal-container .prompt {
   top: 0px;
+}
+
+.suggestion-item {
+  padding: var(--size-4-2) var(--size-4-3);
+}
+
+body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {
+  color: var(--color-cyan);
+}
+
+body.theme-light .suggestion-item.mod-complex .suggestion-prefix {
+  color: var(--color-green);
+}
+
+.suggestion-item.mod-complex {
+  font-size: calc(var(--font-ui-medium) - 0.5px);
+}
+.suggestion-item.mod-complex.is-selected {
+  font-size: var(--font-ui-medium);
+}
+.suggestion-item.mod-complex .suggestion-hotkey {
+  opacity: calc(var(--dimmed) + 0.15);
+}
+.suggestion-item.mod-complex .suggestion-prefix {
+  background-color: transparent;
+  opacity: calc(var(--dimmed) + 0.15);
+  margin-right: 16px;
+}
+.suggestion-item.mod-complex .suggestion-prefix::after {
+  display: none;
+}
+.suggestion-item.mod-complex.is-selected .suggestion-hotkey {
+  font-size: var(--font-ui-small);
+  font-weight: bold;
+  opacity: unset;
+}
+.suggestion-item.mod-complex.is-selected .suggestion-prefix {
+  opacity: unset;
+  font-weight: bold;
 }
 
 body .cm-gutterElement.cm-active {
@@ -4504,13 +4562,20 @@ body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after 
   display: none;
 }
 
+body.theme-dark {
+  --flexcyon-new-tab-bg-wrapper: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
+}
+
+body.theme-light {
+  --flexcyon-new-tab-bg-wrapper: linear-gradient(to right, var(--text-accent), var(--color-pink), var(--color-green));
+}
+
 body {
   --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-quote-font-size: 24px;
   --flexcyon-ascii-line-height: 1;
   --flexcyon-quote-val: "This is a placeholder quote\a \a- bladeacer";
   --flexcyon-ascii-art: " \a_______________                                       \a___  ____/__  /________  ____________  ______________ \a__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a                                 /____/                \a \a \a";
-  --flexcyon-new-tab-bg-wrapper: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
 }
 body div.empty-state-action {
   font-size: 1.05rem;
@@ -4525,7 +4590,7 @@ body.flexcyon-ascii-enable div.empty-state-title {
   display: unset;
 }
 body.flexcyon-ascii-enable div.empty-state-container::before {
-  font-family: monospace;
+  font-family: var(--font-interface);
   content: var(--flexcyon-ascii-art);
   font-weight: bold;
   background: var(--flexcyon-new-tab-bg-wrapper);
@@ -4557,6 +4622,7 @@ body.flexcyon-empty-state-actions-disable div.empty-state-action-list {
 }
 
 body.flexcyon-quote-enable div.empty-state-container::before {
+  font-family: var(--font-interface);
   content: var(--flexcyon-quote-val);
   font-weight: bold;
   background: var(--flexcyon-new-tab-bg-wrapper);
@@ -4573,6 +4639,67 @@ body.flexcyon-quote-enable div.empty-state-container {
 }
 body.flexcyon-quote-enable div.empty-state-action-list {
   margin-top: 32px;
+}
+
+body.flexcyon-rtz-mode div.empty-state-container::before {
+  content: "0" !important;
+  font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
+  font-family: var(--font-interface);
+  background-clip: text;
+  font-weight: bold;
+  background: var(--text-accent);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: var(--flexcyon-ascii-line-height);
+  white-space: pre;
+  text-align: center;
+  display: inline;
+}
+body.flexcyon-rtz-mode div.empty-state-action-list {
+  display: none;
+}
+body.flexcyon-rtz-mode .sidebar-toggle-button {
+  display: none;
+}
+body.flexcyon-rtz-mode .graph-controls,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed,
+body.flexcyon-rtz-mode .oz-flex-container,
+body.flexcyon-rtz-mode .nav-header,
+body.flexcyon-rtz-mode .titlebar-button-container,
+body.flexcyon-rtz-mode .view-header-left,
+body.flexcyon-rtz-mode .view-header-title-container,
+body.flexcyon-rtz-mode .view-actions,
+body.flexcyon-rtz-mode .side-dock-ribbon,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile,
+body.flexcyon-rtz-mode .workspace-tab-header-container-inner {
+  opacity: 0;
+}
+body.flexcyon-rtz-mode .graph-controls:hover,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed:hover,
+body.flexcyon-rtz-mode .oz-flex-container:hover,
+body.flexcyon-rtz-mode .nav-header:hover,
+body.flexcyon-rtz-mode .titlebar-button-container:hover,
+body.flexcyon-rtz-mode .view-header-left:hover,
+body.flexcyon-rtz-mode .view-header-title-container:hover,
+body.flexcyon-rtz-mode .view-actions:hover,
+body.flexcyon-rtz-mode .side-dock-ribbon:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list:hover,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-container-inner:hover {
+  opacity: unset;
+}
+body.flexcyon-rtz-mode .cm-gutter,
+body.flexcyon-rtz-mode .metadata-container,
+body.flexcyon-rtz-mode .status-bar {
+  opacity: var(--dimmed);
+}
+body.flexcyon-rtz-mode .cm-gutter:hover,
+body.flexcyon-rtz-mode .metadata-container:hover,
+body.flexcyon-rtz-mode .status-bar:hover {
+  opacity: unset;
 }
 
 body {
@@ -5948,6 +6075,15 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
+  - title: Modes
+    type: heading
+    description: Toggle modes like those for extreme minimalism
+    level: 5
+  - title: Return to Zero mode
+    type: class-toggle
+    description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
+    id: flexcyon-rtz-mode
+    default: false
  */
 body div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -5969,6 +6105,17 @@ body .pcr-app .pcr-interaction .pcr-cancel {
 body .pcr-app .pcr-interaction .pcr-save {
   color: var(--text-normal);
   background: var(--color-blue);
+}
+
+.themed-color-wrapper .theme-dark .pickr-reset button {
+  color: rgba(211, 211, 211, 0.6666666667);
+  background-color: rgba(25, 29, 40, 0.6666666667);
+  scale: var(--upsize);
+}
+.themed-color-wrapper .theme-light .pickr-reset button {
+  color: rgba(8, 8, 8, 0.6666666667);
+  background-color: rgba(237, 235, 229, 0.6666666667);
+  scale: var(--upsize);
 }
 
 .setting-item-heading[data-level="0"],

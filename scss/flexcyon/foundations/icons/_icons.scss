@@ -32,7 +32,22 @@ body {
     .setting-item.setting-item-heading {
         border-bottom: 1px solid var(--background-modifier-border);
     }
-
+    .setting-item + div > .setting-item-heading, .setting-item + .setting-item-heading {
+        margin-top: 1.5em;
+    }
+    .horizontal-tab-nav-item, .vertical-tab-nav-item {
+        padding: calc(var(--size-4-1) + 1px) var(--size-4-2);
+        margin-bottom: 1px;
+        font-size: calc(var(--font-ui-small) + 1.25px);
+    }
+    .LazyLoad.is-visible {
+        height: unset !important;
+    }
+    .oz-folder-line,
+    .oz-nav-file,
+    .tree-item {
+        padding: 0.75px 8px;
+    }
 }
 
 body.flexcyon-workspace-card-layout {

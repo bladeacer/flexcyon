@@ -33,6 +33,7 @@ body.theme-light {
     --flexcyon-red-salmon: #eb5325;
     --flexcyon-blue: #5c9fe4;
     --flexcyon-pink: #e389ca;
+
 }
 
 body:is(.theme-light) {
@@ -46,7 +47,7 @@ body:is(.theme-light) {
     --color-pink-rgb: 227, 137, 202;
 }
 
-body {
+body.theme-light, body.theme-dark {
     --color-red: var(--flexcyon-red-salmon);
     --color-orange: var(--flexcyon-orange);
     --color-yellow: var(--flexcyon-yellow);

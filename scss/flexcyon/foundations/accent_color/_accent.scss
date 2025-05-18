@@ -14,12 +14,10 @@ body.theme-dark {
 
 body.theme-light {
     --flexcyon-accent: #5770b9;
-    --accent-h: 225;
-    --accent-s: 41%;
-    --accent-l: 53%;
+    --flexcyon-accent-h: 225;
+    --flexcyon-accent-s: 41%;
+    --flexcyon-accent-l: 53%;
 }
-
-/// 75% theme dark accent colour with light theme 25%?
 
 body {
     --accent-h: var(--flexcyon-accent-h);

@@ -1310,6 +1310,15 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
+  - title: Modes
+    type: heading
+    description: Toggle modes like those for extreme minimalism
+    level: 5
+  - title: Return to Zero mode
+    type: class-toggle
+    description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
+    id: flexcyon-rtz-mode
+    default: false
  */
 
 body {
@@ -1339,6 +1348,19 @@ body {
       color: var(--text-normal);
       background: var(--color-blue);
     }
+  }
+}
+
+.themed-color-wrapper {
+  .theme-dark .pickr-reset button {
+    color: #d3d3d3aa;
+    background-color: #191d28aa;
+    scale: var(--upsize);
+  }
+  .theme-light .pickr-reset button{
+    color: #080808aa;
+    background-color: #edebe5aa;
+    scale: var(--upsize);
   }
 }
 
