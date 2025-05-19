@@ -5,6 +5,8 @@ title: Credits
 
 A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
 
+In addition, the light mode colour scheme would not be possible without the great [Origami theme](https://github.com/7368697661/Origami) (which is also under the MIT License).
+
 ## Snippets
 - `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
 - [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout

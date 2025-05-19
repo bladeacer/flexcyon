@@ -13,6 +13,8 @@ A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 
 I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence, I decided to combine the two which started this theme.
 
+There is also a light mode colour scheme combining [Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's colour schemes.
+
 ## Screenshots
 ![](./docs/docs/assets/screenshots/showcase1.png)
 
@@ -86,7 +88,7 @@ The following plugins/snippets are officially supported:
 ##### Snippets
 - [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
 
-For plugins/snippets that are not styled yet, feel free to open a PR/FR on it.
+For plugins/snippets that are not styled yet, feel free to open a Pull Request/Feature Request/start a Discussion on it.
 
 #### Recommended snippets
 Here are some recommended snippets to add to your vault and use alongside Flexcyon:
@@ -128,6 +130,8 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 
 ## Credits
 A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
+
+In addition, the light mode colour scheme would not be possible without the great [Origami theme](https://github.com/7368697661/Origami) (which is also under the MIT License).
 
 #### Snippets
 - `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet

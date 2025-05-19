@@ -9,10 +9,10 @@ The changelogs show versions in order of most recent to least recent. Or, if you
 ___
 ## Version 0.4.x
 ### Version 0.4.0 Light Mode Update
-- Changed sidebar background brighteness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
+- Changed sidebar background brightness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
 - WIP light theme (mixes flexoki light + origami colour palette)
 - Others misc changes
-  - Added toggle for extended color palette, on by default
+  - Added toggle for extended colour palette, on by default
   - Added table header size option 
   - Updated documentation to show a small preview of colors/opacity applied by the theme
   - Added web showcase of the theme's features

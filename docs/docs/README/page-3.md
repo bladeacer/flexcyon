@@ -8,7 +8,7 @@ tags:
 ---
 
 The following plugins/snippets are officially supported
-> For plugins/snippets that are not styled yet, feel free to open a PR/FR on it.
+> For plugins/snippets that are not styled yet, feel free to open a Pull Request/Feature Request/start a Discussion on it.
 
 ## Plugins
 [File Tree Alternative by Ozan Tellioglu](https://github.com/ozntel/file-tree-alternative)
