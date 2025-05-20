@@ -14,7 +14,7 @@ body {
   }
 
   .community-item .suggestion-highlight {
-    color: var(--text-highlight-bg);
+    color: var(--color-orange);
   }
 
   .prompt>.prompt-results>.suggestion-item .suggestion-highlight {
@@ -78,7 +78,7 @@ body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {
 }
 
 body.theme-light .suggestion-item.mod-complex .suggestion-prefix {
-  color: var(--color-green);
+  color: var(--color-pink);
 }
 
 .suggestion-item.mod-complex {
@@ -100,6 +100,11 @@ body.theme-light .suggestion-item.mod-complex .suggestion-prefix {
     &::after {
       display: none;
     }
+  }
+  .suggestion-highlight {
+    opacity: 1;
+    font-weight: bold;
+    font-size: calc(var(--font-ui-medium) + 0.5px);
   }
   
   &.is-selected .suggestion-hotkey {

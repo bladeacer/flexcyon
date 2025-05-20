@@ -16,7 +16,8 @@ In addition, the light mode colour scheme would not be possible without the grea
 
 ## Ideas, Feedback
 - `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings
-- `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
+- `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items, TUI rendering in light mode, left sidebar toggle button rendering when show ribbon is disabled
+- `@Dante` on the Obisidian Members' Group Discord for embeds not displaying
 - `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
 - `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation, Powerlevel10k layout

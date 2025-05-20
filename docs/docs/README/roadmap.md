@@ -5,6 +5,7 @@ tags:
 ---
 
 ## Misc
+- Add Origami attribution in scss/css files
 - Add Style Settings option for configuring tree item and suggestion item padding
 - Add better screenshots
 

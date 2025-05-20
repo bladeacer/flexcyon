@@ -16,3 +16,9 @@ icon: material/numeric-4-box-outline
 - ASCII Art and quotes now inherit from the interface font
 - Improved prompt styling and tree item padding
 - Return to Zero (ultra minimalist mode) inspired by Shimmering Focus
+
+### Version 0.4.1 Quickfix Update
+- Fix TUI rendering in light mode
+- Fix left sidebar toggle when ribbon is not enabled
+- Fix text highlight bg specifically with suggestion-highlight
+- Fix embeds not displaying

@@ -8,6 +8,12 @@ The changelogs show versions in order of most recent to least recent. Or, if you
 
 ___
 ## Version 0.4.x
+### Version 0.4.1 Quickfix Update
+- Fix TUI rendering in light mode
+- Fix left sidebar toggle when ribbon is not enabled
+- Fix text highlight bg specifically with suggestion-highlight
+- Fix embeds not displaying
+
 ### Version 0.4.0 Light Mode Update
 - Changed sidebar background brightness setting default to `unset`. Was previously causing issues like blurring Calender plugin content.
 - WIP light theme (mixes flexoki light + origami colour palette)

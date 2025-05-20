@@ -56,9 +56,6 @@ body {
 
     @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
         .mod-left-split {
-            .workspace-leaf {
-                background-color: var(--color-base-20);
-            }
             .oz-folders-action-items *, .oz-flex-container *, .fc *, .fc,
             .nav-header *, .tree-item, .tree-item-self, .tree-item-inner, .tree-item-children {
                 backdrop-filter: none;
@@ -71,9 +68,6 @@ body {
 
 
     @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-        .workspace-leaf {
-            background-color: var(--color-base-20);
-        }
         .mod-right-split  {
             .oz-folders-action-items *, .oz-flex-container *, .fc *, .fc,
             .nav-header *, .tree-item, .tree-item-self, .tree-item-inner, .tree-item-children {
