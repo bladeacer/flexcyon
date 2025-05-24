@@ -39,8 +39,10 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 ## Documentation
 A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io/en/latest
-> If there is a new feature in the documentation that cannot be found within the theme itself, said feature is WIP and may be released next update
-> The old documentation is now fully deprecated.
+> This site will be deprecated in favour of https://flexcyon-docs.readthedocs.io/en/latest/
+>
+> I want to keep the docs and source code separate, there are translations for Chinese and Spanish in a beta stage
+
 
 ## Features
 [Here is a web showcase](https://share.note.sx/1bk28c9k) of the features this theme has to offer.
