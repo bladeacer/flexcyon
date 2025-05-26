@@ -2,12 +2,25 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 // A huge shout out too to kepano's flexoki color scheme
 // - https://github.com/kepano/flexoki-obsidian
+// And the great origami theme
+// - https://github.com/7368697661/Origami 
+//
 body:is(.theme-dark) {
     /* ------------------------------ */
     --background-primary: var(--flexcyon-base-02);
     --background-primary-alt: var(--flexcyon-base-03);
     --background-secondary: var(--flexcyon-base-01);
     --background-secondary-alt: var(--flexcyon-base-02);
+}
+
+body:is(.theme-light) {
+    --background-primary: var(--flexcyon-base-01);
+    --background-primary-alt: var(--flexcyon-base-02);
+    --background-secondary: var(--flexcyon-base-01);
+    --background-secondary-alt: var(--flexcyon-base-02);
+}
+
+body:is(.theme-dark), body:is(.theme-light) {
     --background-modifier-hover: var(--flexcyon-base-03);
     --background-modifier-active-hover: var(--flexcyon-base-03);
     --background-modifier-border: var(--flexcyon-base-02-03-mix);
@@ -15,16 +28,15 @@ body:is(.theme-dark) {
     --background-modifier-border-focus: var(--flexcyon-base-04);
     --background-modifier-message: var(--flexcyon-base-02-03-mix);
     --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+}
+
+body {
     --flexcyon-editor-bg-width: 15px;
     --flexcyon-editor-dot-size: 2.5px;
     --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
     --flexcyon-editor-bg-color-2: var(--color-base-20);
     --flexcyon-editor-bg-rotation: 0deg;
 }
-
-// body:is(.theme-light) {
-
-// }
 
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,

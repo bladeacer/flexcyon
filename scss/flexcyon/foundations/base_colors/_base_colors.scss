@@ -27,7 +27,7 @@ body.theme-light {
     --flexcyon-base-grey-light: #080808;
 }
 
-body:is(.theme-dark, .theme-light) {
+body:is(.theme-dark), body:is(.theme-light) {
     --flexcyon-base-grey-tab: #71777f;
     --flexyon-base-grey-token: #586582;
     --flexcyon-base-grey-scroll: #3f495e;
@@ -52,4 +52,8 @@ body:is(.theme-dark, .theme-light) {
     --color-base-60: var(--flexcyon-base-grey-dark);
     --color-base-70: var(--flexcyon-base-grey-mix);
     --color-base-100: var(--flexcyon-base-grey-light);
+}
+
+body:is(.theme-light) {
+    --flexcyon-base-01-02-mix: color-mix(in hsl, var(--flexcyon-base-01) 70%, var(--flexcyon-base-02) 30%);
 }

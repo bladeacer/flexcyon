@@ -1,17 +1,125 @@
+// Add class toggle to do not show line numbers when relative line numbers are on.
 body {
     .cm-gutterElement.cm-active {
         font-weight: 900;
-        font-size: var(--font-ui-small);
-    }
-}
-
-body:where(.theme-dark) {
-    .cm-gutterElement.cm-active {
-        /* Active line changes colour */
+        font-size: var(--font-ui-medium);
         color: rgba(var(--color-green-rgb), 60%);
     }
 }
 
-// body:where(.theme-light) {
+// Does not display other lines without relative line numbers
+body.flexcyon-relative-line-num-only:not(.is-mobile) {
+    .cm-lineNumbers .cm-gutterElement:not(.cm-active) {
+        font-size: 0;
+    }
+} 
 
-// }
+body:not(.is-mobile) .cm-lineNumbers .cm-active,
+body:not(.is-mobile) .cm-lineNumbers *::before {
+    font-size: calc(var(--font-ui-small) + 0.05rem);
+    padding-right: 4px;
+}
+
+@mixin hide-preceding-lines($lines-to-hide) {
+    @for $i from 0 through ($lines-to-hide - 1) {
+        $sibling-selector: "";
+        @for $j from 1 through $i {
+            $sibling-selector: $sibling-selector + " + *";
+        }
+
+        .cm-lineNumbers .cm-active #{$sibling-selector},
+        .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active) {
+            font-size: 0;
+        }
+    }
+    .cm-lineNumbers *:has(+ .cm-active) {
+        font-size: 0;
+    }
+}
+
+@mixin write-relative-lines($lines-to-hide) {
+    @for $i from 0 through ($lines-to-hide - 1) {
+        $sibling-selector: "";
+        @for $j from 1 through $i {
+            $sibling-selector: $sibling-selector + " + *";
+
+            .cm-lineNumbers .cm-active #{$sibling-selector}::before {
+                --flexcyon-rel-bel-#{$j}: "#{$j}";
+                content: var(--flexcyon-rel-bel-#{$j});
+            }
+            .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active)::before {
+                --flexcyon-rel-abv-#{$j+1}: "#{$j+1}";
+                content: var(--flexcyon-rel-abv-#{$j+1});
+            }
+        }
+    }
+    .cm-lineNumbers *:has(+ .cm-active)::before {
+        --flexcyon-rel-abv-1: "1";
+        content: var(--flexcyon-rel-abv-1);
+    }
+}
+
+@mixin target-relative-line-abv($line-no, $content) {
+    @if $line-no == 1 {
+        .cm-lineNumbers *:has(+ .cm-active)::before {
+            --flexcyon-rel-abv-1: "#{$content}"
+        }
+    }
+    @else {
+        @for $i from 0 through ($line-no - 1) {
+            $sibling-selector: "";
+            @for $j from 1 through $i {
+                $sibling-selector: $sibling-selector + " + *";
+            }
+
+            .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active)::before {
+                --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+            }
+        }
+    }
+}
+
+@mixin target-relative-line-bel($line-no, $content) {
+    @for $i from 0 through ($line-no - 1) {
+        $sibling-selector: "";
+        @for $j from 0 through $i {
+            $sibling-selector: $sibling-selector + " + *";
+        }
+
+        .cm-lineNumbers .cm-active #{$sibling-selector}::before {
+            --flexcyon-rel-bel-#{$line-no}: "#{$content}";
+        }
+    }
+}
+
+body.flexcyon-no-num-with-relative:not(.is-mobile) {
+    @include hide-preceding-lines(10);
+}
+
+// Normal style relative line numbers
+body.flexcyon-enable-rel-nums:not(.is-mobile) {
+    @include write-relative-lines(10);
+}
+
+// Roman numerals
+body.flexcyon-roman-rel-nums:not(.is-mobile) {
+    @include target-relative-line-abv(1, "I");
+    @include target-relative-line-abv(2, "II");
+    @include target-relative-line-abv(3, "III");
+    @include target-relative-line-abv(4, "IV");
+    @include target-relative-line-abv(5, "V");
+    @include target-relative-line-abv(6, "VI");
+    @include target-relative-line-abv(7, "VII");
+    @include target-relative-line-abv(8, "VIII");
+    @include target-relative-line-abv(9, "IX");
+
+    @include target-relative-line-bel(1, "I");
+    @include target-relative-line-bel(2, "II");
+    @include target-relative-line-bel(3, "III");
+    @include target-relative-line-bel(4, "IV");
+    @include target-relative-line-bel(5, "V");
+    @include target-relative-line-bel(6, "VI");
+    @include target-relative-line-bel(7, "VII");
+    @include target-relative-line-bel(8, "VIII");
+    @include target-relative-line-bel(9, "IX");
+}

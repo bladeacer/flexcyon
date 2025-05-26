@@ -52,4 +52,23 @@
     }
 }
 
+.file-w-full {
+    --file-line-width: 100vw;
+}
 
+@mixin file-w-cls($percent) {
+    .file-w-#{$percent}vw {
+        --file-line-width: #{$percent}vw;
+    }
+}
+
+@include file-w-cls(50);
+@include file-w-cls(55);
+@include file-w-cls(60);
+@include file-w-cls(65);
+@include file-w-cls(70);
+@include file-w-cls(75);
+@include file-w-cls(80);
+@include file-w-cls(85);
+@include file-w-cls(90);
+@include file-w-cls(95);
