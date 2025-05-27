@@ -16,12 +16,17 @@ body:not(.is-mobile) .cm-lineNumbers *::before {
 @mixin hide-preceding-lines($lines-to-hide) {
     @for $i from 0 through ($lines-to-hide) {
         $sibling-selector: "";
-        @for $j from 1 through $i {
+        $sibling-selector-1: "+";
+
+        @for $j from 0 through $i {
             $sibling-selector: $sibling-selector + " + *";
+            @if $j > 1 {
+                $sibling-selector-1: $sibling-selector-1 + "* +";
+            }
         }
 
         .cm-lineNumbers .cm-active #{$sibling-selector},
-        .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active) {
+        .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active) {
             font-size: 0;
         }
     }
@@ -153,30 +158,4 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
     @include target-relative-line-bel(8, "VIII");
     @include target-relative-line-bel(9, "IX");
     @include target-relative-line-bel(10, "X");
-}
-
-body {
-    @include write-relative-lines(10);
-    @include hide-preceding-lines(10);
-    @include target-relative-line-abv(1, "α", 0.925);
-    @include target-relative-line-abv(2, "β", 0.925);
-    @include target-relative-line-abv(3, "γ", 0.925);
-    @include target-relative-line-abv(4, "δ", 0.925);
-    @include target-relative-line-abv(5, "ε", 0.925);
-    @include target-relative-line-abv(6, "ζ", 0.925);
-    @include target-relative-line-abv(7, "η", 0.925);
-    @include target-relative-line-abv(8, "θ", 0.925);
-    @include target-relative-line-abv(9, "ι", 0.975);
-    @include target-relative-line-abv(10, "κ", 0.975);
-
-    @include target-relative-line-bel(1, "α", 0.925);
-    @include target-relative-line-bel(2, "β", 0.925);
-    @include target-relative-line-bel(3, "γ", 0.925);
-    @include target-relative-line-bel(4, "δ", 0.925);
-    @include target-relative-line-bel(5, "ε", 0.925);
-    @include target-relative-line-bel(6, "ζ", 0.925);
-    @include target-relative-line-bel(7, "η", 0.925);
-    @include target-relative-line-bel(8, "θ", 0.925);
-    @include target-relative-line-bel(9, "ι", 0.975);
-    @include target-relative-line-bel(10, "κ", 0.975);
 }

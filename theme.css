@@ -1745,48 +1745,48 @@ body:not(.is-mobile) .cm-lineNumbers *::before {
   padding-right: 4px;
 }
 
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active) {
-  font-size: 0;
-}
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *,
-body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active) {
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + * + *,
+body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active) {
   font-size: 0;
 }
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active) {
@@ -2062,258 +2062,6 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNu
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
   --flexcyon-rel-bel-10: "X";
-}
-
-body .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body .cm-lineNumbers *:has(+ .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body .cm-lineNumbers *:has(+ .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "7";
-  content: var(--flexcyon-rel-bel-7);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "6";
-  content: var(--flexcyon-rel-abv-6);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-8: "8";
-  content: var(--flexcyon-rel-bel-8);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "7";
-  content: var(--flexcyon-rel-abv-7);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-9: "9";
-  content: var(--flexcyon-rel-bel-9);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "8";
-  content: var(--flexcyon-rel-abv-8);
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-10: "10";
-  content: var(--flexcyon-rel-bel-10);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-9: "9";
-  content: var(--flexcyon-rel-abv-9);
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-10: "10";
-  content: var(--flexcyon-rel-abv-10);
-}
-body .cm-lineNumbers .cm-active + * + *,
-body .cm-lineNumbers *:has(+ * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + *,
-body .cm-lineNumbers *:has(+ * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + *,
-body .cm-lineNumbers *:has(+ * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *,
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers *:has(+ .cm-active) {
-  font-size: 0;
-}
-body .cm-lineNumbers *:has(+ .cm-active)::before {
-  --flexcyon-rel-abv-1: "α";
-}
-body .cm-lineNumbers *:has(+ .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "β";
-}
-body .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "γ";
-}
-body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "δ";
-}
-body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "ε";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "ζ";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "η";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "θ";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-9: "ι";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  font-size: 0.975rem;
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-10: "κ";
-}
-body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  font-size: 0.975rem;
-}
-body .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "α";
-}
-body .cm-lineNumbers .cm-active + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "β";
-}
-body .cm-lineNumbers .cm-active + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "γ";
-}
-body .cm-lineNumbers .cm-active + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "δ";
-}
-body .cm-lineNumbers .cm-active + * + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "ε";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "ζ";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "η";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-8: "θ";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  font-size: 0.925rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-9: "ι";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
-  font-size: 0.975rem;
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-10: "κ";
-}
-body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
-  font-size: 0.975rem;
 }
 
 /* Callout modifications */
