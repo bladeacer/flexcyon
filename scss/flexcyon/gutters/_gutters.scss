@@ -31,51 +31,43 @@ body:not(.is-mobile) .cm-lineNumbers *::before {
 }
 
 @mixin write-relative-lines($lines-to-hide) {
-    @for $i from 0 through ($lines-to-hide - 1) {
-        $sibling-selector: "";
-        @for $j from 0 through $i {
-            $sibling-selector: $sibling-selector + " + *";
+    $sibling-selector: "";
+    $sibling-selector-1: "+";
+    @for $j from 0 through ($lines-to-hide) {
+        $sibling-selector: $sibling-selector + " + *";
 
-            .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active)::before {
-                --flexcyon-rel-abv-#{$j}: "#{$j}";
-                content: var(--flexcyon-rel-abv-#{$j});
-            }
+        @if $j != $lines-to-hide {
             .cm-lineNumbers .cm-active #{$sibling-selector}::before {
                 --flexcyon-rel-bel-#{$j+1}: "#{$j+1}";
                 content: var(--flexcyon-rel-bel-#{$j+1});
             }
         }
+
+        @if $j > 1 {
+            $sibling-selector-1: $sibling-selector-1 + "* +";
+        }
+
+        .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active)::before {
+            --flexcyon-rel-abv-#{$j}: "#{$j}";
+            content: var(--flexcyon-rel-abv-#{$j});
+        }
     }
-    .cm-lineNumbers *:has(+ .cm-active)::before {
-        --flexcyon-rel-abv-1: "1";
-        content: var(--flexcyon-rel-abv-1);
-    }
+
 }
 
 @mixin target-relative-line-abv($line-no, $content, $mod-font-size: 0) {
-    @if $line-no == 1 {
-        .cm-lineNumbers *:has(+ .cm-active)::before {
-            --flexcyon-rel-abv-1: "#{$content}"
-        }
-        @if $mod-font-size != 0 {
-            .cm-lineNumbers *:has(+ .cm-active)::before {
-                font-size: #{$mod-font-size}rem;
-            }
+    $sibling-selector: "+";
+    @for $j from 0 through $line-no {
+        @if $j > 1 {
+            $sibling-selector: $sibling-selector + "* +";
         }
     }
-    @else {
-        $sibling-selector: "";
-        @for $j from 1 through $line-no {
-            $sibling-selector: $sibling-selector + " + *";
-        }
-
-        .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active)::before {
-            --flexcyon-rel-abv-#{$line-no - 1}: "#{$content}";
-        }
-        @if $mod-font-size != 0 {
-            .cm-lineNumbers *:has(#{$sibling-selector} + .cm-active)::before {
-                font-size: #{$mod-font-size}rem;
-            }
+    .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
+        --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+    }
+    @if $mod-font-size != 0 {
+        .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
+            font-size: #{$mod-font-size}rem;
         }
     }
 }
@@ -161,4 +153,30 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
     @include target-relative-line-bel(8, "VIII");
     @include target-relative-line-bel(9, "IX");
     @include target-relative-line-bel(10, "X");
+}
+
+body {
+    @include write-relative-lines(10);
+    @include hide-preceding-lines(10);
+    @include target-relative-line-abv(1, "α", 0.925);
+    @include target-relative-line-abv(2, "β", 0.925);
+    @include target-relative-line-abv(3, "γ", 0.925);
+    @include target-relative-line-abv(4, "δ", 0.925);
+    @include target-relative-line-abv(5, "ε", 0.925);
+    @include target-relative-line-abv(6, "ζ", 0.925);
+    @include target-relative-line-abv(7, "η", 0.925);
+    @include target-relative-line-abv(8, "θ", 0.925);
+    @include target-relative-line-abv(9, "ι", 0.975);
+    @include target-relative-line-abv(10, "κ", 0.975);
+
+    @include target-relative-line-bel(1, "α", 0.925);
+    @include target-relative-line-bel(2, "β", 0.925);
+    @include target-relative-line-bel(3, "γ", 0.925);
+    @include target-relative-line-bel(4, "δ", 0.925);
+    @include target-relative-line-bel(5, "ε", 0.925);
+    @include target-relative-line-bel(6, "ζ", 0.925);
+    @include target-relative-line-bel(7, "η", 0.925);
+    @include target-relative-line-bel(8, "θ", 0.925);
+    @include target-relative-line-bel(9, "ι", 0.975);
+    @include target-relative-line-bel(10, "κ", 0.975);
 }

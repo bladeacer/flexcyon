@@ -1797,509 +1797,149 @@ body.flexcyon-enable-rel-nums.flexcyon-relative-num-only:not(.is-mobile) .cm-lin
   font-size: 0;
 }
 
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
 body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
   --flexcyon-rel-bel-1: "1";
   content: var(--flexcyon-rel-bel-1);
 }
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
   --flexcyon-rel-abv-0: "0";
   content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
 }
 body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
   --flexcyon-rel-bel-2: "2";
   content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "6";
-  content: var(--flexcyon-rel-abv-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "7";
-  content: var(--flexcyon-rel-bel-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "6";
-  content: var(--flexcyon-rel-abv-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "7";
-  content: var(--flexcyon-rel-bel-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "7";
-  content: var(--flexcyon-rel-abv-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-8: "8";
-  content: var(--flexcyon-rel-bel-8);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "6";
-  content: var(--flexcyon-rel-abv-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "7";
-  content: var(--flexcyon-rel-bel-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "7";
-  content: var(--flexcyon-rel-abv-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-8: "8";
-  content: var(--flexcyon-rel-bel-8);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "8";
-  content: var(--flexcyon-rel-abv-8);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-9: "9";
-  content: var(--flexcyon-rel-bel-9);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
-  --flexcyon-rel-abv-0: "0";
-  content: var(--flexcyon-rel-abv-0);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
-  --flexcyon-rel-bel-1: "1";
-  content: var(--flexcyon-rel-bel-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "1";
-  content: var(--flexcyon-rel-abv-1);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
-  --flexcyon-rel-bel-2: "2";
-  content: var(--flexcyon-rel-bel-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "2";
-  content: var(--flexcyon-rel-abv-2);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
-  --flexcyon-rel-bel-3: "3";
-  content: var(--flexcyon-rel-bel-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "3";
-  content: var(--flexcyon-rel-abv-3);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
-  --flexcyon-rel-bel-4: "4";
-  content: var(--flexcyon-rel-bel-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "4";
-  content: var(--flexcyon-rel-abv-4);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
-  --flexcyon-rel-bel-5: "5";
-  content: var(--flexcyon-rel-bel-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "5";
-  content: var(--flexcyon-rel-abv-5);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-6: "6";
-  content: var(--flexcyon-rel-bel-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "6";
-  content: var(--flexcyon-rel-abv-6);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-7: "7";
-  content: var(--flexcyon-rel-bel-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "7";
-  content: var(--flexcyon-rel-abv-7);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-8: "8";
-  content: var(--flexcyon-rel-bel-8);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "8";
-  content: var(--flexcyon-rel-abv-8);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-9: "9";
-  content: var(--flexcyon-rel-bel-9);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-9: "9";
-  content: var(--flexcyon-rel-abv-9);
-}
-body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
-  --flexcyon-rel-bel-10: "10";
-  content: var(--flexcyon-rel-bel-10);
 }
 body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
   --flexcyon-rel-abv-1: "1";
   content: var(--flexcyon-rel-abv-1);
 }
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
+  --flexcyon-rel-bel-3: "3";
+  content: var(--flexcyon-rel-bel-3);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "2";
+  content: var(--flexcyon-rel-abv-2);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
+  --flexcyon-rel-bel-4: "4";
+  content: var(--flexcyon-rel-bel-4);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
+  --flexcyon-rel-abv-3: "3";
+  content: var(--flexcyon-rel-abv-3);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
+  --flexcyon-rel-bel-5: "5";
+  content: var(--flexcyon-rel-bel-5);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-4: "4";
+  content: var(--flexcyon-rel-abv-4);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-6: "6";
+  content: var(--flexcyon-rel-bel-6);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-5: "5";
+  content: var(--flexcyon-rel-abv-5);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-7: "7";
+  content: var(--flexcyon-rel-bel-7);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-6: "6";
+  content: var(--flexcyon-rel-abv-6);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-8: "8";
+  content: var(--flexcyon-rel-bel-8);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-7: "7";
+  content: var(--flexcyon-rel-abv-7);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-9: "9";
+  content: var(--flexcyon-rel-bel-9);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-8: "8";
+  content: var(--flexcyon-rel-abv-8);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-10: "10";
+  content: var(--flexcyon-rel-bel-10);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-9: "9";
+  content: var(--flexcyon-rel-abv-9);
+}
+body.flexcyon-enable-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-10: "10";
+  content: var(--flexcyon-rel-abv-10);
+}
 
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
-  --flexcyon-rel-abv-1: "α" ;
+  --flexcyon-rel-abv-1: "α";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
   font-size: 0.925rem;
 }
+body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "β";
+}
+body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  font-size: 0.925rem;
+}
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "β";
+  --flexcyon-rel-abv-3: "γ";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "γ";
+  --flexcyon-rel-abv-4: "δ";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "δ";
+  --flexcyon-rel-abv-5: "ε";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "ε";
+  --flexcyon-rel-abv-6: "ζ";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "ζ";
+  --flexcyon-rel-abv-7: "η";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "η";
+  --flexcyon-rel-abv-8: "θ";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
   font-size: 0.925rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "θ";
+  --flexcyon-rel-abv-9: "ι";
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  font-size: 0.925rem;
-}
-body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "ι";
-}
-body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
   font-size: 0.95rem;
 }
-body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-9: "κ";
+body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-10: "κ";
 }
-body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active)::before {
+body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
   font-size: 0.95rem;
 }
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
@@ -2364,34 +2004,34 @@ body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) .cm-lineNu
 }
 
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
-  --flexcyon-rel-abv-1: "I" ;
+  --flexcyon-rel-abv-1: "I";
+}
+body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "II";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
-  --flexcyon-rel-abv-1: "II";
+  --flexcyon-rel-abv-3: "III";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-2: "III";
+  --flexcyon-rel-abv-4: "IV";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-3: "IV";
+  --flexcyon-rel-abv-5: "V";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-4: "V";
+  --flexcyon-rel-abv-6: "VI";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-5: "VI";
+  --flexcyon-rel-abv-7: "VII";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-6: "VII";
+  --flexcyon-rel-abv-8: "VIII";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-7: "VIII";
+  --flexcyon-rel-abv-9: "IX";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-8: "IX";
-}
-body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active)::before {
-  --flexcyon-rel-abv-9: "X";
+  --flexcyon-rel-abv-10: "X";
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
   --flexcyon-rel-bel-1: "I";
@@ -2422,6 +2062,258 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNu
 }
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
   --flexcyon-rel-bel-10: "X";
+}
+
+body .cm-lineNumbers .cm-active + *::before {
+  --flexcyon-rel-bel-1: "1";
+  content: var(--flexcyon-rel-bel-1);
+}
+body .cm-lineNumbers *:has(+ .cm-active)::before {
+  --flexcyon-rel-abv-0: "0";
+  content: var(--flexcyon-rel-abv-0);
+}
+body .cm-lineNumbers .cm-active + * + *::before {
+  --flexcyon-rel-bel-2: "2";
+  content: var(--flexcyon-rel-bel-2);
+}
+body .cm-lineNumbers *:has(+ .cm-active)::before {
+  --flexcyon-rel-abv-1: "1";
+  content: var(--flexcyon-rel-abv-1);
+}
+body .cm-lineNumbers .cm-active + * + * + *::before {
+  --flexcyon-rel-bel-3: "3";
+  content: var(--flexcyon-rel-bel-3);
+}
+body .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "2";
+  content: var(--flexcyon-rel-abv-2);
+}
+body .cm-lineNumbers .cm-active + * + * + * + *::before {
+  --flexcyon-rel-bel-4: "4";
+  content: var(--flexcyon-rel-bel-4);
+}
+body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
+  --flexcyon-rel-abv-3: "3";
+  content: var(--flexcyon-rel-abv-3);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
+  --flexcyon-rel-bel-5: "5";
+  content: var(--flexcyon-rel-bel-5);
+}
+body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-4: "4";
+  content: var(--flexcyon-rel-abv-4);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-6: "6";
+  content: var(--flexcyon-rel-bel-6);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-5: "5";
+  content: var(--flexcyon-rel-abv-5);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-7: "7";
+  content: var(--flexcyon-rel-bel-7);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-6: "6";
+  content: var(--flexcyon-rel-abv-6);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-8: "8";
+  content: var(--flexcyon-rel-bel-8);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-7: "7";
+  content: var(--flexcyon-rel-abv-7);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-9: "9";
+  content: var(--flexcyon-rel-bel-9);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-8: "8";
+  content: var(--flexcyon-rel-abv-8);
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-10: "10";
+  content: var(--flexcyon-rel-bel-10);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-9: "9";
+  content: var(--flexcyon-rel-abv-9);
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-10: "10";
+  content: var(--flexcyon-rel-abv-10);
+}
+body .cm-lineNumbers .cm-active + * + *,
+body .cm-lineNumbers *:has(+ * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + *,
+body .cm-lineNumbers *:has(+ * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + *,
+body .cm-lineNumbers *:has(+ * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *,
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + * + .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers *:has(+ .cm-active) {
+  font-size: 0;
+}
+body .cm-lineNumbers *:has(+ .cm-active)::before {
+  --flexcyon-rel-abv-1: "α";
+}
+body .cm-lineNumbers *:has(+ .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "β";
+}
+body .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
+  --flexcyon-rel-abv-3: "γ";
+}
+body .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-4: "δ";
+}
+body .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-5: "ε";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-6: "ζ";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-7: "η";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-8: "θ";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-9: "ι";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
+  font-size: 0.975rem;
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-10: "κ";
+}
+body .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  font-size: 0.975rem;
+}
+body .cm-lineNumbers .cm-active + *::before {
+  --flexcyon-rel-bel-1: "α";
+}
+body .cm-lineNumbers .cm-active + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + *::before {
+  --flexcyon-rel-bel-2: "β";
+}
+body .cm-lineNumbers .cm-active + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + *::before {
+  --flexcyon-rel-bel-3: "γ";
+}
+body .cm-lineNumbers .cm-active + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + *::before {
+  --flexcyon-rel-bel-4: "δ";
+}
+body .cm-lineNumbers .cm-active + * + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
+  --flexcyon-rel-bel-5: "ε";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-6: "ζ";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-7: "η";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-8: "θ";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
+  font-size: 0.925rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-9: "ι";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
+  font-size: 0.975rem;
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-10: "κ";
+}
+body .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
+  font-size: 0.975rem;
 }
 
 /* Callout modifications */
