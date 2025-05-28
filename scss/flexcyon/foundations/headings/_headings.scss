@@ -69,19 +69,17 @@ body.flexcyon-h6-underline-enabled h6 {
 }
 
 @mixin headings-indicator($h_level) {
-    body.flexcyon-headings-indicator-h#{$h_level},
     .headings-indicator-all,
-    .headings-indicator-h#{$h_level} {
-        .workspace-leaf-content[data-type="markdown"] {
-            h#{$h_level}:not(:hover)::before,
-            .HyperMD-header-#{$h_level}::before {
-                position: relative;
-                content: "h#{$h_level}";
-                color: var(--h#{$h_level}-color);
-                opacity: calc(var(--dimmed) + 0.25);
-                font-size: var(--font-ui-medium);
-                padding-right: 8px;
-            }
+    .headings-indicator-h#{$h_level},
+    .flexcyon-headings-indicator-h#{$h_level} .workspace-leaf-content[data-type="markdown"] {
+        h#{$h_level}:not(:hover)::before,
+        .HyperMD-header-#{$h_level}::before {
+            position: relative;
+            content: "h#{$h_level}";
+            color: var(--h#{$h_level}-color);
+            opacity: calc(var(--dimmed) + 0.25);
+            font-size: var(--font-ui-medium);
+            padding-right: 8px;
         }
     }
 }

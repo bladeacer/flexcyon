@@ -861,6 +861,38 @@ settings:
     type: class-toggle
     default: true
 
+  - title: Line Numbers
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Relative Line Numbers
+    description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
+    id: flexcyon-enable-rel-nums
+    type: class-toggle
+    default: false
+  - title: Relative and normal line numbers on different lines
+    description: Does not display line numbers for lines which have relative line numbers displayed. 
+    type: class-toggle
+    id: flexcyon-no-num-with-relative
+    default: false
+  - title: Only display relative line numbers
+    description: Overrides previous configuration option.
+    type: class-toggle
+    id: flexcyon-relative-num-only
+    default: false
+  - title: Configure Relative Line Number Style
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Roman
+        value: flexcyon-roman-rel-nums
+      - 
+        label: Greek
+        value: flexcyon-greek-rel-nums
+
   - title: Settings
     type: heading
     level: 4

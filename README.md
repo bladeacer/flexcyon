@@ -16,11 +16,13 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 There is also a light mode colour scheme combining [Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's colour schemes.
 
 ## Screenshots
-![](./docs/docs/assets/screenshots/showcase1.png)
+![Figure 1: ASCII Art, Dimmed File Extensions](./docs/docs/assets/screenshots/showcase1.png)
 
-![](./docs/docs/assets/screenshots/showcase2.png)
+![Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar](./docs/docs/assets/screenshots/showcase2.png)
 
-![](./docs/docs/assets/screenshots/showcase3.png)
+![Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons](./docs/docs/assets/screenshots/showcase3.png)
+
+![Figure 4: Light Mode with Powerlevel10k layout and status style](./docs/docs/assets/screenshots/showcase4.png)
 
 ## Installation via community store (recommended)
 To install this theme via the community store, navigate to  `Settings > Appearance`
@@ -38,10 +40,9 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 5. Input `https://github.com/bladeacer/flexcyon` and then click `Add Theme`
 
 ## Documentation
-A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.readthedocs.io/en/latest
-> This site will be deprecated in favour of https://flexcyon-docs.readthedocs.io/en/latest/
->
+A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-docs.readthedocs.io/en/latest
 > I want to keep the docs and source code separate, there are translations for Chinese and Spanish in a beta stage
+> The old documentation is now fully deprecated and its links will not work.
 
 
 ## Features
@@ -57,16 +58,16 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon.r
 - a light and dark mode colour scheme
 - ASCII checkboxes 
 - Heading options like underline, numbered, coloured
-- A [plethora of cssclasses and callout customisation options](https://flexcyon.readthedocs.io/en/latest/Styling/CSS-Classes/)
+- A [plethora of cssclasses and callout customisation options](https://flexcyon-docs.readthedocs.io/en/latest/Styling/CSS-Classes/)
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs 
 - And many more...
 
-![](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
+![Figure 5: ASCII checkboxes](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
 
 #### Easter Egg Mode
-**Deprecated**, View details at https://flexcyon.readthedocs.io/en/latest/README/page-5/ 
+**Deprecated**, View details at https://flexcyon-docs.readthedocs.io/en/latest/README/page-5/ 
 
 #### What this theme does not have
 - multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
@@ -100,10 +101,10 @@ Here are some recommended snippets to add to your vault and use alongside Flexcy
 
 
 #### Roadmap
-The Roadmap for this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/README/roadmap/).
+The Roadmap for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/README/roadmap/).
 
 #### Changelogs
-The Changelogs for this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/changelogs/)
+The Changelogs for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/changelogs/)
 
 #### Questions, Issues?
 Feel free to talk about it at:
@@ -123,7 +124,7 @@ This theme tries to:
 - bundle numerous callout metadata utilites
 
 ## Style Settings
-Documentation for style settings of this theme can be found [here](https://flexcyon.readthedocs.io/en/latest/Styling/Style-Settings)
+Documentation for style settings of this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/Styling/Style-Settings)
 
 Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
 
@@ -141,6 +142,7 @@ In addition, the light mode colour scheme would not be possible without the grea
 - `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
 - `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
 - [Enhanced File Explorer](https://github.com/LennZone/enhanced-file-explorer-tree) Theme by LennZone for the markdown file tree style
+- [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) theme for relative line numbers
 
 #### Ideas, Feedback
 - `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings
@@ -160,17 +162,19 @@ This theme would not be possible without the use of the following tools/dependen
 - Obsidian Share Note plugin
 
 ##### Text Editors
-- Vim 
+- Vim
 - VS Code
 - Vim Emulation on VSCode
 
 ##### Version Control
+
 - Git
 - GitHub
 
 ##### Documentation
+
 - MkDocs
     - and the awesome ecosystem built around it
-- Material for MkDocs 
+- Material for MkDocs
 - ReadTheDocs
 - Giscus

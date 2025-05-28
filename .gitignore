@@ -2,3 +2,4 @@
 ./TODO.md
 ./docs/site
 ./docs/.venv
+./docs/.venv/*
