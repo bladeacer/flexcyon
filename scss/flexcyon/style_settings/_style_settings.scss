@@ -892,6 +892,14 @@ settings:
       - 
         label: Greek
         value: flexcyon-greek-rel-nums
+      - 
+        label: Chinese
+        value: flexcyon-chinese-rel-nums
+  - title: Active Line Number inherits Relative Line Number Style
+    description: Do note that I have to get creative for Greek and Roman as they do not exactly have letters or numbers before I or alpha.
+    type: class-toggle
+    id: flexcyon-active-inherits-rel-num
+    default: false
 
   - title: Settings
     type: heading
@@ -1351,6 +1359,16 @@ settings:
     description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
     id: flexcyon-rtz-mode
     default: false
+  - title: Enable Writing mode globally
+    type: class-toggle
+    description: Like the corresponding callout metadata option but applied globally instead
+    id: flexcyon-editor-writing
+    default: false
+  - title: Writing mode indentation
+    type: variable-number
+    id: flexcyon-editor-writing-indentation
+    default: 16
+    format: px
  */
 
 body {

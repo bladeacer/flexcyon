@@ -10,6 +10,7 @@ body {
     --flexcyon-callouts-flashcard-width: 250px;
     --flexcyon-callouts-flashcard-height: 250px;
     --flexcyon-callout-flashcard-animation-duration: 0.5s;
+    --flexcyon-editor-writing-indentation: 16px;
 
     --callout-padding: var(--size-4-3) var(--size-4-6);
 
@@ -533,9 +534,10 @@ div.callout[data-callout-metadata*="flashcard"] {
 
 }
 
+.flexcyon-editor-writing .cm-line,
 .editor-writing .cm-line,
 div.callout[data-callout-metadata*="writing"] .callout-content p {
-    text-indent: 16px;
+    text-indent: var(--flexcyon-editor-writing-indentation);
     white-space: initial;
     word-wrap: break-word;
     margin-block-end: calc(1.25 * var(--p-spacing));

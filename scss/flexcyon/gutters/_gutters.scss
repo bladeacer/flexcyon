@@ -159,3 +159,51 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
     @include target-relative-line-bel(9, "IX");
     @include target-relative-line-bel(10, "X");
 }
+
+// Chinese numbers
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
+    @include target-relative-line-abv(1, "一");
+    @include target-relative-line-abv(2, "二");
+    @include target-relative-line-abv(3, "三");
+    @include target-relative-line-abv(4, "四");
+    @include target-relative-line-abv(5, "五");
+    @include target-relative-line-abv(6, "六");
+    @include target-relative-line-abv(7, "七");
+    @include target-relative-line-abv(8, "八");
+    @include target-relative-line-abv(9, "九");
+    @include target-relative-line-abv(10, "十");
+
+    @include target-relative-line-bel(1, "一");
+    @include target-relative-line-bel(2, "二");
+    @include target-relative-line-bel(3, "三");
+    @include target-relative-line-bel(4, "四");
+    @include target-relative-line-bel(5, "五");
+    @include target-relative-line-bel(6, "六");
+    @include target-relative-line-bel(7, "七");
+    @include target-relative-line-bel(8, "八");
+    @include target-relative-line-bel(9, "九");
+    @include target-relative-line-bel(10, "十");
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile) {
+    .cm-gutterElement.cm-active {
+        font-size: 0;
+        &::before {
+            content: "0";
+            font-size: calc(var(--font-ui-medium) + 0.07rem);
+        }
+    }
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(.is-mobile),
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(.is-mobile) {
+    .cm-gutterElement.cm-active::before {
+        content: "->";
+    }
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(.is-mobile) {
+    .cm-gutterElement.cm-active::before {
+        content: "零";
+    }
+}

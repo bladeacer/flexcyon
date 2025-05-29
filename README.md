@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/downloads-900+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <img src="https://img.shields.io/badge/downloads-1000+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     </a>
@@ -16,13 +16,13 @@ I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyo
 There is also a light mode colour scheme combining [Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's colour schemes.
 
 ## Screenshots
-![Figure 1: ASCII Art, Dimmed File Extensions](./docs/docs/assets/screenshots/showcase1.png)
+![Figure 1: ASCII Art, Dimmed File Extensions](./docs/showcase1.png)
 
-![Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar](./docs/docs/assets/screenshots/showcase2.png)
+![Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar](./docs/showcase2.png)
 
-![Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons](./docs/docs/assets/screenshots/showcase3.png)
+![Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons](./docs/showcase3.png)
 
-![Figure 4: Light Mode with Powerlevel10k layout and status style](./docs/docs/assets/screenshots/showcase4.png)
+![Figure 4: Light Mode with Powerlevel10k layout and status style](./docs/showcase4.png)
 
 ## Installation via community store (recommended)
 To install this theme via the community store, navigate to  `Settings > Appearance`
@@ -43,6 +43,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-docs.readthedocs.io/en/latest
 > I want to keep the docs and source code separate, there are translations for Chinese and Spanish in a beta stage
 > The old documentation is now fully deprecated and its links will not work.
+> (was https://flexcyon.readthedocs.io/en/latest )
 
 
 ## Features
@@ -56,7 +57,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 - ASCII art or custom quote in new empty tabs
 - subtle opacity effects for UI elements
 - a light and dark mode colour scheme
-- ASCII checkboxes 
+- ASCII checkboxes
 - Heading options like underline, numbered, coloured
 - A [plethora of cssclasses and callout customisation options](https://flexcyon-docs.readthedocs.io/en/latest/Styling/CSS-Classes/)
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
@@ -132,49 +133,5 @@ Documentation on installing and using style settings can be found [here](https:/
 This theme is licensed under the [MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE)
 
 ## Credits
-A huge shout out to Daniel's [Halcyon theme](https://github.com/dbarenholz/halcyon-obsidian) and kepano's [flexoki](https://github.com/kepano/flexoki-obsidian) theme, both of which are under the MIT license.
+See https://flexcyon-docs.readthedocs.io/en/latest/credits/
 
-In addition, the light mode colour scheme would not be possible without the great [Origami theme](https://github.com/7368697661/Origami) (which is also under the MIT License).
-
-#### Snippets
-- `@OWA/bennyyip` on the Obisidian Members' Group Discord for the tategaki snippet
-- [Ukiyo](https://github.com/technerium/obsidian-ukiyo) Theme by vaykinov and wizentex for the popup callout
-- `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for the background image snippet
-- `@Nuno` on the Obsidian Members' Group Discord for the tab animations snippet
-- [Enhanced File Explorer](https://github.com/LennZone/enhanced-file-explorer-tree) Theme by LennZone for the markdown file tree style
-- [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) theme for relative line numbers
-
-#### Ideas, Feedback
-- `@Tuck` on the Obsidian Members' Group Discord for options to change link color and indentation of Style Settings headings
-- `@Floodlight` on the Obisidian Members' Group Discord for better consistency of active navigation items
-- `@Dante` on the Obisidian Members' Group Discord for embeds not displaying
-- `@TundraMoonlight` on the Obisidian Members' Group Discord for inspiration for the TUI add-on
-- `@Kapirklaa` on the Obisidian Members' Group Discord (@ElsaTam on GitHub) for inspiration for callout metadata utilities
-- `@BEN10` on the Obisidian Members' Group Discord for fixes to the documentation, Powerlevel10k layout
-- `@Michael` on the Obisidian Members' Group Discord for global heading indicators
-- `@Binaris` on the Obsidian Members' Group Discord for fixing display none that was incorrectly to all `<hr>`s instead of last child `<hr>` in Markdown embeds
-- [Shimmering Focus](https://github.com/chrisgrieser/shimmering-focus) theme for RTZ mode and prompt styling
-
-#### Software
-This theme would not be possible without the use of the following tools/dependencies/software:
-
-##### Web Showcase
-- Obsidian Share Note plugin
-
-##### Text Editors
-- Vim
-- VS Code
-- Vim Emulation on VSCode
-
-##### Version Control
-
-- Git
-- GitHub
-
-##### Documentation
-
-- MkDocs
-    - and the awesome ecosystem built around it
-- Material for MkDocs
-- ReadTheDocs
-- Giscus

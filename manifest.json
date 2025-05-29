@@ -1,9 +1,9 @@
 {
   "name": "flexcyon",
-  "repo": "bladeacer/flexcyon",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "minAppVersion": "1.6.3",
   "author": "bladeacer",
   "screenshot" : "./docs/dark.png",
-  "modes": ["light", "dark"]
+  "modes": ["light", "dark"],
+  "fundingUrl": "https://github.com/sponsors/bladeacer"
 }

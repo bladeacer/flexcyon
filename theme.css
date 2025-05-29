@@ -2064,6 +2064,84 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) .cm-lineNu
   --flexcyon-rel-bel-10: "X";
 }
 
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ .cm-active)::before {
+  --flexcyon-rel-abv-1: "一";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + .cm-active)::before {
+  --flexcyon-rel-abv-2: "二";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + .cm-active)::before {
+  --flexcyon-rel-abv-3: "三";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-4: "四";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-5: "五";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-6: "六";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-7: "七";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-8: "八";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-9: "九";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers *:has(+ * + * + * + * + * + * + * + * + * + .cm-active)::before {
+  --flexcyon-rel-abv-10: "十";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + *::before {
+  --flexcyon-rel-bel-1: "一";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + *::before {
+  --flexcyon-rel-bel-2: "二";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + *::before {
+  --flexcyon-rel-bel-3: "三";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + *::before {
+  --flexcyon-rel-bel-4: "四";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + *::before {
+  --flexcyon-rel-bel-5: "五";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-6: "六";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-7: "七";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-8: "八";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-9: "九";
+}
+body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-lineNumbers .cm-active + * + * + * + * + * + * + * + * + * + *::before {
+  --flexcyon-rel-bel-10: "十";
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile) .cm-gutterElement.cm-active {
+  font-size: 0;
+}
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile) .cm-gutterElement.cm-active::before {
+  content: "0";
+  font-size: calc(var(--font-ui-medium) + 0.07rem);
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(.is-mobile) .cm-gutterElement.cm-active::before,
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(.is-mobile) .cm-gutterElement.cm-active::before {
+  content: "->";
+}
+
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(.is-mobile) .cm-gutterElement.cm-active::before {
+  content: "零";
+}
+
 /* Callout modifications */
 body {
   --flexcyon-callout-bg-opacity: 20%;
@@ -2074,6 +2152,7 @@ body {
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
   --flexcyon-callout-flashcard-animation-duration: 0.5s;
+  --flexcyon-editor-writing-indentation: 16px;
   --callout-padding: var(--size-4-3) var(--size-4-6);
 }
 body div.callout .callout-icon {
@@ -3354,9 +3433,10 @@ div.callout[data-callout-metadata*=flashcard]:hover .callout-content {
   opacity: 1;
 }
 
+.flexcyon-editor-writing .cm-line,
 .editor-writing .cm-line,
 div.callout[data-callout-metadata*=writing] .callout-content p {
-  text-indent: 16px;
+  text-indent: var(--flexcyon-editor-writing-indentation);
   white-space: initial;
   word-wrap: break-word;
   margin-block-end: calc(1.25 * var(--p-spacing));
@@ -6203,6 +6283,14 @@ settings:
       - 
         label: Greek
         value: flexcyon-greek-rel-nums
+      - 
+        label: Chinese
+        value: flexcyon-chinese-rel-nums
+  - title: Active Line Number inherits Relative Line Number Style
+    description: Do note that I have to get creative for Greek and Roman as they do not exactly have letters or numbers before I or alpha.
+    type: class-toggle
+    id: flexcyon-active-inherits-rel-num
+    default: false
 
   - title: Settings
     type: heading
@@ -6662,6 +6750,16 @@ settings:
     description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
     id: flexcyon-rtz-mode
     default: false
+  - title: Enable Writing mode globally
+    type: class-toggle
+    description: Like the corresponding callout metadata option but applied globally instead
+    id: flexcyon-editor-writing
+    default: false
+  - title: Writing mode indentation
+    type: variable-number
+    id: flexcyon-editor-writing-indentation
+    default: 16
+    format: px
  */
 body div.pcr-app.visible {
   background-color: var(--color-base-30);
