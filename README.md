@@ -65,7 +65,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 - Animation options for tabs 
 - And many more...
 
-![Figure 5: ASCII checkboxes](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
+![Figure 5: ASCII checkboxes](./docs/ascii_checkboxes1.png)
 
 #### Easter Egg Mode
 **Deprecated**, View details at https://flexcyon-docs.readthedocs.io/en/latest/README/page-5/ 
