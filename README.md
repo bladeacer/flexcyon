@@ -6,6 +6,8 @@
     <a href="https://github.com/bladeacer/flexcyon/releases">
         <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
     </a>
+</p>
+<p align="left">
     <a href="https://app.readthedocs.org/projects/flexcyon-docs/">
       <img alt="English Docs" src="https://img.shields.io/readthedocs/flexcyon-docs?style=for-the-badge&label=English%20Docs" referrerpolicy="noreferrer">
     </a>
