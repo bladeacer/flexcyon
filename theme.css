@@ -1026,25 +1026,61 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > p > input:checked:hover
   filter: brightness(1.25);
 }
 
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+1)::marker,
-body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+1)::marker {
-  color: var(--color-blue);
+body.flexcyon-rainbow-bullet-points ul .list-bullet::before {
+  content: ".";
+  font-size: 2.5rem;
+  position: absolute;
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+2)::marker,
-body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+2)::marker {
+body.flexcyon-rainbow-bullet-points ul .list-bullet::after {
+  display: none;
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+0) .list-bullet::before {
+  color: var(--color-purple);
+}
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+0) .list-bullet::after {
+  background-color: var(--color-purple);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+1) .list-bullet::before {
   color: var(--color-cyan);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+3)::marker,
-body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+3)::marker {
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+1) .list-bullet::after {
+  background-color: var(--color-cyan);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+2) .list-bullet::before {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+2) .list-bullet::after {
+  background-color: var(--color-blue);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+3) .list-bullet::before {
   color: var(--color-pink);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+4)::marker,
-body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+4)::marker {
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+3) .list-bullet::after {
+  background-color: var(--color-pink);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+4) .list-bullet::before {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-bullet-points ol > li:nth-of-type(6n+5)::marker,
-body.flexcyon-rainbow-bullet-points ul > li:nth-of-type(6n+5)::marker {
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+4) .list-bullet::after {
+  background-color: var(--color-green);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+5) .list-bullet::before {
   color: var(--color-yellow);
+}
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+5) .list-bullet::after {
+  background-color: var(--color-yellow);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+6) .list-bullet::before {
+  color: var(--color-orange);
+}
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+6) .list-bullet::after {
+  background-color: var(--color-orange);
+}
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+7) .list-bullet::before {
+  color: var(--color-red);
+}
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+7) .list-bullet::after {
+  background-color: var(--color-red);
 }
 
 body {
@@ -1315,29 +1351,32 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
 body.flexcyon-sidedock-icon-effects div.side-dock-actions:hover {
   opacity: 1;
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n):hover {
-  color: var(--color-blue);
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :hover {
   scale: var(--expand);
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+1):hover {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+0):hover {
   color: var(--color-purple);
-  scale: var(--expand);
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+2):hover {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+1):hover {
   color: var(--color-cyan);
-  scale: var(--expand);
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+3):hover {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+2):hover {
+  color: var(--color-blue);
+}
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+3):hover {
   color: var(--color-pink);
-  scale: var(--expand);
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+4):hover {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+4):hover {
   color: var(--color-green);
-  scale: var(--expand);
 }
-body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(5n+5):hover {
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+5):hover {
   color: var(--color-yellow);
-  scale: var(--expand);
+}
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+6):hover {
+  color: var(--color-orange);
+}
+body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n+7):hover {
+  color: var(--color-red);
 }
 
 body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
@@ -4705,44 +4744,85 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
   content: ".";
 }
 
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-title {
-  color: var(--color-cyan);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+1) .nav-folder-title .collapse-icon svg {
-  color: var(--color-cyan);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title {
-  color: var(--color-blue);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+2) .nav-folder-title .collapse-icon svg {
-  color: var(--color-blue);
-}
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title {
   color: var(--color-purple);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+3) .nav-folder-title .collapse-icon svg {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title .collapse-icon svg {
   color: var(--color-purple);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-purple);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title {
+  color: var(--color-cyan);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title .collapse-icon svg {
+  color: var(--color-cyan);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-cyan);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title .collapse-icon svg {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-blue);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title {
   color: var(--color-pink);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+4) .nav-folder-title .collapse-icon svg {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title .collapse-icon svg {
   color: var(--color-pink);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-pink);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-title {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title .collapse-icon svg {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n+5) .nav-folder-title .collapse-icon svg {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title {
   color: var(--color-yellow);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(6n) .nav-folder-title .collapse-icon svg {
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title .collapse-icon svg {
   color: var(--color-yellow);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-yellow);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title {
+  color: var(--color-orange);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title .collapse-icon svg {
+  color: var(--color-orange);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-orange);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title {
+  color: var(--color-red);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title .collapse-icon svg {
+  color: var(--color-red);
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title,
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title .collapse-icon svg {
+  color: var(--color-red);
 }
 
 body.flexcyon-alt-folder-style .nav-folder .collapse-icon svg {

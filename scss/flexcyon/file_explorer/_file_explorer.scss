@@ -27,76 +27,42 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
     }
 }
 
+@mixin nth-nav-folder-colors($color-map: ()) {
+  $max-index: 0;
+  @each $index, $color in $color-map {
+    $max-index: max($max-index, $index);
+  }
+  $interval: $max-index + 1;
+
+  @each $index, $color in $color-map {
+    .nav-folder:nth-of-type(#{$interval}n+#{$index}) {
+      .nav-folder-title {
+        color: var(--color-#{$color}); 
+
+        .collapse-icon svg {
+          color: var(--color-#{$color}); 
+        }
+      }
+      .nav-folder .nav-folder-title,
+      .nav-folder .nav-folder-title .collapse-icon svg {
+          color: var(--color-#{$color}); 
+      }
+    }
+  }
+}
+
 body.flexcyon-rainbow-folders {
     .nav-files-container div {
-        .nav-folder:nth-of-type(6n+1) {
-            .nav-folder-title {
-                color: var(--color-cyan);
-
-                .collapse-icon svg {
-                    color: var(--color-cyan);
-                }
-            }
-
-        }
-
-        .nav-folder:nth-of-type(6n+2) {
-            .nav-folder-title {
-                color: var(--color-blue);
-
-                .collapse-icon svg {
-                    color: var(--color-blue);
-                }
-            }
-
-        }
-
-        .nav-folder:nth-of-type(6n+3) {
-            .nav-folder-title {
-                color: var(--color-purple);
-
-                .collapse-icon svg {
-                    color: var(--color-purple);
-                }
-            }
-
-        }
-
-        .nav-folder:nth-of-type(6n+4) {
-            .nav-folder-title {
-                color: var(--color-pink);
-
-                .collapse-icon svg {
-                    color: var(--color-pink);
-                }
-            }
-
-        }
-
-        .nav-folder:nth-of-type(6n+5) {
-            color: var(--color-green);
-
-            .nav-folder-title {
-                color: var(--color-green);
-
-                .collapse-icon svg {
-                    color: var(--color-green);
-                }
-            }
-
-        }
-
-        .nav-folder:nth-of-type(6n) {
-            .nav-folder-title {
-                color: var(--color-yellow);
-
-                .collapse-icon svg {
-                    color: var(--color-yellow);
-                }
-            }
-
-
-        }
+      @include nth-nav-folder-colors((
+        0: purple,
+        1: cyan,
+        2: blue,
+        3: pink,
+        4: green,
+        5: yellow,
+        6: orange,
+        7: red
+      ));
     }
 }
 

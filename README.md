@@ -1,10 +1,19 @@
-<p align="center">
+<p align="left">
     <img src="https://img.shields.io/badge/downloads-1000+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/releases">
         <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver">
+    </a>
+    <a href="https://app.readthedocs.org/projects/flexcyon-docs/">
+      <img alt="English Docs" src="https://img.shields.io/readthedocs/flexcyon-docs?style=for-the-badge&label=English%20Docs" referrerpolicy="noreferrer">
+    </a>
+    <a href="https://app.readthedocs.org/projects/flexcyon-docs-cn/">
+      <img alt="Chinese Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-cn?style=for-the-badge&label=Chinese%20Docs" referrerpolicy="noreferrer">
+    </a>
+    <a href="https://app.readthedocs.org/projects/flexcyon-docs-es/">
+      <img alt="Spanish Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-es?style=for-the-badge&label=Spanish%20Docs" referrerpolicy="noreferrer">
     </a>
 </p>
 
@@ -65,7 +74,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 - Animation options for tabs 
 - And many more...
 
-![Figure 5: ASCII checkboxes](./docs/docs/assets/screenshots/ascii_checkboxes1.png)
+![Figure 5: ASCII checkboxes](./docs/ascii_checkboxes1.png)
 
 #### Easter Egg Mode
 **Deprecated**, View details at https://flexcyon-docs.readthedocs.io/en/latest/README/page-5/ 

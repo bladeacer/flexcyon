@@ -152,30 +152,43 @@ body.flexcyon-ascii-checkboxes-enabled {
   }
 }
 
+@mixin nth-bullet-point($color-map: ()) {
+  $max-index: 0;
+  @each $index, $color in $color-map {
+    $max-index: max($max-index, $index);
+  }
+  $interval: $max-index + 1;
+
+  @each $index, $color in $color-map {
+    ul :nth-of-type(#{$interval}n+#{$index}) .list-bullet::before {
+      color: var(--color-#{$color});
+    }
+    .HyperMD-list-line:nth-of-type(#{$interval}n+#{$index}) .list-bullet::after {
+      background-color: var(--color-#{$color});
+    }
+  }
+}
+
 body.flexcyon-rainbow-bullet-points {
-
-  ol>li:nth-of-type(6n+1)::marker,
-  ul>li:nth-of-type(6n+1)::marker {
-    color: var(--color-blue);
+  ul {
+    .list-bullet::before {
+      content: ".";
+      font-size: 2.5rem;
+      position: absolute;
+    }
+    .list-bullet::after {
+      display: none;
+    }
   }
+  @include nth-bullet-point((
+    0: purple,
+    1: cyan,
+    2: blue,
+    3: pink,
+    4: green,
+    5: yellow,
+    6: orange,
+    7: red
+  ));
 
-  ol>li:nth-of-type(6n+2)::marker,
-  ul>li:nth-of-type(6n+2)::marker {
-    color: var(--color-cyan);
-  }
-
-  ol>li:nth-of-type(6n+3)::marker,
-  ul>li:nth-of-type(6n+3)::marker {
-    color: var(--color-pink);
-  }
-
-  ol>li:nth-of-type(6n+4)::marker,
-  ul>li:nth-of-type(6n+4)::marker {
-    color: var(--color-green);
-  }
-
-  ol>li:nth-of-type(6n+5)::marker,
-  ul>li:nth-of-type(6n+5)::marker {
-    color: var(--color-yellow);
-  }
 }
