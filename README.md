@@ -1,5 +1,7 @@
 <p align="left">
-    <img src="https://img.shields.io/badge/downloads-1000+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon-1/">
+        <img src="https://img.shields.io/badge/downloads-1000+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+    </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
     </a>
@@ -8,13 +10,13 @@
     </a>
 </p>
 <p align="left">
-    <a href="https://app.readthedocs.org/projects/flexcyon-docs/">
+    <a href="https://flexcyon-docs.readthedocs.io/en/latest/">
       <img alt="English Docs" src="https://img.shields.io/readthedocs/flexcyon-docs?style=for-the-badge&label=English%20Docs" referrerpolicy="noreferrer">
     </a>
-    <a href="https://app.readthedocs.org/projects/flexcyon-docs-cn/">
+    <a href="https://flexcyon-docs.readthedocs.io/zh-cn/latest/">
       <img alt="Chinese Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-cn?style=for-the-badge&label=Chinese%20Docs" referrerpolicy="noreferrer">
     </a>
-    <a href="https://app.readthedocs.org/projects/flexcyon-docs-es/">
+    <a href="https://flexcyon-docs.readthedocs.io/es/latest/">
       <img alt="Spanish Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-es?style=for-the-badge&label=Spanish%20Docs" referrerpolicy="noreferrer">
     </a>
 </p>
