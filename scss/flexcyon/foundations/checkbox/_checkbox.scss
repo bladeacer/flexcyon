@@ -14,6 +14,12 @@ body {
   .checkbox-container.is-enabled {
     background-color: var(--flexcyon-lime-green);
   }
+  .list-bullet {
+    transform: translateY(3px);
+  }
+  .cm-formatting-list-ul {
+    padding-right: 6px;
+  }
 }
 
 @mixin flexcyon-ascii-checkbox($data-task, $color) {
@@ -160,26 +166,14 @@ body.flexcyon-ascii-checkboxes-enabled {
   $interval: $max-index + 1;
 
   @each $index, $color in $color-map {
-    ul :nth-of-type(#{$interval}n+#{$index}) .list-bullet::before {
-      color: var(--color-#{$color});
-    }
-    .HyperMD-list-line:nth-of-type(#{$interval}n+#{$index}) .list-bullet::after {
-      background-color: var(--color-#{$color});
+    .HyperMD-list-line:nth-of-type(#{$interval}n+#{$index}) .list-bullet::after,
+    ul :nth-of-type(#{$interval}n+#{$index}) .list-bullet::after {
+      --list-marker-color: var(--color-#{$color});
     }
   }
 }
 
 body.flexcyon-rainbow-bullet-points {
-  ul {
-    .list-bullet::before {
-      content: ".";
-      font-size: 2.5rem;
-      position: absolute;
-    }
-    .list-bullet::after {
-      display: none;
-    }
-  }
   @include nth-bullet-point((
     0: purple,
     1: cyan,
@@ -190,5 +184,4 @@ body.flexcyon-rainbow-bullet-points {
     6: orange,
     7: red
   ));
-
 }

@@ -678,6 +678,12 @@ body .checkbox-container {
 body .checkbox-container.is-enabled {
   background-color: var(--flexcyon-lime-green);
 }
+body .list-bullet {
+  transform: translateY(3px);
+}
+body .cm-formatting-list-ul {
+  padding-right: 6px;
+}
 
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
@@ -1026,61 +1032,37 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > p > input:checked:hover
   filter: brightness(1.25);
 }
 
-body.flexcyon-rainbow-bullet-points ul .list-bullet::before {
-  content: ".";
-  font-size: 2.5rem;
-  position: absolute;
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+0) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+0) .list-bullet::after {
+  --list-marker-color: var(--color-purple);
 }
-body.flexcyon-rainbow-bullet-points ul .list-bullet::after {
-  display: none;
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+1) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+1) .list-bullet::after {
+  --list-marker-color: var(--color-cyan);
 }
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+0) .list-bullet::before {
-  color: var(--color-purple);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+2) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+2) .list-bullet::after {
+  --list-marker-color: var(--color-blue);
 }
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+0) .list-bullet::after {
-  background-color: var(--color-purple);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+3) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+3) .list-bullet::after {
+  --list-marker-color: var(--color-pink);
 }
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+1) .list-bullet::before {
-  color: var(--color-cyan);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+4) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+4) .list-bullet::after {
+  --list-marker-color: var(--color-green);
 }
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+1) .list-bullet::after {
-  background-color: var(--color-cyan);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+5) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+5) .list-bullet::after {
+  --list-marker-color: var(--color-yellow);
 }
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+2) .list-bullet::before {
-  color: var(--color-blue);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+6) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+6) .list-bullet::after {
+  --list-marker-color: var(--color-orange);
 }
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+2) .list-bullet::after {
-  background-color: var(--color-blue);
-}
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+3) .list-bullet::before {
-  color: var(--color-pink);
-}
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+3) .list-bullet::after {
-  background-color: var(--color-pink);
-}
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+4) .list-bullet::before {
-  color: var(--color-green);
-}
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+4) .list-bullet::after {
-  background-color: var(--color-green);
-}
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+5) .list-bullet::before {
-  color: var(--color-yellow);
-}
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+5) .list-bullet::after {
-  background-color: var(--color-yellow);
-}
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+6) .list-bullet::before {
-  color: var(--color-orange);
-}
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+6) .list-bullet::after {
-  background-color: var(--color-orange);
-}
-body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+7) .list-bullet::before {
-  color: var(--color-red);
-}
-body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+7) .list-bullet::after {
-  background-color: var(--color-red);
+body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+7) .list-bullet::after,
+body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n+7) .list-bullet::after {
+  --list-marker-color: var(--color-red);
 }
 
 body {
