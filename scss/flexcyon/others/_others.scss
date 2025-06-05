@@ -70,6 +70,10 @@ body.flexcyon-enable-alt-active-item-effect {
     }
 }
 
-span.media-embed * {
+body span.media-embed * {
     margin: var(--flexcyon-media-embed-vertical-margin) 0px;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote {
+    top: -0.1em;
 }

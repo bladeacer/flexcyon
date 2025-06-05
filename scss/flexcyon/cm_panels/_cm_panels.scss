@@ -13,6 +13,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     color: var(--text-muted);
     height: 30px;
     padding: 0px 8px;
+    font-size: var(--font-ui-medium);
   }
 
   .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
@@ -24,6 +25,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     height: 30px;
     color: var(--text-muted);
     padding: 0px 8px;
+    font-size: var(--font-ui-medium);
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
@@ -48,6 +50,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     content: var(--flexcyon-vim-command-text);
     bottom: var(--flexcyon-vim-bottom-positioning);
     padding-right: 4px;
+    font-size: var(--font-ui-medium);
   }
 
   .cm-editor>.cm-scroller+.cm-panels .cm-panel div {

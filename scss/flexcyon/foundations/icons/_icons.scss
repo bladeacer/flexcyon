@@ -7,6 +7,8 @@ body {
     --expand: 110%;
     --less-letter-spacing: -3px;
     --flexcyon-comm-item-opacity: 0.89;
+    --flexcyon-tree-item-horiz-padding: 8px;
+    --flexcyon-tree-item-verti-padding: 0.75px;
 
     .clickable-icon {
         opacity: var(--dimmed);
@@ -46,7 +48,7 @@ body {
     .oz-folder-line,
     .oz-nav-file,
     .tree-item {
-        padding: 0.75px 8px;
+        padding: var(--flexcyon-tree-item-verti-padding) var(--flexcyon-tree-item-horiz-padding);
     }
 }
 

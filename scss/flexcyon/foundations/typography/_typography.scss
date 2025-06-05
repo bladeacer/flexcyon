@@ -1,12 +1,8 @@
 // The code snippets in this file are derived from the Halcyon theme 
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
-body.theme-light {
-  --text-highlight-bg: var(--flexcyon-base-02);
-}
-
-body.theme-dark {
-  --text-highlight-bg: var(--flexcyon-base-03);
+body.theme-dark, body.theme-light {
+  --text-highlight-bg: rgba(var(--color-purple-rgb), var(--dimmed));
 }
 
 body {

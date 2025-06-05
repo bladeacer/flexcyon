@@ -14,12 +14,6 @@ body {
   .checkbox-container.is-enabled {
     background-color: var(--flexcyon-lime-green);
   }
-  .list-bullet {
-    transform: translateY(3px);
-  }
-  .cm-formatting-list-ul {
-    padding-right: 6px;
-  }
 }
 
 @mixin flexcyon-ascii-checkbox($data-task, $color) {
@@ -30,6 +24,7 @@ body {
     background-color: transparent;
     border: none;
     font-weight: 900;
+    padding-right: 6px;
 
     &:hover {
       filter: brightness(1.25);
@@ -54,18 +49,23 @@ body {
 // Add code to tweak font size and stuff for $ and * checkboxes
 body.flexcyon-ascii-checkboxes-enabled {
 
-  @include flexcyon-ascii-checkbox("!", var(--color-red));
-  @include flexcyon-ascii-checkbox(">", var(--color-purple));
+  @include flexcyon-ascii-checkbox("!", var(--color-purple));
+  @include flexcyon-ascii-checkbox(">", var(--color-cyan));
   @include flexcyon-ascii-checkbox("i", var(--color-blue));
-  @include flexcyon-ascii-checkbox("?", var(--color-green));
-  @include flexcyon-ascii-checkbox("#", var(--color-cyan));
-  @include flexcyon-ascii-checkbox(".", var(--color-orange));
-  @include flexcyon-ascii-checkbox("<", var(--color-yellow));
-  @include flexcyon-ascii-checkbox("$", var(--text-accent));
+  @include flexcyon-ascii-checkbox("?", var(--color-pink));
+  @include flexcyon-ascii-checkbox("#", var(--color-green));
+  @include flexcyon-ascii-checkbox(".", var(--color-yellow));
+  @include flexcyon-ascii-checkbox("<", var(--color-orange));
+  @include flexcyon-ascii-checkbox("$", var(--color-red));
 
-  @include flexcyon-ascii-checkbox("*", var(--color-red));
-  @include flexcyon-ascii-checkbox("'", var(--color-green));
+  @include flexcyon-ascii-checkbox("*", var(--color-purple));
+  @include flexcyon-ascii-checkbox("'", var(--color-cyan));
   @include flexcyon-ascii-checkbox("@", var(--color-blue));
+  @include flexcyon-ascii-checkbox("%", var(--color-pink));
+  @include flexcyon-ascii-checkbox("+", var(--color-green));
+  @include flexcyon-ascii-checkbox("-", var(--color-yellow));
+  @include flexcyon-ascii-checkbox("/", var(--color-orange));
+  @include flexcyon-ascii-checkbox("~", var(--color-red));
 
   input[data-task='"']:checked,
   li[data-task='"']>input:checked,
@@ -73,6 +73,7 @@ body.flexcyon-ascii-checkboxes-enabled {
     background-color: transparent;
     border: none;
     font-weight: 900;
+    padding-right: 6px;
 
     &:hover {
       filter: brightness(1.25);
@@ -146,15 +147,29 @@ body.flexcyon-ascii-checkboxes-enabled {
     top: -0.45rem;
   }
 
-  input[data-task="l"]:checked,
-  li[data-task="l"]>input:checked,
-  li[data-task="l"]>p>input:checked {
-    background-color: transparent;
-    font-weight: 900;
+  input[data-task="%"]:checked::after,
+  li[data-task="%"]>input:checked::after,
+  li[data-task="%"]>p>input:checked::after {
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.225rem);
+  }
 
-    &:hover {
-      filter: brightness(1.25);
-    }
+  input[data-task="+"]:checked::after,
+  li[data-task="+"]>input:checked::after,
+  li[data-task="+"]>p>input:checked::after {
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+  }
+
+  input[data-task="-"]:checked::after,
+  li[data-task="-"]>input:checked::after,
+  li[data-task="-"]>p>input:checked::after {
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
+    top: -0.7rem;
+    content: "--";
+    letter-spacing: var(--less-letter-spacing);
+  }
+
+  .markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox[data-task="-"] {
+    margin-inline-start: calc(var(--checkbox-margin-inline-start) - 0.075rem);
   }
 }
 

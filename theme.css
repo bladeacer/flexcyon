@@ -678,12 +678,6 @@ body .checkbox-container {
 body .checkbox-container.is-enabled {
   background-color: var(--flexcyon-lime-green);
 }
-body .list-bullet {
-  transform: translateY(3px);
-}
-body .cm-formatting-list-ul {
-  padding-right: 6px;
-}
 
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
@@ -691,6 +685,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked:hover,
@@ -702,7 +697,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked::after {
   background-color: transparent;
   content: "!";
-  color: var(--color-red);
+  color: var(--color-purple);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -715,6 +710,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked:hover,
@@ -726,7 +722,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked::after {
   background-color: transparent;
   content: ">";
-  color: var(--color-purple);
+  color: var(--color-cyan);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -739,6 +735,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked:hover,
@@ -763,6 +760,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked:hover,
@@ -774,7 +772,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked::after {
   background-color: transparent;
   content: "?";
-  color: var(--color-green);
+  color: var(--color-pink);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -787,6 +785,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked:hover,
@@ -798,7 +797,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::after {
   background-color: transparent;
   content: "#";
-  color: var(--color-cyan);
+  color: var(--color-green);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -811,6 +810,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked:hover,
@@ -822,7 +822,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked::after {
   background-color: transparent;
   content: ".";
-  color: var(--color-orange);
+  color: var(--color-yellow);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -835,6 +835,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked:hover,
@@ -846,7 +847,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::after {
   background-color: transparent;
   content: "<";
-  color: var(--color-yellow);
+  color: var(--color-orange);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -859,6 +860,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked:hover,
@@ -870,7 +872,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after {
   background-color: transparent;
   content: "$";
-  color: var(--text-accent);
+  color: var(--color-red);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -883,6 +885,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked:hover,
@@ -894,7 +897,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked::after {
   background-color: transparent;
   content: "*";
-  color: var(--color-red);
+  color: var(--color-purple);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -907,6 +910,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked:hover,
@@ -918,7 +922,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::after {
   background-color: transparent;
   content: "'";
-  color: var(--color-green);
+  color: var(--color-cyan);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   text-align: center;
   -webkit-mask-image: none;
@@ -931,6 +935,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked:hover,
@@ -949,12 +954,138 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::af
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding-right: 6px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked::after {
+  background-color: transparent;
+  content: "%";
+  color: var(--color-pink);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding-right: 6px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked::after {
+  background-color: transparent;
+  content: "+";
+  color: var(--color-green);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding-right: 6px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
+  background-color: transparent;
+  content: "-";
+  color: var(--color-yellow);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding-right: 6px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked::after {
+  background-color: transparent;
+  content: "/";
+  color: var(--color-orange);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked {
+  background-color: transparent;
+  border: none;
+  font-weight: 900;
+  padding-right: 6px;
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked::after {
+  background-color: transparent;
+  content: "~";
+  color: var(--color-red);
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  text-align: center;
+  -webkit-mask-image: none;
+  mask-image: none;
+  top: -0.325em;
+}
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
   background-color: transparent;
   border: none;
   font-weight: 900;
+  padding-right: 6px;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked:hover,
@@ -1020,16 +1151,26 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked::af
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   top: -0.45rem;
 }
-body.flexcyon-ascii-checkboxes-enabled input[data-task=l]:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > input:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > p > input:checked {
-  background-color: transparent;
-  font-weight: 900;
+body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.225rem);
 }
-body.flexcyon-ascii-checkboxes-enabled input[data-task=l]:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=l] > p > input:checked:hover {
-  filter: brightness(1.25);
+body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+}
+body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
+  top: -0.7rem;
+  content: "--";
+  letter-spacing: var(--less-letter-spacing);
+}
+body.flexcyon-ascii-checkboxes-enabled .markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox[data-task="-"] {
+  margin-inline-start: calc(var(--checkbox-margin-inline-start) - 0.075rem);
 }
 
 body.flexcyon-rainbow-bullet-points .HyperMD-list-line:nth-of-type(8n+0) .list-bullet::after,
@@ -1210,6 +1351,8 @@ body {
   --expand: 110%;
   --less-letter-spacing: -3px;
   --flexcyon-comm-item-opacity: 0.89;
+  --flexcyon-tree-item-horiz-padding: 8px;
+  --flexcyon-tree-item-verti-padding: 0.75px;
 }
 body .clickable-icon {
   opacity: var(--dimmed);
@@ -1246,7 +1389,7 @@ body .LazyLoad.is-visible {
 body .oz-folder-line,
 body .oz-nav-file,
 body .tree-item {
-  padding: 0.75px 8px;
+  padding: var(--flexcyon-tree-item-verti-padding) var(--flexcyon-tree-item-horiz-padding);
 }
 
 body.flexcyon-workspace-card-layout .community-modal-info-name {
@@ -1564,12 +1707,8 @@ body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-
   stroke: var(--flexcyon-accent);
 }
 
-body.theme-light {
-  --text-highlight-bg: var(--flexcyon-base-02);
-}
-
-body.theme-dark {
-  --text-highlight-bg: var(--flexcyon-base-03);
+body.theme-dark, body.theme-light {
+  --text-highlight-bg: rgba(var(--color-purple-rgb), var(--dimmed));
 }
 
 body {
@@ -4726,85 +4865,193 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
   content: ".";
 }
 
+body.flexcyon-rainbow-folders .tree-item-children {
+  border-inline-start: none;
+}
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title {
   color: var(--color-purple);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title .collapse-icon svg {
-  color: var(--color-purple);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-purple);
+  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title {
   color: var(--color-cyan);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title .collapse-icon svg {
-  color: var(--color-cyan);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-cyan);
+  color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title {
   color: var(--color-blue);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title .collapse-icon svg {
-  color: var(--color-blue);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-blue);
+  color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title {
   color: var(--color-pink);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title .collapse-icon svg {
-  color: var(--color-pink);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-pink);
+  color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title {
   color: var(--color-green);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title .collapse-icon svg {
-  color: var(--color-green);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-green);
+  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title {
   color: var(--color-yellow);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title .collapse-icon svg {
-  color: var(--color-yellow);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-yellow);
+  color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title {
   color: var(--color-orange);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title .collapse-icon svg {
-  color: var(--color-orange);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-orange);
+  color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
 }
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title {
   color: var(--color-red);
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title .collapse-icon svg {
-  color: var(--color-red);
+body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title {
+  color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
 }
-body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: var(--color-red);
+  color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+}
+
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder-title {
+  background-color: var(--color-purple);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+0) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder-title {
+  background-color: var(--color-cyan);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+1) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder-title {
+  background-color: var(--color-blue);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+2) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder-title {
+  background-color: var(--color-pink);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+3) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder-title {
+  background-color: var(--color-green);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+4) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder-title {
+  background-color: var(--color-yellow);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+5) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder-title {
+  background-color: var(--color-orange);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+6) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title .collapse-icon svg,
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder-title {
+  background-color: var(--color-red);
+  color: var(--text-normal);
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title {
+  color: var(--text-normal);
+  background-color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+}
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n+7) .nav-folder .nav-folder-title .collapse-icon svg {
+  background-color: transparent;
+  color: var(--text-normal);
 }
 
 body.flexcyon-alt-folder-style .nav-folder .collapse-icon svg {
@@ -4935,6 +5182,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-e
   color: var(--text-muted);
   height: 30px;
   padding: 0px 8px;
+  font-size: var(--font-ui-medium);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-normal-text);
@@ -4945,6 +5193,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-e
   height: 30px;
   color: var(--text-muted);
   padding: 0px 8px;
+  font-size: var(--font-ui-medium);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
   bottom: var(--flexcyon-vim-bottom-positioning);
@@ -4964,6 +5213,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-e
   content: var(--flexcyon-vim-command-text);
   bottom: var(--flexcyon-vim-bottom-positioning);
   padding-right: 4px;
+  font-size: var(--font-ui-medium);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
   color: var(--text-muted);
@@ -5448,8 +5698,12 @@ body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active:hov
   font-weight: bold;
 }
 
-span.media-embed * {
+body span.media-embed * {
   margin: var(--flexcyon-media-embed-vertical-margin) 0px;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote {
+  top: -0.1em;
 }
 
 body {
@@ -5883,11 +6137,27 @@ settings:
       - 
         label: Markdown file tree style
         value: flexcyon-md-file-tree-style
+  - title: Colour background instead of text for rainbow folders
+    id: flexcyon-is-bg-rainbow
+    type: class-toggle
+    default: true
   - title: Enable minimalist trees
     description: Removes left borders and collapse icons from trees in the app, this affects folder and outlines 
     id: flexcyon-minimalist-tree
     type: class-toggle
     default: false
+  - title: Vertical Tree Item Padding
+    description: Vertical Padding of tree item variables like file explorer items
+    id: flexcyon-tree-item-verti-padding
+    type: variable-number
+    format: px
+    default: 0.75
+  - title: Horizontal Tree Item Padding
+    description: Horizontal Padding of tree item variables like file explorer items
+    id: flexcyon-tree-item-horiz-padding
+    type: variable-number
+    format: px
+    default: 8
 
   - title: Workspace
     type: heading
@@ -6354,6 +6624,28 @@ settings:
     id: flexcyon-active-inherits-rel-num
     default: false
 
+  - title: Cursor
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Smooth Cursor
+    id: flexcyon-enable-smooth-cursor
+    type: class-toggle
+    default: true
+  - title: Smooth cursor transition duration
+    id: flexcyon-cursor-duration
+    type: variable-number
+    default: 95
+    format: ms
+  - title: Smooth cursor timing function
+    id: flexcyon-cursor-timing-fn
+    type: variable-text
+    default: ease
+  - title: Smooth cursor minimum width
+    id: flexcyon-cursor-min-width
+    type: variable-text
+    default: unset
+
   - title: Settings
     type: heading
     level: 4
@@ -6803,6 +7095,7 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
+
   - title: Modes
     type: heading
     description: Toggle modes like those for extreme minimalism
@@ -7071,6 +7364,17 @@ body {
 
 body {
   filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
+}
+
+body {
+  --flexcyon-cursor-duration: 95ms;
+  --flexcyon-cursor-timing-fn: ease;
+  --flexcyon-cursor-min-width: unset;
+}
+
+body.flexcyon-enable-smooth-cursor .cm-cursor-primary {
+  transition: all var(--flexcyon-cursor-duration) var(--flexcyon-cursor-timing-fn);
+  min-width: var(--flexcyon-cursor-min-width);
 }
 
 /* Modifications for alternate file tree plugin */
