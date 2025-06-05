@@ -1,33 +1,33 @@
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
-    div[data-path$=".md"] {
-        div.nav-file-tag {
-            display: none;
-        }
-
-        div.nav-file-title-content::after {
-            content: ".md";
-            opacity: var(--dimmed);
-        }
+  div[data-path$=".md"] {
+    div.nav-file-tag {
+      display: none;
     }
 
-    div {
-        div.nav-file-tag {
-            opacity: var(--dimmed);
-            background-color: unset;
-            text-transform: lowercase;
-            font-size: calc(var(--nav-item-size) - 0.075rem);
-            margin: unset;
-            padding: unset;
-            font-weight: unset;
-
-            &::before {
-                content: ".";
-            }
-        }
+    div.nav-file-title-content::after {
+      content: ".md";
+      opacity: var(--dimmed);
     }
+  }
+
+  div {
+    div.nav-file-tag {
+      opacity: var(--dimmed);
+      background-color: unset;
+      text-transform: lowercase;
+      font-size: calc(var(--nav-item-size) - 0.075rem);
+      margin: unset;
+      padding: unset;
+      font-weight: unset;
+
+      &::before {
+        content: ".";
+      }
+    }
+  }
 }
 
-@mixin nth-nav-folder-colors($color-map: ()) {
+@mixin nth-nav-folder-colors($color-map: (), $is-bg: 0) {
   $max-index: 0;
   @each $index, $color in $color-map {
     $max-index: max($max-index, $index);
@@ -36,24 +36,47 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
 
   @each $index, $color in $color-map {
     .nav-folder:nth-of-type(#{$interval}n+#{$index}) {
+      .nav-folder-title .collapse-icon svg,
       .nav-folder-title {
-        color: var(--color-#{$color}); 
-
-        .collapse-icon svg {
+        @if $is-bg == 0 {
           color: var(--color-#{$color}); 
         }
+        @else {
+          background-color: var(--color-#{$color}); 
+          color: var(--text-normal);
+        }
       }
-      .nav-folder .nav-folder-title,
+
+      .nav-folder .nav-folder-title {
+        @if $is-bg == 0 {
+          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
+        }
+        @else {
+          color: var(--text-normal);
+          background-color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
+        }
+      }
+
       .nav-folder .nav-folder-title .collapse-icon svg {
-          color: var(--color-#{$color}); 
+        @if $is-bg == 0 {
+          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
+        }
+        @else {
+          background-color: transparent;
+          color: var(--text-normal);
+        }
       }
+
     }
   }
 }
 
 body.flexcyon-rainbow-folders {
-    .nav-files-container div {
-      @include nth-nav-folder-colors((
+  .tree-item-children {
+    border-inline-start: none;
+  }
+  .nav-files-container div {
+    @include nth-nav-folder-colors((
         0: purple,
         1: cyan,
         2: blue,
@@ -62,42 +85,56 @@ body.flexcyon-rainbow-folders {
         5: yellow,
         6: orange,
         7: red
-      ));
-    }
+    ));
+
+  }
+}
+
+body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow {
+  .nav-files-container div {
+    @include nth-nav-folder-colors((
+        0: purple,
+        1: cyan,
+        2: blue,
+        3: pink,
+        4: green,
+        5: yellow,
+        6: orange,
+        7: red
+    ), 1);
+  }
 }
 
 body.flexcyon-alt-folder-style {
-    .nav-folder {
+  .nav-folder {
+    .collapse-icon svg {
+      color: var(--color-blue);
+    }
+  }
 
-        // TODO: Make this color toggleable
-        .collapse-icon svg {
-            color: var(--color-blue);
-        }
+  .nav-folder .nav-folder-title {
+    color: var(--color-blue);
+  }
+
+  .nav-folder.is-collapsed .nav-folder-title {
+    color: unset;
+  }
+
+  .nav-folder.is-collapsed {
+    .nav-folder-title-content {
+      color: unset;
     }
 
-    .nav-folder .nav-folder-title {
-        color: var(--color-blue);
+    .collapse-icon svg {
+      color: unset;
     }
+  }
 
-    .nav-folder.is-collapsed .nav-folder-title {
-        color: unset;
-    }
-
-    .nav-folder.is-collapsed {
-        .nav-folder-title-content {
-            color: unset;
-        }
-
-        .collapse-icon svg {
-            color: unset;
-        }
-    }
-
-    .nav-file-title.is-active .nav-file-title-content {
-        transform: all ease-in-out 0.35s;
-        // margin-inline-start: 0.25rem;
-        font-weight: bold;
-    }
+  .nav-file-title.is-active .nav-file-title-content {
+    transform: all ease-in-out 0.35s;
+    // margin-inline-start: 0.25rem;
+    font-weight: bold;
+  }
 
 }
 
@@ -105,106 +142,106 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover,
 body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 body.flexcyon-md-file-tree-style {
-    .nav-file, .nav-folder, .nav-folder-children {
-        position: relative;
-        padding-left: 2px;
-    }
+  .nav-file, .nav-folder, .nav-folder-children {
+    position: relative;
+    padding-left: 2px;
+  }
 
-    .nav-file::before,
-    .nav-file::before,
-    .nav-folder-children::before {
-        content: '';
-        position: absolute;
-        background: var(--nav-collapse-icon-color);
-    }
+  .nav-file::before,
+  .nav-file::before,
+  .nav-folder-children::before {
+    content: '';
+    position: absolute;
+    background: var(--nav-collapse-icon-color);
+  }
 
-    .tree-item.nav-file::before,
-    .tree-item.nav-folder::before {
-        height: 1px;
-        width: 20px;
-        top: 50%;
-        transform: translate(0, -50%);
-        margin-inline-start: -3px;
-    }
+  .tree-item.nav-file::before,
+  .tree-item.nav-folder::before {
+    height: 1px;
+    width: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-inline-start: -3px;
+  }
 
-    .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
-        bottom: 6px;
-    }
+  .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
+    bottom: 6px;
+  }
 
-    .tree-item-children.nav-folder-children {
-        border-left-width: 0;
-        &::before {
-            left: 0;
-            top: 0;
-            bottom: 12px;
-            width: 1px;
-        }
+  .tree-item-children.nav-folder-children {
+    border-left-width: 0;
+    &::before {
+      left: 0;
+      top: 0;
+      bottom: 12px;
+      width: 1px;
     }
+  }
 
-    .nav-files-container > div > .tree-item.nav-file::before,
-    .nav-files-container > div > .tree-item.nav-folder::before {
-        content: none;
-    }
+  .nav-files-container > div > .tree-item.nav-file::before,
+  .nav-files-container > div > .tree-item.nav-folder::before {
+    content: none;
+  }
 }
 
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-    .mod-left-split {
+  .mod-left-split {
 
-        .tree-item-self.is-active,
-        .tree-item-self .is-active {
-            background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
-        }
-
-        .nav-file-title.is-active:hover,
-        body:not(.is-grabbing) .nav-folder-title.is-active:hover,
-        .nav-file-title.is-active,
-        .nav-folder-title.is-active {
-            color: var(--nav-item-color-active);
-            background-color: var(--nav-item-background-active);
-            font-weight: var(--nav-item-weight-active);
-        }
+    .tree-item-self.is-active,
+    .tree-item-self .is-active {
+      background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
     }
+
+    .nav-file-title.is-active:hover,
+    body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+    .nav-file-title.is-active,
+    .nav-folder-title.is-active {
+      color: var(--nav-item-color-active);
+      background-color: var(--nav-item-background-active);
+      font-weight: var(--nav-item-weight-active);
+    }
+  }
 }
 
 @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-    .mod-right-split {
+  .mod-right-split {
 
-        .tree-item-self.is-active,
-        .tree-item-self .is-active {
-            background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
-        }
-
-        .nav-file-title.is-active:hover,
-        body:not(.is-grabbing) .nav-folder-title.is-active:hover,
-        .nav-file-title.is-active,
-        .nav-folder-title.is-active {
-            color: var(--nav-item-color-active);
-            background-color: var(--nav-item-background-active);
-            font-weight: var(--nav-item-weight-active);
-        }
+    .tree-item-self.is-active,
+    .tree-item-self .is-active {
+      background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
     }
+
+    .nav-file-title.is-active:hover,
+    body:not(.is-grabbing) .nav-folder-title.is-active:hover,
+    .nav-file-title.is-active,
+    .nav-folder-title.is-active {
+      color: var(--nav-item-color-active);
+      background-color: var(--nav-item-background-active);
+      font-weight: var(--nav-item-weight-active);
+    }
+  }
 }
 
 body.flexcyon-minimalist-tree {
-    .collapse-icon svg {
-        display: none;
-    }
+  .collapse-icon svg {
+    display: none;
+  }
 
-    .tree-item-children {
-        border-inline-start: none;
-    }
+  .tree-item-children {
+    border-inline-start: none;
+  }
 
-    .nav-file-title {
-        opacity: 0.85;
-    }
+  .nav-file-title {
+    opacity: 0.85;
+  }
 }
 
 body.flexcyon-workspace-angled-layout {
-    .nav-folder-title-content {
-        transform: skewX(-5deg);
-    }
+  .nav-folder-title-content {
+    transform: skewX(-5deg);
+  }
 }

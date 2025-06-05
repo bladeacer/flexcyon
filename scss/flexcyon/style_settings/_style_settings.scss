@@ -430,11 +430,27 @@ settings:
       - 
         label: Markdown file tree style
         value: flexcyon-md-file-tree-style
+  - title: Colour background instead of text for rainbow folders
+    id: flexcyon-is-bg-rainbow
+    type: class-toggle
+    default: true
   - title: Enable minimalist trees
     description: Removes left borders and collapse icons from trees in the app, this affects folder and outlines 
     id: flexcyon-minimalist-tree
     type: class-toggle
     default: false
+  - title: Vertical Tree Item Padding
+    description: Vertical Padding of tree item variables like file explorer items
+    id: flexcyon-tree-item-verti-padding
+    type: variable-number
+    format: px
+    default: 0.75
+  - title: Horizontal Tree Item Padding
+    description: Horizontal Padding of tree item variables like file explorer items
+    id: flexcyon-tree-item-horiz-padding
+    type: variable-number
+    format: px
+    default: 8
 
   - title: Workspace
     type: heading
@@ -901,6 +917,28 @@ settings:
     id: flexcyon-active-inherits-rel-num
     default: false
 
+  - title: Cursor
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Smooth Cursor
+    id: flexcyon-enable-smooth-cursor
+    type: class-toggle
+    default: true
+  - title: Smooth cursor transition duration
+    id: flexcyon-cursor-duration
+    type: variable-number
+    default: 95
+    format: ms
+  - title: Smooth cursor timing function
+    id: flexcyon-cursor-timing-fn
+    type: variable-text
+    default: ease
+  - title: Smooth cursor minimum width
+    id: flexcyon-cursor-min-width
+    type: variable-text
+    default: unset
+
   - title: Settings
     type: heading
     level: 4
@@ -1350,6 +1388,7 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
+
   - title: Modes
     type: heading
     description: Toggle modes like those for extreme minimalism
