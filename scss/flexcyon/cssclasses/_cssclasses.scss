@@ -1,65 +1,65 @@
 // Credits: @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
 
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
-    writing-mode: vertical-rl;
-    overflow: scroll;
-    max-width: 95%;
-    padding-bottom: 0px !important;
-    padding-top: 7.5vh;
+  writing-mode: vertical-rl;
+  overflow: scroll;
+  max-width: 95%;
+  padding-bottom: 0px !important;
+  padding-top: 7.5vh;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+
+  div > :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0;
     line-height: 1.667;
-    margin: auto;
-    min-height: 0 !important;
-    max-height: 85vh;
-    text-indent: 1rem;
+  }
 
-    div> :is(h1, h2, h3, h4, h5, h6) {
-        margin-top: 0;
-        line-height: 1.667;
-    }
+  .footnotes p {
+    text-indent: 0;
+  }
 
-    .footnotes p {
-        text-indent: 0;
-    }
-
-    .mod-header {
-        display: none;
-    }
+  .mod-header {
+    display: none;
+  }
 }
 
 .app-container .view-content:has(.vertical-ltr) .markdown-preview-section {
-    writing-mode: vertical-lr;
-    overflow: scroll;
-    max-width: 95%;
-    padding-bottom: 0px !important;
-    padding-top: 7.5vh;
+  writing-mode: vertical-lr;
+  overflow: scroll;
+  max-width: 95%;
+  padding-bottom: 0px !important;
+  padding-top: 7.5vh;
+  line-height: 1.667;
+  margin: auto;
+  min-height: 0 !important;
+  max-height: 85vh;
+  text-indent: 1rem;
+
+  div > :is(h1, h2, h3, h4, h5, h6) {
+    margin-top: 0;
     line-height: 1.667;
-    margin: auto;
-    min-height: 0 !important;
-    max-height: 85vh;
-    text-indent: 1rem;
+  }
 
-    div> :is(h1, h2, h3, h4, h5, h6) {
-        margin-top: 0;
-        line-height: 1.667;
-    }
+  .footnotes p {
+    text-indent: 0;
+  }
 
-    .footnotes p {
-        text-indent: 0;
-    }
-
-    .mod-header {
-        display: none;
-    }
+  .mod-header {
+    display: none;
+  }
 }
 
 .file-w-full {
-    --file-line-width: 100vw;
+  --file-line-width: 100vw;
 }
 
 @mixin file-w-cls($percent) {
-    .file-w-#{$percent}vw {
-        --file-line-width: #{$percent}vw;
-    }
+  .file-w-#{$percent}vw {
+    --file-line-width: #{$percent}vw;
+  }
 }
 
 @include file-w-cls(50);

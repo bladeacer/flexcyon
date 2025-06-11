@@ -1,73 +1,73 @@
 /* Callout modifications */
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body {
-    --flexcyon-callout-bg-opacity: 20%;
-    --flexcyon-callout-icon-right-padding: 4px;
-    --flexcyon-callout-first-codeblock-margin-top: 1rem;
-    --flexcyon-callout-vertical-margin: 1em;
-    --flexcyon-callout-pop-animation-duration: 0.2s;
-    --flexcyon-callouts-flashcard-width: 250px;
-    --flexcyon-callouts-flashcard-height: 250px;
-    --flexcyon-callout-flashcard-animation-duration: 0.5s;
-    --flexcyon-editor-writing-indentation: 16px;
+  --flexcyon-callout-bg-opacity: 20%;
+  --flexcyon-callout-icon-right-padding: 4px;
+  --flexcyon-callout-first-codeblock-margin-top: 1rem;
+  --flexcyon-callout-vertical-margin: 1em;
+  --flexcyon-callout-pop-animation-duration: 0.2s;
+  --flexcyon-callouts-flashcard-width: 250px;
+  --flexcyon-callouts-flashcard-height: 250px;
+  --flexcyon-callout-flashcard-animation-duration: 0.5s;
+  --flexcyon-editor-writing-indentation: 16px;
 
-    --callout-padding: var(--size-4-3) var(--size-4-6);
+  --callout-padding: var(--size-4-3) var(--size-4-6);
 
-    div.callout {
-        .callout-icon {
-            padding-inline-end: var(--flexcyon-callout-icon-right-padding);
-        }
-
-        .callout-content :first-child:is(pre, img) {
-            margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
-        }
+  div.callout {
+    .callout-icon {
+      padding-inline-end: var(--flexcyon-callout-icon-right-padding);
     }
 
-    .markdown-source-view.mod-cm6 .callout,
-    .callout {
-        margin: var(--flexcyon-callout-vertical-margin) 0;
+    .callout-content :first-child:is(pre, img) {
+      margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
     }
+  }
+
+  .markdown-source-view.mod-cm6 .callout,
+  .callout {
+    margin: var(--flexcyon-callout-vertical-margin) 0;
+  }
 }
 
 div.callout[data-callout-metadata*="tategaki"] {
-    div.callout-content {
-        writing-mode: vertical-rl;
-        overflow: scroll;
-        max-width: 95%;
-        padding-top: 2vh;
-        padding-bottom: 0px !important;
-        line-height: 1.667;
-        margin: auto;
-        min-height: 0 !important;
-        max-height: 85vh;
-        text-indent: 1rem;
+  div.callout-content {
+    writing-mode: vertical-rl;
+    overflow: scroll;
+    max-width: 95%;
+    padding-top: 2vh;
+    padding-bottom: 0px !important;
+    line-height: 1.667;
+    margin: auto;
+    min-height: 0 !important;
+    max-height: 85vh;
+    text-indent: 1rem;
 
-        :is(h1, h2, h3, h4, h5, h6) {
-            margin-top: 0;
-            line-height: 1.667;
-        }
+    :is(h1, h2, h3, h4, h5, h6) {
+      margin-top: 0;
+      line-height: 1.667;
     }
+  }
 }
 
 div.callout[data-callout-metadata*="vertical-ltr"] {
-    div.callout-content {
-        writing-mode: vertical-lr;
-        overflow: scroll;
-        max-width: 95%;
-        padding-top: 2vh;
-        padding-bottom: 0px !important;
-        line-height: 1.667;
-        margin: auto;
-        min-height: 0 !important;
-        max-height: 85vh;
-        text-indent: 1rem;
+  div.callout-content {
+    writing-mode: vertical-lr;
+    overflow: scroll;
+    max-width: 95%;
+    padding-top: 2vh;
+    padding-bottom: 0px !important;
+    line-height: 1.667;
+    margin: auto;
+    min-height: 0 !important;
+    max-height: 85vh;
+    text-indent: 1rem;
 
-        :is(h1, h2, h3, h4, h5, h6) {
-            margin-top: 0;
-            line-height: 1.667;
-        }
+    :is(h1, h2, h3, h4, h5, h6) {
+      margin-top: 0;
+      line-height: 1.667;
     }
+  }
 }
 
 div.callout[data-callout-metadata*="empty"],
@@ -75,9 +75,9 @@ div.callout[data-callout*="empty"],
 div.callout[data-callout-metadata*="tategaki"],
 div.callout[data-callout-metadata*="vertical-ltr"],
 div.callout[data-callout-metadata*="no-icon"] {
-    .callout-icon {
-        display: none;
-    }
+  .callout-icon {
+    display: none;
+  }
 }
 
 div.callout[data-callout-metadata*="tategaki"],
@@ -85,31 +85,32 @@ div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
 div.callout[data-callout-metadata*="vertical-ltr"],
 div.callout[data-callout-metadata*="no-title"] {
-    .callout-title-inner {
-        display: none;
-    }
+  .callout-title-inner {
+    display: none;
+  }
 }
 
 div.callout[data-callout-metadata*="bg-transparent"],
 div.callout[data-callout-metadata*="transparent-bg"] {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 @mixin callout-color($color-name, $color-var) {
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="bg-#{$color-name}"] {
+    background-color: rgba(
+      var(--#{$color-var}-rgb),
+      var(--flexcyon-callout-bg-opacity)
+    );
+  }
 
-    div.callout[data-callout-metadata*="all-#{$color-name}"],
-    div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-        background-color: rgba(var(--#{$color-var}-rgb), var(--flexcyon-callout-bg-opacity));
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="title-#{$color-name}"] {
+    .callout-title,
+    .callout-icon .svg-icon {
+      color: var(--#{$color-var});
     }
-
-    div.callout[data-callout-metadata*="all-#{$color-name}"],
-    div.callout[data-callout-metadata*="title-#{$color-name}"] {
-
-        .callout-title,
-        .callout-icon .svg-icon {
-            color: var(--#{$color-var});
-        }
-    }
+  }
 }
 
 @include callout-color("yellow", "color-yellow");
@@ -121,108 +122,92 @@ div.callout[data-callout-metadata*="transparent-bg"] {
 @include callout-color("green", "color-green");
 @include callout-color("orange", "color-orange");
 
-
 div.callout[data-callout-metadata*="center-all"],
 div.callout[data-callout-metadata*="center-title"] {
-    div.callout-title {
-        justify-content: center;
-    }
+  div.callout-title {
+    justify-content: center;
+  }
 }
 
 div.callout[data-callout-metadata*="center-all"],
 div.callout[data-callout-metadata*="center-content"] {
-    div.callout-content {
-        text-align: center;
-
-    }
+  div.callout-content {
+    text-align: center;
+  }
 }
 
 @mixin callout-dir($dir) {
-
-    div.callout[data-callout-metadata*="#{$dir}-all"],
-    div.callout[data-callout-metadata*="#{$dir}-title"] {
-
-        div.callout-title *,
-        div.callout-title {
-            direction: $dir !important;
-            unicode-bidi: bidi-override;
-        }
+  div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout-metadata*="#{$dir}-title"] {
+    div.callout-title *,
+    div.callout-title {
+      direction: $dir !important;
+      unicode-bidi: bidi-override;
     }
+  }
 
-    div.callout[data-callout-metadata*="#{$dir}-all"],
-    div.callout[data-callout-metadata*="#{$dir}-content"] {
-        div.callout-content {
-            * {
-                direction: $dir !important;
-                unicode-bidi: bidi-override;
-            }
+  div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout-metadata*="#{$dir}-content"] {
+    div.callout-content {
+      * {
+        direction: $dir !important;
+        unicode-bidi: bidi-override;
+      }
 
-            code[class*="language-"],
-            pre[class*="language-"] {
-                @if $dir =="rtl" {
-                    text-align: right;
-                }
-
-                @else {
-                    text-align: left;
-                }
-            }
-
+      code[class*="language-"],
+      pre[class*="language-"] {
+        @if $dir == "rtl" {
+          text-align: right;
+        } @else {
+          text-align: left;
         }
+      }
     }
+  }
 }
 
 @include callout-dir(rtl);
 @include callout-dir(ltr);
 
 @mixin callout-text-transform($transform) {
-
-    div.callout[data-callout-metadata*="#{$transform}-all"],
-    div.callout[data-callout-metadata*="#{$transform}-title"] {
-        div.callout-title .callout-title-inner {
-            @if $transform =="caps" {
-                text-transform: capitalize;
-            }
-
-            @else {
-                text-transform: $transform;
-            }
-        }
+  div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout-metadata*="#{$transform}-title"] {
+    div.callout-title .callout-title-inner {
+      @if $transform == "caps" {
+        text-transform: capitalize;
+      } @else {
+        text-transform: $transform;
+      }
     }
+  }
 
-    div.callout[data-callout-metadata*="#{$transform}-all"],
-    div.callout[data-callout-metadata*="#{$transform}-content"] {
-        div.callout-content * {
-            @if $transform =="caps" {
-                text-transform: capitalize;
-            }
+  div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout-metadata*="#{$transform}-content"] {
+    div.callout-content * {
+      @if $transform == "caps" {
+        text-transform: capitalize;
+      } @else {
+        text-transform: $transform;
+      }
 
-            @else {
-                text-transform: $transform;
-            }
-
-            * {
-                @if $transform =="caps" {
-                    text-transform: capitalize;
-                }
-
-                @else {
-                    text-transform: $transform;
-                }
-            }
-
-            code[class*="language-"],
-            pre[class*="language-"] {
-                @if $transform =="caps" {
-                    text-transform: capitalize;
-                }
-
-                @else {
-                    text-transform: $transform;
-                }
-            }
+      * {
+        @if $transform == "caps" {
+          text-transform: capitalize;
+        } @else {
+          text-transform: $transform;
         }
+      }
+
+      code[class*="language-"],
+      pre[class*="language-"] {
+        @if $transform == "caps" {
+          text-transform: capitalize;
+        } @else {
+          text-transform: $transform;
+        }
+      }
     }
+  }
 }
 
 @include callout-text-transform(uppercase);
@@ -230,20 +215,18 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-text-transform(caps);
 
 @mixin callout-ext-color($color-name, $color-var) {
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="bg-#{$color-name}"] {
+    background-color: var(--#{$color-var}-bg);
+  }
 
-    div.callout[data-callout-metadata*="all-#{$color-name}"],
-    div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-        background-color: var(--#{$color-var}-bg);
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="title-#{$color-name}"] {
+    .callout-title,
+    .callout-icon .svg-icon {
+      color: var(--#{$color-var});
     }
-
-    div.callout[data-callout-metadata*="all-#{$color-name}"],
-    div.callout[data-callout-metadata*="title-#{$color-name}"] {
-
-        .callout-title,
-        .callout-icon .svg-icon {
-            color: var(--#{$color-var});
-        }
-    }
+  }
 }
 
 @include callout-ext-color("red-blue", "color-red-blue-mix");
@@ -330,109 +313,104 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-ext-color("purple-pink", "color-purple-pink-mix");
 @include callout-ext-color("pink-purple", "color-purple-pink-mix");
 
-
 body.is-mobile {
-
-    .markdown-reading-view {
-        .callout[data-callout-metadata*="$pop"] {
-            margin-left: min(-5vw, -40px);
-            width: max(calc(var(--file-line-width)/2), 40vw);
-        }
+  .markdown-reading-view {
+    .callout[data-callout-metadata*="$pop"] {
+      margin-left: min(-5vw, -40px);
+      width: max(calc(var(--file-line-width) / 2), 40vw);
     }
+  }
 }
 
 .markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
-    visibility: visible;
+  visibility: visible;
 }
 
 .markdown-reading-view {
-    .callout[data-callout-metadata*="$pop"] {
-        display: block;
-        position: absolute;
-        margin-left: min(-3vw, -40px);
-        transform: translateY(-70px);
-        transition: all var(--flexcyon-callout-pop-animation-duration) ease;
-        width: calc(var(--file-line-width)/2 + min(3vw, 40px));
-        backdrop-filter: blur(20px);
-        z-index: 999;
+  .callout[data-callout-metadata*="$pop"] {
+    display: block;
+    position: absolute;
+    margin-left: min(-3vw, -40px);
+    transform: translateY(-70px);
+    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+    width: calc(var(--file-line-width) / 2 + min(3vw, 40px));
+    backdrop-filter: blur(20px);
+    z-index: 999;
 
-        .callout-title {
-            margin-top: 3px;
-            margin-left: 22px;
-        }
+    .callout-title {
+      margin-top: 3px;
+      margin-left: 22px;
     }
+  }
 
-    .callout[data-callout-metadata*="$pop"]:hover::before {
-        display: block;
-        border: none;
-        transition: all var(--flexcyon-callout-pop-animation-duration) ease;
-    }
+  .callout[data-callout-metadata*="$pop"]:hover::before {
+    display: block;
+    border: none;
+    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  }
 
-    .callout[data-callout-metadata*="$pop"]::before {
-        visibility: visible;
-        content: ">";
-        display: block;
-        position: absolute;
-        padding: 2px;
-        color: rgb(var(--callout-color));
-        z-index: 1;
-    }
+  .callout[data-callout-metadata*="$pop"]::before {
+    visibility: visible;
+    content: ">";
+    display: block;
+    position: absolute;
+    padding: 2px;
+    color: rgb(var(--callout-color));
+    z-index: 1;
+  }
 
-    .callout[data-callout-metadata*="$pop"]:not(:hover) {
-        visibility: hidden;
-    }
+  .callout[data-callout-metadata*="$pop"]:not(:hover) {
+    visibility: hidden;
+  }
 }
 
 div.callout[data-callout-metadata*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-title"] {
-    .callout-title {
-        transform: skewX(-7.5deg);
-    }
+  .callout-title {
+    transform: skewX(-7.5deg);
+  }
 }
 
 div.callout[data-callout-metadata*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-content"] {
-    .callout-content {
-        transform: skewX(-7.5deg);
-    }
+  .callout-content {
+    transform: skewX(-7.5deg);
+  }
 }
 
-
 @mixin callout-font-style($style) {
-
-    div.callout[data-callout-metadata*="#{$style}-all"],
-    div.callout[data-callout-metadata*="#{$style}-title"] {
-        .callout-title {
-            font-style: $style;
-        }
+  div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout-metadata*="#{$style}-title"] {
+    .callout-title {
+      font-style: $style;
     }
+  }
 
-    div.callout[data-callout-metadata*="#{$style}-all"],
-    div.callout[data-callout-metadata*="#{$style}-content"] {
-        .callout-content {
-            font-style: $style;
-        }
+  div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout-metadata*="#{$style}-content"] {
+    .callout-content {
+      font-style: $style;
     }
+  }
 }
 
 @include callout-font-style(italic);
 @include callout-font-style(oblique);
 
 @mixin callout-text-decor($callout-name) {
-
-    div.callout[data-callout-metadata*="#{$callout-name}-all"],
-    div.callout[data-callout-metadata*="#{$callout-name}-content"] {
-        .callout-content {
-            text-decoration: #{$callout-name};
-        }
+  div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout-metadata*="#{$callout-name}-content"] {
+    .callout-content {
+      text-decoration: #{$callout-name};
     }
+  }
 
-    div.callout[data-callout-metadata*="#{$callout-name}-all"],
-    div.callout[data-callout-metadata*="#{$callout-name}-title"] {
-        .callout-title {
-            text-decoration: #{$callout-name};
-        }
+  div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout-metadata*="#{$callout-name}-title"] {
+    .callout-title {
+      text-decoration: #{$callout-name};
     }
+  }
 }
 
 @include callout-text-decor(dashed);
@@ -443,16 +421,16 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-decor(line-through);
 
 @mixin callout-title-heading($heading_no) {
-    div.callout[data-callout-metadata*="#{$heading_no}-title"] {
-        .callout-title {
-            font-size: var(--#{$heading_no}-size);
-            color: var(--#{$heading_no}-color);
-        }
-
-        .callout-icon svg {
-            color: var(--#{$heading_no}-color);
-        }
+  div.callout[data-callout-metadata*="#{$heading_no}-title"] {
+    .callout-title {
+      font-size: var(--#{$heading_no}-size);
+      color: var(--#{$heading_no}-color);
     }
+
+    .callout-icon svg {
+      color: var(--#{$heading_no}-color);
+    }
+  }
 }
 
 @include callout-title-heading(h1);
@@ -463,20 +441,19 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-title-heading(h6);
 
 @mixin callout-text-font-weight($font-weight) {
-
-    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
-    div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
-        .callout-title {
-            font-weight: $font-weight;
-        }
+  div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
+    .callout-title {
+      font-weight: $font-weight;
     }
+  }
 
-    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
-    div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
-        .callout-content {
-            font-weight: $font-weight;
-        }
+  div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
+    .callout-content {
+      font-weight: $font-weight;
     }
+  }
 }
 
 @include callout-text-font-weight(100);
@@ -494,72 +471,70 @@ div.callout[data-callout-metadata*="tilt-content"] {
 
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content {
-    margin-top: 16px;
-    padding: 0px 8px;
+  margin-top: 16px;
+  padding: 0px 8px;
 }
 
 div.callout[data-callout-metadata*="flashcard"] {
-    width: var(--flexcyon-callouts-flashcard-width);
-    height: var(--flexcyon-callouts-flashcard-height);
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    transition: all var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
+  width: var(--flexcyon-callouts-flashcard-width);
+  height: var(--flexcyon-callouts-flashcard-height);
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: all var(--flexcyon-callout-flashcard-animation-duration)
+    ease-in-out;
 
+  .callout-content {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
 
-    .callout-content {
-        transform: rotateY(180deg);
-        opacity: 0;
-    }
+  .callout-title {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    transform: rotateY(180deg);
 
     .callout-title {
-        position: absolute;
-        top: 25%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      opacity: 0;
     }
 
-    &:hover {
-        transform: rotateY(180deg);
-
-        .callout-title {
-            opacity: 0;
-        }
-
-        .callout-content {
-            opacity: 1;
-        }
+    .callout-content {
+      opacity: 1;
     }
-
+  }
 }
 
 .flexcyon-editor-writing .cm-line,
 .editor-writing .cm-line,
 div.callout[data-callout-metadata*="writing"] .callout-content p {
-    text-indent: var(--flexcyon-editor-writing-indentation);
-    white-space: initial;
-    word-wrap: break-word;
-    margin-block-end: calc(1.25 * var(--p-spacing));
+  text-indent: var(--flexcyon-editor-writing-indentation);
+  white-space: initial;
+  word-wrap: break-word;
+  margin-block-end: calc(1.25 * var(--p-spacing));
 }
 
 @mixin callout-list($style-type) {
-
-    div.callout[data-callout-metadata*="li-#{$style-type}"],
-    div.callout[data-callout-metadata*="ol-#{$style-type}"] {
-        ol {
-            list-style-type: $style-type;
-            list-style-position: inside;
-        }
+  div.callout[data-callout-metadata*="li-#{$style-type}"],
+  div.callout[data-callout-metadata*="ol-#{$style-type}"] {
+    ol {
+      list-style-type: $style-type;
+      list-style-position: inside;
     }
+  }
 
-    div.callout[data-callout-metadata*="li-#{$style-type}"],
-    div.callout[data-callout-metadata*="ul-#{$style-type}"] {
-        ul {
-            list-style-type: $style-type;
-            list-style-position: inside;
-        }
+  div.callout[data-callout-metadata*="li-#{$style-type}"],
+  div.callout[data-callout-metadata*="ul-#{$style-type}"] {
+    ul {
+      list-style-type: $style-type;
+      list-style-position: inside;
     }
+  }
 }
 
 @include callout-list(none);
@@ -637,4 +612,3 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 //         margin-bottom: 5px;
 //     }
 // }
-

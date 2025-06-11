@@ -1,7 +1,11 @@
-// The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// The code snippets in this file are derived from the Halcyon theme
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body {
-  --blockquote-color: color-mix(in srgb, var(--flexcyon-yellow) 75%, var(--flexcyon-text-normal));
+  --blockquote-color: color-mix(
+    in srgb,
+    var(--flexcyon-yellow) 75%,
+    var(--flexcyon-text-normal)
+  );
 
   .cm-em.cm-quote {
     color: var(--italic-color);
@@ -12,7 +16,6 @@ body {
   }
 
   .markdown-rendered blockquote :is(pre, code) {
-      font-variant: normal;
+    font-variant: normal;
   }
 }
-

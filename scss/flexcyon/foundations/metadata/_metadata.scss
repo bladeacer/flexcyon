@@ -1,102 +1,109 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-    --metadata-label-text-color: var(--flexcyon-purple-lilac);
-    --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
-    --flexcyon-meta-container-padding-left: 14px;
+  --metadata-label-text-color: var(--flexcyon-purple-lilac);
+  --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
+  --flexcyon-meta-container-padding-left: 14px;
 
-    .metadata-container {
-        padding-left: var(--flexcyon-meta-container-padding-left);
-    }
+  .metadata-container {
+    padding-left: var(--flexcyon-meta-container-padding-left);
+  }
 
-    .cm-hmd-frontmatter.cm-atom {
-        color: var(--color-cyan);
-    }
+  .cm-hmd-frontmatter.cm-atom {
+    color: var(--color-cyan);
+  }
 
-    .cm-hmd-frontmatter.cm-meta {
-        color: var(--color-orange);
-    }
+  .cm-hmd-frontmatter.cm-meta {
+    color: var(--color-orange);
+  }
 
-    .cm-hmd-frontmatter {
-        color: var(--color-green);
-    }
+  .cm-hmd-frontmatter {
+    color: var(--color-green);
+  }
 
-    div.metadata-container div.metadata-property-value {
-        opacity: calc(var(--dimmed) + 0.2);
-    }
+  div.metadata-container div.metadata-property-value {
+    opacity: calc(var(--dimmed) + 0.2);
+  }
 
-    .metadata-property {
-        :focus, :focus-within, :focus:before {
-            border-radius: 2px;
-        }
+  .metadata-property {
+    :focus,
+    :focus-within,
+    :focus:before {
+      border-radius: 2px;
     }
+  }
 
-    .metadata-property-icon {
-        color: var(--color-cyan);
-    }
+  .metadata-property-icon {
+    color: var(--color-cyan);
+  }
 
-    .metadata-add-button {
-        opacity: var(--dimmed);
-    }
+  .metadata-add-button {
+    opacity: var(--dimmed);
+  }
 
-    :is(textarea, input:not([type=checkbox]), input.metadata-input-text, select):is(:focus, :active, :focus-visible),
-    .metadata-property:is(:focus, :focus-within),
-    .text-icon-button:focus,
-    .metadata-properties-heading:focus:before {
-        box-shadow: 0 0 0 1px var(--interactive-accent);
-    }
+  :is(
+      textarea,
+      input:not([type="checkbox"]),
+      input.metadata-input-text,
+      select
+    ):is(:focus, :active, :focus-visible),
+  .metadata-property:is(:focus, :focus-within),
+  .text-icon-button:focus,
+  .metadata-properties-heading:focus:before {
+    box-shadow: 0 0 0 1px var(--interactive-accent);
+  }
 }
 
 body.flexcyon-metadata-display-reading-disabled {
-    --metadata-display-reading: none;
+  --metadata-display-reading: none;
 }
 
 body.flexcyon-metadata-display-editing-disabled {
-    --metadata-display-editing: none;
+  --metadata-display-editing: none;
 }
 
 body.flexcyon-metadata-rainbow-icons {
-    .workspace-leaf-content[data-type="all-properties"],
-    .metadata-container {
-        .lucide-forward {
-            color: var(--color-cyan);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-binary {
-            color: var(--color-blue);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-text {
-            color: var(--color-green);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-list {
-            color: var(--color-orange);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-tags {
-            color: var(--color-red);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-check-square {
-            color: var(--color-yellow);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-calendar {
-            color: var(--text-accent);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
-
-        .lucide-file-question {
-            color: var(--color-purple);
-            opacity: calc(var(--dimmed) + 0.2);
-        }
+  .workspace-leaf-content[data-type="all-properties"],
+  .metadata-container {
+    .lucide-forward {
+      color: var(--color-cyan);
+      opacity: calc(var(--dimmed) + 0.2);
     }
+
+    .lucide-binary {
+      color: var(--color-blue);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-text {
+      color: var(--color-green);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-list {
+      color: var(--color-orange);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-tags {
+      color: var(--color-red);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-check-square {
+      color: var(--color-yellow);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-calendar {
+      color: var(--text-accent);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+
+    .lucide-file-question {
+      color: var(--color-purple);
+      opacity: calc(var(--dimmed) + 0.2);
+    }
+  }
 }

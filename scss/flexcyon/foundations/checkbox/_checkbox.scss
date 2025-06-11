@@ -1,4 +1,4 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body {
   --checkbox-color: var(--flexcyon-purple-lilac);
@@ -17,10 +17,9 @@ body {
 }
 
 @mixin flexcyon-ascii-checkbox($data-task, $color) {
-
   input[data-task="#{$data-task}"]:checked,
-  li[data-task="#{$data-task}"]>input:checked,
-  li[data-task="#{$data-task}"]>p>input:checked {
+  li[data-task="#{$data-task}"] > input:checked,
+  li[data-task="#{$data-task}"] > p > input:checked {
     background-color: transparent;
     border: none;
     font-weight: 900;
@@ -32,8 +31,8 @@ body {
   }
 
   input[data-task="#{$data-task}"]:checked::after,
-  li[data-task="#{$data-task}"]>input:checked::after,
-  li[data-task="#{$data-task}"]>p>input:checked::after {
+  li[data-task="#{$data-task}"] > input:checked::after,
+  li[data-task="#{$data-task}"] > p > input:checked::after {
     background-color: transparent;
     content: $data-task;
     color: $color;
@@ -43,12 +42,10 @@ body {
     mask-image: none;
     top: -0.325em;
   }
-
 }
 
 // Add code to tweak font size and stuff for $ and * checkboxes
 body.flexcyon-ascii-checkboxes-enabled {
-
   @include flexcyon-ascii-checkbox("!", var(--color-purple));
   @include flexcyon-ascii-checkbox(">", var(--color-cyan));
   @include flexcyon-ascii-checkbox("i", var(--color-blue));
@@ -68,8 +65,8 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("~", var(--color-red));
 
   input[data-task='"']:checked,
-  li[data-task='"']>input:checked,
-  li[data-task='"']>p>input:checked {
+  li[data-task='"'] > input:checked,
+  li[data-task='"'] > p > input:checked {
     background-color: transparent;
     border: none;
     font-weight: 900;
@@ -81,9 +78,9 @@ body.flexcyon-ascii-checkboxes-enabled {
   }
 
   input[data-task='"']:checked::after,
-  li[data-task='"']>input:checked::after,
-  li[data-task='"']>p>input:checked::after {
-    content: '“';
+  li[data-task='"'] > input:checked::after,
+  li[data-task='"'] > p > input:checked::after {
+    content: "“";
     color: var(--color-green);
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
     text-align: center;
@@ -93,15 +90,15 @@ body.flexcyon-ascii-checkboxes-enabled {
   }
 
   input[data-task="'"]:checked::after,
-  li[data-task="'"]>input:checked::after,
-  li[data-task="'"]>p>input:checked::after {
-    content: '‘';
+  li[data-task="'"] > input:checked::after,
+  li[data-task="'"] > p > input:checked::after {
+    content: "‘";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
   }
 
   input[data-task="i"]:checked::after,
-  li[data-task="i"]>input:checked::after,
-  li[data-task="i"]>p>input:checked::after {
+  li[data-task="i"] > input:checked::after,
+  li[data-task="i"] > p > input:checked::after {
     border: 1.5px solid var(--color-blue);
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
     border-radius: 50%;
@@ -111,64 +108,66 @@ body.flexcyon-ascii-checkboxes-enabled {
   }
 
   input[data-task="<"]:checked::after,
-  li[data-task="<"]>input:checked::after,
-  li[data-task="<"]>p>input:checked::after,
+  li[data-task="<"] > input:checked::after,
+  li[data-task="<"] > p > input:checked::after,
   input[data-task=">"]:checked::after,
-  li[data-task=">"]>input:checked::after,
-  li[data-task=">"]>p>input:checked::after {
+  li[data-task=">"] > input:checked::after,
+  li[data-task=">"] > p > input:checked::after {
     transform: scaleY(1.1);
     top: -0.4rem;
   }
 
   input[data-task="."]:checked::after,
-  li[data-task="."]>input:checked::after,
-  li[data-task="."]>p>input:checked::after {
+  li[data-task="."] > input:checked::after,
+  li[data-task="."] > p > input:checked::after {
     content: "...";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
     letter-spacing: -0.5px;
   }
 
   input[data-task="*"]:checked::after,
-  li[data-task="*"]>input:checked::after,
-  li[data-task="*"]>p>input:checked::after {
+  li[data-task="*"] > input:checked::after,
+  li[data-task="*"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
   }
 
   input[data-task="$"]:checked::after,
-  li[data-task="$"]>input:checked::after,
-  li[data-task="$"]>p>input:checked::after {
+  li[data-task="$"] > input:checked::after,
+  li[data-task="$"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   }
 
   input[data-task="@"]:checked::after,
-  li[data-task="@"]>input:checked::after,
-  li[data-task="@"]>p>input:checked::after {
+  li[data-task="@"] > input:checked::after,
+  li[data-task="@"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
     top: -0.45rem;
   }
 
   input[data-task="%"]:checked::after,
-  li[data-task="%"]>input:checked::after,
-  li[data-task="%"]>p>input:checked::after {
+  li[data-task="%"] > input:checked::after,
+  li[data-task="%"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.225rem);
   }
 
   input[data-task="+"]:checked::after,
-  li[data-task="+"]>input:checked::after,
-  li[data-task="+"]>p>input:checked::after {
+  li[data-task="+"] > input:checked::after,
+  li[data-task="+"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   }
 
   input[data-task="-"]:checked::after,
-  li[data-task="-"]>input:checked::after,
-  li[data-task="-"]>p>input:checked::after {
+  li[data-task="-"] > input:checked::after,
+  li[data-task="-"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
     top: -0.7rem;
     content: "--";
     letter-spacing: var(--less-letter-spacing);
   }
 
-  .markdown-source-view.mod-cm6 .task-list-label .task-list-item-checkbox[data-task="-"] {
+  .markdown-source-view.mod-cm6
+    .task-list-label
+    .task-list-item-checkbox[data-task="-"] {
     margin-inline-start: calc(var(--checkbox-margin-inline-start) - 0.075rem);
   }
 }
@@ -181,22 +180,25 @@ body.flexcyon-ascii-checkboxes-enabled {
   $interval: $max-index + 1;
 
   @each $index, $color in $color-map {
-    .HyperMD-list-line:nth-of-type(#{$interval}n+#{$index}) .list-bullet::after,
-    ul :nth-of-type(#{$interval}n+#{$index}) .list-bullet::after {
+    .HyperMD-list-line:nth-of-type(#{$interval}n + #{$index})
+      .list-bullet::after,
+    ul :nth-of-type(#{$interval}n + #{$index}) .list-bullet::after {
       --list-marker-color: var(--color-#{$color});
     }
   }
 }
 
 body.flexcyon-rainbow-bullet-points {
-  @include nth-bullet-point((
-    0: purple,
-    1: cyan,
-    2: blue,
-    3: pink,
-    4: green,
-    5: yellow,
-    6: orange,
-    7: red
-  ));
+  @include nth-bullet-point(
+    (
+      0: purple,
+      1: cyan,
+      2: blue,
+      3: pink,
+      4: green,
+      5: yellow,
+      6: orange,
+      7: red,
+    )
+  );
 }

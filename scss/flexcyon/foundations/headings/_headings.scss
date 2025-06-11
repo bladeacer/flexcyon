@@ -1,87 +1,100 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-    --h1-weight: 700;
-    --h2-weight: 675;
-    --h3-weight: 650;
-    --h4-weight: 625;
-    --h5-weight: 600;
-    --h6-weight: 575;
+  --h1-weight: 700;
+  --h2-weight: 675;
+  --h3-weight: 650;
+  --h4-weight: 625;
+  --h5-weight: 600;
+  --h6-weight: 575;
 }
 
 body.flexcyon-headings-coloured-enabled {
-    --h1-color: var(--flexcyon-blue);
-    --h2-color: var(--flexcyon-purple-lilac);
-    --h3-color: var(--flexcyon-cyan);
-    --h4-color: var(--flexcyon-pink);
-    --h5-color: var(--flexcyon-lime-green);
-    --h6-color: var(--flexcyon-yellow);
+  --h1-color: var(--flexcyon-blue);
+  --h2-color: var(--flexcyon-purple-lilac);
+  --h3-color: var(--flexcyon-cyan);
+  --h4-color: var(--flexcyon-pink);
+  --h5-color: var(--flexcyon-lime-green);
+  --h6-color: var(--flexcyon-yellow);
 }
 
 body.flexcyon-headings-glow-enabled {
-    h1, .cm-header-1 {
-        text-shadow: 2px 2px 4px var(--h1-color); 
-    }
-    h2, .cm-header-2 {
-        text-shadow: 1.75px 1.75px 3.5px var(--h2-color); 
-    }
-    h3, .cm-header-3 {
-        text-shadow: 1.5px 1.5px 3px var(--h3-color); 
-    }
-    h4, .cm-header-4 {
-        text-shadow: 1.25px 1.25px 2.5px var(--h4-color); 
-    }
-    h5, .cm-header-5 {
-        text-shadow: 1px 1px 2px var(--h5-color); 
-    }
-    h6, .cm-header-6 {
-        text-shadow: 0.75px 0.75px 1.5px var(--h6-color); 
-    }
-    .cm-formatting-header {
-        text-shadow: none;
-    }
+  h1,
+  .cm-header-1 {
+    text-shadow: 2px 2px 4px var(--h1-color);
+  }
+  h2,
+  .cm-header-2 {
+    text-shadow: 1.75px 1.75px 3.5px var(--h2-color);
+  }
+  h3,
+  .cm-header-3 {
+    text-shadow: 1.5px 1.5px 3px var(--h3-color);
+  }
+  h4,
+  .cm-header-4 {
+    text-shadow: 1.25px 1.25px 2.5px var(--h4-color);
+  }
+  h5,
+  .cm-header-5 {
+    text-shadow: 1px 1px 2px var(--h5-color);
+  }
+  h6,
+  .cm-header-6 {
+    text-shadow: 0.75px 0.75px 1.5px var(--h6-color);
+  }
+  .cm-formatting-header {
+    text-shadow: none;
+  }
 }
 
 body.flexcyon-h1-underline-enabled h1 {
-    border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid var(--h1-color);
+  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
+    var(--h1-color);
 }
 
 body.flexcyon-h2-underline-enabled h2 {
-    border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid var(--h2-color);
+  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
+    var(--h2-color);
 }
 
 body.flexcyon-h3-underline-enabled h3 {
-    border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid var(--h3-color);
+  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
+    var(--h3-color);
 }
 
 body.flexcyon-h4-underline-enabled h4 {
-    border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid var(--h4-color);
+  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
+    var(--h4-color);
 }
 
 body.flexcyon-h5-underline-enabled h5 {
-    border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid var(--h5-color);
+  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
+    var(--h5-color);
 }
 
 body.flexcyon-h6-underline-enabled h6 {
-    border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid var(--h6-color);
+  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
+    var(--h6-color);
 }
 
 @mixin headings-indicator($h_level) {
-    .headings-indicator-all,
-    .headings-indicator-h#{$h_level},
-    .flexcyon-headings-indicator-h#{$h_level} .workspace-leaf-content[data-type="markdown"] {
-        h#{$h_level}:not(:hover)::before,
-        .HyperMD-header-#{$h_level}::before {
-            position: relative;
-            content: "h#{$h_level}";
-            color: var(--h#{$h_level}-color);
-            opacity: calc(var(--dimmed) + 0.25);
-            font-size: var(--font-ui-medium);
-            padding-right: 8px;
-        }
+  .headings-indicator-all,
+  .headings-indicator-h#{$h_level},
+  .flexcyon-headings-indicator-h#{$h_level}
+    .workspace-leaf-content[data-type="markdown"] {
+    h#{$h_level}:not(:hover)::before,
+    .HyperMD-header-#{$h_level}::before {
+      position: relative;
+      content: "h#{$h_level}";
+      color: var(--h#{$h_level}-color);
+      opacity: calc(var(--dimmed) + 0.25);
+      font-size: var(--font-ui-medium);
+      padding-right: 8px;
     }
+  }
 }
 
 @include headings-indicator(1);

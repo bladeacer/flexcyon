@@ -1,32 +1,41 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
-body.theme-dark, body.theme-light {
+body.theme-dark,
+body.theme-light {
   --text-highlight-bg: rgba(var(--color-purple-rgb), var(--dimmed));
 }
 
 body {
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
-  text-underline-offset: .1em;
+  text-underline-offset: 0.1em;
 
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
 
   --text-normal: var(--flexcyon-text-normal);
-  --text-muted: color-mix(in hsl, var(--flexcyon-text-muted), var(--flexcyon-text-normal));
+  --text-muted: color-mix(
+    in hsl,
+    var(--flexcyon-text-muted),
+    var(--flexcyon-text-normal)
+  );
   --text-faint: var(--flexcyon-text-muted);
 
   --text-accent: var(--flexcyon-accent);
   --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
- 
+
   --text-error: var(--flexcyon-red-salmon);
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
-  
-  --text-selection: color-mix(in hsl shorter hue, var(--flexcyon-base-04) 20%, transparent);
+
+  --text-selection: color-mix(
+    in hsl shorter hue,
+    var(--flexcyon-base-04) 20%,
+    transparent
+  );
 
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);

@@ -1,132 +1,137 @@
 body {
-    --color-accent: hsla(var(--accent-h), var(--accent-s), var(--accent-l), var(--dimmed));
-    --flexcyon-canvas-blur-intensity: 1px;
+  --color-accent: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    var(--accent-l),
+    var(--dimmed)
+  );
+  --flexcyon-canvas-blur-intensity: 1px;
 }
 
 .canvas-background {
-    pattern {
-        display: none;
-    }
+  pattern {
+    display: none;
+  }
 }
 
 .canvas-controls {
-    top: 24px;
-    gap: 8px;
-    scale: var(--expand);
+  top: 24px;
+  gap: 8px;
+  scale: var(--expand);
 }
 
 .canvas-card-menu {
-    scale: var(--upsize);
+  scale: var(--upsize);
 }
 
-@media (hover:hover) {
-    .canvas-control-item:hover {
-        color: var(--text-accent);
-    }
+@media (hover: hover) {
+  .canvas-control-item:hover {
+    color: var(--text-accent);
+  }
 }
 
 body.flexcyon-canvas-blur-inactive-nodes {
-    .canvas:has(.canvas-node.is-editing) .canvas-edges,
-    .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
-        filter: blur(var(--flexcyon-canvas-blur-intensity));
-    }
+  .canvas:has(.canvas-node.is-editing) .canvas-edges,
+  .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
+    filter: blur(var(--flexcyon-canvas-blur-intensity));
+  }
 }
 
 body.flexcyon-canvas-menu-bottom-left {
-    .canvas-card-menu {
-        left: 1%;
-        transform: none;
-    }
+  .canvas-card-menu {
+    left: 1%;
+    transform: none;
+  }
 }
 
 body.flexcyon-canvas-menu-bottom-right {
-    .canvas-card-menu {
-        left: 89%;
-        transform: none;
-    }
+  .canvas-card-menu {
+    left: 89%;
+    transform: none;
+  }
 }
 
 body.flexcyon-canvas-menu-top-center {
-    .canvas-card-menu {
-        bottom: 94%;
-    }
+  .canvas-card-menu {
+    bottom: 94%;
+  }
 }
 
 body.flexcyon-canvas-menu-top-left {
-    .canvas-card-menu {
-        bottom: 94%;
-        left: 1%;
-        transform: none;
-    }
+  .canvas-card-menu {
+    bottom: 94%;
+    left: 1%;
+    transform: none;
+  }
 }
 
 body.flexcyon-canvas-menu-top-right {
-    .canvas-card-menu {
-        bottom: 94%;
-        left: 87.5%;
-        transform: none;
-    }
+  .canvas-card-menu {
+    bottom: 94%;
+    left: 87.5%;
+    transform: none;
+  }
 }
 
 body.flexcyon-canvas-menu-lcenter-center {
-    .canvas-card-menu {
-        left: 1%;
-        bottom: 50%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 1%;
+    bottom: 50%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-lcenter-top {
-    .canvas-card-menu {
-        left: 1%;
-        bottom: 82.5%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 1%;
+    bottom: 82.5%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-lcenter-bottom {
-    .canvas-card-menu {
-        left: 1%;
-        bottom: 2.5%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 1%;
+    bottom: 2.5%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-rcenter-bottom {
-    .canvas-card-menu {
-        left: 96.1%;
-        bottom: 7.5%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 96.1%;
+    bottom: 7.5%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-rcenter-align {
-    .canvas-card-menu {
-        left: 96.1%;
-        bottom: 40%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 96.1%;
+    bottom: 40%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-rcenter-center {
-    .canvas-card-menu {
-        left: 96.1%;
-        bottom: 40%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 96.1%;
+    bottom: 40%;
+    transform: none;
+    flex-direction: column;
+  }
 }
 
 body.flexcyon-canvas-menu-rcenter-top {
-    .canvas-card-menu {
-        left: 96.1%;
-        bottom: 82.5%;
-        transform: none;
-        flex-direction: column;
-    }
+  .canvas-card-menu {
+    left: 96.1%;
+    bottom: 82.5%;
+    transform: none;
+    flex-direction: column;
+  }
 }

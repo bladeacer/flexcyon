@@ -1,55 +1,71 @@
-// The code snippets in this file are derived from the Halcyon theme 
- // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+// The code snippets in this file are derived from the Halcyon theme
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-    // TODO: Make this a mixin
-    :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
-        background: rgba(var(--color-pink-rgb), 65%)
-    }
+  // TODO: Make this a mixin
+  :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
+    background: rgba(var(--color-pink-rgb), 65%);
+  }
 
-    :is(.hltr-red, mark.hltr-red, .markdown-preview-view mark.hltr-red) {
-        background: rgba(var(--color-red-rgb), 65%)
-    }
+  :is(.hltr-red, mark.hltr-red, .markdown-preview-view mark.hltr-red) {
+    background: rgba(var(--color-red-rgb), 65%);
+  }
 
-    :is(.hltr-orange, mark.hltr-orange, .markdown-preview-view mark.hltr-orange) {
-        background: rgba(var(--color-orange-rgb), 65%)
-    }
+  :is(.hltr-orange, mark.hltr-orange, .markdown-preview-view mark.hltr-orange) {
+    background: rgba(var(--color-orange-rgb), 65%);
+  }
 
-    :is(.hltr-yellow, mark.hltr-yellow, .markdown-preview-view mark.hltr-yellow) {
-        background: rgba(var(--color-yellow-rgb), 65%)
-    }
+  :is(.hltr-yellow, mark.hltr-yellow, .markdown-preview-view mark.hltr-yellow) {
+    background: rgba(var(--color-yellow-rgb), 65%);
+  }
 
-    :is(.hltr-green, mark.hltr-green, .markdown-preview-view mark.hltr-green) {
-        background: rgba(var(--color-green-rgb), 65%)
-    }
+  :is(.hltr-green, mark.hltr-green, .markdown-preview-view mark.hltr-green) {
+    background: rgba(var(--color-green-rgb), 65%);
+  }
 
-    :is(.hltr-cyan, mark.hltr-cyan, .markdown-preview-view mark.hltr-cyan) {
-        background: rgba(var(--color-cyan-rgb), 65%)
-    }
+  :is(.hltr-cyan, mark.hltr-cyan, .markdown-preview-view mark.hltr-cyan) {
+    background: rgba(var(--color-cyan-rgb), 65%);
+  }
 
-    :is(.hltr-blue, mark.hltr-blue, .markdown-preview-view mark.hltr-blue) {
-        background: rgba(var(--color-blue-rgb), 65%)
-    }
+  :is(.hltr-blue, mark.hltr-blue, .markdown-preview-view mark.hltr-blue) {
+    background: rgba(var(--color-blue-rgb), 65%);
+  }
 
-    :is(.hltr-purple, mark.hltr-purple, .markdown-preview-view mark.hltr-purple) {
-        background: rgba(var(--color-purple-rgb), 65%)
-    }
+  :is(.hltr-purple, mark.hltr-purple, .markdown-preview-view mark.hltr-purple) {
+    background: rgba(var(--color-purple-rgb), 65%);
+  }
 }
 
-body.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
-    --lowlight-background: var(--background-primary);
-    background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important
+body.highlightr-lowlight
+  :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+  --lowlight-background: var(--background-primary);
+  background-image: linear-gradient(
+    to right,
+    0,
+    var(--lowlight-background) 10%,
+    rgba(var(--mono-rgb-0), 0) 10%,
+    rgba(var(--mono-rgb-0), 0) 25%,
+    var(--lowlight-background) 40%
+  ) !important;
 }
 
-body.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
-    --floating-background: var(--background-primary);
-    --floating-size: 20%;
-    padding-bottom: .1em;
-    background-image: linear-gradient(to right, 0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important
+body.highlightr-floating
+  mark[class*="hltr"]:last-of-type:not(mark[class*="hltr"]:only-of-type) {
+  --floating-background: var(--background-primary);
+  --floating-size: 20%;
+  padding-bottom: 0.1em;
+  background-image: linear-gradient(
+    to right,
+    0,
+    rgba(var(--mono-rgb-0), 0) var(--floating-size),
+    var(--floating-background) var(--floating-size)
+  ) !important;
 }
 
-body.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark), 
-body.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
-    padding-top: 0;
-    padding-bottom: 0;
+body.highlightr-rounded
+  :is(mark, span.cm-highlight, .markdown-preview-view mark),
+body.highlightr-realistic
+  :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+  padding-top: 0;
+  padding-bottom: 0;
 }

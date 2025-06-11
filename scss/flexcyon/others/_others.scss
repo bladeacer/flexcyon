@@ -1,79 +1,92 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-    --flexcyon-top-actions-alignment: center;
-    --flexcyon-media-embed-vertical-margin: 8px;
-    --flexcyon-anim-duration: 0.35s;
+  --flexcyon-top-actions-alignment: center;
+  --flexcyon-media-embed-vertical-margin: 8px;
+  --flexcyon-anim-duration: 0.35s;
 
-    --modal-border-color: var(--flexcyon-base-02)
+  --modal-border-color: var(--flexcyon-base-02)
     --toggle-thumb-color: var(--text-on-accent);
-    --file-line-width: 50rem;
-    --hr-color: color-mix(in hsl shorter hue, var(--text-faint), var(--background-modifier-border));
-    --vault-name-color: var(--interactive-accent);
-    --ribbon-background-collapsed: var(--ribbon-background)
+  --file-line-width: 50rem;
+  --hr-color: color-mix(
+    in hsl shorter hue,
+    var(--text-faint),
+    var(--background-modifier-border)
+  );
+  --vault-name-color: var(--interactive-accent);
+  --ribbon-background-collapsed: var(--ribbon-background)
     --workspace-background-translucent: unset;
 
-    div.nav-buttons-container {
-        justify-content: var(--flexcyon-top-actions-alignment);
-        opacity: calc(var(--dimmed) + 0.2);
+  div.nav-buttons-container {
+    justify-content: var(--flexcyon-top-actions-alignment);
+    opacity: calc(var(--dimmed) + 0.2);
 
-        &:hover {
-            opacity: unset;
-        }
+    &:hover {
+      opacity: unset;
     }
-    .tree-item-flair {
-        color: var(--text-muted);
+  }
+  .tree-item-flair {
+    color: var(--text-muted);
+  }
+
+  .workspace-ribbon {
+    border-right: unset;
+  }
+
+  &:not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
+    color: var(--interactive-accent-hover);
+  }
+
+  .cm-formatting.cm-formatting-task {
+    color: var(--flexcyon-purple-lilac);
+  }
+
+  div.modal-content.vertical-tabs-container
+    > div.vertical-tab-header
+    > div
+    > div.vertical-tab-header-group-items {
+    & div.vertical-tab-nav-item {
+      opacity: var(--dimmed);
     }
 
-    .workspace-ribbon {
-        border-right: unset;
+    & div.vertical-tab-nav-item.is-active {
+      opacity: 1;
     }
-
-    &:not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
-        color: var(--interactive-accent-hover);
-    }
-
-    .cm-formatting.cm-formatting-task {
-        color: var(--flexcyon-purple-lilac);
-    }
-
-    div.modal-content.vertical-tabs-container>div.vertical-tab-header>div>div.vertical-tab-header-group-items {
-        & div.vertical-tab-nav-item {
-            opacity: var(--dimmed);
-        }
-
-        & div.vertical-tab-nav-item.is-active {
-            opacity: 1;
-        }
-    }
+  }
 }
 
 body.flexcyon-enable-alt-active-item-effect {
-    .vertical-tab-nav-item {
-        padding-left: 0.5rem;
-        transform: padding ease-in-out 0.35s;
-    }
+  .vertical-tab-nav-item {
+    padding-left: 0.5rem;
+    transform: padding ease-in-out 0.35s;
+  }
 
-    .vertical-tab-nav-item.search-settings-input {
-        padding-left: 0.1rem;
-    }
+  .vertical-tab-nav-item.search-settings-input {
+    padding-left: 0.1rem;
+  }
 
-    .vertical-tab-nav-item.is-active {
-        color: var(--text-accent);
-        background: linear-gradient(to right, transparent 0%, var(--text-on-accent) 10%, var(--text-on-accent) 90%, transparent 100%);
-        padding-left: 0.75rem;
+  .vertical-tab-nav-item.is-active {
+    color: var(--text-accent);
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      var(--text-on-accent) 10%,
+      var(--text-on-accent) 90%,
+      transparent 100%
+    );
+    padding-left: 0.75rem;
 
-        &:hover {
-            font-weight: bold;
-        }
+    &:hover {
+      font-weight: bold;
     }
+  }
 }
 
 body span.media-embed * {
-    margin: var(--flexcyon-media-embed-vertical-margin) 0px;
+  margin: var(--flexcyon-media-embed-vertical-margin) 0px;
 }
 
 .cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote {
-    top: -0.1em;
+  top: -0.1em;
 }

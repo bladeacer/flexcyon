@@ -1,166 +1,173 @@
 /* Modifications for alternate file tree plugin */
 
 body.theme-dark {
-    --oz-fta-all-panes-active-text-color: #d3d5d3;
-    --oz-fta-folder-panes-file-name-color: #d3d5d3;
+  --oz-fta-all-panes-active-text-color: #d3d5d3;
+  --oz-fta-folder-panes-file-name-color: #d3d5d3;
 }
 
 body.theme-light {
-    --oz-fta-all-panes-active-text-color: #080808;
-    --oz-fta-folder-panes-file-name-color: #080808;
+  --oz-fta-all-panes-active-text-color: #080808;
+  --oz-fta-folder-panes-file-name-color: #080808;
 }
 
 body {
-    div.oz-folder-name {
-        opacity: var(--dimmed);
-    }
+  div.oz-folder-name {
+    opacity: var(--dimmed);
+  }
 
-    div.oz-folder-element {
-        overflow: hidden;
-        scrollbar-width: 1px;
-    }
+  div.oz-folder-element {
+    overflow: hidden;
+    scrollbar-width: 1px;
+  }
 
-    div.oz-folder-name.is-folder-active {
-        font-weight: normal;
-        opacity: unset;
-    }
+  div.oz-folder-name.is-folder-active {
+    font-weight: normal;
+    opacity: unset;
+  }
 
-    div.oz-file-tree-header {
-        background-color: var(--color-base-00);
-        padding: 8px 5px;
-        margin-top: 0;
-        text-align: var(--flexcyon-top-actions-alignment);
-    }
+  div.oz-file-tree-header {
+    background-color: var(--color-base-00);
+    padding: 8px 5px;
+    margin-top: 0;
+    text-align: var(--flexcyon-top-actions-alignment);
+  }
 
-    .oz-folders-action-items, .oz-flex-container {
-        margin-bottom: 0;
-    }
+  .oz-folders-action-items,
+  .oz-flex-container {
+    margin-bottom: 0;
+  }
 
-    div.oz-folder-pane {
-        position: relative;
-        top: -4px;
-    }
+  div.oz-folder-pane {
+    position: relative;
+    top: -4px;
+  }
 
-    div.oz-folders-action-items.file-tree-header-fixed {
-        border-radius: unset;
-        background-color: var(--color-base-00);
-        border: unset;
+  div.oz-folders-action-items.file-tree-header-fixed {
+    border-radius: unset;
+    background-color: var(--color-base-00);
+    border: unset;
 
-        svg {
-            scale: var(--upsize);
-        }
+    svg {
+      scale: var(--upsize);
     }
+  }
 
-    .oz-nav-file-tag {
-        font-size: calc(var(--oz-fta-folder-font-size) - 0.35rem);
-        background-color: transparent;
-    }
+  .oz-nav-file-tag {
+    font-size: calc(var(--oz-fta-folder-font-size) - 0.35rem);
+    background-color: transparent;
+  }
 
-    .oz-folders-action-items {
-        text-align: var(--flexcyon-top-actions-alignment);
-        padding: 0;
-        &:hover {
-            opacity: unset;
-        }
+  .oz-folders-action-items {
+    text-align: var(--flexcyon-top-actions-alignment);
+    padding: 0;
+    &:hover {
+      opacity: unset;
     }
-    .oz-nav-action-button {
-        margin-left: 0;
-        margin-right: 8px;
-        padding: 0px;
-        opacity: var(--dimmed);
-    }
+  }
+  .oz-nav-action-button {
+    margin-left: 0;
+    margin-right: 8px;
+    padding: 0px;
+    opacity: var(--dimmed);
+  }
 }
 
 body.flexcyon-oz-alternate-folder-count {
-    div.oz-folder-line {
-        transition: all 0.35s ease-in-out;
+  div.oz-folder-line {
+    transition: all 0.35s ease-in-out;
 
-        div.oz-folder-count {
-            transform: translateY(1000px);
-        }
+    div.oz-folder-count {
+      transform: translateY(1000px);
     }
+  }
 
-    div.oz-folder-line:hover {
-        max-width: max-content;
+  div.oz-folder-line:hover {
+    max-width: max-content;
 
-        div.oz-folder-count {
-            span.oz-nav-file-tag {
-                margin-top: 0.5px;
-                font-weight: inherit;
-                transform: translateY(-1000px);
-                text-transform: none;
-                display: inline;
-                text-align: left;
+    div.oz-folder-count {
+      span.oz-nav-file-tag {
+        margin-top: 0.5px;
+        font-weight: inherit;
+        transform: translateY(-1000px);
+        text-transform: none;
+        display: inline;
+        text-align: left;
 
-                &::before {
-                    content: "Count: ";
-                }
-            }
+        &::before {
+          content: "Count: ";
         }
+      }
     }
+  }
 }
 
 body.flexcyon-oz-folder-icons-disabled {
-    div.oz-icon-div {
-        display: none;
-    }
+  div.oz-icon-div {
+    display: none;
+  }
 }
 
 body.flexcyon-oz-file-tree-header-disabled {
-    div.oz-file-tree-header {
-        display: none;
-    }
+  div.oz-file-tree-header {
+    display: none;
+  }
 }
 
 body.flexcyon-oz-dimmed-file-exts-enabled {
-    div.oz-nav-file-title[data-path$=".md"] {
-        div svg {
-            display: none;
-        }
-
-        span.oz-nav-file-tag {
-            display: none;
-        }
-
-        div::after {
-            content: ".md";
-            opacity: var(--dimmed);
-        }
+  div.oz-nav-file-title[data-path$=".md"] {
+    div svg {
+      display: none;
     }
 
-    div.oz-nav-file-title {
-        div.oz-nav-file-title-content {
-            width: unset;
-        }
-
-        span.oz-nav-file-tag {
-            text-transform: lowercase;
-            background-color: unset;
-            margin: unset;
-            border: unset;
-            padding: unset;
-            letter-spacing: unset;
-            color: var(--oz-fta-file-pane-file-name-color);
-            opacity: var(--dimmed);
-            font-weight: unset;
-
-            &::before {
-                content: ".";
-            }
-        }
+    span.oz-nav-file-tag {
+      display: none;
     }
 
+    div::after {
+      content: ".md";
+      opacity: var(--dimmed);
+    }
+  }
+
+  div.oz-nav-file-title {
+    div.oz-nav-file-title-content {
+      width: unset;
+    }
+
+    span.oz-nav-file-tag {
+      text-transform: lowercase;
+      background-color: unset;
+      margin: unset;
+      border: unset;
+      padding: unset;
+      letter-spacing: unset;
+      color: var(--oz-fta-file-pane-file-name-color);
+      opacity: var(--dimmed);
+      font-weight: unset;
+
+      &::before {
+        content: ".";
+      }
+    }
+  }
 }
 
-
-div.oz-nav-file.is-active, div.oz-nav-file.is-active div.oz-nav-file-title, div.oz-nav-file.is-active div.oz-nav-file-title-content {
-    background: linear-gradient(to right, transparent 0%, 
+div.oz-nav-file.is-active,
+div.oz-nav-file.is-active div.oz-nav-file-title,
+div.oz-nav-file.is-active div.oz-nav-file-title-content {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
     var(--oz-fta-file-pane-active-file-background-color) 10%,
-    var(--oz-fta-file-pane-active-file-background-color) 90%, transparent 100%);
-    font-weight: bold;
+    var(--oz-fta-file-pane-active-file-background-color) 90%,
+    transparent 100%
+  );
+  font-weight: bold;
 }
 
-.drag-entered, .oz-folder-element:hover, .oz-nav-file:hover {
-    background-color: var(--nav-item-background-hover);
-    color: var(--text-normal);
+.drag-entered,
+.oz-folder-element:hover,
+.oz-nav-file:hover {
+  background-color: var(--nav-item-background-hover);
+  color: var(--text-normal);
 }

@@ -1,209 +1,213 @@
 body {
-    .cm-gutterElement.cm-active {
-        font-weight: 900;
-        font-size: var(--font-ui-medium);
-        color: rgba(var(--color-green-rgb), 60%);
-    }
+  .cm-gutterElement.cm-active {
+    font-weight: 900;
+    font-size: var(--font-ui-medium);
+    color: rgba(var(--color-green-rgb), 60%);
+  }
 }
-
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
-    font-size: calc(var(--font-ui-small) + 0.05rem);
-    padding-right: 4px;
+  font-size: calc(var(--font-ui-small) + 0.05rem);
+  padding-right: 4px;
 }
 
 @mixin hide-preceding-lines($lines-to-hide) {
-    @for $i from 0 through ($lines-to-hide) {
-        $sibling-selector: "";
-        $sibling-selector-1: "+";
+  @for $i from 0 through ($lines-to-hide) {
+    $sibling-selector: "";
+    $sibling-selector-1: "+";
 
-        @for $j from 0 through $i {
-            $sibling-selector: $sibling-selector + " + *";
-            @if $j > 1 {
-                $sibling-selector-1: $sibling-selector-1 + "* +";
-            }
-        }
+    @for $j from 0 through $i {
+      $sibling-selector: $sibling-selector + " + *";
+      @if $j > 1 {
+        $sibling-selector-1: $sibling-selector-1 + "* +";
+      }
+    }
 
-        .cm-lineNumbers .cm-active #{$sibling-selector},
-        .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active) {
-            font-size: 0;
-        }
+    .cm-lineNumbers .cm-active #{$sibling-selector},
+    .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active) {
+      font-size: 0;
     }
-    .cm-lineNumbers *:has(+ .cm-active) {
-        font-size: 0;
-    }
+  }
+  .cm-lineNumbers *:has(+ .cm-active) {
+    font-size: 0;
+  }
 }
 
 @mixin write-relative-lines($lines-to-hide) {
-    $sibling-selector: "";
-    $sibling-selector-1: "+";
-    @for $j from 0 through ($lines-to-hide) {
-        $sibling-selector: $sibling-selector + " + *";
+  $sibling-selector: "";
+  $sibling-selector-1: "+";
+  @for $j from 0 through ($lines-to-hide) {
+    $sibling-selector: $sibling-selector + " + *";
 
-        @if $j != $lines-to-hide {
-            .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-                --flexcyon-rel-bel-#{$j+1}: "#{$j+1}";
-                content: var(--flexcyon-rel-bel-#{$j+1});
-            }
-        }
-
-        @if $j > 1 {
-            $sibling-selector-1: $sibling-selector-1 + "* +";
-        }
-
-        .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active)::before {
-            --flexcyon-rel-abv-#{$j}: "#{$j}";
-            content: var(--flexcyon-rel-abv-#{$j});
-        }
+    @if $j != $lines-to-hide {
+      .cm-lineNumbers .cm-active #{$sibling-selector}::before {
+        --flexcyon-rel-bel-#{$j+1}: "#{$j+1}";
+        content: var(--flexcyon-rel-bel-#{$j + 1});
+      }
     }
 
+    @if $j > 1 {
+      $sibling-selector-1: $sibling-selector-1 + "* +";
+    }
+
+    .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active)::before {
+      --flexcyon-rel-abv-#{$j}: "#{$j}";
+      content: var(--flexcyon-rel-abv-#{$j});
+    }
+  }
 }
 
 @mixin target-relative-line-abv($line-no, $content, $mod-font-size: 0) {
-    $sibling-selector: "+";
-    @for $j from 0 through $line-no {
-        @if $j > 1 {
-            $sibling-selector: $sibling-selector + "* +";
-        }
+  $sibling-selector: "+";
+  @for $j from 0 through $line-no {
+    @if $j > 1 {
+      $sibling-selector: $sibling-selector + "* +";
     }
+  }
+  .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
+    --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+  }
+  @if $mod-font-size != 0 {
     .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
-        --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+      font-size: #{$mod-font-size}rem;
     }
-    @if $mod-font-size != 0 {
-        .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
-            font-size: #{$mod-font-size}rem;
-        }
-    }
+  }
 }
 
 @mixin target-relative-line-bel($line-no, $content, $mod-font-size: 0) {
-    $sibling-selector: "";
-    @for $j from 1 through ($line-no) {
-        $sibling-selector: $sibling-selector + " + *";
-    }
+  $sibling-selector: "";
+  @for $j from 1 through ($line-no) {
+    $sibling-selector: $sibling-selector + " + *";
+  }
 
+  .cm-lineNumbers .cm-active #{$sibling-selector}::before {
+    --flexcyon-rel-bel-#{$line-no}: "#{$content}";
+  }
+  @if $mod-font-size != 0 {
     .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-        --flexcyon-rel-bel-#{$line-no}: "#{$content}";
+      font-size: #{$mod-font-size}rem;
     }
-    @if $mod-font-size != 0 {
-        .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-            font-size: #{$mod-font-size}rem;
-        }
-    }
+  }
 }
 
 // Override line numbers where there are relative line numbers
 body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) {
-    @include hide-preceding-lines(10);
+  @include hide-preceding-lines(10);
 }
 
 // Do not display other lines which are not relative line numbers
 body.flexcyon-enable-rel-nums.flexcyon-relative-num-only:not(.is-mobile) {
-    .cm-lineNumbers .cm-gutterElement:not(.cm-active) {
-        font-size: 0;
-    }
-} 
+  .cm-lineNumbers .cm-gutterElement:not(.cm-active) {
+    font-size: 0;
+  }
+}
 
 // Normal style relative line numbers
 body.flexcyon-enable-rel-nums:not(.is-mobile) {
-    @include write-relative-lines(10);
+  @include write-relative-lines(10);
 }
 
 // Lower Greek letters
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) {
-    @include target-relative-line-abv(1, "α", 0.925);
-    @include target-relative-line-abv(2, "β", 0.925);
-    @include target-relative-line-abv(3, "γ", 0.925);
-    @include target-relative-line-abv(4, "δ", 0.925);
-    @include target-relative-line-abv(5, "ε", 0.925);
-    @include target-relative-line-abv(6, "ζ", 0.925);
-    @include target-relative-line-abv(7, "η", 0.925);
-    @include target-relative-line-abv(8, "θ", 0.925);
-    @include target-relative-line-abv(9, "ι", 0.95);
-    @include target-relative-line-abv(10, "κ", 0.95);
+  @include target-relative-line-abv(1, "α", 0.925);
+  @include target-relative-line-abv(2, "β", 0.925);
+  @include target-relative-line-abv(3, "γ", 0.925);
+  @include target-relative-line-abv(4, "δ", 0.925);
+  @include target-relative-line-abv(5, "ε", 0.925);
+  @include target-relative-line-abv(6, "ζ", 0.925);
+  @include target-relative-line-abv(7, "η", 0.925);
+  @include target-relative-line-abv(8, "θ", 0.925);
+  @include target-relative-line-abv(9, "ι", 0.95);
+  @include target-relative-line-abv(10, "κ", 0.95);
 
-    @include target-relative-line-bel(1, "α", 0.925);
-    @include target-relative-line-bel(2, "β", 0.925);
-    @include target-relative-line-bel(3, "γ", 0.925);
-    @include target-relative-line-bel(4, "δ", 0.925);
-    @include target-relative-line-bel(5, "ε", 0.925);
-    @include target-relative-line-bel(6, "ζ", 0.925);
-    @include target-relative-line-bel(7, "η", 0.925);
-    @include target-relative-line-bel(8, "θ", 0.925);
-    @include target-relative-line-bel(9, "ι", 0.95);
-    @include target-relative-line-bel(10, "κ", 0.95);
+  @include target-relative-line-bel(1, "α", 0.925);
+  @include target-relative-line-bel(2, "β", 0.925);
+  @include target-relative-line-bel(3, "γ", 0.925);
+  @include target-relative-line-bel(4, "δ", 0.925);
+  @include target-relative-line-bel(5, "ε", 0.925);
+  @include target-relative-line-bel(6, "ζ", 0.925);
+  @include target-relative-line-bel(7, "η", 0.925);
+  @include target-relative-line-bel(8, "θ", 0.925);
+  @include target-relative-line-bel(9, "ι", 0.95);
+  @include target-relative-line-bel(10, "κ", 0.95);
 }
 
 // Roman numerals
 body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
-    @include target-relative-line-abv(1, "I");
-    @include target-relative-line-abv(2, "II");
-    @include target-relative-line-abv(3, "III");
-    @include target-relative-line-abv(4, "IV");
-    @include target-relative-line-abv(5, "V");
-    @include target-relative-line-abv(6, "VI");
-    @include target-relative-line-abv(7, "VII");
-    @include target-relative-line-abv(8, "VIII");
-    @include target-relative-line-abv(9, "IX");
-    @include target-relative-line-abv(10, "X");
+  @include target-relative-line-abv(1, "I");
+  @include target-relative-line-abv(2, "II");
+  @include target-relative-line-abv(3, "III");
+  @include target-relative-line-abv(4, "IV");
+  @include target-relative-line-abv(5, "V");
+  @include target-relative-line-abv(6, "VI");
+  @include target-relative-line-abv(7, "VII");
+  @include target-relative-line-abv(8, "VIII");
+  @include target-relative-line-abv(9, "IX");
+  @include target-relative-line-abv(10, "X");
 
-    @include target-relative-line-bel(1, "I");
-    @include target-relative-line-bel(2, "II");
-    @include target-relative-line-bel(3, "III");
-    @include target-relative-line-bel(4, "IV");
-    @include target-relative-line-bel(5, "V");
-    @include target-relative-line-bel(6, "VI");
-    @include target-relative-line-bel(7, "VII");
-    @include target-relative-line-bel(8, "VIII");
-    @include target-relative-line-bel(9, "IX");
-    @include target-relative-line-bel(10, "X");
+  @include target-relative-line-bel(1, "I");
+  @include target-relative-line-bel(2, "II");
+  @include target-relative-line-bel(3, "III");
+  @include target-relative-line-bel(4, "IV");
+  @include target-relative-line-bel(5, "V");
+  @include target-relative-line-bel(6, "VI");
+  @include target-relative-line-bel(7, "VII");
+  @include target-relative-line-bel(8, "VIII");
+  @include target-relative-line-bel(9, "IX");
+  @include target-relative-line-bel(10, "X");
 }
 
 // Chinese numbers
 body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
-    @include target-relative-line-abv(1, "一");
-    @include target-relative-line-abv(2, "二");
-    @include target-relative-line-abv(3, "三");
-    @include target-relative-line-abv(4, "四");
-    @include target-relative-line-abv(5, "五");
-    @include target-relative-line-abv(6, "六");
-    @include target-relative-line-abv(7, "七");
-    @include target-relative-line-abv(8, "八");
-    @include target-relative-line-abv(9, "九");
-    @include target-relative-line-abv(10, "十");
+  @include target-relative-line-abv(1, "一");
+  @include target-relative-line-abv(2, "二");
+  @include target-relative-line-abv(3, "三");
+  @include target-relative-line-abv(4, "四");
+  @include target-relative-line-abv(5, "五");
+  @include target-relative-line-abv(6, "六");
+  @include target-relative-line-abv(7, "七");
+  @include target-relative-line-abv(8, "八");
+  @include target-relative-line-abv(9, "九");
+  @include target-relative-line-abv(10, "十");
 
-    @include target-relative-line-bel(1, "一");
-    @include target-relative-line-bel(2, "二");
-    @include target-relative-line-bel(3, "三");
-    @include target-relative-line-bel(4, "四");
-    @include target-relative-line-bel(5, "五");
-    @include target-relative-line-bel(6, "六");
-    @include target-relative-line-bel(7, "七");
-    @include target-relative-line-bel(8, "八");
-    @include target-relative-line-bel(9, "九");
-    @include target-relative-line-bel(10, "十");
+  @include target-relative-line-bel(1, "一");
+  @include target-relative-line-bel(2, "二");
+  @include target-relative-line-bel(3, "三");
+  @include target-relative-line-bel(4, "四");
+  @include target-relative-line-bel(5, "五");
+  @include target-relative-line-bel(6, "六");
+  @include target-relative-line-bel(7, "七");
+  @include target-relative-line-bel(8, "八");
+  @include target-relative-line-bel(9, "九");
+  @include target-relative-line-bel(10, "十");
 }
 
 body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile) {
-    .cm-gutterElement.cm-active {
-        font-size: 0;
-        &::before {
-            content: "0";
-            font-size: calc(var(--font-ui-medium) + 0.07rem);
-        }
+  .cm-gutterElement.cm-active {
+    font-size: 0;
+    &::before {
+      content: "0";
+      font-size: calc(var(--font-ui-medium) + 0.07rem);
     }
+  }
 }
 
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(.is-mobile),
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(.is-mobile) {
-    .cm-gutterElement.cm-active::before {
-        content: "->";
-    }
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(
+    .is-mobile
+  ),
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(
+    .is-mobile
+  ) {
+  .cm-gutterElement.cm-active::before {
+    content: "->";
+  }
 }
 
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(.is-mobile) {
-    .cm-gutterElement.cm-active::before {
-        content: "零";
-    }
+body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(
+    .is-mobile
+  ) {
+  .cm-gutterElement.cm-active::before {
+    content: "零";
+  }
 }

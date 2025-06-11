@@ -3,7 +3,7 @@
   "version": "0.4.3",
   "minAppVersion": "1.6.3",
   "author": "bladeacer",
-  "screenshot" : "./docs/dark.png",
+  "screenshot": "./docs/dark.png",
   "modes": ["light", "dark"],
   "fundingUrl": "https://github.com/sponsors/bladeacer"
 }

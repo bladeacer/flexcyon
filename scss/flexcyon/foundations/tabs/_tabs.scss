@@ -1,253 +1,271 @@
-// The code snippets in this file are derived from the Halcyon theme 
-// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file 
+// The code snippets in this file are derived from the Halcyon theme
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-    --tab-text-color: var(--flexcyon-base-05);
-    --tab-text-color-focused: var(--flexcyon-base-05);
-    --tab-text-color-active: var(--text-accent);
-    --tab-text-color-focused-active: var(--text-accent);
-    --tab-text-color-focused-active-current: var(--text-accent);
-    --tab-divider-color: var(--titlebar-background);
+  --tab-text-color: var(--flexcyon-base-05);
+  --tab-text-color-focused: var(--flexcyon-base-05);
+  --tab-text-color-active: var(--text-accent);
+  --tab-text-color-focused-active: var(--text-accent);
+  --tab-text-color-focused-active-current: var(--text-accent);
+  --tab-divider-color: var(--titlebar-background);
 
-    --tab-outline-width: 0px;
-    --tab-curve: 0px;
-    --tab-radius: 0px;
-    --tab-radius-active: 0px;
-    --flexcyon-anim-duration: 0.5s;
+  --tab-outline-width: 0px;
+  --tab-curve: 0px;
+  --tab-radius: 0px;
+  --tab-radius-active: 0px;
+  --flexcyon-anim-duration: 0.5s;
 
-    --flexcyon-anim-easing: ease-in-out;
-    --flexcyon-anim-slide-amount: 50px;
-    --flexcyon-anim-rotate-amount: 50deg;
+  --flexcyon-anim-easing: ease-in-out;
+  --flexcyon-anim-slide-amount: 50px;
+  --flexcyon-anim-rotate-amount: 50deg;
 }
 
 body.flexcyon-workspace-angled-layout {
-    .view-header-breadcrumb-separator {
-        display: none;
-    }
+  .view-header-breadcrumb-separator {
+    display: none;
+  }
 
-    .view-header-title {
-        transform: skewX(-22.5deg);
-        border-radius: 0px;
-        background-color: var(--color-base-20);
-        padding: 4px 12px;
-    }
+  .view-header-title {
+    transform: skewX(-22.5deg);
+    border-radius: 0px;
+    background-color: var(--color-base-20);
+    padding: 4px 12px;
+  }
 
-    .view-header-title-parent {
-        transform: skewX(-22.5deg);
-    }
+  .view-header-title-parent {
+    transform: skewX(-22.5deg);
+  }
 
-    .view-header-title-parent .view-header-breadcrumb {
-        padding: 4px 12px;
-        background-color: var(--color-base-05);
-    }
+  .view-header-title-parent .view-header-breadcrumb {
+    padding: 4px 12px;
+    background-color: var(--color-base-05);
+  }
 }
 
 body.flexcyon-workspace-pl10k-layout {
-    .view-header-title-parent {
-        :nth-of-type(5n+1) {
-            background-color: var(--color-base-20);
-            &::after {
-                background-color: var(--color-base-25);
-            }
-        }
-
-        :nth-of-type(5n+3) {
-            background-color: var(--color-base-25);
-            &::after {
-                background-color: var(--color-base-05);
-            }
-        }
-
-        :nth-of-type(5n) {
-            background-color: var(--color-base-05);
-            &::after {
-                background-color: var(--color-base-20);
-            }
-        }
-        :has(+ :last-child)::after {
-            background-color: var(--color-base-05);
-        }
-    }
-    .view-header-title-container:not(:has(.view-header-breadcrumb)) .view-header-title {
-        border-radius: 16px;
+  .view-header-title-parent {
+    :nth-of-type(5n + 1) {
+      background-color: var(--color-base-20);
+      &::after {
+        background-color: var(--color-base-25);
+      }
     }
 
-    .view-header-title-parent :first-child.view-header-breadcrumb {
-        border-top-left-radius: 16px;
-        border-bottom-left-radius: 16px;
-        padding-left: 12px;
-    }
-
-    .view-header-title-parent .view-header-breadcrumb {
-        padding: 4px 0px;
-
-        &::after {
-            padding: 10px 6px;
-            content: "e";
-            position: relative;
-            width: inherit;
-            height: inherit;
-            color: transparent;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
-        }
-    }
-
-    .view-header-title {
-        padding: 4px 12px;
-        border-top-right-radius: 16px;
-        border-bottom-right-radius: 16px;
+    :nth-of-type(5n + 3) {
+      background-color: var(--color-base-25);
+      &::after {
         background-color: var(--color-base-05);
-    }
-    .view-header-breadcrumb-separator {
-        display: none;
-    }
-    .view-header, .view-header-title-container {
-        gap: 0px;
+      }
     }
 
+    :nth-of-type(5n) {
+      background-color: var(--color-base-05);
+      &::after {
+        background-color: var(--color-base-20);
+      }
+    }
+    :has(+ :last-child)::after {
+      background-color: var(--color-base-05);
+    }
+  }
+  .view-header-title-container:not(:has(.view-header-breadcrumb))
+    .view-header-title {
+    border-radius: 16px;
+  }
+
+  .view-header-title-parent :first-child.view-header-breadcrumb {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding-left: 12px;
+  }
+
+  .view-header-title-parent .view-header-breadcrumb {
+    padding: 4px 0px;
+
+    &::after {
+      padding: 10px 6px;
+      content: "e";
+      position: relative;
+      width: inherit;
+      height: inherit;
+      color: transparent;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
+    }
+  }
+
+  .view-header-title {
+    padding: 4px 12px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    background-color: var(--color-base-05);
+  }
+  .view-header-breadcrumb-separator {
+    display: none;
+  }
+  .view-header,
+  .view-header-title-container {
+    gap: 0px;
+  }
 }
 
 body.flexcyon-workspace-card-layout {
-    .view-header-breadcrumb-separator {
-        display: none;
-    }
-    .view-header-breadcrumb {
-        border-radius: 16px;
-        padding: 4px 8px;
-    }
-    .view-header-title-container {
-        gap: 8px;
+  .view-header-breadcrumb-separator {
+    display: none;
+  }
+  .view-header-breadcrumb {
+    border-radius: 16px;
+    padding: 4px 8px;
+  }
+  .view-header-title-container {
+    gap: 8px;
+  }
+
+  .view-header-title-parent {
+    gap: 8px;
+    :nth-of-type(5n + 1) {
+      background-color: var(--color-base-20);
     }
 
-    .view-header-title-parent {
-        gap: 8px;
-        :nth-of-type(5n+1) {
-            background-color: var(--color-base-20);
-        }
-
-        :nth-of-type(5n+3) {
-            background-color: var(--color-base-25);
-        }
-
-        :nth-of-type(5n) {
-            background-color: var(--color-base-05);
-        }
-        :has(+ :last-child)::after {
-            background-color: var(--color-base-05);
-        }
+    :nth-of-type(5n + 3) {
+      background-color: var(--color-base-25);
     }
-    .view-header-title {
-        padding: 4px 8px;
-        background-color: var(--color-base-05);
-        border-radius: 16px;
+
+    :nth-of-type(5n) {
+      background-color: var(--color-base-05);
     }
+    :has(+ :last-child)::after {
+      background-color: var(--color-base-05);
+    }
+  }
+  .view-header-title {
+    padding: 4px 8px;
+    background-color: var(--color-base-05);
+    border-radius: 16px;
+  }
 }
 
 @keyframes slide-in-left {
-    0% {
-        opacity: 0;
-        transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slide-in-right {
-    0% {
-        opacity: 0;
-        transform: translateX(var(--flexcyon-anim-slide-amount));
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(var(--flexcyon-anim-slide-amount));
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slide-in-tb {
-    0% {
-        opacity: 0;
-        transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
 @keyframes slide-in-bt {
-    0% {
-        opacity: 0;
-        transform: translateY(var(--flexcyon-anim-slide-amount));
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(var(--flexcyon-anim-slide-amount));
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes spin-in-rl {
-    0% {
-        opacity: 0;
-        transform: rotateY(var(--flexcyon-anim-rotate-amount));
-    }
+  0% {
+    opacity: 0;
+    transform: rotateY(var(--flexcyon-anim-rotate-amount));
+  }
 
-    100% {
-        opacity: 1;
-        transform: rotateY(0);
-    }
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
+  }
 }
 
 @keyframes spin-in-bt {
-    0% {
-        opacity: 0;
-        transform: rotateX(var(--flexcyon-anim-rotate-amount));
-    }
+  0% {
+    opacity: 0;
+    transform: rotateX(var(--flexcyon-anim-rotate-amount));
+  }
 
-    100% {
-        opacity: 1;
-        transform: rotateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
 }
 
 body.flexcyon-anims-slide-rtl {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: slide-in-right var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }
 
 body.flexcyon-anims-slide-ltr {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: slide-in-left var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }
 
 body.flexcyon-anims-slide-tb {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: slide-in-tb var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }
 
 body.flexcyon-anims-slide-bt {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: slide-in-tb var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }
 
 body.flexcyon-anims-spin-rl {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: spin-in-rl var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }
 
 body.flexcyon-anims-spin-bt {
-    .workspace-leaf-content, .modal, .prompt {
-        animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-    }
+  .workspace-leaf-content,
+  .modal,
+  .prompt {
+    animation: spin-in-bt var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
 }

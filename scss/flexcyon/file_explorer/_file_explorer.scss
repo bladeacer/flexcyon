@@ -35,38 +35,37 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
   $interval: $max-index + 1;
 
   @each $index, $color in $color-map {
-    .nav-folder:nth-of-type(#{$interval}n+#{$index}) {
+    .nav-folder:nth-of-type(#{$interval}n + #{$index}) {
       .nav-folder-title .collapse-icon svg,
       .nav-folder-title {
         @if $is-bg == 0 {
-          color: var(--color-#{$color}); 
-        }
-        @else {
-          background-color: var(--color-#{$color}); 
+          color: var(--color-#{$color});
+        } @else {
+          background-color: var(--color-#{$color});
           color: var(--text-normal);
         }
       }
 
       .nav-folder .nav-folder-title {
         @if $is-bg == 0 {
-          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
-        }
-        @else {
+          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+        } @else {
           color: var(--text-normal);
-          background-color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
+          background-color: rgba(
+            var(--color-#{$color}-rgb),
+            calc(var(--dimmed) + 0.2)
+          );
         }
       }
 
       .nav-folder .nav-folder-title .collapse-icon svg {
         @if $is-bg == 0 {
-          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2)); 
-        }
-        @else {
+          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+        } @else {
           background-color: transparent;
           color: var(--text-normal);
         }
       }
-
     }
   }
 }
@@ -76,7 +75,8 @@ body.flexcyon-rainbow-folders {
     border-inline-start: none;
   }
   .nav-files-container div {
-    @include nth-nav-folder-colors((
+    @include nth-nav-folder-colors(
+      (
         0: purple,
         1: cyan,
         2: blue,
@@ -84,15 +84,16 @@ body.flexcyon-rainbow-folders {
         4: green,
         5: yellow,
         6: orange,
-        7: red
-    ));
-
+        7: red,
+      )
+    );
   }
 }
 
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow {
   .nav-files-container div {
-    @include nth-nav-folder-colors((
+    @include nth-nav-folder-colors(
+      (
         0: purple,
         1: cyan,
         2: blue,
@@ -100,8 +101,10 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow {
         4: green,
         5: yellow,
         6: orange,
-        7: red
-    ), 1);
+        7: red,
+      ),
+      1
+    );
   }
 }
 
@@ -135,7 +138,6 @@ body.flexcyon-alt-folder-style {
     // margin-inline-start: 0.25rem;
     font-weight: bold;
   }
-
 }
 
 body:not(.is-grabbing) .nav-file-title.is-active:hover,
@@ -146,7 +148,9 @@ body:not(.is-grabbing) .nav-folder-title.is-active:hover,
 }
 
 body.flexcyon-md-file-tree-style {
-  .nav-file, .nav-folder, .nav-folder-children {
+  .nav-file,
+  .nav-folder,
+  .nav-folder-children {
     position: relative;
     padding-left: 2px;
   }
@@ -154,7 +158,7 @@ body.flexcyon-md-file-tree-style {
   .nav-file::before,
   .nav-file::before,
   .nav-folder-children::before {
-    content: '';
+    content: "";
     position: absolute;
     background: var(--nav-collapse-icon-color);
   }
@@ -190,10 +194,15 @@ body.flexcyon-md-file-tree-style {
 
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
   .mod-left-split {
-
     .tree-item-self.is-active,
     .tree-item-self .is-active {
-      background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--nav-item-background-active) 15%,
+        var(--nav-item-background-active) 85%,
+        transparent 100%
+      );
     }
 
     .nav-file-title.is-active:hover,
@@ -209,10 +218,15 @@ body.flexcyon-md-file-tree-style {
 
 @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
   .mod-right-split {
-
     .tree-item-self.is-active,
     .tree-item-self .is-active {
-      background: linear-gradient(to right, transparent 0%, var(--nav-item-background-active) 15%, var(--nav-item-background-active) 85%, transparent 100%);
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--nav-item-background-active) 15%,
+        var(--nav-item-background-active) 85%,
+        transparent 100%
+      );
     }
 
     .nav-file-title.is-active:hover,

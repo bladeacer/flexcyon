@@ -1,162 +1,190 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 // A huge shout out too to kepano's flexoki color scheme
 // - https://github.com/kepano/flexoki-obsidian
 // And the great origami theme
-// - https://github.com/7368697661/Origami 
+// - https://github.com/7368697661/Origami
 //
 body:is(.theme-dark) {
-    /* ------------------------------ */
-    --background-primary: var(--flexcyon-base-02);
-    --background-primary-alt: var(--flexcyon-base-03);
-    --background-secondary: var(--flexcyon-base-01);
-    --background-secondary-alt: var(--flexcyon-base-02);
+  /* ------------------------------ */
+  --background-primary: var(--flexcyon-base-02);
+  --background-primary-alt: var(--flexcyon-base-03);
+  --background-secondary: var(--flexcyon-base-01);
+  --background-secondary-alt: var(--flexcyon-base-02);
 }
 
 body:is(.theme-light) {
-    --background-primary: var(--flexcyon-base-01);
-    --background-primary-alt: var(--flexcyon-base-02);
-    --background-secondary: var(--flexcyon-base-01);
-    --background-secondary-alt: var(--flexcyon-base-02);
+  --background-primary: var(--flexcyon-base-01);
+  --background-primary-alt: var(--flexcyon-base-02);
+  --background-secondary: var(--flexcyon-base-01);
+  --background-secondary-alt: var(--flexcyon-base-02);
 }
 
-body:is(.theme-dark), body:is(.theme-light) {
-    --background-modifier-hover: var(--flexcyon-base-03);
-    --background-modifier-active-hover: var(--flexcyon-base-03);
-    --background-modifier-border: var(--flexcyon-base-02-03-mix);
-    --background-modifier-border-hover: transparent;
-    --background-modifier-border-focus: var(--flexcyon-base-04);
-    --background-modifier-message: var(--flexcyon-base-02-03-mix);
-    --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+body:is(.theme-dark),
+body:is(.theme-light) {
+  --background-modifier-hover: var(--flexcyon-base-03);
+  --background-modifier-active-hover: var(--flexcyon-base-03);
+  --background-modifier-border: var(--flexcyon-base-02-03-mix);
+  --background-modifier-border-hover: transparent;
+  --background-modifier-border-focus: var(--flexcyon-base-04);
+  --background-modifier-message: var(--flexcyon-base-02-03-mix);
+  --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
 }
 
 body {
-    --flexcyon-editor-bg-width: 15px;
-    --flexcyon-editor-dot-size: 2.5px;
-    --flexcyon-editor-bg-color: color-mix(in hsl, var(--color-base-00), var(--color-base-05));
-    --flexcyon-editor-bg-color-2: var(--color-base-20);
-    --flexcyon-editor-bg-rotation: 0deg;
+  --flexcyon-editor-bg-width: 15px;
+  --flexcyon-editor-dot-size: 2.5px;
+  --flexcyon-editor-bg-color: color-mix(
+    in hsl,
+    var(--color-base-00),
+    var(--color-base-05)
+  );
+  --flexcyon-editor-bg-color-2: var(--color-base-20);
+  --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
-.editor-grid, body.flexcyon-editor-grid .view-content [class*=markdown-] {
-    & {
-        background-image:
-            repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
-                var(--flexcyon-editor-bg-color),
-                var(--flexcyon-editor-bg-color) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width)),
-            repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color),
-                var(--flexcyon-editor-bg-color) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width));
-
-    }
-    * {
-        background-image: none;
-    }
+.editor-grid,
+body.flexcyon-editor-grid .view-content [class*="markdown-"] {
+  & {
+    background-image:
+      repeating-linear-gradient(
+        var(--flexcyon-editor-bg-rotation),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      ),
+      repeating-linear-gradient(
+        calc(90deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      );
+  }
+  * {
+    background-image: none;
+  }
 }
 
-
 body.flexcyon-sidebar-bg-grid {
-    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
-    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-        & {
-            background-image:
-                repeating-linear-gradient(var(--flexcyon-editor-bg-rotation),
-                    var(--flexcyon-editor-bg-color-2),
-                    var(--flexcyon-editor-bg-color-2) 1px,
-                    transparent 1px,
-                    transparent var(--flexcyon-editor-bg-width)),
-                repeating-linear-gradient(calc(90deg + var(--flexcyon-editor-bg-rotation)),
-                    var(--flexcyon-editor-bg-color-2),
-                    var(--flexcyon-editor-bg-color-2) 1px,
-                    transparent 1px,
-                    transparent var(--flexcyon-editor-bg-width));
-        }
-
-        * {
-            background-image: none;
-        }
+  div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+  div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
+    & {
+      background-image:
+        repeating-linear-gradient(
+          var(--flexcyon-editor-bg-rotation),
+          var(--flexcyon-editor-bg-color-2),
+          var(--flexcyon-editor-bg-color-2) 1px,
+          transparent 1px,
+          transparent var(--flexcyon-editor-bg-width)
+        ),
+        repeating-linear-gradient(
+          calc(90deg + var(--flexcyon-editor-bg-rotation)),
+          var(--flexcyon-editor-bg-color-2),
+          var(--flexcyon-editor-bg-color-2) 1px,
+          transparent 1px,
+          transparent var(--flexcyon-editor-bg-width)
+        );
     }
+
+    * {
+      background-image: none;
+    }
+  }
 }
 
 body.flexcyon-editor-dots .canvas-background,
 body.flexcyon-editor-dots .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content,
-.editor-dots, body.flexcyon-editor-dots .view-content [class*=markdown-] {
-    background-image: radial-gradient(var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size), transparent 1px);
-    background-repeat: repeat;
-    background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+.editor-dots,
+body.flexcyon-editor-dots .view-content [class*="markdown-"] {
+  background-image: radial-gradient(
+    var(--flexcyon-editor-bg-color) var(--flexcyon-editor-dot-size),
+    transparent 1px
+  );
+  background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width)
+    var(--flexcyon-editor-bg-width);
 
-    * {
-        background-image: none;
-    }
+  * {
+    background-image: none;
+  }
 }
 
 body.flexcyon-sidebar-bg-dots {
-    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
-    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-        background-image: radial-gradient(var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size), transparent 1px);
-        background-repeat: repeat;
-        background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
+  div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+  div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
+    background-image: radial-gradient(
+      var(--flexcyon-editor-bg-color-2) var(--flexcyon-editor-dot-size),
+      transparent 1px
+    );
+    background-repeat: repeat;
+    background-size: var(--flexcyon-editor-bg-width)
+      var(--flexcyon-editor-bg-width);
 
-        * {
-            background-image: none;
-        }
+    * {
+      background-image: none;
     }
+  }
 }
 
 body.flexcyon-editor-rhombus .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
-.editor-rhombus, body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
-    .canvas-background {
-        display: none;
-    }
-    & {
-        background-image:
-            repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color),
-                var(--flexcyon-editor-bg-color) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width)),
-            repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
-                var(--flexcyon-editor-bg-color),
-                var(--flexcyon-editor-bg-color) 1px,
-                transparent 1px,
-                transparent var(--flexcyon-editor-bg-width));
-
-    }
-    * {
-        background-image: none;
-    }
+.editor-rhombus,
+body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
+  .canvas-background {
+    display: none;
+  }
+  & {
+    background-image:
+      repeating-linear-gradient(
+        calc(30deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      ),
+      repeating-linear-gradient(
+        calc(150deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      );
+  }
+  * {
+    background-image: none;
+  }
 }
 
-
 body.flexcyon-sidebar-bg-rhombus {
-    div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
-    div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-        & {
-            background-image:
-                repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)),
-                    var(--flexcyon-editor-bg-color-2),
-                    var(--flexcyon-editor-bg-color-2) 1px,
-                    transparent 1px,
-                    transparent var(--flexcyon-editor-bg-width)),
-                repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)),
-                    var(--flexcyon-editor-bg-color-2),
-                    var(--flexcyon-editor-bg-color-2) 1px,
-                    transparent 1px,
-                    transparent var(--flexcyon-editor-bg-width));
-        }
-
-        * {
-            background-image: none;
-        }
+  div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
+  div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
+    & {
+      background-image:
+        repeating-linear-gradient(
+          calc(30deg + var(--flexcyon-editor-bg-rotation)),
+          var(--flexcyon-editor-bg-color-2),
+          var(--flexcyon-editor-bg-color-2) 1px,
+          transparent 1px,
+          transparent var(--flexcyon-editor-bg-width)
+        ),
+        repeating-linear-gradient(
+          calc(150deg + var(--flexcyon-editor-bg-rotation)),
+          var(--flexcyon-editor-bg-color-2),
+          var(--flexcyon-editor-bg-color-2) 1px,
+          transparent 1px,
+          transparent var(--flexcyon-editor-bg-width)
+        );
     }
+
+    * {
+      background-image: none;
+    }
+  }
 }

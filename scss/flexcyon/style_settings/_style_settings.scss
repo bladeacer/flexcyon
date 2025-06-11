@@ -2,7 +2,6 @@ body {
   --flexcyon-style-settings-indent-width: 4px;
 }
 
-
 /* @settings
 name: Flexcyon Style Settings 
 id: flexcyon
@@ -1446,7 +1445,7 @@ body {
     background-color: #191d28aa;
     scale: var(--upsize);
   }
-  .theme-light .pickr-reset button{
+  .theme-light .pickr-reset button {
     color: #080808aa;
     background-color: #edebe5aa;
     scale: var(--upsize);
@@ -1455,8 +1454,11 @@ body {
 
 @mixin setting-item-heading-margin($data-level) {
   .setting-item-heading[data-level="#{$data-level}"],
-  .setting-item-heading[data-level="#{$data-level}"] + .style-settings-container {
-    margin-left: calc(($data-level + 1) * var(--flexcyon-style-settings-indent-width));
+  .setting-item-heading[data-level="#{$data-level}"]
+    + .style-settings-container {
+    margin-left: calc(
+      ($data-level + 1) * var(--flexcyon-style-settings-indent-width)
+    );
   }
 }
 

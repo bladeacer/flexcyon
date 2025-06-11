@@ -1,73 +1,71 @@
 body {
-    --flexcyon-fc-dimmed-items-opacity: 0.89;
+  --flexcyon-fc-dimmed-items-opacity: 0.89;
 
-    @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-        .mod-left-split {
-            .workspace-leaf-content[data-type*="full-calendar"] * {
-                backdrop-filter: none;
-            }
-        }
+  @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+    .mod-left-split {
+      .workspace-leaf-content[data-type*="full-calendar"] * {
+        backdrop-filter: none;
+      }
     }
+  }
 
+  @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+    .mod-right-split {
+      .workspace-leaf-content[data-type*="full-calendar"] * {
+        backdrop-filter: none;
+      }
+    }
+  }
 
-    @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-        .mod-right-split {
-            .workspace-leaf-content[data-type*="full-calendar"] * {
-                backdrop-filter: none;
-            }
-        }
-    }
+  div.fc-daygrid-body div div a {
+    color: var(--text-normal);
+    opacity: var(--flexcyon-fc-dimmed-items-opacity);
+  }
 
-    div.fc-daygrid-body div div a {
-        color: var(--text-normal);
-        opacity: var(--flexcyon-fc-dimmed-items-opacity);
-    }
+  div.fc-daygrid-body td.fc-day-today div div a {
+    opacity: unset;
+    font-weight: bold;
+    color: var(--text-accent);
+  }
 
-    div.fc-daygrid-body td.fc-day-today div div a {
-        opacity: unset;
-        font-weight: bold;
-        color: var(--text-accent);
-    }
+  div.fc-button-group button.fc-button-active {
+    opacity: unset;
+  }
+  div.fc-button-group button {
+    opacity: var(--flexcyon-fc-dimmed-items-opacity);
+  }
 
-    div.fc-button-group button.fc-button-active {
-        opacity: unset;
-    }
-    div.fc-button-group button {
-        opacity: var(--flexcyon-fc-dimmed-items-opacity);
-    }
+  th.fc-day-today div a {
+    font-weight: bold;
+    color: var(--text-accent);
+  }
+  a.fc-timegrid-event {
+    background-color: var(--color-blue) !important;
+    border: unset;
+  }
 
-    th.fc-day-today div a {
-        font-weight: bold;
-        color: var(--text-accent);
-    }
-    a.fc-timegrid-event {
-        background-color: var(--color-blue) !important;
-        border: unset;
-    }
-
-    a.fc-timegrid-event.fc-event-today{
-        background-color: var(--color-green) !important;
-        border: unset;
-    }
-    .fc .fc-list-empty {
-        background-color: var(--color-base-10);
-    }
-    .fc .fc-toolbar-title {
-        font-size: 1.2rem;
-        color: var(--text-normal);
-    }
-    .fc .fc-toolbar-chunk {
-        padding: 0px 8px;
-    }
-    .fc {
-        font-size: var(--font-ui-small);
-    }
+  a.fc-timegrid-event.fc-event-today {
+    background-color: var(--color-green) !important;
+    border: unset;
+  }
+  .fc .fc-list-empty {
+    background-color: var(--color-base-10);
+  }
+  .fc .fc-toolbar-title {
+    font-size: 1.2rem;
+    color: var(--text-normal);
+  }
+  .fc .fc-toolbar-chunk {
+    padding: 0px 8px;
+  }
+  .fc {
+    font-size: var(--font-ui-small);
+  }
 }
 
-
 body.flexcyon-workspace-angled-layout {
-    .oz-explorer-container .oz-file-tree-files div,
-    div.oz-folder-line {
-        transform: skewX(-5deg);
-    }
+  .oz-explorer-container .oz-file-tree-files div,
+  div.oz-folder-line {
+    transform: skewX(-5deg);
+  }
 }

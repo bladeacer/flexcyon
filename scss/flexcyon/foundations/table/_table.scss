@@ -1,36 +1,36 @@
-// The code snippets in this file are derived from the Halcyon theme 
+// The code snippets in this file are derived from the Halcyon theme
 
 body {
-    --table-border-color: #6f768566;
-    --table-header-background: var(--color-base-20);
-    --table-row-alt-background: var(--color-base-15);
-    --table-column-alt-background: var(--table-background);
-    --table-add-button-background: var(--color-base-15);
+  --table-border-color: #6f768566;
+  --table-header-background: var(--color-base-20);
+  --table-row-alt-background: var(--color-base-15);
+  --table-column-alt-background: var(--table-background);
+  --table-add-button-background: var(--color-base-15);
 
-    --table-background: var(--background-primary);
-    --table-header-background-hover: var(--table-background);
-    --table-header-size: large;
-    --flexcyon-table-reading-mode-width: 100%;
+  --table-background: var(--background-primary);
+  --table-header-background-hover: var(--table-background);
+  --table-header-size: large;
+  --flexcyon-table-reading-mode-width: 100%;
 
-    table:not(.table-view-table) {
-        width: var(--flexcyon-table-reading-mode-width);
-        margin-left: calc((100% - var(--flexcyon-table-reading-mode-width))/ 2);
-    }
+  table:not(.table-view-table) {
+    width: var(--flexcyon-table-reading-mode-width);
+    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width)) / 2);
+  }
 
-    .table-view-table>:is(thead, tbody)>tr>:is(th, td) {
-        border: 1px solid var(--table-header-border-color);
-    }
+  .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
+    border: 1px solid var(--table-header-border-color);
+  }
 
-    thead tr th {
-        background-color: var(--table-column-alt-background);
-    }
+  thead tr th {
+    background-color: var(--table-column-alt-background);
+  }
 
-    .cm-html-embed tbody tr:nth-of-type(2n+1)>td:nth-of-type(2n+2),
-    .markdown-rendered tbody tr:nth-of-type(2n+1)>td:nth-of-type(2n+2) {
-        background-color: var(--table-row-alt-background);
-    }
+  .cm-html-embed tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2),
+  .markdown-rendered tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2) {
+    background-color: var(--table-row-alt-background);
+  }
 
-    table {
-        border-color: var(--table-border-color);
-    }
+  table {
+    border-color: var(--table-border-color);
+  }
 }

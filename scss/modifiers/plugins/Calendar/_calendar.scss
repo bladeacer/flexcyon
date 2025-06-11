@@ -1,38 +1,38 @@
 body {
-    table.calendar {
-        thead tr th {
-            color: var(--link-color);
-            text-transform: capitalize;
-        }
+  table.calendar {
+    thead tr th {
+      color: var(--link-color);
+      text-transform: capitalize;
     }
+  }
 
-    [id=calendar-container] {
-        scale: 105%;
+  [id="calendar-container"] {
+    scale: 105%;
 
-        * {
-            font-size: var(--font-ui-medium);
-        }
+    * {
+      font-size: var(--font-ui-medium);
     }
+  }
 
-    h3.title span.year {
-        color: var(--color-text-title);
-    }
+  h3.title span.year {
+    color: var(--color-text-title);
+  }
 
-    div.day.today {
-        font-weight: bold;
-    }
+  div.day.today {
+    font-weight: bold;
+  }
 
-    .reset-button {
-        transform: translateY(2px);
-    }
+  .reset-button {
+    transform: translateY(2px);
+  }
 
-    .day {
-        padding: 8px 4px;
-    }
+  .day {
+    padding: 8px 4px;
+  }
 }
 
 body.flexcyon-workspace-angled-layout {
-    #calendar-container>div>div {
-        transform: skewX(-7.5deg);
-    }
+  #calendar-container > div > div {
+    transform: skewX(-7.5deg);
+  }
 }
