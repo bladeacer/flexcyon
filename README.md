@@ -1,6 +1,6 @@
 <p align="left">
     <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon-1/">
-        <img src="https://img.shields.io/badge/downloads-1000+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+        <img src="https://img.shields.io/badge/downloads-1100+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">
@@ -68,7 +68,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 
 ## Features
 
-[Here is a web showcase](https://share.note.sx/1bk28c9k) of the features this theme has to offer.
+[Here is a web showcase](https://share.note.sx/jze8bimb) of the features this theme has to offer.
 
 - Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
 
@@ -116,6 +116,7 @@ The following plugins/snippets are officially supported:
 - [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
 - [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin)
 - [Kanban by mgmyers](https://github.com/mgmeyers/obsidian-kanban)
+- [Omnisearch by scambier](https://github.com/scambier/obsidian-omnisearch)
 
 ##### Snippets
 

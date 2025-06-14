@@ -4,6 +4,8 @@ body {
   --prompt-border-color: var(--flexcyon-base-02-03-mix);
   --search-clear-button-color: var(--flexcyon-red-salmon);
   --search-icon-color: var(--flexcyon-accent);
+  --flexcyon-suggestion-verti-padding: 8px;
+  --flexcyon-suggestion-horiz-padding: 12px;
 
   .search-input-container > input {
     background-color: var(--background-primary);
@@ -69,7 +71,8 @@ body.flexcyon-prompt-align-top-center {
 }
 
 .suggestion-item {
-  padding: var(--size-4-2) var(--size-4-3);
+  padding: var(--flexcyon-suggestion-verti-padding)
+    var(--flexcyon-suggestion-horiz-padding);
 }
 
 body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {

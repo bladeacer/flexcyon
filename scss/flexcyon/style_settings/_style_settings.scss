@@ -529,6 +529,18 @@ settings:
       -
         label: Bottom center 
         value: flexcyon-prompt-align-bottom-center
+  - title: Suggestion item vertical padding
+    description: Configure the vertical padding of Search, Quick Switcher and Omnisearch
+    id: flexcyon-suggestion-verti-padding
+    type: variable-number
+    default: 8
+    format: px
+  - title: Suggestion item horizontal padding
+    description: Configure the horizontal padding of Search, Quick Switcher and Omnisearch
+    id: flexcyon-suggestion-horiz-padding
+    type: variable-number
+    default: 12
+    format: px
   
   - title: Animations
     type: heading

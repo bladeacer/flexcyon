@@ -1,3 +1,9 @@
+body .tree-item-inner {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
   div[data-path$=".md"] {
     div.nav-file-tag {

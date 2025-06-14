@@ -2594,6 +2594,8 @@ body {
   --prompt-border-color: var(--flexcyon-base-02-03-mix);
   --search-clear-button-color: var(--flexcyon-red-salmon);
   --search-icon-color: var(--flexcyon-accent);
+  --flexcyon-suggestion-verti-padding: 8px;
+  --flexcyon-suggestion-horiz-padding: 12px;
 }
 body .search-input-container > input {
   background-color: var(--background-primary);
@@ -2642,7 +2644,8 @@ body.flexcyon-prompt-align-top-center .modal-container .prompt {
 }
 
 .suggestion-item {
-  padding: var(--size-4-2) var(--size-4-3);
+  padding: var(--flexcyon-suggestion-verti-padding)
+    var(--flexcyon-suggestion-horiz-padding);
 }
 
 body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {
@@ -6752,6 +6755,12 @@ body.flexcyon-workspace-pl10k-layout
   border-bottom: none;
 }
 
+body .tree-item-inner {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 body.flexcyon-file-exp-dimmed-file-exts-enabled
   div[data-path$=".md"]
   div.nav-file-tag {
@@ -8669,6 +8678,18 @@ settings:
       -
         label: Bottom center 
         value: flexcyon-prompt-align-bottom-center
+  - title: Suggestion item vertical padding
+    description: Configure the vertical padding of Search, Quick Switcher and Omnisearch
+    id: flexcyon-suggestion-verti-padding
+    type: variable-number
+    default: 8
+    format: px
+  - title: Suggestion item horizontal padding
+    description: Configure the horizontal padding of Search, Quick Switcher and Omnisearch
+    id: flexcyon-suggestion-horiz-padding
+    type: variable-number
+    default: 12
+    format: px
 
   - title: Animations
     type: heading
@@ -10367,6 +10388,11 @@ body.flexcyon-canvas-menu-rcenter-top .canvas-card-menu {
   bottom: 82.5%;
   transform: none;
   flex-direction: column;
+}
+
+.omnisearch-modal .prompt-results div {
+  padding: calc(0.25 * var(--flexcyon-suggestion-verti-padding))
+    calc(0.25 * var(--flexcyon-suggestion-horiz-padding));
 }
 
 /* Modifications for banner snippet */
