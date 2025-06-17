@@ -1075,7 +1075,7 @@ body .checkbox-container.is-enabled {
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1094,7 +1094,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="!"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "!";
   color: var(--color-purple);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1106,7 +1106,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1125,7 +1125,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task=">"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: ">";
   color: var(--color-cyan);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1137,7 +1137,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="i"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1156,7 +1156,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="i"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "i";
   color: var(--color-blue);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1168,7 +1168,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1187,7 +1187,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="?"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "?";
   color: var(--color-pink);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1199,7 +1199,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1218,7 +1218,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="#"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "#";
   color: var(--color-green);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1230,7 +1230,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1249,7 +1249,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="."]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: ".";
   color: var(--color-yellow);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1261,7 +1261,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1280,7 +1280,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="<"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "<";
   color: var(--color-orange);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1292,7 +1292,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1311,7 +1311,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="$"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "$";
   color: var(--color-red);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1323,7 +1323,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1342,7 +1342,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="*"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "*";
   color: var(--color-purple);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1354,7 +1354,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1373,7 +1373,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="'"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "'";
   color: var(--color-cyan);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1385,7 +1385,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1404,7 +1404,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="@"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "@";
   color: var(--color-blue);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1416,7 +1416,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1435,7 +1435,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="%"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "%";
   color: var(--color-pink);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1447,7 +1447,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1466,7 +1466,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="+"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "+";
   color: var(--color-green);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1478,7 +1478,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1497,7 +1497,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="-"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "-";
   color: var(--color-yellow);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1509,7 +1509,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1528,7 +1528,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="/"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "/";
   color: var(--color-orange);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1540,7 +1540,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1559,7 +1559,7 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="~"]
   > p
   > input:checked::after {
-  background-color: transparent;
+  background-color: inherit;
   content: "~";
   color: var(--color-red);
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
@@ -1571,7 +1571,7 @@ body.flexcyon-ascii-checkboxes-enabled
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
-  background-color: transparent;
+  background-color: inherit;
   border: none;
   font-weight: 900;
   padding-right: 6px;
@@ -1592,6 +1592,7 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked::after {
   content: "“";
   color: var(--color-green);
+  background-color: inherit;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
   text-align: center;
   -webkit-mask-image: none;
@@ -1817,6 +1818,7 @@ body:is(.theme-dark) {
   --background-primary-alt: var(--flexcyon-base-03);
   --background-secondary: var(--flexcyon-base-01);
   --background-secondary-alt: var(--flexcyon-base-02);
+  --background-modifier-hover: var(--flexcyon-base-03);
 }
 
 body:is(.theme-light) {
@@ -1824,11 +1826,11 @@ body:is(.theme-light) {
   --background-primary-alt: var(--flexcyon-base-02);
   --background-secondary: var(--flexcyon-base-01);
   --background-secondary-alt: var(--flexcyon-base-02);
+  --background-modifier-hover: var(--flexcyon-base-01);
 }
 
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --background-modifier-hover: var(--flexcyon-base-03);
   --background-modifier-active-hover: var(--flexcyon-base-03);
   --background-modifier-border: var(--flexcyon-base-02-03-mix);
   --background-modifier-border-hover: transparent;
@@ -2073,8 +2075,8 @@ body {
   --expand: 110%;
   --less-letter-spacing: -3px;
   --flexcyon-comm-item-opacity: 0.89;
-  --flexcyon-tree-item-horiz-padding: 8px;
-  --flexcyon-tree-item-verti-padding: 0.75px;
+  --flexcyon-tree-item-horiz-padding: 12px;
+  --flexcyon-tree-item-verti-padding: 1.25px;
 }
 body .clickable-icon {
   opacity: var(--dimmed);
@@ -2492,7 +2494,7 @@ body
 
 body.theme-dark,
 body.theme-light {
-  --text-highlight-bg: rgba(var(--color-purple-rgb), var(--dimmed));
+  --text-highlight-bg: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.3));
 }
 
 body {
@@ -2643,49 +2645,48 @@ body.flexcyon-prompt-align-top-center .modal-container .prompt {
   top: 0px;
 }
 
-.suggestion-item {
+body .suggestion-item {
   padding: var(--flexcyon-suggestion-verti-padding)
     var(--flexcyon-suggestion-horiz-padding);
+  opacity: var(--dimmed);
+}
+body .suggestion-item.is-selected {
+  opacity: 0.9;
 }
 
 body.theme-dark .suggestion-item.mod-complex .suggestion-prefix {
-  color: var(--color-cyan);
+  color: var(--color-blue);
 }
 
 body.theme-light .suggestion-item.mod-complex .suggestion-prefix {
-  color: var(--color-pink);
+  color: rgba(var(--color-orange-rgb), 0.85);
 }
 
-.suggestion-item.mod-complex {
+body .suggestion-item.mod-complex {
   font-size: calc(var(--font-ui-medium) - 0.5px);
 }
-.suggestion-item.mod-complex.is-selected {
+body .suggestion-item.mod-complex.is-selected {
   font-size: var(--font-ui-medium);
 }
-.suggestion-item.mod-complex .suggestion-hotkey {
-  opacity: calc(var(--dimmed) + 0.15);
-}
-.suggestion-item.mod-complex .suggestion-prefix {
+body .suggestion-item.mod-complex .suggestion-prefix {
   background-color: transparent;
-  opacity: calc(var(--dimmed) + 0.15);
   margin-right: 16px;
 }
-.suggestion-item.mod-complex .suggestion-prefix::after {
+body .suggestion-item.mod-complex .suggestion-prefix::after {
   display: none;
 }
-.suggestion-item.mod-complex .suggestion-highlight {
+body .suggestion-item.mod-complex .suggestion-highlight {
   opacity: 1;
   font-weight: bold;
   font-size: calc(var(--font-ui-medium) + 0.5px);
 }
-.suggestion-item.mod-complex.is-selected .suggestion-hotkey {
+body .suggestion-item.mod-complex.is-selected .suggestion-hotkey {
   font-size: var(--font-ui-small);
   font-weight: bold;
   opacity: unset;
 }
-.suggestion-item.mod-complex.is-selected .suggestion-prefix {
+body .suggestion-item.mod-complex.is-selected .suggestion-prefix {
   opacity: unset;
-  font-weight: bold;
 }
 
 body .cm-gutterElement.cm-active {
@@ -6755,7 +6756,7 @@ body.flexcyon-workspace-pl10k-layout
   border-bottom: none;
 }
 
-body .tree-item-inner {
+body.flexcyon-wrap-long-filenames .tree-item-inner {
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
@@ -8592,13 +8593,18 @@ settings:
     id: flexcyon-tree-item-verti-padding
     type: variable-number
     format: px
-    default: 0.75
+    default: 1.25
   - title: Horizontal Tree Item Padding
     description: Horizontal Padding of tree item variables like file explorer items
     id: flexcyon-tree-item-horiz-padding
     type: variable-number
     format: px
-    default: 8
+    default: 12
+  - title: Wrap Long Filenames
+    description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
+    id: flexcyon-wrap-long-filenames
+    type: class-toggle
+    default: true
 
   - title: Workspace
     type: heading
@@ -9289,13 +9295,33 @@ settings:
         label: Right aligned center align
         value: flexcyon-canvas-menu-rcenter-align
 
+  - title: Various Complements
+    type: heading
+    level: 5
+    collapsed: true
+    description: For configuring the Various Complements Plugin
+  - title: Vertical Suggestion Padding
+    type: variable-number
+    id: flexcyon-var-comps-sugg-vert-padding
+    default: 7
+    format: px
+  - title: Horizontal Suggestion Padding
+    type: variable-number
+    id: flexcyon-var-comps-sugg-horiz-padding
+    default: 12
+    format: px
+  - title: Compact Suggestion Mode
+    id: flexcyon-var-comps-compact-mode
+    description: Overrides defaults. Uses padding 4px 8px.
+    type: class-toggle
+    default: false
+
   - title: Others
     type: heading
     level: 4
     collapsed: true
     description: Vim mode text, new tab appearance, side dock icons, tooltip radius, background images
-  -
-    title: Vim Mode Text
+  - title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
     type: heading
     level: 5
@@ -9889,6 +9915,17 @@ body.theme-light {
   --oz-fta-folder-panes-file-name-color: #080808;
 }
 
+body.flexcyon-wrap-long-filenames div.oz-folder-name {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+body.flexcyon-wrap-long-filenames div.oz-nav-file-title-content {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
 body div.oz-folder-name {
   opacity: var(--dimmed);
 }
@@ -9992,10 +10029,9 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   content: ".md";
   opacity: var(--dimmed);
 }
-body.flexcyon-oz-dimmed-file-exts-enabled
-  div.oz-nav-file-title
-  div.oz-nav-file-title-content {
-  width: unset;
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title {
+  padding: var(--flexcyon-tree-item-verti-padding)
+    var(--flexcyon-tree-item-horiz-padding);
 }
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title
@@ -10034,6 +10070,10 @@ div.oz-nav-file.is-active div.oz-nav-file-title-content {
 .oz-nav-file:hover {
   background-color: var(--nav-item-background-hover);
   color: var(--text-normal);
+}
+
+.oz-nav-file {
+  border: none;
 }
 
 /* Modificatiions for MiniTabs plugin */
@@ -10393,6 +10433,46 @@ body.flexcyon-canvas-menu-rcenter-top .canvas-card-menu {
 .omnisearch-modal .prompt-results div {
   padding: calc(0.25 * var(--flexcyon-suggestion-verti-padding))
     calc(0.25 * var(--flexcyon-suggestion-horiz-padding));
+}
+
+.omnisearch-default-highlight {
+  background-color: transparent;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+body.theme-dark .omnisearch-default-highlight {
+  opacity: calc(var(--dimmed) + 0.3);
+}
+
+body.theme-light .omnisearch-default-highlight {
+  opacity: 1;
+}
+
+/* Compact mode */
+body.flexcyon-var-comps-compact-mode .various-complements__suggestion-item {
+  padding: 4px 8px;
+}
+
+body {
+  --flexcyon-var-comps-sugg-vert-padding: 7px;
+  --flexcyon-var-comps-sugg-horiz-padding: 12px;
+  /* Inactive dimming, icon alignment */
+}
+body .various-complements__suggestion-item {
+  opacity: var(--dimmed);
+}
+body .various-complements__suggestion-item::before {
+  transform: translateY(-2.5px);
+}
+body .various-complements__selection-lock,
+body .various-complements__suggestion-item.is-selected {
+  opacity: calc(var(--dimmed) + 0.3);
+  color: var(--text-accent);
+}
+body .various-complements__suggestion-item {
+  padding: var(--flexcyon-var-comps-sugg-vert-padding)
+    var(--flexcyon-var-comps-sugg-horiz-padding);
 }
 
 /* Modifications for banner snippet */

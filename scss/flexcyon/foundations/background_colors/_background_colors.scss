@@ -11,6 +11,7 @@ body:is(.theme-dark) {
   --background-primary-alt: var(--flexcyon-base-03);
   --background-secondary: var(--flexcyon-base-01);
   --background-secondary-alt: var(--flexcyon-base-02);
+  --background-modifier-hover: var(--flexcyon-base-03);
 }
 
 body:is(.theme-light) {
@@ -18,11 +19,11 @@ body:is(.theme-light) {
   --background-primary-alt: var(--flexcyon-base-02);
   --background-secondary: var(--flexcyon-base-01);
   --background-secondary-alt: var(--flexcyon-base-02);
+  --background-modifier-hover: var(--flexcyon-base-01);
 }
 
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --background-modifier-hover: var(--flexcyon-base-03);
   --background-modifier-active-hover: var(--flexcyon-base-03);
   --background-modifier-border: var(--flexcyon-base-02-03-mix);
   --background-modifier-border-hover: transparent;

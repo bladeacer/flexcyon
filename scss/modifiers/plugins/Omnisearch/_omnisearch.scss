@@ -2,3 +2,17 @@
   padding: calc(0.25 * var(--flexcyon-suggestion-verti-padding))
     calc(0.25 * var(--flexcyon-suggestion-horiz-padding));
 }
+
+.omnisearch-default-highlight {
+  background-color: transparent;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+body.theme-dark .omnisearch-default-highlight {
+  opacity: calc(var(--dimmed) + 0.3);
+}
+
+body.theme-light .omnisearch-default-highlight {
+  opacity: 1;
+}

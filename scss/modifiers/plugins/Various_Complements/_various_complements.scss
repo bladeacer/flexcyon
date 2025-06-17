@@ -1,0 +1,28 @@
+/* Compact mode */
+
+body.flexcyon-var-comps-compact-mode .various-complements__suggestion-item {
+  padding: 4px 8px;
+}
+
+body {
+  --flexcyon-var-comps-sugg-vert-padding: 7px;
+  --flexcyon-var-comps-sugg-horiz-padding: 12px;
+  /* Inactive dimming, icon alignment */
+  .various-complements__suggestion-item {
+    opacity: var(--dimmed);
+    &::before {
+      transform: translateY(-2.5px);
+    }
+  }
+
+  .various-complements__selection-lock,
+  .various-complements__suggestion-item.is-selected {
+    opacity: calc(var(--dimmed) + 0.3);
+    color: var(--text-accent);
+  }
+
+  .various-complements__suggestion-item {
+    padding: var(--flexcyon-var-comps-sugg-vert-padding)
+      var(--flexcyon-var-comps-sugg-horiz-padding);
+  }
+}

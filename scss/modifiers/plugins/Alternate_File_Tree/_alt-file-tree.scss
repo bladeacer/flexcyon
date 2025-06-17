@@ -10,6 +10,19 @@ body.theme-light {
   --oz-fta-folder-panes-file-name-color: #080808;
 }
 
+body.flexcyon-wrap-long-filenames {
+  div.oz-folder-name {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  div.oz-nav-file-title-content {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
 body {
   div.oz-folder-name {
     opacity: var(--dimmed);
@@ -130,9 +143,8 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
   }
 
   div.oz-nav-file-title {
-    div.oz-nav-file-title-content {
-      width: unset;
-    }
+    padding: var(--flexcyon-tree-item-verti-padding)
+      var(--flexcyon-tree-item-horiz-padding);
 
     span.oz-nav-file-tag {
       text-transform: lowercase;
@@ -170,4 +182,8 @@ div.oz-nav-file.is-active div.oz-nav-file-title-content {
 .oz-nav-file:hover {
   background-color: var(--nav-item-background-hover);
   color: var(--text-normal);
+}
+
+.oz-nav-file {
+  border: none;
 }
