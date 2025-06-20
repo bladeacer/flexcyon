@@ -42,6 +42,8 @@ body {
 
   --flexcyon-text-normal: var(--flexcyon-base-grey-light);
   --flexcyon-text-muted: #6f768599;
+  --flexcyon-highlight-verti-padding: 1px;
+  --flexcyon-highlight-horiz-padding: 2.5px;
 
   .cm-em.cm-quote {
     color: var(--italic-color);
@@ -91,8 +93,20 @@ body {
     color: var(--flexcyon-purple-lilac);
   }
 
+  .cm-s-obsidian span.cm-formatting-highlight,
+  .cm-s-obsidian span.cm-highlight,
   .markdown-source-view:is(.is-live-preview) mark {
     color: var(--text-normal);
+    background-color: var(--text-highlight-bg);
+    padding: var(--flexcyon-highlight-verti-padding)
+      var(--flexcyon-highlight-horiz-padding);
+    border-radius: 4px;
+    font-weight: 525;
+  }
+  .cm-s-obsidian span.cm-formatting-highlight {
+    border-radius: 0px;
+    color: var(--text-highlight-bg);
+    background-color: inherit;
   }
 
   .cm-line .ͼi {
@@ -113,9 +127,5 @@ body {
 
   .cm-line .cm-matchingbracket {
     color: var(--flexcyon-purple-lilac);
-  }
-
-  .markdown-source-view:is(.is-live-preview) mark {
-    color: var(--text-normal);
   }
 }

@@ -53,6 +53,9 @@ body {
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
   }
+  .collapse-icon {
+    transform: translateY(-0.5px);
+  }
 }
 
 body.flexcyon-workspace-card-layout {

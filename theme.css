@@ -697,11 +697,6 @@ body
   text-decoration: none;
 }
 
-mark {
-  color: var(--text-normal);
-  background-color: var(--text-highlight-bg);
-}
-
 body {
   --tab-text-color: var(--flexcyon-base-05);
   --tab-text-color-focused: var(--flexcyon-base-05);
@@ -2123,6 +2118,9 @@ body .tree-item:not(.graph-control-section) {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
 }
+body .collapse-icon {
+  transform: translateY(-0.5px);
+}
 
 body.flexcyon-workspace-card-layout .community-modal-info-name {
   border: 2px solid var(--text-faint);
@@ -2418,9 +2416,6 @@ body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
 .graph-control-section .tree-item-children .mod-toggle {
   padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
 }
-.graph-control-section .tree-item-icon {
-  transform: translateY(-0.5px);
-}
 
 .graph-control-section .tree-item-children .mod-slider {
   padding: calc(var(--graph-control-verti-padding) * 1.25)
@@ -2567,6 +2562,8 @@ body {
   --italic-color: var(--flexcyon-accent);
   --flexcyon-text-normal: var(--flexcyon-base-grey-light);
   --flexcyon-text-muted: #6f768599;
+  --flexcyon-highlight-verti-padding: 1px;
+  --flexcyon-highlight-horiz-padding: 2.5px;
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
@@ -2604,8 +2601,20 @@ body .cm-line .ͼb {
 body .cm-line .cm-matchingbracket {
   color: var(--flexcyon-purple-lilac);
 }
+body .cm-s-obsidian span.cm-formatting-highlight,
+body .cm-s-obsidian span.cm-highlight,
 body .markdown-source-view:is(.is-live-preview) mark {
   color: var(--text-normal);
+  background-color: var(--text-highlight-bg);
+  padding: var(--flexcyon-highlight-verti-padding)
+    var(--flexcyon-highlight-horiz-padding);
+  border-radius: 4px;
+  font-weight: 525;
+}
+body .cm-s-obsidian span.cm-formatting-highlight {
+  border-radius: 0px;
+  color: var(--text-highlight-bg);
+  background-color: inherit;
 }
 body .cm-line .ͼi {
   color: var(--flexcyon-cyan);
@@ -2621,9 +2630,6 @@ body .cm-line .ͼb {
 }
 body .cm-line .cm-matchingbracket {
   color: var(--flexcyon-purple-lilac);
-}
-body .markdown-source-view:is(.is-live-preview) mark {
-  color: var(--text-normal);
 }
 
 body {
