@@ -6,6 +6,16 @@ body {
 name: Flexcyon Style Settings 
 id: flexcyon
 settings:
+  - 
+    title: About 
+    type: info-text
+    markdown: true
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It is aimed at being *reasonably opinionated and highly customisable*.
+  -
+    title: Documentation 
+    type: info-text
+    markdown: true
+    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.
   -
     title: Editor
     type: heading
@@ -927,11 +937,16 @@ settings:
       - 
         label: Chinese
         value: flexcyon-chinese-rel-nums
-  - title: Active Line Number inherits Relative Line Number Style
-    description: Do note that I have to get creative for Greek and Roman as they do not exactly have letters or numbers before I or alpha.
+  - title: Replace active line number with string
+    description: Customise the active line number with your own string, defaults to "->"
     type: class-toggle
-    id: flexcyon-active-inherits-rel-num
+    id: flexcyon-repl-active-line-num-str
     default: false
+  - title: Replaced active line number string value
+    id: flexcyon-repl-active-line-str
+    type: variable-text
+    default: "->"
+    quotes: true
 
   - title: Cursor
     type: heading
@@ -954,6 +969,21 @@ settings:
     id: flexcyon-cursor-min-width
     type: variable-text
     default: unset
+
+  - title: Graph
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Graph View Controls Vertical Padding
+    type: variable-number
+    id: graph-control-verti-padding
+    default: 6
+    format: px
+  - title: Graph View Controls Horizontal Padding
+    type: variable-number
+    id: graph-control-horiz-padding
+    default: 12
+    format: px
 
   - title: Settings
     type: heading

@@ -1,4 +1,5 @@
 body {
+  --flexcyon-repl-active-line-str: "->";
   .cm-gutterElement.cm-active {
     font-weight: 900;
     font-size: var(--font-ui-medium);
@@ -9,6 +10,9 @@ body {
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
   font-size: calc(var(--font-ui-small) + 0.05rem);
+}
+
+body:not(.is-mobile) .cm-lineNumbers .cm-active {
   padding-right: 4px;
 }
 
@@ -183,31 +187,12 @@ body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
   @include target-relative-line-bel(10, "十");
 }
 
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile) {
+body.flexcyon-repl-active-line-num-str {
   .cm-gutterElement.cm-active {
     font-size: 0;
     &::before {
-      content: "0";
+      content: var(--flexcyon-repl-active-line-str);
       font-size: calc(var(--font-ui-medium) + 0.07rem);
     }
-  }
-}
-
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(
-    .is-mobile
-  ),
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(
-    .is-mobile
-  ) {
-  .cm-gutterElement.cm-active::before {
-    content: "->";
-  }
-}
-
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(
-    .is-mobile
-  ) {
-  .cm-gutterElement.cm-active::before {
-    content: "零";
   }
 }

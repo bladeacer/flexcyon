@@ -697,6 +697,11 @@ body
   text-decoration: none;
 }
 
+mark {
+  color: var(--text-normal);
+  background-color: var(--text-highlight-bg);
+}
+
 body {
   --tab-text-color: var(--flexcyon-base-05);
   --tab-text-color-focused: var(--flexcyon-base-05);
@@ -2114,7 +2119,7 @@ body .LazyLoad.is-visible {
 }
 body .oz-folder-line,
 body .oz-nav-file,
-body .tree-item {
+body .tree-item:not(.graph-control-section) {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
 }
@@ -2388,10 +2393,46 @@ body {
   --graph-line: var(--flexcyon-base-03);
   --graph-node-unresolved: var(--flexcyon-red-salmon);
   --graph-node-tag: var(--flexcyon-purple-lilac);
+  --graph-control-verti-padding: 6px;
+  --graph-control-horiz-padding: 12px;
 }
 
 body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
   transform: skewY(-5deg);
+}
+
+.graph-controls {
+  padding: var(--graph-control-verti-padding);
+}
+
+.graph-control-section {
+  padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
+  border-bottom: none;
+}
+.graph-control-section .tree-item-self {
+  padding: var(--graph-control-verti-padding) 8px
+    var(--graph-control-verti-padding) 14px;
+}
+.graph-control-section .tree-item-children .graph-color-button-container,
+.graph-control-section .tree-item-children .graph-color-groups-container,
+.graph-control-section .tree-item-children .mod-toggle {
+  padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
+}
+.graph-control-section .tree-item-icon {
+  transform: translateY(-0.5px);
+}
+
+.graph-control-section .tree-item-children .mod-slider {
+  padding: calc(var(--graph-control-verti-padding) * 1.25)
+    var(--graph-control-horiz-padding);
+}
+
+.graph-color-group {
+  padding: 0 0 calc(var(--graph-control-verti-padding) * 1.25) 0;
+}
+
+.graph-control-section-header {
+  transform: translateX(-1px);
 }
 
 body {
@@ -2689,6 +2730,9 @@ body .suggestion-item.mod-complex.is-selected .suggestion-prefix {
   opacity: unset;
 }
 
+body {
+  --flexcyon-repl-active-line-str: "->";
+}
 body .cm-gutterElement.cm-active {
   font-weight: 900;
   font-size: var(--font-ui-medium);
@@ -2698,6 +2742,9 @@ body .cm-gutterElement.cm-active {
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
   font-size: calc(var(--font-ui-small) + 0.05rem);
+}
+
+body:not(.is-mobile) .cm-lineNumbers .cm-active {
   padding-right: 4px;
 }
 
@@ -3672,32 +3719,12 @@ body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile)
   --flexcyon-rel-bel-10: "十";
 }
 
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile)
-  .cm-gutterElement.cm-active {
+body.flexcyon-repl-active-line-num-str .cm-gutterElement.cm-active {
   font-size: 0;
 }
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num:not(.is-mobile)
-  .cm-gutterElement.cm-active::before {
-  content: "0";
+body.flexcyon-repl-active-line-num-str .cm-gutterElement.cm-active::before {
+  content: var(--flexcyon-repl-active-line-str);
   font-size: calc(var(--font-ui-medium) + 0.07rem);
-}
-
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-greek-rel-nums:not(
-    .is-mobile
-  )
-  .cm-gutterElement.cm-active::before,
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-roman-rel-nums:not(
-    .is-mobile
-  )
-  .cm-gutterElement.cm-active::before {
-  content: "->";
-}
-
-body.flexcyon-enable-rel-nums.flexcyon-active-inherits-rel-num.flexcyon-chinese-rel-nums:not(
-    .is-mobile
-  )
-  .cm-gutterElement.cm-active::before {
-  content: "零";
 }
 
 /* Callout modifications */
@@ -8070,6 +8097,7 @@ body {
   --flexcyon-anim-duration: 0.35s;
   --modal-border-color: var(--flexcyon-base-02)
     --toggle-thumb-color: var(--text-on-accent);
+  --ribbon-width: 48px;
   --file-line-width: 50rem;
   --hr-color: color-mix(
     in hsl shorter hue,
@@ -8156,6 +8184,16 @@ body {
 name: Flexcyon Style Settings 
 id: flexcyon
 settings:
+  - 
+    title: About 
+    type: info-text
+    markdown: true
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It is aimed at being *reasonably opinionated and highly customisable*.
+  -
+    title: Documentation 
+    type: info-text
+    markdown: true
+    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.
   -
     title: Editor
     type: heading
@@ -9077,11 +9115,16 @@ settings:
       - 
         label: Chinese
         value: flexcyon-chinese-rel-nums
-  - title: Active Line Number inherits Relative Line Number Style
-    description: Do note that I have to get creative for Greek and Roman as they do not exactly have letters or numbers before I or alpha.
+  - title: Replace active line number with string
+    description: Customise the active line number with your own string, defaults to "->"
     type: class-toggle
-    id: flexcyon-active-inherits-rel-num
+    id: flexcyon-repl-active-line-num-str
     default: false
+  - title: Replaced active line number string value
+    id: flexcyon-repl-active-line-str
+    type: variable-text
+    default: "->"
+    quotes: true
 
   - title: Cursor
     type: heading
@@ -9104,6 +9147,21 @@ settings:
     id: flexcyon-cursor-min-width
     type: variable-text
     default: unset
+
+  - title: Graph
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Graph View Controls Vertical Padding
+    type: variable-number
+    id: graph-control-verti-padding
+    default: 6
+    format: px
+  - title: Graph View Controls Horizontal Padding
+    type: variable-number
+    id: graph-control-horiz-padding
+    default: 12
+    format: px
 
   - title: Settings
     type: heading

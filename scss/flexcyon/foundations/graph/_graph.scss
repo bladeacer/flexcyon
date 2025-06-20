@@ -4,10 +4,47 @@ body {
   --graph-line: var(--flexcyon-base-03);
   --graph-node-unresolved: var(--flexcyon-red-salmon);
   --graph-node-tag: var(--flexcyon-purple-lilac);
+  --graph-control-verti-padding: 6px;
+  --graph-control-horiz-padding: 12px;
 }
 
 body.flexcyon-workspace-angled-layout {
   div.graph-controls.is-close {
     transform: skewY(-5deg);
   }
+}
+
+.graph-controls {
+  padding: var(--graph-control-verti-padding);
+}
+.graph-control-section {
+  padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
+  border-bottom: none;
+
+  .tree-item-self {
+    padding: var(--graph-control-verti-padding) 8px
+      var(--graph-control-verti-padding) 14px;
+  }
+  .tree-item-children .graph-color-button-container,
+  .tree-item-children .graph-color-groups-container,
+  .tree-item-children .mod-toggle {
+    padding: var(--graph-control-verti-padding)
+      var(--graph-control-horiz-padding);
+  }
+
+  .tree-item-icon {
+    transform: translateY(-0.5px);
+  }
+}
+
+.graph-control-section .tree-item-children .mod-slider {
+  padding: calc(var(--graph-control-verti-padding) * 1.25)
+    var(--graph-control-horiz-padding);
+}
+.graph-color-group {
+  padding: 0 0 calc(var(--graph-control-verti-padding) * 1.25) 0;
+}
+
+.graph-control-section-header {
+  transform: translateX(-1px);
 }

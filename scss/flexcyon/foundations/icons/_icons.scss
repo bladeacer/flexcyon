@@ -49,7 +49,7 @@ body {
   }
   .oz-folder-line,
   .oz-nav-file,
-  .tree-item {
+  .tree-item:not(.graph-control-section) {
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
   }

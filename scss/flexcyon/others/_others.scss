@@ -1,4 +1,3 @@
-// The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
@@ -8,6 +7,7 @@ body {
 
   --modal-border-color: var(--flexcyon-base-02)
     --toggle-thumb-color: var(--text-on-accent);
+  --ribbon-width: 48px;
   --file-line-width: 50rem;
   --hr-color: color-mix(
     in hsl shorter hue,
