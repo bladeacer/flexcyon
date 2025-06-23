@@ -31,8 +31,15 @@ body {
   .setting-item {
     border-top: none;
   }
+  .style-settings-collapse-indicator {
+    transform: translateX(-2px);
+  }
   .setting-item.setting-item-heading {
     border-bottom: 1px solid var(--background-modifier-border);
+    .setting-item-name {
+      line-height: 1.5;
+      padding-right: 4px;
+    }
   }
   .setting-item + div > .setting-item-heading,
   .setting-item + .setting-item-heading {

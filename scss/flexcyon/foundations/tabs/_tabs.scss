@@ -18,6 +18,14 @@ body {
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 50px;
   --flexcyon-anim-rotate-amount: 50deg;
+
+  --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
+
+  .view-header-breadcrumb {
+    max-width: var(--flexcyon-view-header-breadcrumb-max-w);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 body.flexcyon-workspace-angled-layout {

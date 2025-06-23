@@ -697,6 +697,15 @@ body
   text-decoration: none;
 }
 
+mark {
+  color: var(--text-normal);
+  background-color: var(--text-highlight-bg);
+  padding: var(--flexcyon-highlight-verti-padding)
+    var(--flexcyon-highlight-horiz-padding);
+  border-radius: 4px;
+  font-weight: 525;
+}
+
 body {
   --tab-text-color: var(--flexcyon-base-05);
   --tab-text-color-focused: var(--flexcyon-base-05);
@@ -712,6 +721,12 @@ body {
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 50px;
   --flexcyon-anim-rotate-amount: 50deg;
+  --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
+}
+body .view-header-breadcrumb {
+  max-width: var(--flexcyon-view-header-breadcrumb-max-w);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 body.flexcyon-workspace-angled-layout .view-header-breadcrumb-separator {
@@ -2096,8 +2111,15 @@ body .community-modal-info hr {
 body .setting-item {
   border-top: none;
 }
+body .style-settings-collapse-indicator {
+  transform: translateX(-2px);
+}
 body .setting-item.setting-item-heading {
   border-bottom: 1px solid var(--background-modifier-border);
+}
+body .setting-item.setting-item-heading .setting-item-name {
+  line-height: 1.5;
+  padding-right: 4px;
 }
 body .setting-item + div > .setting-item-heading,
 body .setting-item + .setting-item-heading {
@@ -2567,6 +2589,12 @@ body {
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
+}
+body .cm-formatting-em {
+  opacity: calc(var(--dimmed) + 0.25);
+}
+body .cm-formatting-strong {
+  opacity: calc(var(--dimmed) + 0.25);
 }
 body .cm-strong.cm-quote {
   color: var(--bold-color);
@@ -8194,7 +8222,7 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It is aimed at being *reasonably opinionated and highly customisable*.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
   -
     title: Documentation 
     type: info-text
@@ -9493,7 +9521,7 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Side Dock Icons
+  - title: Side Dock
     type: heading
     level: 5
     collapsed: true
@@ -9506,6 +9534,12 @@ settings:
     id: flexcyon-sidedock-ribbon-hidden
     type: class-toggle
     default: false
+  - title: Side Dock Ribbon Width
+    description: Configure the width of the workspace ribbon on the left.
+    id: ribbon-width
+    type: variable-number
+    default: 48
+    format: px
 
   - title: Tooltip radius
     type: heading

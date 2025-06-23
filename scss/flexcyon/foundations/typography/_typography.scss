@@ -48,6 +48,12 @@ body {
   .cm-em.cm-quote {
     color: var(--italic-color);
   }
+  .cm-formatting-em {
+    opacity: calc(var(--dimmed) + 0.25);
+  }
+  .cm-formatting-strong {
+    opacity: calc(var(--dimmed) + 0.25);
+  }
 
   .cm-strong.cm-quote {
     color: var(--bold-color);

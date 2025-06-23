@@ -10,7 +10,7 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It is aimed at being *reasonably opinionated and highly customisable*.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
   -
     title: Documentation 
     type: info-text
@@ -1309,7 +1309,7 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Side Dock Icons
+  - title: Side Dock
     type: heading
     level: 5
     collapsed: true
@@ -1322,6 +1322,12 @@ settings:
     id: flexcyon-sidedock-ribbon-hidden
     type: class-toggle
     default: false
+  - title: Side Dock Ribbon Width
+    description: Configure the width of the workspace ribbon on the left.
+    id: ribbon-width
+    type: variable-number
+    default: 48
+    format: px
 
   - title: Tooltip radius
     type: heading
