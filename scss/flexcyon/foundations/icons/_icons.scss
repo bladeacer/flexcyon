@@ -12,7 +12,7 @@ body {
 
   .clickable-icon {
     opacity: var(--dimmed);
-    padding: 0px 8px;
+    padding: 4px 8px;
 
     &:hover {
       opacity: unset;
@@ -194,10 +194,6 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
       7: red,
     )
   );
-}
-
-body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
-  display: none;
 }
 
 body {

@@ -1007,6 +1007,10 @@ body .text-icon-button:focus,
 body .metadata-properties-heading:focus:before {
   box-shadow: 0 0 0 1px var(--interactive-accent);
 }
+body .workspace-leaf-content[data-type="all-properties"] .svg-icon,
+body .metadata-container .svg-icon {
+  transform: translateY(-0.75px);
+}
 
 body.flexcyon-metadata-display-reading-disabled {
   --metadata-display-reading: none;
@@ -2095,7 +2099,7 @@ body {
 }
 body .clickable-icon {
   opacity: var(--dimmed);
-  padding: 0px 8px;
+  padding: 4px 8px;
 }
 body .clickable-icon:hover {
   opacity: unset;
@@ -2284,10 +2288,6 @@ body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 7):hover {
   color: var(--color-red);
-}
-
-body.flexcyon-sidedock-ribbon-hidden div.side-dock-ribbon {
-  display: none;
 }
 
 body {
@@ -8698,6 +8698,12 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
+  - title: View header breadcrumb max width
+    id: flexcyon-view-header-breadcrumb-max-w
+    description: Max width of view header breadcrumb
+    type: variable-number
+    default: 12.5
+    format: vw
   - title: Upscale percentage of icons
     type: heading
     level: 6
@@ -9530,10 +9536,6 @@ settings:
     description: Enable the colors, dim till hover effects for side dock icons
     type: class-toggle
     default: true
-  - title: Hide the side dock ribbon
-    id: flexcyon-sidedock-ribbon-hidden
-    type: class-toggle
-    default: false
   - title: Side Dock Ribbon Width
     description: Configure the width of the workspace ribbon on the left.
     id: ribbon-width
@@ -9991,7 +9993,7 @@ body {
 }
 
 body {
-  --flexcyon-cursor-duration: 95ms;
+  --flexcyon-cursor-duration: 70ms;
   --flexcyon-cursor-timing-fn: ease;
   --flexcyon-cursor-min-width: unset;
 }
@@ -10003,6 +10005,12 @@ body.flexcyon-enable-smooth-cursor .cm-cursor-primary {
 }
 
 /* Modifications for alternate file tree plugin */
+body.theme-light,
+body.theme-dark {
+  --oz-fta-folder-font-size: calc(var(--font-ui-medium) - 0.1rem);
+  --oz-fta-file-font-size: calc(var(--font-ui-medium) - 0.1rem);
+}
+
 body.theme-dark {
   --oz-fta-all-panes-active-text-color: #d3d5d3;
   --oz-fta-folder-panes-file-name-color: #d3d5d3;
@@ -10024,6 +10032,13 @@ body.flexcyon-wrap-long-filenames div.oz-nav-file-title-content {
   text-overflow: clip;
 }
 
+body .oz-folder-contents {
+  padding: 4px 16px;
+  margin-left: 18px !important;
+}
+body .oz-folder-contents:not(:has(> .treeview)) {
+  border-left: none;
+}
 body div.oz-folder-name {
   opacity: var(--dimmed);
 }
@@ -10058,7 +10073,7 @@ body div.oz-folders-action-items.file-tree-header-fixed svg {
   scale: var(--upsize);
 }
 body .oz-nav-file-tag {
-  font-size: calc(var(--oz-fta-folder-font-size) - 0.35rem);
+  font-size: calc(var(--oz-fta-folder-font-size) - 0.15rem);
   background-color: transparent;
 }
 body .oz-folders-action-items {
@@ -10068,10 +10083,14 @@ body .oz-folders-action-items {
 body .oz-folders-action-items:hover {
   opacity: unset;
 }
+body .oz-folders-action-items .oz-nav-action-button {
+  margin-right: 8px;
+  scale: var(--upsize);
+}
 body .oz-nav-action-button {
   margin-left: 0;
   margin-right: 8px;
-  padding: 0px;
+  padding: 0px 2px;
   opacity: var(--dimmed);
 }
 
@@ -10125,11 +10144,20 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title[data-path$=".md"]
   div::after {
   content: ".md";
+  font-size: var(--font-ui-small);
   opacity: var(--dimmed);
 }
 body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
+}
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title div svg {
+  display: none;
+}
+body.flexcyon-oz-dimmed-file-exts-enabled
+  div.oz-nav-file-title
+  .oz-nav-file-title-content {
+  width: unset;
 }
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title
@@ -10142,6 +10170,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   letter-spacing: unset;
   color: var(--oz-fta-file-pane-file-name-color);
   opacity: var(--dimmed);
+  font-size: var(--font-ui-small);
   font-weight: unset;
 }
 body.flexcyon-oz-dimmed-file-exts-enabled

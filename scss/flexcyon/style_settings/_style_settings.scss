@@ -486,6 +486,12 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
+  - title: View header breadcrumb max width
+    id: flexcyon-view-header-breadcrumb-max-w
+    description: Max width of view header breadcrumb
+    type: variable-number
+    default: 12.5
+    format: vw
   - title: Upscale percentage of icons
     type: heading
     level: 6
@@ -1318,10 +1324,6 @@ settings:
     description: Enable the colors, dim till hover effects for side dock icons
     type: class-toggle
     default: true
-  - title: Hide the side dock ribbon
-    id: flexcyon-sidedock-ribbon-hidden
-    type: class-toggle
-    default: false
   - title: Side Dock Ribbon Width
     description: Configure the width of the workspace ribbon on the left.
     id: ribbon-width

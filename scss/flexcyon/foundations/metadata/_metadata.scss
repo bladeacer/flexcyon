@@ -53,6 +53,13 @@ body {
   .metadata-properties-heading:focus:before {
     box-shadow: 0 0 0 1px var(--interactive-accent);
   }
+
+  .workspace-leaf-content[data-type="all-properties"],
+  .metadata-container {
+    .svg-icon {
+      transform: translateY(-0.75px);
+    }
+  }
 }
 
 body.flexcyon-metadata-display-reading-disabled {

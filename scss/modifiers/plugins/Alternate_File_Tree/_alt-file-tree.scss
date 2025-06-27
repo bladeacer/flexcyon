@@ -1,5 +1,11 @@
 /* Modifications for alternate file tree plugin */
 
+body.theme-light,
+body.theme-dark {
+  --oz-fta-folder-font-size: calc(var(--font-ui-medium) - 0.1rem);
+  --oz-fta-file-font-size: calc(var(--font-ui-medium) - 0.1rem);
+}
+
 body.theme-dark {
   --oz-fta-all-panes-active-text-color: #d3d5d3;
   --oz-fta-folder-panes-file-name-color: #d3d5d3;
@@ -24,6 +30,13 @@ body.flexcyon-wrap-long-filenames {
 }
 
 body {
+  .oz-folder-contents {
+    padding: 4px 16px;
+    margin-left: 18px !important;
+  }
+  .oz-folder-contents:not(:has(> .treeview)) {
+    border-left: none;
+  }
   div.oz-folder-name {
     opacity: var(--dimmed);
   }
@@ -66,7 +79,7 @@ body {
   }
 
   .oz-nav-file-tag {
-    font-size: calc(var(--oz-fta-folder-font-size) - 0.35rem);
+    font-size: calc(var(--oz-fta-folder-font-size) - 0.15rem);
     background-color: transparent;
   }
 
@@ -76,11 +89,15 @@ body {
     &:hover {
       opacity: unset;
     }
+    .oz-nav-action-button {
+      margin-right: 8px;
+      scale: var(--upsize);
+    }
   }
   .oz-nav-action-button {
     margin-left: 0;
     margin-right: 8px;
-    padding: 0px;
+    padding: 0px 2px;
     opacity: var(--dimmed);
   }
 }
@@ -138,13 +155,21 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
 
     div::after {
       content: ".md";
+      font-size: var(--font-ui-small);
       opacity: var(--dimmed);
     }
   }
 
   div.oz-nav-file-title {
+    div svg {
+      display: none;
+    }
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
+
+    .oz-nav-file-title-content {
+      width: unset;
+    }
 
     span.oz-nav-file-tag {
       text-transform: lowercase;
@@ -155,6 +180,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
       letter-spacing: unset;
       color: var(--oz-fta-file-pane-file-name-color);
       opacity: var(--dimmed);
+      font-size: var(--font-ui-small);
       font-weight: unset;
 
       &::before {
