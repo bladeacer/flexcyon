@@ -17,6 +17,10 @@ body {
     padding: 0px 4px;
   }
 
+  .workspace-tab-header-inner {
+    padding: 2px 9px;
+  }
+
   .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header:is(.mod-active, .is-active)
     > .workspace-tab-header-inner {

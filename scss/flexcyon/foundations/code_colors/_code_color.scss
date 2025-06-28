@@ -58,6 +58,6 @@ mark {
   background-color: var(--text-highlight-bg);
   padding: var(--flexcyon-highlight-verti-padding)
     var(--flexcyon-highlight-horiz-padding);
-  border-radius: 4px;
+  border-radius: var(--flexcyon-highlight-border-radius);
   font-weight: 525;
 }

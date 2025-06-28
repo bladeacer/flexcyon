@@ -519,6 +519,25 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
   margin-block-end: calc(1.25 * var(--p-spacing));
 }
 
+@mixin font-toggler($font-type) {
+  div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-title"] {
+    .callout-title {
+      font-family: var(--font-#{$font-type});
+    }
+  }
+  div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-content"] {
+    .callout-content {
+      font-family: var(--font-#{$font-type});
+    }
+  }
+}
+
+@include font-toggler(interface);
+@include font-toggler(text);
+@include font-toggler(monospace);
+
 @mixin callout-list($style-type) {
   div.callout[data-callout-metadata*="li-#{$style-type}"],
   div.callout[data-callout-metadata*="ol-#{$style-type}"] {
@@ -593,22 +612,67 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include callout-list(trad-chinese-informal);
 @include callout-list(upper-armenian);
 @include callout-list(disclosure-open);
-@include callout-list(disclosure-open);
 
-// body.flexcyon-easter-egg-mode {
-//     .app-container:has(div.callout[data-callout-metadata*="li-japanese-informal li-korean-hanja-informal li-simp-chinese-informal li-trad-chinese-informal"])::after {
-//         content: " \a\
-//         Very nice. Here is the very last challenge:\a\
-//         You are nearly at the end\a\
-//         but you might want to go back to where it all began\a\
-//         the answer is right in front of,\a\
-//         it is but rhetorical\a\
-//         DM me the answers, once you have all of them\a\
-//         This is @data_in_void on Discord, signing off. \a\
-//         \a";
-//         font-size: 1.1rem;
-//         width: 50vw;
-//         margin-left: 20px;
-//         margin-bottom: 5px;
-//     }
-// }
+@mixin default-list-style($style-type) {
+  body.flexcyon-bullet-list-#{$style-type} {
+    --list-style-type: #{$style-type};
+  }
+}
+
+@include default-list-style(none);
+@include default-list-style(disc);
+@include default-list-style(circle);
+@include default-list-style(square);
+@include default-list-style(decimal);
+@include default-list-style(cjk-decimal);
+@include default-list-style(decimal-leading-zero);
+@include default-list-style(lower-roman);
+@include default-list-style(upper-roman);
+@include default-list-style(lower-greek);
+@include default-list-style(lower-alpha);
+@include default-list-style(lower-latin);
+@include default-list-style(upper-alpha);
+@include default-list-style(upper-latin);
+@include default-list-style(arabic-indic);
+@include default-list-style(armenian);
+@include default-list-style(bengali);
+@include default-list-style(cambodian);
+@include default-list-style(khmer);
+@include default-list-style(cjk-earthly-branch);
+@include default-list-style(cjk-heavenly-branch);
+@include default-list-style(cjk-ideographic);
+@include default-list-style(devanagari);
+@include default-list-style(ethiopic-numeric);
+@include default-list-style(georgian);
+@include default-list-style(gujarati);
+@include default-list-style(gurmukhi);
+@include default-list-style(hebrew);
+@include default-list-style(hiragana);
+@include default-list-style(hiragana-iroha);
+@include default-list-style(japanese-formal);
+@include default-list-style(japanese-informal);
+@include default-list-style(kannada);
+@include default-list-style(kannada-iroha);
+@include default-list-style(katakana);
+@include default-list-style(katakana-iroha);
+@include default-list-style(korean-hangul-formal);
+@include default-list-style(korean-hanja-formal);
+@include default-list-style(korean-hanja-informal);
+@include default-list-style(lao);
+@include default-list-style(lower-armenian);
+@include default-list-style(malayalam);
+@include default-list-style(mongolian);
+@include default-list-style(myanmar);
+@include default-list-style(oriya);
+@include default-list-style(persian);
+@include default-list-style(simp-chinese-formal);
+@include default-list-style(simp-chinese-informal);
+@include default-list-style(tamil);
+@include default-list-style(telugu);
+@include default-list-style(thai);
+@include default-list-style(tibetan);
+@include default-list-style(trad-chinese-formal);
+@include default-list-style(trad-chinese-informal);
+@include default-list-style(upper-armenian);
+@include default-list-style(disclosure-open);
+@include default-list-style(disclosure-open);

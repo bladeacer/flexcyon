@@ -216,6 +216,22 @@ settings:
     opacity: true
     format: hex
     default: "#6f768599"
+  - title: Highlight Text Vertical Padding
+    id: flexcyon-highlight-verti-padding
+    type: variable-number
+    default: 1
+    format: px
+  - title: Highlight Text Horizontal Padding
+    id: flexcyon-highlight-horiz-padding
+    type: variable-number
+    default: 2.5
+    format: px
+  - title: Highlight Text Border Radius
+    id: flexcyon-highlight-border-radius
+    type: variable-number
+    default: 4
+    format: px
+    
   - title: Headings
     type: heading
     level: 6

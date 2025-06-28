@@ -702,7 +702,7 @@ mark {
   background-color: var(--text-highlight-bg);
   padding: var(--flexcyon-highlight-verti-padding)
     var(--flexcyon-highlight-horiz-padding);
-  border-radius: 4px;
+  border-radius: var(--flexcyon-highlight-border-radius);
   font-weight: 525;
 }
 
@@ -2105,6 +2105,10 @@ body .clickable-icon:hover {
   opacity: unset;
   scale: var(--upsize);
 }
+body .view-header-nav-buttons .clickable-icon,
+body .view-actions .clickable-icon {
+  padding: 5px 10px;
+}
 body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
@@ -2586,6 +2590,7 @@ body {
   --flexcyon-text-muted: #6f768599;
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
+  --flexcyon-highlight-border-radius: 4px;
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
@@ -2636,7 +2641,7 @@ body .markdown-source-view:is(.is-live-preview) mark {
   background-color: var(--text-highlight-bg);
   padding: var(--flexcyon-highlight-verti-padding)
     var(--flexcyon-highlight-horiz-padding);
-  border-radius: 4px;
+  border-radius: var(--flexcyon-highlight-border-radius);
   font-weight: 525;
 }
 body .cm-s-obsidian span.cm-formatting-highlight {
@@ -5220,6 +5225,36 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
   margin-block-end: calc(1.25 * var(--p-spacing));
 }
 
+div.callout[data-callout-metadata*="font-interface-all"] .callout-title,
+div.callout[data-callout-metadata*="font-interface-title"] .callout-title {
+  font-family: var(--font-interface);
+}
+
+div.callout[data-callout-metadata*="font-interface-all"] .callout-content,
+div.callout[data-callout-metadata*="font-interface-content"] .callout-content {
+  font-family: var(--font-interface);
+}
+
+div.callout[data-callout-metadata*="font-text-all"] .callout-title,
+div.callout[data-callout-metadata*="font-text-title"] .callout-title {
+  font-family: var(--font-text);
+}
+
+div.callout[data-callout-metadata*="font-text-all"] .callout-content,
+div.callout[data-callout-metadata*="font-text-content"] .callout-content {
+  font-family: var(--font-text);
+}
+
+div.callout[data-callout-metadata*="font-monospace-all"] .callout-title,
+div.callout[data-callout-metadata*="font-monospace-title"] .callout-title {
+  font-family: var(--font-monospace);
+}
+
+div.callout[data-callout-metadata*="font-monospace-all"] .callout-content,
+div.callout[data-callout-metadata*="font-monospace-content"] .callout-content {
+  font-family: var(--font-monospace);
+}
+
 div.callout[data-callout-metadata*="li-none"] ol,
 div.callout[data-callout-metadata*="ol-none"] ol {
   list-style-type: none;
@@ -5892,16 +5927,232 @@ div.callout[data-callout-metadata*="ul-disclosure-open"] ul {
   list-style-position: inside;
 }
 
-div.callout[data-callout-metadata*="li-disclosure-open"] ol,
-div.callout[data-callout-metadata*="ol-disclosure-open"] ol {
-  list-style-type: disclosure-open;
-  list-style-position: inside;
+body.flexcyon-bullet-list-none {
+  --list-style-type: none;
 }
 
-div.callout[data-callout-metadata*="li-disclosure-open"] ul,
-div.callout[data-callout-metadata*="ul-disclosure-open"] ul {
-  list-style-type: disclosure-open;
-  list-style-position: inside;
+body.flexcyon-bullet-list-disc {
+  --list-style-type: disc;
+}
+
+body.flexcyon-bullet-list-circle {
+  --list-style-type: circle;
+}
+
+body.flexcyon-bullet-list-square {
+  --list-style-type: square;
+}
+
+body.flexcyon-bullet-list-decimal {
+  --list-style-type: decimal;
+}
+
+body.flexcyon-bullet-list-cjk-decimal {
+  --list-style-type: cjk-decimal;
+}
+
+body.flexcyon-bullet-list-decimal-leading-zero {
+  --list-style-type: decimal-leading-zero;
+}
+
+body.flexcyon-bullet-list-lower-roman {
+  --list-style-type: lower-roman;
+}
+
+body.flexcyon-bullet-list-upper-roman {
+  --list-style-type: upper-roman;
+}
+
+body.flexcyon-bullet-list-lower-greek {
+  --list-style-type: lower-greek;
+}
+
+body.flexcyon-bullet-list-lower-alpha {
+  --list-style-type: lower-alpha;
+}
+
+body.flexcyon-bullet-list-lower-latin {
+  --list-style-type: lower-latin;
+}
+
+body.flexcyon-bullet-list-upper-alpha {
+  --list-style-type: upper-alpha;
+}
+
+body.flexcyon-bullet-list-upper-latin {
+  --list-style-type: upper-latin;
+}
+
+body.flexcyon-bullet-list-arabic-indic {
+  --list-style-type: arabic-indic;
+}
+
+body.flexcyon-bullet-list-armenian {
+  --list-style-type: armenian;
+}
+
+body.flexcyon-bullet-list-bengali {
+  --list-style-type: bengali;
+}
+
+body.flexcyon-bullet-list-cambodian {
+  --list-style-type: cambodian;
+}
+
+body.flexcyon-bullet-list-khmer {
+  --list-style-type: khmer;
+}
+
+body.flexcyon-bullet-list-cjk-earthly-branch {
+  --list-style-type: cjk-earthly-branch;
+}
+
+body.flexcyon-bullet-list-cjk-heavenly-branch {
+  --list-style-type: cjk-heavenly-branch;
+}
+
+body.flexcyon-bullet-list-cjk-ideographic {
+  --list-style-type: cjk-ideographic;
+}
+
+body.flexcyon-bullet-list-devanagari {
+  --list-style-type: devanagari;
+}
+
+body.flexcyon-bullet-list-ethiopic-numeric {
+  --list-style-type: ethiopic-numeric;
+}
+
+body.flexcyon-bullet-list-georgian {
+  --list-style-type: georgian;
+}
+
+body.flexcyon-bullet-list-gujarati {
+  --list-style-type: gujarati;
+}
+
+body.flexcyon-bullet-list-gurmukhi {
+  --list-style-type: gurmukhi;
+}
+
+body.flexcyon-bullet-list-hebrew {
+  --list-style-type: hebrew;
+}
+
+body.flexcyon-bullet-list-hiragana {
+  --list-style-type: hiragana;
+}
+
+body.flexcyon-bullet-list-hiragana-iroha {
+  --list-style-type: hiragana-iroha;
+}
+
+body.flexcyon-bullet-list-japanese-formal {
+  --list-style-type: japanese-formal;
+}
+
+body.flexcyon-bullet-list-japanese-informal {
+  --list-style-type: japanese-informal;
+}
+
+body.flexcyon-bullet-list-kannada {
+  --list-style-type: kannada;
+}
+
+body.flexcyon-bullet-list-kannada-iroha {
+  --list-style-type: kannada-iroha;
+}
+
+body.flexcyon-bullet-list-katakana {
+  --list-style-type: katakana;
+}
+
+body.flexcyon-bullet-list-katakana-iroha {
+  --list-style-type: katakana-iroha;
+}
+
+body.flexcyon-bullet-list-korean-hangul-formal {
+  --list-style-type: korean-hangul-formal;
+}
+
+body.flexcyon-bullet-list-korean-hanja-formal {
+  --list-style-type: korean-hanja-formal;
+}
+
+body.flexcyon-bullet-list-korean-hanja-informal {
+  --list-style-type: korean-hanja-informal;
+}
+
+body.flexcyon-bullet-list-lao {
+  --list-style-type: lao;
+}
+
+body.flexcyon-bullet-list-lower-armenian {
+  --list-style-type: lower-armenian;
+}
+
+body.flexcyon-bullet-list-malayalam {
+  --list-style-type: malayalam;
+}
+
+body.flexcyon-bullet-list-mongolian {
+  --list-style-type: mongolian;
+}
+
+body.flexcyon-bullet-list-myanmar {
+  --list-style-type: myanmar;
+}
+
+body.flexcyon-bullet-list-oriya {
+  --list-style-type: oriya;
+}
+
+body.flexcyon-bullet-list-persian {
+  --list-style-type: persian;
+}
+
+body.flexcyon-bullet-list-simp-chinese-formal {
+  --list-style-type: simp-chinese-formal;
+}
+
+body.flexcyon-bullet-list-simp-chinese-informal {
+  --list-style-type: simp-chinese-informal;
+}
+
+body.flexcyon-bullet-list-tamil {
+  --list-style-type: tamil;
+}
+
+body.flexcyon-bullet-list-telugu {
+  --list-style-type: telugu;
+}
+
+body.flexcyon-bullet-list-thai {
+  --list-style-type: thai;
+}
+
+body.flexcyon-bullet-list-tibetan {
+  --list-style-type: tibetan;
+}
+
+body.flexcyon-bullet-list-trad-chinese-formal {
+  --list-style-type: trad-chinese-formal;
+}
+
+body.flexcyon-bullet-list-trad-chinese-informal {
+  --list-style-type: trad-chinese-informal;
+}
+
+body.flexcyon-bullet-list-upper-armenian {
+  --list-style-type: upper-armenian;
+}
+
+body.flexcyon-bullet-list-disclosure-open {
+  --list-style-type: disclosure-open;
+}
+
+body.flexcyon-bullet-list-disclosure-open {
+  --list-style-type: disclosure-open;
 }
 
 body.flexcyon-settings-scrollbar-removed {
@@ -5928,6 +6179,9 @@ body:not(.show-ribbon) .sidebar-toggle-button.mod-left {
 
 body .workspace-tab-header {
   padding: 0px 4px;
+}
+body .workspace-tab-header-inner {
+  padding: 2px 9px;
 }
 body
   .workspace-tabs:not(.mod-stacked)
@@ -7822,7 +8076,7 @@ body.flexcyon-status-text-mode
 }
 
 body.flexcyon-status-hide-until-hover .status-bar {
-  font-size: 0.825rem;
+  font-size: var(--font-ui-medium);
   border: unset;
   z-index: 1;
   transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
@@ -8428,6 +8682,22 @@ settings:
     opacity: true
     format: hex
     default: "#6f768599"
+  - title: Highlight Text Vertical Padding
+    id: flexcyon-highlight-verti-padding
+    type: variable-number
+    default: 1
+    format: px
+  - title: Highlight Text Horizontal Padding
+    id: flexcyon-highlight-horiz-padding
+    type: variable-number
+    default: 2.5
+    format: px
+  - title: Highlight Text Border Radius
+    id: flexcyon-highlight-border-radius
+    type: variable-number
+    default: 4
+    format: px
+
   - title: Headings
     type: heading
     level: 6

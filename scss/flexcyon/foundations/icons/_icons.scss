@@ -19,6 +19,10 @@ body {
       scale: var(--upsize);
     }
   }
+  .view-header-nav-buttons .clickable-icon,
+  .view-actions .clickable-icon {
+    padding: 5px 10px;
+  }
 
   .graph-controls .clickable-icon,
   .clickable-icon.side-dock-ribbon-action {

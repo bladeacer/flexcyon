@@ -44,6 +44,7 @@ body {
   --flexcyon-text-muted: #6f768599;
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
+  --flexcyon-highlight-border-radius: 4px;
 
   .cm-em.cm-quote {
     color: var(--italic-color);
@@ -106,7 +107,7 @@ body {
     background-color: var(--text-highlight-bg);
     padding: var(--flexcyon-highlight-verti-padding)
       var(--flexcyon-highlight-horiz-padding);
-    border-radius: 4px;
+    border-radius: var(--flexcyon-highlight-border-radius);
     font-weight: 525;
   }
   .cm-s-obsidian span.cm-formatting-highlight {

@@ -60,7 +60,7 @@ body.flexcyon-status-text-mode {
 }
 
 body.flexcyon-status-hide-until-hover .status-bar {
-  font-size: 0.825rem;
+  font-size: var(--font-ui-medium);
   border: unset;
   z-index: 1;
   transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
