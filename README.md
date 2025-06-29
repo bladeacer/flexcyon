@@ -68,7 +68,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 
 ## Features
 
-[Here is a web showcase](https://share.note.sx/jze8bimb) of the features this theme has to offer.
+[Here is a web showcase](https://share.note.sx/r7rd6a8a#n1z0mQOPxar40bRJJ8yIY/c97ljRYkU+vUX34EJVhoE) of the features this theme has to offer.
 
 - Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
 

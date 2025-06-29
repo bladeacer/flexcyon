@@ -399,17 +399,17 @@ settings:
   - title: Small UI Font size
     id: font-ui-small
     type: variable-number
-    default: 13
+    default: 14
     format: px
   - title: Medium UI Font size
     id: font-ui-medium 
     type: variable-number
-    default: 15
+    default: 16
     format: px
   - title: Large UI Font size
     id: font-ui-large
     type: variable-number
-    default: 20
+    default: 18
     format: px
 
   - title: Table
@@ -767,6 +767,132 @@ settings:
     type: class-toggle
     id: flexcyon-rainbow-bullet-points
     default: false
+
+  - title: Numbered lists
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Select Default Numbered List Style in Reading Mode
+    description: Unfortunately I cannot get it to work within CodeMirror's context, because the output html is not ordered list tags which are easier to style.
+    type: class-select
+    id: theme-variant
+    allowEmpty: false
+    default: flexcyon-numbered-list-decimal
+    options: 
+      - label: None
+        value: flexcyon-numbered-list-none
+      - label: Disc
+        value: flexcyon-numbered-list-disc
+      - label: Circle
+        value: flexcyon-numbered-list-none
+      - label: Square
+        value: flexcyon-numbered-list-square
+      - label: Decimal
+        value: flexcyon-numbered-list-decimal
+      - label: CJK Decimal
+        value: flexcyon-numbered-list-cjk-decimal
+      - label: Decimal Leading Zero
+        value: flexcyon-numbered-list-decimal-leading-zero
+      - label: Lower Roman
+        value: flexcyon-numbered-list-lower-roman
+      - label: Upper Roman
+        value: flexcyon-numbered-list-upper-roman
+      - label: Lower Greek
+        value: flexcyon-numbered-list-lower-greek
+      - label: Lower Alphabet
+        value: flexcyon-numbered-list-lower-alpha
+      - label: Lower Latin
+        value: flexcyon-numbered-list-lower-latin
+      - label: Upper Alphabet
+        value: flexcyon-numbered-list-upper-alpha
+      - label: Upper Latin
+        value: flexcyon-numbered-list-upper-latin
+      - label: Arabic Indic
+        value: flexcyon-numbered-list-arabic-indic
+      - label: Armenian
+        value: flexcyon-numbered-list-armenian
+      - label: Bengali
+        value: flexcyon-numbered-list-bengali
+      - label: Cambodian
+        value: flexcyon-numbered-list-cambodian
+      - label: Khmer
+        value: flexcyon-numbered-list-khmer
+      - label: CJK Earthly Branch
+        value: flexcyon-numbered-list-cjk-earthly-branch
+      - label: CJK Heavenly Branch
+        value: flexcyon-numbered-list-cjk-heavenly-branch
+      - label: CJK Ideographic
+        value: flexcyon-numbered-list-cjk-ideographic
+      - label: Devanagari
+        value: flexcyon-numbered-list-davanagari
+      - label: Ethiopic Numeric
+        value: flexcyon-numbered-list-ethiopic-numeric
+      - label: Georgian
+        value: flexcyon-numbered-list-georgian
+      - label: Gujarati
+        value: flexcyon-numbered-list-gujarati
+      - label: Gurmukhi
+        value: flexcyon-numbered-list-gurmukhi
+      - label: Hebrew
+        value: flexcyon-numbered-list-hebrew
+      - label: Hiragana
+        value: flexcyon-numbered-list-hiragana
+      - label: Hiragana Iroha
+        value: flexcyon-numbered-list-hiragana-iroha
+      - label: Hiragana Formal
+        value: flexcyon-numbered-list-hiragana-formal
+      - label: Japanese Formal
+        value: flexcyon-numbered-list-japanese-formal
+      - label: Japanese Informal
+        value: flexcyon-numbered-list-japanese-informal
+      - label: Kannada
+        value: flexcyon-numbered-list-kannada
+      - label: Kannada Iroha
+        value: flexcyon-numbered-list-kannada-iroha
+      - label: Katakana
+        value: flexcyon-numbered-list-katakana
+      - label: Katakana Iroha
+        value: flexcyon-numbered-list-katakana-iroha
+      - label: Korean Hangul Formal
+        value: flexcyon-numbered-list-korean-hangul-formal
+      - label: Korean Hanja Formal
+        value: flexcyon-numbered-list-korean-hanja-formal
+      - label: Korean Hanja Informal
+        value: flexcyon-numbered-list-korean-hanja-inforal
+      - label: Lao
+        value: flexcyon-numbered-list-lao
+      - label: Lower Armenian
+        value: flexcyon-numbered-list-lower-armenian
+      - label: Malayalam
+        value: flexcyon-numbered-list-malayalam
+      - label: Mongolian
+        value: flexcyon-numbered-list-mongolian
+      - label: Myanmar
+        value: flexcyon-numbered-list-myanmar
+      - label: Oriya
+        value: flexcyon-numbered-list-oriya
+      - label: Persian
+        value: flexcyon-numbered-list-persian
+      - label: Simplified Chinese Formal
+        value: flexcyon-numbered-list-simplified-chinese-formal
+      - label: Simplified Chinese Informal
+        value: flexcyon-numbered-list-simplified-chinese-informal
+      - label: Tamil
+        value: flexcyon-numbered-list-tamil
+      - label: Telugu
+        value: flexcyon-numbered-list-telugu
+      - label: Thai
+        value: flexcyon-numbered-list-thai
+      - label: Tibetan
+        value: flexcyon-numbered-list-tibetan
+      - label: Traditional Chinese Informal
+        value: flexcyon-numbered-list-traditional-chinese-informal
+      - label: Traditional Chinese Informal
+        value: flexcyon-numbered-list-traditional-chinese-informal
+      - label: Upper Armenian
+        value: flexcyon-numbered-list-upper-armenian
+      - label: Disclosure Open
+        value: flexcyon-numbered-list-disclosure-open
 
   - title: Media
     type: heading
@@ -1268,7 +1394,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Customise the appearance of new tabs
+    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values
   - title: Add before empty state title
     type: class-select
     id: theme-variant
@@ -1290,7 +1416,19 @@ settings:
     id: flexcyon-quote-val
     description: The quote that will be displayed
     type: variable-text
-    default: "This is a placeholder quote\a\a - bladeacer"
+    default: "This is a placeholder quote\ain the Flexcyon Theme."
+    quotes: true
+  - title: Quote Attribution Prefix
+    id: flexcyon-quote-credit-prefix
+    description: The prefix before the quote attribution
+    type: variable-text
+    default: "-"
+    quotes: true
+  - title: Quote Attribution
+    id: flexcyon-quote-credit
+    description: The quote attribution
+    type: variable-text
+    default: "bladeacer"
     quotes: true
   - title: Quote font size
     id: flexcyon-quote-font-size
@@ -1319,7 +1457,7 @@ settings:
     description: The line height of the ASCII art and quotes.
     id: flexcyon-ascii-line-height
     type: variable-number
-    default: 1
+    default: 1.5
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title

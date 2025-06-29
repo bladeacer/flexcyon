@@ -19,8 +19,10 @@ body.theme-light {
 body {
   --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-quote-font-size: 24px;
-  --flexcyon-ascii-line-height: 1;
-  --flexcyon-quote-val: "This is a placeholder quote\a\a - bladeacer";
+  --flexcyon-ascii-line-height: 1.5;
+  --flexcyon-quote-val: "This is a placeholder quote\ain the Flexcyon Theme.";
+  --flexcyon-quote-credit-prefix: "-";
+  --flexcyon-quote-credit: "bladeacer";
   --flexcyon-ascii-art: " \a\
 _______________                                       \a\
 ___  ____/__  /________  ____________  ______________ \a\
@@ -87,7 +89,8 @@ body.flexcyon-empty-state-actions-disable {
 body.flexcyon-quote-enable {
   div.empty-state-container::before {
     font-family: var(--font-interface);
-    content: var(--flexcyon-quote-val);
+    content: var(--flexcyon-quote-val) "\a\a"
+      var(--flexcyon-quote-credit-prefix) " " var(--flexcyon-quote-credit);
     font-weight: bold;
     background: var(--flexcyon-new-tab-bg-wrapper);
     background-clip: text;
