@@ -382,6 +382,8 @@ body.theme-light {
 body:is(.theme-dark),
 body:is(.theme-light) {
   --flexcyon-base-grey-tab: #71777f;
+  --flexcyon-base-grey-tab: transparent;
+  --flexcyon-base-grey-token: transparent;
   --flexyon-base-grey-token: #586582;
   --flexcyon-base-grey-scroll: #3f495e;
   --flexcyon-base-grey-scroll-hover: #5c6782;
@@ -2156,7 +2158,14 @@ body:is(.theme-light) {
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--flexcyon-base-04);
   --background-modifier-message: var(--flexcyon-base-02-03-mix);
-  --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+  --background-modifier-error: rgba(
+    var(--color-red-rgb),
+    calc(var(--dimmed) + 0.25)
+  );
+}
+
+body:is(.theme-light) {
+  --background-modifier-message: var(--color-base-70);
 }
 
 body {
@@ -2857,7 +2866,7 @@ body
 
 body.theme-dark,
 body.theme-light {
-  --text-highlight-bg: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.3));
+  --text-highlight-bg: transparent;
 }
 
 body {
@@ -11051,7 +11060,6 @@ body.flexcyon-canvas-menu-rcenter-top .canvas-card-menu {
 }
 
 .omnisearch-default-highlight {
-  background-color: transparent;
   color: var(--text-accent);
   text-decoration: none;
 }

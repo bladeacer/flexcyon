@@ -3,7 +3,8 @@
 
 body.theme-dark,
 body.theme-light {
-  --text-highlight-bg: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.3));
+  // --text-highlight-bg: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.3));
+  --text-highlight-bg: transparent;
 }
 
 body {

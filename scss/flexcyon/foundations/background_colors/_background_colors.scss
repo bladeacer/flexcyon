@@ -29,7 +29,14 @@ body:is(.theme-light) {
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--flexcyon-base-04);
   --background-modifier-message: var(--flexcyon-base-02-03-mix);
-  --background-modifier-error: rgba(var(--color-red-rgb), 0.85);
+  --background-modifier-error: rgba(
+    var(--color-red-rgb),
+    calc(var(--dimmed) + 0.25)
+  );
+}
+
+body:is(.theme-light) {
+  --background-modifier-message: var(--color-base-70);
 }
 
 body {

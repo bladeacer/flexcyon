@@ -1,6 +1,6 @@
 <p align="left">
     <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon-1/">
-        <img src="https://img.shields.io/badge/downloads-1100+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
+        <img src="https://img.shields.io/badge/downloads-1200+-6E4E9B?style=for-the-badge&logo=obsidian&color=%23483699">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge">

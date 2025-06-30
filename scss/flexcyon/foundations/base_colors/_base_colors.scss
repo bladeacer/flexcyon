@@ -30,9 +30,12 @@ body.theme-light {
 body:is(.theme-dark),
 body:is(.theme-light) {
   --flexcyon-base-grey-tab: #71777f;
+  --flexcyon-base-grey-tab: transparent;
+  --flexcyon-base-grey-token: transparent;
   --flexyon-base-grey-token: #586582;
   --flexcyon-base-grey-scroll: #3f495e;
   --flexcyon-base-grey-scroll-hover: #5c6782;
+
   /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
     in hsl,
