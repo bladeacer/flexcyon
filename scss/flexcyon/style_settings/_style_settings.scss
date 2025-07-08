@@ -271,32 +271,32 @@ settings:
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
-    default: 1.802
+    default: 1.81803
     format: em
   - title: Heading 2 font size
     id: h2-size
     type: variable-number
-    default: 1.602
+    default: 1.61803
     format: em
   - title: Heading 3 font size
     id: h3-size
     type: variable-number
-    default: 1.424
+    default: 1.41803
     format: em
   - title: Heading 4 font size
     id: h4-size
     type: variable-number
-    default: 1.266
+    default: 1.21803
     format: em
   - title: Heading 5 font size
     id: h5-size
     type: variable-number
-    default: 1.125
+    default: 1.11803
     format: em
   - title: Heading 6 font size
     id: h6-size
     type: variable-number
-    default: 1
+    default: 1.01803
     format: em
   - title: Heading 1 font weight
     id: h1-weight
@@ -497,6 +497,17 @@ settings:
     description: Opacity of dimmed UI elements
     type: variable-number
     default: 0.55
+  - title: Opacity of block labels
+    id: flexcyon-block-label-opacity
+    description: Opacity of block ID labels
+    type: variable-number
+    default: 0.55
+  - title: Disable horizontal rules in reading mode
+    description: Do not display horizontal rules in reading mode
+    id: flexcyon-hr-no-reading
+    type: class-toggle
+    default: false
+
   - title: Top Actions Alignment
     description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
     id: flexcyon-top-actions-alignment
@@ -1133,6 +1144,27 @@ settings:
     default: 12
     format: px
 
+  - title: Syntax
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Flexcyon Syntax Highlighting Mode
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Catppuccin
+        value: flexcyon-syntax-catppuccin
+      - 
+        label: Lego
+        value: flexcyon-syntax-lego
+      - 
+        label: Monochrome
+        value: flexcyon-syntax-monochrome
+
+
   - title: Settings
     type: heading
     level: 4
@@ -1247,6 +1279,7 @@ settings:
     id: flexcyon-oz-dimmed-file-exts-enabled
     type: class-toggle
     default: true
+
   - title: Full Calendar
     type: heading
     level: 5
@@ -1343,6 +1376,22 @@ settings:
     description: Overrides defaults. Uses padding 4px 8px.
     type: class-toggle
     default: false
+
+  - title: Omnisearch Plugin
+    type: heading
+    level: 5
+    collapsed: true
+    description: For configuring the Omnisearch Plugin
+  - title: Disable Omnisearch Icons
+    id: flexcyon-omnisearch-no-icons
+    description: Removes Omnisearch search result icons.
+    type: class-toggle
+    default: false
+  - title: Omnisearch Body Left Margin
+    type: variable-number
+    id: flexcyon-omnisearch-body-margin-left
+    default: 1.45
+    format: rem
 
   - title: Others
     type: heading

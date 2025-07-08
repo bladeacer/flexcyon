@@ -71,10 +71,6 @@ body.flexcyon-ascii-checkboxes-enabled {
     border: none;
     font-weight: 900;
     padding-right: 6px;
-
-    &:hover {
-      filter: brightness(1.25);
-    }
   }
 
   input[data-task='"']:checked::after,
@@ -87,7 +83,15 @@ body.flexcyon-ascii-checkboxes-enabled {
     text-align: center;
     -webkit-mask-image: none;
     mask-image: none;
-    top: -0.325em;
+  }
+
+  input[data-task="?"]:checked::after,
+  li[data-task="?"] > input:checked::after,
+  li[data-task="?"] > p > input:checked::after,
+  input[data-task="!"]:checked::after,
+  li[data-task="!"] > input:checked::after,
+  li[data-task="!"] > p > input:checked::after {
+    top: -0.15em;
   }
 
   input[data-task="'"]:checked::after,
@@ -95,19 +99,24 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task="'"] > p > input:checked::after {
     content: "‘";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
+    top: -0.175rem;
   }
 
   input[data-task="i"]:checked::after,
   li[data-task="i"] > input:checked::after,
   li[data-task="i"] > p > input:checked::after {
     border: 1.5px solid var(--color-blue);
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
     border-radius: 50%;
+    padding-top: 10%;
     scale: 115%;
-    margin-inline-start: -1.5px;
-    top: -0.1rem;
+    margin-left: -1.5px;
+    top: 0rem;
   }
 
+  input[data-task="/"]:checked::after,
+  li[data-task="/"] > input:checked::after,
+  li[data-task="/"] > p > input:checked::after,
   input[data-task="<"]:checked::after,
   li[data-task="<"] > input:checked::after,
   li[data-task="<"] > p > input:checked::after,
@@ -115,7 +124,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task=">"] > input:checked::after,
   li[data-task=">"] > p > input:checked::after {
     transform: scaleY(1.1);
-    top: -0.4rem;
+    top: -0.175rem;
   }
 
   input[data-task="."]:checked::after,
@@ -124,52 +133,52 @@ body.flexcyon-ascii-checkboxes-enabled {
     content: "...";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
     letter-spacing: -0.5px;
+    top: -0.175rem;
   }
 
   input[data-task="*"]:checked::after,
   li[data-task="*"] > input:checked::after,
   li[data-task="*"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
+    top: -0.175rem;
   }
 
   input[data-task="$"]:checked::after,
   li[data-task="$"] > input:checked::after,
   li[data-task="$"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+    top: -0.175rem;
   }
 
   input[data-task="@"]:checked::after,
   li[data-task="@"] > input:checked::after,
   li[data-task="@"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
-    top: -0.45rem;
+    top: -0.225rem;
   }
 
   input[data-task="%"]:checked::after,
   li[data-task="%"] > input:checked::after,
   li[data-task="%"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.225rem);
+    top: -0.175rem;
   }
 
   input[data-task="+"]:checked::after,
   li[data-task="+"] > input:checked::after,
   li[data-task="+"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
+    top: -0.175rem;
   }
 
   input[data-task="-"]:checked::after,
   li[data-task="-"] > input:checked::after,
   li[data-task="-"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
-    top: -0.7rem;
+    top: -0.425rem;
     content: "--";
+    margin-left: -7.5%;
     letter-spacing: var(--less-letter-spacing);
-  }
-
-  .markdown-source-view.mod-cm6
-    .task-list-label
-    .task-list-item-checkbox[data-task="-"] {
-    margin-inline-start: calc(var(--checkbox-margin-inline-start) - 0.075rem);
   }
 }
 

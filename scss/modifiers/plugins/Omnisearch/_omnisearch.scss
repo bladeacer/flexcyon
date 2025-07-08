@@ -15,3 +15,15 @@ body.theme-dark .omnisearch-default-highlight {
 body.theme-light .omnisearch-default-highlight {
   opacity: 1;
 }
+
+body.flexcyon-omnisearch-no-icons .omnisearch-result__icon {
+  display: none;
+}
+
+body {
+  --flexcyon-omnisearch-body-margin-left: 1.45rem;
+}
+
+.omnisearch-result__body {
+  margin-inline-start: var(--flexcyon-omnisearch-body-margin-left);
+}

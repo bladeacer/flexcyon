@@ -90,3 +90,13 @@ body span.media-embed * {
 .cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote {
   top: -0.1em;
 }
+
+body .cm-hr {
+  color: var(--text-faint);
+}
+
+body.flexcyon-hr-no-reading .markdown-reading-view {
+  .el-hr {
+    display: none;
+  }
+}

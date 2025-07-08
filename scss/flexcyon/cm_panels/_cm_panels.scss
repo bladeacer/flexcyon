@@ -4,32 +4,36 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     padding-top: 6px;
   }
 
-  .cm-editor
+  .markdown-source-view.mod-cm6
+    .cm-editor
     .cm-scroller:not(.cm-vimMode)
     .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-insert-text);
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     position: fixed;
-    background-color: var(--color-base-05);
+    background-color: var(--color-base-00);
     color: var(--text-muted);
     height: 30px;
     padding: 0px 8px;
     font-size: var(--font-ui-medium);
+    font-family: var(--font-interface);
   }
 
-  .cm-editor
+  .markdown-source-view.mod-cm6
+    .cm-editor
     .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
     .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-normal-text);
     position: fixed;
-    background-color: var(--color-base-05);
+    background-color: var(--color-base-00);
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     height: 30px;
     color: var(--text-muted);
     padding: 0px 8px;
     font-size: var(--font-ui-medium);
+    font-family: var(--font-interface);
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
@@ -59,6 +63,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     bottom: var(--flexcyon-vim-bottom-positioning);
     padding-right: 4px;
     font-size: var(--font-ui-medium);
+    font-family: var(--font-interface);
   }
 
   .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
@@ -98,6 +103,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
     left: var(--flexcyon-vim-left-positioning);
     height: 30px;
     color: var(--color-purple);
+    font-family: var(--font-interface);
     padding: 0px 8px;
   }
 
