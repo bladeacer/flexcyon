@@ -68,7 +68,7 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 
 ## Features
 
-[Here is a web showcase](https://share.note.sx/r7rd6a8a#n1z0mQOPxar40bRJJ8yIY/c97ljRYkU+vUX34EJVhoE) of the features this theme has to offer.
+[Here is a web showcase](https://share.note.sx/j4wqojpy#xi8TbTY58w4JaoiHcPdRJA+V60W3jT0qDoLyUhkTE3U) of the features this theme has to offer.
 
 - Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
 
@@ -154,6 +154,7 @@ Alternatively, you can open an issue at [the repository](https://github.com/blad
 This theme tries to:
 
 - be "reasonably opinionated"
+  - opt into customisation instead opting out of customisation
 - be decently lightweight, meaning:
   - fonts, svgs and the like are not embedded in this theme
   - (hopefully) sane defaults, customisable with style settings
