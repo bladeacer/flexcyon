@@ -394,22 +394,22 @@ settings:
   - title: Smaller UI Font size
     id: font-ui-smaller
     type: variable-number
-    default: 12
+    default: 12.94424
     format: px
   - title: Small UI Font size
     id: font-ui-small
     type: variable-number
-    default: 14
+    default: 14.56227
     format: px
   - title: Medium UI Font size
     id: font-ui-medium 
     type: variable-number
-    default: 16
+    default: 16.1803
     format: px
   - title: Large UI Font size
     id: font-ui-large
     type: variable-number
-    default: 18
+    default: 17.79833
     format: px
 
   - title: Table
@@ -469,13 +469,13 @@ settings:
     id: flexcyon-tree-item-verti-padding
     type: variable-number
     format: px
-    default: 1.25
+    default: 2
   - title: Horizontal Tree Item Padding
     description: Horizontal Padding of tree item variables like file explorer items
     id: flexcyon-tree-item-horiz-padding
     type: variable-number
     format: px
-    default: 12
+    default: 10
   - title: Wrap Long Filenames
     description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
     id: flexcyon-wrap-long-filenames

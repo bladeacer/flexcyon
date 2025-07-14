@@ -108,10 +108,11 @@ body.flexcyon-ascii-checkboxes-enabled {
     border: 1.5px solid var(--color-blue);
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
     border-radius: 50%;
-    padding-top: 10%;
-    scale: 115%;
+    padding-top: 11%;
+    scale: 107.5%;
+    transform: scaleY(0.95);
     margin-left: -1.5px;
-    top: 0rem;
+    top: -0.075rem;
   }
 
   input[data-task="/"]:checked::after,
@@ -140,7 +141,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task="*"] > input:checked::after,
   li[data-task="*"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
-    top: -0.175rem;
+    top: -0.25rem;
   }
 
   input[data-task="$"]:checked::after,
@@ -153,8 +154,8 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="@"]:checked::after,
   li[data-task="@"] > input:checked::after,
   li[data-task="@"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
-    top: -0.225rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
+    top: -0.125rem;
   }
 
   input[data-task="%"]:checked::after,

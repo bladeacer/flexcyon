@@ -3,8 +3,15 @@ body {
   .cm-gutterElement.cm-active {
     font-weight: 900;
     font-size: var(--font-ui-medium);
-    color: rgba(var(--color-green-rgb), 60%);
+    color: var(--text-accent);
   }
+}
+
+body.theme-dark .cm-gutterElement.cm-active {
+  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
+}
+body.theme-light .cm-gutterElement.cm-active {
+  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,

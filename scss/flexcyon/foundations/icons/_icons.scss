@@ -7,8 +7,8 @@ body {
   --expand: 110%;
   --less-letter-spacing: -3px;
   --flexcyon-comm-item-opacity: 0.89;
-  --flexcyon-tree-item-horiz-padding: 12px;
-  --flexcyon-tree-item-verti-padding: 1.25px;
+  --flexcyon-tree-item-horiz-padding: 10px;
+  --flexcyon-tree-item-verti-padding: 2px;
 
   .clickable-icon {
     opacity: var(--dimmed);
@@ -113,14 +113,20 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-body:not(.is-phone) .community-item.is-selected,
-body:not(.is-phone) .community-item.is-selected:hover {
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected:hover {
+  background-color: var(--color-accent-2);
   .community-item-downloads {
-    color: var(--color-base-00);
+    color: var(--color-pink);
   }
 
   .community-item-updated {
     color: var(--color-base-25);
+  }
+  .community-item-author {
+    color: var(--color-orange);
   }
 }
 
@@ -215,6 +221,10 @@ body {
   }
 }
 
+body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
+  color: var(--color-yellow);
+}
+
 body.flexcyon-settings-comm-item-enabled {
   div.community-modal-search-results div.community-item {
     opacity: var(--flexcyon-comm-item-opacity);
@@ -242,6 +252,7 @@ body.flexcyon-settings-comm-item-enabled {
   .community-item-name {
     width: 75%;
     overflow-wrap: break-word;
+    color: var(--color-blue);
   }
 
   .community-item-downloads,

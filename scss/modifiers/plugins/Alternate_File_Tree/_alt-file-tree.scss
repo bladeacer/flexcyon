@@ -74,7 +74,7 @@ body {
     border: unset;
 
     svg {
-      scale: var(--upsize);
+      scale: calc(var(--upsize) + 10%);
     }
   }
 

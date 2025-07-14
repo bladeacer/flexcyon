@@ -46,18 +46,18 @@ body {
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;
-  --font-ui-smaller: 12px;
-  --font-ui-small: 14px;
-  --font-ui-medium: 16px;
-  --font-ui-large: 18px;
+  --font-ui-smaller: 12.94424px;
+  --font-ui-small: 14.56227px;
+  --font-ui-medium: 16.1803px;
+  --font-ui-large: 17.79833px;
 
   .cm-em.cm-quote {
     color: var(--italic-color);
   }
-  .cm-formatting-em {
-    opacity: calc(var(--dimmed) + 0.25);
-  }
-  .cm-formatting-strong {
+  .cm-formatting-em,
+  .cm-formatting-strong,
+  .cm-formatting-code,
+  .cm-formatting-math {
     opacity: calc(var(--dimmed) + 0.25);
   }
 

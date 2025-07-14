@@ -455,6 +455,20 @@ body {
   --accent-l: var(--flexcyon-accent-l);
 }
 
+body.theme-dark,
+body.theme-light {
+  --color-accent-1: hsl(
+    calc(var(--accent-h) - 3),
+    calc(var(--accent-s) * 1.02),
+    calc(var(--accent-l) * 1.15)
+  );
+  --color-accent-2: hsl(
+    calc(var(--accent-h) - 20),
+    calc(var(--accent-s) * 0.85),
+    calc(var(--accent-l) * 1.1)
+  );
+}
+
 body {
   --h1-weight: 700;
   --h2-weight: 675;
@@ -1719,10 +1733,11 @@ body.flexcyon-ascii-checkboxes-enabled
   border: 1.5px solid var(--color-blue);
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
   border-radius: 50%;
-  padding-top: 10%;
-  scale: 115%;
+  padding-top: 11%;
+  scale: 107.5%;
+  transform: scaleY(0.95);
   margin-left: -1.5px;
-  top: 0rem;
+  top: -0.075rem;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
@@ -1763,7 +1778,7 @@ body.flexcyon-ascii-checkboxes-enabled
   > p
   > input:checked::after {
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
-  top: -0.175rem;
+  top: -0.25rem;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
@@ -1780,8 +1795,8 @@ body.flexcyon-ascii-checkboxes-enabled
   li[data-task="@"]
   > p
   > input:checked::after {
-  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
-  top: -0.225rem;
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
+  top: -0.125rem;
 }
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked::after,
@@ -1915,9 +1930,15 @@ body h3[data-heading*="find section #"] a.tag {
   );
 }
 
-body {
+body.theme-dark {
   --list-marker-color: var(--flexcyon-purple-lilac);
   --list-marker-color-hover: var(--flexcyon-palette-lilac-hover);
+  --list-marker-color-collapsed: var(--flexcyon-lime-green);
+}
+
+body.theme-light {
+  --list-marker-color: var(--flexcyon-cyan);
+  --list-marker-color-hover: var(--flexcyon-palette-cyan-hover);
   --list-marker-color-collapsed: var(--flexcyon-lime-green);
 }
 
@@ -2498,8 +2519,8 @@ body {
   --expand: 110%;
   --less-letter-spacing: -3px;
   --flexcyon-comm-item-opacity: 0.89;
-  --flexcyon-tree-item-horiz-padding: 12px;
-  --flexcyon-tree-item-verti-padding: 1.25px;
+  --flexcyon-tree-item-horiz-padding: 10px;
+  --flexcyon-tree-item-verti-padding: 2px;
 }
 body .clickable-icon {
   opacity: var(--dimmed);
@@ -2597,15 +2618,35 @@ body.flexcyon-workspace-card-layout .community-modal-readme {
   margin-top: 32px;
 }
 
-body:not(.is-phone) .community-item.is-selected .community-item-downloads,
-body:not(.is-phone)
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected:hover {
+  background-color: var(--color-accent-2);
+}
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-downloads,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected:hover
   .community-item-downloads {
-  color: var(--color-base-00);
+  color: var(--color-pink);
 }
-body:not(.is-phone) .community-item.is-selected .community-item-updated,
-body:not(.is-phone) .community-item.is-selected:hover .community-item-updated {
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-updated,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected:hover
+  .community-item-updated {
   color: var(--color-base-25);
+}
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-author,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected:hover
+  .community-item-author {
+  color: var(--color-orange);
 }
 
 body.theme-light.flexcyon-settings-smiley-icons-enabled
@@ -2711,6 +2752,10 @@ body span.flair.mod-pop {
   margin-left: var(--flexcyon-settings-installed-tooltip-left-margin);
 }
 
+body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
+  color: var(--color-yellow);
+}
+
 body.flexcyon-settings-comm-item-enabled
   div.community-modal-search-results
   div.community-item {
@@ -2743,6 +2788,7 @@ body.flexcyon-settings-comm-item-enabled
 body.flexcyon-settings-comm-item-enabled .community-item-name {
   width: 75%;
   overflow-wrap: break-word;
+  color: var(--color-blue);
 }
 body.flexcyon-settings-comm-item-enabled .community-item-downloads,
 body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
@@ -2995,18 +3041,18 @@ body {
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;
-  --font-ui-smaller: 12px;
-  --font-ui-small: 14px;
-  --font-ui-medium: 16px;
-  --font-ui-large: 18px;
+  --font-ui-smaller: 12.94424px;
+  --font-ui-small: 14.56227px;
+  --font-ui-medium: 16.1803px;
+  --font-ui-large: 17.79833px;
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
 }
-body .cm-formatting-em {
-  opacity: calc(var(--dimmed) + 0.25);
-}
-body .cm-formatting-strong {
+body .cm-formatting-em,
+body .cm-formatting-strong,
+body .cm-formatting-code,
+body .cm-formatting-math {
   opacity: calc(var(--dimmed) + 0.25);
 }
 body .cm-strong.cm-quote {
@@ -3183,7 +3229,15 @@ body {
 body .cm-gutterElement.cm-active {
   font-weight: 900;
   font-size: var(--font-ui-medium);
-  color: rgba(var(--color-green-rgb), 60%);
+  color: var(--text-accent);
+}
+
+body.theme-dark .cm-gutterElement.cm-active {
+  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
+}
+
+body.theme-light .cm-gutterElement.cm-active {
+  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
@@ -7963,6 +8017,22 @@ body .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   border-bottom-width: 0px;
 }
 
+body.theme-dark {
+  --cm-panel-bg: var(--color-base-00);
+}
+
+body.theme-light {
+  --cm-panel-bg: color-mix(
+    in srgb,
+    var(--color-base-05) 55%,
+    var(--color-base-10) 45%
+  );
+}
+
+body {
+  --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
+}
+
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom {
@@ -7978,11 +8048,11 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
   position: fixed;
-  background-color: var(--color-base-00);
+  background-color: var(--cm-panel-bg);
   color: var(--text-muted);
   height: 30px;
   padding: 0px 8px;
-  font-size: var(--font-ui-medium);
+  font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
@@ -7992,13 +8062,13 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   content: var(--flexcyon-vim-normal-text);
   position: fixed;
-  background-color: var(--color-base-00);
+  background-color: var(--cm-panel-bg);
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: var(--flexcyon-vim-left-positioning);
   height: 30px;
   color: var(--text-muted);
   padding: 0px 8px;
-  font-size: var(--font-ui-medium);
+  font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
@@ -8034,7 +8104,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   content: var(--flexcyon-vim-command-text);
   bottom: var(--flexcyon-vim-bottom-positioning);
   padding-right: 4px;
-  font-size: var(--font-ui-medium);
+  font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
@@ -8211,7 +8281,7 @@ body .outgoing-link-pane div.tree-item-flair-outer > span {
 }
 
 body {
-  --status-bar-font-size: 12.5px;
+  --status-bar-font-size: calc(var(--font-ui-smaller) + 0.809015px);
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
   --flexcyon-vim-command-text: "COMMAND";
@@ -9057,22 +9127,22 @@ settings:
   - title: Smaller UI Font size
     id: font-ui-smaller
     type: variable-number
-    default: 12
+    default: 12.94424
     format: px
   - title: Small UI Font size
     id: font-ui-small
     type: variable-number
-    default: 14
+    default: 14.56227
     format: px
   - title: Medium UI Font size
     id: font-ui-medium 
     type: variable-number
-    default: 16
+    default: 16.1803
     format: px
   - title: Large UI Font size
     id: font-ui-large
     type: variable-number
-    default: 18
+    default: 17.79833
     format: px
 
   - title: Table
@@ -9132,13 +9202,13 @@ settings:
     id: flexcyon-tree-item-verti-padding
     type: variable-number
     format: px
-    default: 1.25
+    default: 2
   - title: Horizontal Tree Item Padding
     description: Horizontal Padding of tree item variables like file explorer items
     id: flexcyon-tree-item-horiz-padding
     type: variable-number
     format: px
-    default: 12
+    default: 10
   - title: Wrap Long Filenames
     description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
     id: flexcyon-wrap-long-filenames
@@ -10724,7 +10794,7 @@ body div.oz-folders-action-items.file-tree-header-fixed {
   border: unset;
 }
 body div.oz-folders-action-items.file-tree-header-fixed svg {
-  scale: var(--upsize);
+  scale: calc(var(--upsize) + 10%);
 }
 body .oz-nav-file-tag {
   font-size: calc(var(--oz-fta-folder-font-size) - 0.15rem);
@@ -11265,6 +11335,134 @@ body .various-complements__suggestion-item.is-selected {
 body .various-complements__suggestion-item {
   padding: var(--flexcyon-var-comps-sugg-vert-padding)
     var(--flexcyon-var-comps-sugg-horiz-padding);
+}
+
+body {
+  --font-mermaid: var(--font-monospace);
+}
+
+div.mermaid svg .nodes node * {
+  stroke: var(--color-base-20);
+}
+
+.theme-light .mermaid > svg[aria-roledescription="flowchart-v2"],
+.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
+  filter: none;
+}
+
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
+  /* Edge labels */
+  /* Nodes */
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.edgeLabels
+  div.labelBkg {
+  display: contents !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.edgeLabels
+  div.labelBkg
+  .edgeLabel
+  p {
+  color: var(--text-normal) !important;
+  font-size: calc(var(--font-text-size) * var(--dimmed)) !important;
+  vertical-align: super;
+  padding-inline: 0.2rem;
+  background-color: var(--background-primary) !important;
+}
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
+  /* Node labels */
+  /* Node default colors */
+  /* Colorize individual nodes with classes */
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  div:has(.nodeLabel) {
+  display: block !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  div:has(.nodeLabel)
+  .nodeLabel
+  p {
+  color: var(--text-normal) !important;
+  margin: 0px -8px !important;
+}
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes g :is(*) {
+  stroke: var(--text-faint) !important;
+  fill: var(--background-secondary) !important;
+  fill-opacity: calc(var(--dimmed) - 0.25) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.red
+  :is(*) {
+  fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+  stroke: var(--color-red-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.purple
+  :is(*) {
+  fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+  stroke: var(--color-purple-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.cyan
+  :is(*) {
+  fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+  stroke: var(--color-cyan-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.yellow
+  :is(*) {
+  fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+  stroke: var(--color-yellow-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.blue
+  :is(*) {
+  fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+  stroke: var(--color-blue-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.green
+  :is(*) {
+  fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+  stroke: var(--color-green-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="flowchart-v2"]
+  g.root
+  g.nodes
+  g.orange
+  :is(*) {
+  fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+  stroke: var(--color-orange-rgb) !important;
 }
 
 /* Modifications for banner snippet */

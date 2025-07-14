@@ -1,3 +1,17 @@
+body.theme-dark {
+  --cm-panel-bg: var(--color-base-00);
+}
+body.theme-light {
+  --cm-panel-bg: color-mix(
+    in srgb,
+    var(--color-base-05) 55%,
+    var(--color-base-10) 45%
+  );
+}
+body {
+  --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
+}
+
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
@@ -12,11 +26,11 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     position: fixed;
-    background-color: var(--color-base-00);
+    background-color: var(--cm-panel-bg);
     color: var(--text-muted);
     height: 30px;
     padding: 0px 8px;
-    font-size: var(--font-ui-medium);
+    font-size: var(--cm-font-size);
     font-family: var(--font-interface);
   }
 
@@ -26,13 +40,13 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     content: var(--flexcyon-vim-normal-text);
     position: fixed;
-    background-color: var(--color-base-00);
+    background-color: var(--cm-panel-bg);
     bottom: var(--flexcyon-vim-bottom-positioning);
     left: var(--flexcyon-vim-left-positioning);
     height: 30px;
     color: var(--text-muted);
     padding: 0px 8px;
-    font-size: var(--font-ui-medium);
+    font-size: var(--cm-font-size);
     font-family: var(--font-interface);
   }
 
@@ -62,7 +76,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     content: var(--flexcyon-vim-command-text);
     bottom: var(--flexcyon-vim-bottom-positioning);
     padding-right: 4px;
-    font-size: var(--font-ui-medium);
+    font-size: var(--cm-font-size);
     font-family: var(--font-interface);
   }
 
