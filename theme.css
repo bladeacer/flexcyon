@@ -808,9 +808,9 @@ body {
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
-  --flexcyon-anim-duration: 0.5s;
+  --flexcyon-anim-duration: 0.3s;
   --flexcyon-anim-easing: ease-in-out;
-  --flexcyon-anim-slide-amount: 50px;
+  --flexcyon-anim-slide-amount: 56.63105px;
   --flexcyon-anim-rotate-amount: 50deg;
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
 }
@@ -1013,42 +1013,77 @@ body.flexcyon-workspace-card-layout .view-header-title {
     transform: rotateX(0);
   }
 }
-body.flexcyon-anims-slide-rtl .workspace-leaf-content,
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+body.flexcyon-anims-scale-up .modal .community-modal-info,
+body.flexcyon-anims-scale-up .modal .vertical-tab-content,
+body.flexcyon-anims-scale-up .workspace-leaf:not([style^="display: none"]),
+body.flexcyon-anims-scale-up .modal,
+body.flexcyon-anims-scale-up .prompt {
+  animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-slide-rtl .modal .community-modal-info,
+body.flexcyon-anims-slide-rtl .modal .vertical-tab-content,
+body.flexcyon-anims-slide-rtl .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-rtl .modal,
 body.flexcyon-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-ltr .workspace-leaf-content,
+body.flexcyon-anims-slide-ltr .modal .community-modal-info,
+body.flexcyon-anims-slide-ltr .modal .vertical-tab-content,
+body.flexcyon-anims-slide-ltr
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
 body.flexcyon-anims-slide-ltr .modal,
 body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-tb .workspace-leaf-content,
+body.flexcyon-anims-slide-tb .modal .community-modal-info,
+body.flexcyon-anims-slide-tb .modal .vertical-tab-content,
+body.flexcyon-anims-slide-tb
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
 body.flexcyon-anims-slide-tb .modal,
 body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-bt .workspace-leaf-content,
+body.flexcyon-anims-slide-bt .modal .community-modal-info,
+body.flexcyon-anims-slide-bt .modal .vertical-tab-content,
+body.flexcyon-anims-slide-bt
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
 body.flexcyon-anims-slide-bt .modal,
 body.flexcyon-anims-slide-bt .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-rl .workspace-leaf-content,
+body.flexcyon-anims-spin-rl .modal .community-modal-info,
+body.flexcyon-anims-spin-rl .modal .vertical-tab-content,
+body.flexcyon-anims-spin-rl
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
 body.flexcyon-anims-spin-rl .modal,
 body.flexcyon-anims-spin-rl .prompt {
   animation: spin-in-rl var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-bt .workspace-leaf-content,
+body.flexcyon-anims-spin-bt .modal .community-modal-info,
+body.flexcyon-anims-spin-bt .modal .vertical-tab-content,
+body.flexcyon-anims-spin-bt
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
 body.flexcyon-anims-spin-bt .modal,
 body.flexcyon-anims-spin-bt .prompt {
   animation: spin-in-bt var(--flexcyon-anim-duration)
@@ -9352,12 +9387,15 @@ settings:
       - 
         label: Rotate in Right to Left
         value: flexcyon-anims-spin-rl
+      - 
+        label: Scale Up
+        value: flexcyon-anims-scale-up
 
   - title: Animation duration
     id: flexcyon-anim-duration
     description: Transition duration for animations
     type: variable-number
-    default: 0.5
+    default: 0.3
     format: s
   - title: Animation easing function
     id: flexcyon-anim-easing
@@ -9368,7 +9406,7 @@ settings:
     id: flexcyon-anim-slide-amount
     description: The amount of pixels the slide animations will slide
     type: variable-number
-    default: 50
+    default: 56.63105 
     format: px
 
   - title: Editor Background

@@ -13,10 +13,10 @@ body {
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
-  --flexcyon-anim-duration: 0.5s;
+  --flexcyon-anim-duration: 0.3s;
 
   --flexcyon-anim-easing: ease-in-out;
-  --flexcyon-anim-slide-amount: 50px;
+  --flexcyon-anim-slide-amount: 56.63105px;
   --flexcyon-anim-rotate-amount: 50deg;
 
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
@@ -224,8 +224,33 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    scale: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+body.flexcyon-anims-scale-up {
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([style^="display: none"]),
+  .modal,
+  .prompt {
+    animation: scale-up var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
+  }
+}
+
 body.flexcyon-anims-slide-rtl {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([style^="display: none"]),
   .modal,
   .prompt {
     animation: slide-in-right var(--flexcyon-anim-duration)
@@ -234,7 +259,9 @@ body.flexcyon-anims-slide-rtl {
 }
 
 body.flexcyon-anims-slide-ltr {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
   .modal,
   .prompt {
     animation: slide-in-left var(--flexcyon-anim-duration)
@@ -243,7 +270,9 @@ body.flexcyon-anims-slide-ltr {
 }
 
 body.flexcyon-anims-slide-tb {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
   .modal,
   .prompt {
     animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -252,7 +281,9 @@ body.flexcyon-anims-slide-tb {
 }
 
 body.flexcyon-anims-slide-bt {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
   .modal,
   .prompt {
     animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -261,7 +292,9 @@ body.flexcyon-anims-slide-bt {
 }
 
 body.flexcyon-anims-spin-rl {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
   .modal,
   .prompt {
     animation: spin-in-rl var(--flexcyon-anim-duration)
@@ -270,7 +303,9 @@ body.flexcyon-anims-spin-rl {
 }
 
 body.flexcyon-anims-spin-bt {
-  .workspace-leaf-content,
+  .modal .community-modal-info,
+  .modal .vertical-tab-content,
+  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
   .modal,
   .prompt {
     animation: spin-in-bt var(--flexcyon-anim-duration)

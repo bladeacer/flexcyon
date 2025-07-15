@@ -619,12 +619,15 @@ settings:
       - 
         label: Rotate in Right to Left
         value: flexcyon-anims-spin-rl
+      - 
+        label: Scale Up
+        value: flexcyon-anims-scale-up
 
   - title: Animation duration
     id: flexcyon-anim-duration
     description: Transition duration for animations
     type: variable-number
-    default: 0.5
+    default: 0.3
     format: s
   - title: Animation easing function
     id: flexcyon-anim-easing
@@ -635,7 +638,7 @@ settings:
     id: flexcyon-anim-slide-amount
     description: The amount of pixels the slide animations will slide
     type: variable-number
-    default: 50
+    default: 56.63105 
     format: px
 
   - title: Editor Background
