@@ -4,7 +4,7 @@
 
 body:not(.show-ribbon) {
   .sidebar-toggle-button {
-    padding: var(--size-4-2) 16px 8px 0px;
+    padding: 11px 16px 7px 0px;
   }
 
   .sidebar-toggle-button.mod-left {
@@ -12,7 +12,30 @@ body:not(.show-ribbon) {
   }
 }
 
+body:not(
+    .show-ribbon
+  ).flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
+  .sidebar-toggle-button.mod-left {
+    padding-top: 9px;
+  }
+}
+
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
+  .sidebar-toggle-button.mod-left {
+    padding-top: 7px;
+  }
+}
+
 body {
+  .workspace-ribbon .sidebar-toggle-button {
+    top: -1px;
+  }
+  .sidebar-toggle-button.mod-left {
+    padding-top: 12px;
+  }
+  .sidebar-toggle-button.mod-right {
+    padding-top: 9px;
+  }
   .workspace-tab-header {
     padding: 0px 4px;
   }
@@ -223,29 +246,29 @@ body.show-ribbon {
   }
 }
 
-body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-  @mixin tab-container-style($type, $color, $content) {
-    .mod-sidedock
-      .workspace-tab-header-container:has(
-        .workspace-tab-header.is-active[data-type="#{$type}"]
-      )
-      + .workspace-tab-container {
-      border: 2px solid
-        rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
+@mixin tab-container-style($type, $color, $content) {
+  .mod-sidedock
+    .workspace-tab-header-container:has(
+      .workspace-tab-header.is-active[data-type="#{$type}"]
+    )
+    + .workspace-tab-container {
+    border: 2px solid
+      rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
 
-      &::before {
-        content: "#{$content}";
-        position: absolute;
-        top: 44px;
-        left: 32px;
-        z-index: 1;
-        color: rgba(var(--color-#{$color}-rgb), 0.85);
-        background-color: var(--color-base-05);
-        padding: 0px 8px;
-      }
+    &::before {
+      content: "#{$content}";
+      position: absolute;
+      top: 44px;
+      left: 32px;
+      z-index: 1;
+      color: rgba(var(--color-#{$color}-rgb), 0.85);
+      background-color: var(--color-base-00);
+      padding: 0px 8px;
     }
   }
+}
 
+body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   @include tab-container-style("file-explorer", "blue", "Files");
   @include tab-container-style(
     "file-tree-view",
@@ -271,28 +294,6 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-  @mixin tab-container-style($type, $color, $content) {
-    .mod-sidedock
-      .workspace-tab-header-container:has(
-        .workspace-tab-header.is-active[data-type="#{$type}"]
-      )
-      + .workspace-tab-container {
-      border: 2px solid
-        rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
-
-      &::before {
-        content: "#{$content}";
-        position: absolute;
-        top: 44px;
-        left: 32px;
-        z-index: 1;
-        color: rgba(var(--color-#{$color}-rgb), 0.85);
-        background-color: var(--color-base-00);
-        padding: 0px 8px;
-      }
-    }
-  }
-
   @include tab-container-style("file-explorer", "blue", "Files");
   @include tab-container-style(
     "file-tree-view",

@@ -772,6 +772,10 @@ settings:
     type: variable-number
     default: 1.2
     format: rem
+  - title: Enable Clip Path checkboxes
+    type: class-toggle
+    id: flexcyon-clip-path-checkboxes-enabled
+    default: true
 
   - title: Bullet lists
     type: heading
@@ -1121,12 +1125,12 @@ settings:
   - title: Smooth cursor transition duration
     id: flexcyon-cursor-duration
     type: variable-number
-    default: 95
+    default: 42.5
     format: ms
   - title: Smooth cursor timing function
     id: flexcyon-cursor-timing-fn
     type: variable-text
-    default: ease
+    default: ease-in
   - title: Smooth cursor minimum width
     id: flexcyon-cursor-min-width
     type: variable-text
