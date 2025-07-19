@@ -10,12 +10,12 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
   -
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.
+    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.
   -
     title: Editor
     type: heading
@@ -502,11 +502,6 @@ settings:
     description: Opacity of block ID labels
     type: variable-number
     default: 0.55
-  - title: Disable horizontal rules in reading mode
-    description: Do not display horizontal rules in reading mode
-    id: flexcyon-hr-no-reading
-    type: class-toggle
-    default: false
 
   - title: Top Actions Alignment
     description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
@@ -758,6 +753,45 @@ settings:
     id: flexcyon-callout-pop-animation-duration
     default: 0.2
     format: s
+
+  - title: Horizontal Rule
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Disable horizontal rules in reading mode
+    description: Do not display horizontal rules in reading mode
+    id: flexcyon-hr-no-reading
+    type: class-toggle
+    default: false
+  - title: Horizontal Rule Colour
+    id: hr-color
+    type: variable-color
+    opacity: false
+    format: hex
+    default: "#393e48"
+  - title: Add custom string inside horizontal rules
+    type: class-toggle
+    id: flexcyon-cust-str-hr
+    default: false
+  - title: Horizontal rule custom string content
+    id: flexcyon-cust-hr-str
+    type: variable-text
+    default: "f"
+    quotes: true
+  - title: Horizontal rule custom string font size
+    id: flexcyon-cust-hr-str-font-size
+    type: variable-number
+    default: 1.11803
+    format: em
+  - title: Horizontal rule custom string horizontal padding
+    type: variable-number
+    id: flexcyon-cust-hr-str-horiz-padding
+    default: 8
+    format: px
+  - title: Horizontal rule custom string left percentage
+    id: flexcyon-cust-hr-str-left
+    type: variable-text
+    default: 47%
 
   - title: Checkboxes
     type: heading
