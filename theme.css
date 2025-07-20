@@ -8530,7 +8530,7 @@ body .outgoing-link-pane div.tree-item-flair-outer > span {
 }
 
 body {
-  --status-bar-font-size: calc(var(--font-ui-smaller) + 0.809015px);
+  --status-bar-font-size: 13.753255px;
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
   --flexcyon-vim-command-text: "COMMAND";
@@ -8899,7 +8899,7 @@ body {
   --ribbon-background-collapsed: var(--ribbon-background)
     --workspace-background-translucent: unset;
   --hr-color: #393e48;
-  --flexcyon-cust-hr-str-left: 47%;
+  --flexcyon-cust-hr-str-left: 48%;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
   --flexcyon-cust-hr-str-font-size: 1.11803em;
   --flexcyon-cust-hr-str: "f";
@@ -9791,7 +9791,7 @@ settings:
   - title: Horizontal rule custom string left percentage
     id: flexcyon-cust-hr-str-left
     type: variable-text
-    default: 47%
+    default: 48%
 
   - title: Checkboxes
     type: heading
@@ -10068,7 +10068,7 @@ settings:
   - title: Status bar font size
     id: status-bar-font-size
     type: variable-number
-    default: 12.5
+    default: 13.753255
     format: px
   - title: Select status bar style
     description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
