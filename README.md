@@ -9,17 +9,9 @@
         <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver" referrerpolicy="noreferrer">
     </a>
 </p>
-<p align="left">
-    <a href="https://flexcyon-docs.readthedocs.io/en/latest/">
-      <img alt="English Docs" src="https://img.shields.io/readthedocs/flexcyon-docs?style=for-the-badge&label=English%20Docs" referrerpolicy="noreferrer">
-    </a>
-    <a href="https://flexcyon-docs.readthedocs.io/zh-cn/latest/">
-      <img alt="Chinese Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-cn?style=for-the-badge&label=Chinese%20Docs" referrerpolicy="noreferrer">
-    </a>
-    <a href="https://flexcyon-docs.readthedocs.io/es/latest/">
-      <img alt="Spanish Docs" src="https://img.shields.io/readthedocs/flexcyon-docs-es?style=for-the-badge&label=Spanish%20Docs" referrerpolicy="noreferrer">
-    </a>
-</p>
+
+> The documentation is in the process of a refactor. Links may be broken.
+> I will update this page once I have the new documentation ready.
 
 ## About Flexcyon
 
