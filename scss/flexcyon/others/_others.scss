@@ -14,7 +14,6 @@ body {
     --workspace-background-translucent: unset;
 
   --hr-color: #393e48;
-  --flexcyon-cust-hr-str-left: 48%;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
   --flexcyon-cust-hr-str-font-size: 1.11803em;
   --flexcyon-cust-hr-str: "f";
@@ -105,10 +104,17 @@ body.flexcyon-hr-no-reading .markdown-reading-view {
 body.flexcyon-cust-str-hr {
   .hr::before {
     position: absolute;
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 85%;
+    right: 0;
+    left: calc(0px * 2);
+
     content: var(--flexcyon-cust-hr-str);
     font-size: var(--flexcyon-cust-hr-str-font-size);
     color: var(--hr-color);
-    left: var(--flexcyon-cust-hr-str-left);
     padding: 0px var(--flexcyon-cust-hr-str-horiz-padding);
     font-style: italic;
   }

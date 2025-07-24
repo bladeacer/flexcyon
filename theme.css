@@ -8303,6 +8303,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   padding: 0px 8px;
   font-size: var(--cm-font-size);
   font-family: var(--font-interface);
+  z-index: 2;
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
@@ -8319,6 +8320,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   padding: 0px 8px;
   font-size: var(--cm-font-size);
   font-family: var(--font-interface);
+  z-index: 2;
 }
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
@@ -8536,16 +8538,35 @@ body {
   --flexcyon-vim-command-text: "COMMAND";
   --flexcyon-vim-bottom-positioning: -4px;
   --flexcyon-vim-left-positioning: 6px;
+  --flexcyon-vim-bottom-pos-w-status: 40px;
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 1500px;
-  --flexcyon-status-hide-hover-duration: 0.35s;
+  --flexcyon-status-hide-hover-duration: 0.25s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
   --flexcyon-status-source-text: "SOURCE";
   --flexcyon-status-live-text: "LIVE";
+  --status-bar-position: absolute;
 }
 body div:has(.cm-vim-panel) + .status-bar {
   margin-bottom: 36px;
+}
+
+body.flexcyon-status-left-align {
+  --flexcyon-vim-bottom-positioning: var(--flexcyon-vim-bottom-pos-w-status);
+}
+body.flexcyon-status-left-align div.status-bar {
+  right: unset;
+}
+
+body.flexcyon-status-centre-align .status-bar {
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
 }
 
 body.flexcyon-status-text-enable-color
@@ -8580,20 +8601,54 @@ body.flexcyon-status-text-mode
   content: var(--flexcyon-status-live-text);
 }
 
+body.flexcyon-status-hide-until-hover.flexcyon-status-centre-align .status-bar {
+  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
+}
+body.flexcyon-status-hide-until-hover.flexcyon-status-centre-align
+  .status-bar::before {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
+  transform: translateY(
+    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+
+body.flexcyon-status-hide-until-hover.flexcyon-status-left-align .status-bar {
+  transform: translateX(
+    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+body.flexcyon-status-hide-until-hover.flexcyon-status-left-align
+  .status-bar::before {
+  transform: translateX(
+    calc(0.655 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+  right: unset;
+}
+
+body.flexcyon-status-hold-until-hold .status-bar,
 body.flexcyon-status-hide-until-hover .status-bar {
+  border: none;
   font-size: var(--font-ui-medium);
-  border: unset;
   z-index: 1;
   transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
+body.flexcyon-status-hold-until-hold .status-bar::before,
 body.flexcyon-status-hide-until-hover .status-bar::before {
+  font-size: var(--font-ui-medium);
+  padding: 8px 10px;
   content: var(--flexcyon-status-hide-until-hover-text);
   background-color: var(--color-base-00);
   border-radius: inherit;
   margin-right: 8px;
-  padding: 8px;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -8602,13 +8657,26 @@ body.flexcyon-status-hide-until-hover .status-bar::before {
   );
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
+  user-select: none;
 }
+
 body.flexcyon-status-hide-until-hover .status-bar:hover::before {
   transform: translateY(50px);
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
 body.flexcyon-status-hide-until-hover .status-bar:hover {
+  transform: unset;
+  transition: transform var(--flexcyon-status-hide-hover-duration)
+    var(--flexcyon-status-hide-hover-function);
+}
+
+body.flexcyon-status-hold-until-hold .status-bar:active::before {
+  transform: translateY(50px);
+  transition: transform var(--flexcyon-status-hide-hover-duration)
+    var(--flexcyon-status-hide-hover-function);
+}
+body.flexcyon-status-hold-until-hold .status-bar:active {
   transform: unset;
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
@@ -8899,7 +8967,6 @@ body {
   --ribbon-background-collapsed: var(--ribbon-background)
     --workspace-background-translucent: unset;
   --hr-color: #393e48;
-  --flexcyon-cust-hr-str-left: 48%;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
   --flexcyon-cust-hr-str-font-size: 1.11803em;
   --flexcyon-cust-hr-str: "f";
@@ -8982,10 +9049,16 @@ body.flexcyon-hr-no-reading .markdown-reading-view .el-hr {
 
 body.flexcyon-cust-str-hr .hr::before {
   position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 0px;
   content: var(--flexcyon-cust-hr-str);
   font-size: var(--flexcyon-cust-hr-str-font-size);
   color: var(--hr-color);
-  left: var(--flexcyon-cust-hr-str-left);
   padding: 0px var(--flexcyon-cust-hr-str-horiz-padding);
   font-style: italic;
 }
@@ -9015,7 +9088,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3>
   -
     title: Editor
     type: heading
@@ -9788,10 +9861,6 @@ settings:
     id: flexcyon-cust-hr-str-horiz-padding
     default: 8
     format: px
-  - title: Horizontal rule custom string left percentage
-    id: flexcyon-cust-hr-str-left
-    type: variable-text
-    default: 48%
 
   - title: Checkboxes
     type: heading
@@ -10010,11 +10079,31 @@ settings:
     type: heading
     level: 5
     collapsed: true
-  - title: Hide until hover
-    id: flexcyon-status-hide-until-hover
-    description: Hide status bar until hover
-    type: class-toggle
-    default: false
+  - title: Hide until trigger
+    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Hide until hover
+        value: flexcyon-status-hide-until-hover
+      - 
+        label: Hold until hold
+        value: flexcyon-status-hold-until-hold
+  - title: Status bar alignment
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Left
+        value: flexcyon-status-left-align
+      - 
+        label: Centre
+        value: flexcyon-status-centre-align
   - title: Text when hide until hover enabled
     id: flexcyon-status-hide-until-hover-text
     description: Text to show when hide until hover is enabled, do not leave empty

@@ -32,6 +32,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     padding: 0px 8px;
     font-size: var(--cm-font-size);
     font-family: var(--font-interface);
+    z-index: 2;
   }
 
   .markdown-source-view.mod-cm6
@@ -48,6 +49,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     padding: 0px 8px;
     font-size: var(--cm-font-size);
     font-family: var(--font-interface);
+    z-index: 2;
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {

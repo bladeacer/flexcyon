@@ -15,7 +15,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon-docs.readthedocs.io/en/latest/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3>
   -
     title: Editor
     type: heading
@@ -788,10 +788,6 @@ settings:
     id: flexcyon-cust-hr-str-horiz-padding
     default: 8
     format: px
-  - title: Horizontal rule custom string left percentage
-    id: flexcyon-cust-hr-str-left
-    type: variable-text
-    default: 48%
 
   - title: Checkboxes
     type: heading
@@ -1010,11 +1006,31 @@ settings:
     type: heading
     level: 5
     collapsed: true
-  - title: Hide until hover
-    id: flexcyon-status-hide-until-hover
-    description: Hide status bar until hover
-    type: class-toggle
-    default: false
+  - title: Hide until trigger
+    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Hide until hover
+        value: flexcyon-status-hide-until-hover
+      - 
+        label: Hold until hold
+        value: flexcyon-status-hold-until-hold
+  - title: Status bar alignment
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Left
+        value: flexcyon-status-left-align
+      - 
+        label: Centre
+        value: flexcyon-status-centre-align
   - title: Text when hide until hover enabled
     id: flexcyon-status-hide-until-hover-text
     description: Text to show when hide until hover is enabled, do not leave empty

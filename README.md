@@ -52,11 +52,11 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 ## Documentation
 
-A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-docs.readthedocs.io/en/latest
+A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.github.io/docs-en/
 
-> I want to keep the docs and source code separate, there are translations for Chinese and Spanish in a beta stage
+> I want to keep the docs and source code separate, the documentation is currently being reworked.
 > The old documentation is now fully deprecated and its links will not work.
-> (was https://flexcyon.readthedocs.io/en/latest )
+> (was https://flexcyon-docs.readthedocs.io/en/latest )
 
 ## Features
 
@@ -74,17 +74,14 @@ A huge thanks to ReadTheDocs for hosting the documentation at https://flexcyon-d
 - a light and dark mode colour scheme
 - ASCII checkboxes
 - Heading options like underline, numbered, coloured
-- A [plethora of cssclasses and callout customisation options](https://flexcyon-docs.readthedocs.io/en/latest/Styling/CSS-Classes/)
+- A plethora of cssclasses and callout customisation options
+<!-- - A [plethora of cssclasses and callout customisation options](https://flexcyon-docs.readthedocs.io/en/latest/Styling/CSS-Classes/) -->
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs
 - And many more...
 
 ![Figure 5: ASCII checkboxes](./docs/ascii_checkboxes1.png)
-
-#### Easter Egg Mode
-
-**Deprecated**, View details at https://flexcyon-docs.readthedocs.io/en/latest/README/page-5/
 
 #### What this theme does not have
 
@@ -116,21 +113,17 @@ The following plugins/snippets are officially supported:
 
 For plugins/snippets that are not styled yet, feel free to open a Pull Request/Feature Request/start a Discussion on it.
 
-#### Recommended snippets
-
-Here are some recommended snippets to add to your vault and use alongside Flexcyon:
-
-- [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
-- [Obsidian FileLink Styling by felixqueisler](https://github.com/felixqueisler/Obsidian-FileLink-Styling)
-- [MCL Multi Column and Gallery Cards by efemkay](https://github.com/efemkay/obsidian-modular-css-layout)
-
 #### Roadmap
 
-The Roadmap for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/README/roadmap/).
+<!-- The Roadmap for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/README/roadmap/). -->
+
+The Roadmap for this theme is currently in the works, stay tuned.
 
 #### Changelogs
 
-The Changelogs for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/changelogs/)
+<!-- The Changelogs for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/changelogs/) -->
+
+The Changelogs for this theme is currently in the works, stay tuned.
 
 #### Questions, Issues?
 
@@ -156,7 +149,9 @@ This theme tries to:
 
 ## Style Settings
 
-Documentation for style settings of this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/Styling/Style-Settings)
+<!-- Documentation for style settings of this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/Styling/Style-Settings) -->
+
+Documentation for style settings of this theme is in the works, stay tuned.
 
 Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
 
@@ -166,4 +161,6 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 
 ## Credits
 
-See https://flexcyon-docs.readthedocs.io/en/latest/credits/
+<!-- See https://flexcyon-docs.readthedocs.io/en/latest/credits/ -->
+
+Credits for this theme is in the works, stay tuned.
