@@ -113,10 +113,8 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected,
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected:hover {
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected {
   background-color: var(--color-accent-2);
   .community-item-downloads {
     color: var(--color-pink);
@@ -129,16 +127,40 @@ body.flexcyon-settings-comm-item-enabled:not(.is-phone)
     color: var(--color-orange);
   }
 }
-
-body.theme-light.flexcyon-settings-smiley-icons-enabled
-  div.setting-item-control {
-  div.checkbox-container::after {
-    filter: saturate(2.5);
-    font-weight: bold;
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected {
+  background-color: var(--color-accent-2);
+  .community-item-downloads {
+    color: var(--color-base-25);
+  }
+  .community-item-updated {
+    color: var(--color-red);
+  }
+  .community-item-author {
+    color: var(--color-purple);
   }
 }
 
-body.flexcyon-settings-smiley-icons-enabled div.setting-item-control {
+body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  ),
+body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
+    .flexcyon-ensure-plugin-icon
+  ) {
+  div.setting-item-control {
+    div.checkbox-container::after {
+      filter: saturate(2.5);
+      font-weight: bold;
+    }
+  }
+}
+
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
+  div.setting-item-control {
   div.checkbox-container {
     background-color: var(--color-base-05);
     box-shadow: unset;
@@ -284,6 +306,7 @@ body.flexcyon-settings-coloured-icons {
     color: rgba(var(--color-blue-rgb), 0.9);
   }
 
+  [aria-label^="Customise this command"],
   [aria-label^="Hotkeys"] {
     color: rgba(var(--color-green-rgb), 0.9);
   }
@@ -352,5 +375,174 @@ body.flexcyon-workspace-angled-layout {
   }
   .tree-item-self .collapse-icon svg {
     transform: skewX(7.5deg);
+  }
+}
+
+@mixin ascii-aria-icon($aria-label, $content) {
+  [aria-label*="#{$aria-label}"] {
+    width: 24px;
+    &::after {
+      content: "#{$content}";
+      font-size: var(--font-ui-small);
+      letter-spacing: -0.75px;
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+}
+
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  ) {
+  .workspace
+    .mod-root
+    .workspace-tab-header
+    .workspace-tab-header-inner-close-button {
+    color: inherit;
+    &::after {
+      content: "x_x";
+      font-size: var(--font-ui-small);
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+
+  .modal-close-button {
+    position: absolute;
+    right: 2.5%;
+    width: min-content;
+    top: 16px;
+    width: 24px;
+    padding-right: 48px;
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      content: "x_x";
+      font-size: var(--font-ui-small);
+    }
+  }
+
+  .search-input-container {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      margin: 0px 8px;
+      content: "?/";
+      position: absolute;
+      left: 0;
+      bottom: 6px;
+      font-size: var(--font-ui-small);
+    }
+  }
+
+  .omnisearch-result__icon {
+    svg {
+      opacity: 0;
+    }
+    &:has(.lucide-file)::before {
+      content: "''";
+      font-size: var(--font-ui-smaller);
+      letter-spacing: -2px;
+    }
+    &:has(.lucide-file-text)::before {
+      content: "``";
+      font-size: var(--font-ui-smaller);
+      letter-spacing: -2px;
+    }
+  }
+
+  .modal.mod-settings .vertical-tab-content {
+    padding-top: 48px;
+  }
+
+  .workspace-left-content[aria-label*="Back"] {
+    width: 24px;
+    &::after {
+      content: "<";
+      font-size: var(--font-ui-small);
+      letter-spacing: -0.75px;
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+
+  // Iconic related overrides
+  .iconic-drag {
+    width: 24px;
+    &::after {
+      content: "|||";
+      font-size: var(--font-ui-small);
+      letter-spacing: -0.75px;
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+  .iconic-rule-icon {
+    width: 24px;
+    &::after {
+      content: "./^";
+      font-size: var(--font-ui-small);
+      letter-spacing: -0.75px;
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+  .iconic-add {
+    width: 24px;
+    &::after {
+      content: "[~]";
+      font-size: var(--font-ui-small);
+      letter-spacing: -0.75px;
+      transform: translateX(-24px);
+      color: var(--color-green);
+    }
+    svg {
+      opacity: 0;
+    }
+  }
+
+  @include ascii-aria-icon("Uninstall", "*_*");
+  @include ascii-aria-icon("Options", "[*]");
+  @include ascii-aria-icon("Hotkeys", "[%]");
+  @include ascii-aria-icon("Customise this command", "[~]");
+  @include ascii-aria-icon("Donate", "<3");
+  @include ascii-aria-icon("Reload", "[R]");
+  @include ascii-aria-icon("Change sort order", "|'|");
+  @include ascii-aria-icon("folder", "./^");
+  @include ascii-aria-icon("Restore default", "[0]");
+  @include ascii-aria-icon("Reset all settings to default", "[0]");
+  @include ascii-aria-icon("New note", "[N]");
+  @include ascii-aria-icon("Expand", "[+]");
+  @include ascii-aria-icon("Collapse", "[-]");
+  @include ascii-aria-icon("Auto-reveal current file", "[>]");
+  @include ascii-aria-icon("Auto-scroll to current section", "[>]");
+  @include ascii-aria-icon("Show search filter", "?/");
+  @include ascii-aria-icon("Bookmark the active tab", "[B]");
+  @include ascii-aria-icon("New bookmark group", "{+}");
+
+  [aria-label*="New bookmark group"]::after,
+  [aria-label*="Collapse"]::after,
+  [aria-label*="Expand"]::after {
+    letter-spacing: -2px;
+  }
+  .nav-buttons-container {
+    gap: 6px;
+  }
+
+  .search-input-clear-button {
+    &::before {
+      content: "x_x";
+    }
+    &::after {
+      opacity: 0;
+    }
   }
 }

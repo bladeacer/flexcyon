@@ -32,7 +32,7 @@ body.theme-light {
     calc(var(--accent-s) * 1.02),
     calc(var(--accent-l) * 1.15)
   );
-  --color-accent-2: hsl(
+  --color-accent-2: hsla(
     calc(var(--accent-h) - 20),
     calc(var(--accent-s) * 0.85),
     calc(var(--accent-l) * 1.1)

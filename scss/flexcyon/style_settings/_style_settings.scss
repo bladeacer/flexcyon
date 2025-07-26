@@ -15,7 +15,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3>
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)
   -
     title: Editor
     type: heading
@@ -508,26 +508,6 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
-  - title: View header breadcrumb max width
-    id: flexcyon-view-header-breadcrumb-max-w
-    description: Max width of view header breadcrumb
-    type: variable-number
-    default: 12.5
-    format: vw
-  - title: Upscale percentage of icons
-    type: heading
-    level: 6
-    collapsed: true
-  - title: Upscale percentage of icons 1
-    id: upsize
-    description: Upscale percentage used in smiley icons and side dock icon effects
-    type: variable-text
-    default: 103%
-  - title: Upscale percentage of icons 2
-    id: expand
-    description: Upscale percentage used in side dock icon effects
-    type: variable-text
-    default: 110%
   - title: Prompts
     type: heading
     level: 6
@@ -1221,22 +1201,77 @@ settings:
         label: Monochrome
         value: flexcyon-syntax-monochrome
 
-
-  - title: Settings
+  - title: View header
     type: heading
-    level: 4
+    level: 5
     collapsed: true
-    description: Customise the appearance of settings
-  - title: Smiley Toggle Icons in Settings
-    description: Display smiley toggle icons for settings toggle buttons
+  - title: View header breadcrumb max width
+    id: flexcyon-view-header-breadcrumb-max-w
+    description: Max width of view header breadcrumb
+    type: variable-number
+    default: 12.5
+    format: vw
+  - title: Display device operating system details in view header
+    id: flexcyon-display-os
+    type: class-toggle
+    default: false
+  - title: Device operating system details right padding
+    type: variable-number
+    id: flexcyon-os-detail-padding-r
+    default: 24
+    format: px
+  - title: Display screen dimensions
+    description: Display the width and height of the current Obsidian window using pure CSS
+    id: flexcyon-display-screen-dimens
+    type: class-toggle
+    default: false
+  - title: Display screen dimensions left padding
+    type: variable-number
+    id: flexcyon-screen-dimens-padding-l
+    default: 16
+    format: px
+
+  - title: Icons
+    description: For icon related styling
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Upscale percentage of icons 1
+    id: upsize
+    description: Upscale percentage used in smiley icons and side dock icon effects
+    type: variable-text
+    default: 103%
+  - title: Upscale percentage of icons 2
+    id: expand
+    description: Upscale percentage used in side dock icon effects
+    type: variable-text
+    default: 110%
+  - title: Smiley Toggle Icons 
+    description: Display smiley toggle icons in the UI
     id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: false
+  - title: Load ASCII Icon Set
+    description: Replaces some icons with ASCII Icons, works best when used together with smiley icons. This will override the declarations by community plugins like Iconic for the specific icons targeted. This can be prevented with the setting below.
+    id: flexcyon-ascii-icon-set
+    type: class-toggle
+    default: false
+  - title: Ensure community plugin icons take precedence
+    description: Ensure community plugins which modify icons have their modifications take precedence over this theme's. Smiley Icons and ASCII Icons will not render when said community plugins are enabled and this setting is enabled. This setting currently only works with the Iconic plugin, as adding support for all icon related plugins negatively affects performance too much.
+    id: flexcyon-ensure-plugin-icon
     type: class-toggle
     default: true
   - title: Coloured Icons in Settings
     description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
-    default: false
+    default: true
+
+  - title: Settings
+    type: heading
+    level: 4
+    collapsed: true
+    description: Customise the appearance of settings
   - title: Enable community item effects
     description: Enable installed tooltip effects such as subtle dimming of community items and fixing positioning of installed tooltip in community items.
     id: flexcyon-settings-comm-item-enabled

@@ -2,6 +2,10 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
+  --flexcyon-os-detail-padding-r: 24px;
+  --flexcyon-screen-dimens-padding-l: 16px;
+  --file-header-font-size: var(--font-ui-small);
+
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
     border-right-width: 0px;
   }
@@ -31,35 +35,100 @@ body {
   --h: tan(atan2(var(--h_raw), 1px));
 }
 
+body .view-header-left {
+  padding-top: 1vh;
+  .view-header-nav-buttons {
+    gap: 2px;
+  }
+  button {
+    margin-top: 0.15vh;
+    scale: var(--upsize);
+  }
+}
+
+body .view-header-title-container {
+  padding-top: 1.1vh;
+}
 body .view-header-left::after {
-  padding-left: 16px;
+  font-size: 0;
+}
+
+body.flexcyon-display-screen-dimens .view-header-left::after {
+  padding-top: -0.5vh;
+  padding-left: var(--flexcyon-screen-dimens-padding-l);
+  font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
 }
 
+body .view-actions {
+  padding-top: 1vh;
+  gap: 4px;
+  button {
+    margin-top: 0.15vh;
+    scale: var(--upsize);
+  }
+}
+
 body .view-actions::before {
-  content: "Unknown";
-  padding-right: 16px;
+  font-size: 0;
+}
+
+body.flexcyon-display-os .view-actions::before {
+  font-size: var(--file-header-font-size);
+}
+
+body.flexcyon-display-os.is-mobile .view-actions::before {
+  content: "Unknown Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
   color: var(--text-muted);
 }
 
-body.is-mobile.is-tablet .view-actions::before {
-  content: "Tablet";
-  padding-right: 16px;
+body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
+  content: "Unknown Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
 }
 
-body.is-mobile.is-tablet .view-actions::before {
-  content: "Tablet";
-  padding-right: 16px;
+body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
+  content: "Mobile Emulation";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
 }
 
-body:not(is-mobile).mod-linux .view-actions::before {
-  content: "Linux";
-  padding-right: 16px;
+body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
+  content: "iOS Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
-body:not(.is-mobile).mod-windows .view-actions::before {
-  content: "Windows";
-  padding-right: 16px;
+body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
+  content: "iOS Tablet";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
+  content: "Android Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
+  content: "Android Tablet";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
+  content: "Linux Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
+  content: "Windows Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
+  .view-actions::before {
+  content: "MacOS Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
 }

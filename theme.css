@@ -462,7 +462,7 @@ body.theme-light {
     calc(var(--accent-s) * 1.02),
     calc(var(--accent-l) * 1.15)
   );
-  --color-accent-2: hsl(
+  --color-accent-2: hsla(
     calc(var(--accent-h) - 20),
     calc(var(--accent-s) * 0.85),
     calc(var(--accent-l) * 1.1)
@@ -1026,6 +1026,10 @@ body.flexcyon-workspace-card-layout .view-header-title {
 body.flexcyon-anims-scale-up .modal .community-modal-info,
 body.flexcyon-anims-scale-up .modal .vertical-tab-content,
 body.flexcyon-anims-scale-up .workspace-leaf:not([style^="display: none"]),
+body.flexcyon-anims-scale-up
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
 body.flexcyon-anims-scale-up .modal,
 body.flexcyon-anims-scale-up .prompt {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -1033,6 +1037,10 @@ body.flexcyon-anims-scale-up .prompt {
 
 body.flexcyon-anims-slide-rtl .modal .community-modal-info,
 body.flexcyon-anims-slide-rtl .modal .vertical-tab-content,
+body.flexcyon-anims-slide-rtl
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
 body.flexcyon-anims-slide-rtl .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-rtl .modal,
 body.flexcyon-anims-slide-rtl .prompt {
@@ -1043,7 +1051,10 @@ body.flexcyon-anims-slide-rtl .prompt {
 body.flexcyon-anims-slide-ltr .modal .community-modal-info,
 body.flexcyon-anims-slide-ltr .modal .vertical-tab-content,
 body.flexcyon-anims-slide-ltr
-  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-anims-slide-ltr .workspace-leaf:not([style="display: none"]),
 body.flexcyon-anims-slide-ltr .modal,
 body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration)
@@ -1053,7 +1064,10 @@ body.flexcyon-anims-slide-ltr .prompt {
 body.flexcyon-anims-slide-tb .modal .community-modal-info,
 body.flexcyon-anims-slide-tb .modal .vertical-tab-content,
 body.flexcyon-anims-slide-tb
-  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-anims-slide-tb .workspace-leaf:not([style="display: none"]),
 body.flexcyon-anims-slide-tb .modal,
 body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -1063,7 +1077,10 @@ body.flexcyon-anims-slide-tb .prompt {
 body.flexcyon-anims-slide-bt .modal .community-modal-info,
 body.flexcyon-anims-slide-bt .modal .vertical-tab-content,
 body.flexcyon-anims-slide-bt
-  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-anims-slide-bt .workspace-leaf:not([style="display: none"]),
 body.flexcyon-anims-slide-bt .modal,
 body.flexcyon-anims-slide-bt .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -1073,7 +1090,10 @@ body.flexcyon-anims-slide-bt .prompt {
 body.flexcyon-anims-spin-rl .modal .community-modal-info,
 body.flexcyon-anims-spin-rl .modal .vertical-tab-content,
 body.flexcyon-anims-spin-rl
-  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-anims-spin-rl .workspace-leaf:not([style="display: none"]),
 body.flexcyon-anims-spin-rl .modal,
 body.flexcyon-anims-spin-rl .prompt {
   animation: spin-in-rl var(--flexcyon-anim-duration)
@@ -1083,7 +1103,10 @@ body.flexcyon-anims-spin-rl .prompt {
 body.flexcyon-anims-spin-bt .modal .community-modal-info,
 body.flexcyon-anims-spin-bt .modal .vertical-tab-content,
 body.flexcyon-anims-spin-bt
-  .workspace-leaf:not([styleworkspace-leaf="display: none"]),
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-anims-spin-bt .workspace-leaf:not([style="display: none"]),
 body.flexcyon-anims-spin-bt .modal,
 body.flexcyon-anims-spin-bt .prompt {
   animation: spin-in-bt var(--flexcyon-anim-duration)
@@ -2846,52 +2869,78 @@ body.flexcyon-workspace-card-layout .community-modal-readme {
   margin-top: 32px;
 }
 
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected,
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected:hover {
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected {
   background-color: var(--color-accent-2);
 }
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
-  .community-item-downloads,
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected:hover
   .community-item-downloads {
   color: var(--color-pink);
 }
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
-  .community-item-updated,
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected:hover
   .community-item-updated {
   color: var(--color-base-25);
 }
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
-  .community-item-author,
-body.flexcyon-settings-comm-item-enabled:not(.is-phone)
-  .community-item.is-selected:hover
   .community-item-author {
   color: var(--color-orange);
 }
 
-body.theme-light.flexcyon-settings-smiley-icons-enabled
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected {
+  background-color: var(--color-accent-2);
+}
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-downloads {
+  color: var(--color-base-25);
+}
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-updated {
+  color: var(--color-red);
+}
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-author {
+  color: var(--color-purple);
+}
+
+body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control
+  div.checkbox-container::after,
+body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
+    .flexcyon-ensure-plugin-icon
+  )
   div.setting-item-control
   div.checkbox-container::after {
   filter: saturate(2.5);
   font-weight: bold;
 }
 
-body.flexcyon-settings-smiley-icons-enabled
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control
+  div.checkbox-container,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   div.setting-item-control
   div.checkbox-container {
   background-color: var(--color-base-05);
   box-shadow: unset;
   font-weight: bolder;
 }
-body.flexcyon-settings-smiley-icons-enabled
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control
+  div.checkbox-container::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   div.setting-item-control
   div.checkbox-container::after {
   content: ":(";
@@ -2903,14 +2952,24 @@ body.flexcyon-settings-smiley-icons-enabled
   box-shadow: unset;
   border-radius: 25%;
 }
-body.flexcyon-settings-smiley-icons-enabled
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control
+  div.checkbox-container.is-enabled::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   div.setting-item-control
   div.checkbox-container.is-enabled::after {
   content: ":)";
   color: var(--color-green);
   transform: translate(16px, -10%);
 }
-body.flexcyon-settings-smiley-icons-enabled
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  )
+  div.setting-item-control
+  input.slider,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   div.setting-item-control
   input.slider {
   border-radius: unset;
@@ -3041,6 +3100,7 @@ body.flexcyon-settings-coloured-icons [aria-label^="Uninstall"] {
 body.flexcyon-settings-coloured-icons [aria-label^="Options"] {
   color: rgba(var(--color-blue-rgb), 0.9);
 }
+body.flexcyon-settings-coloured-icons [aria-label^="Customise this command"],
 body.flexcyon-settings-coloured-icons [aria-label^="Hotkeys"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
@@ -3089,6 +3149,631 @@ body.flexcyon-workspace-angled-layout .collapse-icon.is-collapsed svg.svg-icon {
 }
 body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
   transform: skewX(7.5deg);
+}
+
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button {
+  color: inherit;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button::after {
+  content: "x_x";
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace
+  .mod-root
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .modal-close-button,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .modal-close-button {
+  position: absolute;
+  right: 2.5%;
+  width: min-content;
+  top: 16px;
+  width: 24px;
+  padding-right: 48px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .modal-close-button::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .modal-close-button::before {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .modal-close-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .modal-close-button::after {
+  content: "x_x";
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .search-input-container::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .search-input-container::before {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .search-input-container::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .search-input-container::after {
+  margin: 0px 8px;
+  content: "?/";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .omnisearch-result__icon
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .omnisearch-result__icon
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .omnisearch-result__icon:has(.lucide-file)::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .omnisearch-result__icon:has(.lucide-file)::before {
+  content: "''";
+  font-size: var(--font-ui-smaller);
+  letter-spacing: -2px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .omnisearch-result__icon:has(.lucide-file-text)::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .omnisearch-result__icon:has(.lucide-file-text)::before {
+  content: "``";
+  font-size: var(--font-ui-smaller);
+  letter-spacing: -2px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .modal.mod-settings
+  .vertical-tab-content,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .modal.mod-settings
+  .vertical-tab-content {
+  padding-top: 48px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace-left-content[aria-label*="Back"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace-left-content[aria-label*="Back"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace-left-content[aria-label*="Back"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace-left-content[aria-label*="Back"]::after {
+  content: "<";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .workspace-left-content[aria-label*="Back"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .workspace-left-content[aria-label*="Back"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-drag {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .iconic-drag::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-drag::after {
+  content: "|||";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-drag
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .iconic-rule-icon,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-rule-icon {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .iconic-rule-icon::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-rule-icon::after {
+  content: "./^";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .iconic-rule-icon
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-rule-icon
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-add {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .iconic-add::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-add::after {
+  content: "[~]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+  transform: translateX(-24px);
+  color: var(--color-green);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .iconic-add
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Uninstall"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Uninstall"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Uninstall"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Uninstall"]::after {
+  content: "*_*";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Uninstall"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Uninstall"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Options"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Options"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Options"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Options"]::after {
+  content: "[*]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Options"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Options"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Hotkeys"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Hotkeys"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Hotkeys"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Hotkeys"]::after {
+  content: "[%]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Hotkeys"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Hotkeys"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customise this command"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customise this command"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customise this command"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customise this command"]::after {
+  content: "[~]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customise this command"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customise this command"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Donate"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Donate"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Donate"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Donate"]::after {
+  content: "<3";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Donate"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Donate"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reload"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reload"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reload"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reload"]::after {
+  content: "[R]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reload"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reload"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Change sort order"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Change sort order"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Change sort order"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Change sort order"]::after {
+  content: "|'|";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Change sort order"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Change sort order"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="folder"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="folder"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="folder"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="folder"]::after {
+  content: "./^";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="folder"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="folder"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Restore default"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Restore default"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Restore default"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Restore default"]::after {
+  content: "[0]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Restore default"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Restore default"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reset all settings to default"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reset all settings to default"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reset all settings to default"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reset all settings to default"]::after {
+  content: "[0]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Reset all settings to default"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Reset all settings to default"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New note"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New note"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New note"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New note"]::after {
+  content: "[N]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New note"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New note"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Expand"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Expand"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Expand"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Expand"]::after {
+  content: "[+]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Expand"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Expand"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Collapse"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Collapse"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Collapse"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Collapse"]::after {
+  content: "[-]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Collapse"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Collapse"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-reveal current file"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-reveal current file"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-reveal current file"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-reveal current file"]::after {
+  content: "[>]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-reveal current file"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-reveal current file"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-scroll to current section"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-scroll to current section"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-scroll to current section"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-scroll to current section"]::after {
+  content: "[>]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Auto-scroll to current section"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Auto-scroll to current section"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Show search filter"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Show search filter"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Show search filter"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Show search filter"]::after {
+  content: "?/";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Show search filter"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Show search filter"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Bookmark the active tab"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Bookmark the active tab"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Bookmark the active tab"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Bookmark the active tab"]::after {
+  content: "[B]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Bookmark the active tab"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Bookmark the active tab"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New bookmark group"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New bookmark group"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New bookmark group"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New bookmark group"]::after {
+  content: "{+}";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New bookmark group"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New bookmark group"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="New bookmark group"]::after,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Collapse"]::after,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Expand"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="New bookmark group"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Collapse"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Expand"]::after {
+  letter-spacing: -2px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .nav-buttons-container,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .nav-buttons-container {
+  gap: 6px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .search-input-clear-button::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .search-input-clear-button::before {
+  content: "x_x";
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  .search-input-clear-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  .search-input-clear-button::after {
+  opacity: 0;
 }
 
 body {
@@ -3366,9 +4051,6 @@ body .search-input-container > input {
 }
 body .suggestion-title {
   padding: 2px 8px;
-}
-body .community-item .suggestion-highlight {
-  color: var(--color-orange);
 }
 body .prompt > .prompt-results > .suggestion-item .suggestion-highlight {
   color: var(--interactive-accent);
@@ -8256,6 +8938,11 @@ body.flexcyon-workspace-angled-layout .nav-folder-title-content {
   transform: skewX(-5deg);
 }
 
+body {
+  --flexcyon-os-detail-padding-r: 24px;
+  --flexcyon-screen-dimens-padding-l: 16px;
+  --file-header-font-size: var(--font-ui-small);
+}
 body .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
   border-right-width: 0px;
 }
@@ -8281,37 +8968,103 @@ body .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   --h: tan(atan2(var(--h_raw), 1px));
 }
 
+body .view-header-left {
+  padding-top: 1vh;
+}
+body .view-header-left .view-header-nav-buttons {
+  gap: 2px;
+}
+body .view-header-left button {
+  margin-top: 0.15vh;
+  scale: var(--upsize);
+}
+
+body .view-header-title-container {
+  padding-top: 1.1vh;
+}
+
 body .view-header-left::after {
-  padding-left: 16px;
+  font-size: 0;
+}
+
+body.flexcyon-display-screen-dimens .view-header-left::after {
+  padding-top: -0.5vh;
+  padding-left: var(--flexcyon-screen-dimens-padding-l);
+  font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
 }
 
+body .view-actions {
+  padding-top: 1vh;
+  gap: 4px;
+}
+body .view-actions button {
+  margin-top: 0.15vh;
+  scale: var(--upsize);
+}
+
 body .view-actions::before {
-  content: "Unknown";
-  padding-right: 16px;
+  font-size: 0;
+}
+
+body.flexcyon-display-os .view-actions::before {
+  font-size: var(--file-header-font-size);
+}
+
+body.flexcyon-display-os.is-mobile .view-actions::before {
+  content: "Unknown Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
   color: var(--text-muted);
 }
 
-body.is-mobile.is-tablet .view-actions::before {
-  content: "Tablet";
-  padding-right: 16px;
+body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
+  content: "Unknown Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
 }
 
-body.is-mobile.is-tablet .view-actions::before {
-  content: "Tablet";
-  padding-right: 16px;
+body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
+  content: "Mobile Emulation";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
 }
 
-body:not(is-mobile).mod-linux .view-actions::before {
-  content: "Linux";
-  padding-right: 16px;
+body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
+  content: "iOS Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
-body:not(.is-mobile).mod-windows .view-actions::before {
-  content: "Windows";
-  padding-right: 16px;
+body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
+  content: "iOS Tablet";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
+  content: "Android Device";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
+  content: "Android Tablet";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
+  content: "Linux Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
+  content: "Windows Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
+  .view-actions::before {
+  content: "MacOS Desktop";
+  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
 body.theme-dark {
@@ -9168,7 +9921,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3>
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)
   -
     title: Editor
     type: heading
@@ -9661,26 +10414,6 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
-  - title: View header breadcrumb max width
-    id: flexcyon-view-header-breadcrumb-max-w
-    description: Max width of view header breadcrumb
-    type: variable-number
-    default: 12.5
-    format: vw
-  - title: Upscale percentage of icons
-    type: heading
-    level: 6
-    collapsed: true
-  - title: Upscale percentage of icons 1
-    id: upsize
-    description: Upscale percentage used in smiley icons and side dock icon effects
-    type: variable-text
-    default: 103%
-  - title: Upscale percentage of icons 2
-    id: expand
-    description: Upscale percentage used in side dock icon effects
-    type: variable-text
-    default: 110%
   - title: Prompts
     type: heading
     level: 6
@@ -10374,22 +11107,77 @@ settings:
         label: Monochrome
         value: flexcyon-syntax-monochrome
 
-
-  - title: Settings
+  - title: View header
     type: heading
-    level: 4
+    level: 5
     collapsed: true
-    description: Customise the appearance of settings
-  - title: Smiley Toggle Icons in Settings
-    description: Display smiley toggle icons for settings toggle buttons
+  - title: View header breadcrumb max width
+    id: flexcyon-view-header-breadcrumb-max-w
+    description: Max width of view header breadcrumb
+    type: variable-number
+    default: 12.5
+    format: vw
+  - title: Display device operating system details in view header
+    id: flexcyon-display-os
+    type: class-toggle
+    default: false
+  - title: Device operating system details right padding
+    type: variable-number
+    id: flexcyon-os-detail-padding-r
+    default: 24
+    format: px
+  - title: Display screen dimensions
+    description: Display the width and height of the current Obsidian window using pure CSS
+    id: flexcyon-display-screen-dimens
+    type: class-toggle
+    default: false
+  - title: Display screen dimensions left padding
+    type: variable-number
+    id: flexcyon-screen-dimens-padding-l
+    default: 16
+    format: px
+
+  - title: Icons
+    description: For icon related styling
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Upscale percentage of icons 1
+    id: upsize
+    description: Upscale percentage used in smiley icons and side dock icon effects
+    type: variable-text
+    default: 103%
+  - title: Upscale percentage of icons 2
+    id: expand
+    description: Upscale percentage used in side dock icon effects
+    type: variable-text
+    default: 110%
+  - title: Smiley Toggle Icons 
+    description: Display smiley toggle icons in the UI
     id: flexcyon-settings-smiley-icons-enabled
+    type: class-toggle
+    default: false
+  - title: Load ASCII Icon Set
+    description: Replaces some icons with ASCII Icons, works best when used together with smiley icons. This will override the declarations by community plugins like Iconic for the specific icons targeted. This can be prevented with the setting below.
+    id: flexcyon-ascii-icon-set
+    type: class-toggle
+    default: false
+  - title: Ensure community plugin icons take precedence
+    description: Ensure community plugins which modify icons have their modifications take precedence over this theme's. Smiley Icons and ASCII Icons will not render when said community plugins are enabled and this setting is enabled. This setting currently only works with the Iconic plugin, as adding support for all icon related plugins negatively affects performance too much.
+    id: flexcyon-ensure-plugin-icon
     type: class-toggle
     default: true
   - title: Coloured Icons in Settings
     description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
-    default: false
+    default: true
+
+  - title: Settings
+    type: heading
+    level: 4
+    collapsed: true
+    description: Customise the appearance of settings
   - title: Enable community item effects
     description: Enable installed tooltip effects such as subtle dimming of community items and fixing positioning of installed tooltip in community items.
     id: flexcyon-settings-comm-item-enabled
