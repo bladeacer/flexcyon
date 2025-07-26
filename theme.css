@@ -8266,6 +8266,54 @@ body .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
   border-bottom-width: 0px;
 }
 
+@property --w_raw {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 100vw;
+}
+@property --h_raw {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 100vh;
+}
+:root {
+  --w: tan(atan2(var(--w_raw), 1px));
+  --h: tan(atan2(var(--h_raw), 1px));
+}
+
+body .view-header-left::after {
+  padding-left: 16px;
+  content: counter(w) "x" counter(h);
+  counter-reset: h var(--h) w var(--w);
+  color: var(--text-muted);
+}
+
+body .view-actions::before {
+  content: "Unknown";
+  padding-right: 16px;
+  color: var(--text-muted);
+}
+
+body.is-mobile.is-tablet .view-actions::before {
+  content: "Tablet";
+  padding-right: 16px;
+}
+
+body.is-mobile.is-tablet .view-actions::before {
+  content: "Tablet";
+  padding-right: 16px;
+}
+
+body:not(is-mobile).mod-linux .view-actions::before {
+  content: "Linux";
+  padding-right: 16px;
+}
+
+body:not(.is-mobile).mod-windows .view-actions::before {
+  content: "Windows";
+  padding-right: 16px;
+}
+
 body.theme-dark {
   --cm-panel-bg: var(--color-base-00);
 }
@@ -8540,7 +8588,7 @@ body {
   --flexcyon-vim-left-positioning: 6px;
   --flexcyon-vim-bottom-pos-w-status: 40px;
   --flexcyon-status-hide-until-hover-text: "Show status";
-  --flexcyon-status-hide-until-hover-translation: 1500px;
+  --flexcyon-status-hide-until-hover-translation: 80vw;
   --flexcyon-status-hide-hover-duration: 0.25s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
@@ -8562,7 +8610,7 @@ body.flexcyon-status-left-align div.status-bar {
 body.flexcyon-status-centre-align .status-bar {
   justify-content: center;
   display: flex;
-  width: fit-content;
+  width: max-content;
   margin: 0 auto;
   max-width: 85%;
   right: 0;
@@ -8601,39 +8649,8 @@ body.flexcyon-status-text-mode
   content: var(--flexcyon-status-live-text);
 }
 
-body.flexcyon-status-hide-until-hover.flexcyon-status-centre-align .status-bar {
-  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
-}
-body.flexcyon-status-hide-until-hover.flexcyon-status-centre-align
-  .status-bar::before {
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  width: fit-content;
-  margin: 0 auto;
-  max-width: 85%;
-  right: 0;
-  left: 36px;
-  transform: translateY(
-    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
-  );
-}
-
-body.flexcyon-status-hide-until-hover.flexcyon-status-left-align .status-bar {
-  transform: translateX(
-    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
-  );
-}
-body.flexcyon-status-hide-until-hover.flexcyon-status-left-align
-  .status-bar::before {
-  transform: translateX(
-    calc(0.655 * var(--flexcyon-status-hide-until-hover-translation))
-  );
-  right: unset;
-}
-
-body.flexcyon-status-hold-until-hold .status-bar,
-body.flexcyon-status-hide-until-hover .status-bar {
+body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+  .status-bar {
   border: none;
   font-size: var(--font-ui-medium);
   z-index: 1;
@@ -8641,8 +8658,8 @@ body.flexcyon-status-hide-until-hover .status-bar {
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
-body.flexcyon-status-hold-until-hold .status-bar::before,
-body.flexcyon-status-hide-until-hover .status-bar::before {
+body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+  .status-bar::before {
   font-size: var(--font-ui-medium);
   padding: 8px 10px;
   content: var(--flexcyon-status-hide-until-hover-text);
@@ -8660,6 +8677,69 @@ body.flexcyon-status-hide-until-hover .status-bar::before {
   user-select: none;
 }
 
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-centre-align
+  .status-bar {
+  transform: translateX(
+    calc(0.5 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-left-align
+  .status-bar {
+  transform: translateX(
+    calc(0 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+
+body:is(
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-status-hide-until-hover
+  ).flexcyon-status-centre-align
+  .status-bar {
+  transform: translateY(40px);
+}
+body:is(
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-status-hide-until-hover
+  ).flexcyon-status-centre-align
+  .status-bar::before {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
+  transform: translateY(-40px);
+}
+
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-left-align
+  .status-bar {
+  transform: translateX(
+    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-left-align
+  .status-bar::before {
+  transform: translateX(
+    calc(1 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+  right: unset;
+}
+
 body.flexcyon-status-hide-until-hover .status-bar:hover::before {
   transform: translateY(50px);
   transition: transform var(--flexcyon-status-hide-hover-duration)
@@ -8671,12 +8751,12 @@ body.flexcyon-status-hide-until-hover .status-bar:hover {
     var(--flexcyon-status-hide-hover-function);
 }
 
-body.flexcyon-status-hold-until-hold .status-bar:active::before {
+body.flexcyon-status-hide-until-hold .status-bar:active::before {
   transform: translateY(50px);
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
-body.flexcyon-status-hold-until-hold .status-bar:active {
+body.flexcyon-status-hide-until-hold .status-bar:active {
   transform: unset;
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
@@ -10090,8 +10170,8 @@ settings:
         label: Hide until hover
         value: flexcyon-status-hide-until-hover
       - 
-        label: Hold until hold
-        value: flexcyon-status-hold-until-hold
+        label: Hide until hold
+        value: flexcyon-status-hide-until-hold
   - title: Status bar alignment
     type: class-select
     id: theme-variant
@@ -10114,8 +10194,8 @@ settings:
     id: flexcyon-status-hide-until-hover-translation
     description: Translation for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 1500
-    format: px
+    default: 80
+    format: vw
   - title: Transition duration for showing status bar on hover
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.

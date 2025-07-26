@@ -13,3 +13,53 @@ body {
     border-bottom-width: 0px;
   }
 }
+
+@property --w_raw {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 100vw;
+}
+
+@property --h_raw {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 100vh;
+}
+
+:root {
+  --w: tan(atan2(var(--w_raw), 1px));
+  --h: tan(atan2(var(--h_raw), 1px));
+}
+
+body .view-header-left::after {
+  padding-left: 16px;
+  content: counter(w) "x" counter(h);
+  counter-reset: h var(--h) w var(--w);
+  color: var(--text-muted);
+}
+
+body .view-actions::before {
+  content: "Unknown";
+  padding-right: 16px;
+  color: var(--text-muted);
+}
+
+body.is-mobile.is-tablet .view-actions::before {
+  content: "Tablet";
+  padding-right: 16px;
+}
+
+body.is-mobile.is-tablet .view-actions::before {
+  content: "Tablet";
+  padding-right: 16px;
+}
+
+body:not(is-mobile).mod-linux .view-actions::before {
+  content: "Linux";
+  padding-right: 16px;
+}
+
+body:not(.is-mobile).mod-windows .view-actions::before {
+  content: "Windows";
+  padding-right: 16px;
+}

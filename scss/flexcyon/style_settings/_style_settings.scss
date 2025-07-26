@@ -1017,8 +1017,8 @@ settings:
         label: Hide until hover
         value: flexcyon-status-hide-until-hover
       - 
-        label: Hold until hold
-        value: flexcyon-status-hold-until-hold
+        label: Hide until hold
+        value: flexcyon-status-hide-until-hold
   - title: Status bar alignment
     type: class-select
     id: theme-variant
@@ -1041,8 +1041,8 @@ settings:
     id: flexcyon-status-hide-until-hover-translation
     description: Translation for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 1500
-    format: px
+    default: 80
+    format: vw
   - title: Transition duration for showing status bar on hover
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.

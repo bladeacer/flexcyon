@@ -9,7 +9,7 @@ body {
   --flexcyon-vim-bottom-pos-w-status: 40px;
 
   --flexcyon-status-hide-until-hover-text: "Show status";
-  --flexcyon-status-hide-until-hover-translation: 1500px;
+  --flexcyon-status-hide-until-hover-translation: 80vw;
   --flexcyon-status-hide-hover-duration: 0.25s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
@@ -34,7 +34,7 @@ body.flexcyon-status-centre-align {
   .status-bar {
     justify-content: center;
     display: flex;
-    width: fit-content;
+    width: max-content;
     margin: 0 auto;
     max-width: 85%;
     right: 0;
@@ -82,39 +82,8 @@ body.flexcyon-status-text-mode {
   }
 }
 
-body.flexcyon-status-hide-until-hover.flexcyon-status-centre-align .status-bar {
-  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
-  &::before {
-    position: absolute;
-    justify-content: center;
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    max-width: 85%;
-    right: 0;
-    left: calc(16px + 6px * 2 + 4px * 2);
-    transform: translateY(
-      calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
-    );
-  }
-}
-
-body.flexcyon-status-hide-until-hover.flexcyon-status-left-align .status-bar {
-  transform: translateX(
-    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
-  );
-  &::before {
-    transform: translateX(
-      calc(0.655 * var(--flexcyon-status-hide-until-hover-translation))
-    );
-    // transform: translateX(calc(var(--flexcyon-status-hide-until-hover-translation)));
-    // transform: translateX(calc(-1 * 0.2 * var(--flexcyon-status-hide-until-hover-translation)));
-    right: unset;
-  }
-}
-
-body.flexcyon-status-hold-until-hold .status-bar,
-body.flexcyon-status-hide-until-hover .status-bar {
+body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+  .status-bar {
   border: none;
   font-size: var(--font-ui-medium);
   z-index: 1;
@@ -141,6 +110,61 @@ body.flexcyon-status-hide-until-hover .status-bar {
   }
 }
 
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-centre-align
+  .status-bar {
+  transform: translateX(
+    calc(0.5 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-left-align
+  .status-bar {
+  transform: translateX(
+    calc(0 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+}
+
+body:is(
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-status-hide-until-hover
+  ).flexcyon-status-centre-align
+  .status-bar {
+  transform: translateY(40px);
+  &::before {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    max-width: 85%;
+    right: 0;
+    left: calc(16px + 6px * 2 + 4px * 2);
+    transform: translateY(-40px);
+  }
+}
+
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold
+  ).flexcyon-status-left-align
+  .status-bar {
+  transform: translateX(
+    calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
+  );
+  &::before {
+    transform: translateX(
+      calc(1 * var(--flexcyon-status-hide-until-hover-translation))
+    );
+    right: unset;
+  }
+}
+
 body.flexcyon-status-hide-until-hover .status-bar {
   &:hover::before {
     transform: translateY(50px);
@@ -155,7 +179,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
   }
 }
 
-body.flexcyon-status-hold-until-hold .status-bar {
+body.flexcyon-status-hide-until-hold .status-bar {
   &:active::before {
     transform: translateY(50px);
     transition: transform var(--flexcyon-status-hide-hover-duration)
