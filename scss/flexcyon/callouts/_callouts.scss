@@ -36,12 +36,30 @@ div.callout[data-callout-metadata*="tategaki"] {
     overflow: scroll;
     max-width: 95%;
     padding-top: 2vh;
-    padding-bottom: 0px !important;
+    padding-bottom: 1vh !important;
     line-height: 1.667;
     margin: auto;
-    min-height: 0 !important;
-    max-height: 85vh;
     text-indent: 1rem;
+    letter-spacing: var(--font-ui-large);
+
+    h1 {
+      letter-spacing: var(--h1-size);
+    }
+    h2 {
+      letter-spacing: var(--h2-size);
+    }
+    h3 {
+      letter-spacing: var(--h3-size);
+    }
+    h4 {
+      letter-spacing: var(--h4-size);
+    }
+    h5 {
+      letter-spacing: var(--h5-size);
+    }
+    h6 {
+      letter-spacing: var(--h6-size);
+    }
 
     :is(h1, h2, h3, h4, h5, h6) {
       margin-top: 0;
@@ -53,19 +71,40 @@ div.callout[data-callout-metadata*="tategaki"] {
 div.callout[data-callout-metadata*="vertical-ltr"] {
   div.callout-content {
     writing-mode: vertical-lr;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: scroll;
     max-width: 95%;
     padding-top: 2vh;
-    padding-bottom: 0px !important;
+    padding-bottom: 1vh !important;
     line-height: 1.667;
     margin: auto;
-    min-height: 0 !important;
-    max-height: 85vh;
+    min-height: max-content !important;
     text-indent: 1rem;
+    letter-spacing: var(--font-ui-large);
+
+    h1 {
+      letter-spacing: var(--h1-size);
+    }
+    h2 {
+      letter-spacing: var(--h2-size);
+    }
+    h3 {
+      letter-spacing: var(--h3-size);
+    }
+    h4 {
+      letter-spacing: var(--h4-size);
+    }
+    h5 {
+      letter-spacing: var(--h5-size);
+    }
+    h6 {
+      letter-spacing: var(--h6-size);
+    }
 
     :is(h1, h2, h3, h4, h5, h6) {
       margin-top: 0;
       line-height: 1.667;
+      min-height: auto !important;
     }
   }
 }

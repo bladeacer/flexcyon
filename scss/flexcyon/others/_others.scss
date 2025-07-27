@@ -101,6 +101,7 @@ body.flexcyon-hr-no-reading .markdown-reading-view {
   }
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-cust-str-hr {
   .hr::before {
     position: absolute;
@@ -120,10 +121,12 @@ body.flexcyon-cust-str-hr {
   }
 }
 
+body.theme-dark.flexcyon-flex-max-mode .hr::before,
 body.theme-dark.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-10);
 }
 
+body.theme-light.flexcyon-flex-max-mode .hr::before,
 body.theme-light.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-00);
 }

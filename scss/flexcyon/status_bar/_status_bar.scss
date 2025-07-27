@@ -56,6 +56,7 @@ body.flexcyon-status-text-enable-color {
   }
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-status-text-mode {
   .plugin-editor-status {
     .status-bar-item-icon {
@@ -82,7 +83,11 @@ body.flexcyon-status-text-mode {
   }
 }
 
-body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
+  )
   .status-bar {
   border: none;
   font-size: var(--font-ui-medium);
@@ -92,7 +97,7 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
     var(--flexcyon-status-hide-hover-function);
 
   &::before {
-    font-size: var(--font-ui-medium);
+    font-size: var(--status-bar-font-size);
     padding: 8px 10px;
     content: var(--flexcyon-status-hide-until-hover-text);
     background-color: var(--color-base-00);
@@ -112,7 +117,8 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar {
   transform: translateX(
@@ -122,7 +128,8 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-left-align
   .status-bar {
   transform: translateX(
@@ -132,7 +139,8 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hold,
-    .flexcyon-status-hide-until-hover
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar {
   transform: translateY(40px);
@@ -151,7 +159,8 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-left-align
   .status-bar {
   transform: translateX(
@@ -165,6 +174,7 @@ body:is(
   }
 }
 
+body.flexcyon-flex-max-mode .status-bar,
 body.flexcyon-status-hide-until-hover .status-bar {
   &:hover::before {
     transform: translateY(50px);
@@ -242,12 +252,23 @@ body.flexcyon-status-style-card {
   }
 }
 
+body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type="empty"])),
+body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type="empty"])) {
+  .status-bar::before {
+    right: 28px;
+  }
+}
+
+body.flexcyon-flex-max-mode,
 body.flexcyon-status-style-pl10k {
   .status-bar {
     border: transparent;
     background-color: transparent;
     gap: 0px;
     scale: var(--expand);
+    &::before {
+      right: 0px;
+    }
 
     .status-bar-item .status-bar-item-icon {
       transform: translateX(-1px);

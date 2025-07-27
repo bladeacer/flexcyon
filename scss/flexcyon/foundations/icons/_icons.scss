@@ -141,6 +141,7 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   }
 }
 
+body.theme-light.flexcyon-flex-max-mode:not([class*="iconic"]),
 body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   ),
@@ -155,6 +156,7 @@ body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
   }
 }
 
+body.flexcyon-flex-max-mode:not([class*="iconic"]) div.setting-item-control,
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )

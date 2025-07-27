@@ -41,6 +41,7 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
   }
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-ascii-enable {
   div.empty-state-title {
     display: unset;
@@ -66,6 +67,7 @@ body.flexcyon-ascii-enable {
   }
 }
 
+body.is-mobile.flexcyon-flex-max-mode,
 body.is-mobile.flexcyon-ascii-enable {
   div.empty-state-container::before {
     font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
@@ -110,7 +112,7 @@ body.flexcyon-quote-enable {
   }
 }
 
-body.flexcyon-rtz-mode {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   div.empty-state-container::before {
     content: "0" !important;
     font-size: calc(10 * var(--flexcyon-ascii-max-font-size));

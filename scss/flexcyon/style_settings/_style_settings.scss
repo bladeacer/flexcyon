@@ -10,12 +10,57 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
   -
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
+  -
+    title: Modes
+    type: heading
+    level: 4
+    collapsed: true
+    description: Some unique modes flexcyon has to offer
+  - title: Return to Zero mode
+    type: class-toggle
+    description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
+    id: flexcyon-rtz-mode
+    default: false
+  - title: About Flex Max Mode
+    type: info-text
+    markdown: true
+    description: <h3>This mode is recommended for users <i>who do not know where to start in terms of customisation</i>. <b>For those who wish to customise the theme extensively or those who may not like this set of defaults, disabling this mode is recommended</b>.<h3><br><h4>Enables the following settings, even if they are toggled off in style settings<br><i>~ smiley icons<br>~ ensure community plugin icons take precedence<br>~ left to right animation type<br>~ ASCII art<br>~ custom horizontal rule string<br>~ Powerlevel10k inspired layout and status bar style<br>~ ASCII checkboxes<br>~ Coloured headings<br>~ Hide until hover status bar~<br>~ Current status bar editing mode as text instead of icon<br>~ Vim mode status</i><br><br>You should be able to configure these settings as if they were enabled normally.</h4>
+  - title: Flex Max mode
+    type: class-toggle
+    description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself :D. There are also other default options enabled which you may or may not like.
+    id: flexcyon-flex-max-mode
+    default: true
+  - title: Enable Writing mode globally
+    type: class-toggle
+    description: Like the corresponding callout metadata option but applied globally instead
+    id: flexcyon-editor-writing
+    default: false
+  - title: Writing mode indentation
+    type: variable-number
+    id: flexcyon-editor-writing-indentation
+    default: 16
+    format: px
+  - title: Flexcyon Syntax Highlighting Mode
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Catppuccin
+        value: flexcyon-syntax-catppuccin
+      - 
+        label: Lego
+        value: flexcyon-syntax-lego
+      - 
+        label: Monochrome
+        value: flexcyon-syntax-monochrome
   -
     title: Editor
     type: heading
@@ -1181,26 +1226,6 @@ settings:
     default: 12
     format: px
 
-  - title: Syntax
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Flexcyon Syntax Highlighting Mode
-    type: class-select
-    id: theme-variant
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Catppuccin
-        value: flexcyon-syntax-catppuccin
-      - 
-        label: Lego
-        value: flexcyon-syntax-lego
-      - 
-        label: Monochrome
-        value: flexcyon-syntax-monochrome
-
   - title: View header
     type: heading
     level: 5
@@ -1757,26 +1782,6 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
-
-  - title: Modes
-    type: heading
-    description: Toggle modes like those for extreme minimalism
-    level: 5
-  - title: Return to Zero mode
-    type: class-toggle
-    description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
-    id: flexcyon-rtz-mode
-    default: false
-  - title: Enable Writing mode globally
-    type: class-toggle
-    description: Like the corresponding callout metadata option but applied globally instead
-    id: flexcyon-editor-writing
-    default: false
-  - title: Writing mode indentation
-    type: variable-number
-    id: flexcyon-editor-writing-indentation
-    default: 16
-    format: px
  */
 
 body {

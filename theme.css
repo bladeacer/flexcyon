@@ -484,6 +484,7 @@ body {
   --h6-size: 1.01803em;
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-headings-coloured-enabled {
   --h1-color: var(--flexcyon-blue);
   --h2-color: var(--flexcyon-purple-lilac);
@@ -839,46 +840,65 @@ body.flexcyon-workspace-angled-layout
   background-color: var(--color-base-05);
 }
 
+body.flexcyon-flex-max-mode .view-header-title-parent :nth-of-type(5n + 1),
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n + 1) {
   background-color: var(--color-base-20);
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-parent
+  :nth-of-type(5n + 1)::after,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n + 1)::after {
   background-color: var(--color-base-25);
 }
+body.flexcyon-flex-max-mode .view-header-title-parent :nth-of-type(5n + 3),
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n + 3) {
   background-color: var(--color-base-25);
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-parent
+  :nth-of-type(5n + 3)::after,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n + 3)::after {
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode .view-header-title-parent :nth-of-type(5n),
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n) {
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode .view-header-title-parent :nth-of-type(5n)::after,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :nth-of-type(5n)::after {
   background-color: var(--color-base-20);
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-parent
+  :has(+ :last-child)::after,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :has(+ :last-child)::after {
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-container:not(:has(.view-header-breadcrumb))
+  .view-header-title,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-container:not(:has(.view-header-breadcrumb))
   .view-header-title {
   border-radius: 16px;
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-parent
+  :first-child.view-header-breadcrumb,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   :first-child.view-header-breadcrumb {
@@ -886,11 +906,15 @@ body.flexcyon-workspace-pl10k-layout
   border-bottom-left-radius: 16px;
   padding-left: 12px;
 }
+body.flexcyon-flex-max-mode .view-header-title-parent .view-header-breadcrumb,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   .view-header-breadcrumb {
   padding: 4px 0px;
 }
+body.flexcyon-flex-max-mode
+  .view-header-title-parent
+  .view-header-breadcrumb::after,
 body.flexcyon-workspace-pl10k-layout
   .view-header-title-parent
   .view-header-breadcrumb::after {
@@ -902,15 +926,19 @@ body.flexcyon-workspace-pl10k-layout
   color: transparent;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
 }
+body.flexcyon-flex-max-mode .view-header-title,
 body.flexcyon-workspace-pl10k-layout .view-header-title {
   padding: 4px 12px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode .view-header-breadcrumb-separator,
 body.flexcyon-workspace-pl10k-layout .view-header-breadcrumb-separator {
   display: none;
 }
+body.flexcyon-flex-max-mode .view-header,
+body.flexcyon-flex-max-mode .view-header-title-container,
 body.flexcyon-workspace-pl10k-layout .view-header,
 body.flexcyon-workspace-pl10k-layout .view-header-title-container {
   gap: 0px;
@@ -1048,6 +1076,15 @@ body.flexcyon-anims-slide-rtl .prompt {
     var(--flexcyon-anim-easing);
 }
 
+body.flexcyon-flex-max-mode .modal .community-modal-info,
+body.flexcyon-flex-max-mode .modal .vertical-tab-content,
+body.flexcyon-flex-max-mode
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content,
+body.flexcyon-flex-max-mode .workspace-leaf:not([style="display: none"]),
+body.flexcyon-flex-max-mode .modal,
+body.flexcyon-flex-max-mode .prompt,
 body.flexcyon-anims-slide-ltr .modal .community-modal-info,
 body.flexcyon-anims-slide-ltr .modal .vertical-tab-content,
 body.flexcyon-anims-slide-ltr
@@ -1240,6 +1277,9 @@ body .checkbox-container.is-enabled {
   background-color: var(--flexcyon-lime-green);
 }
 
+body.flexcyon-flex-max-mode input[data-task="!"]:checked,
+body.flexcyon-flex-max-mode li[data-task="!"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
@@ -1247,6 +1287,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="!"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="!"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1255,6 +1298,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="!"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="!"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1271,6 +1317,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task=">"]:checked,
+body.flexcyon-flex-max-mode li[data-task=">"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
@@ -1278,6 +1327,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task=">"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=">"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1286,6 +1338,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task=">"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=">"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1302,6 +1357,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="?"]:checked,
+body.flexcyon-flex-max-mode li[data-task="?"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
@@ -1309,6 +1367,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="?"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="?"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1317,6 +1378,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="?"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="?"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1333,6 +1397,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="#"]:checked,
+body.flexcyon-flex-max-mode li[data-task="#"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
@@ -1340,6 +1407,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="#"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="#"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1348,6 +1418,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="#"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="#"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1364,6 +1437,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="."]:checked,
+body.flexcyon-flex-max-mode li[data-task="."] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="."] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
@@ -1371,6 +1447,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="."]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="."] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="."] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1379,6 +1458,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="."]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="."] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="."] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1395,6 +1477,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="<"]:checked,
+body.flexcyon-flex-max-mode li[data-task="<"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
@@ -1402,6 +1487,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="<"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="<"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1410,6 +1498,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="<"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="<"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1426,6 +1517,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="$"]:checked,
+body.flexcyon-flex-max-mode li[data-task="$"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
@@ -1433,6 +1527,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="$"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="$"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1441,6 +1538,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="$"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="$"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1457,6 +1557,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="*"]:checked,
+body.flexcyon-flex-max-mode li[data-task="*"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="*"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
@@ -1464,6 +1567,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="*"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="*"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="*"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1472,6 +1578,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="*"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="*"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="*"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1488,6 +1597,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="'"]:checked,
+body.flexcyon-flex-max-mode li[data-task="'"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="'"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
@@ -1495,6 +1607,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="'"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="'"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="'"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1503,6 +1618,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="'"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="'"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="'"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1519,6 +1637,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="@"]:checked,
+body.flexcyon-flex-max-mode li[data-task="@"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="@"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
@@ -1526,6 +1647,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="@"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="@"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="@"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1534,6 +1658,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="@"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="@"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="@"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1550,6 +1677,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="%"]:checked,
+body.flexcyon-flex-max-mode li[data-task="%"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="%"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked {
@@ -1557,6 +1687,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="%"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="%"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="%"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1565,6 +1698,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="%"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="%"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="%"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1581,6 +1717,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="+"]:checked,
+body.flexcyon-flex-max-mode li[data-task="+"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
@@ -1588,6 +1727,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="+"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="+"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1596,6 +1738,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="+"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="+"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1612,6 +1757,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="-"]:checked,
+body.flexcyon-flex-max-mode li[data-task="-"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
@@ -1619,6 +1767,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="-"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="-"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1627,6 +1778,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="-"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1643,6 +1797,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="/"]:checked,
+body.flexcyon-flex-max-mode li[data-task="/"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
@@ -1650,6 +1807,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="/"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="/"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1658,6 +1818,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="/"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="/"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1674,6 +1837,9 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="~"]:checked,
+body.flexcyon-flex-max-mode li[data-task="~"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="~"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked {
@@ -1681,6 +1847,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="~"]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="~"] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task="~"] > p > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked:hover,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1689,6 +1858,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked:hover {
   filter: brightness(1.25);
 }
+body.flexcyon-flex-max-mode input[data-task="~"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="~"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="~"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1705,6 +1877,12 @@ body.flexcyon-ascii-checkboxes-enabled
   mask-image: none;
   top: -0.325em;
 }
+body.flexcyon-flex-max-mode input[data-task="?"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="?"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="!"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="!"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1719,6 +1897,9 @@ body.flexcyon-ascii-checkboxes-enabled
   > input:checked::after {
   top: -0.15em;
 }
+body.flexcyon-flex-max-mode input[data-task="'"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="'"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="'"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1729,6 +1910,21 @@ body.flexcyon-ascii-checkboxes-enabled
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
   top: -0.175rem;
 }
+body.flexcyon-flex-max-mode input[data-task="#"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="#"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="$"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="$"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="/"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="/"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="<"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="<"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task=">"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=">"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1762,6 +1958,9 @@ body.flexcyon-ascii-checkboxes-enabled
   transform: scaleY(1.1);
   top: -0.175rem;
 }
+body.flexcyon-flex-max-mode input[data-task="."]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="."] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="."] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1773,6 +1972,9 @@ body.flexcyon-ascii-checkboxes-enabled
   letter-spacing: -0.5px;
   top: -0.1rem;
 }
+body.flexcyon-flex-max-mode input[data-task="*"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="*"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="*"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1782,6 +1984,9 @@ body.flexcyon-ascii-checkboxes-enabled
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
   top: -0.25rem;
 }
+body.flexcyon-flex-max-mode input[data-task="@"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="@"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="@"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1791,6 +1996,9 @@ body.flexcyon-ascii-checkboxes-enabled
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
   top: -0.125rem;
 }
+body.flexcyon-flex-max-mode input[data-task="%"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="%"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="%"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1800,6 +2008,9 @@ body.flexcyon-ascii-checkboxes-enabled
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
   top: -0.05rem;
 }
+body.flexcyon-flex-max-mode input[data-task="+"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="+"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1809,6 +2020,9 @@ body.flexcyon-ascii-checkboxes-enabled
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   top: -0.1rem;
 }
+body.flexcyon-flex-max-mode input[data-task="-"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1821,6 +2035,9 @@ body.flexcyon-ascii-checkboxes-enabled
   margin-left: -7.5%;
   letter-spacing: var(--less-letter-spacing);
 }
+body.flexcyon-flex-max-mode input[data-task='"']:checked,
+body.flexcyon-flex-max-mode li[data-task='"'] > input:checked,
+body.flexcyon-flex-max-mode li[data-task='"'] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
@@ -1828,6 +2045,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task='"']:checked::after,
+body.flexcyon-flex-max-mode li[data-task='"'] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task='"'] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -1843,6 +2063,9 @@ body.flexcyon-ascii-checkboxes-enabled
   -webkit-mask-image: none;
   mask-image: none;
 }
+body.flexcyon-flex-max-mode input[data-task="i"]:checked,
+body.flexcyon-flex-max-mode li[data-task="i"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="i"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="i"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > p > input:checked {
@@ -1850,6 +2073,9 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > p > input:checked {
   border: none;
   padding-right: 6px;
 }
+body.flexcyon-flex-max-mode input[data-task="i"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="i"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="i"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="i"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="i"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled
@@ -2909,6 +3135,9 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   color: var(--color-purple);
 }
 
+body.theme-light.flexcyon-flex-max-mode:not([class*="iconic"])
+  div.setting-item-control
+  div.checkbox-container::after,
 body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )
@@ -2923,6 +3152,9 @@ body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
   font-weight: bold;
 }
 
+body.flexcyon-flex-max-mode:not([class*="iconic"])
+  div.setting-item-control
+  div.checkbox-container,
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )
@@ -2935,6 +3167,9 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   box-shadow: unset;
   font-weight: bolder;
 }
+body.flexcyon-flex-max-mode:not([class*="iconic"])
+  div.setting-item-control
+  div.checkbox-container::after,
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )
@@ -2952,6 +3187,9 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   box-shadow: unset;
   border-radius: 25%;
 }
+body.flexcyon-flex-max-mode:not([class*="iconic"])
+  div.setting-item-control
+  div.checkbox-container.is-enabled::after,
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )
@@ -2964,6 +3202,9 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   color: var(--color-green);
   transform: translate(16px, -10%);
 }
+body.flexcyon-flex-max-mode:not([class*="iconic"])
+  div.setting-item-control
+  input.slider,
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   )
@@ -5167,12 +5408,29 @@ div.callout[data-callout-metadata*="tategaki"] div.callout-content {
   overflow: scroll;
   max-width: 95%;
   padding-top: 2vh;
-  padding-bottom: 0px !important;
+  padding-bottom: 1vh !important;
   line-height: 1.667;
   margin: auto;
-  min-height: 0 !important;
-  max-height: 85vh;
   text-indent: 1rem;
+  letter-spacing: var(--font-ui-large);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h1 {
+  letter-spacing: var(--h1-size);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h2 {
+  letter-spacing: var(--h2-size);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h3 {
+  letter-spacing: var(--h3-size);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h4 {
+  letter-spacing: var(--h4-size);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h5 {
+  letter-spacing: var(--h5-size);
+}
+div.callout[data-callout-metadata*="tategaki"] div.callout-content h6 {
+  letter-spacing: var(--h6-size);
 }
 div.callout[data-callout-metadata*="tategaki"]
   div.callout-content
@@ -5183,21 +5441,41 @@ div.callout[data-callout-metadata*="tategaki"]
 
 div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content {
   writing-mode: vertical-lr;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: scroll;
   max-width: 95%;
   padding-top: 2vh;
-  padding-bottom: 0px !important;
+  padding-bottom: 1vh !important;
   line-height: 1.667;
   margin: auto;
-  min-height: 0 !important;
-  max-height: 85vh;
+  min-height: max-content !important;
   text-indent: 1rem;
+  letter-spacing: var(--font-ui-large);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h1 {
+  letter-spacing: var(--h1-size);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h2 {
+  letter-spacing: var(--h2-size);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h3 {
+  letter-spacing: var(--h3-size);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h4 {
+  letter-spacing: var(--h4-size);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h5 {
+  letter-spacing: var(--h5-size);
+}
+div.callout[data-callout-metadata*="vertical-ltr"] div.callout-content h6 {
+  letter-spacing: var(--h6-size);
 }
 div.callout[data-callout-metadata*="vertical-ltr"]
   div.callout-content
   :is(h1, h2, h3, h4, h5, h6) {
   margin-top: 0;
   line-height: 1.667;
+  min-height: auto !important;
 }
 
 div.callout[data-callout-metadata*="empty"] .callout-icon,
@@ -8223,12 +8501,19 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   margin-top: 4px;
 }
 
+body.flexcyon-flex-max-mode
+  .workspace-split.mod-sidedock
+  .workspace-tab-header.is-active,
 body.flexcyon-workspace-pl10k-layout
   .workspace-split.mod-sidedock
   .workspace-tab-header.is-active {
   aspect-ratio: 0.8660254038;
   clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
 }
+body.flexcyon-flex-max-mode
+  .workspace-split.mod-sidedock
+  .workspace-tab-header.is-active
+  .workspace-tab-header-inner,
 body.flexcyon-workspace-pl10k-layout
   .workspace-split.mod-sidedock
   .workspace-tab-header.is-active
@@ -9083,12 +9368,20 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
 
+body.flexcyon-flex-max-mode
+  .markdown-source-view.mod-cm6
+  .cm-panels.cm-panels-bottom,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
 }
+body.flexcyon-flex-max-mode
+  .markdown-source-view.mod-cm6
+  .cm-editor
+  .cm-scroller:not(.cm-vimMode)
+  .cm-sizer:has(+ .cm-vimCursorLayer)::before,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
@@ -9106,6 +9399,11 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-family: var(--font-interface);
   z-index: 2;
 }
+body.flexcyon-flex-max-mode
+  .markdown-source-view.mod-cm6
+  .cm-editor
+  .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
+  .cm-sizer:has(+ .cm-vimCursorLayer)::before,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
@@ -9123,6 +9421,12 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-family: var(--font-interface);
   z-index: 2;
 }
+body.flexcyon-flex-max-mode
+  .cm-panels
+  .cm-panel
+  div
+  div:not(.cm-vim-message)
+  span:first-child,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel
@@ -9132,6 +9436,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: 75px;
 }
+body.flexcyon-flex-max-mode .cm-panels .cm-panel,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel {
@@ -9139,6 +9444,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   padding-top: 5px;
   font-weight: 500;
 }
+body.flexcyon-flex-max-mode .cm-panels input,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   input {
@@ -9146,6 +9452,13 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-size: 0.9rem;
   z-index: 16;
 }
+body.flexcyon-flex-max-mode
+  .cm-editor
+  > .cm-scroller
+  + .cm-panels
+  .cm-panel
+  div
+  div:not(.cm-vim-message)::before,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
@@ -9159,6 +9472,12 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
+body.flexcyon-flex-max-mode
+  .cm-editor
+  > .cm-scroller
+  + .cm-panels
+  .cm-panel
+  div,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
@@ -9167,6 +9486,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   div {
   color: var(--text-muted);
 }
+body.flexcyon-flex-max-mode div.cm-vim-message,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   div.cm-vim-message {
   color: var(--color-red) !important;
@@ -9174,7 +9494,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
 }
 
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color
-  markdown-source-view.mod-cm6
+  .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
@@ -9302,6 +9622,7 @@ body.flexcyon-status-style-card
   border-radius: 16px;
   border: 2px solid var(--color-base-20);
   margin: 0px 8px;
+  line-height: 30px;
 }
 body.flexcyon-status-style-card
   .markdown-source-view.mod-cm6
@@ -9383,26 +9704,37 @@ body.flexcyon-status-text-enable-color
   color: var(--color-blue);
 }
 
+body.flexcyon-flex-max-mode .plugin-editor-status .status-bar-item-icon svg,
 body.flexcyon-status-text-mode .plugin-editor-status .status-bar-item-icon svg {
   display: none;
 }
+body.flexcyon-flex-max-mode .plugin-editor-status::before,
 body.flexcyon-status-text-mode .plugin-editor-status::before {
   font-weight: bold;
 }
+body.flexcyon-flex-max-mode .plugin-editor-status[aria-label="Reading"]::before,
 body.flexcyon-status-text-mode
   .plugin-editor-status[aria-label="Reading"]::before {
   content: var(--flexcyon-status-reading-text);
 }
+body.flexcyon-flex-max-mode
+  .plugin-editor-status[aria-label="Source mode"]::before,
 body.flexcyon-status-text-mode
   .plugin-editor-status[aria-label="Source mode"]::before {
   content: var(--flexcyon-status-source-text);
 }
+body.flexcyon-flex-max-mode
+  .plugin-editor-status[aria-label="Live Preview"]::before,
 body.flexcyon-status-text-mode
   .plugin-editor-status[aria-label="Live Preview"]::before {
   content: var(--flexcyon-status-live-text);
 }
 
-body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
+  )
   .status-bar {
   border: none;
   font-size: var(--font-ui-medium);
@@ -9411,9 +9743,13 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
-body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
+body:is(
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
+  )
   .status-bar::before {
-  font-size: var(--font-ui-medium);
+  font-size: var(--status-bar-font-size);
   padding: 8px 10px;
   content: var(--flexcyon-status-hide-until-hover-text);
   background-color: var(--color-base-00);
@@ -9432,7 +9768,8 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold)
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar {
   transform: translateX(
@@ -9442,7 +9779,8 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-left-align
   .status-bar {
   transform: translateX(
@@ -9452,14 +9790,16 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hold,
-    .flexcyon-status-hide-until-hover
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar {
   transform: translateY(40px);
 }
 body:is(
     .flexcyon-status-hide-until-hold,
-    .flexcyon-status-hide-until-hover
+    .flexcyon-status-hide-until-hover,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar::before {
   position: absolute;
@@ -9475,7 +9815,8 @@ body:is(
 
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-left-align
   .status-bar {
   transform: translateX(
@@ -9484,7 +9825,8 @@ body:is(
 }
 body:is(
     .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold
+    .flexcyon-status-hide-until-hold,
+    .flexcyon-flex-max-mode
   ).flexcyon-status-left-align
   .status-bar::before {
   transform: translateX(
@@ -9493,11 +9835,13 @@ body:is(
   right: unset;
 }
 
+body.flexcyon-flex-max-mode .status-bar:hover::before,
 body.flexcyon-status-hide-until-hover .status-bar:hover::before {
   transform: translateY(50px);
   transition: transform var(--flexcyon-status-hide-hover-duration)
     var(--flexcyon-status-hide-hover-function);
 }
+body.flexcyon-flex-max-mode .status-bar:hover,
 body.flexcyon-status-hide-until-hover .status-bar:hover {
   transform: unset;
   transition: transform var(--flexcyon-status-hide-hover-duration)
@@ -9562,23 +9906,43 @@ body.flexcyon-status-style-card
   padding: 4px 8px;
 }
 
+body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type="empty"]))
+  .status-bar::before,
+body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type="empty"]))
+  .status-bar::before {
+  right: 28px;
+}
+
+body.flexcyon-flex-max-mode .status-bar,
 body.flexcyon-status-style-pl10k .status-bar {
   border: transparent;
   background-color: transparent;
   gap: 0px;
   scale: var(--expand);
 }
+body.flexcyon-flex-max-mode .status-bar::before,
+body.flexcyon-status-style-pl10k .status-bar::before {
+  right: 0px;
+}
+body.flexcyon-flex-max-mode .status-bar .status-bar-item .status-bar-item-icon,
 body.flexcyon-status-style-pl10k
   .status-bar
   .status-bar-item
   .status-bar-item-icon {
   transform: translateX(-1px);
 }
+body.flexcyon-flex-max-mode
+  .status-bar
+  .status-bar-item[style="display: none;"]::after,
 body.flexcyon-status-style-pl10k
   .status-bar
   .status-bar-item[style="display: none;"]::after {
   display: none;
 }
+body.flexcyon-flex-max-mode
+  .status-bar
+  .status-bar-item[style="display: none;"]
+  + .status-bar-item,
 body.flexcyon-status-style-pl10k
   .status-bar
   .status-bar-item[style="display: none;"]
@@ -9586,9 +9950,11 @@ body.flexcyon-status-style-pl10k
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
 }
+body.flexcyon-flex-max-mode .status-bar .status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
   padding: 0px;
 }
+body.flexcyon-flex-max-mode .status-bar .status-bar-item::after,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
   padding: 4px 4px;
   content: "e";
@@ -9598,39 +9964,50 @@ body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
   color: transparent;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
 }
+body.flexcyon-flex-max-mode .status-bar :first-child:empty,
+body.flexcyon-flex-max-mode .status-bar :first-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :first-child:empty,
 body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
   padding-left: 6px;
 }
+body.flexcyon-flex-max-mode .status-bar .status-bar-item:empty,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item:empty {
   display: flex;
 }
+body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n + 1).status-bar-item,
 body.flexcyon-status-style-pl10k
   .status-bar
   :nth-of-type(2n + 1).status-bar-item {
   background-color: var(--color-base-20);
 }
+body.flexcyon-flex-max-mode
+  .status-bar
+  :nth-of-type(2n + 1).status-bar-item::after,
 body.flexcyon-status-style-pl10k
   .status-bar
   :nth-of-type(2n + 1).status-bar-item::after {
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n).status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n).status-bar-item {
   background-color: var(--color-base-05);
 }
+body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n).status-bar-item::after,
 body.flexcyon-status-style-pl10k
   .status-bar
   :nth-of-type(2n).status-bar-item::after {
   background-color: var(--color-base-20);
 }
+body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item {
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   padding-right: 6px;
   margin-right: 46px;
 }
+body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item::after,
 body.flexcyon-status-style-pl10k
   .status-bar
   :last-child.status-bar-item::after {
@@ -9673,9 +10050,11 @@ body div.empty-state-title {
   font-size: 1.25rem;
 }
 
+body.flexcyon-flex-max-mode div.empty-state-title,
 body.flexcyon-ascii-enable div.empty-state-title {
   display: unset;
 }
+body.flexcyon-flex-max-mode div.empty-state-container::before,
 body.flexcyon-ascii-enable div.empty-state-container::before {
   font-family: var(--font-interface);
   content: var(--flexcyon-ascii-art);
@@ -9690,10 +10069,12 @@ body.flexcyon-ascii-enable div.empty-state-container::before {
   display: inline;
   font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
 }
+body.flexcyon-flex-max-mode div.empty-state-container,
 body.flexcyon-ascii-enable div.empty-state-container {
   transform: translateY(-115px);
 }
 
+body.is-mobile.flexcyon-flex-max-mode div.empty-state-container::before,
 body.is-mobile.flexcyon-ascii-enable div.empty-state-container::before {
   font-size: min(3vw - 3px, var(--flexcyon-ascii-max-font-size));
   margin-bottom: 1rem;
@@ -9729,7 +10110,8 @@ body.flexcyon-quote-enable div.empty-state-action-list {
   margin-top: 32px;
 }
 
-body.flexcyon-rtz-mode div.empty-state-container::before {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  div.empty-state-container::before {
   content: "0" !important;
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
   font-family: var(--font-interface);
@@ -9743,48 +10125,60 @@ body.flexcyon-rtz-mode div.empty-state-container::before {
   text-align: center;
   display: inline;
 }
-body.flexcyon-rtz-mode div.empty-state-action-list {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  div.empty-state-action-list {
   display: none;
 }
-body.flexcyon-rtz-mode .sidebar-toggle-button {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .sidebar-toggle-button {
   display: none;
 }
-body.flexcyon-rtz-mode .graph-controls,
-body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed,
-body.flexcyon-rtz-mode .oz-flex-container,
-body.flexcyon-rtz-mode .nav-header,
-body.flexcyon-rtz-mode .titlebar-button-container,
-body.flexcyon-rtz-mode .view-header-left,
-body.flexcyon-rtz-mode .view-actions,
-body.flexcyon-rtz-mode .side-dock-ribbon,
-body.flexcyon-rtz-mode .workspace-tab-header-new-tab,
-body.flexcyon-rtz-mode .workspace-tab-header-tab-list,
-body.flexcyon-rtz-mode .workspace-sidedock-vault-profile,
-body.flexcyon-rtz-mode .workspace-tab-header-container-inner {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .oz-folders-action-items.file-tree-header-fixed,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .titlebar-button-container,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-new-tab,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-tab-list,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-sidedock-vault-profile,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-container-inner {
   opacity: 0;
 }
-body.flexcyon-rtz-mode .graph-controls:hover,
-body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed:hover,
-body.flexcyon-rtz-mode .oz-flex-container:hover,
-body.flexcyon-rtz-mode .nav-header:hover,
-body.flexcyon-rtz-mode .titlebar-button-container:hover,
-body.flexcyon-rtz-mode .view-header-left:hover,
-body.flexcyon-rtz-mode .view-actions:hover,
-body.flexcyon-rtz-mode .side-dock-ribbon:hover,
-body.flexcyon-rtz-mode .workspace-tab-header-new-tab:hover,
-body.flexcyon-rtz-mode .workspace-tab-header-tab-list:hover,
-body.flexcyon-rtz-mode .workspace-sidedock-vault-profile:hover,
-body.flexcyon-rtz-mode .workspace-tab-header-container-inner:hover {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .oz-folders-action-items.file-tree-header-fixed:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .titlebar-button-container:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-new-tab:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-tab-list:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-sidedock-vault-profile:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-tab-header-container-inner:hover {
   opacity: unset;
 }
-body.flexcyon-rtz-mode .cm-gutter,
-body.flexcyon-rtz-mode .metadata-container,
-body.flexcyon-rtz-mode .status-bar {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar {
   opacity: var(--dimmed);
 }
-body.flexcyon-rtz-mode .cm-gutter:hover,
-body.flexcyon-rtz-mode .metadata-container:hover,
-body.flexcyon-rtz-mode .status-bar:hover {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container:hover,
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
   opacity: unset;
 }
 
@@ -9880,6 +10274,7 @@ body.flexcyon-hr-no-reading .markdown-reading-view .el-hr {
   display: none;
 }
 
+body.flexcyon-flex-max-mode .hr::before,
 body.flexcyon-cust-str-hr .hr::before {
   position: absolute;
   justify-content: center;
@@ -9896,10 +10291,12 @@ body.flexcyon-cust-str-hr .hr::before {
   font-style: italic;
 }
 
+body.theme-dark.flexcyon-flex-max-mode .hr::before,
 body.theme-dark.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-10);
 }
 
+body.theme-light.flexcyon-flex-max-mode .hr::before,
 body.theme-light.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-00);
 }
@@ -9916,12 +10313,57 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
   -
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
+  -
+    title: Modes
+    type: heading
+    level: 4
+    collapsed: true
+    description: Some unique modes flexcyon has to offer
+  - title: Return to Zero mode
+    type: class-toggle
+    description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
+    id: flexcyon-rtz-mode
+    default: false
+  - title: About Flex Max Mode
+    type: info-text
+    markdown: true
+    description: <h3>This mode is recommended for users <i>who do not know where to start in terms of customisation</i>. <b>For those who wish to customise the theme extensively or those who may not like this set of defaults, disabling this mode is recommended</b>.<h3><br><h4>Enables the following settings, even if they are toggled off in style settings<br><i>~ smiley icons<br>~ ensure community plugin icons take precedence<br>~ left to right animation type<br>~ ASCII art<br>~ custom horizontal rule string<br>~ Powerlevel10k inspired layout and status bar style<br>~ ASCII checkboxes<br>~ Coloured headings<br>~ Hide until hover status bar~<br>~ Current status bar editing mode as text instead of icon<br>~ Vim mode status</i><br><br>You should be able to configure these settings as if they were enabled normally.</h4>
+  - title: Flex Max mode
+    type: class-toggle
+    description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself :D. There are also other default options enabled which you may or may not like.
+    id: flexcyon-flex-max-mode
+    default: true
+  - title: Enable Writing mode globally
+    type: class-toggle
+    description: Like the corresponding callout metadata option but applied globally instead
+    id: flexcyon-editor-writing
+    default: false
+  - title: Writing mode indentation
+    type: variable-number
+    id: flexcyon-editor-writing-indentation
+    default: 16
+    format: px
+  - title: Flexcyon Syntax Highlighting Mode
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Catppuccin
+        value: flexcyon-syntax-catppuccin
+      - 
+        label: Lego
+        value: flexcyon-syntax-lego
+      - 
+        label: Monochrome
+        value: flexcyon-syntax-monochrome
   -
     title: Editor
     type: heading
@@ -11087,26 +11529,6 @@ settings:
     default: 12
     format: px
 
-  - title: Syntax
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Flexcyon Syntax Highlighting Mode
-    type: class-select
-    id: theme-variant
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Catppuccin
-        value: flexcyon-syntax-catppuccin
-      - 
-        label: Lego
-        value: flexcyon-syntax-lego
-      - 
-        label: Monochrome
-        value: flexcyon-syntax-monochrome
-
   - title: View header
     type: heading
     level: 5
@@ -11663,26 +12085,6 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
-
-  - title: Modes
-    type: heading
-    description: Toggle modes like those for extreme minimalism
-    level: 5
-  - title: Return to Zero mode
-    type: class-toggle
-    description: Extreme minimalism inspired by Shimmering Focus theme. **Will override some Style Settings options**.
-    id: flexcyon-rtz-mode
-    default: false
-  - title: Enable Writing mode globally
-    type: class-toggle
-    description: Like the corresponding callout metadata option but applied globally instead
-    id: flexcyon-editor-writing
-    default: false
-  - title: Writing mode indentation
-    type: variable-number
-    id: flexcyon-editor-writing-indentation
-    default: 16
-    format: px
  */
 body div.pcr-app.visible {
   background-color: var(--color-base-30);

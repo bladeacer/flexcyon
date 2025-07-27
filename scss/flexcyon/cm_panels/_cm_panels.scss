@@ -12,6 +12,7 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
@@ -93,7 +94,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
 }
 
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
-  markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+  .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
     padding-top: 6px;
   }
@@ -213,6 +214,7 @@ body.flexcyon-status-style-card {
     border-radius: 16px;
     border: 2px solid var(--color-base-20);
     margin: 0px 8px;
+    line-height: 30px;
   }
 
   .markdown-source-view.mod-cm6

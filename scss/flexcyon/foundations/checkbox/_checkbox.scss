@@ -41,6 +41,7 @@ body {
   }
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("!", var(--color-purple));
   @include flexcyon-ascii-checkbox(">", var(--color-cyan));
