@@ -1,4 +1,5 @@
 // Display none scrollbar in settings container
+body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
   div.modal-content.vertical-tabs-container {

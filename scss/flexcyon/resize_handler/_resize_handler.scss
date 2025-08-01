@@ -132,3 +132,7 @@ body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
   content: "MacOS Desktop";
   padding-right: var(--flexcyon-os-detail-padding-r);
 }
+
+.markdown-source-view.mod-cm6 .cm-sizer {
+  margin-top: 18px;
+}

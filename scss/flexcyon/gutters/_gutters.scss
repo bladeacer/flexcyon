@@ -16,7 +16,7 @@ body.theme-light .cm-gutterElement.cm-active {
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
-  font-size: calc(var(--font-ui-small) + 0.05rem);
+  font-size: calc(var(--font-ui-small) + 0.01rem);
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active {

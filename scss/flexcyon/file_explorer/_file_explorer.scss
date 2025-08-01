@@ -1,9 +1,11 @@
+body.flexcyon-flex-max-mode .tree-item-inner,
 body.flexcyon-wrap-long-filenames .tree-item-inner {
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
   div[data-path$=".md"] {
     div.nav-file-tag {

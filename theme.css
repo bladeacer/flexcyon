@@ -59,6 +59,7 @@ body.theme-dark {
   --color-pink: var(--flexcyon-pink);
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-ext-colors-enabled {
   --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
   --color-red-blue-mix-bg: color-mix(
@@ -1198,6 +1199,7 @@ body .metadata-container .svg-icon {
   transform: translateY(-0.75px);
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-metadata-display-reading-disabled {
   --metadata-display-reading: none;
 }
@@ -2099,6 +2101,9 @@ body.flexcyon-ascii-checkboxes-enabled
   scale: var(--upsize);
 }
 
+body.flexcyon-flex-max-mode input[data-task="s"]:checked,
+body.flexcyon-flex-max-mode li[data-task="s"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="s"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="s"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="s"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2122,6 +2127,9 @@ body.flexcyon-clip-path-checkboxes-enabled
     39% 35%
   );
 }
+body.flexcyon-flex-max-mode input[data-task="s"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="s"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="s"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="s"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="s"]
@@ -2132,6 +2140,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="c"]:checked,
+body.flexcyon-flex-max-mode li[data-task="c"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="c"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="c"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="c"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2144,6 +2155,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   padding-right: 6px;
   clip-path: circle();
 }
+body.flexcyon-flex-max-mode input[data-task="c"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="c"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="c"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="c"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="c"]
@@ -2154,6 +2168,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="h"]:checked,
+body.flexcyon-flex-max-mode li[data-task="h"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="h"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="h"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="h"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2166,6 +2183,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   padding-right: 6px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
+body.flexcyon-flex-max-mode input[data-task="h"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="h"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="h"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="h"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="h"]
@@ -2176,6 +2196,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="m"]:checked,
+body.flexcyon-flex-max-mode li[data-task="m"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="m"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="m"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="m"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2196,6 +2219,9 @@ body.flexcyon-clip-path-checkboxes-enabled
     0% 75%
   );
 }
+body.flexcyon-flex-max-mode input[data-task="m"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="m"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="m"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="m"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="m"]
@@ -2206,6 +2232,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="t"]:checked,
+body.flexcyon-flex-max-mode li[data-task="t"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="t"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="t"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="t"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2218,6 +2247,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   padding-right: 6px;
   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 }
+body.flexcyon-flex-max-mode input[data-task="t"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="t"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="t"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="t"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="t"]
@@ -2228,6 +2260,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="r"]:checked,
+body.flexcyon-flex-max-mode li[data-task="r"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="r"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="r"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="r"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2240,6 +2275,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   padding-right: 6px;
   clip-path: rect();
 }
+body.flexcyon-flex-max-mode input[data-task="r"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="r"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="r"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="r"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="r"]
@@ -2250,6 +2288,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="d"]:checked,
+body.flexcyon-flex-max-mode li[data-task="d"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="d"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="d"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="d"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2262,6 +2303,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   padding-right: 6px;
   clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 90%, 0% 25%);
 }
+body.flexcyon-flex-max-mode input[data-task="d"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="d"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="d"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="d"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="d"]
@@ -2272,6 +2316,9 @@ body.flexcyon-clip-path-checkboxes-enabled
   > input:checked::after {
   display: none;
 }
+body.flexcyon-flex-max-mode input[data-task="l"]:checked,
+body.flexcyon-flex-max-mode li[data-task="l"] > input:checked,
+body.flexcyon-flex-max-mode li[data-task="l"] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="l"]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="l"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled
@@ -2295,6 +2342,9 @@ body.flexcyon-clip-path-checkboxes-enabled
     10% 10%
   );
 }
+body.flexcyon-flex-max-mode input[data-task="l"]:checked::after,
+body.flexcyon-flex-max-mode li[data-task="l"] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task="l"] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task="l"]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled
   li[data-task="l"]
@@ -3095,40 +3145,49 @@ body.flexcyon-workspace-card-layout .community-modal-readme {
   margin-top: 32px;
 }
 
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
   background-color: var(--color-accent-2);
 }
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone)
+  .community-item-downloads,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-downloads {
   color: var(--color-pink);
 }
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item-updated,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-updated {
   color: var(--color-base-25);
 }
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item-author,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-author {
   color: var(--color-orange);
 }
 
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
   background-color: var(--color-accent-2);
 }
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item-downloads,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-downloads {
   color: var(--color-base-25);
 }
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item-updated,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-updated {
   color: var(--color-red);
 }
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item-author,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected
   .community-item-author {
@@ -3216,51 +3275,62 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   border-radius: unset;
 }
 
+body.flexcyon-flex-max-mode div.side-dock-actions,
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   opacity: var(--dimmed);
   scale: var(--upsize);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions:hover,
 body.flexcyon-sidedock-icon-effects div.side-dock-actions:hover {
   opacity: 1;
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :hover,
 body.flexcyon-sidedock-icon-effects div.side-dock-actions :hover {
   scale: var(--expand);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 0):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 0):hover {
   color: var(--color-purple);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 1):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 1):hover {
   color: var(--color-cyan);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 2):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 2):hover {
   color: var(--color-blue);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 3):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 3):hover {
   color: var(--color-pink);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 4):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 4):hover {
   color: var(--color-green);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 5):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 5):hover {
   color: var(--color-yellow);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 6):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 6):hover {
   color: var(--color-orange);
 }
+body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 7):hover,
 body.flexcyon-sidedock-icon-effects
   div.side-dock-actions
   :nth-of-type(8n + 7):hover {
@@ -3335,50 +3405,43 @@ body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
   );
 }
 
+body.flexcyon-flex-max-mode [aria-label^="Uninstall"],
 body.flexcyon-settings-coloured-icons [aria-label^="Uninstall"] {
   color: rgba(var(--color-red-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Options"],
 body.flexcyon-settings-coloured-icons [aria-label^="Options"] {
   color: rgba(var(--color-blue-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Customise this command"],
+body.flexcyon-flex-max-mode [aria-label^="Hotkeys"],
 body.flexcyon-settings-coloured-icons [aria-label^="Customise this command"],
 body.flexcyon-settings-coloured-icons [aria-label^="Hotkeys"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Donate to support"],
 body.flexcyon-settings-coloured-icons [aria-label^="Donate to support"] {
   color: rgba(var(--color-pink-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Reload plugins"],
 body.flexcyon-settings-coloured-icons [aria-label^="Reload plugins"] {
   color: rgba(var(--color-cyan-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Open plugins folder"],
 body.flexcyon-settings-coloured-icons [aria-label^="Open plugins folder"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Reload snippets"],
 body.flexcyon-settings-coloured-icons [aria-label^="Reload snippets"] {
   color: rgba(var(--color-cyan-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Open snippets folder"],
 body.flexcyon-settings-coloured-icons [aria-label^="Open snippets folder"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
+body.flexcyon-flex-max-mode [aria-label^="Restore default"],
 body.flexcyon-settings-coloured-icons [aria-label^="Restore default"] {
   color: rgba(var(--color-purple-rgb), 0.9);
-}
-
-body.flexcyon-titlebar-button-effects .titlebar-button.mod-minimize:hover {
-  color: var(--color-cyan);
-}
-body.flexcyon-titlebar-button-effects .titlebar-button.mod-maximize:hover {
-  color: var(--color-blue);
-}
-body.flexcyon-titlebar-button-effects .titlebar-button.mod-close:hover {
-  color: var(--text-normal);
-}
-body.flexcyon-titlebar-button-effects .titlebar-button {
-  opacity: var(--dimmed);
-}
-body.flexcyon-titlebar-button-effects .titlebar-button:hover {
-  opacity: unset;
-  scale: var(--expand);
 }
 
 body.is-mobile .vertical-tab-content {
@@ -4075,6 +4138,28 @@ body {
   --titlebar-text-color-focused: var(--text-muted);
 }
 
+body.flexcyon-flex-max-mode .titlebar-button.mod-minimize:hover,
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-minimize:hover {
+  color: var(--color-cyan);
+}
+body.flexcyon-flex-max-mode .titlebar-button.mod-maximize:hover,
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-maximize:hover {
+  color: var(--color-blue);
+}
+body.flexcyon-flex-max-mode .titlebar-button.mod-close:hover,
+body.flexcyon-titlebar-button-effects .titlebar-button.mod-close:hover {
+  color: var(--text-normal);
+}
+body.flexcyon-flex-max-mode .titlebar-button,
+body.flexcyon-titlebar-button-effects .titlebar-button {
+  opacity: var(--dimmed);
+}
+body.flexcyon-flex-max-mode .titlebar-button:hover,
+body.flexcyon-titlebar-button-effects .titlebar-button:hover {
+  opacity: unset;
+  scale: var(--expand);
+}
+
 body.theme-dark {
   --flexcyon-link-color: #a461c8;
   --flexcyon-link-unresolved-color: #a461c8;
@@ -4393,7 +4478,7 @@ body.theme-light .cm-gutterElement.cm-active {
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
-  font-size: calc(var(--font-ui-small) + 0.05rem);
+  font-size: calc(var(--font-ui-small) + 0.01rem);
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active {
@@ -7577,9 +7662,13 @@ div.callout[data-callout-metadata*="ul-disclosure-open"] ul {
   list-style-position: inside;
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
+body.flexcyon-flex-max-mode
+  div.modal-content.vertical-tabs-container
+  ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed
   div.modal-content.vertical-tabs-container
   ::-webkit-scrollbar-thumb {
@@ -8521,23 +8610,29 @@ body.flexcyon-workspace-pl10k-layout
   border-bottom: none;
 }
 
+body.flexcyon-flex-max-mode .tree-item-inner,
 body.flexcyon-wrap-long-filenames .tree-item-inner {
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
 }
 
+body.flexcyon-flex-max-mode div[data-path$=".md"] div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled
   div[data-path$=".md"]
   div.nav-file-tag {
   display: none;
 }
+body.flexcyon-flex-max-mode
+  div[data-path$=".md"]
+  div.nav-file-title-content::after,
 body.flexcyon-file-exp-dimmed-file-exts-enabled
   div[data-path$=".md"]
   div.nav-file-title-content::after {
   content: ".md";
   opacity: var(--dimmed);
 }
+body.flexcyon-flex-max-mode div div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag {
   opacity: var(--dimmed);
   background-color: unset;
@@ -8547,6 +8642,7 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag {
   padding: unset;
   font-weight: unset;
 }
+body.flexcyon-flex-max-mode div div.nav-file-tag::before,
 body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
   content: ".";
 }
@@ -9352,6 +9448,10 @@ body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
   padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+.markdown-source-view.mod-cm6 .cm-sizer {
+  margin-top: 18px;
+}
+
 body.theme-dark {
   --cm-panel-bg: var(--color-base-00);
 }
@@ -10081,6 +10181,7 @@ body.is-mobile.flexcyon-ascii-enable div.empty-state-container::before {
   line-height: 0.8;
 }
 
+body.flexcyon-flex-max-mode div.empty-state-title,
 body.flexcyon-empty-state-title-disable div.empty-state-title {
   display: none;
 }
@@ -10318,7 +10419,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There are also **Chinese and Spanish** translations under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There is also a **Chinese** translation under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
   -
     title: Modes
     type: heading
@@ -10330,13 +10431,9 @@ settings:
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
     id: flexcyon-rtz-mode
     default: false
-  - title: About Flex Max Mode
-    type: info-text
-    markdown: true
-    description: <h3>This mode is recommended for users <i>who do not know where to start in terms of customisation</i>. <b>For those who wish to customise the theme extensively or those who may not like this set of defaults, disabling this mode is recommended</b>.<h3><br><h4>Enables the following settings, even if they are toggled off in style settings<br><i>~ smiley icons<br>~ ensure community plugin icons take precedence<br>~ left to right animation type<br>~ ASCII art<br>~ custom horizontal rule string<br>~ Powerlevel10k inspired layout and status bar style<br>~ ASCII checkboxes<br>~ Coloured headings<br>~ Hide until hover status bar~<br>~ Current status bar editing mode as text instead of icon<br>~ Vim mode status</i><br><br>You should be able to configure these settings as if they were enabled normally.</h4>
   - title: Flex Max mode
     type: class-toggle
-    description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself :D. There are also other default options enabled which you may or may not like.
+    description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
     id: flexcyon-flex-max-mode
     default: true
   - title: Enable Writing mode globally
@@ -10473,7 +10570,7 @@ settings:
   - title: Enable Extended Color Palette
     id: flexcyon-ext-colors-enabled
     type: class-toggle
-    default: true
+    default: false
 
   - title: Base Colors
     type: heading
@@ -10587,7 +10684,7 @@ settings:
   - title: Enable coloured headings
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
-    default: true
+    default: false
   - title: Enable soft glow for headings
     id: flexcyon-headings-glow-enabled
     type: class-toggle
@@ -10783,10 +10880,10 @@ settings:
     type: heading
     level: 5
     collapsed: true
-  - title: Enable dimmed file extensions in file exploroer
+  - title: Enable dimmed file extensions in file explorer
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
-    default: true
+    default: false
   - title: Select folder style
     description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select
@@ -10828,7 +10925,7 @@ settings:
     description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
     id: flexcyon-wrap-long-filenames
     type: class-toggle
-    default: true
+    default: false
 
   - title: Workspace
     type: heading
@@ -11124,7 +11221,7 @@ settings:
   - title: Enable ASCII checkboxes
     type: class-toggle
     id: flexcyon-ascii-checkboxes-enabled
-    default: true
+    default: false
   - title: ASCII checkboxes font size
     id: flexcyon-ascii-checkboxes-font-size
     type: variable-number
@@ -11133,7 +11230,7 @@ settings:
   - title: Enable Clip Path checkboxes
     type: class-toggle
     id: flexcyon-clip-path-checkboxes-enabled
-    default: true
+    default: false
 
   - title: Bullet lists
     type: heading
@@ -11315,7 +11412,7 @@ settings:
   - title: Do not show properties in reading mode
     id: flexcyon-metadata-display-reading-disabled
     type: class-toggle
-    default: true
+    default: false
   - title: Do not show properties in live preview mode
     id: flexcyon-metadata-display-editing-disabled
     type: class-toggle
@@ -11445,7 +11542,7 @@ settings:
     description: Enable hover effects on titlebar buttons
     id: flexcyon-titlebar-button-effects
     type: class-toggle
-    default: true
+    default: false
 
   - title: Line Numbers
     type: heading
@@ -11593,7 +11690,7 @@ settings:
     description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
-    default: true
+    default: false
 
   - title: Settings
     type: heading
@@ -11604,7 +11701,7 @@ settings:
     description: Enable installed tooltip effects such as subtle dimming of community items and fixing positioning of installed tooltip in community items.
     id: flexcyon-settings-comm-item-enabled
     type: class-toggle
-    default: true
+    default: false
   - title: Opacity of community items (unselected)
     id: flexcyon-comm-item-opacity
     type: variable-number
@@ -11619,7 +11716,7 @@ settings:
     id: flexcyon-settings-scrollbar-removed
     description: Do not show scrollbar in settings
     type: class-toggle
-    default: true
+    default: false
   - title: Enable alternate active item effect in settings
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
@@ -11698,7 +11795,7 @@ settings:
   - title: Enable dimmed file extensions in file tree
     id: flexcyon-oz-dimmed-file-exts-enabled
     type: class-toggle
-    default: true
+    default: false
 
   - title: Full Calendar
     type: heading
@@ -11946,7 +12043,7 @@ settings:
     id: flexcyon-sidedock-icon-effects
     description: Enable the colors, dim till hover effects for side dock icons
     type: class-toggle
-    default: true
+    default: false
   - title: Side Dock Ribbon Width
     description: Configure the width of the workspace ribbon on the left.
     id: ribbon-width
@@ -12520,17 +12617,22 @@ body.flexcyon-oz-file-tree-header-disabled div.oz-file-tree-header {
   display: none;
 }
 
+body.flexcyon-flex-max-mode div.oz-nav-file-title[data-path$=".md"] div svg,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title[data-path$=".md"]
   div
   svg {
   display: none;
 }
+body.flexcyon-flex-max-mode
+  div.oz-nav-file-title[data-path$=".md"]
+  span.oz-nav-file-tag,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title[data-path$=".md"]
   span.oz-nav-file-tag {
   display: none;
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title[data-path$=".md"] div::after,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title[data-path$=".md"]
   div::after {
@@ -12538,18 +12640,22 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   font-size: var(--font-ui-small);
   opacity: var(--dimmed);
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title,
 body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title div svg,
 body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title div svg {
   display: none;
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title .oz-nav-file-title-content,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title
   .oz-nav-file-title-content {
   width: unset;
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title span.oz-nav-file-tag,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title
   span.oz-nav-file-tag {
@@ -12564,6 +12670,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   font-size: var(--font-ui-small);
   font-weight: unset;
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title span.oz-nav-file-tag::before,
 body.flexcyon-oz-dimmed-file-exts-enabled
   div.oz-nav-file-title
   span.oz-nav-file-tag::before {

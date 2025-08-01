@@ -60,6 +60,7 @@ body.theme-dark {
   --color-pink: var(--flexcyon-pink);
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-ext-colors-enabled {
   --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
   --color-red-blue-mix-bg: color-mix(

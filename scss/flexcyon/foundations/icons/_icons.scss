@@ -113,6 +113,7 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
   background-color: var(--color-accent-2);
@@ -127,6 +128,8 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
     color: var(--color-orange);
   }
 }
+
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
   background-color: var(--color-accent-2);
@@ -205,6 +208,7 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon)
   }
 }
 
+body.flexcyon-flex-max-mode div.side-dock-actions,
 body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   opacity: var(--dimmed);
   scale: var(--upsize);
@@ -299,6 +303,7 @@ body.flexcyon-settings-comm-item-enabled {
   }
 }
 
+body.flexcyon-flex-max-mode,
 body.flexcyon-settings-coloured-icons {
   [aria-label^="Uninstall"] {
     color: rgba(var(--color-red-rgb), 0.9);
@@ -335,35 +340,6 @@ body.flexcyon-settings-coloured-icons {
 
   [aria-label^="Restore default"] {
     color: rgba(var(--color-purple-rgb), 0.9);
-  }
-}
-
-body.flexcyon-titlebar-button-effects {
-  .titlebar-button.mod-minimize {
-    &:hover {
-      color: var(--color-cyan);
-    }
-  }
-
-  .titlebar-button.mod-maximize {
-    &:hover {
-      color: var(--color-blue);
-    }
-  }
-
-  .titlebar-button.mod-close {
-    &:hover {
-      color: var(--text-normal);
-    }
-  }
-
-  .titlebar-button {
-    opacity: var(--dimmed);
-
-    &:hover {
-      opacity: unset;
-      scale: var(--expand);
-    }
   }
 }
 
