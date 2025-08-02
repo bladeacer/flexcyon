@@ -114,33 +114,54 @@ body.flexcyon-workspace-card-layout {
 }
 
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
   .community-item.is-selected {
-  background-color: var(--color-accent-2);
-  .community-item-downloads {
-    color: var(--color-pink);
-  }
-
-  .community-item-updated {
-    color: var(--color-base-25);
-  }
-  .community-item-author {
-    color: var(--color-orange);
+    background-color: var(--color-accent-2);
+    span.flair.mod-pop {
+      background-color: rgba(var(--color-blue-rgb), var(--dimmed));
+    }
+    .community-item-name {
+      color: var(--color-red);
+      font-weight: bold;
+    }
+    .community-item-author {
+      color: var(--color-yellow);
+      font-weight: bold;
+    }
+    .community-item-downloads {
+      color: var(--color-purple);
+      font-weight: bold;
+    }
+    .community-item-updated {
+      color: var(--color-green);
+      font-weight: bold;
+    }
   }
 }
 
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
   .community-item.is-selected {
-  background-color: var(--color-accent-2);
-  .community-item-downloads {
-    color: var(--color-base-25);
-  }
-  .community-item-updated {
-    color: var(--color-red);
-  }
-  .community-item-author {
-    color: var(--color-purple);
+    background-color: var(--color-accent-2);
+    span.flair.mod-pop {
+      background-color: rgba(var(--color-yellow-rgb), var(--dimmed));
+    }
+    .community-item-name {
+      color: var(--color-red);
+      font-weight: bold;
+    }
+    .community-item-author {
+      color: var(--color-blue);
+      font-weight: bold;
+    }
+    .community-item-downloads {
+      color: var(--color-pink);
+      font-weight: bold;
+    }
+    .community-item-updated {
+      color: var(--color-purple);
+      font-weight: bold;
+    }
   }
 }
 

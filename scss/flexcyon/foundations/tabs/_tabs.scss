@@ -153,77 +153,49 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-@keyframes slide-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(var(--flexcyon-anim-slide-amount));
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+@mixin anims-def($anim-name, $transform-1, $transform-2) {
+  @keyframes #{$anim-name} {
+    0% {
+      opacity: 0;
+      transform: $transform-1;
+    }
+    100% {
+      opacity: 1;
+      transform: $transform-2;
+    }
   }
 }
 
-@keyframes slide-in-tb {
-  0% {
-    opacity: 0;
-    transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in-bt {
-  0% {
-    opacity: 0;
-    transform: translateY(var(--flexcyon-anim-slide-amount));
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes spin-in-rl {
-  0% {
-    opacity: 0;
-    transform: rotateY(var(--flexcyon-anim-rotate-amount));
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotateY(0);
-  }
-}
-
-@keyframes spin-in-bt {
-  0% {
-    opacity: 0;
-    transform: rotateX(var(--flexcyon-anim-rotate-amount));
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotateX(0);
-  }
-}
+@include anims-def(
+  slide-in-left,
+  translateX(calc(var(--flexcyon-anim-slide-amount) * -1)),
+  translateX(0)
+);
+@include anims-def(
+  slide-in-right,
+  translateX(var(--flexcyon-anim-slide-amount)),
+  translateX(0)
+);
+@include anims-def(
+  slide-in-tb,
+  translateY(calc(var(--flexcyon-anim-slide-amount) * -1)),
+  translateY(0)
+);
+@include anims-def(
+  slide-in-bt,
+  translateY(var(--flexcyon-anim-slide-amount)),
+  translateY(0)
+);
+@include anims-def(
+  spin-in-rl,
+  rotateY(var(--flexcyon-anim-rotate-amount)),
+  rotateY(0)
+);
+@include anims-def(
+  spin-in-bt,
+  rotateX(var(--flexcyon-anim-rotate-amount)),
+  rotateX(0)
+);
 
 @keyframes scale-up {
   0% {
@@ -237,87 +209,51 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-body.flexcyon-anims-scale-up {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .workspace-leaf:not([style^="display: none"]),
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .modal,
-  .prompt {
-    animation: scale-up var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
+@mixin anims-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
+  body.flexcyon-anims-#{$anim-class} {
+    .modal .community-modal-info,
+    .modal .vertical-tab-content,
+    .workspace-leaf:not([style^="display: none"]),
+    .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
+    .modal,
+    .prompt {
+      animation: $anim-type var(--flexcyon-anim-duration)
+        var(--flexcyon-anim-easing);
+    }
+  }
+  body.flexcyon-anims-#{$anim-class}.flexcyon-anim-style-settings-contain {
+    .style-settings-container {
+      animation: $anim-type var(--flexcyon-anim-duration)
+        var(--flexcyon-anim-easing);
+    }
+  }
+  @if ($is-flex-max == 1) {
+    body.flexcyon-flex-max-mode {
+      .modal .community-modal-info,
+      .modal .vertical-tab-content,
+      .workspace-leaf:not([style^="display: none"]),
+      .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
+      .modal,
+      .prompt {
+        animation: $anim-type
+          var(--flexcyon-anim-duration)
+          var(--flexcyon-anim-easing);
+      }
+    }
+    body.flexcyon-flex-max-mode.flexcyon-anim-style-settings-contain {
+      .style-settings-container {
+        animation: $anim-type
+          var(--flexcyon-anim-duration)
+          var(--flexcyon-anim-easing);
+      }
+    }
   }
 }
 
-body.flexcyon-anims-slide-rtl {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style^="display: none"]),
-  .modal,
-  .prompt {
-    animation: slide-in-right var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
-
-body.flexcyon-flex-max-mode,
-body.flexcyon-anims-slide-ltr {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style="display: none"]),
-  .modal,
-  .prompt {
-    animation: slide-in-left var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
-
-body.flexcyon-anims-slide-tb {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style="display: none"]),
-  .modal,
-  .prompt {
-    animation: slide-in-tb var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
-
-body.flexcyon-anims-slide-bt {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style="display: none"]),
-  .modal,
-  .prompt {
-    animation: slide-in-tb var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
-
-body.flexcyon-anims-spin-rl {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style="display: none"]),
-  .modal,
-  .prompt {
-    animation: spin-in-rl var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
-
-body.flexcyon-anims-spin-bt {
-  .modal .community-modal-info,
-  .modal .vertical-tab-content,
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
-  .workspace-leaf:not([style="display: none"]),
-  .modal,
-  .prompt {
-    animation: spin-in-bt var(--flexcyon-anim-duration)
-      var(--flexcyon-anim-easing);
-  }
-}
+@include anims-wrapper(scale-up, scale-up);
+@include anims-wrapper(slide-rtl, slide-in-right);
+@include anims-wrapper(slide-ltr, slide-in-left, 1);
+@include anims-wrapper(slide-tb, slide-in-tb);
+@include anims-wrapper(slide-bt, slide-in-bt);
+@include anims-wrapper(spin-rl, spin-in-rl);
+@include anims-wrapper(spin-bt, spin-in-bt);

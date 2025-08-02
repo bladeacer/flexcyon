@@ -5,6 +5,7 @@ body {
   --flexcyon-os-detail-padding-r: 24px;
   --flexcyon-screen-dimens-padding-l: 16px;
   --file-header-font-size: var(--font-ui-small);
+  --flexcyon-editor-margin-top: 18px;
 
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
     border-right-width: 0px;
@@ -134,5 +135,5 @@ body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
 }
 
 .markdown-source-view.mod-cm6 .cm-sizer {
-  margin-top: 18px;
+  margin-top: var(--flexcyon-editor-margin-top);
 }
