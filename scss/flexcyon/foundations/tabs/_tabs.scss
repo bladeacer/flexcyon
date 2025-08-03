@@ -234,14 +234,8 @@ body.flexcyon-workspace-card-layout {
       .workspace-leaf:not([style^="display: none"]),
       .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
       .modal,
+      .style-settings-container,
       .prompt {
-        animation: $anim-type
-          var(--flexcyon-anim-duration)
-          var(--flexcyon-anim-easing);
-      }
-    }
-    body.flexcyon-flex-max-mode.flexcyon-anim-style-settings-contain {
-      .style-settings-container {
         animation: $anim-type
           var(--flexcyon-anim-duration)
           var(--flexcyon-anim-easing);

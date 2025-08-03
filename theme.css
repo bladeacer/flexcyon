@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /* 
-Flexcyon: Made by mixing both the Flexoki and Halcyon color scheme 
+Flexcyon: Made by mixing the Flexoki, Halcyon and Origami color scheme 
+License: MIT
 Repository: https://github.com/bladeacer/flexcyon 
+Documentation: https://flexcyon.github.io/docs-en
 */
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
@@ -701,6 +703,8 @@ body {
   --code-punctuation: var(--flexcyon-purple-lilac);
   --code-string: var(--flexcyon-lime-green);
   --code-tag: var(--flexcyon-base-grey-dark);
+  --flexcyon-code-file-ext-prefix: ".";
+  --flexcyon-code-file-ext-font-w: 500;
 }
 body .cm-s-obsidian span.cm-inline-code {
   color: var(--flexcyon-orange);
@@ -798,6 +802,22 @@ body.flexcyon-syntax-monochrome {
 }
 body.flexcyon-syntax-monochrome .cm-def {
   color: var(--text-normal);
+}
+
+body .HyperMD-codeblock span.code-block-flair {
+  font-weight: var(--flexcyon-code-file-ext-font-w);
+}
+
+body.flexcyon-flex-max-mode .HyperMD-codeblock span.code-block-flair,
+body.flexcyon-codeblock-fmt-ext .HyperMD-codeblock span.code-block-flair {
+  text-transform: lowercase;
+}
+
+body.flexcyon-flex-max-mode .HyperMD-codeblock span.code-block-flair::before,
+body.flexcyon-codeblock-prefix-ext
+  .HyperMD-codeblock
+  span.code-block-flair::before {
+  content: var(--flexcyon-code-file-ext-prefix);
 }
 
 body {
@@ -1116,13 +1136,8 @@ body.flexcyon-flex-max-mode
   .workspace-leaf.mod-active
   .workspace-leaf-content,
 body.flexcyon-flex-max-mode .modal,
+body.flexcyon-flex-max-mode .style-settings-container,
 body.flexcyon-flex-max-mode .prompt {
-  animation: slide-in-left var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-flex-max-mode.flexcyon-anim-style-settings-contain
-  .style-settings-container {
   animation: slide-in-left var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
@@ -10988,6 +11003,27 @@ settings:
       - 
         label: Monochrome
         value: flexcyon-syntax-monochrome
+  - title: Code Block File Extension
+    type: info-text
+    markdown: true
+    description: Customise the code block file extension, only appears in Live Preview mode
+  - title: Make Code Block File Extension lowercase
+    id: flexcyon-codeblock-fmt-ext
+    type: class-toggle
+    default: false
+  - title: Add Prefix before Code Block File Extension
+    id: flexcyon-codeblock-prefix-ext
+    type: class-toggle
+    default: false
+  - title: Customise Prefix before Code Block File Extension
+    id: flexcyon-code-file-ext-prefix
+    type: variable-text
+    default: "f"
+    quotes: true
+  - title: Code Block File Extension Font Weight
+    id: flexcyon-code-file-ext-font-w
+    type: variable-number
+    default: 500
 
   - title: UI Font sizes
     type: heading
@@ -11223,6 +11259,10 @@ settings:
     type: variable-number
     default: 56.63105 
     format: px
+  - title: Enable Animations in Style Settings containers
+    id: flexcyon-anim-style-settings-contain
+    type: class-toggle
+    default: false
 
   - title: Editor Background
     type: heading

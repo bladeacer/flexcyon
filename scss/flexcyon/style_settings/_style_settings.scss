@@ -478,6 +478,27 @@ settings:
       - 
         label: Monochrome
         value: flexcyon-syntax-monochrome
+  - title: Code Block File Extension
+    type: info-text
+    markdown: true
+    description: Customise the code block file extension, only appears in Live Preview mode
+  - title: Make Code Block File Extension lowercase
+    id: flexcyon-codeblock-fmt-ext
+    type: class-toggle
+    default: false
+  - title: Add Prefix before Code Block File Extension
+    id: flexcyon-codeblock-prefix-ext
+    type: class-toggle
+    default: false
+  - title: Customise Prefix before Code Block File Extension
+    id: flexcyon-code-file-ext-prefix
+    type: variable-text
+    default: "f"
+    quotes: true
+  - title: Code Block File Extension Font Weight
+    id: flexcyon-code-file-ext-font-w
+    type: variable-number
+    default: 500
 
   - title: UI Font sizes
     type: heading
@@ -713,6 +734,10 @@ settings:
     type: variable-number
     default: 56.63105 
     format: px
+  - title: Enable Animations in Style Settings containers
+    id: flexcyon-anim-style-settings-contain
+    type: class-toggle
+    default: false
 
   - title: Editor Background
     type: heading
