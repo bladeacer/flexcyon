@@ -51,6 +51,10 @@ body {
   --flexcyon-editor-bg-rotation: 0deg;
 }
 
+body.theme-light {
+  --flexcyon-editor-bg-color: var(--color-base-10);
+}
+
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,

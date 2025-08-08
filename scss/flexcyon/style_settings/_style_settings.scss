@@ -283,7 +283,7 @@ settings:
   - title: Enable coloured headings
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
-    default: false
+    default: true
   - title: Enable soft glow for headings
     id: flexcyon-headings-glow-enabled
     type: class-toggle
@@ -493,7 +493,7 @@ settings:
   - title: Customise Prefix before Code Block File Extension
     id: flexcyon-code-file-ext-prefix
     type: variable-text
-    default: "f"
+    default: "."
     quotes: true
   - title: Code Block File Extension Font Weight
     id: flexcyon-code-file-ext-font-w
