@@ -488,7 +488,6 @@ body {
   --h6-size: 1.01803em;
 }
 
-body.flexcyon-flex-max-mode,
 body.flexcyon-headings-coloured-enabled {
   --h1-color: var(--flexcyon-blue);
   --h2-color: var(--flexcyon-purple-lilac);
@@ -2881,6 +2880,10 @@ body {
   );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
+}
+
+body.theme-light {
+  --flexcyon-editor-bg-color: var(--color-base-10);
 }
 
 body.flexcyon-editor-grid .canvas-background,
@@ -10808,7 +10811,7 @@ settings:
   - title: Enable coloured headings
     id: flexcyon-headings-coloured-enabled
     type: class-toggle
-    default: false
+    default: true
   - title: Enable soft glow for headings
     id: flexcyon-headings-glow-enabled
     type: class-toggle
@@ -11018,7 +11021,7 @@ settings:
   - title: Customise Prefix before Code Block File Extension
     id: flexcyon-code-file-ext-prefix
     type: variable-text
-    default: "f"
+    default: "."
     quotes: true
   - title: Code Block File Extension Font Weight
     id: flexcyon-code-file-ext-font-w
@@ -13356,7 +13359,6 @@ div.mermaid svg .nodes node * {
   .nodeLabel
   p {
   color: var(--text-normal) !important;
-  margin: 0px -8px !important;
 }
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes g :is(*) {
   stroke: var(--text-faint) !important;

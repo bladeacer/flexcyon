@@ -1,17 +1,24 @@
-<p align="left">
-    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon-1/">
+<p align="center">
+    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
         <img src="https://img.shields.io/badge/dynamic/json?query=%24%5B%22flexcyon%22%5D.download&url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&style=for-the-badge&label=Downloads&logo=obsidian" referrerpolicy="noreferrer">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge" referrerpolicy="noreferrer"> 
     </a>
-    <a href="https://github.com/bladeacer/flexcyon/releases/latest">
-        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver" referrerpolicy="noreferrer">
-    </a>
+    <img alt="Min App Version" src="https://img.shields.io/github/manifest-json/minAppVersion/bladeacer/flexcyon?style=for-the-badge&logo=semver">
 </p>
-
-> The documentation is in the process of a refactor. Links may be broken.
-> I will update this page once I have the new documentation ready.
+<div align="center">
+    <a href="https://github.com/bladeacer/flexcyon/releases/latest">
+        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
+    </a>
+    <a href="https://flexcyon.github.io/docs-en/">
+        <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/flexcyon/docs-en/github-pages?style=for-the-badge&logo=github">
+    </a>
+</div>
+<br>
+<div align="center">
+    <img alt="Dark mode theme thumbnail" src="./docs/dark_thumb.webp">
+</div>
 
 ## About Flexcyon
 
@@ -23,13 +30,17 @@ There is also a light mode colour scheme combining [Origami theme's](https://git
 
 ## Screenshots
 
-![Figure 1: ASCII Art, Dimmed File Extensions](./docs/showcase1.png)
-
-![Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar](./docs/showcase2.png)
-
-![Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons](./docs/showcase3.png)
-
-![Figure 4: Light Mode with Powerlevel10k layout and status style](./docs/showcase4.png)
+<div align="center">
+    <img alt="Figure 1: ASCII Art, Dimmed File Extensions" src="./docs/showcase1.png" style="width: 47.5%;">
+    <img alt="Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar" src="./docs/showcase2.png" style="width: 47.5%;">
+</div>
+<div align="center">
+    <img alt="Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons" src="./docs/showcase3.png" style="width: 47.5%;">
+    <img alt="Figure 5: ASCII checkboxes" src="./docs/ascii_checkboxes1.png" style="width: 47.5%;">
+</div>
+<div align="center">
+    <img alt="Figure 4: Light Mode with Powerlevel10k layout and status style" src="./docs/showcase4.png" style="width: 95%;">
+</div>
 
 ## Installation via community store (recommended)
 
@@ -54,9 +65,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.github.io/docs-en/
 
-> I want to keep the docs and source code separate, the documentation is currently being reworked.
-> The old documentation is now fully deprecated and its links will not work.
-> (was https://flexcyon-docs.readthedocs.io/en/latest )
+> The documentation is almost done, I just need to add the Chinese translation.
 
 ## Features
 
@@ -75,13 +84,11 @@ A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.
 - ASCII checkboxes
 - Heading options like underline, numbered, coloured
 - A plethora of cssclasses and callout customisation options
-<!-- - A [plethora of cssclasses and callout customisation options](https://flexcyon-docs.readthedocs.io/en/latest/Styling/CSS-Classes/) -->
+- A [plethora of cssclasses and callout customisation options](https://flexcyon.github.io/docs-en/Styling/CSS-Classes/)
 - Workspace Layouts like card layout with TUI inspired add-on, angled layout
 - Configure left, right sidebar and modal background images
 - Animation options for tabs
 - And many more...
-
-![Figure 5: ASCII checkboxes](./docs/ascii_checkboxes1.png)
 
 #### What this theme does not have
 
@@ -91,7 +98,7 @@ A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.
 
 #### Supported plugins/snippets
 
-The following plugins/snippets are officially supported:
+The following plugins/snippets are officially supported
 
 ##### Plugins
 
@@ -115,15 +122,11 @@ For plugins/snippets that are not styled yet, feel free to open a Pull Request/F
 
 #### Roadmap
 
-<!-- The Roadmap for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/README/roadmap/). -->
-
-The Roadmap for this theme is currently in the works, stay tuned.
+The Roadmap for this theme can be found [here](https://flexcyon.github.io/docs-en/README/roadmap/).
 
 #### Changelogs
 
-<!-- The Changelogs for this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/changelogs/) -->
-
-The Changelogs for this theme is currently in the works, stay tuned.
+The Changelogs for this theme can be found [here](https://flexcyon.github.io/docs-en/changelogs/).
 
 #### Questions, Issues?
 
@@ -139,7 +142,9 @@ Alternatively, you can open an issue at [the repository](https://github.com/blad
 This theme tries to:
 
 - be "reasonably opinionated"
-  - opt into customisation instead opting out of customisation
+  - Choose between the opinionated Flex Max mode
+  - or customising the theme extensively
+  - Opt into customisations you choose instead of opting out
 - be decently lightweight, meaning:
   - fonts, svgs and the like are not embedded in this theme
   - (hopefully) sane defaults, customisable with style settings
@@ -149,9 +154,7 @@ This theme tries to:
 
 ## Style Settings
 
-<!-- Documentation for style settings of this theme can be found [here](https://flexcyon-docs.readthedocs.io/en/latest/Styling/Style-Settings) -->
-
-Documentation for style settings of this theme is in the works, stay tuned.
+Documentation for style settings of this theme can be found [here](https://flexcyon.github.io/docs-en/Styling/Style-Settings/)
 
 Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
 
@@ -161,6 +164,5 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 
 ## Credits
 
-<!-- See https://flexcyon-docs.readthedocs.io/en/latest/credits/ -->
-
-Credits for this theme is in the works, stay tuned.
+Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and
+[tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
