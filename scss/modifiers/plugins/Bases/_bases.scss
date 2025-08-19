@@ -1,0 +1,71 @@
+body {
+  --bases-no-img-str: "No image path could be found for this file";
+  --bases-border-r: 16px;
+  --bases-cards-group-padding: 16px;
+  --flexcyon-bases-card-padding: 8px 0px 0px 2px;
+  --input-padding: 4px 8px;
+  --bases-cards-cover-background: var(--background-secondary);
+  --flexcyon-bases-flex-grow: 0.55;
+  --flexcyon-bases-delay-factor: 12.5;
+}
+
+.bases-view {
+  flex-grow: var(--flexcyon-bases-flex-grow);
+  transition: flex-grow
+    calc(var(--flexcyon-bases-delay-factor) * var(--flexcyon-anim-duration))
+    ease-in-out;
+}
+
+.bases-cards-item {
+  padding: var(--flexcyon-bases-card-padding);
+}
+
+div.bases-cards-cover:not([style*="background-image"]) {
+  --flexcyon-editor-bg-color: var(--background-primary);
+  &::after {
+    content: var(--bases-no-img-str);
+    color: var(--text-muted);
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    margin: 30% auto;
+    text-align: center;
+    max-width: 85%;
+    right: 0;
+    left: calc(16px + 6px * 2 + 4px * 2);
+  }
+  & {
+    background-image:
+      repeating-linear-gradient(
+        calc(30deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      ),
+      repeating-linear-gradient(
+        calc(150deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color),
+        var(--flexcyon-editor-bg-color) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      );
+  }
+  * {
+    background-image: none;
+  }
+}
+
+.bases-cards-property.mod-title div,
+.bases-cards-property.mod-title,
+.bases-cards-item {
+  border: none;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  --input-padding: 0px 4px;
+}
+
+.bases-cards-label {
+  padding: 2px 4px;
+}

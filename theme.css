@@ -7785,6 +7785,19 @@ div.callout[data-callout-metadata*="ul-disclosure-open"] ul {
   list-style-position: inside;
 }
 
+div.callout[data-callout-metadata*="center-img"] {
+  background-color: transparent;
+}
+div.callout[data-callout-metadata*="center-img"] img {
+  justify-content: center;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
+}
+
 body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
@@ -11121,7 +11134,7 @@ settings:
     description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
     id: flexcyon-wrap-long-filenames
     type: class-toggle
-    default: false
+    default: true
 
   - title: Workspace
     type: heading
@@ -13063,6 +13076,10 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
   transform: skewX(-5deg);
 }
 
+.setting-item-control select {
+  width: 80%;
+}
+
 .sr-bg-green {
   background-color: rgba(var(--color-green-rgb), 0.925) !important;
 }
@@ -13427,6 +13444,78 @@ div.mermaid svg .nodes node * {
   :is(*) {
   fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
   stroke: var(--color-orange-rgb) !important;
+}
+
+body {
+  --bases-no-img-str: "No image path could be found for this file";
+  --bases-border-r: 16px;
+  --bases-cards-group-padding: 16px;
+  --flexcyon-bases-card-padding: 8px 0px 0px 2px;
+  --input-padding: 4px 8px;
+  --bases-cards-cover-background: var(--background-secondary);
+  --flexcyon-bases-flex-grow: 0.55;
+  --flexcyon-bases-delay-factor: 12.5;
+}
+
+.bases-view {
+  flex-grow: var(--flexcyon-bases-flex-grow);
+  transition: flex-grow
+    calc(var(--flexcyon-bases-delay-factor) * var(--flexcyon-anim-duration))
+    ease-in-out;
+}
+
+.bases-cards-item {
+  padding: var(--flexcyon-bases-card-padding);
+}
+
+div.bases-cards-cover:not([style*="background-image"]) {
+  --flexcyon-editor-bg-color: var(--background-primary);
+}
+div.bases-cards-cover:not([style*="background-image"])::after {
+  content: var(--bases-no-img-str);
+  color: var(--text-muted);
+  justify-content: center;
+  display: flex;
+  width: max-content;
+  margin: 30% auto;
+  text-align: center;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
+}
+div.bases-cards-cover:not([style*="background-image"]) {
+  background-image:
+    repeating-linear-gradient(
+      calc(30deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    ),
+    repeating-linear-gradient(
+      calc(150deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    );
+}
+div.bases-cards-cover:not([style*="background-image"]) * {
+  background-image: none;
+}
+
+.bases-cards-property.mod-title div,
+.bases-cards-property.mod-title,
+.bases-cards-item {
+  border: none;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  --input-padding: 0px 4px;
+}
+
+.bases-cards-label {
+  padding: 2px 4px;
 }
 
 /* Modifications for banner snippet */

@@ -166,3 +166,5 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 
 Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and
 [tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
+
+<!--- For pre-commit hooks, view https://prettier.io/docs/precommit --->

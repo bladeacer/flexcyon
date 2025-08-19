@@ -651,3 +651,16 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include callout-list(trad-chinese-informal);
 @include callout-list(upper-armenian);
 @include callout-list(disclosure-open);
+
+div.callout[data-callout-metadata*="center-img"] {
+  background-color: transparent;
+  img {
+    justify-content: center;
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    max-width: 85%;
+    right: 0;
+    left: calc(16px + 6px * 2 + 4px * 2);
+  }
+}

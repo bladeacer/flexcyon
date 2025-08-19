@@ -593,7 +593,7 @@ settings:
     description: Wrap long filenames to a new line instead of cutting it off with ellipses when the text does overflow
     id: flexcyon-wrap-long-filenames
     type: class-toggle
-    default: false
+    default: true
 
   - title: Workspace
     type: heading
