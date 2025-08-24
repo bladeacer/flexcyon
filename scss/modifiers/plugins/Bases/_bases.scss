@@ -2,17 +2,54 @@ body {
   --bases-no-img-str: "No image path could be found for this file";
   --bases-border-r: 16px;
   --bases-cards-group-padding: 16px;
-  --flexcyon-bases-card-padding: 8px 0px 0px 2px;
-  --input-padding: 4px 8px;
+
+  --flexcyon-bases-card-padding-top: 8px;
+  --flexcyon-bases-card-padding-right: 0px;
+  --flexcyon-bases-card-padding-bottom: 0px;
+  --flexcyon-bases-card-padding-left: 2px;
+  --flexcyon-bases-card-padding: var(--flexcyon-bases-card-padding-top)
+    var(--flexcyon-bases-card-padding-right)
+    var(--flexcyon-bases-card-padding-bottom)
+    var(--flexcyon-bases-card-padding-left);
+
+  --flexcyon-input-verti-padding: 4px;
+  --flexcyon-input-horiz-padding: 8px;
+  --input-padding: var(--flexcyon-input-verti-padding)
+    var(--flexcyon-input-horiz-padding);
+
   --bases-cards-cover-background: var(--background-secondary);
-  --flexcyon-bases-flex-grow: 0.55;
-  --flexcyon-bases-delay-factor: 12.5;
+
+  --flexcyon-bases-card-flex-grow: 0.55;
+  --flexcyon-bases-card-delay-factor: 12.5;
+
+  --flexcyon-bases-padding-horiz: 16px;
+  --flexcyon-bases-padding-verti: 16px;
+  --bases-embed-padding: 4px;
+}
+
+.workspace-leaf-content[data-type="bases"] .view-content {
+  padding: var(--flexcyon-bases-padding-verti)
+    var(--flexcyon-bases-padding-horiz);
+}
+
+.workspace-leaf-content[data-type="bases"] .bases-header {
+  --bases-header-padding-start: 0px;
+  --bases-header-padding-end: 0px;
+  --bases-header-border-width: 0 0 1px 0;
+  width: min(calc(100% - 8px), 99.5%);
+}
+
+.bases-table {
+  margin-left: 1px;
+  border-right: 0.5px solid var(--text-faint);
 }
 
 .bases-view {
-  flex-grow: var(--flexcyon-bases-flex-grow);
+  flex-grow: var(--flexcyon-bases-card-flex-grow);
   transition: flex-grow
-    calc(var(--flexcyon-bases-delay-factor) * var(--flexcyon-anim-duration))
+    calc(
+      var(--flexcyon-bases-card-delay-factor) * var(--flexcyon-anim-duration)
+    )
     ease-in-out;
 }
 

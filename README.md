@@ -65,7 +65,7 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.github.io/docs-en/
 
-> The documentation is almost done, I just need to add the Chinese translation.
+如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
 
 ## Features
 

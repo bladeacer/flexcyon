@@ -15,7 +15,7 @@ settings:
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). There is also a **Chinese** translation under the same site.<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请[单击此处](https://flexcyon.github.io/docs-en/zh/)查看中文文档。<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
   -
     title: Modes
     type: heading
@@ -688,6 +688,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
+    description: Please note that Bases Cards View plus animations might not be good for performance.
   - title: Animation type
     description: Configure animation type for transitions of prompts, modals and tab containers.
     type: class-select
@@ -719,7 +720,7 @@ settings:
 
   - title: Animation duration
     id: flexcyon-anim-duration
-    description: Transition duration for animations
+    description: Transition duration for animations. Affects Bases Cards View flex grow transition as well as many other UI elements when animations are enabled
     type: variable-number
     default: 0.3
     format: s
@@ -1400,6 +1401,17 @@ settings:
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
+  - title: Input box Vertical Padding
+    type: variable-number
+    id: flexcyon-input-verti-padding
+    default: 4
+    format: px
+  - title: Input box Horizontal Padding
+    type: variable-number
+    id: flexcyon-input-verti-padding
+    default: 8
+    format: px
+
   - title: Style Settings
     type: heading
     level: 5
@@ -1573,7 +1585,7 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Omnisearch Plugin
+  - title: Omnisearch
     type: heading
     level: 5
     collapsed: true
@@ -1589,6 +1601,61 @@ settings:
     default: 1.45
     format: rem
 
+  - title: Bases
+    type: heading
+    level: 5
+    collapsed: true
+    description: Currently experimental, will add to docs later
+  - title: Bases Cards View
+    type: heading
+    level: 6
+    collapsed: false
+  - title: Default string when Card View item image not found
+    id: bases-no-img-str
+    type: variable-text
+    default: "No image path could be found for this file"
+    quotes: true
+  - title: Bases Card Border Radius
+    id: bases-border-r
+    type: variable-number
+    default: 16
+    format: px
+  - title: Bases Card Group Padding
+    id: bases-cards-group-padding
+    type: variable-number
+    default: 16
+    format: px
+  - title: Bases Card Padding Top
+    id: flexcyon-bases-card-padding-top
+    type: variable-number
+    default: 8
+    format: px
+  - title: Bases Card Padding Right
+    id: flexcyon-bases-card-padding-right
+    type: variable-number
+    default: 0
+    format: px
+  - title: Bases Card Padding Bottom
+    id: flexcyon-bases-card-padding-bottom
+    type: variable-number
+    default: 0
+    format: px
+  - title: Bases Card Padding Left
+    id: flexcyon-bases-card-padding-left
+    type: variable-number
+    default: 2
+    format: px
+  - title: Bases Card View Flex Grow
+    id: flexcyon-bases-card-flex-gorw
+    description: How much the Card View tries to scale up or down depending on tab size e.g. when toggling sidebars.
+    type: variable-number
+    default: 0.55
+  - title: Bases Card View Delay Factor
+    id: flexcyon-bases-card-flex-grow
+    description: This is the factor of how long the Card View takes to scale depending on tab size. Technically just this value multiplied by the animation duration value.
+    type: variable-number
+    default: 0.55
+    
   - title: Others
     type: heading
     level: 4
