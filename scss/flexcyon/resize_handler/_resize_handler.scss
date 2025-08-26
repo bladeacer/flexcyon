@@ -54,7 +54,32 @@ body .view-header-left::after {
   font-size: 0;
 }
 
-body.flexcyon-display-screen-dimens .view-header-left::after {
+body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
+body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
+  display: none;
+}
+
+body.flexcyon-display-screen-dimens .titlebar::after {
+  padding-top: 12px;
+  padding-right: calc(8 * var(--flexcyon-screen-dimens-padding-l));
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: calc(0px * 2);
+
+  font-size: var(--file-header-font-size);
+  content: counter(w) "x" counter(h);
+  counter-reset: h var(--h) w var(--w);
+  color: var(--text-muted);
+}
+
+body.flexcyon-display-screen-dimens
+  :not(.mod-stacked)
+  .view-header-left::after {
   padding-top: -0.5vh;
   padding-left: var(--flexcyon-screen-dimens-padding-l);
   font-size: var(--file-header-font-size);
@@ -76,62 +101,84 @@ body .view-actions::before {
   font-size: 0;
 }
 
-body.flexcyon-display-os .view-actions::before {
-  font-size: var(--file-header-font-size);
+body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
+body.flexcyon-display-os .mod-stacked .view-actions::before {
+  display: none;
 }
 
+body.flexcyon-display-os .view-actions::before {
+  font-size: var(--file-header-font-size);
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
+}
+
+body.flexcyon-display-os.is-mobile .titlebar::before,
 body.flexcyon-display-os.is-mobile .view-actions::before {
   content: "Unknown Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os .titlebar::before {
+  padding-top: 11.5px;
+  padding-left: calc(5 * var(--flexcyon-os-detail-padding-r));
+  position: absolute;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: calc(0px * 2);
+
+  font-size: var(--file-header-font-size);
+  content: "Unknown Desktop";
   color: var(--text-muted);
 }
 
 body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
   content: "Unknown Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
-  color: var(--text-muted);
 }
 
+body.flexcyon-display-os.is-mobile.emulate-mobile .titlebar::before,
 body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
   content: "Mobile Emulation";
-  padding-right: var(--flexcyon-os-detail-padding-r);
-  color: var(--text-muted);
 }
 
+body.flexcyon-display-os.is-ios:not(.is-tablet) .titlebar::before,
 body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
   content: "iOS Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-ios.is-tablet .titlebar::before,
 body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
   content: "iOS Tablet";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-android:not(.is-tablet) .titlebar::before,
 body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
   content: "Android Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-android.is-tablet .titlebar::before,
 body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
   content: "Android Tablet";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-linux .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
   content: "Linux Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-windows .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
   content: "Windows Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
 body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
+  .titlebar::before,
+body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
   .view-actions::before {
   content: "MacOS Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
 .markdown-source-view.mod-cm6 .cm-sizer {

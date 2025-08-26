@@ -1320,6 +1320,11 @@ settings:
     id: flexcyon-display-os
     type: class-toggle
     default: false
+  - title: Display number of opened tabs
+    id: flexcyon-get-opened-tabs
+    description: Does not display when in stacked tabs and there is only one tab open. Else it works as expected. Experimental.
+    type: class-toggle
+    default: false
   - title: Device operating system details right padding
     type: variable-number
     id: flexcyon-os-detail-padding-r

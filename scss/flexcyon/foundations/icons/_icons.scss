@@ -335,6 +335,7 @@ body.flexcyon-settings-coloured-icons {
   }
 
   [aria-label^="Customise this command"],
+  [aria-label^="Customize this command"],
   [aria-label^="Hotkeys"] {
     color: rgba(var(--color-green-rgb), 0.9);
   }
@@ -512,6 +513,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   @include ascii-aria-icon("Options", "[*]");
   @include ascii-aria-icon("Hotkeys", "[%]");
   @include ascii-aria-icon("Customise this command", "[~]");
+  @include ascii-aria-icon("Customize this command", "[~]");
   @include ascii-aria-icon("Donate", "<3");
   @include ascii-aria-icon("Reload", "[R]");
   @include ascii-aria-icon("Change sort order", "|'|");

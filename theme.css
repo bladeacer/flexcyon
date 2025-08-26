@@ -3537,8 +3537,10 @@ body.flexcyon-settings-coloured-icons [aria-label^="Options"] {
   color: rgba(var(--color-blue-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Customise this command"],
+body.flexcyon-flex-max-mode [aria-label^="Customize this command"],
 body.flexcyon-flex-max-mode [aria-label^="Hotkeys"],
 body.flexcyon-settings-coloured-icons [aria-label^="Customise this command"],
+body.flexcyon-settings-coloured-icons [aria-label^="Customize this command"],
 body.flexcyon-settings-coloured-icons [aria-label^="Hotkeys"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
@@ -3859,6 +3861,28 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
   svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
   [aria-label*="Customise this command"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customize this command"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customize this command"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customize this command"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customize this command"]::after {
+  content: "[~]";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Customize this command"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Customize this command"]
   svg {
   opacity: 0;
 }
@@ -9505,7 +9529,31 @@ body .view-header-left::after {
   font-size: 0;
 }
 
-body.flexcyon-display-screen-dimens .view-header-left::after {
+body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
+body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
+  display: none;
+}
+
+body.flexcyon-display-screen-dimens .titlebar::after {
+  padding-top: 12px;
+  padding-right: calc(8 * var(--flexcyon-screen-dimens-padding-l));
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 0px;
+  font-size: var(--file-header-font-size);
+  content: counter(w) "x" counter(h);
+  counter-reset: h var(--h) w var(--w);
+  color: var(--text-muted);
+}
+
+body.flexcyon-display-screen-dimens
+  :not(.mod-stacked)
+  .view-header-left::after {
   padding-top: -0.5vh;
   padding-left: var(--flexcyon-screen-dimens-padding-l);
   font-size: var(--file-header-font-size);
@@ -9527,62 +9575,83 @@ body .view-actions::before {
   font-size: 0;
 }
 
-body.flexcyon-display-os .view-actions::before {
-  font-size: var(--file-header-font-size);
+body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
+body.flexcyon-display-os .mod-stacked .view-actions::before {
+  display: none;
 }
 
+body.flexcyon-display-os .view-actions::before {
+  font-size: var(--file-header-font-size);
+  padding-right: var(--flexcyon-os-detail-padding-r);
+  color: var(--text-muted);
+}
+
+body.flexcyon-display-os.is-mobile .titlebar::before,
 body.flexcyon-display-os.is-mobile .view-actions::before {
   content: "Unknown Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
+}
+
+body.flexcyon-display-os .titlebar::before {
+  padding-top: 11.5px;
+  padding-left: calc(5 * var(--flexcyon-os-detail-padding-r));
+  position: absolute;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 0px;
+  font-size: var(--file-header-font-size);
+  content: "Unknown Desktop";
   color: var(--text-muted);
 }
 
 body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
   content: "Unknown Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
-  color: var(--text-muted);
 }
 
+body.flexcyon-display-os.is-mobile.emulate-mobile .titlebar::before,
 body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
   content: "Mobile Emulation";
-  padding-right: var(--flexcyon-os-detail-padding-r);
-  color: var(--text-muted);
 }
 
+body.flexcyon-display-os.is-ios:not(.is-tablet) .titlebar::before,
 body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
   content: "iOS Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-ios.is-tablet .titlebar::before,
 body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
   content: "iOS Tablet";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-android:not(.is-tablet) .titlebar::before,
 body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
   content: "Android Device";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os.is-android.is-tablet .titlebar::before,
 body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
   content: "Android Tablet";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-linux .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
   content: "Linux Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-windows .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
   content: "Windows Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
 body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
+  .titlebar::before,
+body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
   .view-actions::before {
   content: "MacOS Desktop";
-  padding-right: var(--flexcyon-os-detail-padding-r);
 }
 
 .markdown-source-view.mod-cm6 .cm-sizer {
@@ -10418,6 +10487,38 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter:hover,
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container:hover,
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
   opacity: unset;
+}
+
+/* Silly snippet to get number of opened tabs */
+body.flexcyon-get-opened-tabs {
+  counter-reset: openedt 0;
+}
+body.flexcyon-get-opened-tabs .mod-stacked {
+  counter-reset: openedt 1;
+}
+body.flexcyon-get-opened-tabs
+  :not(.mod-stacked)
+  .workspace-tab-header-container-inner
+  .workspace-tab-header {
+  counter-increment: openedt;
+}
+body.flexcyon-get-opened-tabs
+  .mod-stacked
+  .workspace-leaf:has(+ .workspace-tab-header + .workspace-leaf) {
+  counter-increment: openedt;
+}
+body.flexcyon-get-opened-tabs
+  .mod-stacked
+  .workspace-leaf:not(:has(+ .workspace-tab-header + .workspace-leaf))
+  .view-header::after {
+  display: none;
+}
+body.flexcyon-get-opened-tabs .view-header::after {
+  content: " Opened tabs: " counter(openedt);
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+  position: fixed;
+  top: 92vh;
 }
 
 body {
@@ -11859,6 +11960,11 @@ settings:
     format: vw
   - title: Display device operating system details in view header
     id: flexcyon-display-os
+    type: class-toggle
+    default: false
+  - title: Display number of opened tabs
+    id: flexcyon-get-opened-tabs
+    description: Does not display when in stacked tabs and there is only one tab open. Else it works as expected. Experimental.
     type: class-toggle
     default: false
   - title: Device operating system details right padding

@@ -163,3 +163,35 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
     }
   }
 }
+
+/* Silly snippet to get number of opened tabs */
+
+body.flexcyon-get-opened-tabs {
+  counter-reset: openedt 0;
+  .mod-stacked {
+    counter-reset: openedt 1;
+  }
+  :not(.mod-stacked)
+    .workspace-tab-header-container-inner
+    .workspace-tab-header {
+    counter-increment: openedt;
+  }
+
+  .mod-stacked .workspace-leaf:has(+ .workspace-tab-header + .workspace-leaf) {
+    counter-increment: openedt;
+  }
+
+  .mod-stacked
+    .workspace-leaf:not(:has(+ .workspace-tab-header + .workspace-leaf))
+    .view-header::after {
+    display: none;
+  }
+
+  .view-header::after {
+    content: " Opened tabs: " counter(openedt);
+    color: var(--text-muted);
+    font-size: var(--font-ui-small);
+    position: fixed;
+    top: 92vh;
+  }
+}
