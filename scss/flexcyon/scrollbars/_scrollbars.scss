@@ -13,3 +13,11 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   background-color: var(--scrollbar-bg);
   width: 8px;
 }
+
+// Ultra performant scrolling thanks to Kapirklaa and Floodlight
+.markdown-preview-view {
+  will-change: scroll-position;
+}
+.markdown-preview-view > .markdown-preview-pusher {
+  will-change: margin-bottom;
+}

@@ -19,6 +19,9 @@
 <div align="center">
     <img alt="Dark mode theme thumbnail" src="./docs/dark_thumb.webp">
 </div>
+<div align="center">
+    <img alt="Light mode theme thumbnail" src="./docs/light_thumb.webp">
+</div>
 
 ## About Flexcyon
 

@@ -1868,7 +1868,7 @@ settings:
   - title: Sidebar Background image blur
     id: flexcyon-bg-image-blur
     type: variable-number
-    default: 1
+    default: 0
     format: px
   - title: Sidebar Background image brightness
     id: flexcyon-bg-image-brightness
@@ -1903,7 +1903,7 @@ settings:
   - title: Modal Background image blur
     id: flexcyon-modal-image-blur
     type: variable-number
-    default: 1
+    default: 0
     format: px
   - title: Modal Background image brightness
     id: flexcyon-modal-image-brightness

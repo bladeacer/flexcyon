@@ -7840,6 +7840,14 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   width: 8px;
 }
 
+.markdown-preview-view {
+  will-change: scroll-position;
+}
+
+.markdown-preview-view > .markdown-preview-pusher {
+  will-change: margin-bottom;
+}
+
 /* Modifications for tab containers */
 body:not(.show-ribbon) .sidebar-toggle-button {
   padding: 11px 16px 7px 0px;
@@ -12510,7 +12518,7 @@ settings:
   - title: Sidebar Background image blur
     id: flexcyon-bg-image-blur
     type: variable-number
-    default: 1
+    default: 0
     format: px
   - title: Sidebar Background image brightness
     id: flexcyon-bg-image-brightness
@@ -12545,7 +12553,7 @@ settings:
   - title: Modal Background image blur
     id: flexcyon-modal-image-blur
     type: variable-number
-    default: 1
+    default: 0
     format: px
   - title: Modal Background image brightness
     id: flexcyon-modal-image-brightness
@@ -12762,7 +12770,7 @@ body {
   --flexcyon-modal-bg-url: url("");
   --flexcyon-modal-image-blend-mode: lighten;
   --flexcyon-modal-image-repeat: no-repeat;
-  --flexcyon-modal-image-blur: 1px;
+  --flexcyon-modal-image-blur: 0px;
   --flexcyon-modal-image-brightness: unset;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
