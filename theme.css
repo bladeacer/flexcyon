@@ -486,9 +486,457 @@ body {
   --h4-size: 1.21803em;
   --h5-size: 1.11803em;
   --h6-size: 1.01803em;
+  --h1-color: inherit;
+  --h2-color: inherit;
+  --h3-color: inherit;
+  --h4-color: inherit;
+  --h5-color: inherit;
+  --h6-color: inherit;
+  --h1-border-btm: unset;
+  --h2-border-btm: unset;
+  --h3-border-btm: unset;
+  --h4-border-btm: unset;
+  --h5-border-btm: unset;
+  --h6-border-btm: unset;
+  --flexcyon-coloured-headings: true;
+  --flexcyon-headings-glow-enabled: false;
+  --h1-color: var(--flexcyon-blue);
+  --h2-color: var(--flexcyon-purple-lilac);
+  --h3-color: var(--flexcyon-cyan);
+  --h4-color: var(--flexcyon-pink);
+  --h5-color: var(--flexcyon-lime-green);
+  --h6-color: var(--flexcyon-yellow);
+  --h1-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-blue) ;
+      else: inherit;
+  );
+  --h2-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-purple-lilac) ;
+      else: inherit;
+  );
+  --h3-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-cyan) ;
+      else: inherit;
+  );
+  --h4-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-pink) ;
+      else: inherit;
+  );
+  --h5-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-lime-green) ;
+      else: inherit;
+  );
+  --h6-color: if(
+    style(--flexcyon-coloured-headings: true): var(--flexcyon-yellow) ;
+      else: inherit;
+  );
+  --h1-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 2px 2px 4px var(--h1-color) ;
+      else: unset;
+  );
+  --h2-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 1.75px 1.75px 3.5px
+      var(--h2-color) ; else: unset;
+  );
+  --h3-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 1.5px 1.5px 3px
+      var(--h3-color) ; else: unset;
+  );
+  --h4-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 1.25px 1.25px 2.5px
+      var(--h4-color) ; else: unset;
+  );
+  --h5-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 1px 1px 2px var(--h5-color) ;
+      else: unset;
+  );
+  --h6-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 0.75px 0.75px 1.5px
+      var(--h6-color) ; else: unset;
+  );
+  --flexcyon-h1-underline-enabled: false;
+  --flexcyon-h2-underline-enabled: false;
+  --flexcyon-h3-underline-enabled: false;
+  --flexcyon-h4-underline-enabled: false;
+  --flexcyon-h5-underline-enabled: false;
+  --flexcyon-h6-underline-enabled: false;
+  --h1-border-btm: if(
+    style(--flexcyon-h1-underline-enabled: true): calc(
+        (var(--h1-weight) - 200) / 100 * 1px
+      )
+      solid var(--h1-color) ; else: unset;
+  );
+  --h2-border-btm: if(
+    style(--flexcyon-h2-underline-enabled: true): calc(
+        (var(--h2-weight) - 200) / 100 * 1px
+      )
+      solid var(--h2-color) ; else: unset;
+  );
+  --h3-border-btm: if(
+    style(--flexcyon-h3-underline-enabled: true): calc(
+        (var(--h3-weight) - 200) / 100 * 1px
+      )
+      solid var(--h3-color) ; else: unset;
+  );
+  --h4-border-btm: if(
+    style(--flexcyon-h4-underline-enabled: true): calc(
+        (var(--h4-weight) - 200) / 100 * 1px
+      )
+      solid var(--h4-color) ; else: unset;
+  );
+  --h5-border-btm: if(
+    style(--flexcyon-h5-underline-enabled: true): calc(
+        (var(--h5-weight) - 200) / 100 * 1px
+      )
+      solid var(--h5-color) ; else: unset;
+  );
+  --h6-border-btm: if(
+    style(--flexcyon-h6-underline-enabled: true): calc(
+        (var(--h6-weight) - 200) / 100 * 1px
+      )
+      solid var(--h6-color) ; else: unset;
+  );
+  --flexcyon-cm-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): none; else: unset;
+  );
+  --h1-shadow: none;
+  --h1-shadow: if(
+    style(--flexcyon-headings-glow-enabled: true): 2px 2px 4px var(--h1-color) ;
+      else: inherit;
+  );
+  --flexcyon-headings-indicator-h1: false;
+  --flexcyon-headings-indicator-h2: false;
+  --flexcyon-headings-indicator-h3: false;
+  --flexcyon-headings-indicator-h4: false;
+  --flexcyon-headings-indicator-h5: false;
+  --flexcyon-headings-indicator-h6: false;
+  --flexcyon-head-ind-h1-disp: none;
+  --flexcyon-head-ind-h1-disp: if(
+    style(--flexcyon-headings-indicator-h1: false): none; else: unset;
+  );
+  --flexcyon-head-ind-h2-disp: none;
+  --flexcyon-head-ind-h2-disp: if(
+    style(--flexcyon-headings-indicator-h2: false): none; else: unset;
+  );
+  --flexcyon-head-ind-h3-disp: none;
+  --flexcyon-head-ind-h3-disp: if(
+    style(--flexcyon-headings-indicator-h3: false): none; else: unset;
+  );
+  --flexcyon-head-ind-h4-disp: none;
+  --flexcyon-head-ind-h4-disp: if(
+    style(--flexcyon-headings-indicator-h4: false): none; else: unset;
+  );
+  --flexcyon-head-ind-h5-disp: none;
+  --flexcyon-head-ind-h5-disp: if(
+    style(--flexcyon-headings-indicator-h5: false): none; else: unset;
+  );
+  --flexcyon-head-ind-h6-disp: none;
+  --flexcyon-head-ind-h6-disp: if(
+    style(--flexcyon-headings-indicator-h6: false): none; else: unset;
+  );
+}
+body .cm-formatting-header {
+  text-shadow: none;
+}
+body h1,
+body .cm-header-1 {
+  text-shadow: var(--h1-shadow);
+  border-block-end: var(--h1-border-btm);
+}
+body h2,
+body .cm-header-2 {
+  text-shadow: var(--h2-shadow);
+  border-block-end: var(--h2-border-btm);
+}
+body h3,
+body .cm-header-3 {
+  text-shadow: var(--h3-shadow);
+  border-block-end: var(--h3-border-btm);
+}
+body h4,
+body .cm-header-4 {
+  text-shadow: var(--h4-shadow);
+  border-block-end: var(--h4-border-btm);
+}
+body h5,
+body .cm-header-5 {
+  text-shadow: var(--h5-shadow);
+  border-block-end: var(--h5-border-btm);
+}
+body h6,
+body .cm-header-6 {
+  text-shadow: var(--h6-shadow);
+  border-block-end: var(--h6-border-btm);
+}
+body .cm-formatting-header {
+  text-shadow: var(--flexcyon-cm-shadow);
+}
+body h1:not(:hover)::before,
+body .cm-header-1::before {
+  position: relative;
+  content: "h1";
+  color: var(--h1-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h1-disp);
+}
+body h2:not(:hover)::before,
+body .cm-header-2::before {
+  position: relative;
+  content: "h2";
+  color: var(--h2-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h2-disp);
+}
+body h3:not(:hover)::before,
+body .cm-header-3::before {
+  position: relative;
+  content: "h3";
+  color: var(--h3-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h3-disp);
+}
+body h4:not(:hover)::before,
+body .cm-header-4::before {
+  position: relative;
+  content: "h4";
+  color: var(--h4-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h4-disp);
+}
+body h5:not(:hover)::before,
+body .cm-header-5::before {
+  position: relative;
+  content: "h5";
+  color: var(--h5-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h5-disp);
+}
+body h6:not(:hover)::before,
+body .cm-header-6::before {
+  position: relative;
+  content: "h6";
+  color: var(--h6-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: var(--flexcyon-head-ind-h6-disp);
 }
 
-body.flexcyon-headings-coloured-enabled {
+body.flexcyon-legacy-h1-underline-enabled h1,
+body.flexcyon-legacy-h1-underline-enabled .cm-header-1 {
+  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
+    var(--h1-color);
+}
+
+body.flexcyon-legacy-h2-underline-enabled h2,
+body.flexcyon-legacy-h2-underline-enabled .cm-header-2 {
+  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
+    var(--h2-color);
+}
+
+body.flexcyon-legacy-h3-underline-enabled h3,
+body.flexcyon-legacy-h3-underline-enabled .cm-header-3 {
+  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
+    var(--h3-color);
+}
+
+body.flexcyon-legacy-h4-underline-enabled h4,
+body.flexcyon-legacy-h4-underline-enabled .cm-header-4 {
+  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
+    var(--h4-color);
+}
+
+body.flexcyon-legacy-h5-underline-enabled h5,
+body.flexcyon-legacy-h5-underline-enabled .cm-header-5 {
+  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
+    var(--h5-color);
+}
+
+body.flexcyon-legacy-h6-underline-enabled h6,
+body.flexcyon-legacy-h6-underline-enabled .cm-header-6 {
+  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
+    var(--h6-color);
+}
+
+.flexcyon-legacy-headings-indicator-h1
+  .workspace-leaf-content[data-type="markdown"]
+  h1:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h1
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-1::before {
+  position: relative;
+  content: "h1";
+  color: var(--h1-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.flexcyon-legacy-headings-indicator-h2
+  .workspace-leaf-content[data-type="markdown"]
+  h2:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h2
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-2::before {
+  position: relative;
+  content: "h2";
+  color: var(--h2-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.flexcyon-legacy-headings-indicator-h3
+  .workspace-leaf-content[data-type="markdown"]
+  h3:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h3
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-3::before {
+  position: relative;
+  content: "h3";
+  color: var(--h3-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.flexcyon-legacy-headings-indicator-h4
+  .workspace-leaf-content[data-type="markdown"]
+  h4:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h4
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-4::before {
+  position: relative;
+  content: "h4";
+  color: var(--h4-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.flexcyon-legacy-headings-indicator-h5
+  .workspace-leaf-content[data-type="markdown"]
+  h5:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h5
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-5::before {
+  position: relative;
+  content: "h5";
+  color: var(--h5-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.flexcyon-legacy-headings-indicator-h6
+  .workspace-leaf-content[data-type="markdown"]
+  h6:not(:hover)::before,
+.flexcyon-legacy-headings-indicator-h6
+  .workspace-leaf-content[data-type="markdown"]
+  .cm-header-6::before {
+  position: relative;
+  content: "h6";
+  color: var(--h6-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h1:not(:hover)::before,
+.headings-indicator-all .cm-header-1::before,
+.headings-indicator-h1 h1:not(:hover)::before,
+.headings-indicator-h1 .cm-header-1::before {
+  position: relative;
+  content: "h1";
+  color: var(--h1-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h2:not(:hover)::before,
+.headings-indicator-all .cm-header-2::before,
+.headings-indicator-h2 h2:not(:hover)::before,
+.headings-indicator-h2 .cm-header-2::before {
+  position: relative;
+  content: "h2";
+  color: var(--h2-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h3:not(:hover)::before,
+.headings-indicator-all .cm-header-3::before,
+.headings-indicator-h3 h3:not(:hover)::before,
+.headings-indicator-h3 .cm-header-3::before {
+  position: relative;
+  content: "h3";
+  color: var(--h3-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h4:not(:hover)::before,
+.headings-indicator-all .cm-header-4::before,
+.headings-indicator-h4 h4:not(:hover)::before,
+.headings-indicator-h4 .cm-header-4::before {
+  position: relative;
+  content: "h4";
+  color: var(--h4-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h5:not(:hover)::before,
+.headings-indicator-all .cm-header-5::before,
+.headings-indicator-h5 h5:not(:hover)::before,
+.headings-indicator-h5 .cm-header-5::before {
+  position: relative;
+  content: "h5";
+  color: var(--h5-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+.headings-indicator-all h6:not(:hover)::before,
+.headings-indicator-all .cm-header-6::before,
+.headings-indicator-h6 h6:not(:hover)::before,
+.headings-indicator-h6 .cm-header-6::before {
+  position: relative;
+  content: "h6";
+  color: var(--h6-color);
+  opacity: calc(var(--dimmed) + 0.25);
+  font-size: var(--font-ui-medium);
+  padding-right: 8px;
+  display: unset;
+}
+
+body.flexcyon-legacy-headings-coloured-enabled {
   --h1-color: var(--flexcyon-blue);
   --h2-color: var(--flexcyon-purple-lilac);
   --h3-color: var(--flexcyon-cyan);
@@ -497,170 +945,32 @@ body.flexcyon-headings-coloured-enabled {
   --h6-color: var(--flexcyon-yellow);
 }
 
-body.flexcyon-headings-glow-enabled h1,
-body.flexcyon-headings-glow-enabled .cm-header-1 {
+body.flexcyon-legacy-headings-glow-enabled h1,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-1 {
   text-shadow: 2px 2px 4px var(--h1-color);
 }
-body.flexcyon-headings-glow-enabled h2,
-body.flexcyon-headings-glow-enabled .cm-header-2 {
+body.flexcyon-legacy-headings-glow-enabled h2,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-2 {
   text-shadow: 1.75px 1.75px 3.5px var(--h2-color);
 }
-body.flexcyon-headings-glow-enabled h3,
-body.flexcyon-headings-glow-enabled .cm-header-3 {
+body.flexcyon-legacy-headings-glow-enabled h3,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-3 {
   text-shadow: 1.5px 1.5px 3px var(--h3-color);
 }
-body.flexcyon-headings-glow-enabled h4,
-body.flexcyon-headings-glow-enabled .cm-header-4 {
+body.flexcyon-legacy-headings-glow-enabled h4,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-4 {
   text-shadow: 1.25px 1.25px 2.5px var(--h4-color);
 }
-body.flexcyon-headings-glow-enabled h5,
-body.flexcyon-headings-glow-enabled .cm-header-5 {
+body.flexcyon-legacy-headings-glow-enabled h5,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-5 {
   text-shadow: 1px 1px 2px var(--h5-color);
 }
-body.flexcyon-headings-glow-enabled h6,
-body.flexcyon-headings-glow-enabled .cm-header-6 {
+body.flexcyon-legacy-headings-glow-enabled h6,
+body.flexcyon-legacy-headings-glow-enabled .cm-header-6 {
   text-shadow: 0.75px 0.75px 1.5px var(--h6-color);
 }
-body.flexcyon-headings-glow-enabled .cm-formatting-header {
+body.flexcyon-legacy-headings-glow-enabled .cm-formatting-header {
   text-shadow: none;
-}
-
-body.flexcyon-h1-underline-enabled h1 {
-  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
-    var(--h1-color);
-}
-
-body.flexcyon-h2-underline-enabled h2 {
-  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
-    var(--h2-color);
-}
-
-body.flexcyon-h3-underline-enabled h3 {
-  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
-    var(--h3-color);
-}
-
-body.flexcyon-h4-underline-enabled h4 {
-  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
-    var(--h4-color);
-}
-
-body.flexcyon-h5-underline-enabled h5 {
-  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
-    var(--h5-color);
-}
-
-body.flexcyon-h6-underline-enabled h6 {
-  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
-    var(--h6-color);
-}
-
-.headings-indicator-all h1:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-1::before,
-.headings-indicator-h1 h1:not(:hover)::before,
-.headings-indicator-h1 .HyperMD-header-1::before,
-.flexcyon-headings-indicator-h1
-  .workspace-leaf-content[data-type="markdown"]
-  h1:not(:hover)::before,
-.flexcyon-headings-indicator-h1
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-1::before {
-  position: relative;
-  content: "h1";
-  color: var(--h1-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
-}
-
-.headings-indicator-all h2:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-2::before,
-.headings-indicator-h2 h2:not(:hover)::before,
-.headings-indicator-h2 .HyperMD-header-2::before,
-.flexcyon-headings-indicator-h2
-  .workspace-leaf-content[data-type="markdown"]
-  h2:not(:hover)::before,
-.flexcyon-headings-indicator-h2
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-2::before {
-  position: relative;
-  content: "h2";
-  color: var(--h2-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
-}
-
-.headings-indicator-all h3:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-3::before,
-.headings-indicator-h3 h3:not(:hover)::before,
-.headings-indicator-h3 .HyperMD-header-3::before,
-.flexcyon-headings-indicator-h3
-  .workspace-leaf-content[data-type="markdown"]
-  h3:not(:hover)::before,
-.flexcyon-headings-indicator-h3
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-3::before {
-  position: relative;
-  content: "h3";
-  color: var(--h3-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
-}
-
-.headings-indicator-all h4:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-4::before,
-.headings-indicator-h4 h4:not(:hover)::before,
-.headings-indicator-h4 .HyperMD-header-4::before,
-.flexcyon-headings-indicator-h4
-  .workspace-leaf-content[data-type="markdown"]
-  h4:not(:hover)::before,
-.flexcyon-headings-indicator-h4
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-4::before {
-  position: relative;
-  content: "h4";
-  color: var(--h4-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
-}
-
-.headings-indicator-all h5:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-5::before,
-.headings-indicator-h5 h5:not(:hover)::before,
-.headings-indicator-h5 .HyperMD-header-5::before,
-.flexcyon-headings-indicator-h5
-  .workspace-leaf-content[data-type="markdown"]
-  h5:not(:hover)::before,
-.flexcyon-headings-indicator-h5
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-5::before {
-  position: relative;
-  content: "h5";
-  color: var(--h5-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
-}
-
-.headings-indicator-all h6:not(:hover)::before,
-.headings-indicator-all .HyperMD-header-6::before,
-.headings-indicator-h6 h6:not(:hover)::before,
-.headings-indicator-h6 .HyperMD-header-6::before,
-.flexcyon-headings-indicator-h6
-  .workspace-leaf-content[data-type="markdown"]
-  h6:not(:hover)::before,
-.flexcyon-headings-indicator-h6
-  .workspace-leaf-content[data-type="markdown"]
-  .HyperMD-header-6::before {
-  position: relative;
-  content: "h6";
-  color: var(--h6-color);
-  opacity: calc(var(--dimmed) + 0.25);
-  font-size: var(--font-ui-medium);
-  padding-right: 8px;
 }
 
 body {
@@ -702,8 +1012,9 @@ body {
   --code-punctuation: var(--flexcyon-purple-lilac);
   --code-string: var(--flexcyon-lime-green);
   --code-tag: var(--flexcyon-base-grey-dark);
-  --flexcyon-code-file-ext-prefix: ".";
   --flexcyon-code-file-ext-font-w: 500;
+  --flexcyon-codeblock-fmt-ext: lowercase;
+  --flexcyon-code-file-ext-prefix: ".";
 }
 body .cm-s-obsidian span.cm-inline-code {
   color: var(--flexcyon-orange);
@@ -726,6 +1037,10 @@ body
     .cm-comment.cm-link:hover
   ) {
   text-decoration: none;
+}
+body .HyperMD-codeblock span.code-block-flair {
+  text-transform: var(--flexcyon-codeblock-fmt-ext);
+  font-weight: var(--flexcyon-code-file-ext-font-w);
 }
 
 mark {
@@ -803,16 +1118,6 @@ body.flexcyon-syntax-monochrome .cm-def {
   color: var(--text-normal);
 }
 
-body .HyperMD-codeblock span.code-block-flair {
-  font-weight: var(--flexcyon-code-file-ext-font-w);
-}
-
-body.flexcyon-flex-max-mode .HyperMD-codeblock span.code-block-flair,
-body.flexcyon-codeblock-fmt-ext .HyperMD-codeblock span.code-block-flair {
-  text-transform: lowercase;
-}
-
-body.flexcyon-flex-max-mode .HyperMD-codeblock span.code-block-flair::before,
 body.flexcyon-codeblock-prefix-ext
   .HyperMD-codeblock
   span.code-block-flair::before {
@@ -2535,304 +2840,11 @@ body.theme-light {
   --list-marker-color-collapsed: var(--flexcyon-lime-green);
 }
 
-body.flexcyon-numbered-list-none {
-  --list-numbered-style: none;
-}
-body.flexcyon-numbered-list-none ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-disc {
-  --list-numbered-style: disc;
-}
-body.flexcyon-numbered-list-disc ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-circle {
-  --list-numbered-style: circle;
-}
-body.flexcyon-numbered-list-circle ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-square {
-  --list-numbered-style: square;
-}
-body.flexcyon-numbered-list-square ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-decimal {
-  --list-numbered-style: decimal;
-}
-body.flexcyon-numbered-list-decimal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-cjk-decimal {
-  --list-numbered-style: cjk-decimal;
-}
-body.flexcyon-numbered-list-cjk-decimal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-decimal-leading-zero {
-  --list-numbered-style: decimal-leading-zero;
-}
-body.flexcyon-numbered-list-decimal-leading-zero ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lower-roman {
-  --list-numbered-style: lower-roman;
-}
-body.flexcyon-numbered-list-lower-roman ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-upper-roman {
-  --list-numbered-style: upper-roman;
-}
-body.flexcyon-numbered-list-upper-roman ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lower-greek {
-  --list-numbered-style: lower-greek;
-}
-body.flexcyon-numbered-list-lower-greek ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lower-alpha {
-  --list-numbered-style: lower-alpha;
-}
-body.flexcyon-numbered-list-lower-alpha ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lower-latin {
-  --list-numbered-style: lower-latin;
-}
-body.flexcyon-numbered-list-lower-latin ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-upper-alpha {
-  --list-numbered-style: upper-alpha;
-}
-body.flexcyon-numbered-list-upper-alpha ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-upper-latin {
-  --list-numbered-style: upper-latin;
-}
-body.flexcyon-numbered-list-upper-latin ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-arabic-indic {
-  --list-numbered-style: arabic-indic;
-}
-body.flexcyon-numbered-list-arabic-indic ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-armenian {
-  --list-numbered-style: armenian;
-}
-body.flexcyon-numbered-list-armenian ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-bengali {
-  --list-numbered-style: bengali;
-}
-body.flexcyon-numbered-list-bengali ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-cambodian {
-  --list-numbered-style: cambodian;
-}
-body.flexcyon-numbered-list-cambodian ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-khmer {
-  --list-numbered-style: khmer;
-}
-body.flexcyon-numbered-list-khmer ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-cjk-earthly-branch {
-  --list-numbered-style: cjk-earthly-branch;
-}
-body.flexcyon-numbered-list-cjk-earthly-branch ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-cjk-heavenly-branch {
-  --list-numbered-style: cjk-heavenly-branch;
-}
-body.flexcyon-numbered-list-cjk-heavenly-branch ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-cjk-ideographic {
-  --list-numbered-style: cjk-ideographic;
-}
-body.flexcyon-numbered-list-cjk-ideographic ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-devanagari {
-  --list-numbered-style: devanagari;
-}
-body.flexcyon-numbered-list-devanagari ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-ethiopic-numeric {
-  --list-numbered-style: ethiopic-numeric;
-}
-body.flexcyon-numbered-list-ethiopic-numeric ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-georgian {
-  --list-numbered-style: georgian;
-}
-body.flexcyon-numbered-list-georgian ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-gujarati {
-  --list-numbered-style: gujarati;
-}
-body.flexcyon-numbered-list-gujarati ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-gurmukhi {
-  --list-numbered-style: gurmukhi;
-}
-body.flexcyon-numbered-list-gurmukhi ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-hebrew {
-  --list-numbered-style: hebrew;
-}
-body.flexcyon-numbered-list-hebrew ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-hiragana {
-  --list-numbered-style: hiragana;
-}
-body.flexcyon-numbered-list-hiragana ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-hiragana-iroha {
-  --list-numbered-style: hiragana-iroha;
-}
-body.flexcyon-numbered-list-hiragana-iroha ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-japanese-formal {
-  --list-numbered-style: japanese-formal;
-}
-body.flexcyon-numbered-list-japanese-formal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-japanese-informal {
-  --list-numbered-style: japanese-informal;
-}
-body.flexcyon-numbered-list-japanese-informal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-kannada {
-  --list-numbered-style: kannada;
-}
-body.flexcyon-numbered-list-kannada ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-kannada-iroha {
-  --list-numbered-style: kannada-iroha;
-}
-body.flexcyon-numbered-list-kannada-iroha ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-katakana {
-  --list-numbered-style: katakana;
-}
-body.flexcyon-numbered-list-katakana ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-katakana-iroha {
-  --list-numbered-style: katakana-iroha;
-}
-body.flexcyon-numbered-list-katakana-iroha ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-korean-hangul-formal {
-  --list-numbered-style: korean-hangul-formal;
-}
-body.flexcyon-numbered-list-korean-hangul-formal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-korean-hanja-formal {
-  --list-numbered-style: korean-hanja-formal;
-}
-body.flexcyon-numbered-list-korean-hanja-formal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-korean-hanja-informal {
-  --list-numbered-style: korean-hanja-informal;
-}
-body.flexcyon-numbered-list-korean-hanja-informal ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lao {
-  --list-numbered-style: lao;
-}
-body.flexcyon-numbered-list-lao ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-lower-armenian {
-  --list-numbered-style: lower-armenian;
-}
-body.flexcyon-numbered-list-lower-armenian ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-malayalam {
-  --list-numbered-style: malayalam;
-}
-body.flexcyon-numbered-list-malayalam ol {
-  list-style-position: inside;
-}
-
-body.flexcyon-numbered-list-mongolian {
-  --list-numbered-style: mongolian;
-}
-body.flexcyon-numbered-list-mongolian ol {
+body {
+  --flexcyon-default-ol-style: decimal;
+  --list-numbered-style: var(--flexcyon-default-ol-style);
+}
+body ol {
   list-style-position: inside;
 }
 
@@ -10660,12 +10672,12 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon).<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). There are some **legacy style settings** options kept for backwards compatibility, but if given the choice an option's new equivalent should be preferred.<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
   -
     title: Documentation 
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请[单击此处](https://flexcyon.github.io/docs-en/zh/)查看中文文档。<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h3>A caveat of Style Settings is that it does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect.</h3><br><br><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). <br><br> 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。<br><br>For your own sanity when it comes to searching for settings, the Settings Search plugin is highly recommended.<br><br> <h5>A caveat of Style Settings is that it sometimes does not properly unload CSS classes. Hence, you would need to reload or restart your app for certain customisations to take effect. I am working to improve this.</h5><h4>Settings you would need to do this for include the status bar, workspace layouts, animations (and a few others)</h4>
   -
     title: Modes
     type: heading
@@ -10930,12 +10942,35 @@ settings:
     type: heading
     level: 5
     collapsed: true
-  - title: Enable coloured headings
-    id: flexcyon-headings-coloured-enabled
-    type: class-toggle
-    default: true
+
+  - id: flexcyon-coloured-headings
+    title: Enable coloured headings
+    type: variable-select
+    default: "true"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
   - title: Enable soft glow for headings
     id: flexcyon-headings-glow-enabled
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+
+  - title: Legacy Enable coloured headings
+    id: flexcyon-legacy-headings-coloured-enabled
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
+    type: class-toggle
+    default: false
+  - title: Legacy Enable soft glow for headings
+    id: flexcyon-legacy-headings-glow-enabled
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
 
@@ -10945,6 +10980,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 1
+    id: flexcyon-legacy-headings-indicator-h1
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 1 font size
@@ -10962,6 +11007,15 @@ settings:
     default: 1.2
   - title: Enable underline for Heading 1
     id: flexcyon-h1-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 1
+    id: flexcyon-legacy-h1-underline-enabled
     type: class-toggle
     default: false
 
@@ -10971,6 +11025,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 2
     id: flexcyon-headings-indicator-h2
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 2
+    id: flexcyon-legacy-headings-indicator-h2
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 2 font size
@@ -10986,6 +11050,19 @@ settings:
     id: h2-line-height
     type: variable-number
     default: 1.2
+  - title: Enable underline for Heading 2
+    id: flexcyon-h2-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 2
+    id: flexcyon-legacy-h2-underline-enabled
+    type: class-toggle
+    default: false
 
   - title: Heading 3
     type: heading
@@ -10993,6 +11070,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 3
     id: flexcyon-headings-indicator-h3
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 3
+    id: flexcyon-legacy-headings-indicator-h3
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 3 font size
@@ -11010,6 +11097,15 @@ settings:
     default: 1.3
   - title: Enable underline for Heading 3
     id: flexcyon-h3-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 3
+    id: flexcyon-legacy-h3-underline-enabled
     type: class-toggle
     default: false
 
@@ -11019,6 +11115,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 4
     id: flexcyon-headings-indicator-h4
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 4
+    id: flexcyon-legacy-headings-indicator-h4
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 4 font size
@@ -11036,6 +11142,15 @@ settings:
     default: 1.4
   - title: Enable underline for Heading 4
     id: flexcyon-h4-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 4
+    id: flexcyon-legacy-h4-underline-enabled
     type: class-toggle
     default: false
 
@@ -11045,6 +11160,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 5
     id: flexcyon-headings-indicator-h5
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 5
+    id: flexcyon-legacy-headings-indicator-h5
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 5 font size
@@ -11062,6 +11187,15 @@ settings:
     default: 1.5
   - title: Enable underline for Heading 5
     id: flexcyon-h5-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 5
+    id: flexcyon-legacy-h5-underline-enabled
     type: class-toggle
     default: false
 
@@ -11071,6 +11205,16 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 6
     id: flexcyon-headings-indicator-h6
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable heading indicators globally for Heading 6
+    id: flexcyon-legacy-headings-indicator-h6
+    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 6 font size
@@ -11088,8 +11232,18 @@ settings:
     default: 1.5
   - title: Enable underline for Heading 6
     id: flexcyon-h6-underline-enabled
+    type: variable-select
+    default: "false"
+    options: 
+      - label: Enable
+        value: "true"
+      - label: Disable
+        value: "false"
+  - title: Legacy Enable underline for Heading 6
+    id: flexcyon-legacy-h6-underline-enabled
     type: class-toggle
     default: false
+
 
   - title: Inline title
     type: heading
@@ -11132,10 +11286,18 @@ settings:
     type: info-text
     markdown: true
     description: Customise the code block file extension, only appears in Live Preview mode
-  - title: Make Code Block File Extension lowercase
+  - title: Set Code Block File Extension Case
     id: flexcyon-codeblock-fmt-ext
-    type: class-toggle
-    default: false
+    type: variable-select
+    default: lowercase
+    options: 
+      - label: Capitalize
+        value: capitalize
+      - label: Uppercase
+        value: uppercase
+      - label: Lowercase
+        value: lowercase
+
   - title: Add Prefix before Code Block File Extension
     id: flexcyon-codeblock-prefix-ext
     type: class-toggle
@@ -11577,125 +11739,124 @@ settings:
     collapsed: true
   - title: Select Default Numbered List Style in Reading Mode
     description: Unfortunately I cannot get it to work within CodeMirror's context, because the output html is not ordered list tags which are easier to style.
-    type: class-select
-    id: theme-variant
-    allowEmpty: false
-    default: flexcyon-numbered-list-decimal
+    type: variable-select
+    id: flexcyon-default-ol-style
+    default: decimal
     options: 
       - label: None
-        value: flexcyon-numbered-list-none
+        value: none
       - label: Disc
-        value: flexcyon-numbered-list-disc
+        value: disc
       - label: Circle
-        value: flexcyon-numbered-list-none
+        value: circle
       - label: Square
-        value: flexcyon-numbered-list-square
+        value: square
       - label: Decimal
-        value: flexcyon-numbered-list-decimal
+        value: decimal
       - label: CJK Decimal
-        value: flexcyon-numbered-list-cjk-decimal
+        value: cjk-decimal
       - label: Decimal Leading Zero
-        value: flexcyon-numbered-list-decimal-leading-zero
+        value: decimal-leading-zero
       - label: Lower Roman
-        value: flexcyon-numbered-list-lower-roman
+        value: lower-roman
       - label: Upper Roman
-        value: flexcyon-numbered-list-upper-roman
+        value: upper-roman
       - label: Lower Greek
-        value: flexcyon-numbered-list-lower-greek
+        value: lower-greek
       - label: Lower Alphabet
-        value: flexcyon-numbered-list-lower-alpha
+        value: lower-alpha
       - label: Lower Latin
-        value: flexcyon-numbered-list-lower-latin
+        value: lower-latin
       - label: Upper Alphabet
-        value: flexcyon-numbered-list-upper-alpha
+        value: upper-alpha
       - label: Upper Latin
-        value: flexcyon-numbered-list-upper-latin
+        value: upper-latin
       - label: Arabic Indic
-        value: flexcyon-numbered-list-arabic-indic
+        value: arabic-indic
       - label: Armenian
-        value: flexcyon-numbered-list-armenian
+        value: armenian
       - label: Bengali
-        value: flexcyon-numbered-list-bengali
+        value: bengali
       - label: Cambodian
-        value: flexcyon-numbered-list-cambodian
+        value: cambodian
       - label: Khmer
-        value: flexcyon-numbered-list-khmer
+        value: khmer
       - label: CJK Earthly Branch
-        value: flexcyon-numbered-list-cjk-earthly-branch
+        value: cjk-earthly-branch
       - label: CJK Heavenly Branch
-        value: flexcyon-numbered-list-cjk-heavenly-branch
+        value: cjk-heavenly-branch
       - label: CJK Ideographic
-        value: flexcyon-numbered-list-cjk-ideographic
+        value: cjk-ideographic
       - label: Devanagari
-        value: flexcyon-numbered-list-davanagari
+        value: davanagari
       - label: Ethiopic Numeric
-        value: flexcyon-numbered-list-ethiopic-numeric
+        value: ethiopic-numeric
       - label: Georgian
-        value: flexcyon-numbered-list-georgian
+        value: georgian
       - label: Gujarati
-        value: flexcyon-numbered-list-gujarati
+        value: gujarati
       - label: Gurmukhi
-        value: flexcyon-numbered-list-gurmukhi
+        value: gurmukhi
       - label: Hebrew
-        value: flexcyon-numbered-list-hebrew
+        value: hebrew
       - label: Hiragana
-        value: flexcyon-numbered-list-hiragana
+        value: hiragana
       - label: Hiragana Iroha
-        value: flexcyon-numbered-list-hiragana-iroha
+        value: hiragana-iroha
       - label: Hiragana Formal
-        value: flexcyon-numbered-list-hiragana-formal
+        value: hiragana-formal
       - label: Japanese Formal
-        value: flexcyon-numbered-list-japanese-formal
+        value: japanese-formal
       - label: Japanese Informal
-        value: flexcyon-numbered-list-japanese-informal
+        value: japanese-informal
       - label: Kannada
-        value: flexcyon-numbered-list-kannada
+        value: kannada
       - label: Kannada Iroha
-        value: flexcyon-numbered-list-kannada-iroha
+        value: kannada-iroha
       - label: Katakana
-        value: flexcyon-numbered-list-katakana
+        value: katakana
       - label: Katakana Iroha
-        value: flexcyon-numbered-list-katakana-iroha
+        value: katakana-iroha
       - label: Korean Hangul Formal
-        value: flexcyon-numbered-list-korean-hangul-formal
+        value: korean-hangul-formal
       - label: Korean Hanja Formal
-        value: flexcyon-numbered-list-korean-hanja-formal
+        value: korean-hanja-formal
       - label: Korean Hanja Informal
-        value: flexcyon-numbered-list-korean-hanja-inforal
+        value: korean-hanja-inforal
       - label: Lao
-        value: flexcyon-numbered-list-lao
+        value: lao
       - label: Lower Armenian
-        value: flexcyon-numbered-list-lower-armenian
+        value: lower-armenian
       - label: Malayalam
-        value: flexcyon-numbered-list-malayalam
+        value: malayalam
       - label: Mongolian
-        value: flexcyon-numbered-list-mongolian
+        value: mongolian
       - label: Myanmar
-        value: flexcyon-numbered-list-myanmar
+        value: myanmar
       - label: Oriya
-        value: flexcyon-numbered-list-oriya
+        value: oriya
       - label: Persian
-        value: flexcyon-numbered-list-persian
+        value: persian
       - label: Simplified Chinese Formal
-        value: flexcyon-numbered-list-simplified-chinese-formal
+        value: simplified-chinese-formal
       - label: Simplified Chinese Informal
-        value: flexcyon-numbered-list-simplified-chinese-informal
+        value: simplified-chinese-informal
       - label: Tamil
-        value: flexcyon-numbered-list-tamil
+        value: tamil
       - label: Telugu
-        value: flexcyon-numbered-list-telugu
+        value: telugu
       - label: Thai
-        value: flexcyon-numbered-list-thai
+        value: thai
       - label: Tibetan
-        value: flexcyon-numbered-list-tibetan
+        value: tibetan
+      - label: Traditional Chinese Formal
+        value: traditional-chinese-formal
       - label: Traditional Chinese Informal
-        value: flexcyon-numbered-list-traditional-chinese-informal
-      - label: Traditional Chinese Informal
-        value: flexcyon-numbered-list-traditional-chinese-informal
+        value: traditional-chinese-informal
       - label: Upper Armenian
-        value: flexcyon-numbered-list-upper-armenian
+        value: upper-armenian
       - label: Disclosure Open
-        value: flexcyon-numbered-list-disclosure-open
+        value: disclosure-open
 
   - title: Media
     type: heading

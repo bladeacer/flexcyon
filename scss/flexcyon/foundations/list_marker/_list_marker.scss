@@ -12,55 +12,10 @@ body.theme-light {
   --list-marker-color-collapsed: var(--flexcyon-lime-green);
 }
 
-@mixin default-list-style($style-type) {
-  body.flexcyon-numbered-list-#{$style-type} {
-    --list-numbered-style: #{$style-type};
-    ol {
-      list-style-position: inside;
-    }
+body {
+  --flexcyon-default-ol-style: decimal;
+  --list-numbered-style: var(--flexcyon-default-ol-style);
+  ol {
+    list-style-position: inside;
   }
 }
-
-@include default-list-style(none);
-@include default-list-style(disc);
-@include default-list-style(circle);
-@include default-list-style(square);
-@include default-list-style(decimal);
-@include default-list-style(cjk-decimal);
-@include default-list-style(decimal-leading-zero);
-@include default-list-style(lower-roman);
-@include default-list-style(upper-roman);
-@include default-list-style(lower-greek);
-@include default-list-style(lower-alpha);
-@include default-list-style(lower-latin);
-@include default-list-style(upper-alpha);
-@include default-list-style(upper-latin);
-@include default-list-style(arabic-indic);
-@include default-list-style(armenian);
-@include default-list-style(bengali);
-@include default-list-style(cambodian);
-@include default-list-style(khmer);
-@include default-list-style(cjk-earthly-branch);
-@include default-list-style(cjk-heavenly-branch);
-@include default-list-style(cjk-ideographic);
-@include default-list-style(devanagari);
-@include default-list-style(ethiopic-numeric);
-@include default-list-style(georgian);
-@include default-list-style(gujarati);
-@include default-list-style(gurmukhi);
-@include default-list-style(hebrew);
-@include default-list-style(hiragana);
-@include default-list-style(hiragana-iroha);
-@include default-list-style(japanese-formal);
-@include default-list-style(japanese-informal);
-@include default-list-style(kannada);
-@include default-list-style(kannada-iroha);
-@include default-list-style(katakana);
-@include default-list-style(katakana-iroha);
-@include default-list-style(korean-hangul-formal);
-@include default-list-style(korean-hanja-formal);
-@include default-list-style(korean-hanja-informal);
-@include default-list-style(lao);
-@include default-list-style(lower-armenian);
-@include default-list-style(malayalam);
-@include default-list-style(mongolian);

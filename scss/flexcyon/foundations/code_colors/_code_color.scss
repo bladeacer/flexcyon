@@ -32,8 +32,9 @@ body {
   --code-string: var(--flexcyon-lime-green);
   --code-tag: var(--flexcyon-base-grey-dark);
 
-  --flexcyon-code-file-ext-prefix: ".";
   --flexcyon-code-file-ext-font-w: 500;
+  --flexcyon-codeblock-fmt-ext: lowercase;
+  --flexcyon-code-file-ext-prefix: ".";
 
   .cm-s-obsidian span.cm-inline-code {
     color: var(--flexcyon-orange);
@@ -57,6 +58,11 @@ body {
     .cm-comment.cm-link:hover
   ) {
     text-decoration: none;
+  }
+
+  .HyperMD-codeblock span.code-block-flair {
+    text-transform: var(--flexcyon-codeblock-fmt-ext);
+    font-weight: var(--flexcyon-code-file-ext-font-w);
   }
 }
 
@@ -141,20 +147,6 @@ body.flexcyon-syntax-monochrome {
   }
 }
 
-body {
-  .HyperMD-codeblock span.code-block-flair {
-    font-weight: var(--flexcyon-code-file-ext-font-w);
-  }
-}
-
-body.flexcyon-flex-max-mode,
-body.flexcyon-codeblock-fmt-ext {
-  .HyperMD-codeblock span.code-block-flair {
-    text-transform: lowercase;
-  }
-}
-
-body.flexcyon-flex-max-mode,
 body.flexcyon-codeblock-prefix-ext {
   .HyperMD-codeblock span.code-block-flair::before {
     content: var(--flexcyon-code-file-ext-prefix);
