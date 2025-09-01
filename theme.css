@@ -4618,6 +4618,50 @@ body .suggestion-item.mod-complex.is-selected .suggestion-prefix {
   opacity: unset;
 }
 
+/* From https://css-loaders.com/wobbling/ */
+body > .progress-bar-container .progress-bar-indicator {
+  height: 97.0818px;
+  width: 60px;
+  color: var(--text-accent);
+  background:
+    repeating-linear-gradient(
+      calc(30deg + var(--flexcyon-editor-bg-rotation)),
+      currentColor,
+      currentColor 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    ),
+    repeating-linear-gradient(
+      calc(150deg + var(--flexcyon-editor-bg-rotation)),
+      currentColor,
+      currentColor 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    );
+  animation: buffer 0.65s infinite;
+  transform-origin: 50% 0px;
+}
+body > .progress-bar-container .progress-bar-indicator > * {
+  display: none;
+}
+
+@keyframes buffer {
+  0% {
+    background-position:
+      0%,
+      0 0;
+  }
+  50% {
+    background-position:
+      25%,
+      12.5px 0;
+  }
+  100% {
+    background-position:
+      50%,
+      12.5px 12.5px;
+  }
+}
 body {
   --flexcyon-repl-active-line-str: "->";
 }
