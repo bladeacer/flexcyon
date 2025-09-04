@@ -3,11 +3,22 @@
 
 body.theme-dark,
 body.theme-light {
-  // --text-highlight-bg: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.3));
   --text-highlight-bg: transparent;
 }
 
+body.theme-dark {
+  --text-normal: #d3d5d3;
+}
+
+body.theme-light {
+  --text-normal: #080808;
+}
+
 body {
+  --flexcyon-w-spacing: 0px;
+  --flexcyon-l-spacing: 0px;
+  word-spacing: var(--flexcyon-w-spacing);
+  letter-spacing: var(--flexcyon-l-spacing);
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
   text-underline-offset: 0.1em;
@@ -15,12 +26,14 @@ body {
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.3;
 
-  --text-normal: var(--flexcyon-text-normal);
+  --flexcyon-text-muted: #6f768599;
   --text-muted: color-mix(
     in hsl,
     var(--flexcyon-text-muted),
-    var(--flexcyon-text-normal)
+    var(--text-normal)
   );
   --text-faint: var(--flexcyon-text-muted);
 
@@ -41,8 +54,6 @@ body {
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
 
-  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-  --flexcyon-text-muted: #6f768599;
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;

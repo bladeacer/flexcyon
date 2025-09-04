@@ -554,6 +554,11 @@ body {
     style(--flexcyon-headings-glow-enabled: true): 0.75px 0.75px 1.5px
       var(--h6-color) ; else: unset;
   );
+}
+body .cm-formatting-header {
+  text-shadow: none;
+}
+body {
   --flexcyon-h1-underline-enabled: false;
   --flexcyon-h2-underline-enabled: false;
   --flexcyon-h3-underline-enabled: false;
@@ -596,9 +601,46 @@ body {
       )
       solid var(--h6-color) ; else: unset;
   );
+}
+body h1,
+body .cm-header-1 {
+  text-shadow: var(--h1-shadow);
+  border-block-end: var(--h1-border-btm);
+}
+body h2,
+body .cm-header-2 {
+  text-shadow: var(--h2-shadow);
+  border-block-end: var(--h2-border-btm);
+}
+body h3,
+body .cm-header-3 {
+  text-shadow: var(--h3-shadow);
+  border-block-end: var(--h3-border-btm);
+}
+body h4,
+body .cm-header-4 {
+  text-shadow: var(--h4-shadow);
+  border-block-end: var(--h4-border-btm);
+}
+body h5,
+body .cm-header-5 {
+  text-shadow: var(--h5-shadow);
+  border-block-end: var(--h5-border-btm);
+}
+body h6,
+body .cm-header-6 {
+  text-shadow: var(--h6-shadow);
+  border-block-end: var(--h6-border-btm);
+}
+body {
   --flexcyon-cm-shadow: if(
     style(--flexcyon-headings-glow-enabled: true): none; else: unset;
   );
+}
+body .cm-formatting-header {
+  text-shadow: var(--flexcyon-cm-shadow);
+}
+body {
   --h1-shadow: none;
   --h1-shadow: if(
     style(--flexcyon-headings-glow-enabled: true): 2px 2px 4px var(--h1-color) ;
@@ -634,42 +676,6 @@ body {
   --flexcyon-head-ind-h6-disp: if(
     style(--flexcyon-headings-indicator-h6: false): none; else: unset;
   );
-}
-body .cm-formatting-header {
-  text-shadow: none;
-}
-body h1,
-body .cm-header-1 {
-  text-shadow: var(--h1-shadow);
-  border-block-end: var(--h1-border-btm);
-}
-body h2,
-body .cm-header-2 {
-  text-shadow: var(--h2-shadow);
-  border-block-end: var(--h2-border-btm);
-}
-body h3,
-body .cm-header-3 {
-  text-shadow: var(--h3-shadow);
-  border-block-end: var(--h3-border-btm);
-}
-body h4,
-body .cm-header-4 {
-  text-shadow: var(--h4-shadow);
-  border-block-end: var(--h4-border-btm);
-}
-body h5,
-body .cm-header-5 {
-  text-shadow: var(--h5-shadow);
-  border-block-end: var(--h5-border-btm);
-}
-body h6,
-body .cm-header-6 {
-  text-shadow: var(--h6-shadow);
-  border-block-end: var(--h6-border-btm);
-}
-body .cm-formatting-header {
-  text-shadow: var(--flexcyon-cm-shadow);
 }
 body h1:not(:hover)::before,
 body .cm-header-1::before {
@@ -4407,18 +4413,32 @@ body.theme-light {
   --text-highlight-bg: transparent;
 }
 
+body.theme-dark {
+  --text-normal: #d3d5d3;
+}
+
+body.theme-light {
+  --text-normal: #080808;
+}
+
 body {
+  --flexcyon-w-spacing: 0px;
+  --flexcyon-l-spacing: 0px;
+  word-spacing: var(--flexcyon-w-spacing);
+  letter-spacing: var(--flexcyon-l-spacing);
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
   text-underline-offset: 0.1em;
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
   --h5-line-height: 1.5;
   --h6-line-height: 1.5;
-  --text-normal: var(--flexcyon-text-normal);
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.3;
+  --flexcyon-text-muted: #6f768599;
   --text-muted: color-mix(
     in hsl,
     var(--flexcyon-text-muted),
-    var(--flexcyon-text-normal)
+    var(--text-normal)
   );
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
@@ -4434,8 +4454,6 @@ body {
   );
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
-  --flexcyon-text-normal: var(--flexcyon-base-grey-light);
-  --flexcyon-text-muted: #6f768599;
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;
@@ -10589,13 +10607,13 @@ body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
   --flexcyon-anim-duration: 0.35s;
-  --modal-border-color: var(--flexcyon-base-02)
-    --toggle-thumb-color: var(--text-on-accent);
+  --modal-border-color: var(--flexcyon-base-02);
+  --toggle-thumb-color: var(--text-on-accent);
   --ribbon-width: 48px;
   --file-line-width: 50rem;
   --vault-name-color: var(--interactive-accent);
-  --ribbon-background-collapsed: var(--ribbon-background)
-    --workspace-background-translucent: unset;
+  --ribbon-background-collapsed: var(--ribbon-background);
+  --workspace-background-translucent: unset;
   --hr-color: #393e48;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
   --flexcyon-cust-hr-str-font-size: 1.11803em;
@@ -10960,12 +10978,38 @@ settings:
     type: heading
     level: 5
     collapsed: true
+  - id: text-normal
+    title: Normal Text color
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: "#080808"
+    default-dark: "#d3d5d3"
   - title: Muted text color
     id: flexcyon-text-muted
     type: variable-color
     opacity: true
     format: hex
     default: "#6f768599"
+  - title: Default line height
+    id: line-height-normal
+    type: variable-number
+    default: 1.5
+  - title: Tight line height
+    description: Used in search results, tree items, tooltips, and other smaller spaces. Description from the Obsidian Developer Docs.
+    id: line-height-tight
+    type: variable-number
+    default: 1.3
+  - title: Default word spacing
+    id: flexcyon-w-spacing
+    type: variable-number
+    default: 0
+    format: px
+  - title: Default letter spacing
+    id: flexcyon-l-spacing
+    type: variable-number
+    default: 0
+    format: px
   - title: Highlight Text Vertical Padding
     id: flexcyon-highlight-verti-padding
     type: variable-number
@@ -13230,14 +13274,14 @@ body.flexcyon-oz-dimmed-file-exts-enabled
   font-size: var(--font-ui-small);
   opacity: var(--dimmed);
 }
+body.flexcyon-flex-max-mode div.oz-nav-file-title div svg,
+body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title div svg {
+  display: none;
+}
 body.flexcyon-flex-max-mode div.oz-nav-file-title,
 body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
-}
-body.flexcyon-flex-max-mode div.oz-nav-file-title div svg,
-body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title div svg {
-  display: none;
 }
 body.flexcyon-flex-max-mode div.oz-nav-file-title .oz-nav-file-title-content,
 body.flexcyon-oz-dimmed-file-exts-enabled
@@ -13460,10 +13504,6 @@ body.flexcyon-workspace-angled-layout
   div,
 body.flexcyon-workspace-angled-layout div.oz-folder-line {
   transform: skewX(-5deg);
-}
-
-.setting-item-control select {
-  width: 80%;
 }
 
 .sr-bg-green {
@@ -13720,7 +13760,6 @@ div.mermaid svg .nodes node * {
 
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
   /* Edge labels */
-  /* Nodes */
 }
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
@@ -13742,10 +13781,11 @@ div.mermaid svg .nodes node * {
   padding-inline: 0.2rem;
   background-color: var(--background-primary) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
+  /* Nodes */
+}
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
   /* Node labels */
-  /* Node default colors */
-  /* Colorize individual nodes with classes */
 }
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
@@ -13763,10 +13803,16 @@ div.mermaid svg .nodes node * {
   p {
   color: var(--text-normal) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
+  /* Node default colors */
+}
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes g :is(*) {
   stroke: var(--text-faint) !important;
   fill: var(--background-secondary) !important;
   fill-opacity: calc(var(--dimmed) - 0.25) !important;
+}
+.mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
+  /* Colorize individual nodes with classes */
 }
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
