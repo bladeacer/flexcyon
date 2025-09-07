@@ -4408,11 +4408,6 @@ body
   stroke: var(--flexcyon-accent);
 }
 
-body.theme-dark,
-body.theme-light {
-  --text-highlight-bg: transparent;
-}
-
 body.theme-dark {
   --text-normal: #d3d5d3;
 }
@@ -4422,6 +4417,7 @@ body.theme-light {
 }
 
 body {
+  --text-highlight-bg: color-mix(in hsl, var(--color-cyan) 20%, transparent);
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
   word-spacing: var(--flexcyon-w-spacing);
@@ -12559,6 +12555,15 @@ settings:
     description: This is the factor of how long the Card View takes to scale depending on tab size. Technically just this value multiplied by the animation duration value.
     type: variable-number
     default: 0.55
+  - title: Bases Cards View
+    type: heading
+    level: 6
+    collapsed: false
+  - title: Bases Table Cell left padding
+    id: flexcyon-bases-td-padding-l
+    type: variable-number
+    default: 2
+    format: px
 
   - title: Others
     type: heading
@@ -13900,6 +13905,7 @@ body {
   --flexcyon-bases-padding-horiz: 16px;
   --flexcyon-bases-padding-verti: 16px;
   --bases-embed-padding: 4px;
+  --flexcyon-bases-td-padding-l: 2px;
 }
 
 .workspace-leaf-content[data-type="bases"] .view-content {
@@ -13980,6 +13986,105 @@ div.bases-cards-cover:not([style*="background-image"]) * {
 
 .bases-cards-label {
   padding: 2px 4px;
+}
+
+.bases-td {
+  padding-left: var(--flexcyon-bases-td-padding-l);
+}
+
+body.flexcyon-flex-max-mode .query-toolbar,
+body.flexcyon-workspace-pl10k-layout .query-toolbar {
+  padding-left: 16px;
+  column-gap: 0px;
+}
+body.flexcyon-flex-max-mode .query-toolbar-item.mod-views,
+body.flexcyon-workspace-pl10k-layout .query-toolbar-item.mod-views {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  padding-left: 6px;
+  background-color: var(--color-base-00);
+}
+body.flexcyon-flex-max-mode .query-toolbar-item.bases-toolbar-result-count span,
+body.flexcyon-workspace-pl10k-layout
+  .query-toolbar-item.bases-toolbar-result-count
+  span {
+  padding: 7px 0px;
+  padding-left: 4px;
+  background-color: var(--color-base-25);
+}
+body.flexcyon-flex-max-mode
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after,
+body.flexcyon-workspace-pl10k-layout
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after {
+  padding: 7px 6px;
+  content: "e";
+  position: relative;
+  width: inherit;
+  height: inherit;
+  color: transparent;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
+  z-index: 2;
+}
+
+body.theme-dark.flexcyon-flex-max-mode .query-toolbar-item.mod-views,
+body.theme-dark.flexcyon-workspace-pl10k-layout .query-toolbar-item.mod-views {
+  background-color: var(--color-base-00);
+}
+body.theme-dark.flexcyon-flex-max-mode
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after,
+body.theme-dark.flexcyon-workspace-pl10k-layout
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after {
+  background-color: var(--color-base-10);
+}
+
+body.theme-light.flexcyon-flex-max-mode .query-toolbar-item.mod-views,
+body.theme-light.flexcyon-workspace-pl10k-layout .query-toolbar-item.mod-views {
+  background-color: var(--color-base-10);
+}
+body.theme-light.flexcyon-flex-max-mode
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after,
+body.theme-light.flexcyon-workspace-pl10k-layout
+  .query-toolbar-item.bases-toolbar-result-count
+  span::after {
+  background-color: var(--color-base-00);
+}
+
+.query-toolbar-menu .bases-query-container {
+  margin-top: 4px;
+}
+
+.query-toolbar-menu .query-toolbar-section-header {
+  color: var(--text-accent);
+}
+.query-toolbar-menu .query-toolbar-section-header span.flair {
+  font-size: var(--font-ui-smaller);
+  color: var(--color-blue);
+  font-weight: 900;
+}
+
+.bases-query-container .filter-row {
+  gap: 12px;
+}
+.bases-query-container .filter-expression {
+  gap: 4px;
+}
+.bases-query-container .filter-group .filter-group-actions {
+  padding-top: 8px;
+}
+.bases-query-container
+  .filter-group
+  .filter-group-header
+  .conjunction.dropdown {
+  font-size: var(--font-ui-medium);
+}
+
+.query-toolbar-menu .query-toolbar-section:not(:last-child) {
+  border-bottom: none;
 }
 
 /* Modifications for banner snippet */

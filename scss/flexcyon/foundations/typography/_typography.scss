@@ -1,11 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme
 //- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
-body.theme-dark,
-body.theme-light {
-  --text-highlight-bg: transparent;
-}
-
 body.theme-dark {
   --text-normal: #d3d5d3;
 }
@@ -15,6 +10,7 @@ body.theme-light {
 }
 
 body {
+  --text-highlight-bg: color-mix(in hsl, var(--color-cyan) 20%, transparent);
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
   word-spacing: var(--flexcyon-w-spacing);

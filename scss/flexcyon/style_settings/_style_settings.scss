@@ -1835,6 +1835,15 @@ settings:
     description: This is the factor of how long the Card View takes to scale depending on tab size. Technically just this value multiplied by the animation duration value.
     type: variable-number
     default: 0.55
+  - title: Bases Cards View
+    type: heading
+    level: 6
+    collapsed: false
+  - title: Bases Table Cell left padding
+    id: flexcyon-bases-td-padding-l
+    type: variable-number
+    default: 2
+    format: px
     
   - title: Others
     type: heading
