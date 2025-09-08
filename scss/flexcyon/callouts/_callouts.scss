@@ -12,7 +12,11 @@ body {
   --flexcyon-callout-flashcard-animation-duration: 0.5s;
   --flexcyon-editor-writing-indentation: 16px;
 
-  --callout-padding: var(--size-4-3) var(--size-4-6);
+  --flexcyon-callout-verti-padding: 12px;
+  --flexcyon-callout-horiz-padding: 24px;
+  --callout-padding: var(--flexcyon-callout-verti-padding)
+    var(--flexcyon-callout-horiz-padding);
+  --callout-radius: 2px;
 
   div.callout {
     .callout-icon {
@@ -30,6 +34,7 @@ body {
   }
 }
 
+div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="tategaki"] {
   div.callout-content {
     writing-mode: vertical-rl;
@@ -68,6 +73,7 @@ div.callout[data-callout-metadata*="tategaki"] {
   }
 }
 
+div.callout[data-callout*="vertical-ltr"],
 div.callout[data-callout-metadata*="vertical-ltr"] {
   div.callout-content {
     writing-mode: vertical-lr;
@@ -111,8 +117,11 @@ div.callout[data-callout-metadata*="vertical-ltr"] {
 
 div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
+div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="tategaki"],
+div.callout[data-callout*="vertical-ltr"],
 div.callout[data-callout-metadata*="vertical-ltr"],
+div.callout[data-callout*="no-icon"],
 div.callout[data-callout-metadata*="no-icon"] {
   .callout-icon {
     display: none;
@@ -120,22 +129,29 @@ div.callout[data-callout-metadata*="no-icon"] {
 }
 
 div.callout[data-callout-metadata*="tategaki"],
+div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
 div.callout[data-callout-metadata*="vertical-ltr"],
+div.callout[data-callout*="vertical-ltr"],
+div.callout[data-callout*="no-title"],
 div.callout[data-callout-metadata*="no-title"] {
   .callout-title-inner {
     display: none;
   }
 }
 
+div.callout[data-callout*="bg-transparent"],
 div.callout[data-callout-metadata*="bg-transparent"],
+div.callout[data-callout*="transparent-bg"],
 div.callout[data-callout-metadata*="transparent-bg"] {
   background-color: transparent;
 }
 
 @mixin callout-color($color-name, $color-var) {
+  div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="bg-#{$color-name}"],
   div.callout[data-callout-metadata*="bg-#{$color-name}"] {
     background-color: rgba(
       var(--#{$color-var}-rgb),
@@ -143,7 +159,9 @@ div.callout[data-callout-metadata*="transparent-bg"] {
     );
   }
 
+  div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="title-#{$color-name}"],
   div.callout[data-callout-metadata*="title-#{$color-name}"] {
     .callout-title,
     .callout-icon .svg-icon {
@@ -161,14 +179,18 @@ div.callout[data-callout-metadata*="transparent-bg"] {
 @include callout-color("green", "color-green");
 @include callout-color("orange", "color-orange");
 
+div.callout[data-callout*="center-all"],
 div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout*="center-title"],
 div.callout[data-callout-metadata*="center-title"] {
   div.callout-title {
     justify-content: center;
   }
 }
 
+div.callout[data-callout*="center-all"],
 div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout*="center-content"],
 div.callout[data-callout-metadata*="center-content"] {
   div.callout-content {
     text-align: center;
@@ -176,7 +198,9 @@ div.callout[data-callout-metadata*="center-content"] {
 }
 
 @mixin callout-dir($dir) {
+  div.callout[data-callout*="#{$dir}-all"],
   div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout*="#{$dir}-title"],
   div.callout[data-callout-metadata*="#{$dir}-title"] {
     div.callout-title *,
     div.callout-title {
@@ -185,7 +209,9 @@ div.callout[data-callout-metadata*="center-content"] {
     }
   }
 
+  div.callout[data-callout*="#{$dir}-all"],
   div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout*="#{$dir}-content"],
   div.callout[data-callout-metadata*="#{$dir}-content"] {
     div.callout-content {
       * {
@@ -209,7 +235,9 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-dir(ltr);
 
 @mixin callout-text-transform($transform) {
+  div.callout[data-callout*="#{$transform}-all"],
   div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout*="#{$transform}-title"],
   div.callout[data-callout-metadata*="#{$transform}-title"] {
     div.callout-title .callout-title-inner {
       @if $transform == "caps" {
@@ -220,7 +248,9 @@ div.callout[data-callout-metadata*="center-content"] {
     }
   }
 
+  div.callout[data-callout*="#{$transform}-all"],
   div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout*="#{$transform}-content"],
   div.callout[data-callout-metadata*="#{$transform}-content"] {
     div.callout-content * {
       @if $transform == "caps" {
@@ -254,12 +284,16 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-text-transform(caps);
 
 @mixin callout-ext-color($color-name, $color-var) {
+  div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="bg-#{$color-name}"],
   div.callout[data-callout-metadata*="bg-#{$color-name}"] {
     background-color: var(--#{$color-var}-bg);
   }
 
+  div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="title-#{$color-name}"],
   div.callout[data-callout-metadata*="title-#{$color-name}"] {
     .callout-title,
     .callout-icon .svg-icon {
@@ -354,6 +388,7 @@ div.callout[data-callout-metadata*="center-content"] {
 
 body.is-mobile {
   .markdown-reading-view {
+    .callout[data-callout*="$pop"],
     .callout[data-callout-metadata*="$pop"] {
       margin-left: min(-5vw, -40px);
       width: max(calc(var(--file-line-width) / 2), 40vw);
@@ -366,6 +401,7 @@ body.is-mobile {
 }
 
 .markdown-reading-view {
+  .callout[data-callout*="$pop"],
   .callout[data-callout-metadata*="$pop"] {
     display: block;
     position: absolute;
@@ -382,12 +418,14 @@ body.is-mobile {
     }
   }
 
+  .callout[data-callout*="$pop"]:hover::before,
   .callout[data-callout-metadata*="$pop"]:hover::before {
     display: block;
     border: none;
     transition: all var(--flexcyon-callout-pop-animation-duration) ease;
   }
 
+  .callout[data-callout*="$pop"]::before,
   .callout[data-callout-metadata*="$pop"]::before {
     visibility: visible;
     content: ">";
@@ -398,19 +436,24 @@ body.is-mobile {
     z-index: 1;
   }
 
+  .callout[data-callout*="$pop"]:not(:hover),
   .callout[data-callout-metadata*="$pop"]:not(:hover) {
     visibility: hidden;
   }
 }
 
+div.callout[data-callout*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout*="tilt-title"],
 div.callout[data-callout-metadata*="tilt-title"] {
   .callout-title {
     transform: skewX(-7.5deg);
   }
 }
 
+div.callout[data-callout*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout*="tilt-content"],
 div.callout[data-callout-metadata*="tilt-content"] {
   .callout-content {
     transform: skewX(-7.5deg);
@@ -418,14 +461,18 @@ div.callout[data-callout-metadata*="tilt-content"] {
 }
 
 @mixin callout-font-style($style) {
+  div.callout[data-callout*="#{$style}-all"],
   div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout*="#{$style}-title"],
   div.callout[data-callout-metadata*="#{$style}-title"] {
     .callout-title {
       font-style: $style;
     }
   }
 
+  div.callout[data-callout*="#{$style}-all"],
   div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout*="#{$style}-content"],
   div.callout[data-callout-metadata*="#{$style}-content"] {
     .callout-content {
       font-style: $style;
@@ -437,14 +484,18 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-font-style(oblique);
 
 @mixin callout-text-decor($callout-name) {
+  div.callout[data-callout*="#{$callout-name}-all"],
   div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout*="#{$callout-name}-content"],
   div.callout[data-callout-metadata*="#{$callout-name}-content"] {
     .callout-content {
       text-decoration: #{$callout-name};
     }
   }
 
+  div.callout[data-callout*="#{$callout-name}-all"],
   div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout*="#{$callout-name}-title"],
   div.callout[data-callout-metadata*="#{$callout-name}-title"] {
     .callout-title {
       text-decoration: #{$callout-name};
@@ -460,6 +511,7 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-decor(line-through);
 
 @mixin callout-title-heading($heading_no) {
+  div.callout[data-callout*="#{$heading_no}-title"],
   div.callout[data-callout-metadata*="#{$heading_no}-title"] {
     .callout-title {
       font-size: var(--#{$heading_no}-size);
@@ -480,14 +532,18 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-title-heading(h6);
 
 @mixin callout-text-font-weight($font-weight) {
+  div.callout[data-callout*="w-#{$font-weight}-all"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout*="w-#{$font-weight}-title"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
     .callout-title {
       font-weight: $font-weight;
     }
   }
 
+  div.callout[data-callout*="w-#{$font-weight}-all"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout*="w-#{$font-weight}-content"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
     .callout-content {
       font-weight: $font-weight;
@@ -508,12 +564,15 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-font-weight(bolder);
 @include callout-text-font-weight(lighter);
 
+div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
+div.callout[data-callout*="bg-dots"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content {
   margin-top: 16px;
   padding: 0px 8px;
 }
 
+div.callout[data-callout*="flashcard"],
 div.callout[data-callout-metadata*="flashcard"] {
   width: var(--flexcyon-callouts-flashcard-width);
   height: var(--flexcyon-callouts-flashcard-height);
@@ -551,6 +610,7 @@ div.callout[data-callout-metadata*="flashcard"] {
 
 .flexcyon-editor-writing .cm-line,
 .editor-writing .cm-line,
+div.callout[data-callout*="writing"] .callout-content p,
 div.callout[data-callout-metadata*="writing"] .callout-content p {
   text-indent: var(--flexcyon-editor-writing-indentation);
   white-space: initial;
@@ -559,13 +619,18 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 }
 
 @mixin font-toggler($font-type) {
+  div.callout[data-callout*="font-#{$font-type}-all"],
   div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout*="font-#{$font-type}-title"],
   div.callout[data-callout-metadata*="font-#{$font-type}-title"] {
     .callout-title {
       font-family: var(--font-#{$font-type});
     }
   }
+
+  div.callout[data-callout*="font-#{$font-type}-all"],
   div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout*="font-#{$font-type}-content"],
   div.callout[data-callout-metadata*="font-#{$font-type}-content"] {
     .callout-content {
       font-family: var(--font-#{$font-type});
@@ -578,7 +643,9 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include font-toggler(monospace);
 
 @mixin callout-list($style-type) {
+  div.callout[data-callout*="li-#{$style-type}"],
   div.callout[data-callout-metadata*="li-#{$style-type}"],
+  div.callout[data-callout*="ol-#{$style-type}"],
   div.callout[data-callout-metadata*="ol-#{$style-type}"] {
     ol {
       list-style-type: $style-type;
@@ -586,7 +653,9 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
     }
   }
 
+  div.callout[data-callout*="li-#{$style-type}"],
   div.callout[data-callout-metadata*="li-#{$style-type}"],
+  div.callout[data-callout*="ul-#{$style-type}"],
   div.callout[data-callout-metadata*="ul-#{$style-type}"] {
     ul {
       list-style-type: $style-type;
@@ -652,6 +721,7 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include callout-list(upper-armenian);
 @include callout-list(disclosure-open);
 
+div.callout[data-callout*="center-img"],
 div.callout[data-callout-metadata*="center-img"] {
   background-color: transparent;
   img {
@@ -663,4 +733,8 @@ div.callout[data-callout-metadata*="center-img"] {
     right: 0;
     left: calc(16px + 6px * 2 + 4px * 2);
   }
+}
+
+.callout[data-callout*="lucide"] {
+  --callout-icon: attr(data-callout);
 }

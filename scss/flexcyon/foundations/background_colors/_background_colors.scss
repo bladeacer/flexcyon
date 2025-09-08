@@ -57,6 +57,7 @@ body.theme-light {
 
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
+div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid,
 body.flexcyon-editor-grid .view-content [class*="markdown-"] {
@@ -111,6 +112,7 @@ body.flexcyon-sidebar-bg-grid {
 
 body.flexcyon-editor-dots .canvas-background,
 body.flexcyon-editor-dots .kanban-plugin div,
+div.callout[data-callout*="bg-dots"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content,
 .editor-dots,
 body.flexcyon-editor-dots .view-content [class*="markdown-"] {
@@ -146,6 +148,7 @@ body.flexcyon-sidebar-bg-dots {
 
 body.flexcyon-editor-rhombus .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div,
+div.callout[data-callout*="bg-rhombus"] .callout-content,
 div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
 .editor-rhombus,
 body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
