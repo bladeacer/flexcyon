@@ -3564,9 +3564,13 @@ body.flexcyon-settings-coloured-icons [aria-label^="Options"] {
 body.flexcyon-flex-max-mode [aria-label^="Customise this command"],
 body.flexcyon-flex-max-mode [aria-label^="Customize this command"],
 body.flexcyon-flex-max-mode [aria-label^="Hotkeys"],
+body.flexcyon-flex-max-mode [aria-label^="Open snippets folder"],
+body.flexcyon-flex-max-mode [aria-label^="Open plugins folder"],
 body.flexcyon-settings-coloured-icons [aria-label^="Customise this command"],
 body.flexcyon-settings-coloured-icons [aria-label^="Customize this command"],
-body.flexcyon-settings-coloured-icons [aria-label^="Hotkeys"] {
+body.flexcyon-settings-coloured-icons [aria-label^="Hotkeys"],
+body.flexcyon-settings-coloured-icons [aria-label^="Open snippets folder"],
+body.flexcyon-settings-coloured-icons [aria-label^="Open plugins folder"] {
   color: rgba(var(--color-green-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Donate to support"],
@@ -3574,20 +3578,10 @@ body.flexcyon-settings-coloured-icons [aria-label^="Donate to support"] {
   color: rgba(var(--color-pink-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Reload plugins"],
-body.flexcyon-settings-coloured-icons [aria-label^="Reload plugins"] {
-  color: rgba(var(--color-cyan-rgb), 0.9);
-}
-body.flexcyon-flex-max-mode [aria-label^="Open plugins folder"],
-body.flexcyon-settings-coloured-icons [aria-label^="Open plugins folder"] {
-  color: rgba(var(--color-green-rgb), 0.9);
-}
 body.flexcyon-flex-max-mode [aria-label^="Reload snippets"],
+body.flexcyon-settings-coloured-icons [aria-label^="Reload plugins"],
 body.flexcyon-settings-coloured-icons [aria-label^="Reload snippets"] {
   color: rgba(var(--color-cyan-rgb), 0.9);
-}
-body.flexcyon-flex-max-mode [aria-label^="Open snippets folder"],
-body.flexcyon-settings-coloured-icons [aria-label^="Open snippets folder"] {
-  color: rgba(var(--color-green-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Restore default"],
 body.flexcyon-settings-coloured-icons [aria-label^="Restore default"] {
@@ -3908,6 +3902,28 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
   svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
   [aria-label*="Customize this command"]
+  svg {
+  opacity: 0;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Export settings"],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Export settings"] {
+  width: 24px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Export settings"]::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Export settings"]::after {
+  content: ".>";
+  font-size: var(--font-ui-small);
+  letter-spacing: -0.75px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
+  [aria-label*="Export settings"]
+  svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
+  [aria-label*="Export settings"]
   svg {
   opacity: 0;
 }
@@ -11425,9 +11441,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
   .workspace-tab-header-tab-list,
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  .workspace-sidedock-vault-profile,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  .workspace-tab-header-container-inner {
+  .workspace-sidedock-vault-profile {
   opacity: 0;
 }
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls:hover,
@@ -11445,9 +11459,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
   .workspace-tab-header-tab-list:hover,
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  .workspace-sidedock-vault-profile:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  .workspace-tab-header-container-inner:hover {
+  .workspace-sidedock-vault-profile:hover {
   opacity: unset;
 }
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter,
@@ -11461,36 +11473,47 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
   opacity: unset;
 }
 
-/* Silly snippet to get number of opened tabs */
-body.flexcyon-get-opened-tabs {
-  counter-reset: openedt 0;
+body.flexcyon-rtz-mode,
+body.flexcyon-number-tabs {
+  counter-reset: numTab 0;
 }
-body.flexcyon-get-opened-tabs .mod-stacked {
-  counter-reset: openedt 1;
+body.flexcyon-rtz-mode .workspace-tab-header-inner-title::before,
+body.flexcyon-number-tabs .workspace-tab-header-inner-title::before {
+  content: counter(numTab);
+  color: inherit;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: var(--font-ui-medium);
+  overflow: hidden;
 }
-body.flexcyon-get-opened-tabs
-  :not(.mod-stacked)
-  .workspace-tab-header-container-inner
-  .workspace-tab-header {
-  counter-increment: openedt;
+body.flexcyon-rtz-mode .workspace-tab-header,
+body.flexcyon-number-tabs .workspace-tab-header {
+  counter-increment: numTab;
 }
-body.flexcyon-get-opened-tabs
-  .mod-stacked
-  .workspace-leaf:has(+ .workspace-tab-header + .workspace-leaf) {
-  counter-increment: openedt;
+
+body.flexcyon-rtz-mode .workspace-tabs .workspace-tab-header,
+body.flexcyon-remove-tab-headers .workspace-tabs .workspace-tab-header {
+  --tab-width: 90px;
 }
-body.flexcyon-get-opened-tabs
-  .mod-stacked
-  .workspace-leaf:not(:has(+ .workspace-tab-header + .workspace-leaf))
-  .view-header::after {
-  display: none;
+body.flexcyon-rtz-mode
+  .workspace-tabs
+  .workspace-tab-header
+  .workspace-tab-header-inner-title,
+body.flexcyon-remove-tab-headers
+  .workspace-tabs
+  .workspace-tab-header
+  .workspace-tab-header-inner-title {
+  font-size: 0;
 }
-body.flexcyon-get-opened-tabs .view-header::after {
-  content: " Opened tabs: " counter(openedt);
-  color: var(--text-muted);
-  font-size: var(--font-ui-small);
-  position: fixed;
-  top: 92vh;
+body.flexcyon-rtz-mode
+  .workspace-tabs
+  .workspace-tab-header
+  .workspace-tab-header-inner-title::before,
+body.flexcyon-remove-tab-headers
+  .workspace-tabs
+  .workspace-tab-header
+  .workspace-tab-header-inner-title::before {
+  margin-right: 0px;
 }
 
 body {
@@ -13121,9 +13144,14 @@ settings:
     id: flexcyon-display-os
     type: class-toggle
     default: false
-  - title: Display number of opened tabs
-    id: flexcyon-get-opened-tabs
-    description: Does not display when in stacked tabs and there is only one tab open. Else it works as expected. Experimental.
+  - title: Number tabs
+    id: flexcyon-number-tabs
+    description: Numbers your tabs in sequential order. Each tab group has its own counter. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
+  - title: Remove Tab Headers
+    id: flexcyon-remove-tab-headers
+    description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
     type: class-toggle
     default: false
   - title: Device operating system details right padding

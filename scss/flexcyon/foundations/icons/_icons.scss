@@ -336,7 +336,9 @@ body.flexcyon-settings-coloured-icons {
 
   [aria-label^="Customise this command"],
   [aria-label^="Customize this command"],
-  [aria-label^="Hotkeys"] {
+  [aria-label^="Hotkeys"],
+  [aria-label^="Open snippets folder"],
+  [aria-label^="Open plugins folder"] {
     color: rgba(var(--color-green-rgb), 0.9);
   }
 
@@ -344,20 +346,9 @@ body.flexcyon-settings-coloured-icons {
     color: rgba(var(--color-pink-rgb), 0.9);
   }
 
-  [aria-label^="Reload plugins"] {
-    color: rgba(var(--color-cyan-rgb), 0.9);
-  }
-
-  [aria-label^="Open plugins folder"] {
-    color: rgba(var(--color-green-rgb), 0.9);
-  }
-
+  [aria-label^="Reload plugins"],
   [aria-label^="Reload snippets"] {
     color: rgba(var(--color-cyan-rgb), 0.9);
-  }
-
-  [aria-label^="Open snippets folder"] {
-    color: rgba(var(--color-green-rgb), 0.9);
   }
 
   [aria-label^="Restore default"] {
@@ -514,6 +505,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   @include ascii-aria-icon("Hotkeys", "[%]");
   @include ascii-aria-icon("Customise this command", "[~]");
   @include ascii-aria-icon("Customize this command", "[~]");
+  @include ascii-aria-icon("Export settings", ".>");
   @include ascii-aria-icon("Donate", "<3");
   @include ascii-aria-icon("Reload", "[R]");
   @include ascii-aria-icon("Change sort order", "|'|");

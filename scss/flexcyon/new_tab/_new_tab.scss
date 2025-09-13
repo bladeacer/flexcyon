@@ -146,8 +146,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   .side-dock-ribbon,
   .workspace-tab-header-new-tab,
   .workspace-tab-header-tab-list,
-  .workspace-sidedock-vault-profile,
-  .workspace-tab-header-container-inner {
+  .workspace-sidedock-vault-profile {
     opacity: 0;
     &:hover {
       opacity: unset;
@@ -164,34 +163,31 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   }
 }
 
-/* Silly snippet to get number of opened tabs */
-
-body.flexcyon-get-opened-tabs {
-  counter-reset: openedt 0;
-  .mod-stacked {
-    counter-reset: openedt 1;
+body.flexcyon-rtz-mode,
+body.flexcyon-number-tabs {
+  counter-reset: numTab 0;
+  .workspace-tab-header-inner-title::before {
+    content: counter(numTab);
+    color: inherit;
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: var(--font-ui-medium);
+    overflow: hidden;
   }
-  :not(.mod-stacked)
-    .workspace-tab-header-container-inner
-    .workspace-tab-header {
-    counter-increment: openedt;
+  .workspace-tab-header {
+    counter-increment: numTab;
   }
+}
 
-  .mod-stacked .workspace-leaf:has(+ .workspace-tab-header + .workspace-leaf) {
-    counter-increment: openedt;
-  }
-
-  .mod-stacked
-    .workspace-leaf:not(:has(+ .workspace-tab-header + .workspace-leaf))
-    .view-header::after {
-    display: none;
-  }
-
-  .view-header::after {
-    content: " Opened tabs: " counter(openedt);
-    color: var(--text-muted);
-    font-size: var(--font-ui-small);
-    position: fixed;
-    top: 92vh;
+body.flexcyon-rtz-mode,
+body.flexcyon-remove-tab-headers {
+  .workspace-tabs .workspace-tab-header {
+    --tab-width: 90px;
+    .workspace-tab-header-inner-title {
+      font-size: 0;
+      &::before {
+        margin-right: 0px;
+      }
+    }
   }
 }
