@@ -177,10 +177,15 @@ body.flexcyon-number-tabs {
   .workspace-tab-header {
     counter-increment: numTab;
   }
+
+  .mod-stacked .workspace-tab-header-inner-title::before {
+    margin-bottom: 12px;
+  }
 }
 
 body.flexcyon-rtz-mode,
 body.flexcyon-remove-tab-headers {
+  --tab-stacked-font-size: 0px;
   .workspace-tabs .workspace-tab-header {
     --tab-width: 90px;
     .workspace-tab-header-inner-title {

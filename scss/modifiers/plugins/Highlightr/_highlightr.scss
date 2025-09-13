@@ -12,14 +12,14 @@
 }
 
 body {
-  @include hltr-wrapper(pink);
-  @include hltr-wrapper(red);
-  @include hltr-wrapper(orange);
-  @include hltr-wrapper(yellow);
-  @include hltr-wrapper(green);
-  @include hltr-wrapper(cyan);
-  @include hltr-wrapper(blue);
-  @include hltr-wrapper(purple);
+  @include hltr-wrapper("pink");
+  @include hltr-wrapper("red");
+  @include hltr-wrapper("orange");
+  @include hltr-wrapper("yellow");
+  @include hltr-wrapper("green");
+  @include hltr-wrapper("cyan");
+  @include hltr-wrapper("blue");
+  @include hltr-wrapper("purple");
 }
 
 body.highlightr-lowlight

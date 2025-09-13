@@ -232,10 +232,6 @@ body.flexcyon-workspace-angled-layout {
   }
 }
 
-.workspace-leaf-content[data-type="file-properties"] .pane-empty::before {
-  content: "No properties found.";
-}
-
 body.show-ribbon {
   .sidebar-toggle-button.mod-left {
     height: calc(1.12 * var(--header-height));
