@@ -17,6 +17,7 @@ body {
   --callout-padding: var(--flexcyon-callout-verti-padding)
     var(--flexcyon-callout-horiz-padding);
   --callout-radius: 2px;
+  --flexcyon-callout-radix: 16px;
 
   div.callout {
     .callout-icon {
@@ -136,7 +137,8 @@ div.callout[data-callout-metadata*="vertical-ltr"],
 div.callout[data-callout*="vertical-ltr"],
 div.callout[data-callout*="no-title"],
 div.callout[data-callout-metadata*="no-title"] {
-  .callout-title-inner {
+  .callout-title-inner,
+  .callout-title {
     display: none;
   }
 }
@@ -157,14 +159,23 @@ div.callout[data-callout-metadata*="transparent-bg"] {
       var(--#{$color-var}-rgb),
       var(--flexcyon-callout-bg-opacity)
     );
+    &:has([data-callout*="tui"], [data-callout-metadata*="tui"])
+      div.callout-title,
+    &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
+      .callout-content {
+      background-color: rgba(
+        var(--#{$color-var}-rgb),
+        var(--flexcyon-callout-bg-opacity)
+      );
+    }
   }
 
   div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
   div.callout[data-callout*="title-#{$color-name}"],
   div.callout[data-callout-metadata*="title-#{$color-name}"] {
-    .callout-title,
-    .callout-icon .svg-icon {
+    div.callout-title,
+    div.callout-icon .svg-icon {
       color: var(--#{$color-var});
     }
   }
@@ -738,3 +749,85 @@ div.callout[data-callout-metadata*="center-img"] {
 .callout[data-callout*="lucide"] {
   --callout-icon: attr(data-callout);
 }
+
+.markdown-rendered:has(
+    :is([data-callout*="tui"], [data-callout-metadata*="tui"])
+  ) {
+  transform: translateY(-35%);
+}
+
+body.flexcyon-tui-callouts .callout,
+.callout[data-callout*="tui"],
+.callout[data-callout-metadata*="tui"] {
+  background-color: var(--background-primary);
+  padding: 0px;
+  margin: 0px;
+  .callout-icon {
+    display: none;
+  }
+  .callout-title {
+    color: var(--text-faint);
+    z-index: 2;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: unset;
+      font-size: inherit;
+    }
+  }
+  .callout-title:has(~ .callout-content) {
+    transform: translate(24px, 50%);
+    background-color: var(--background-primary);
+    padding: 2px 8px;
+    width: max-content;
+  }
+  .callout-content {
+    border-radius: var(--flexcyon-callout-radix);
+    border: 1px solid var(--text-faint);
+    padding: 8px 16px;
+    z-index: 1;
+  }
+}
+
+@mixin border-wrapper($color) {
+  div.callout[data-callout*="border-#{$color}"]:is(
+      [data-callout*="tui"],
+      [data-callout-metadata*="tui"]
+    ),
+  div.callout[data-callout-metadata*="border-#{$color}"]:is(
+      [data-callout*="tui"],
+      [data-callout-metadata*="tui"]
+    ) {
+    .callout-content {
+      border-radius: var(--flexcyon-callout-radix);
+      border: 1px solid var(--color-#{$color});
+      padding: 8px 16px;
+      z-index: 1;
+    }
+  }
+  div.callout[data-callout*="border-#{$color}"]:not(
+      [data-callout*="tui"],
+      [data-callout-metadata*="tui"]
+    ),
+  div.callout[data-callout-metadata*="border-#{$color}"]:not(
+      [data-callout*="tui"],
+      [data-callout-metadata*="tui"]
+    ) {
+    border-radius: var(--flexcyon-callout-radix);
+    border: 1px solid var(--color-#{$color});
+    padding: 8px 16px;
+    z-index: 1;
+  }
+}
+
+@include border-wrapper("yellow");
+@include border-wrapper("blue");
+@include border-wrapper("purple");
+@include border-wrapper("red");
+@include border-wrapper("cyan");
+@include border-wrapper("pink");
+@include border-wrapper("green");
+@include border-wrapper("orange");

@@ -1024,6 +1024,17 @@ settings:
     type: variable-number
     default: 2
     format: px
+  - title: Callout Added Border Radius
+    id: flexcyon-callout-radix
+    description: Configures the border radius of callouts and other UI elements with additional border radius. E.g. Cards TUI add-on.
+    type: variable-number
+    default: 16
+    format: px
+  - title: Enable TUI Callouts by default
+    description: Modifies the default styles of all callouts to TUI Callouts.
+    id: flexcyon-tui-callouts
+    type: class-toggle
+    default: false
   - title: Flashcard callout width
     id: flexcyon-callouts-flashcard-width
     description: Configures the width of flashcard callouts

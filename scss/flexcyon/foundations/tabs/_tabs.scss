@@ -79,7 +79,7 @@ body.flexcyon-workspace-pl10k-layout {
   }
   .view-header-title-container:not(:has(.view-header-breadcrumb))
     .view-header-title {
-    border-radius: 16px;
+    border-radius: var(--flexcyon-callout-radix);
   }
 
   .view-header-title-parent :first-child.view-header-breadcrumb {
@@ -122,7 +122,7 @@ body.flexcyon-workspace-card-layout {
     display: none;
   }
   .view-header-breadcrumb {
-    border-radius: 16px;
+    border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
   }
   .view-header-title-container {
@@ -149,7 +149,7 @@ body.flexcyon-workspace-card-layout {
   .view-header-title {
     padding: 4px 8px;
     background-color: var(--color-base-05);
-    border-radius: 16px;
+    border-radius: var(--flexcyon-callout-radix);
   }
 }
 
