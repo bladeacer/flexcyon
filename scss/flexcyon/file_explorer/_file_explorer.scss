@@ -1,3 +1,7 @@
+body {
+  --flexcyon-active-indicator: ">> ";
+}
+
 body.flexcyon-flex-max-mode .tree-item-inner,
 body.flexcyon-wrap-long-filenames .tree-item-inner {
   white-space: normal;
@@ -265,5 +269,32 @@ body.flexcyon-minimalist-tree {
 body.flexcyon-workspace-angled-layout {
   .nav-folder-title-content {
     transform: skewX(-5deg);
+  }
+}
+
+body.flexcyon-flex-max-mode,
+body.flexcyon-enable-active-indicator {
+  .tree-item-self.is-active .tree-item-inner,
+  .vertical-tab-nav-item.is-active {
+    &::before {
+      content: var(--flexcyon-active-indicator);
+    }
+  }
+
+  .workspace-leaf-content[data-type*="file-explorer"]
+    .tree-item-self.is-active
+    .tree-item-inner {
+    &::before {
+      margin-left: -24px;
+    }
+  }
+  .tree-item-self.is-active .tree-item-inner {
+    &::before {
+      margin-left: -20px;
+    }
+  }
+
+  .tree-item-self.is-active .collapse-icon:has(+ .tree-item-inner) svg {
+    color: transparent;
   }
 }

@@ -728,6 +728,16 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: false
+  - title: Enable Active File Indicator
+    id: flexcyon-enable-active-indicator
+    type: class-toggle
+    default: false
+  - title: Active File Indicator value
+    description: Set a custom string value for active file indicator.
+    id: flexcyon-active-indicator
+    type: variable-text
+    default: ">> "
+    quotes: true
   - title: Select folder style
     description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select

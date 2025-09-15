@@ -352,4 +352,23 @@ body.flexcyon-workspace-pl10k-layout {
       border-bottom: none;
     }
   }
+  .view-actions,
+  .view-header-left .view-header-nav-buttons {
+    border-radius: var(--flexcyon-callout-radix);
+    background-color: var(--color-base-20);
+    border: 1px solid var(--color-base-20);
+    opacity: 1;
+    z-index: 10;
+    button {
+      border-radius: var(--flexcyon-callout-radix);
+    }
+  }
+
+  .view-actions {
+    padding: 4px 2px;
+    margin-top: 8px;
+    button {
+      border-radius: var(--flexcyon-callout-radix);
+    }
+  }
 }

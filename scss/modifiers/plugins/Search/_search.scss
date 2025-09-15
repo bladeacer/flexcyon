@@ -1,0 +1,23 @@
+.workspace-leaf-content[data-type="search"] {
+  padding: 8px 16px;
+
+  .search-row {
+    .search-input-container {
+      flex-grow: 0.975;
+    }
+    .clickable-icon {
+      margin-left: 12px;
+    }
+  }
+  .search-params .setting-item .setting-item-name {
+    color: var(--text-muted);
+  }
+  .search-results-info .search-results-result-count {
+    color: var(--text-normal);
+    font-size: calc(var(--font-ui-small) - 0.809015px);
+    opacity: 1;
+  }
+  .search-info-container:has(~ .search-result-container .search-empty-state) {
+    display: none;
+  }
+}

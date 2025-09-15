@@ -10424,6 +10424,40 @@ body.flexcyon-workspace-pl10k-layout
   .workspace-tab-header-inner {
   border-bottom: none;
 }
+body.flexcyon-flex-max-mode .view-actions,
+body.flexcyon-flex-max-mode .view-header-left .view-header-nav-buttons,
+body.flexcyon-workspace-pl10k-layout .view-actions,
+body.flexcyon-workspace-pl10k-layout
+  .view-header-left
+  .view-header-nav-buttons {
+  border-radius: var(--flexcyon-callout-radix);
+  background-color: var(--color-base-20);
+  border: 1px solid var(--color-base-20);
+  opacity: 1;
+  z-index: 10;
+}
+body.flexcyon-flex-max-mode .view-actions button,
+body.flexcyon-flex-max-mode .view-header-left .view-header-nav-buttons button,
+body.flexcyon-workspace-pl10k-layout .view-actions button,
+body.flexcyon-workspace-pl10k-layout
+  .view-header-left
+  .view-header-nav-buttons
+  button {
+  border-radius: var(--flexcyon-callout-radix);
+}
+body.flexcyon-flex-max-mode .view-actions,
+body.flexcyon-workspace-pl10k-layout .view-actions {
+  padding: 4px 2px;
+  margin-top: 8px;
+}
+body.flexcyon-flex-max-mode .view-actions button,
+body.flexcyon-workspace-pl10k-layout .view-actions button {
+  border-radius: var(--flexcyon-callout-radix);
+}
+
+body {
+  --flexcyon-active-indicator: ">> ";
+}
 
 body.flexcyon-flex-max-mode .tree-item-inner,
 body.flexcyon-wrap-long-filenames .tree-item-inner {
@@ -11132,6 +11166,41 @@ body.flexcyon-minimalist-tree .nav-file-title {
 
 body.flexcyon-workspace-angled-layout .nav-folder-title-content {
   transform: skewX(-5deg);
+}
+
+body.flexcyon-flex-max-mode .tree-item-self.is-active .tree-item-inner::before,
+body.flexcyon-flex-max-mode .vertical-tab-nav-item.is-active::before,
+body.flexcyon-enable-active-indicator
+  .tree-item-self.is-active
+  .tree-item-inner::before,
+body.flexcyon-enable-active-indicator .vertical-tab-nav-item.is-active::before {
+  content: var(--flexcyon-active-indicator);
+}
+body.flexcyon-flex-max-mode
+  .workspace-leaf-content[data-type*="file-explorer"]
+  .tree-item-self.is-active
+  .tree-item-inner::before,
+body.flexcyon-enable-active-indicator
+  .workspace-leaf-content[data-type*="file-explorer"]
+  .tree-item-self.is-active
+  .tree-item-inner::before {
+  margin-left: -24px;
+}
+body.flexcyon-flex-max-mode .tree-item-self.is-active .tree-item-inner::before,
+body.flexcyon-enable-active-indicator
+  .tree-item-self.is-active
+  .tree-item-inner::before {
+  margin-left: -20px;
+}
+body.flexcyon-flex-max-mode
+  .tree-item-self.is-active
+  .collapse-icon:has(+ .tree-item-inner)
+  svg,
+body.flexcyon-enable-active-indicator
+  .tree-item-self.is-active
+  .collapse-icon:has(+ .tree-item-inner)
+  svg {
+  color: transparent;
 }
 
 body {
@@ -13042,6 +13111,16 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: false
+  - title: Enable Active File Indicator
+    id: flexcyon-enable-active-indicator
+    type: class-toggle
+    default: false
+  - title: Active File Indicator value
+    description: Set a custom string value for active file indicator.
+    id: flexcyon-active-indicator
+    type: variable-text
+    default: ">> "
+    quotes: true
   - title: Select folder style
     description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select
@@ -15645,6 +15724,35 @@ div.bases-cards-cover:not([style*="background-image"]) * {
 
 .query-toolbar-menu .query-toolbar-section:not(:last-child) {
   border-bottom: none;
+}
+
+.workspace-leaf-content[data-type="search"] {
+  padding: 8px 16px;
+}
+.workspace-leaf-content[data-type="search"]
+  .search-row
+  .search-input-container {
+  flex-grow: 0.975;
+}
+.workspace-leaf-content[data-type="search"] .search-row .clickable-icon {
+  margin-left: 12px;
+}
+.workspace-leaf-content[data-type="search"]
+  .search-params
+  .setting-item
+  .setting-item-name {
+  color: var(--text-muted);
+}
+.workspace-leaf-content[data-type="search"]
+  .search-results-info
+  .search-results-result-count {
+  color: var(--text-normal);
+  font-size: calc(var(--font-ui-small) - 0.809015px);
+  opacity: 1;
+}
+.workspace-leaf-content[data-type="search"]
+  .search-info-container:has(~ .search-result-container .search-empty-state) {
+  display: none;
 }
 
 /* Modifications for banner snippet */
