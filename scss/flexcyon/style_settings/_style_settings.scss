@@ -1040,11 +1040,22 @@ settings:
     type: variable-number
     default: 16
     format: px
-  - title: Enable TUI Callouts by default
-    description: Modifies the default styles of all callouts to TUI Callouts.
-    id: flexcyon-tui-callouts
-    type: class-toggle
-    default: false
+  - title: Select callout style
+    description: Modifies the default styles of all callouts. Needs an app reload to properly refresh callout rendering.
+    type: class-select
+    id: theme-variant
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: TUI Callouts
+        value: flexcyon-tui-callouts
+      - 
+        label: Plain Callouts
+        value: flexcyon-plain-callouts
+      - 
+        label: Vertical Callouts
+        value: flexcyon-vert-callouts
   - title: Flashcard callout width
     id: flexcyon-callouts-flashcard-width
     description: Configures the width of flashcard callouts
