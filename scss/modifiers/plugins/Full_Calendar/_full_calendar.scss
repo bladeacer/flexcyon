@@ -57,9 +57,18 @@ body {
   }
   .fc .fc-toolbar-chunk {
     padding: 0px 8px;
+    overflow: scroll;
   }
   .fc {
     font-size: var(--font-ui-small);
+  }
+  div.workspace-leaf-content[data-type*="calendar"] {
+    .fc-header-toolbar {
+      flex-direction: column;
+    }
+    .fc-header-toolbar .fc-button-group {
+      flex-direction: row;
+    }
   }
 }
 

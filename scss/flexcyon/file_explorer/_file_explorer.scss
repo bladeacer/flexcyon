@@ -298,3 +298,62 @@ body.flexcyon-enable-active-indicator {
     color: transparent;
   }
 }
+
+body.flexcyon-vertical-nav {
+  .mod-sidedock.mod-right-split .workspace-tabs,
+  .mod-sidedock.mod-left-split .workspace-tabs {
+    display: flex;
+    flex-direction: row;
+
+    div {
+      flex-direction: inherit;
+    }
+    div.workspace-leaf-content[data-type*="search"] {
+      flex-direction: column;
+    }
+    div.workspace-leaf-content[data-type*="undefined"]:has(
+        .file-tree-plugin-view
+      ) {
+      flex-direction: column;
+    }
+    .oz-explorer-container .oz-file-tree-header-wrapper,
+    .oz-folders-tree-wrapper {
+      flex-direction: row;
+    }
+    .fc-header-toolbar {
+      gap: 0px;
+      padding: 0px;
+    }
+    div.workspace-leaf-content[data-type*="calendar"] {
+      flex-direction: column;
+      .fc-header-toolbar .fc-button-group {
+        flex-direction: row;
+      }
+    }
+    .nav-header {
+      width: min-content;
+    }
+    .nav-buttons-container {
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .workspace-tab-header-container-inner {
+      margin-top: 8px;
+      gap: 8px;
+      flex-direction: column;
+      height: min-content;
+    }
+    .workspace-leaf-content {
+      width: 100%;
+    }
+    .workspace-leaf-content .nav-header + div {
+      margin-top: 12px;
+      flex-direction: row;
+    }
+  }
+  &.is-hidden-frameless:not(.is-fullscreen)
+    .workspace-tabs.mod-top-right-space
+    .workspace-tab-header-container {
+    padding-right: 8px;
+  }
+}

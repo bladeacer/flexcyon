@@ -738,6 +738,11 @@ settings:
     type: variable-text
     default: ">> "
     quotes: true
+  - title: Enable vertical navigation
+    id: flexcyon-vertical-nav
+    description: Enables vertical navigation style. Navigation icons like Files, new note and so on are displayed vertically much like stacked tabs.
+    type: class-toggle
+    default: false
   - title: Select folder style
     description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select
