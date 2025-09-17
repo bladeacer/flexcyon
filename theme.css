@@ -3160,6 +3160,37 @@ body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
 }
+body .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
+  padding: 6px 16px;
+}
+body
+  .mod-community-modal
+  .modal-sidebar:not(:has(+ .community-modal-details))
+  .setting-item.mod-toggle {
+  margin-top: -8px;
+}
+body
+  .modal-sidebar:not(:has(+ .community-modal-details))
+  .community-modal-controls {
+  display: flex;
+}
+body
+  .modal-sidebar:not(:has(+ .community-modal-details))
+  .community-modal-controls
+  .community-modal-search-summary {
+  margin-top: 3px;
+}
+body .modal-sidebar {
+  padding: 12px;
+}
+body .community-modal-search-summary {
+  padding: 6px 16px;
+  margin-left: 4px;
+}
+body .community-modal-search-results {
+  padding: 16px;
+  gap: 14px;
+}
 body .community-modal-info hr {
   display: none;
 }
@@ -3244,7 +3275,8 @@ body.theme-light.flexcyon-flex-max-mode:not(.is-phone)
   .community-item.is-selected,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
-  background-color: var(--color-accent-2);
+  background-color: var(--background-primary);
+  border: none;
 }
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone)
   .community-item.is-selected
@@ -3290,12 +3322,21 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
   color: var(--color-green);
   font-weight: bold;
 }
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone)
+  .community-item.is-selected
+  .community-item-desc,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-desc {
+  color: var(--text-normal);
+}
 
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone)
   .community-item.is-selected,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item.is-selected {
-  background-color: var(--color-accent-2);
+  background-color: var(--background-primary);
+  border: none;
 }
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone)
   .community-item.is-selected
@@ -3340,6 +3381,14 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
   .community-item-updated {
   color: var(--color-purple);
   font-weight: bold;
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone)
+  .community-item.is-selected
+  .community-item-desc,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone)
+  .community-item.is-selected
+  .community-item-desc {
+  color: var(--text-normal);
 }
 
 body.theme-light.flexcyon-flex-max-mode:not([class*="iconic"])

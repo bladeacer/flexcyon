@@ -28,7 +28,32 @@ body {
   .clickable-icon.side-dock-ribbon-action {
     padding: var(--size-2-2) var(--size-2-3);
   }
-
+  .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
+    padding: 6px 16px;
+  }
+  .mod-community-modal
+    .modal-sidebar:not(:has(+ .community-modal-details))
+    .setting-item.mod-toggle {
+    margin-top: -8px;
+  }
+  .modal-sidebar:not(:has(+ .community-modal-details))
+    .community-modal-controls {
+    display: flex;
+    .community-modal-search-summary {
+      margin-top: 3px;
+    }
+  }
+  .modal-sidebar {
+    padding: 12px;
+  }
+  .community-modal-search-summary {
+    padding: 6px 16px;
+    margin-left: 4px;
+  }
+  .community-modal-search-results {
+    padding: 16px;
+    gap: 14px;
+  }
   .community-modal-info hr {
     display: none;
   }
@@ -116,7 +141,8 @@ body.flexcyon-workspace-card-layout {
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
   .community-item.is-selected {
-    background-color: var(--color-accent-2);
+    background-color: var(--background-primary);
+    border: none;
     span.flair.mod-pop {
       background-color: rgba(var(--color-blue-rgb), var(--dimmed));
     }
@@ -136,13 +162,17 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
       color: var(--color-green);
       font-weight: bold;
     }
+    .community-item-desc {
+      color: var(--text-normal);
+    }
   }
 }
 
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
   .community-item.is-selected {
-    background-color: var(--color-accent-2);
+    background-color: var(--background-primary);
+    border: none;
     span.flair.mod-pop {
       background-color: rgba(var(--color-yellow-rgb), var(--dimmed));
     }
@@ -161,6 +191,9 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
     .community-item-updated {
       color: var(--color-purple);
       font-weight: bold;
+    }
+    .community-item-desc {
+      color: var(--text-normal);
     }
   }
 }
