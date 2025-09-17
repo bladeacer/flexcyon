@@ -9234,7 +9234,8 @@ div.callout[data-callout-metadata*="center-img"] img {
         )
       )
   ) {
-  transform: translateY(-35%);
+  margin-top: -28px;
+  margin-bottom: -4px;
 }
 
 body.flexcyon-tui-callouts

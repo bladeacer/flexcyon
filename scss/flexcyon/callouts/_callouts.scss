@@ -762,7 +762,8 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
         :is(#{$flexcyon-tui-exclusions})
       )
   ) {
-  transform: translateY(-35%);
+  margin-top: -28px;
+  margin-bottom: -4px;
 }
 
 body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
