@@ -12368,6 +12368,16 @@ body.flexcyon-vertical-nav.is-hidden-frameless:not(.is-fullscreen)
   padding-right: 8px;
 }
 
+.is-hidden-frameless:not(.is-fullscreen):not(.mod-macos)
+  .workspace-tabs.mod-top-right-space
+  .workspace-tab-header-container:after {
+  display: none;
+}
+
+body .workspace.is-right-sidedock-open .mod-right-split .mod-top .view-content {
+  padding-top: 40px;
+}
+
 body {
   --flexcyon-os-detail-padding-r: 24px;
   --flexcyon-screen-dimens-padding-l: 16px;
