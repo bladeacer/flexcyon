@@ -143,3 +143,30 @@ div.bases-cards-cover:not([style*="background-image"]) {
 .query-toolbar-menu .query-toolbar-section:not(:last-child) {
   border-bottom: none;
 }
+
+.workspace-leaf-content[data-type="markdown"] .block-language-base .bases-view,
+.workspace-leaf-content[data-type="markdown"] .bases-embed .bases-view {
+  min-height: 100px;
+  border: none;
+}
+.bases-tbody[style*="height: 0px"] {
+  &::after {
+    white-space: pre;
+    content: " \a\
+ No entries could be found";
+    font-size: var(--font-ui-small);
+    color: var(--color-red);
+  }
+}
+.bases-table-cell[disabled*="true"] {
+  background-color: transparent;
+  &::after {
+    color: var(--color-red);
+    content: "N/A";
+    font-size: var(--font-ui-small);
+    margin-left: 8px;
+  }
+}
+.bases-table-cell {
+  --input-placeholder-color: var(--color-red);
+}

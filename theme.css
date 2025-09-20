@@ -1385,11 +1385,10 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 body.flexcyon-anims-scale-up .modal .community-modal-info,
 body.flexcyon-anims-scale-up .modal .vertical-tab-content,
-body.flexcyon-anims-scale-up .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-scale-up
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-scale-up .modal,
 body.flexcyon-anims-scale-up .prompt {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -1402,11 +1401,10 @@ body.flexcyon-anims-scale-up.flexcyon-anim-style-settings-contain
 
 body.flexcyon-anims-slide-rtl .modal .community-modal-info,
 body.flexcyon-anims-slide-rtl .modal .vertical-tab-content,
-body.flexcyon-anims-slide-rtl .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-rtl
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-slide-rtl .modal,
 body.flexcyon-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration)
@@ -1421,11 +1419,10 @@ body.flexcyon-anims-slide-rtl.flexcyon-anim-style-settings-contain
 
 body.flexcyon-anims-slide-ltr .modal .community-modal-info,
 body.flexcyon-anims-slide-ltr .modal .vertical-tab-content,
-body.flexcyon-anims-slide-ltr .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-ltr
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-slide-ltr .modal,
 body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration)
@@ -1440,11 +1437,10 @@ body.flexcyon-anims-slide-ltr.flexcyon-anim-style-settings-contain
 
 body.flexcyon-flex-max-mode .modal .community-modal-info,
 body.flexcyon-flex-max-mode .modal .vertical-tab-content,
-body.flexcyon-flex-max-mode .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-flex-max-mode
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-flex-max-mode .modal,
 body.flexcyon-flex-max-mode .style-settings-container,
 body.flexcyon-flex-max-mode .prompt {
@@ -1454,11 +1450,10 @@ body.flexcyon-flex-max-mode .prompt {
 
 body.flexcyon-anims-slide-tb .modal .community-modal-info,
 body.flexcyon-anims-slide-tb .modal .vertical-tab-content,
-body.flexcyon-anims-slide-tb .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-tb
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-slide-tb .modal,
 body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -1473,11 +1468,10 @@ body.flexcyon-anims-slide-tb.flexcyon-anim-style-settings-contain
 
 body.flexcyon-anims-slide-bt .modal .community-modal-info,
 body.flexcyon-anims-slide-bt .modal .vertical-tab-content,
-body.flexcyon-anims-slide-bt .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-slide-bt
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-slide-bt .modal,
 body.flexcyon-anims-slide-bt .prompt {
   animation: slide-in-bt var(--flexcyon-anim-duration)
@@ -1492,11 +1486,10 @@ body.flexcyon-anims-slide-bt.flexcyon-anim-style-settings-contain
 
 body.flexcyon-anims-spin-rl .modal .community-modal-info,
 body.flexcyon-anims-spin-rl .modal .vertical-tab-content,
-body.flexcyon-anims-spin-rl .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-spin-rl
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-spin-rl .modal,
 body.flexcyon-anims-spin-rl .prompt {
   animation: spin-in-rl var(--flexcyon-anim-duration)
@@ -1511,11 +1504,10 @@ body.flexcyon-anims-spin-rl.flexcyon-anim-style-settings-contain
 
 body.flexcyon-anims-spin-bt .modal .community-modal-info,
 body.flexcyon-anims-spin-bt .modal .vertical-tab-content,
-body.flexcyon-anims-spin-bt .workspace-leaf:not([style^="display: none"]),
 body.flexcyon-anims-spin-bt
   .mod-stacked
   .workspace-leaf.mod-active
-  .workspace-leaf-content,
+  .workspace-leaf-content:not([data-type="file-explorer"]),
 body.flexcyon-anims-spin-bt .modal,
 body.flexcyon-anims-spin-bt .prompt {
   animation: spin-in-bt var(--flexcyon-anim-duration)
@@ -11467,6 +11459,14 @@ body.flexcyon-workspace-pl10k-layout .view-actions button {
   border-radius: var(--flexcyon-callout-radix);
 }
 
+body.flexcyon-vertical-nav
+  .workspace.is-right-sidedock-open
+  .mod-right-split
+  .mod-top
+  .view-content {
+  padding-top: 40px;
+}
+
 body {
   --flexcyon-active-indicator: ">> ";
 }
@@ -12188,32 +12188,6 @@ body.flexcyon-enable-active-indicator
 body.flexcyon-enable-active-indicator .vertical-tab-nav-item.is-active::before {
   content: var(--flexcyon-active-indicator);
 }
-body.flexcyon-flex-max-mode
-  .workspace-leaf-content[data-type*="file-explorer"]
-  .tree-item-self.is-active
-  .tree-item-inner::before,
-body.flexcyon-enable-active-indicator
-  .workspace-leaf-content[data-type*="file-explorer"]
-  .tree-item-self.is-active
-  .tree-item-inner::before {
-  margin-left: -24px;
-}
-body.flexcyon-flex-max-mode .tree-item-self.is-active .tree-item-inner::before,
-body.flexcyon-enable-active-indicator
-  .tree-item-self.is-active
-  .tree-item-inner::before {
-  margin-left: -20px;
-}
-body.flexcyon-flex-max-mode
-  .tree-item-self.is-active
-  .collapse-icon:has(+ .tree-item-inner)
-  svg,
-body.flexcyon-enable-active-indicator
-  .tree-item-self.is-active
-  .collapse-icon:has(+ .tree-item-inner)
-  svg {
-  color: transparent;
-}
 
 body.flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs,
 body.flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs {
@@ -12371,11 +12345,7 @@ body.flexcyon-vertical-nav.is-hidden-frameless:not(.is-fullscreen)
 .is-hidden-frameless:not(.is-fullscreen):not(.mod-macos)
   .workspace-tabs.mod-top-right-space
   .workspace-tab-header-container:after {
-  display: none;
-}
-
-body .workspace.is-right-sidedock-open .mod-right-split .mod-top .view-content {
-  padding-top: 40px;
+  z-index: -5;
 }
 
 body {
@@ -16925,6 +16895,33 @@ div.bases-cards-cover:not([style*="background-image"]) * {
 
 .query-toolbar-menu .query-toolbar-section:not(:last-child) {
   border-bottom: none;
+}
+
+.workspace-leaf-content[data-type="markdown"] .block-language-base .bases-view,
+.workspace-leaf-content[data-type="markdown"] .bases-embed .bases-view {
+  min-height: 100px;
+  border: none;
+}
+
+.bases-tbody[style*="height: 0px"]::after {
+  white-space: pre;
+  content: " \a  No entries could be found";
+  font-size: var(--font-ui-small);
+  color: var(--color-red);
+}
+
+.bases-table-cell[disabled*="true"] {
+  background-color: transparent;
+}
+.bases-table-cell[disabled*="true"]::after {
+  color: var(--color-red);
+  content: "N/A";
+  font-size: var(--font-ui-small);
+  margin-left: 8px;
+}
+
+.bases-table-cell {
+  --input-placeholder-color: var(--color-red);
 }
 
 .workspace-leaf-content[data-type="search"] {

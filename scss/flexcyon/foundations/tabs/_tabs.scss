@@ -213,8 +213,9 @@ body.flexcyon-workspace-card-layout {
   body.flexcyon-anims-#{$anim-class} {
     .modal .community-modal-info,
     .modal .vertical-tab-content,
-    .workspace-leaf:not([style^="display: none"]),
-    .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
+    .mod-stacked
+      .workspace-leaf.mod-active
+      .workspace-leaf-content:not([data-type="file-explorer"]),
     .modal,
     .prompt {
       animation: $anim-type var(--flexcyon-anim-duration)
@@ -231,8 +232,9 @@ body.flexcyon-workspace-card-layout {
     body.flexcyon-flex-max-mode {
       .modal .community-modal-info,
       .modal .vertical-tab-content,
-      .workspace-leaf:not([style^="display: none"]),
-      .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content,
+      .mod-stacked
+        .workspace-leaf.mod-active
+        .workspace-leaf-content:not([data-type="file-explorer"]),
       .modal,
       .style-settings-container,
       .prompt {

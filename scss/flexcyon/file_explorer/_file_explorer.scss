@@ -280,23 +280,6 @@ body.flexcyon-enable-active-indicator {
       content: var(--flexcyon-active-indicator);
     }
   }
-
-  .workspace-leaf-content[data-type*="file-explorer"]
-    .tree-item-self.is-active
-    .tree-item-inner {
-    &::before {
-      margin-left: -24px;
-    }
-  }
-  .tree-item-self.is-active .tree-item-inner {
-    &::before {
-      margin-left: -20px;
-    }
-  }
-
-  .tree-item-self.is-active .collapse-icon:has(+ .tree-item-inner) svg {
-    color: transparent;
-  }
 }
 
 body.flexcyon-vertical-nav {
@@ -361,13 +344,5 @@ body.flexcyon-vertical-nav {
 .is-hidden-frameless:not(.is-fullscreen):not(.mod-macos)
   .workspace-tabs.mod-top-right-space
   .workspace-tab-header-container:after {
-  display: none;
-}
-
-body .workspace.is-right-sidedock-open {
-  .mod-right-split .mod-top {
-    .view-content {
-      padding-top: 40px;
-    }
-  }
+  z-index: -5;
 }

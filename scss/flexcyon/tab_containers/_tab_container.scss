@@ -372,3 +372,11 @@ body.flexcyon-workspace-pl10k-layout {
     }
   }
 }
+
+body.flexcyon-vertical-nav .workspace.is-right-sidedock-open {
+  .mod-right-split .mod-top {
+    .view-content {
+      padding-top: 40px;
+    }
+  }
+}
