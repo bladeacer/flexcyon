@@ -24,7 +24,7 @@ body {
       padding-inline-end: var(--flexcyon-callout-icon-right-padding);
     }
 
-    .callout-content :first-child:is(pre, img) {
+    .callout-content :first-child:is(pre, img, iframe) {
       margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
     }
   }
@@ -811,6 +811,9 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
       [data-callout*="tui"],
       [data-callout-metadata*="tui"]
     ) {
+    .callout-title {
+      color: var(--color-#{$color});
+    }
     .callout-content {
       border-radius: var(--flexcyon-callout-radix);
       border: 1px solid var(--color-#{$color});
@@ -864,8 +867,12 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 }
 
 @mixin plain-wrapper($color) {
-  .callout[data-callout*="plain-#{$color}"],
-  .callout[data-callout-metadata*="plain-#{$color}"] {
+  .callout[data-callout*="plain-#{$color}"]:not(
+      :is(#{$flexcyon-plain-exclusions})
+    ),
+  .callout[data-callout-metadata*="plain-#{$color}"]:not(
+      :is(#{$flexcyon-plain-exclusions})
+    ) {
     border: 1px solid var(--color-#{$color});
     border-radius: calc(0.5 * var(--flexcyon-callout-radix));
     padding: 0px;
@@ -925,8 +932,12 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
 }
 
 @mixin vert-wrapper($color) {
-  .callout[data-callout*="vert-#{$color}"],
-  .callout[data-callout-metadata*="vert-#{$color}"] {
+  .callout[data-callout*="vert-#{$color}"]:not(
+      :is(#{$flexcyon-vert-exclusions})
+    ),
+  .callout[data-callout-metadata*="vert-#{$color}"]:not(
+      :is(#{$flexcyon-vert-exclusions})
+    ) {
     border: 1px solid var(--color-#{$color});
     border-radius: calc(0.5 * var(--flexcyon-callout-radix));
     padding: 0px;

@@ -1,0 +1,17 @@
+.view-content.webviewer-content {
+  padding: 12px 16px 40px 16px;
+  border-radius: 16px;
+}
+.webviewer-history-view-item {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+.workspace-leaf-content[data-type*="webviewer"] {
+  .tree-item-inner {
+    margin-left: 8px;
+  }
+}
+.view-header-reload-button {
+  margin-top: 10px;
+}
