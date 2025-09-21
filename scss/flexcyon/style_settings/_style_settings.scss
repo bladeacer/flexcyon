@@ -309,32 +309,11 @@ settings:
 
   - id: flexcyon-coloured-headings
     title: Enable coloured headings
-    type: variable-select
-    default: "true"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
+    type: class-toggle
+    default: true
+
   - title: Enable soft glow for headings
     id: flexcyon-headings-glow-enabled
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-
-  - title: Legacy Enable coloured headings
-    id: flexcyon-legacy-headings-coloured-enabled
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
-    type: class-toggle
-    default: false
-  - title: Legacy Enable soft glow for headings
-    id: flexcyon-legacy-headings-glow-enabled
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
 
@@ -344,15 +323,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 1
-    id: flexcyon-legacy-headings-indicator-h1
     description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
@@ -371,15 +341,6 @@ settings:
     default: 1.61
   - title: Enable underline for Heading 1
     id: flexcyon-h1-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 1
-    id: flexcyon-legacy-h1-underline-enabled
     type: class-toggle
     default: false
 
@@ -389,16 +350,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 2
     id: flexcyon-headings-indicator-h2
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 2
-    id: flexcyon-legacy-headings-indicator-h2
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 2 font size
@@ -416,15 +367,6 @@ settings:
     default: 1.51
   - title: Enable underline for Heading 2
     id: flexcyon-h2-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 2
-    id: flexcyon-legacy-h2-underline-enabled
     type: class-toggle
     default: false
 
@@ -434,16 +376,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 3
     id: flexcyon-headings-indicator-h3
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 3
-    id: flexcyon-legacy-headings-indicator-h3
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 3 font size
@@ -461,15 +393,6 @@ settings:
     default: 1.41
   - title: Enable underline for Heading 3
     id: flexcyon-h3-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 3
-    id: flexcyon-legacy-h3-underline-enabled
     type: class-toggle
     default: false
 
@@ -479,16 +402,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 4
     id: flexcyon-headings-indicator-h4
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 4
-    id: flexcyon-legacy-headings-indicator-h4
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 4 font size
@@ -506,15 +419,6 @@ settings:
     default: 1.31
   - title: Enable underline for Heading 4
     id: flexcyon-h4-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 4
-    id: flexcyon-legacy-h4-underline-enabled
     type: class-toggle
     default: false
 
@@ -524,16 +428,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 5
     id: flexcyon-headings-indicator-h5
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 5
-    id: flexcyon-legacy-headings-indicator-h5
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 5 font size
@@ -551,15 +445,6 @@ settings:
     default: 1.21
   - title: Enable underline for Heading 5
     id: flexcyon-h5-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 5
-    id: flexcyon-legacy-h5-underline-enabled
     type: class-toggle
     default: false
 
@@ -569,16 +454,6 @@ settings:
     collapsed: true
   - title: Enable heading indicators globally for Heading 6
     id: flexcyon-headings-indicator-h6
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable heading indicators globally for Heading 6
-    id: flexcyon-legacy-headings-indicator-h6
-    description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
   - title: Heading 6 font size
@@ -596,18 +471,8 @@ settings:
     default: 1.21
   - title: Enable underline for Heading 6
     id: flexcyon-h6-underline-enabled
-    type: variable-select
-    default: "false"
-    options: 
-      - label: Enable
-        value: "true"
-      - label: Disable
-        value: "false"
-  - title: Legacy Enable underline for Heading 6
-    id: flexcyon-legacy-h6-underline-enabled
     type: class-toggle
     default: false
-
 
   - title: Inline title
     type: heading

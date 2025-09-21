@@ -1,18 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme
-// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
-@mixin heading-indicators($lvl) {
-  h#{$lvl}:not(:hover)::before,
-  .cm-header-#{$lvl}::before {
-    position: relative;
-    content: "h#{$lvl}";
-    color: var(--h#{$lvl}-color);
-    opacity: calc(var(--dimmed) + 0.25);
-    font-size: var(--font-ui-medium);
-    padding-right: 8px;
-    display: var(--flexcyon-head-ind-h#{$lvl}-disp);
-  }
-}
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
   --h1-weight: 700;
@@ -28,276 +16,9 @@ body {
   --h4-size: 1.21803em;
   --h5-size: 1.11803em;
   --h6-size: 1.01803em;
-
-  --h1-color: inherit;
-  --h2-color: inherit;
-  --h3-color: inherit;
-  --h4-color: inherit;
-  --h5-color: inherit;
-  --h6-color: inherit;
-
-  --h1-border-btm: unset;
-  --h2-border-btm: unset;
-  --h3-border-btm: unset;
-  --h4-border-btm: unset;
-  --h5-border-btm: unset;
-  --h6-border-btm: unset;
-
-  --flexcyon-coloured-headings: true;
-  --flexcyon-headings-glow-enabled: false;
-
-  --h1-color: var(--flexcyon-blue);
-  --h2-color: var(--flexcyon-purple-lilac);
-  --h3-color: var(--flexcyon-cyan);
-  --h4-color: var(--flexcyon-pink);
-  --h5-color: var(--flexcyon-lime-green);
-  --h6-color: var(--flexcyon-yellow);
-
-  --h1-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-blue) ;
-      else: inherit;
-  );
-  --h2-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-purple-lilac) ;
-      else: inherit;
-  );
-  --h3-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-cyan) ;
-      else: inherit;
-  );
-  --h4-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-pink) ;
-      else: inherit;
-  );
-  --h5-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-lime-green) ;
-      else: inherit;
-  );
-  --h6-color: if(
-    style(--flexcyon-coloured-headings: true): var(--flexcyon-yellow) ;
-      else: inherit;
-  );
-
-  --h1-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 2px 2px 4px var(--h1-color) ;
-      else: unset;
-  );
-  --h2-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 1.75px 1.75px 3.5px
-      var(--h2-color) ; else: unset;
-  );
-  --h3-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 1.5px 1.5px 3px
-      var(--h3-color) ; else: unset;
-  );
-  --h4-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 1.25px 1.25px 2.5px
-      var(--h4-color) ; else: unset;
-  );
-  --h5-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 1px 1px 2px var(--h5-color) ;
-      else: unset;
-  );
-  --h6-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 0.75px 0.75px 1.5px
-      var(--h6-color) ; else: unset;
-  );
-
-  .cm-formatting-header {
-    text-shadow: none;
-  }
-
-  --flexcyon-h1-underline-enabled: false;
-  --flexcyon-h2-underline-enabled: false;
-  --flexcyon-h3-underline-enabled: false;
-  --flexcyon-h4-underline-enabled: false;
-  --flexcyon-h5-underline-enabled: false;
-  --flexcyon-h6-underline-enabled: false;
-
-  --h1-border-btm: if(
-    style(--flexcyon-h1-underline-enabled: true): calc(
-        (var(--h1-weight) - 200) / 100 * 1px
-      )
-      solid var(--h1-color) ; else: unset;
-  );
-  --h2-border-btm: if(
-    style(--flexcyon-h2-underline-enabled: true): calc(
-        (var(--h2-weight) - 200) / 100 * 1px
-      )
-      solid var(--h2-color) ; else: unset;
-  );
-  --h3-border-btm: if(
-    style(--flexcyon-h3-underline-enabled: true): calc(
-        (var(--h3-weight) - 200) / 100 * 1px
-      )
-      solid var(--h3-color) ; else: unset;
-  );
-  --h4-border-btm: if(
-    style(--flexcyon-h4-underline-enabled: true): calc(
-        (var(--h4-weight) - 200) / 100 * 1px
-      )
-      solid var(--h4-color) ; else: unset;
-  );
-  --h5-border-btm: if(
-    style(--flexcyon-h5-underline-enabled: true): calc(
-        (var(--h5-weight) - 200) / 100 * 1px
-      )
-      solid var(--h5-color) ; else: unset;
-  );
-  --h6-border-btm: if(
-    style(--flexcyon-h6-underline-enabled: true): calc(
-        (var(--h6-weight) - 200) / 100 * 1px
-      )
-      solid var(--h6-color) ; else: unset;
-  );
-
-  h1,
-  .cm-header-1 {
-    text-shadow: var(--h1-shadow);
-    border-block-end: var(--h1-border-btm);
-  }
-  h2,
-  .cm-header-2 {
-    text-shadow: var(--h2-shadow);
-    border-block-end: var(--h2-border-btm);
-  }
-  h3,
-  .cm-header-3 {
-    text-shadow: var(--h3-shadow);
-    border-block-end: var(--h3-border-btm);
-  }
-  h4,
-  .cm-header-4 {
-    text-shadow: var(--h4-shadow);
-    border-block-end: var(--h4-border-btm);
-  }
-  h5,
-  .cm-header-5 {
-    text-shadow: var(--h5-shadow);
-    border-block-end: var(--h5-border-btm);
-  }
-  h6,
-  .cm-header-6 {
-    text-shadow: var(--h6-shadow);
-    border-block-end: var(--h6-border-btm);
-  }
-
-  --flexcyon-cm-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): none; else: unset;
-  );
-
-  .cm-formatting-header {
-    text-shadow: var(--flexcyon-cm-shadow);
-  }
-
-  --h1-shadow: none;
-  --h1-shadow: if(
-    style(--flexcyon-headings-glow-enabled: true): 2px 2px 4px var(--h1-color) ;
-      else: inherit;
-  );
-
-  --flexcyon-headings-indicator-h1: false;
-  --flexcyon-headings-indicator-h2: false;
-  --flexcyon-headings-indicator-h3: false;
-  --flexcyon-headings-indicator-h4: false;
-  --flexcyon-headings-indicator-h5: false;
-  --flexcyon-headings-indicator-h6: false;
-
-  --flexcyon-head-ind-h1-disp: none;
-  --flexcyon-head-ind-h1-disp: if(
-    style(--flexcyon-headings-indicator-h1: false): none; else: unset;
-  );
-  --flexcyon-head-ind-h2-disp: none;
-  --flexcyon-head-ind-h2-disp: if(
-    style(--flexcyon-headings-indicator-h2: false): none; else: unset;
-  );
-  --flexcyon-head-ind-h3-disp: none;
-  --flexcyon-head-ind-h3-disp: if(
-    style(--flexcyon-headings-indicator-h3: false): none; else: unset;
-  );
-  --flexcyon-head-ind-h4-disp: none;
-  --flexcyon-head-ind-h4-disp: if(
-    style(--flexcyon-headings-indicator-h4: false): none; else: unset;
-  );
-  --flexcyon-head-ind-h5-disp: none;
-  --flexcyon-head-ind-h5-disp: if(
-    style(--flexcyon-headings-indicator-h5: false): none; else: unset;
-  );
-  --flexcyon-head-ind-h6-disp: none;
-  --flexcyon-head-ind-h6-disp: if(
-    style(--flexcyon-headings-indicator-h6: false): none; else: unset;
-  );
-
-  @include heading-indicators(1);
-  @include heading-indicators(2);
-  @include heading-indicators(3);
-  @include heading-indicators(4);
-  @include heading-indicators(5);
-  @include heading-indicators(6);
 }
 
-@mixin legacy-heading-underline($lvl) {
-  body.flexcyon-legacy-h#{$lvl}-underline-enabled h#{$lvl},
-  body.flexcyon-legacy-h#{$lvl}-underline-enabled .cm-header-#{$lvl} {
-    border-block-end: calc((var(--h#{$lvl}-weight) - 200) / 100 * 1px) solid
-      var(--h#{$lvl}-color);
-  }
-}
-
-@include legacy-heading-underline(1);
-@include legacy-heading-underline(2);
-@include legacy-heading-underline(3);
-@include legacy-heading-underline(4);
-@include legacy-heading-underline(5);
-@include legacy-heading-underline(6);
-
-@mixin legacy-headings-indicator($h_level) {
-  .flexcyon-legacy-headings-indicator-h#{$h_level}
-    .workspace-leaf-content[data-type="markdown"] {
-    h#{$h_level}:not(:hover)::before,
-    .cm-header-#{$h_level}::before {
-      position: relative;
-      content: "h#{$h_level}";
-      color: var(--h#{$h_level}-color);
-      opacity: calc(var(--dimmed) + 0.25);
-      font-size: var(--font-ui-medium);
-      padding-right: 8px;
-      display: unset;
-    }
-  }
-}
-
-@mixin cssclass-heading-indicator($h_level) {
-  .headings-indicator-all,
-  .headings-indicator-h#{$h_level} {
-    h#{$h_level}:not(:hover)::before,
-    .cm-header-#{$h_level}::before {
-      position: relative;
-      content: "h#{$h_level}";
-      color: var(--h#{$h_level}-color);
-      opacity: calc(var(--dimmed) + 0.25);
-      font-size: var(--font-ui-medium);
-      padding-right: 8px;
-      display: unset;
-    }
-  }
-}
-
-@include legacy-headings-indicator(1);
-@include legacy-headings-indicator(2);
-@include legacy-headings-indicator(3);
-@include legacy-headings-indicator(4);
-@include legacy-headings-indicator(5);
-@include legacy-headings-indicator(6);
-
-@include cssclass-heading-indicator(1);
-@include cssclass-heading-indicator(2);
-@include cssclass-heading-indicator(3);
-@include cssclass-heading-indicator(4);
-@include cssclass-heading-indicator(5);
-@include cssclass-heading-indicator(6);
-
-body.flexcyon-legacy-headings-coloured-enabled {
+body.flexcyon-coloured-headings {
   --h1-color: var(--flexcyon-blue);
   --h2-color: var(--flexcyon-purple-lilac);
   --h3-color: var(--flexcyon-cyan);
@@ -306,7 +27,7 @@ body.flexcyon-legacy-headings-coloured-enabled {
   --h6-color: var(--flexcyon-yellow);
 }
 
-body.flexcyon-legacy-headings-glow-enabled {
+body.flexcyon-headings-glow-enabled {
   h1,
   .cm-header-1 {
     text-shadow: 2px 2px 4px var(--h1-color);
@@ -335,3 +56,68 @@ body.flexcyon-legacy-headings-glow-enabled {
     text-shadow: none;
   }
 }
+
+body.flexcyon-h1-underline-enabled .cm-header-1,
+body.flexcyon-h1-underline-enabled h1 {
+  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
+    var(--h1-color);
+}
+
+body.flexcyon-h2-underline-enabled .cm-header-2,
+body.flexcyon-h2-underline-enabled h2 {
+  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
+    var(--h2-color);
+}
+
+body.flexcyon-h3-underline-enabled .cm-header-3,
+body.flexcyon-h3-underline-enabled h3 {
+  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
+    var(--h3-color);
+}
+
+body.flexcyon-h4-underline-enabled .cm-header-4,
+body.flexcyon-h4-underline-enabled h4 {
+  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
+    var(--h4-color);
+}
+
+body.flexcyon-h5-underline-enabled .cm-header-5,
+body.flexcyon-h5-underline-enabled h5 {
+  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
+    var(--h5-color);
+}
+
+body.flexcyon-h6-underline-enabled .cm-header-6,
+body.flexcyon-h6-underline-enabled h6 {
+  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
+    var(--h6-color);
+}
+
+@mixin headings-indicator($h_level) {
+  .headings-indicator-all,
+  .headings-indicator-h#{$h_level},
+  .flexcyon-headings-indicator-h#{$h_level}
+    .workspace-leaf-content[data-type="markdown"] {
+    h#{$h_level}:not(:hover)::before,
+    .HyperMD-header-#{$h_level}::before {
+      position: relative;
+      content: "h#{$h_level}";
+      color: var(--h#{$h_level}-color);
+      opacity: calc(var(--dimmed) + 0.25);
+      font-size: var(--font-ui-medium);
+      padding-right: 8px;
+    }
+
+    h#{$h_level}:not(:hover) svg,
+    .HyperMD-header-#{$h_level} svg {
+      transform: translateX(-28px);
+    }
+  }
+}
+
+@include headings-indicator(1);
+@include headings-indicator(2);
+@include headings-indicator(3);
+@include headings-indicator(4);
+@include headings-indicator(5);
+@include headings-indicator(6);
