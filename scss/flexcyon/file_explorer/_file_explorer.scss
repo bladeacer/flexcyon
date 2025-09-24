@@ -316,6 +316,18 @@ body.flexcyon-vertical-nav {
     .nav-header {
       width: min-content;
     }
+    .metadata-properties {
+      flex-direction: column;
+    }
+    .metadata-property {
+      flex-direction: column;
+      div {
+        flex-direction: row;
+      }
+      .metadata-property-key {
+        width: 100%;
+      }
+    }
     .nav-buttons-container {
       gap: 8px;
       margin-top: 8px;
@@ -335,9 +347,10 @@ body.flexcyon-vertical-nav {
     }
   }
   &.is-hidden-frameless:not(.is-fullscreen)
+    .is-right-sidedock-open
     .workspace-tabs.mod-top-right-space
     .workspace-tab-header-container {
-    padding-right: 8px;
+    padding-right: 0px;
   }
 }
 

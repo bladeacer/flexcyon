@@ -13191,6 +13191,50 @@ body.flexcyon-vertical-nav
 body.flexcyon-vertical-nav
   .mod-sidedock.mod-right-split
   .workspace-tabs
+  .metadata-properties,
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-left-split
+  .workspace-tabs
+  .metadata-properties {
+  flex-direction: column;
+}
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-right-split
+  .workspace-tabs
+  .metadata-property,
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-left-split
+  .workspace-tabs
+  .metadata-property {
+  flex-direction: column;
+}
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-right-split
+  .workspace-tabs
+  .metadata-property
+  div,
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-left-split
+  .workspace-tabs
+  .metadata-property
+  div {
+  flex-direction: row;
+}
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-right-split
+  .workspace-tabs
+  .metadata-property
+  .metadata-property-key,
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-left-split
+  .workspace-tabs
+  .metadata-property
+  .metadata-property-key {
+  width: 100%;
+}
+body.flexcyon-vertical-nav
+  .mod-sidedock.mod-right-split
+  .workspace-tabs
   .nav-buttons-container,
 body.flexcyon-vertical-nav
   .mod-sidedock.mod-left-split
@@ -13240,7 +13284,7 @@ body.flexcyon-vertical-nav
 body.flexcyon-vertical-nav.is-hidden-frameless:not(.is-fullscreen)
   .workspace-tabs.mod-top-right-space
   .workspace-tab-header-container {
-  padding-right: 8px;
+  padding-right: 0px;
 }
 
 .is-hidden-frameless:not(.is-fullscreen):not(.mod-macos)
