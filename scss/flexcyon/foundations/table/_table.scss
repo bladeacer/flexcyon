@@ -12,6 +12,10 @@ body {
   --table-header-size: large;
   --flexcyon-table-reading-mode-width: 100%;
 
+  --flexcyon-td-verti-padding: 5px;
+  --flexcyon-td-horiz-padding: 10px;
+  --flexcyon-td-live-pad-scale: 0.2;
+
   table:not(.table-view-table) {
     width: var(--flexcyon-table-reading-mode-width);
     margin-left: calc((100% - var(--flexcyon-table-reading-mode-width)) / 2);
@@ -32,5 +36,18 @@ body {
 
   table {
     border-color: var(--table-border-color);
+  }
+  .cm-html-embed td,
+  .markdown-rendered td,
+  .cm-html-embed th,
+  .markdown-rendered th {
+    padding: var(--flexcyon-td-verti-padding) var(--flexcyon-td-horiz-padding);
+  }
+  .markdown-source-view.mod-cm6 .cm-table-widget th,
+  .markdown-source-view.mod-cm6 .cm-table-widget td {
+    padding: calc(
+        var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-verti-padding)
+      )
+      calc(var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-horiz-padding));
   }
 }

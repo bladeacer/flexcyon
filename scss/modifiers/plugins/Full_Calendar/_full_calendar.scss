@@ -70,6 +70,9 @@ body {
       flex-direction: row;
     }
   }
+  .fc .fc-button-primary:focus {
+    box-shadow: 0 0 0 0.15rem var(--text-faint);
+  }
 }
 
 body.flexcyon-workspace-angled-layout {

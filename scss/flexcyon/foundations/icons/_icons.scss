@@ -60,9 +60,6 @@ body {
   .setting-item {
     border-top: none;
   }
-  .style-settings-collapse-indicator {
-    transform: translateX(-2px);
-  }
   .setting-item.setting-item-heading {
     border-bottom: 1px solid var(--background-modifier-border);
     .setting-item-name {
@@ -88,9 +85,6 @@ body {
   .tree-item:not(.graph-control-section) {
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
-  }
-  .collapse-icon {
-    transform: translateY(-0.5px);
   }
 }
 

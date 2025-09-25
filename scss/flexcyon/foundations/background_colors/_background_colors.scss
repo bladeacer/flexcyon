@@ -7,31 +7,31 @@
 //
 body:is(.theme-dark) {
   /* ------------------------------ */
-  --background-primary: var(--flexcyon-base-02);
-  --background-primary-alt: var(--flexcyon-base-03);
-  --background-secondary: var(--flexcyon-base-01);
-  --background-secondary-alt: var(--flexcyon-base-02);
-  --background-modifier-hover: var(--flexcyon-base-03);
+  --background-primary: var(--color-base-10);
+  --background-primary-alt: var(--color-base-25);
+  --background-secondary: var(--color-base-00);
+  --background-secondary-alt: var(--color-base-15);
+  --background-modifier-hover: var(--color-base-20);
 }
 
 body:is(.theme-light) {
-  --background-primary: var(--flexcyon-base-01);
-  --background-primary-alt: var(--flexcyon-base-02);
-  --background-secondary: var(--flexcyon-base-01);
-  --background-secondary-alt: var(--flexcyon-base-02);
-  --background-modifier-hover: var(--flexcyon-base-01);
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-05);
+  --background-secondary-alt: var(--color-base-10);
+  --background-modifier-hover: var(--color-base-15);
 }
 
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --background-modifier-active-hover: var(--flexcyon-base-03);
-  --background-modifier-border: var(--flexcyon-base-02-03-mix);
+  --background-modifier-active-hover: var(--color-base-25);
+  --background-modifier-border: var(--color-base-20);
   --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--flexcyon-base-04);
-  --background-modifier-message: var(--flexcyon-base-02-03-mix);
+  --background-modifier-border-focus: var(--color-base-30);
+  --background-modifier-message: var(--color-base-20);
   --background-modifier-error: rgba(
     var(--color-red-rgb),
-    calc(var(--dimmed) + 0.25)
+    calc(var(--dimmed) + 0.3)
   );
 }
 

@@ -59,7 +59,6 @@ body {
 body.flexcyon-enable-alt-active-item-effect {
   .vertical-tab-nav-item {
     padding-left: 0.5rem;
-    transform: padding ease-in-out 0.35s;
   }
 
   .vertical-tab-nav-item.search-settings-input {
@@ -71,8 +70,8 @@ body.flexcyon-enable-alt-active-item-effect {
     background: linear-gradient(
       to right,
       transparent 0%,
-      var(--text-on-accent) 10%,
-      var(--text-on-accent) 90%,
+      var(--text-on-accent) 7.5%,
+      var(--text-on-accent) 87.5%,
       transparent 100%
     );
     padding-left: 0.75rem;

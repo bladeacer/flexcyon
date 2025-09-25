@@ -2622,31 +2622,31 @@ body ol {
 
 body:is(.theme-dark) {
   /* ------------------------------ */
-  --background-primary: var(--flexcyon-base-02);
-  --background-primary-alt: var(--flexcyon-base-03);
-  --background-secondary: var(--flexcyon-base-01);
-  --background-secondary-alt: var(--flexcyon-base-02);
-  --background-modifier-hover: var(--flexcyon-base-03);
+  --background-primary: var(--color-base-10);
+  --background-primary-alt: var(--color-base-25);
+  --background-secondary: var(--color-base-00);
+  --background-secondary-alt: var(--color-base-15);
+  --background-modifier-hover: var(--color-base-20);
 }
 
 body:is(.theme-light) {
-  --background-primary: var(--flexcyon-base-01);
-  --background-primary-alt: var(--flexcyon-base-02);
-  --background-secondary: var(--flexcyon-base-01);
-  --background-secondary-alt: var(--flexcyon-base-02);
-  --background-modifier-hover: var(--flexcyon-base-01);
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-10);
+  --background-secondary: var(--color-base-05);
+  --background-secondary-alt: var(--color-base-10);
+  --background-modifier-hover: var(--color-base-15);
 }
 
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --background-modifier-active-hover: var(--flexcyon-base-03);
-  --background-modifier-border: var(--flexcyon-base-02-03-mix);
+  --background-modifier-active-hover: var(--color-base-25);
+  --background-modifier-border: var(--color-base-20);
   --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--flexcyon-base-04);
-  --background-modifier-message: var(--flexcyon-base-02-03-mix);
+  --background-modifier-border-focus: var(--color-base-30);
+  --background-modifier-message: var(--color-base-20);
   --background-modifier-error: rgba(
     var(--color-red-rgb),
-    calc(var(--dimmed) + 0.25)
+    calc(var(--dimmed) + 0.3)
   );
 }
 
@@ -2963,9 +2963,6 @@ body .community-modal-info hr {
 body .setting-item {
   border-top: none;
 }
-body .style-settings-collapse-indicator {
-  transform: translateX(-2px);
-}
 body .setting-item.setting-item-heading {
   border-bottom: 1px solid var(--background-modifier-border);
 }
@@ -2991,9 +2988,6 @@ body .oz-nav-file,
 body .tree-item:not(.graph-control-section) {
   padding: var(--flexcyon-tree-item-verti-padding)
     var(--flexcyon-tree-item-horiz-padding);
-}
-body .collapse-icon {
-  transform: translateY(-0.5px);
 }
 
 body.flexcyon-workspace-card-layout .community-modal-info-name {
@@ -4210,6 +4204,9 @@ body {
   --table-header-background-hover: var(--table-background);
   --table-header-size: large;
   --flexcyon-table-reading-mode-width: 100%;
+  --flexcyon-td-verti-padding: 5px;
+  --flexcyon-td-horiz-padding: 10px;
+  --flexcyon-td-live-pad-scale: 0.2;
 }
 body table:not(.table-view-table) {
   width: var(--flexcyon-table-reading-mode-width);
@@ -4227,6 +4224,19 @@ body .markdown-rendered tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2) {
 }
 body table {
   border-color: var(--table-border-color);
+}
+body .cm-html-embed td,
+body .markdown-rendered td,
+body .cm-html-embed th,
+body .markdown-rendered th {
+  padding: var(--flexcyon-td-verti-padding) var(--flexcyon-td-horiz-padding);
+}
+body .markdown-source-view.mod-cm6 .cm-table-widget th,
+body .markdown-source-view.mod-cm6 .cm-table-widget td {
+  padding: calc(
+      var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-verti-padding)
+    )
+    calc(var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-horiz-padding));
 }
 
 body {
@@ -13282,6 +13292,7 @@ body.flexcyon-vertical-nav
   flex-direction: row;
 }
 body.flexcyon-vertical-nav.is-hidden-frameless:not(.is-fullscreen)
+  .is-right-sidedock-open
   .workspace-tabs.mod-top-right-space
   .workspace-tab-header-container {
   padding-right: 0px;
@@ -14406,7 +14417,6 @@ body
 
 body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item {
   padding-left: 0.5rem;
-  transform: padding ease-in-out 0.35s;
 }
 body.flexcyon-enable-alt-active-item-effect
   .vertical-tab-nav-item.search-settings-input {
@@ -14417,8 +14427,8 @@ body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active {
   background: linear-gradient(
     to right,
     transparent 0%,
-    var(--text-on-accent) 10%,
-    var(--text-on-accent) 90%,
+    var(--text-on-accent) 7.5%,
+    var(--text-on-accent) 87.5%,
     transparent 100%
   );
   padding-left: 0.75rem;
@@ -15057,6 +15067,21 @@ settings:
     id: flexcyon-table-reading-mode-width
     type: variable-text
     default: 100%
+  - title: Table Cell Vertical Padding
+    id: flexcyon-td-verti-padding
+    type: variable-number
+    format: px
+    default: 5
+  - title: Table Cell Horizontal Padding
+    id: flexcyon-td-horiz-padding
+    type: variable-number
+    format: px
+    default: 10
+  - title: Table Cell Live Preview Scaling
+    description: Proportion to scale Live Preview table cell rendering when compared to Reading mode.
+    id: flexcyon-td-live-pad-scale
+    type: variable-number
+    default: 0.2
 
   - title: Files
     type: heading
@@ -16571,6 +16596,27 @@ body.flexcyon-style-settings-dim-collapsed-headings
   opacity: calc(var(--dimmed) + 0.05);
 }
 
+body .setting-item:not(.is-collapsed).setting-item-heading {
+  border-bottom: 1px solid var(--text-faint);
+}
+
+.style-settings-import,
+.style-settings-export {
+  text-decoration: none;
+}
+
+.style-settings-import {
+  color: var(--color-blue);
+}
+
+.setting-item-heading .setting-item-name {
+  font-size: var(--font-ui-large);
+}
+
+.mod-settings hr {
+  border-color: transparent;
+}
+
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
   writing-mode: vertical-rl;
   overflow: scroll;
@@ -17183,6 +17229,9 @@ body
   .fc-header-toolbar
   .fc-button-group {
   flex-direction: row;
+}
+body .fc .fc-button-primary:focus {
+  box-shadow: 0 0 0 0.15rem var(--text-faint);
 }
 
 body.flexcyon-workspace-angled-layout
