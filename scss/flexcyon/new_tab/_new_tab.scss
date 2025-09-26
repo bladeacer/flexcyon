@@ -1,3 +1,4 @@
+/* obsi-snip-coll start */
 body.theme-dark {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
@@ -75,6 +76,7 @@ body.is-mobile.flexcyon-ascii-enable {
     line-height: 0.8;
   }
 }
+/* obsi-snip-coll end */
 
 body.flexcyon-flex-max-mode,
 body.flexcyon-empty-state-title-disable {
@@ -163,6 +165,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   }
 }
 
+/* obsi-snip-coll start */
 body.flexcyon-rtz-mode,
 body.flexcyon-number-tabs {
   counter-reset: numTab 0;
@@ -182,6 +185,7 @@ body.flexcyon-number-tabs {
     margin-bottom: 12px;
   }
 }
+/* obsi-snip-coll end */
 
 body.flexcyon-rtz-mode,
 body.flexcyon-remove-tab-headers {
