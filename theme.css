@@ -5562,7 +5562,7 @@ body .callout {
   margin: var(--flexcyon-callout-vertical-margin) 0;
 }
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: tategaki */
 div.callout[data-callout*="tategaki"] div.callout-content,
 div.callout[data-callout-metadata*="tategaki"] div.callout-content {
   writing-mode: vertical-rl;
@@ -5610,7 +5610,7 @@ div.callout[data-callout-metadata*="tategaki"]
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: vertical-ltr */
 div.callout[data-callout*="vert-ltr"] div.callout-content,
 div.callout[data-callout-metadata*="vert-ltr"] div.callout-content {
   writing-mode: vertical-lr;
@@ -5661,7 +5661,7 @@ div.callout[data-callout-metadata*="vert-ltr"]
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: no-icon */
 div.callout[data-callout-metadata*="empty"] .callout-icon,
 div.callout[data-callout*="empty"] .callout-icon,
 div.callout[data-callout*="tategaki"] .callout-icon,
@@ -5674,7 +5674,7 @@ div.callout[data-callout-metadata*="no-icon"] .callout-icon {
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: no-title */
 div.callout[data-callout-metadata*="tategaki"] .callout-title-inner,
 div.callout[data-callout-metadata*="tategaki"] .callout-title,
 div.callout[data-callout*="tategaki"] .callout-title-inner,
@@ -5695,7 +5695,7 @@ div.callout[data-callout-metadata*="no-title"] .callout-title {
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: bg-transparent */
 div.callout[data-callout*="bg-transparent"],
 div.callout[data-callout-metadata*="bg-transparent"],
 div.callout[data-callout*="transparent-bg"],
@@ -5704,7 +5704,7 @@ div.callout[data-callout-metadata*="transparent-bg"] {
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: color */
 div.callout[data-callout*="all-yellow"],
 div.callout[data-callout-metadata*="all-yellow"],
 div.callout[data-callout*="bg-yellow"],
@@ -6234,7 +6234,7 @@ div.callout[data-callout-metadata*="title-orange"] div.callout-icon .svg-icon {
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: centre-text */
 div.callout[data-callout*="center-all"] div.callout-title,
 div.callout[data-callout-metadata*="center-all"] div.callout-title,
 div.callout[data-callout*="center-title"] div.callout-title,
@@ -6250,7 +6250,7 @@ div.callout[data-callout-metadata*="center-content"] div.callout-content {
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: text-direction */
 div.callout[data-callout*="rtl-all"] div.callout-title *,
 div.callout[data-callout*="rtl-all"] div.callout-title,
 div.callout[data-callout-metadata*="rtl-all"] div.callout-title *,
@@ -6344,7 +6344,7 @@ div.callout[data-callout-metadata*="ltr-content"]
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: text-transform */
 div.callout[data-callout*="uppercase-all"]
   div.callout-title
   .callout-title-inner,
@@ -6534,7 +6534,7 @@ div.callout[data-callout-metadata*="caps-content"]
 }
 
 /* obsi-snip-coll end */
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: extended-color-palette */
 div.callout[data-callout*="all-red-blue"],
 div.callout[data-callout-metadata*="all-red-blue"],
 div.callout[data-callout*="bg-red-blue"],
@@ -14165,7 +14165,7 @@ body.flexcyon-status-style-pl10k
   display: none;
 }
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: ascii-art */
 body.theme-dark {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
@@ -14332,7 +14332,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
   opacity: unset;
 }
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: number-tabs */
 body.flexcyon-rtz-mode,
 body.flexcyon-number-tabs {
   counter-reset: numTab 0;
@@ -16849,7 +16849,7 @@ body .modal-bg {
     blur(var(--flexcyon-modal-image-blur));
 }
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: filters */
 body {
   --flexcyon-contrast-ratio: 1;
   --flexcyon-brightness-ratio: 1;

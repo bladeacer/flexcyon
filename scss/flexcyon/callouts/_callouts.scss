@@ -35,7 +35,7 @@ body {
   }
 }
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: tategaki */
 div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="tategaki"] {
   div.callout-content {
@@ -76,7 +76,7 @@ div.callout[data-callout-metadata*="tategaki"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: vertical-ltr */
 div.callout[data-callout*="vert-ltr"],
 div.callout[data-callout-metadata*="vert-ltr"] {
   div.callout-content {
@@ -120,7 +120,7 @@ div.callout[data-callout-metadata*="vert-ltr"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: no-icon */
 div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
 div.callout[data-callout*="tategaki"],
@@ -135,7 +135,7 @@ div.callout[data-callout-metadata*="no-icon"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: no-title */
 div.callout[data-callout-metadata*="tategaki"],
 div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="empty"],
@@ -151,7 +151,7 @@ div.callout[data-callout-metadata*="no-title"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: bg-transparent */
 div.callout[data-callout*="bg-transparent"],
 div.callout[data-callout-metadata*="bg-transparent"],
 div.callout[data-callout*="transparent-bg"],
@@ -160,7 +160,7 @@ div.callout[data-callout-metadata*="transparent-bg"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: color */
 @mixin callout-color($color-name, $color-var) {
   div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
@@ -203,7 +203,7 @@ div.callout[data-callout-metadata*="transparent-bg"] {
 
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: centre-text */
 div.callout[data-callout*="center-all"],
 div.callout[data-callout-metadata*="center-all"],
 div.callout[data-callout*="center-title"],
@@ -223,7 +223,7 @@ div.callout[data-callout-metadata*="center-content"] {
 }
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: text-direction */
 @mixin callout-dir($dir) {
   div.callout[data-callout*="#{$dir}-all"],
   div.callout[data-callout-metadata*="#{$dir}-all"],
@@ -262,7 +262,7 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-dir(ltr);
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: text-transform */
 @mixin callout-text-transform($transform) {
   div.callout[data-callout*="#{$transform}-all"],
   div.callout[data-callout-metadata*="#{$transform}-all"],
@@ -313,7 +313,7 @@ div.callout[data-callout-metadata*="center-content"] {
 @include callout-text-transform(caps);
 /* obsi-snip-coll end */
 
-/* obsi-snip-coll start */
+/* obsi-snip-coll start: extended-color-palette */
 @mixin callout-ext-color($color-name, $color-var) {
   div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
