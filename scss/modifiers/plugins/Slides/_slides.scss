@@ -1,0 +1,34 @@
+body {
+  --r-heading-text-transform: capitalize;
+  --r-main-font: var(--font-text);
+  --r-main-font-size: max-content;
+  --r-heading-color: var(--text-normal);
+  --r-heading-margin: 16px 0px;
+}
+
+.reveal .slides {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+  span[alt="banner"] img {
+    transform: translateY(-150px);
+  }
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
+.reveal blockquote {
+  padding: 4px 12px;
+  margin: var(--r-block-margin) 0px;
+}
+
+.reveal li {
+  margin: var(--r-block-margin);
+}
+.slides-close-btn {
+  svg.svg-icon {
+    height: 28px;
+    width: 28px;
+  }
+}

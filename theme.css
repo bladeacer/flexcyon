@@ -525,37 +525,37 @@ body.flexcyon-headings-glow-enabled .cm-formatting-header {
   text-shadow: none;
 }
 
-body.flexcyon-h1-underline-enabled .cm-header-1,
+body.flexcyon-h1-underline-enabled .HyperMD-header-1,
 body.flexcyon-h1-underline-enabled h1 {
   border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
     var(--h1-color);
 }
 
-body.flexcyon-h2-underline-enabled .cm-header-2,
+body.flexcyon-h2-underline-enabled .HyperMD-header-2,
 body.flexcyon-h2-underline-enabled h2 {
   border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
     var(--h2-color);
 }
 
-body.flexcyon-h3-underline-enabled .cm-header-3,
+body.flexcyon-h3-underline-enabled .HyperMD-header-3,
 body.flexcyon-h3-underline-enabled h3 {
   border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
     var(--h3-color);
 }
 
-body.flexcyon-h4-underline-enabled .cm-header-4,
+body.flexcyon-h4-underline-enabled .HyperMD-header-4,
 body.flexcyon-h4-underline-enabled h4 {
   border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
     var(--h4-color);
 }
 
-body.flexcyon-h5-underline-enabled .cm-header-5,
+body.flexcyon-h5-underline-enabled .HyperMD-header-5,
 body.flexcyon-h5-underline-enabled h5 {
   border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
     var(--h5-color);
 }
 
-body.flexcyon-h6-underline-enabled .cm-header-6,
+body.flexcyon-h6-underline-enabled .HyperMD-header-6,
 body.flexcyon-h6-underline-enabled h6 {
   border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
     var(--h6-color);
@@ -751,6 +751,54 @@ body.flexcyon-h6-underline-enabled h6 {
   .HyperMD-header-6
   svg {
   transform: translateX(-28px);
+}
+
+body {
+  --flexcyon-heading-1-alignment: left;
+}
+body .HyperMD-header-1,
+body h1 {
+  text-align: var(--flexcyon-heading-1-alignment);
+}
+
+body {
+  --flexcyon-heading-2-alignment: left;
+}
+body .HyperMD-header-2,
+body h2 {
+  text-align: var(--flexcyon-heading-2-alignment);
+}
+
+body {
+  --flexcyon-heading-3-alignment: left;
+}
+body .HyperMD-header-3,
+body h3 {
+  text-align: var(--flexcyon-heading-3-alignment);
+}
+
+body {
+  --flexcyon-heading-4-alignment: left;
+}
+body .HyperMD-header-4,
+body h4 {
+  text-align: var(--flexcyon-heading-4-alignment);
+}
+
+body {
+  --flexcyon-heading-5-alignment: left;
+}
+body .HyperMD-header-5,
+body h5 {
+  text-align: var(--flexcyon-heading-5-alignment);
+}
+
+body {
+  --flexcyon-heading-6-alignment: left;
+}
+body .HyperMD-header-6,
+body h6 {
+  text-align: var(--flexcyon-heading-6-alignment);
 }
 
 body {
@@ -14850,6 +14898,18 @@ settings:
     id: flexcyon-h1-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 1 alignment
+    description: Sets the text alignment of Heading 1
+    id: flexcyon-heading-1-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 2
     type: heading
@@ -14876,6 +14936,18 @@ settings:
     id: flexcyon-h2-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 2 alignment
+    description: Sets the text alignment of Heading 2
+    id: flexcyon-heading-2-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 3
     type: heading
@@ -14902,6 +14974,18 @@ settings:
     id: flexcyon-h3-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 3 alignment
+    description: Sets the text alignment of Heading 3
+    id: flexcyon-heading-3-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 4
     type: heading
@@ -14928,6 +15012,18 @@ settings:
     id: flexcyon-h4-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 4 alignment
+    description: Sets the text alignment of Heading 4
+    id: flexcyon-heading-4-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 5
     type: heading
@@ -14954,6 +15050,18 @@ settings:
     id: flexcyon-h5-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 5 alignment
+    description: Sets the text alignment of Heading 5
+    id: flexcyon-heading-5-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 6
     type: heading
@@ -14980,6 +15088,18 @@ settings:
     id: flexcyon-h6-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 6 alignment
+    description: Sets the text alignment of Heading 6
+    id: flexcyon-heading-6-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Inline title
     type: heading
@@ -17855,6 +17975,45 @@ div.bases-cards-cover:not([style*="background-image"]) * {
 
 .view-header-reload-button {
   margin-top: 10px;
+}
+
+audio {
+  border-radius: 12px;
+}
+
+body {
+  --r-heading-text-transform: capitalize;
+  --r-main-font: var(--font-text);
+  --r-main-font-size: max-content;
+  --r-heading-color: var(--text-normal);
+  --r-heading-margin: 16px 0px;
+}
+
+.reveal .slides {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+}
+.reveal .slides span[alt="banner"] img {
+  transform: translateY(-150px);
+}
+.reveal .slides input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.reveal blockquote {
+  padding: 4px 12px;
+  margin: var(--r-block-margin) 0px;
+}
+
+.reveal li {
+  margin: var(--r-block-margin);
+}
+
+.slides-close-btn svg.svg-icon {
+  height: 28px;
+  width: 28px;
 }
 
 /* Modifications for banner snippet */

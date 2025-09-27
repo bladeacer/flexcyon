@@ -343,6 +343,18 @@ settings:
     id: flexcyon-h1-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 1 alignment
+    description: Sets the text alignment of Heading 1
+    id: flexcyon-heading-1-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 2
     type: heading
@@ -369,6 +381,18 @@ settings:
     id: flexcyon-h2-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 2 alignment
+    description: Sets the text alignment of Heading 2
+    id: flexcyon-heading-2-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 3
     type: heading
@@ -395,6 +419,18 @@ settings:
     id: flexcyon-h3-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 3 alignment
+    description: Sets the text alignment of Heading 3
+    id: flexcyon-heading-3-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 4
     type: heading
@@ -421,6 +457,18 @@ settings:
     id: flexcyon-h4-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 4 alignment
+    description: Sets the text alignment of Heading 4
+    id: flexcyon-heading-4-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 5
     type: heading
@@ -447,6 +495,18 @@ settings:
     id: flexcyon-h5-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 5 alignment
+    description: Sets the text alignment of Heading 5
+    id: flexcyon-heading-5-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Heading 6
     type: heading
@@ -473,6 +533,18 @@ settings:
     id: flexcyon-h6-underline-enabled
     type: class-toggle
     default: false
+  - title: Heading 6 alignment
+    description: Sets the text alignment of Heading 6
+    id: flexcyon-heading-6-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Inline title
     type: heading

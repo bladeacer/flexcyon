@@ -57,41 +57,20 @@ body.flexcyon-headings-glow-enabled {
   }
 }
 
-body.flexcyon-h1-underline-enabled .cm-header-1,
-body.flexcyon-h1-underline-enabled h1 {
-  border-block-end: calc((var(--h1-weight) - 200) / 100 * 1px) solid
-    var(--h1-color);
+@mixin heading-underlines($h-lvl) {
+  body.flexcyon-h#{$h-lvl}-underline-enabled .HyperMD-header-#{$h_lvl},
+  body.flexcyon-h#{$h-lvl}-underline-enabled h#{$h-lvl} {
+    border-block-end: calc((var(--h#{$h-lvl}-weight) - 200) / 100 * 1px) solid
+      var(--h#{$h-lvl}-color);
+  }
 }
 
-body.flexcyon-h2-underline-enabled .cm-header-2,
-body.flexcyon-h2-underline-enabled h2 {
-  border-block-end: calc((var(--h2-weight) - 200) / 100 * 1px) solid
-    var(--h2-color);
-}
-
-body.flexcyon-h3-underline-enabled .cm-header-3,
-body.flexcyon-h3-underline-enabled h3 {
-  border-block-end: calc((var(--h3-weight) - 200) / 100 * 1px) solid
-    var(--h3-color);
-}
-
-body.flexcyon-h4-underline-enabled .cm-header-4,
-body.flexcyon-h4-underline-enabled h4 {
-  border-block-end: calc((var(--h4-weight) - 200) / 100 * 1px) solid
-    var(--h4-color);
-}
-
-body.flexcyon-h5-underline-enabled .cm-header-5,
-body.flexcyon-h5-underline-enabled h5 {
-  border-block-end: calc((var(--h5-weight) - 200) / 100 * 1px) solid
-    var(--h5-color);
-}
-
-body.flexcyon-h6-underline-enabled .cm-header-6,
-body.flexcyon-h6-underline-enabled h6 {
-  border-block-end: calc((var(--h6-weight) - 200) / 100 * 1px) solid
-    var(--h6-color);
-}
+@include heading-underlines(1);
+@include heading-underlines(2);
+@include heading-underlines(3);
+@include heading-underlines(4);
+@include heading-underlines(5);
+@include heading-underlines(6);
 
 @mixin headings-indicator($h_level) {
   .headings-indicator-all,
@@ -121,3 +100,20 @@ body.flexcyon-h6-underline-enabled h6 {
 @include headings-indicator(4);
 @include headings-indicator(5);
 @include headings-indicator(6);
+
+@mixin heading-alignment($h-lvl) {
+  body {
+    --flexcyon-heading-#{$h-lvl}-alignment: left;
+    .HyperMD-header-#{$h-lvl},
+    h#{$h-lvl} {
+      text-align: var(--flexcyon-heading-#{$h-lvl}-alignment);
+    }
+  }
+}
+
+@include heading-alignment(1);
+@include heading-alignment(2);
+@include heading-alignment(3);
+@include heading-alignment(4);
+@include heading-alignment(5);
+@include heading-alignment(6);
