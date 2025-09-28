@@ -474,6 +474,7 @@ body.is-mobile {
   }
 }
 
+/* obsi-snip-coll start: tilt */
 div.callout[data-callout*="tilt-all"],
 div.callout[data-callout-metadata*="tilt-all"],
 div.callout[data-callout*="tilt-title"],
@@ -491,7 +492,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
     transform: skewX(-7.5deg);
   }
 }
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: font-style */
 @mixin callout-font-style($style) {
   div.callout[data-callout*="#{$style}-all"],
   div.callout[data-callout-metadata*="#{$style}-all"],
@@ -514,7 +517,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 
 @include callout-font-style(italic);
 @include callout-font-style(oblique);
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: text-decoration */
 @mixin callout-text-decor($callout-name) {
   div.callout[data-callout*="#{$callout-name}-all"],
   div.callout[data-callout-metadata*="#{$callout-name}-all"],
@@ -541,7 +546,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-decor(overline);
 @include callout-text-decor(underline);
 @include callout-text-decor(line-through);
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: heading-title */
 @mixin callout-title-heading($heading_no) {
   div.callout[data-callout*="#{$heading_no}-title"],
   div.callout[data-callout-metadata*="#{$heading_no}-title"] {
@@ -562,7 +569,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-title-heading(h4);
 @include callout-title-heading(h5);
 @include callout-title-heading(h6);
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: font-weight */
 @mixin callout-text-font-weight($font-weight) {
   div.callout[data-callout*="w-#{$font-weight}-all"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
@@ -595,6 +604,7 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-font-weight(bold);
 @include callout-text-font-weight(bolder);
 @include callout-text-font-weight(lighter);
+/* obsi-snip-coll end */
 
 div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
@@ -604,6 +614,7 @@ div.callout[data-callout-metadata*="bg-dots"] .callout-content {
   padding: 0px 8px;
 }
 
+/* obsi-snip-coll start: flashcard */
 div.callout[data-callout*="flashcard"],
 div.callout[data-callout-metadata*="flashcard"] {
   width: var(--flexcyon-callouts-flashcard-width);
@@ -639,7 +650,9 @@ div.callout[data-callout-metadata*="flashcard"] {
     }
   }
 }
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: writing-mode */
 .flexcyon-editor-writing .cm-line,
 .editor-writing .cm-line,
 div.callout[data-callout*="writing"] .callout-content p,
@@ -649,7 +662,9 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
   word-wrap: break-word;
   margin-block-end: calc(1.25 * var(--p-spacing));
 }
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: set-font */
 @mixin font-toggler($font-type) {
   div.callout[data-callout*="font-#{$font-type}-all"],
   div.callout[data-callout-metadata*="font-#{$font-type}-all"],
@@ -673,7 +688,9 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include font-toggler(interface);
 @include font-toggler(text);
 @include font-toggler(monospace);
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: lists */
 @mixin callout-list($style-type) {
   div.callout[data-callout*="li-#{$style-type}"],
   div.callout[data-callout-metadata*="li-#{$style-type}"],
@@ -752,6 +769,7 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
 @include callout-list(trad-chinese-informal);
 @include callout-list(upper-armenian);
 @include callout-list(disclosure-open);
+/* obsi-snip-coll end */
 
 div.callout[data-callout*="center-img"],
 div.callout[data-callout-metadata*="center-img"] {
@@ -767,12 +785,14 @@ div.callout[data-callout-metadata*="center-img"] {
   }
 }
 
+/* obsi-snip-coll start: lucide-icons */
 .callout[data-callout*="lucide"] {
   --callout-icon: attr(data-callout);
 }
 .callout[data-callout-metadata*="lucide"] {
   --callout-icon: attr(data-callout-metadata);
 }
+/* obsi-snip-coll end */
 
 $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], [data-callout-metadata*='vertical'], [data-callout-metadata*='plain']";
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
