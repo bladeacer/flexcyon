@@ -1,0 +1,45 @@
+.plugin-tasks-list-item {
+  .task-list-item-checkbox {
+    transform: translateY(2px);
+  }
+  .tasks-list-text {
+    padding-left: 8px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+
+.block-language-tasks > div::before {
+  content: "Your Tasks";
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color);
+}
+
+.block-language-tasks > div::before {
+  justify-content: center;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: calc(16px + 6px * 2 + 4px * 2);
+}
+
+div.task-count {
+  color: var(--color-red);
+  font-weight: bold;
+  font-size: var(--font-ui-large);
+  &::before {
+    content: "Pending: ";
+    color: var(--text-normal);
+    font-weight: normal;
+    font-size: var(--font-text-size);
+  }
+}
+
+.block-language-tasks {
+  background-color: var(--color-base-05);
+  padding: 12px 16px;
+  border-radius: 8px;
+}

@@ -18036,6 +18036,50 @@ body {
   width: 28px;
 }
 
+.plugin-tasks-list-item .task-list-item-checkbox {
+  transform: translateY(2px);
+}
+.plugin-tasks-list-item .tasks-list-text {
+  padding-left: 8px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.block-language-tasks > div::before {
+  content: "Your Tasks";
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  color: var(--h2-color);
+}
+
+.block-language-tasks > div::before {
+  justify-content: center;
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 0;
+  left: 36px;
+}
+
+div.task-count {
+  color: var(--color-red);
+  font-weight: bold;
+  font-size: var(--font-ui-large);
+}
+div.task-count::before {
+  content: "Pending: ";
+  color: var(--text-normal);
+  font-weight: normal;
+  font-size: var(--font-text-size);
+}
+
+.block-language-tasks {
+  background-color: var(--color-base-05);
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
 /* Modifications for banner snippet */
 body div.card-content-container img[alt="banner"] {
   display: none;
