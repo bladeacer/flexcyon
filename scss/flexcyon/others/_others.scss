@@ -129,3 +129,44 @@ body.theme-light.flexcyon-flex-max-mode .hr::before,
 body.theme-light.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-00);
 }
+
+body.flexcyon-ribbon-top {
+  --ribbon-width: max-content;
+
+  .workspace {
+    .workspace-ribbon {
+      padding-left: 8px;
+      margin-left: 8px;
+      position: absolute;
+      top: -42px;
+      .side-dock-actions {
+        margin-left: 69px;
+        flex-direction: row;
+        padding-right: 150vw;
+      }
+    }
+    .workspace-split {
+      padding-top: 48px;
+    }
+  }
+}
+
+body.flexcyon-vault-switch-top {
+  .workspace-split:has(> .workspace-sidedock-vault-profile) {
+    flex-direction: column-reverse;
+  }
+}
+
+body.flexcyon-vault-reverse {
+  .workspace-sidedock-vault-profile {
+    flex-direction: row-reverse;
+  }
+}
+
+body {
+  .workspace-sidedock-vault-profile {
+    .workspace-drawer-vault-actions {
+      gap: 4px;
+    }
+  }
+}

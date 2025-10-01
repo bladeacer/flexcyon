@@ -2718,6 +2718,7 @@ body.theme-light {
   --flexcyon-editor-bg-color: var(--color-base-10);
 }
 
+/* obsi-snip-coll start: grid-background */
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout*="bg-grid"] .callout-content,
@@ -2749,6 +2750,7 @@ body.flexcyon-editor-grid .view-content [class*="markdown-"] * {
   background-image: none;
 }
 
+/* obsi-snip-coll end */
 body.flexcyon-sidebar-bg-grid
   div
   .mod-left-split
@@ -2790,6 +2792,7 @@ body.flexcyon-sidebar-bg-grid
   background-image: none;
 }
 
+/* obsi-snip-coll start: dotted-background */
 body.flexcyon-editor-dots .canvas-background,
 body.flexcyon-editor-dots .kanban-plugin div,
 div.callout[data-callout*="bg-dots"] .callout-content,
@@ -2813,6 +2816,7 @@ body.flexcyon-editor-dots .view-content [class*="markdown-"] * {
   background-image: none;
 }
 
+/* obsi-snip-coll end */
 body.flexcyon-sidebar-bg-dots
   div
   .mod-left-split
@@ -2846,6 +2850,7 @@ body.flexcyon-sidebar-bg-dots
   background-image: none;
 }
 
+/* obsi-snip-coll start: rhombus-background */
 body.flexcyon-editor-rhombus .canvas-background .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div .canvas-background,
 div.callout[data-callout*="bg-rhombus"] .callout-content .canvas-background,
@@ -2890,6 +2895,7 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] * {
   background-image: none;
 }
 
+/* obsi-snip-coll end */
 body.flexcyon-sidebar-bg-rhombus
   div
   .mod-left-split
@@ -14573,6 +14579,37 @@ body.theme-light.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-00);
 }
 
+body.flexcyon-ribbon-top {
+  --ribbon-width: max-content;
+}
+body.flexcyon-ribbon-top .workspace .workspace-ribbon {
+  padding-left: 8px;
+  margin-left: 8px;
+  position: absolute;
+  top: -42px;
+}
+body.flexcyon-ribbon-top .workspace .workspace-ribbon .side-dock-actions {
+  margin-left: 69px;
+  flex-direction: row;
+  padding-right: 150vw;
+}
+body.flexcyon-ribbon-top .workspace .workspace-split {
+  padding-top: 48px;
+}
+
+body.flexcyon-vault-switch-top
+  .workspace-split:has(> .workspace-sidedock-vault-profile) {
+  flex-direction: column-reverse;
+}
+
+body.flexcyon-vault-reverse .workspace-sidedock-vault-profile {
+  flex-direction: row-reverse;
+}
+
+body .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+  gap: 4px;
+}
+
 body {
   --flexcyon-style-settings-indent-width: 4px;
 }
@@ -16566,6 +16603,18 @@ settings:
     type: variable-number
     default: 48
     format: px
+  - title: Place workspace ribbon at the top
+    id: flexcyon-ribbon-top
+    type: class-toggle
+    default: false
+  - title: Place vault switcher at the top
+    id: flexcyon-vault-switch-top
+    type: class-toggle
+    default: false
+  - title: Reverse order of vault switcher and actions
+    id: flexcyon-vault-reverse
+    type: class-toggle
+    default: false
 
   - title: Tooltip radius
     type: heading
@@ -18078,6 +18127,20 @@ div.task-count::before {
   background-color: var(--color-base-05);
   padding: 12px 16px;
   border-radius: 8px;
+}
+
+span.task-dependsOn,
+span.task-id {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+
+.tasks-backlink,
+.tasks-backlink a,
+.tasks-list-text span[class*="task"] {
+  padding: 0px 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Modifications for banner snippet */

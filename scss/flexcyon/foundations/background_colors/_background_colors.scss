@@ -55,6 +55,7 @@ body.theme-light {
   --flexcyon-editor-bg-color: var(--color-base-10);
 }
 
+/* obsi-snip-coll start: grid-background */
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,
 div.callout[data-callout*="bg-grid"] .callout-content,
@@ -82,6 +83,7 @@ body.flexcyon-editor-grid .view-content [class*="markdown-"] {
     background-image: none;
   }
 }
+/* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-grid {
   div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
@@ -110,6 +112,7 @@ body.flexcyon-sidebar-bg-grid {
   }
 }
 
+/* obsi-snip-coll start: dotted-background */
 body.flexcyon-editor-dots .canvas-background,
 body.flexcyon-editor-dots .kanban-plugin div,
 div.callout[data-callout*="bg-dots"] .callout-content,
@@ -128,6 +131,7 @@ body.flexcyon-editor-dots .view-content [class*="markdown-"] {
     background-image: none;
   }
 }
+/* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-dots {
   div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
@@ -146,6 +150,7 @@ body.flexcyon-sidebar-bg-dots {
   }
 }
 
+/* obsi-snip-coll start: rhombus-background */
 body.flexcyon-editor-rhombus .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div,
 div.callout[data-callout*="bg-rhombus"] .callout-content,
@@ -176,6 +181,7 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
     background-image: none;
   }
 }
+/* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-rhombus {
   div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,

@@ -1991,6 +1991,18 @@ settings:
     type: variable-number
     default: 48
     format: px
+  - title: Place workspace ribbon at the top
+    id: flexcyon-ribbon-top
+    type: class-toggle
+    default: false
+  - title: Place vault switcher at the top
+    id: flexcyon-vault-switch-top
+    type: class-toggle
+    default: false
+  - title: Reverse order of vault switcher and actions
+    id: flexcyon-vault-reverse
+    type: class-toggle
+    default: false
 
   - title: Tooltip radius
     type: heading

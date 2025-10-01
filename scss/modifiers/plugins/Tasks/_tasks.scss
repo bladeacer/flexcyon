@@ -43,3 +43,17 @@ div.task-count {
   padding: 12px 16px;
   border-radius: 8px;
 }
+
+span.task-dependsOn,
+span.task-id {
+  color: var(--text-muted);
+  font-size: var(--font-ui-small);
+}
+
+.tasks-backlink,
+.tasks-backlink a,
+.tasks-list-text span[class*="task"] {
+  padding: 0px 4px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
