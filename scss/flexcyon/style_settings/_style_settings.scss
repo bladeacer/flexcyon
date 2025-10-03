@@ -570,7 +570,7 @@ settings:
     collapsed: true
   - title: Code Block Syntax Highlighting Mode
     type: class-select
-    id: theme-variant
+    id: flexcyon-cb-syntax-mode
     allowEmpty: true
     default: none
     options: 
@@ -698,7 +698,7 @@ settings:
   - title: Select folder style
     description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select
-    id: theme-variant
+    id: flexcyon-folder-style
     allowEmpty: true
     default: none
     options: 
@@ -795,7 +795,7 @@ settings:
   - title: Prompt alignment
     description: Configure the alignment of prompt such as the command prompt and Omnisearch search prompt
     type: class-select
-    id: theme-variant
+    id: flexcyon-prompt-alignment
     allowEmpty: true
     default: none
     options: 
@@ -835,7 +835,7 @@ settings:
   - title: Animation type
     description: Configure animation type for transitions of prompts, modals and tab containers.
     type: class-select
-    id: theme-variant
+    id: flexcyon-anim-type
     allowEmpty: true
     default: none
     options: 
@@ -890,7 +890,7 @@ settings:
   - title: Select Background Type
     description: Select the background type for the editor
     type: class-select
-    id: theme-variant
+    id: flexcyon-bg-type
     allowEmpty: true
     default: none
     options: 
@@ -927,7 +927,7 @@ settings:
   - title: Select workspace layout
     description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
     type: class-select
-    id: theme-variant
+    id: flexcyon-workspace-layout
     allowEmpty: true
     default: none
     options: 
@@ -1000,7 +1000,7 @@ settings:
   - title: Select callout style
     description: Modifies the default styles of all callouts. Needs an app reload to properly refresh callout rendering.
     type: class-select
-    id: theme-variant
+    id: flexcyon-callout-style
     allowEmpty: true
     default: none
     options: 
@@ -1290,7 +1290,7 @@ settings:
   - title: Hide until trigger
     description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
     type: class-select
-    id: theme-variant
+    id: flexcyon-status-hide-until-trigger
     allowEmpty: true
     default: none
     options: 
@@ -1302,7 +1302,7 @@ settings:
         value: flexcyon-status-hide-until-hold
   - title: Status bar alignment
     type: class-select
-    id: theme-variant
+    id: flexcyon-status-alignment
     allowEmpty: true
     default: none
     options: 
@@ -1370,7 +1370,7 @@ settings:
   - title: Select status bar style
     description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
     type: class-select
-    id: theme-variant
+    id: flexcyon-status-style
     allowEmpty: true
     default: none
     options: 
@@ -1426,7 +1426,7 @@ settings:
     default: false
   - title: Configure Relative Line Number Style
     type: class-select
-    id: theme-variant
+    id: flexcyon-select-relative-num
     allowEmpty: true
     default: none
     options: 
@@ -1714,7 +1714,7 @@ settings:
     format: px
   - title: Canvas card menu alignment
     type: class-select
-    id: theme-variant
+    id: flexcyon-canvas-menu-alignment
     allowEmpty: true
     default: none
     options: 
@@ -1909,7 +1909,7 @@ settings:
     description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values
   - title: Add before empty state title
     type: class-select
-    id: theme-variant
+    id: flexcyon-new-tab-mod
     allowEmpty: true
     default: none
     options: 
@@ -2042,7 +2042,7 @@ settings:
   - title: Select background in sidebar
     description: Overrides background image declaration below, configures in both left and right sidebar
     type: class-select
-    id: theme-variant
+    id: flexcyon-sidebar-bg
     allowEmpty: true
     default: none
     options: 
