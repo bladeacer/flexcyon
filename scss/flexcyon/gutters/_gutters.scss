@@ -203,3 +203,10 @@ body.flexcyon-repl-active-line-num-str {
     }
   }
 }
+
+body.flexcyon-highlight-active-line {
+  .cm-active.cm-line,
+  .cm-active > span.cm-quote {
+    background-color: color-mix(in hsl, var(--text-accent) 7%, transparent);
+  }
+}

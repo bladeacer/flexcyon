@@ -1404,6 +1404,11 @@ settings:
     type: heading
     level: 5
     collapsed: true
+  - title: Highlight Active Line
+    description: Highlights the active line while editing.
+    id: flexcyon-highlight-active-line
+    type: class-toggle
+    default: false
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums

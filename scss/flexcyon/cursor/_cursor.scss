@@ -4,6 +4,7 @@ body {
   --flexcyon-cursor-min-width: unset;
 }
 
+/* obsi-snip-coll start: smooth-cursor */
 body.flexcyon-enable-smooth-cursor {
   .cm-cursor-primary {
     transition: all var(--flexcyon-cursor-duration)
@@ -11,3 +12,4 @@ body.flexcyon-enable-smooth-cursor {
     min-width: var(--flexcyon-cursor-min-width);
   }
 }
+/* obsi-snip-coll end */
