@@ -19,7 +19,7 @@ div.mermaid svg .nodes node * {
 
       & .edgeLabel p {
         color: var(--text-normal) !important;
-        font-size: calc(var(--font-text-size) * var(--dimmed)) !important;
+        font-size: var(--font-ui-small) !important;
         vertical-align: super;
         padding-inline: 0.2rem;
         background-color: var(--background-primary) !important;
@@ -81,4 +81,8 @@ div.mermaid svg .nodes node * {
       stroke: var(--color-orange-rgb) !important;
     }
   }
+}
+
+.mermaid {
+  padding: 16px 8px;
 }
