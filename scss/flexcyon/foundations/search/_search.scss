@@ -117,3 +117,13 @@ body .suggestion-item.mod-complex {
     opacity: unset;
   }
 }
+
+.search-result-file-match {
+  padding: 12px 12px;
+  // box-shadow: none;
+  border-bottom: 12px solid var(--color-base-05);
+}
+
+.search-results-children .tree-item.search-result {
+  padding: 2px 4px;
+}

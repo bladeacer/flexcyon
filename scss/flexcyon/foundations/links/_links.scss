@@ -34,3 +34,26 @@ body {
   --link-external-color: var(--flexcyon-external-link-color);
   --link-external-color-hover: var(--flexcyon-external-link-hover);
 }
+
+body {
+  .backlink-pane,
+  .outgoing-link-pane {
+    .search-result-container {
+      padding: 1.5px 3px;
+    }
+    .tree-item-inner-text,
+    .tree-item-inner-subtext {
+      padding: 0px 6px;
+    }
+    .tree-item-inner,
+    .tree-item-icon {
+      padding: 1px 0px;
+    }
+    .search-empty-state {
+      padding-inline-start: 6px;
+    }
+    .search-result-file-title {
+      margin-left: 2px;
+    }
+  }
+}

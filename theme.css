@@ -4243,6 +4243,31 @@ body {
   --link-external-color-hover: var(--flexcyon-external-link-hover);
 }
 
+body .backlink-pane .search-result-container,
+body .outgoing-link-pane .search-result-container {
+  padding: 1.5px 3px;
+}
+body .backlink-pane .tree-item-inner-text,
+body .backlink-pane .tree-item-inner-subtext,
+body .outgoing-link-pane .tree-item-inner-text,
+body .outgoing-link-pane .tree-item-inner-subtext {
+  padding: 0px 6px;
+}
+body .backlink-pane .tree-item-inner,
+body .backlink-pane .tree-item-icon,
+body .outgoing-link-pane .tree-item-inner,
+body .outgoing-link-pane .tree-item-icon {
+  padding: 1px 0px;
+}
+body .backlink-pane .search-empty-state,
+body .outgoing-link-pane .search-empty-state {
+  padding-inline-start: 6px;
+}
+body .backlink-pane .search-result-file-title,
+body .outgoing-link-pane .search-result-file-title {
+  margin-left: 2px;
+}
+
 body {
   --drag-ghost-background: var(--flexcyon-base-03);
   --drag-ghost-text-color: var(--interactive-accent);
@@ -4536,6 +4561,15 @@ body .suggestion-item.mod-complex.is-selected .suggestion-hotkey {
 }
 body .suggestion-item.mod-complex.is-selected .suggestion-prefix {
   opacity: unset;
+}
+
+.search-result-file-match {
+  padding: 12px 12px;
+  border-bottom: 12px solid var(--color-base-05);
+}
+
+.search-results-children .tree-item.search-result {
+  padding: 2px 4px;
 }
 
 /* From https://css-loaders.com/wobbling/ */
