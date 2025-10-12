@@ -2,14 +2,14 @@
     <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
         <img src="https://img.shields.io/badge/dynamic/json?query=%24%5B%22flexcyon%22%5D.download&url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&style=for-the-badge&label=Downloads&logo=obsidian" referrerpolicy="noreferrer">
     </a>
-    <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
-        <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge" referrerpolicy="noreferrer"> 
+    <a href="https://github.com/bladeacer/flexcyon/releases/latest">
+        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
     </a>
     <img alt="Min App Version" src="https://img.shields.io/github/manifest-json/minAppVersion/bladeacer/flexcyon?style=for-the-badge&logo=semver">
 </p>
 <div align="center">
-    <a href="https://github.com/bladeacer/flexcyon/releases/latest">
-        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
+    <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge" referrerpolicy="noreferrer"> 
     </a>
     <a href="https://flexcyon.github.io/docs-en/">
         <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/flexcyon/docs-en/github-pages?style=for-the-badge&logo=github">
@@ -27,9 +27,14 @@
 
 A Obsidian theme combining the colour schemes of Halcyon and Flexoki.
 
-I really liked the vibrant colours of the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence, I decided to combine the two which started this theme.
+I really liked the vibrant colours of the
+[Halcyon colour scheme](https://halcyon-theme.netlify.app/), and the inky
+aesthetic of the [Flexoki colour scheme](https://stephango.com/flexoki). Hence,
+I decided to combine the two which started this theme.
 
-There is also a light mode colour scheme combining [Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's colour schemes.
+There is also a light mode colour scheme combining
+[Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's
+colour schemes.
 
 ## Screenshots
 
@@ -66,15 +71,17 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 ## Documentation
 
-A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.github.io/docs-en/
+A huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.github.io/docs-en/).
 
 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
 
 ## Features
 
-[Here is a web showcase](https://share.note.sx/j4wqojpy#xi8TbTY58w4JaoiHcPdRJA+V60W3jT0qDoLyUhkTE3U) of the features this theme has to offer.
+[Here is a web showcase](https://share.note.sx/j4wqojpy#xi8TbTY58w4JaoiHcPdRJA+V60W3jT0qDoLyUhkTE3U)
+of the features this theme has to offer.
 
-- Some features will not have a 1 to 1 correspondence to the main theme, but this site should give you a preview of how the theme looks before installing it
+- Some features will not have a 1 to 1 correspondence to the main theme, but
+  this site should give you a preview of how the theme looks before installing it
 
 #### What this theme has
 
@@ -101,27 +108,10 @@ A huge thanks to GitHub Pages for hosting the documentation at https://flexcyon.
 
 #### Supported plugins/snippets
 
-The following plugins/snippets are officially supported
+View [supported plugins and snippets here](https://flexcyon.github.io/docs-en/README/page-3/)
 
-##### Plugins
-
-- [File Tree Alternative by Ozan Tellioglu](https://github.com/ozntel/file-tree-alternative)
-- [Highlightr by Chetachi](https://github.com/chetachiezikeuzor/Highlightr-Plugin)
-- [Minitabs by ssjy1919](https://github.com/ssjy1919/Obsidian-minitabs)
-- [Full Calendar by Davis Haupt](https://github.com/obsidian-community/obsidian-full-calendar)
-- [Breadcrumbs by SkepticMystic](https://github.com/SkepticMystic/breadcrumbs)
-- [Spaced Repetition by Stephen Mwangi](https://github.com/st3v3nmw/obsidian-spaced-repetition)
-- [Dataview by Michael Brenan](https://github.com/blacksmithgu/obsidian-dataview)
-- [Vault Statistics by Bryuan Kyle](https://github.com/bkyle/obsidian-vault-statistics-plugin)
-- [Calendar by Liam Cain](https://github.com/liamcain/obsidian-calendar-plugin)
-- [Kanban by mgmyers](https://github.com/mgmeyers/obsidian-kanban)
-- [Omnisearch by scambier](https://github.com/scambier/obsidian-omnisearch)
-
-##### Snippets
-
-- [CSS Banners snippet by HandaArchitect](https://github.com/HandaArchitect/obsidian-banner-snippet)
-
-For plugins/snippets that are not styled yet, feel free to open a Pull Request/Feature Request/start a Discussion on it.
+For plugins/snippets that are not styled yet, feel free to open a Pull Request/
+Feature Request/start a Discussion on it.
 
 #### Roadmap
 
@@ -138,7 +128,14 @@ Feel free to talk about it at:
 - [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357).
 - [this Obsidian forum topic](https://forum.obsidian.md/t/flexcyon-a-dark-theme-for-obsidian/99869)
 
-Alternatively, you can open an issue at [the repository](https://github.com/bladeacer/flexcyon/issues) or [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) here.
+## Contributing
+
+Alternatively, you can open an issue at
+[the repository](https://github.com/bladeacer/flexcyon/issues) or
+[start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) here.
+
+Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md)
+and [Contributing Guide](./CONTRIBUTING.md).
 
 ## Design Principles
 
@@ -168,6 +165,12 @@ This theme is licensed under the [MIT License](https://github.com/bladeacer/flex
 ## Credits
 
 Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and
-[tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
+[tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not
+be possible.
+
+The code of conduct was adopted from the
+[Contributor Covenant](https://www.contributor-covenant.org/)
+
+The contributing guide was adopted from [conduct](https://github.com/sindresorhus/conduct)
 
 <!--- For pre-commit hooks, view https://prettier.io/docs/precommit --->
