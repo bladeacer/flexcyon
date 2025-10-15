@@ -1,4 +1,4 @@
-/* Modifications for banner snippet */
+/* Modifications for HandaArchitect's banner snippet */
 body {
   div.card-content-container img[alt="banner"] {
     display: none;
@@ -10,7 +10,20 @@ body {
 
   .banner img[alt="banner"] {
     padding: 1px;
-    border-radius: 0px 0px 10px 10px;
     z-index: 0;
+  }
+
+  .banner.is-live-preview,
+  .banner.markdown-preview-view {
+    .internal-embed .markdown-preview-pusher,
+    .el-p .image-embed img[alt="banner"],
+    span.internal-embed .image-embed img[alt="banner"] {
+      display: none;
+    }
+  }
+  .banner.markdown-preview-view {
+    .el-p .image-embed img[alt="banner"] {
+      display: unset;
+    }
   }
 }

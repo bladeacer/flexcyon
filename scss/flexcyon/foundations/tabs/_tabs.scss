@@ -18,6 +18,8 @@ body {
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 56.63105px;
   --flexcyon-anim-rotate-amount: 50deg;
+  --flexcyon-anim-start-scale-amt: 0.33;
+  --flexcyon-anim-start-opacity: 0.55;
 
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
 
@@ -156,7 +158,7 @@ body.flexcyon-workspace-card-layout {
 @mixin anims-def($anim-name, $transform-1, $transform-2) {
   @keyframes #{$anim-name} {
     0% {
-      opacity: 0;
+      opacity: var(--flexcyon-anim-start-opacity);
       transform: $transform-1;
     }
     100% {
@@ -197,15 +199,19 @@ body.flexcyon-workspace-card-layout {
   rotateX(0)
 );
 
-@keyframes scale-up {
+@include anims-def(
+  scale-up,
+  scale(var(--flexcyon-anim-start-scale-amt)),
+  scale(1)
+);
+
+@keyframes fade-in {
   0% {
-    opacity: 0;
-    scale: 0.33;
+    opacity: var(--flexcyon-anim-start-opacity);
   }
 
   100% {
     opacity: 1;
-    scale: 1;
   }
 }
 
@@ -216,6 +222,7 @@ body.flexcyon-workspace-card-layout {
     .mod-stacked
       .workspace-leaf.mod-active
       .workspace-leaf-content:not([data-type="file-explorer"]),
+    .view-content,
     .modal,
     .prompt {
       animation: $anim-type var(--flexcyon-anim-duration)
@@ -236,6 +243,7 @@ body.flexcyon-workspace-card-layout {
         .workspace-leaf.mod-active
         .workspace-leaf-content:not([data-type="file-explorer"]),
       .modal,
+      .view-content,
       .style-settings-container,
       .prompt {
         animation: $anim-type
@@ -248,8 +256,9 @@ body.flexcyon-workspace-card-layout {
 
 @include anims-wrapper(scale-up, scale-up);
 @include anims-wrapper(slide-rtl, slide-in-right);
-@include anims-wrapper(slide-ltr, slide-in-left, 1);
+@include anims-wrapper(slide-ltr, slide-in-left);
 @include anims-wrapper(slide-tb, slide-in-tb);
 @include anims-wrapper(slide-bt, slide-in-bt);
 @include anims-wrapper(spin-rl, spin-in-rl);
 @include anims-wrapper(spin-bt, spin-in-bt);
+@include anims-wrapper(fade-in, fade-in, 1);

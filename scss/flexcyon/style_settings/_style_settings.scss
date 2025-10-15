@@ -860,6 +860,9 @@ settings:
       - 
         label: Scale Up
         value: flexcyon-anims-scale-up
+      - 
+        label: Fade In
+        value: flexcyon-anims-fade-in
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -882,6 +885,16 @@ settings:
     id: flexcyon-anim-style-settings-contain
     type: class-toggle
     default: false
+  - title: Scale animation initial scaling
+    id: flexcyon-anim-start-scale-amt
+    description: Initial scaling for scale up animation.
+    type: variable-number
+    default: 0.33
+  - title: Animation initial opacity
+    id: flexcyon-anim-start-opacity
+    description: Initial opacity for all animations. When set to 1, the fade in animatin does not visually show anything.
+    type: variable-number
+    default: 0.55
 
   - title: Editor Background
     type: heading

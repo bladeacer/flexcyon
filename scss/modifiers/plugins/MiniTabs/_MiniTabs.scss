@@ -1,20 +1,31 @@
-/* Modificatiions for MiniTabs plugin */
+/* Modifications for MiniTabs plugin */
 body {
+  .TabsCodeBlock-tabs:nth-child(odd) {
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: none;
+  }
   div.TabsCodeBlock.TabsCodeBlock-buns {
-    border-radius: unset;
+    border-radius: 8px 8px 0px 0px;
     background-color: var(--color-base-20);
+    padding: 4px 6px;
 
-    & button {
-      border-radius: unset;
+    button {
+      box-shadow: none;
+      border-radius: 8px;
       background-color: inherit;
       opacity: var(--dimmed);
     }
 
-    & button.active {
+    button.active {
       background-color: var(--color-base-10);
       font-weight: bold;
       color: var(--text-accent);
       opacity: 1;
+    }
+
+    & + div {
+      border: 1px solid var(--color-base-20);
+      padding: 0px 12px;
     }
   }
 
@@ -22,5 +33,9 @@ body {
     div.block-language-dataview:only-child {
       padding: 0px var(--flexcyon-dataview-horizontal-padding);
     }
+  }
+
+  .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
+    border-radius: 8px 8px 0px 0px;
   }
 }

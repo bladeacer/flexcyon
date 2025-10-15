@@ -967,6 +967,8 @@ body {
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 56.63105px;
   --flexcyon-anim-rotate-amount: 50deg;
+  --flexcyon-anim-start-scale-amt: 0.33;
+  --flexcyon-anim-start-opacity: 0.55;
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
 }
 body .view-header-breadcrumb {
@@ -1137,7 +1139,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 
 @keyframes slide-in-left {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: translateX(calc(var(--flexcyon-anim-slide-amount) * -1));
   }
   100% {
@@ -1147,7 +1149,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes slide-in-right {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: translateX(var(--flexcyon-anim-slide-amount));
   }
   100% {
@@ -1157,7 +1159,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes slide-in-tb {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
   }
   100% {
@@ -1167,7 +1169,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes slide-in-bt {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: translateY(var(--flexcyon-anim-slide-amount));
   }
   100% {
@@ -1177,7 +1179,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes spin-in-rl {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: rotateY(var(--flexcyon-anim-rotate-amount));
   }
   100% {
@@ -1187,7 +1189,7 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes spin-in-bt {
   0% {
-    opacity: 0;
+    opacity: var(--flexcyon-anim-start-opacity);
     transform: rotateX(var(--flexcyon-anim-rotate-amount));
   }
   100% {
@@ -1197,12 +1199,20 @@ body.flexcyon-workspace-card-layout .view-header-title {
 }
 @keyframes scale-up {
   0% {
-    opacity: 0;
-    scale: 0.33;
+    opacity: var(--flexcyon-anim-start-opacity);
+    transform: scale(var(--flexcyon-anim-start-scale-amt));
   }
   100% {
     opacity: 1;
-    scale: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: var(--flexcyon-anim-start-opacity);
+  }
+  100% {
+    opacity: 1;
   }
 }
 body.flexcyon-anims-scale-up .modal .community-modal-info,
@@ -1211,6 +1221,7 @@ body.flexcyon-anims-scale-up
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-scale-up .view-content,
 body.flexcyon-anims-scale-up .modal,
 body.flexcyon-anims-scale-up .prompt {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -1227,6 +1238,7 @@ body.flexcyon-anims-slide-rtl
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-slide-rtl .view-content,
 body.flexcyon-anims-slide-rtl .modal,
 body.flexcyon-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration)
@@ -1245,6 +1257,7 @@ body.flexcyon-anims-slide-ltr
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-slide-ltr .view-content,
 body.flexcyon-anims-slide-ltr .modal,
 body.flexcyon-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration)
@@ -1257,25 +1270,13 @@ body.flexcyon-anims-slide-ltr.flexcyon-anim-style-settings-contain
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-flex-max-mode .modal .community-modal-info,
-body.flexcyon-flex-max-mode .modal .vertical-tab-content,
-body.flexcyon-flex-max-mode
-  .mod-stacked
-  .workspace-leaf.mod-active
-  .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-flex-max-mode .modal,
-body.flexcyon-flex-max-mode .style-settings-container,
-body.flexcyon-flex-max-mode .prompt {
-  animation: slide-in-left var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
 body.flexcyon-anims-slide-tb .modal .community-modal-info,
 body.flexcyon-anims-slide-tb .modal .vertical-tab-content,
 body.flexcyon-anims-slide-tb
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-slide-tb .view-content,
 body.flexcyon-anims-slide-tb .modal,
 body.flexcyon-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration)
@@ -1294,6 +1295,7 @@ body.flexcyon-anims-slide-bt
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-slide-bt .view-content,
 body.flexcyon-anims-slide-bt .modal,
 body.flexcyon-anims-slide-bt .prompt {
   animation: slide-in-bt var(--flexcyon-anim-duration)
@@ -1312,6 +1314,7 @@ body.flexcyon-anims-spin-rl
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-spin-rl .view-content,
 body.flexcyon-anims-spin-rl .modal,
 body.flexcyon-anims-spin-rl .prompt {
   animation: spin-in-rl var(--flexcyon-anim-duration)
@@ -1330,6 +1333,7 @@ body.flexcyon-anims-spin-bt
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-spin-bt .view-content,
 body.flexcyon-anims-spin-bt .modal,
 body.flexcyon-anims-spin-bt .prompt {
   animation: spin-in-bt var(--flexcyon-anim-duration)
@@ -1340,6 +1344,36 @@ body.flexcyon-anims-spin-bt.flexcyon-anim-style-settings-contain
   .style-settings-container {
   animation: spin-in-bt var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-fade-in .modal .community-modal-info,
+body.flexcyon-anims-fade-in .modal .vertical-tab-content,
+body.flexcyon-anims-fade-in
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-anims-fade-in .view-content,
+body.flexcyon-anims-fade-in .modal,
+body.flexcyon-anims-fade-in .prompt {
+  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-fade-in.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-flex-max-mode .modal .community-modal-info,
+body.flexcyon-flex-max-mode .modal .vertical-tab-content,
+body.flexcyon-flex-max-mode
+  .mod-stacked
+  .workspace-leaf.mod-active
+  .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-flex-max-mode .modal,
+body.flexcyon-flex-max-mode .view-content,
+body.flexcyon-flex-max-mode .style-settings-container,
+body.flexcyon-flex-max-mode .prompt {
+  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body {
@@ -4623,6 +4657,16 @@ body .cm-gutterElement.cm-active {
   font-weight: 900;
   font-size: var(--font-ui-medium);
   color: var(--text-accent);
+}
+body
+  .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"])
+  + .cm-gutterElement {
+  background-color: var(--background-primary);
+}
+body
+  .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"])
+  + .cm-gutterElement::before {
+  content: "'";
 }
 
 body.theme-dark .cm-gutterElement.cm-active {
@@ -15511,6 +15555,9 @@ settings:
       - 
         label: Scale Up
         value: flexcyon-anims-scale-up
+      - 
+        label: Fade In
+        value: flexcyon-anims-fade-in
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -15533,6 +15580,16 @@ settings:
     id: flexcyon-anim-style-settings-contain
     type: class-toggle
     default: false
+  - title: Scale animation initial scaling
+    id: flexcyon-anim-start-scale-amt
+    description: Initial scaling for scale up animation.
+    type: variable-number
+    default: 0.33
+  - title: Animation initial opacity
+    id: flexcyon-anim-start-opacity
+    description: Initial opacity for all animations. When set to 1, the fade in animatin does not visually show anything.
+    type: variable-number
+    default: 0.55
 
   - title: Editor Background
     type: heading
@@ -17319,13 +17376,19 @@ div.oz-nav-file.is-active div.oz-nav-file-title-content {
   border: none;
 }
 
-/* Modificatiions for MiniTabs plugin */
+/* Modifications for MiniTabs plugin */
+body .TabsCodeBlock-tabs:nth-child(odd) {
+  border-radius: 8px 8px 0px 0px;
+  box-shadow: none;
+}
 body div.TabsCodeBlock.TabsCodeBlock-buns {
-  border-radius: unset;
+  border-radius: 8px 8px 0px 0px;
   background-color: var(--color-base-20);
+  padding: 4px 6px;
 }
 body div.TabsCodeBlock.TabsCodeBlock-buns button {
-  border-radius: unset;
+  box-shadow: none;
+  border-radius: 8px;
   background-color: inherit;
   opacity: var(--dimmed);
 }
@@ -17335,8 +17398,15 @@ body div.TabsCodeBlock.TabsCodeBlock-buns button.active {
   color: var(--text-accent);
   opacity: 1;
 }
+body div.TabsCodeBlock.TabsCodeBlock-buns + div {
+  border: 1px solid var(--color-base-20);
+  padding: 0px 12px;
+}
 body div.TabsCodeBlock-tabs-pages div.block-language-dataview:only-child {
   padding: 0px var(--flexcyon-dataview-horizontal-padding);
+}
+body .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
+  border-radius: 8px 8px 0px 0px;
 }
 
 body :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
@@ -18193,7 +18263,7 @@ span.task-id {
   box-decoration-break: clone;
 }
 
-/* Modifications for banner snippet */
+/* Modifications for HandaArchitect's banner snippet */
 body div.card-content-container img[alt="banner"] {
   display: none;
 }
@@ -18202,6 +18272,20 @@ body .popover .banner img[alt="banner"] {
 }
 body .banner img[alt="banner"] {
   padding: 1px;
-  border-radius: 0px 0px 10px 10px;
   z-index: 0;
+}
+body .banner.is-live-preview .internal-embed .markdown-preview-pusher,
+body .banner.is-live-preview .el-p .image-embed img[alt="banner"],
+body .banner.is-live-preview span.internal-embed .image-embed img[alt="banner"],
+body .banner.markdown-preview-view .internal-embed .markdown-preview-pusher,
+body .banner.markdown-preview-view .el-p .image-embed img[alt="banner"],
+body
+  .banner.markdown-preview-view
+  span.internal-embed
+  .image-embed
+  img[alt="banner"] {
+  display: none;
+}
+body .banner.markdown-preview-view .el-p .image-embed img[alt="banner"] {
+  display: unset;
 }

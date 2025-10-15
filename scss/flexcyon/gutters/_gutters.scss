@@ -5,6 +5,13 @@ body {
     font-size: var(--font-ui-medium);
     color: var(--text-accent);
   }
+  .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"])
+    + .cm-gutterElement {
+    background-color: var(--background-primary);
+    &::before {
+      content: "'";
+    }
+  }
 }
 
 body.theme-dark .cm-gutterElement.cm-active {
