@@ -813,6 +813,9 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   background-color: var(--background-primary);
   padding: 0px;
   margin: 0px;
+  &.is-collapsed .callout-title {
+    min-height: 50px;
+  }
   .callout-icon {
     display: none;
   }

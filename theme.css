@@ -9228,6 +9228,36 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="vertical"],
       [data-callout-metadata*="plain"]
     )
+  ).is-collapsed
+  .callout-title,
+.callout[data-callout*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  ).is-collapsed
+  .callout-title,
+.callout[data-callout-metadata*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  ).is-collapsed
+  .callout-title {
+  min-height: 50px;
+}
+body.flexcyon-tui-callouts
+  .callout:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
   )
   .callout-icon,
 .callout[data-callout*="tui"]:not(
@@ -17863,7 +17893,6 @@ div.mermaid svg .nodes node * {
   color: var(--text-normal) !important;
   font-size: var(--font-ui-small) !important;
   vertical-align: super;
-  padding-inline: 0.2rem;
   background-color: var(--background-primary) !important;
 }
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
