@@ -16,6 +16,7 @@ body {
   --flexcyon-modal-image-brightness: unset;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
+  --flexcyon-modal-dark-intensity: 1;
 
   --nav-item-background-hover: transparent;
 
@@ -101,6 +102,7 @@ body {
     background-size: var(--flexcyon-modal-image-size);
     background-position: var(--flexcyon-modal-image-position);
     background-blend-mode: var(--flexcyon-modal-image-blend-mode);
+    opacity: var(--flexcyon-modal-dark-intensity) !important;
 
     filter: brightness(var(--flexcyon-modal-image-brightness))
       blur(var(--flexcyon-modal-image-blur));

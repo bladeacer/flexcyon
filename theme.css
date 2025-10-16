@@ -14635,7 +14635,9 @@ body.flexcyon-hr-no-reading .markdown-reading-view .el-hr {
   display: none;
 }
 
+body.flexcyon-flex-max-mode .el-hr::before,
 body.flexcyon-flex-max-mode .hr::before,
+body.flexcyon-cust-str-hr .el-hr::before,
 body.flexcyon-cust-str-hr .hr::before {
   position: absolute;
   justify-content: center;
@@ -14650,6 +14652,15 @@ body.flexcyon-cust-str-hr .hr::before {
   color: var(--hr-color);
   padding: 0px var(--flexcyon-cust-hr-str-horiz-padding);
   font-style: italic;
+  background-color: var(--background-primary);
+}
+body.flexcyon-flex-max-mode .el-hr::before,
+body.flexcyon-cust-str-hr .el-hr::before {
+  transform: translateY(-12px);
+}
+body.flexcyon-flex-max-mode .markdown-embed:has(.el-hr) .markdown-preview-sizer,
+body.flexcyon-cust-str-hr .markdown-embed:has(.el-hr) .markdown-preview-sizer {
+  padding-bottom: 12px !important;
 }
 
 body.theme-dark.flexcyon-flex-max-mode .hr::before,
@@ -16832,6 +16843,11 @@ settings:
     id: flexcyon-modal-image-position
     type: variable-text
     default: center
+  - title: Modal Background darkness intensity
+    description: Sets how dark the modal background is. A higher value dims background content better.
+    id: flexcyon-modal-dark-intensity
+    type: variable-number
+    default: 1
  */
 body div.pcr-app.visible {
   background-color: var(--color-base-30);
@@ -17060,6 +17076,7 @@ body {
   --flexcyon-modal-image-brightness: unset;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
+  --flexcyon-modal-dark-intensity: 1;
   --nav-item-background-hover: transparent;
 }
 body .mod-left-split .workspace-leaf-content {
@@ -17135,6 +17152,7 @@ body .modal-bg {
   background-size: var(--flexcyon-modal-image-size);
   background-position: var(--flexcyon-modal-image-position);
   background-blend-mode: var(--flexcyon-modal-image-blend-mode);
+  opacity: var(--flexcyon-modal-dark-intensity) !important;
   filter: brightness(var(--flexcyon-modal-image-brightness))
     blur(var(--flexcyon-modal-image-blur));
 }

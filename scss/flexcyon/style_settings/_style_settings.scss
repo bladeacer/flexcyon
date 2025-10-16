@@ -2137,6 +2137,11 @@ settings:
     id: flexcyon-modal-image-position
     type: variable-text
     default: center
+  - title: Modal Background darkness intensity
+    description: Sets how dark the modal background is. A higher value dims background content better.
+    id: flexcyon-modal-dark-intensity
+    type: variable-number
+    default: 1
  */
 
 body {
