@@ -1510,18 +1510,13 @@ settings:
     type: variable-number
     default: 12.5
     format: vw
-  - title: Display device operating system details in view header
+
+  - title: Debug
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Display device operating system details
     id: flexcyon-display-os
-    type: class-toggle
-    default: false
-  - title: Number tabs
-    id: flexcyon-number-tabs
-    description: Numbers your tabs in sequential order. Each tab group has its own counter. Meant for RTZ mode, but can be enabled separately.
-    type: class-toggle
-    default: false
-  - title: Remove Tab Headers
-    id: flexcyon-remove-tab-headers
-    description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
     type: class-toggle
     default: false
   - title: Device operating system details right padding
@@ -1539,6 +1534,21 @@ settings:
     id: flexcyon-screen-dimens-padding-l
     default: 16
     format: px
+
+  - title: Tabs
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Number tabs
+    id: flexcyon-number-tabs
+    description: Numbers your tabs in sequential order. Each tab group has its own counter. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
+  - title: Remove Tab Headers
+    id: flexcyon-remove-tab-headers
+    description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
 
   - title: Icons
     description: For icon related styling

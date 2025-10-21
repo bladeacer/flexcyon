@@ -70,6 +70,13 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-blue-red-mix: color-mix(in hsl, var(--color-blue), var(--color-red));
+  --color-blue-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-blue), var(--color-red))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-red-orange-mix: color-mix(
     in hsl,
     var(--color-red),
@@ -78,6 +85,17 @@ body.flexcyon-ext-colors-enabled {
   --color-red-orange-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-red), var(--color-orange))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-orange-red-mix: color-mix(
+    in hsl,
+    var(--color-orange),
+    var(--color-red)
+  );
+  --color-orange-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-orange), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -92,6 +110,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-yellow-red-mix: color-mix(
+    in hsl,
+    var(--color-yellow),
+    var(--color-red)
+  );
+  --color-yellow-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-yellow), var(--color-red))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-red-green-mix: color-mix(
     in hsl,
     var(--color-red),
@@ -103,10 +132,28 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-green-red-mix: color-mix(
+    in hsl,
+    var(--color-green),
+    var(--color-red)
+  );
+  --color-green-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-green), var(--color-red))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-red-cyan-mix: color-mix(in hsl, var(--color-red), var(--color-cyan));
   --color-red-cyan-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-red), var(--color-cyan))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-cyan-red-mix: color-mix(in hsl, var(--color-cyan), var(--color-red));
+  --color-cyan-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-cyan), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -121,10 +168,28 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-purple-red-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-red)
+  );
+  --color-purple-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-red))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-red-pink-mix: color-mix(in hsl, var(--color-red), var(--color-pink));
   --color-red-pink-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-red), var(--color-pink))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-pink-red-mix: color-mix(in hsl, var(--color-pink), var(--color-red));
+  --color-pink-red-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -139,6 +204,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-yellow-orange-mix: color-mix(
+    in hsl,
+    var(--color-yellow),
+    var(--color-orange)
+  );
+  --color-yellow-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-yellow), var(--color-orange))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-orange-green-mix: color-mix(
     in hsl,
     var(--color-orange),
@@ -147,6 +223,17 @@ body.flexcyon-ext-colors-enabled {
   --color-orange-green-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-orange), var(--color-green))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-green-orange-mix: color-mix(
+    in hsl,
+    var(--color-green),
+    var(--color-orange)
+  );
+  --color-green-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-green), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -161,6 +248,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-cyan-orange-mix: color-mix(
+    in hsl,
+    var(--color-cyan),
+    var(--color-orange)
+  );
+  --color-cyan-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-cyan), var(--color-orange))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-orange-blue-mix: color-mix(
     in hsl,
     var(--color-orange),
@@ -169,6 +267,17 @@ body.flexcyon-ext-colors-enabled {
   --color-orange-blue-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-orange), var(--color-blue))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-blue-orange-mix: color-mix(
+    in hsl,
+    var(--color-blue),
+    var(--color-orange)
+  );
+  --color-blue-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-blue), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -183,6 +292,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-purple-orange-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-orange)
+  );
+  --color-purple-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-orange))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-orange-pink-mix: color-mix(
     in hsl,
     var(--color-orange),
@@ -191,6 +311,17 @@ body.flexcyon-ext-colors-enabled {
   --color-orange-pink-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-orange), var(--color-pink))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-pink-orange-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-orange)
+  );
+  --color-pink-orange-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -205,6 +336,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-green-yellow-mix: color-mix(
+    in hsl,
+    var(--color-green),
+    var(--color-yellow)
+  );
+  --color-green-yellow-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-green), var(--color-yellow))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-yellow-cyan-mix: color-mix(
     in hsl,
     var(--color-yellow),
@@ -213,6 +355,17 @@ body.flexcyon-ext-colors-enabled {
   --color-yellow-cyan-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-yellow), var(--color-cyan))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-cyan-yellow-mix: color-mix(
+    in hsl,
+    var(--color-cyan),
+    var(--color-yellow)
+  );
+  --color-cyan-yellow-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-cyan), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -227,6 +380,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-blue-yellow-mix: color-mix(
+    in hsl,
+    var(--color-blue),
+    var(--color-yellow)
+  );
+  --color-blue-yellow-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-blue), var(--color-yellow))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-yellow-purple-mix: color-mix(
     in hsl,
     var(--color-yellow),
@@ -235,6 +399,17 @@ body.flexcyon-ext-colors-enabled {
   --color-yellow-purple-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-yellow), var(--color-purple))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-purple-yellow-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-yellow)
+  );
+  --color-purple-yellow-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -249,6 +424,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-pink-yellow-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-yellow)
+  );
+  --color-pink-yellow-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-yellow))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-green-cyan-mix: color-mix(
     in hsl,
     var(--color-green),
@@ -257,6 +443,17 @@ body.flexcyon-ext-colors-enabled {
   --color-green-cyan-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-green), var(--color-cyan))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-cyan-green-mix: color-mix(
+    in hsl,
+    var(--color-cyan),
+    var(--color-green)
+  );
+  --color-cyan-green-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-cyan), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -271,6 +468,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-blue-green-mix: color-mix(
+    in hsl,
+    var(--color-blue),
+    var(--color-green)
+  );
+  --color-blue-green-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-blue), var(--color-green))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-green-purple-mix: color-mix(
     in hsl,
     var(--color-green),
@@ -279,6 +487,17 @@ body.flexcyon-ext-colors-enabled {
   --color-green-purple-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-green), var(--color-purple))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-purple-green-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-green)
+  );
+  --color-purple-green-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -293,6 +512,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-pink-green-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-green)
+  );
+  --color-pink-green-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-green))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-cyan-blue-mix: color-mix(
     in hsl,
     var(--color-cyan),
@@ -301,6 +531,17 @@ body.flexcyon-ext-colors-enabled {
   --color-cyan-blue-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-cyan), var(--color-blue))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-blue-cyan-mix: color-mix(
+    in hsl,
+    var(--color-blue),
+    var(--color-cyan)
+  );
+  --color-blue-cyan-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-blue), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -315,6 +556,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-purple-cyan-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-cyan)
+  );
+  --color-purple-cyan-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-cyan))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-cyan-pink-mix: color-mix(
     in hsl,
     var(--color-cyan),
@@ -323,6 +575,17 @@ body.flexcyon-ext-colors-enabled {
   --color-cyan-pink-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-cyan), var(--color-pink))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-pink-cyan-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-cyan)
+  );
+  --color-pink-cyan-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -337,6 +600,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-purple-blue-mix: color-mix(
+    in hsl,
+    var(--color-purple),
+    var(--color-blue)
+  );
+  --color-purple-blue-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-purple), var(--color-blue))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-blue-pink-mix: color-mix(
     in hsl,
     var(--color-blue),
@@ -348,6 +622,17 @@ body.flexcyon-ext-colors-enabled {
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
+  --color-pink-blue-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-blue)
+  );
+  --color-pink-blue-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-blue))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
   --color-purple-pink-mix: color-mix(
     in hsl,
     var(--color-purple),
@@ -356,6 +641,17 @@ body.flexcyon-ext-colors-enabled {
   --color-purple-pink-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-purple), var(--color-pink))
+      var(--flexcyon-callout-bg-opacity),
+    transparent
+  );
+  --color-pink-purple-mix: color-mix(
+    in hsl,
+    var(--color-pink),
+    var(--color-purple)
+  );
+  --color-pink-purple-mix-bg: color-mix(
+    in hsl,
+    color-mix(in hsl, var(--color-pink), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -2997,6 +3293,7 @@ body {
   --flexcyon-comm-item-opacity: 0.89;
   --flexcyon-tree-item-horiz-padding: 10px;
   --flexcyon-tree-item-verti-padding: 2px;
+  --flexcyon-comm-text-padding: 3px 16px;
 }
 body .clickable-icon {
   opacity: var(--dimmed);
@@ -3023,19 +3320,8 @@ body
   .setting-item.mod-toggle {
   margin-top: -8px;
 }
-body
-  .modal-sidebar:not(:has(+ .community-modal-details))
-  .community-modal-controls {
-  display: flex;
-}
-body
-  .modal-sidebar:not(:has(+ .community-modal-details))
-  .community-modal-controls
-  .community-modal-search-summary {
-  margin-top: 3px;
-}
 body .modal-sidebar {
-  padding: 12px;
+  padding: 16px 8px;
 }
 body .community-modal-search-summary {
   padding: 6px 16px;
@@ -3083,7 +3369,7 @@ body.flexcyon-workspace-card-layout .community-modal-info-name {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-bottom: 0px;
-  padding: 3px 16px;
+  padding: var(--flexcyon-comm-text-padding);
   padding-top: 16px;
   margin-bottom: 0px;
   margin-top: 8px;
@@ -3096,7 +3382,7 @@ body.flexcyon-workspace-card-layout .community-modal-info-desc {
   border: 2px solid var(--text-faint);
   border-top: 0px;
   border-bottom: 0px;
-  padding: 3px 16px;
+  padding: var(--flexcyon-comm-text-padding);
   overflow-wrap: break-word;
 }
 body.flexcyon-workspace-card-layout .community-modal-info-desc {
@@ -6672,1069 +6958,1107 @@ div.callout[data-callout-metadata*="caps-content"]
 
 /* obsi-snip-coll end */
 /* obsi-snip-coll start: extended-color-palette */
-div.callout[data-callout*="all-red-blue"],
-div.callout[data-callout-metadata*="all-red-blue"],
-div.callout[data-callout*="bg-red-blue"],
-div.callout[data-callout-metadata*="bg-red-blue"] {
+div div.callout[data-callout*="all-blue-red"],
+div div.callout[data-callout-metadata*="all-blue-red"],
+div div.callout[data-callout*="bg-blue-red"],
+div div.callout[data-callout-metadata*="bg-blue-red"],
+div div.callout[data-callout*="all-red-blue"],
+div div.callout[data-callout-metadata*="all-red-blue"],
+div div.callout[data-callout*="bg-red-blue"],
+div div.callout[data-callout-metadata*="bg-red-blue"] {
   background-color: var(--color-red-blue-mix-bg);
 }
-
-div.callout[data-callout*="all-red-blue"] .callout-title,
-div.callout[data-callout*="all-red-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-red-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-blue"] .callout-title,
-div.callout[data-callout*="title-red-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-red-blue"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-blue-red"] .callout-title,
+div div.callout[data-callout*="all-blue-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-red"] .callout-title,
+div div.callout[data-callout-metadata*="all-blue-red"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-blue-red"] .callout-title,
+div div.callout[data-callout*="title-blue-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-blue"] .callout-title,
+div div.callout[data-callout*="all-red-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-blue"] .callout-title,
+div div.callout[data-callout-metadata*="all-red-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-red-blue"] .callout-title,
+div div.callout[data-callout*="title-red-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-blue"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-blue-mix);
 }
 
-div.callout[data-callout*="all-blue-red"],
-div.callout[data-callout-metadata*="all-blue-red"],
-div.callout[data-callout*="bg-blue-red"],
-div.callout[data-callout-metadata*="bg-blue-red"] {
-  background-color: var(--color-red-blue-mix-bg);
-}
-
-div.callout[data-callout*="all-blue-red"] .callout-title,
-div.callout[data-callout*="all-blue-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-red"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-red"] .callout-title,
-div.callout[data-callout*="title-blue-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-red"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-red"] .callout-icon .svg-icon {
-  color: var(--color-red-blue-mix);
-}
-
-div.callout[data-callout*="all-red-orange"],
-div.callout[data-callout-metadata*="all-red-orange"],
-div.callout[data-callout*="bg-red-orange"],
-div.callout[data-callout-metadata*="bg-red-orange"] {
+div div.callout[data-callout*="all-orange-red"],
+div div.callout[data-callout-metadata*="all-orange-red"],
+div div.callout[data-callout*="bg-orange-red"],
+div div.callout[data-callout-metadata*="bg-orange-red"],
+div div.callout[data-callout*="all-red-orange"],
+div div.callout[data-callout-metadata*="all-red-orange"],
+div div.callout[data-callout*="bg-red-orange"],
+div div.callout[data-callout-metadata*="bg-red-orange"] {
   background-color: var(--color-red-orange-mix-bg);
 }
-
-div.callout[data-callout*="all-red-orange"] .callout-title,
-div.callout[data-callout*="all-red-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-red-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-orange"] .callout-title,
-div.callout[data-callout*="title-red-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-red-orange"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-orange-red"] .callout-title,
+div div.callout[data-callout*="all-orange-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-red"] .callout-title,
+div div.callout[data-callout*="title-orange-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-orange"] .callout-title,
+div div.callout[data-callout*="all-red-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-red-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-red-orange"] .callout-title,
+div div.callout[data-callout*="title-red-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-orange"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-orange-mix);
 }
 
-div.callout[data-callout*="all-orange-red"],
-div.callout[data-callout-metadata*="all-orange-red"],
-div.callout[data-callout*="bg-orange-red"],
-div.callout[data-callout-metadata*="bg-orange-red"] {
-  background-color: var(--color-red-orange-mix-bg);
-}
-
-div.callout[data-callout*="all-orange-red"] .callout-title,
-div.callout[data-callout*="all-orange-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-red"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-red"] .callout-title,
-div.callout[data-callout*="title-orange-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-red"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-red"] .callout-icon .svg-icon {
-  color: var(--color-red-orange-mix);
-}
-
-div.callout[data-callout*="all-red-yellow"],
-div.callout[data-callout-metadata*="all-red-yellow"],
-div.callout[data-callout*="bg-red-yellow"],
-div.callout[data-callout-metadata*="bg-red-yellow"] {
+div div.callout[data-callout*="all-yellow-red"],
+div div.callout[data-callout-metadata*="all-yellow-red"],
+div div.callout[data-callout*="bg-yellow-red"],
+div div.callout[data-callout-metadata*="bg-yellow-red"],
+div div.callout[data-callout*="all-red-yellow"],
+div div.callout[data-callout-metadata*="all-red-yellow"],
+div div.callout[data-callout*="bg-red-yellow"],
+div div.callout[data-callout-metadata*="bg-red-yellow"] {
   background-color: var(--color-red-yellow-mix-bg);
 }
-
-div.callout[data-callout*="all-red-yellow"] .callout-title,
-div.callout[data-callout*="all-red-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-red-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-yellow"] .callout-title,
-div.callout[data-callout*="title-red-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-red-yellow"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-yellow-red"] .callout-title,
+div div.callout[data-callout*="all-yellow-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-red"] .callout-title,
+div div.callout[data-callout*="title-yellow-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-yellow"] .callout-title,
+div div.callout[data-callout*="all-red-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-red-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-red-yellow"] .callout-title,
+div div.callout[data-callout*="title-red-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-yellow"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-yellow-mix);
 }
 
-div.callout[data-callout*="all-yellow-red"],
-div.callout[data-callout-metadata*="all-yellow-red"],
-div.callout[data-callout*="bg-yellow-red"],
-div.callout[data-callout-metadata*="bg-yellow-red"] {
-  background-color: var(--color-red-yellow-mix-bg);
-}
-
-div.callout[data-callout*="all-yellow-red"] .callout-title,
-div.callout[data-callout*="all-yellow-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-red"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-red"] .callout-title,
-div.callout[data-callout*="title-yellow-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-red"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-red"] .callout-icon .svg-icon {
-  color: var(--color-red-yellow-mix);
-}
-
-div.callout[data-callout*="all-red-green"],
-div.callout[data-callout-metadata*="all-red-green"],
-div.callout[data-callout*="bg-red-green"],
-div.callout[data-callout-metadata*="bg-red-green"] {
+div div.callout[data-callout*="all-green-red"],
+div div.callout[data-callout-metadata*="all-green-red"],
+div div.callout[data-callout*="bg-green-red"],
+div div.callout[data-callout-metadata*="bg-green-red"],
+div div.callout[data-callout*="all-red-green"],
+div div.callout[data-callout-metadata*="all-red-green"],
+div div.callout[data-callout*="bg-red-green"],
+div div.callout[data-callout-metadata*="bg-red-green"] {
   background-color: var(--color-red-green-mix-bg);
 }
-
-div.callout[data-callout*="all-red-green"] .callout-title,
-div.callout[data-callout*="all-red-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-green"] .callout-title,
-div.callout[data-callout-metadata*="all-red-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-green"] .callout-title,
-div.callout[data-callout*="title-red-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-green"] .callout-title,
-div.callout[data-callout-metadata*="title-red-green"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-green-red"] .callout-title,
+div div.callout[data-callout*="all-green-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-red"] .callout-title,
+div div.callout[data-callout-metadata*="all-green-red"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-green-red"] .callout-title,
+div div.callout[data-callout*="title-green-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-green"] .callout-title,
+div div.callout[data-callout*="all-red-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-green"] .callout-title,
+div div.callout[data-callout-metadata*="all-red-green"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-red-green"] .callout-title,
+div div.callout[data-callout*="title-red-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-green"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-green-mix);
 }
 
-div.callout[data-callout*="all-green-red"],
-div.callout[data-callout-metadata*="all-green-red"],
-div.callout[data-callout*="bg-green-red"],
-div.callout[data-callout-metadata*="bg-green-red"] {
-  background-color: var(--color-red-green-mix-bg);
-}
-
-div.callout[data-callout*="all-green-red"] .callout-title,
-div.callout[data-callout*="all-green-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-red"] .callout-title,
-div.callout[data-callout-metadata*="all-green-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-red"] .callout-title,
-div.callout[data-callout*="title-green-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-red"] .callout-title,
-div.callout[data-callout-metadata*="title-green-red"] .callout-icon .svg-icon {
-  color: var(--color-red-green-mix);
-}
-
-div.callout[data-callout*="all-red-cyan"],
-div.callout[data-callout-metadata*="all-red-cyan"],
-div.callout[data-callout*="bg-red-cyan"],
-div.callout[data-callout-metadata*="bg-red-cyan"] {
+div div.callout[data-callout*="all-cyan-red"],
+div div.callout[data-callout-metadata*="all-cyan-red"],
+div div.callout[data-callout*="bg-cyan-red"],
+div div.callout[data-callout-metadata*="bg-cyan-red"],
+div div.callout[data-callout*="all-red-cyan"],
+div div.callout[data-callout-metadata*="all-red-cyan"],
+div div.callout[data-callout*="bg-red-cyan"],
+div div.callout[data-callout-metadata*="bg-red-cyan"] {
   background-color: var(--color-red-cyan-mix-bg);
 }
-
-div.callout[data-callout*="all-red-cyan"] .callout-title,
-div.callout[data-callout*="all-red-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-red-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-cyan"] .callout-title,
-div.callout[data-callout*="title-red-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-red-cyan"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-cyan-red"] .callout-title,
+div div.callout[data-callout*="all-cyan-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-red"] .callout-title,
+div div.callout[data-callout-metadata*="all-cyan-red"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-cyan-red"] .callout-title,
+div div.callout[data-callout*="title-cyan-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-cyan"] .callout-title,
+div div.callout[data-callout*="all-red-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-cyan"] .callout-title,
+div div.callout[data-callout-metadata*="all-red-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-red-cyan"] .callout-title,
+div div.callout[data-callout*="title-red-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-cyan"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-cyan-mix);
 }
 
-div.callout[data-callout*="all-cyan-red"],
-div.callout[data-callout-metadata*="all-cyan-red"],
-div.callout[data-callout*="bg-cyan-red"],
-div.callout[data-callout-metadata*="bg-cyan-red"] {
-  background-color: var(--color-red-cyan-mix-bg);
-}
-
-div.callout[data-callout*="all-cyan-red"] .callout-title,
-div.callout[data-callout*="all-cyan-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-red"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-red"] .callout-title,
-div.callout[data-callout*="title-cyan-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-red"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-red"] .callout-icon .svg-icon {
-  color: var(--color-red-cyan-mix);
-}
-
-div.callout[data-callout*="all-red-purple"],
-div.callout[data-callout-metadata*="all-red-purple"],
-div.callout[data-callout*="bg-red-purple"],
-div.callout[data-callout-metadata*="bg-red-purple"] {
+div div.callout[data-callout*="all-purple-red"],
+div div.callout[data-callout-metadata*="all-purple-red"],
+div div.callout[data-callout*="bg-purple-red"],
+div div.callout[data-callout-metadata*="bg-purple-red"],
+div div.callout[data-callout*="all-red-purple"],
+div div.callout[data-callout-metadata*="all-red-purple"],
+div div.callout[data-callout*="bg-red-purple"],
+div div.callout[data-callout-metadata*="bg-red-purple"] {
   background-color: var(--color-red-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-red-purple"] .callout-title,
-div.callout[data-callout*="all-red-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-red-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-purple"] .callout-title,
-div.callout[data-callout*="title-red-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-red-purple"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-purple-red"] .callout-title,
+div div.callout[data-callout*="all-purple-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-red"] .callout-title,
+div div.callout[data-callout*="title-purple-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-purple"] .callout-title,
+div div.callout[data-callout*="all-red-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-red-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-red-purple"] .callout-title,
+div div.callout[data-callout*="title-red-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-purple"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-red"],
-div.callout[data-callout-metadata*="all-purple-red"],
-div.callout[data-callout*="bg-purple-red"],
-div.callout[data-callout-metadata*="bg-purple-red"] {
-  background-color: var(--color-red-purple-mix-bg);
-}
-
-div.callout[data-callout*="all-purple-red"] .callout-title,
-div.callout[data-callout*="all-purple-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-red"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-red"] .callout-title,
-div.callout[data-callout*="title-purple-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-red"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-red"] .callout-icon .svg-icon {
-  color: var(--color-red-purple-mix);
-}
-
-div.callout[data-callout*="all-red-pink"],
-div.callout[data-callout-metadata*="all-red-pink"],
-div.callout[data-callout*="bg-red-pink"],
-div.callout[data-callout-metadata*="bg-red-pink"] {
+div div.callout[data-callout*="all-pink-red"],
+div div.callout[data-callout-metadata*="all-pink-red"],
+div div.callout[data-callout*="bg-pink-red"],
+div div.callout[data-callout-metadata*="bg-pink-red"],
+div div.callout[data-callout*="all-red-pink"],
+div div.callout[data-callout-metadata*="all-red-pink"],
+div div.callout[data-callout*="bg-red-pink"],
+div div.callout[data-callout-metadata*="bg-red-pink"] {
   background-color: var(--color-red-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-red-pink"] .callout-title,
-div.callout[data-callout*="all-red-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-red-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-red-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-red-pink"] .callout-title,
-div.callout[data-callout*="title-red-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-red-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-red-pink"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-pink-red"] .callout-title,
+div div.callout[data-callout*="all-pink-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-red"] .callout-title,
+div div.callout[data-callout-metadata*="all-pink-red"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-pink-red"] .callout-title,
+div div.callout[data-callout*="title-pink-red"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-red"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-red"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-red-pink"] .callout-title,
+div div.callout[data-callout*="all-red-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-red-pink"] .callout-title,
+div div.callout[data-callout-metadata*="all-red-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-red-pink"] .callout-title,
+div div.callout[data-callout*="title-red-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-red-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-red-pink"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-red-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-red"],
-div.callout[data-callout-metadata*="all-pink-red"],
-div.callout[data-callout*="bg-pink-red"],
-div.callout[data-callout-metadata*="bg-pink-red"] {
-  background-color: var(--color-red-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-red"] .callout-title,
-div.callout[data-callout*="all-pink-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-red"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-red"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-red"] .callout-title,
-div.callout[data-callout*="title-pink-red"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-red"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-red"] .callout-icon .svg-icon {
-  color: var(--color-red-pink-mix);
-}
-
-div.callout[data-callout*="all-orange-yellow"],
-div.callout[data-callout-metadata*="all-orange-yellow"],
-div.callout[data-callout*="bg-orange-yellow"],
-div.callout[data-callout-metadata*="bg-orange-yellow"] {
+div div.callout[data-callout*="all-yellow-orange"],
+div div.callout[data-callout-metadata*="all-yellow-orange"],
+div div.callout[data-callout*="bg-yellow-orange"],
+div div.callout[data-callout-metadata*="bg-yellow-orange"],
+div div.callout[data-callout*="all-orange-yellow"],
+div div.callout[data-callout-metadata*="all-orange-yellow"],
+div div.callout[data-callout*="bg-orange-yellow"],
+div div.callout[data-callout-metadata*="bg-orange-yellow"] {
   background-color: var(--color-orange-yellow-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-yellow"] .callout-title,
-div.callout[data-callout*="all-orange-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-yellow"] .callout-title,
-div.callout[data-callout*="title-orange-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-yellow"]
+div div.callout[data-callout*="all-yellow-orange"] .callout-title,
+div div.callout[data-callout*="all-yellow-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-orange"] .callout-title,
+div div.callout[data-callout*="title-yellow-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-yellow"] .callout-title,
+div div.callout[data-callout*="all-orange-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-yellow"] .callout-title,
+div div.callout[data-callout*="title-orange-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-yellow"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-yellow-mix);
 }
 
-div.callout[data-callout*="all-yellow-orange"],
-div.callout[data-callout-metadata*="all-yellow-orange"],
-div.callout[data-callout*="bg-yellow-orange"],
-div.callout[data-callout-metadata*="bg-yellow-orange"] {
-  background-color: var(--color-orange-yellow-mix-bg);
-}
-
-div.callout[data-callout*="all-yellow-orange"] .callout-title,
-div.callout[data-callout*="all-yellow-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-orange"] .callout-title,
-div.callout[data-callout*="title-yellow-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-yellow-mix);
-}
-
-div.callout[data-callout*="all-orange-green"],
-div.callout[data-callout-metadata*="all-orange-green"],
-div.callout[data-callout*="bg-orange-green"],
-div.callout[data-callout-metadata*="bg-orange-green"] {
+div div.callout[data-callout*="all-green-orange"],
+div div.callout[data-callout-metadata*="all-green-orange"],
+div div.callout[data-callout*="bg-green-orange"],
+div div.callout[data-callout-metadata*="bg-green-orange"],
+div div.callout[data-callout*="all-orange-green"],
+div div.callout[data-callout-metadata*="all-orange-green"],
+div div.callout[data-callout*="bg-orange-green"],
+div div.callout[data-callout-metadata*="bg-orange-green"] {
   background-color: var(--color-orange-green-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-green"] .callout-title,
-div.callout[data-callout*="all-orange-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-green"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-green"] .callout-title,
-div.callout[data-callout*="title-orange-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-green"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-green"]
+div div.callout[data-callout*="all-green-orange"] .callout-title,
+div div.callout[data-callout*="all-green-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-orange"] .callout-title,
+div div.callout[data-callout*="title-green-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-green"] .callout-title,
+div div.callout[data-callout*="all-orange-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-green"] .callout-title,
+div div.callout[data-callout*="title-orange-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-green"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-green-mix);
 }
 
-div.callout[data-callout*="all-green-orange"],
-div.callout[data-callout-metadata*="all-green-orange"],
-div.callout[data-callout*="bg-green-orange"],
-div.callout[data-callout-metadata*="bg-green-orange"] {
-  background-color: var(--color-orange-green-mix-bg);
-}
-
-div.callout[data-callout*="all-green-orange"] .callout-title,
-div.callout[data-callout*="all-green-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-green-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-orange"] .callout-title,
-div.callout[data-callout*="title-green-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-green-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-green-mix);
-}
-
-div.callout[data-callout*="all-orange-cyan"],
-div.callout[data-callout-metadata*="all-orange-cyan"],
-div.callout[data-callout*="bg-orange-cyan"],
-div.callout[data-callout-metadata*="bg-orange-cyan"] {
+div div.callout[data-callout*="all-cyan-orange"],
+div div.callout[data-callout-metadata*="all-cyan-orange"],
+div div.callout[data-callout*="bg-cyan-orange"],
+div div.callout[data-callout-metadata*="bg-cyan-orange"],
+div div.callout[data-callout*="all-orange-cyan"],
+div div.callout[data-callout-metadata*="all-orange-cyan"],
+div div.callout[data-callout*="bg-orange-cyan"],
+div div.callout[data-callout-metadata*="bg-orange-cyan"] {
   background-color: var(--color-orange-cyan-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-cyan"] .callout-title,
-div.callout[data-callout*="all-orange-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-cyan"] .callout-title,
-div.callout[data-callout*="title-orange-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-cyan"]
+div div.callout[data-callout*="all-cyan-orange"] .callout-title,
+div div.callout[data-callout*="all-cyan-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-cyan-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-cyan-orange"] .callout-title,
+div div.callout[data-callout*="title-cyan-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-cyan"] .callout-title,
+div div.callout[data-callout*="all-orange-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-cyan"] .callout-title,
+div div.callout[data-callout*="title-orange-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-cyan"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-cyan-mix);
 }
 
-div.callout[data-callout*="all-cyan-orange"],
-div.callout[data-callout-metadata*="all-cyan-orange"],
-div.callout[data-callout*="bg-cyan-orange"],
-div.callout[data-callout-metadata*="bg-cyan-orange"] {
-  background-color: var(--color-orange-cyan-mix-bg);
-}
-
-div.callout[data-callout*="all-cyan-orange"] .callout-title,
-div.callout[data-callout*="all-cyan-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-orange"] .callout-title,
-div.callout[data-callout*="title-cyan-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-cyan-mix);
-}
-
-div.callout[data-callout*="all-orange-blue"],
-div.callout[data-callout-metadata*="all-orange-blue"],
-div.callout[data-callout*="bg-orange-blue"],
-div.callout[data-callout-metadata*="bg-orange-blue"] {
+div div.callout[data-callout*="all-blue-orange"],
+div div.callout[data-callout-metadata*="all-blue-orange"],
+div div.callout[data-callout*="bg-blue-orange"],
+div div.callout[data-callout-metadata*="bg-blue-orange"],
+div div.callout[data-callout*="all-orange-blue"],
+div div.callout[data-callout-metadata*="all-orange-blue"],
+div div.callout[data-callout*="bg-orange-blue"],
+div div.callout[data-callout-metadata*="bg-orange-blue"] {
   background-color: var(--color-orange-blue-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-blue"] .callout-title,
-div.callout[data-callout*="all-orange-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-blue"] .callout-title,
-div.callout[data-callout*="title-orange-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-blue"]
+div div.callout[data-callout*="all-blue-orange"] .callout-title,
+div div.callout[data-callout*="all-blue-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-blue-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-blue-orange"] .callout-title,
+div div.callout[data-callout*="title-blue-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-blue"] .callout-title,
+div div.callout[data-callout*="all-orange-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-blue"] .callout-title,
+div div.callout[data-callout*="title-orange-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-blue"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-blue-mix);
 }
 
-div.callout[data-callout*="all-blue-orange"],
-div.callout[data-callout-metadata*="all-blue-orange"],
-div.callout[data-callout*="bg-blue-orange"],
-div.callout[data-callout-metadata*="bg-blue-orange"] {
-  background-color: var(--color-orange-blue-mix-bg);
-}
-
-div.callout[data-callout*="all-blue-orange"] .callout-title,
-div.callout[data-callout*="all-blue-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-orange"] .callout-title,
-div.callout[data-callout*="title-blue-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-blue-mix);
-}
-
-div.callout[data-callout*="all-orange-purple"],
-div.callout[data-callout-metadata*="all-orange-purple"],
-div.callout[data-callout*="bg-orange-purple"],
-div.callout[data-callout-metadata*="bg-orange-purple"] {
+div div.callout[data-callout*="all-purple-orange"],
+div div.callout[data-callout-metadata*="all-purple-orange"],
+div div.callout[data-callout*="bg-purple-orange"],
+div div.callout[data-callout-metadata*="bg-purple-orange"],
+div div.callout[data-callout*="all-orange-purple"],
+div div.callout[data-callout-metadata*="all-orange-purple"],
+div div.callout[data-callout*="bg-orange-purple"],
+div div.callout[data-callout-metadata*="bg-orange-purple"] {
   background-color: var(--color-orange-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-purple"] .callout-title,
-div.callout[data-callout*="all-orange-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-purple"] .callout-title,
-div.callout[data-callout*="title-orange-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-purple"]
+div div.callout[data-callout*="all-purple-orange"] .callout-title,
+div div.callout[data-callout*="all-purple-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-orange"] .callout-title,
+div div.callout[data-callout*="title-purple-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-purple"] .callout-title,
+div div.callout[data-callout*="all-orange-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-purple"] .callout-title,
+div div.callout[data-callout*="title-orange-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-purple"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-orange"],
-div.callout[data-callout-metadata*="all-purple-orange"],
-div.callout[data-callout*="bg-purple-orange"],
-div.callout[data-callout-metadata*="bg-purple-orange"] {
-  background-color: var(--color-orange-purple-mix-bg);
-}
-
-div.callout[data-callout*="all-purple-orange"] .callout-title,
-div.callout[data-callout*="all-purple-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-orange"] .callout-title,
-div.callout[data-callout*="title-purple-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-purple-mix);
-}
-
-div.callout[data-callout*="all-orange-pink"],
-div.callout[data-callout-metadata*="all-orange-pink"],
-div.callout[data-callout*="bg-orange-pink"],
-div.callout[data-callout-metadata*="bg-orange-pink"] {
+div div.callout[data-callout*="all-pink-orange"],
+div div.callout[data-callout-metadata*="all-pink-orange"],
+div div.callout[data-callout*="bg-pink-orange"],
+div div.callout[data-callout-metadata*="bg-pink-orange"],
+div div.callout[data-callout*="all-orange-pink"],
+div div.callout[data-callout-metadata*="all-orange-pink"],
+div div.callout[data-callout*="bg-orange-pink"],
+div div.callout[data-callout-metadata*="bg-orange-pink"] {
   background-color: var(--color-orange-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-orange-pink"] .callout-title,
-div.callout[data-callout*="all-orange-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-orange-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-orange-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-orange-pink"] .callout-title,
-div.callout[data-callout*="title-orange-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-orange-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-orange-pink"]
+div div.callout[data-callout*="all-pink-orange"] .callout-title,
+div div.callout[data-callout*="all-pink-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-pink-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-pink-orange"] .callout-title,
+div div.callout[data-callout*="title-pink-orange"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-orange"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-orange"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-orange-pink"] .callout-title,
+div div.callout[data-callout*="all-orange-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-orange-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-orange-pink"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-orange-pink"] .callout-title,
+div div.callout[data-callout*="title-orange-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-orange-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-orange-pink"]
   .callout-icon
   .svg-icon {
   color: var(--color-orange-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-orange"],
-div.callout[data-callout-metadata*="all-pink-orange"],
-div.callout[data-callout*="bg-pink-orange"],
-div.callout[data-callout-metadata*="bg-pink-orange"] {
-  background-color: var(--color-orange-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-orange"] .callout-title,
-div.callout[data-callout*="all-pink-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-orange"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-orange"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-orange"] .callout-title,
-div.callout[data-callout*="title-pink-orange"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-orange"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-orange"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-orange-pink-mix);
-}
-
-div.callout[data-callout*="all-yellow-green"],
-div.callout[data-callout-metadata*="all-yellow-green"],
-div.callout[data-callout*="bg-yellow-green"],
-div.callout[data-callout-metadata*="bg-yellow-green"] {
+div div.callout[data-callout*="all-green-yellow"],
+div div.callout[data-callout-metadata*="all-green-yellow"],
+div div.callout[data-callout*="bg-green-yellow"],
+div div.callout[data-callout-metadata*="bg-green-yellow"],
+div div.callout[data-callout*="all-yellow-green"],
+div div.callout[data-callout-metadata*="all-yellow-green"],
+div div.callout[data-callout*="bg-yellow-green"],
+div div.callout[data-callout-metadata*="bg-yellow-green"] {
   background-color: var(--color-yellow-green-mix-bg);
 }
-
-div.callout[data-callout*="all-yellow-green"] .callout-title,
-div.callout[data-callout*="all-yellow-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-green"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-green"] .callout-title,
-div.callout[data-callout*="title-yellow-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-green"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-green"]
+div div.callout[data-callout*="all-green-yellow"] .callout-title,
+div div.callout[data-callout*="all-green-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-yellow"] .callout-title,
+div div.callout[data-callout*="title-green-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-yellow-green"] .callout-title,
+div div.callout[data-callout*="all-yellow-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-green"] .callout-title,
+div div.callout[data-callout*="title-yellow-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-green"]
   .callout-icon
   .svg-icon {
   color: var(--color-yellow-green-mix);
 }
 
-div.callout[data-callout*="all-green-yellow"],
-div.callout[data-callout-metadata*="all-green-yellow"],
-div.callout[data-callout*="bg-green-yellow"],
-div.callout[data-callout-metadata*="bg-green-yellow"] {
-  background-color: var(--color-yellow-green-mix-bg);
-}
-
-div.callout[data-callout*="all-green-yellow"] .callout-title,
-div.callout[data-callout*="all-green-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-green-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-yellow"] .callout-title,
-div.callout[data-callout*="title-green-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-green-yellow"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-yellow-green-mix);
-}
-
-div.callout[data-callout*="all-yellow-cyan"],
-div.callout[data-callout-metadata*="all-yellow-cyan"],
-div.callout[data-callout*="bg-yellow-cyan"],
-div.callout[data-callout-metadata*="bg-yellow-cyan"] {
+div div.callout[data-callout*="all-cyan-yellow"],
+div div.callout[data-callout-metadata*="all-cyan-yellow"],
+div div.callout[data-callout*="bg-cyan-yellow"],
+div div.callout[data-callout-metadata*="bg-cyan-yellow"],
+div div.callout[data-callout*="all-yellow-cyan"],
+div div.callout[data-callout-metadata*="all-yellow-cyan"],
+div div.callout[data-callout*="bg-yellow-cyan"],
+div div.callout[data-callout-metadata*="bg-yellow-cyan"] {
   background-color: var(--color-yellow-cyan-mix-bg);
 }
-
-div.callout[data-callout*="all-yellow-cyan"] .callout-title,
-div.callout[data-callout*="all-yellow-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-cyan"] .callout-title,
-div.callout[data-callout*="title-yellow-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-cyan"]
+div div.callout[data-callout*="all-cyan-yellow"] .callout-title,
+div div.callout[data-callout*="all-cyan-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-cyan-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-cyan-yellow"] .callout-title,
+div div.callout[data-callout*="title-cyan-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-yellow-cyan"] .callout-title,
+div div.callout[data-callout*="all-yellow-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-cyan"] .callout-title,
+div div.callout[data-callout*="title-yellow-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-cyan"]
   .callout-icon
   .svg-icon {
   color: var(--color-yellow-cyan-mix);
 }
 
-div.callout[data-callout*="all-cyan-yellow"],
-div.callout[data-callout-metadata*="all-cyan-yellow"],
-div.callout[data-callout*="bg-cyan-yellow"],
-div.callout[data-callout-metadata*="bg-cyan-yellow"] {
-  background-color: var(--color-yellow-cyan-mix-bg);
-}
-
-div.callout[data-callout*="all-cyan-yellow"] .callout-title,
-div.callout[data-callout*="all-cyan-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-yellow"] .callout-title,
-div.callout[data-callout*="title-cyan-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-yellow"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-yellow-cyan-mix);
-}
-
-div.callout[data-callout*="all-yellow-blue"],
-div.callout[data-callout-metadata*="all-yellow-blue"],
-div.callout[data-callout*="bg-yellow-blue"],
-div.callout[data-callout-metadata*="bg-yellow-blue"] {
+div div.callout[data-callout*="all-blue-yellow"],
+div div.callout[data-callout-metadata*="all-blue-yellow"],
+div div.callout[data-callout*="bg-blue-yellow"],
+div div.callout[data-callout-metadata*="bg-blue-yellow"],
+div div.callout[data-callout*="all-yellow-blue"],
+div div.callout[data-callout-metadata*="all-yellow-blue"],
+div div.callout[data-callout*="bg-yellow-blue"],
+div div.callout[data-callout-metadata*="bg-yellow-blue"] {
   background-color: var(--color-yellow-blue-mix-bg);
 }
-
-div.callout[data-callout*="all-yellow-blue"] .callout-title,
-div.callout[data-callout*="all-yellow-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-blue"] .callout-title,
-div.callout[data-callout*="title-yellow-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-blue"]
+div div.callout[data-callout*="all-blue-yellow"] .callout-title,
+div div.callout[data-callout*="all-blue-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-blue-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-blue-yellow"] .callout-title,
+div div.callout[data-callout*="title-blue-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-yellow-blue"] .callout-title,
+div div.callout[data-callout*="all-yellow-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-blue"] .callout-title,
+div div.callout[data-callout*="title-yellow-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-blue"]
   .callout-icon
   .svg-icon {
   color: var(--color-yellow-blue-mix);
 }
 
-div.callout[data-callout*="all-blue-yellow"],
-div.callout[data-callout-metadata*="all-blue-yellow"],
-div.callout[data-callout*="bg-blue-yellow"],
-div.callout[data-callout-metadata*="bg-blue-yellow"] {
-  background-color: var(--color-yellow-blue-mix-bg);
-}
-
-div.callout[data-callout*="all-blue-yellow"] .callout-title,
-div.callout[data-callout*="all-blue-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-yellow"] .callout-title,
-div.callout[data-callout*="title-blue-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-yellow"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-yellow-blue-mix);
-}
-
-div.callout[data-callout*="all-yellow-purple"],
-div.callout[data-callout-metadata*="all-yellow-purple"],
-div.callout[data-callout*="bg-yellow-purple"],
-div.callout[data-callout-metadata*="bg-yellow-purple"] {
+div div.callout[data-callout*="all-purple-yellow"],
+div div.callout[data-callout-metadata*="all-purple-yellow"],
+div div.callout[data-callout*="bg-purple-yellow"],
+div div.callout[data-callout-metadata*="bg-purple-yellow"],
+div div.callout[data-callout*="all-yellow-purple"],
+div div.callout[data-callout-metadata*="all-yellow-purple"],
+div div.callout[data-callout*="bg-yellow-purple"],
+div div.callout[data-callout-metadata*="bg-yellow-purple"] {
   background-color: var(--color-yellow-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-yellow-purple"] .callout-title,
-div.callout[data-callout*="all-yellow-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-purple"] .callout-title,
-div.callout[data-callout*="title-yellow-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-purple"]
+div div.callout[data-callout*="all-purple-yellow"] .callout-title,
+div div.callout[data-callout*="all-purple-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-yellow"] .callout-title,
+div div.callout[data-callout*="title-purple-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-yellow-purple"] .callout-title,
+div div.callout[data-callout*="all-yellow-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-purple"] .callout-title,
+div div.callout[data-callout*="title-yellow-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-purple"]
   .callout-icon
   .svg-icon {
   color: var(--color-yellow-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-yellow"],
-div.callout[data-callout-metadata*="all-purple-yellow"],
-div.callout[data-callout*="bg-purple-yellow"],
-div.callout[data-callout-metadata*="bg-purple-yellow"] {
-  background-color: var(--color-yellow-purple-mix-bg);
-}
-
-div.callout[data-callout*="all-purple-yellow"] .callout-title,
-div.callout[data-callout*="all-purple-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-yellow"] .callout-title,
-div.callout[data-callout*="title-purple-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-yellow"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-yellow-purple-mix);
-}
-
-div.callout[data-callout*="all-yellow-pink"],
-div.callout[data-callout-metadata*="all-yellow-pink"],
-div.callout[data-callout*="bg-yellow-pink"],
-div.callout[data-callout-metadata*="bg-yellow-pink"] {
+div div.callout[data-callout*="all-pink-yellow"],
+div div.callout[data-callout-metadata*="all-pink-yellow"],
+div div.callout[data-callout*="bg-pink-yellow"],
+div div.callout[data-callout-metadata*="bg-pink-yellow"],
+div div.callout[data-callout*="all-yellow-pink"],
+div div.callout[data-callout-metadata*="all-yellow-pink"],
+div div.callout[data-callout*="bg-yellow-pink"],
+div div.callout[data-callout-metadata*="bg-yellow-pink"] {
   background-color: var(--color-yellow-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-yellow-pink"] .callout-title,
-div.callout[data-callout*="all-yellow-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-yellow-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-yellow-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-yellow-pink"] .callout-title,
-div.callout[data-callout*="title-yellow-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-yellow-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-yellow-pink"]
+div div.callout[data-callout*="all-pink-yellow"] .callout-title,
+div div.callout[data-callout*="all-pink-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-pink-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-pink-yellow"] .callout-title,
+div div.callout[data-callout*="title-pink-yellow"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-yellow"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-yellow"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-yellow-pink"] .callout-title,
+div div.callout[data-callout*="all-yellow-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-yellow-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-yellow-pink"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-yellow-pink"] .callout-title,
+div div.callout[data-callout*="title-yellow-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-yellow-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-yellow-pink"]
   .callout-icon
   .svg-icon {
   color: var(--color-yellow-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-yellow"],
-div.callout[data-callout-metadata*="all-pink-yellow"],
-div.callout[data-callout*="bg-pink-yellow"],
-div.callout[data-callout-metadata*="bg-pink-yellow"] {
-  background-color: var(--color-yellow-pink-mix-bg);
+div div.callout[data-callout*="all-cyan-green"],
+div div.callout[data-callout-metadata*="all-cyan-green"],
+div div.callout[data-callout*="bg-cyan-green"],
+div div.callout[data-callout-metadata*="bg-cyan-green"],
+div div.callout[data-callout*="all-green-cyan"],
+div div.callout[data-callout-metadata*="all-green-cyan"],
+div div.callout[data-callout*="bg-green-cyan"],
+div div.callout[data-callout-metadata*="bg-green-cyan"] {
+  background-color: var(--color-green-cyan-mix-bg);
 }
-
-div.callout[data-callout*="all-pink-yellow"] .callout-title,
-div.callout[data-callout*="all-pink-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-yellow"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-yellow"] .callout-title,
-div.callout[data-callout*="title-pink-yellow"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-yellow"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-yellow"]
+div div.callout[data-callout*="all-cyan-green"] .callout-title,
+div div.callout[data-callout*="all-cyan-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-cyan-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-cyan-green"] .callout-title,
+div div.callout[data-callout*="title-cyan-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-green-cyan"] .callout-title,
+div div.callout[data-callout*="all-green-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-cyan"] .callout-title,
+div div.callout[data-callout*="title-green-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-cyan"]
   .callout-icon
   .svg-icon {
-  color: var(--color-yellow-pink-mix);
-}
-
-div.callout[data-callout*="all-green-cyan"],
-div.callout[data-callout-metadata*="all-green-cyan"],
-div.callout[data-callout*="bg-green-cyan"],
-div.callout[data-callout-metadata*="bg-green-cyan"] {
-  background-color: var(--color-green-cyan-mix-bg);
-}
-
-div.callout[data-callout*="all-green-cyan"] .callout-title,
-div.callout[data-callout*="all-green-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-green-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-cyan"] .callout-title,
-div.callout[data-callout*="title-green-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-green-cyan"] .callout-icon .svg-icon {
   color: var(--color-green-cyan-mix);
 }
 
-div.callout[data-callout*="all-cyan-green"],
-div.callout[data-callout-metadata*="all-cyan-green"],
-div.callout[data-callout*="bg-cyan-green"],
-div.callout[data-callout-metadata*="bg-cyan-green"] {
-  background-color: var(--color-green-cyan-mix-bg);
-}
-
-div.callout[data-callout*="all-cyan-green"] .callout-title,
-div.callout[data-callout*="all-cyan-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-green"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-green"] .callout-title,
-div.callout[data-callout*="title-cyan-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-green"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-green"] .callout-icon .svg-icon {
-  color: var(--color-green-cyan-mix);
-}
-
-div.callout[data-callout*="all-green-blue"],
-div.callout[data-callout-metadata*="all-green-blue"],
-div.callout[data-callout*="bg-green-blue"],
-div.callout[data-callout-metadata*="bg-green-blue"] {
+div div.callout[data-callout*="all-blue-green"],
+div div.callout[data-callout-metadata*="all-blue-green"],
+div div.callout[data-callout*="bg-blue-green"],
+div div.callout[data-callout-metadata*="bg-blue-green"],
+div div.callout[data-callout*="all-green-blue"],
+div div.callout[data-callout-metadata*="all-green-blue"],
+div div.callout[data-callout*="bg-green-blue"],
+div div.callout[data-callout-metadata*="bg-green-blue"] {
   background-color: var(--color-green-blue-mix-bg);
 }
-
-div.callout[data-callout*="all-green-blue"] .callout-title,
-div.callout[data-callout*="all-green-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-green-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-blue"] .callout-title,
-div.callout[data-callout*="title-green-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-green-blue"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-blue-green"] .callout-title,
+div div.callout[data-callout*="all-blue-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-blue-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-blue-green"] .callout-title,
+div div.callout[data-callout*="title-blue-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-green-blue"] .callout-title,
+div div.callout[data-callout*="all-green-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-blue"] .callout-title,
+div div.callout[data-callout*="title-green-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-blue"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-green-blue-mix);
 }
 
-div.callout[data-callout*="all-blue-green"],
-div.callout[data-callout-metadata*="all-blue-green"],
-div.callout[data-callout*="bg-blue-green"],
-div.callout[data-callout-metadata*="bg-blue-green"] {
-  background-color: var(--color-green-blue-mix-bg);
-}
-
-div.callout[data-callout*="all-blue-green"] .callout-title,
-div.callout[data-callout*="all-blue-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-green"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-green"] .callout-title,
-div.callout[data-callout*="title-blue-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-green"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-green"] .callout-icon .svg-icon {
-  color: var(--color-green-blue-mix);
-}
-
-div.callout[data-callout*="all-green-purple"],
-div.callout[data-callout-metadata*="all-green-purple"],
-div.callout[data-callout*="bg-green-purple"],
-div.callout[data-callout-metadata*="bg-green-purple"] {
+div div.callout[data-callout*="all-purple-green"],
+div div.callout[data-callout-metadata*="all-purple-green"],
+div div.callout[data-callout*="bg-purple-green"],
+div div.callout[data-callout-metadata*="bg-purple-green"],
+div div.callout[data-callout*="all-green-purple"],
+div div.callout[data-callout-metadata*="all-green-purple"],
+div div.callout[data-callout*="bg-green-purple"],
+div div.callout[data-callout-metadata*="bg-green-purple"] {
   background-color: var(--color-green-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-green-purple"] .callout-title,
-div.callout[data-callout*="all-green-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-green-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-purple"] .callout-title,
-div.callout[data-callout*="title-green-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-green-purple"]
+div div.callout[data-callout*="all-purple-green"] .callout-title,
+div div.callout[data-callout*="all-purple-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-green"] .callout-title,
+div div.callout[data-callout*="title-purple-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-green-purple"] .callout-title,
+div div.callout[data-callout*="all-green-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-purple"] .callout-title,
+div div.callout[data-callout*="title-green-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-purple"]
   .callout-icon
   .svg-icon {
   color: var(--color-green-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-green"],
-div.callout[data-callout-metadata*="all-purple-green"],
-div.callout[data-callout*="bg-purple-green"],
-div.callout[data-callout-metadata*="bg-purple-green"] {
-  background-color: var(--color-green-purple-mix-bg);
+div div.callout[data-callout*="all-pink-green"],
+div div.callout[data-callout-metadata*="all-pink-green"],
+div div.callout[data-callout*="bg-pink-green"],
+div div.callout[data-callout-metadata*="bg-pink-green"],
+div div.callout[data-callout*="all-green-pink"],
+div div.callout[data-callout-metadata*="all-green-pink"],
+div div.callout[data-callout*="bg-green-pink"],
+div div.callout[data-callout-metadata*="bg-green-pink"] {
+  background-color: var(--color-green-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-purple-green"] .callout-title,
-div.callout[data-callout*="all-purple-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-green"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-green"] .callout-title,
-div.callout[data-callout*="title-purple-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-green"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-green"]
+div div.callout[data-callout*="all-pink-green"] .callout-title,
+div div.callout[data-callout*="all-pink-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-pink-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-pink-green"] .callout-title,
+div div.callout[data-callout*="title-pink-green"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-green"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-green"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-green-pink"] .callout-title,
+div div.callout[data-callout*="all-green-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-green-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-green-pink"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-green-pink"] .callout-title,
+div div.callout[data-callout*="title-green-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-green-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-green-pink"]
   .callout-icon
   .svg-icon {
-  color: var(--color-green-purple-mix);
-}
-
-div.callout[data-callout*="all-green-pink"],
-div.callout[data-callout-metadata*="all-green-pink"],
-div.callout[data-callout*="bg-green-pink"],
-div.callout[data-callout-metadata*="bg-green-pink"] {
-  background-color: var(--color-green-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-green-pink"] .callout-title,
-div.callout[data-callout*="all-green-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-green-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-green-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-green-pink"] .callout-title,
-div.callout[data-callout*="title-green-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-green-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-green-pink"] .callout-icon .svg-icon {
   color: var(--color-green-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-green"],
-div.callout[data-callout-metadata*="all-pink-green"],
-div.callout[data-callout*="bg-pink-green"],
-div.callout[data-callout-metadata*="bg-pink-green"] {
-  background-color: var(--color-green-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-green"] .callout-title,
-div.callout[data-callout*="all-pink-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-green"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-green"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-green"] .callout-title,
-div.callout[data-callout*="title-pink-green"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-green"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-green"] .callout-icon .svg-icon {
-  color: var(--color-green-pink-mix);
-}
-
-div.callout[data-callout*="all-cyan-blue"],
-div.callout[data-callout-metadata*="all-cyan-blue"],
-div.callout[data-callout*="bg-cyan-blue"],
-div.callout[data-callout-metadata*="bg-cyan-blue"] {
+div div.callout[data-callout*="all-blue-cyan"],
+div div.callout[data-callout-metadata*="all-blue-cyan"],
+div div.callout[data-callout*="bg-blue-cyan"],
+div div.callout[data-callout-metadata*="bg-blue-cyan"],
+div div.callout[data-callout*="all-cyan-blue"],
+div div.callout[data-callout-metadata*="all-cyan-blue"],
+div div.callout[data-callout*="bg-cyan-blue"],
+div div.callout[data-callout-metadata*="bg-cyan-blue"] {
   background-color: var(--color-cyan-blue-mix-bg);
 }
-
-div.callout[data-callout*="all-cyan-blue"] .callout-title,
-div.callout[data-callout*="all-cyan-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-blue"] .callout-title,
-div.callout[data-callout*="title-cyan-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-blue"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-blue-cyan"] .callout-title,
+div div.callout[data-callout*="all-blue-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-cyan"] .callout-title,
+div div.callout[data-callout-metadata*="all-blue-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-blue-cyan"] .callout-title,
+div div.callout[data-callout*="title-blue-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-cyan-blue"] .callout-title,
+div div.callout[data-callout*="all-cyan-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-blue"] .callout-title,
+div div.callout[data-callout-metadata*="all-cyan-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-cyan-blue"] .callout-title,
+div div.callout[data-callout*="title-cyan-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-blue"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-cyan-blue-mix);
 }
 
-div.callout[data-callout*="all-blue-cyan"],
-div.callout[data-callout-metadata*="all-blue-cyan"],
-div.callout[data-callout*="bg-blue-cyan"],
-div.callout[data-callout-metadata*="bg-blue-cyan"] {
-  background-color: var(--color-cyan-blue-mix-bg);
-}
-
-div.callout[data-callout*="all-blue-cyan"] .callout-title,
-div.callout[data-callout*="all-blue-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-cyan"] .callout-title,
-div.callout[data-callout*="title-blue-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-cyan"] .callout-icon .svg-icon {
-  color: var(--color-cyan-blue-mix);
-}
-
-div.callout[data-callout*="all-cyan-purple"],
-div.callout[data-callout-metadata*="all-cyan-purple"],
-div.callout[data-callout*="bg-cyan-purple"],
-div.callout[data-callout-metadata*="bg-cyan-purple"] {
+div div.callout[data-callout*="all-purple-cyan"],
+div div.callout[data-callout-metadata*="all-purple-cyan"],
+div div.callout[data-callout*="bg-purple-cyan"],
+div div.callout[data-callout-metadata*="bg-purple-cyan"],
+div div.callout[data-callout*="all-cyan-purple"],
+div div.callout[data-callout-metadata*="all-cyan-purple"],
+div div.callout[data-callout*="bg-cyan-purple"],
+div div.callout[data-callout-metadata*="bg-cyan-purple"] {
   background-color: var(--color-cyan-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-cyan-purple"] .callout-title,
-div.callout[data-callout*="all-cyan-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-purple"] .callout-title,
-div.callout[data-callout*="title-cyan-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-purple"]
+div div.callout[data-callout*="all-purple-cyan"] .callout-title,
+div div.callout[data-callout*="all-purple-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-cyan"] .callout-title,
+div div.callout[data-callout*="title-purple-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-cyan-purple"] .callout-title,
+div div.callout[data-callout*="all-cyan-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-cyan-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-cyan-purple"] .callout-title,
+div div.callout[data-callout*="title-cyan-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-purple"]
   .callout-icon
   .svg-icon {
   color: var(--color-cyan-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-cyan"],
-div.callout[data-callout-metadata*="all-purple-cyan"],
-div.callout[data-callout*="bg-purple-cyan"],
-div.callout[data-callout-metadata*="bg-purple-cyan"] {
-  background-color: var(--color-cyan-purple-mix-bg);
+div div.callout[data-callout*="all-pink-cyan"],
+div div.callout[data-callout-metadata*="all-pink-cyan"],
+div div.callout[data-callout*="bg-pink-cyan"],
+div div.callout[data-callout-metadata*="bg-pink-cyan"],
+div div.callout[data-callout*="all-cyan-pink"],
+div div.callout[data-callout-metadata*="all-cyan-pink"],
+div div.callout[data-callout*="bg-cyan-pink"],
+div div.callout[data-callout-metadata*="bg-cyan-pink"] {
+  background-color: var(--color-cyan-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-purple-cyan"] .callout-title,
-div.callout[data-callout*="all-purple-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-cyan"] .callout-title,
-div.callout[data-callout*="title-purple-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-cyan"]
+div div.callout[data-callout*="all-pink-cyan"] .callout-title,
+div div.callout[data-callout*="all-pink-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-cyan"] .callout-title,
+div div.callout[data-callout-metadata*="all-pink-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-pink-cyan"] .callout-title,
+div div.callout[data-callout*="title-pink-cyan"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-cyan"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-cyan"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-cyan-pink"] .callout-title,
+div div.callout[data-callout*="all-cyan-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-cyan-pink"] .callout-title,
+div div.callout[data-callout-metadata*="all-cyan-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-cyan-pink"] .callout-title,
+div div.callout[data-callout*="title-cyan-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-cyan-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-cyan-pink"]
   .callout-icon
   .svg-icon {
-  color: var(--color-cyan-purple-mix);
-}
-
-div.callout[data-callout*="all-cyan-pink"],
-div.callout[data-callout-metadata*="all-cyan-pink"],
-div.callout[data-callout*="bg-cyan-pink"],
-div.callout[data-callout-metadata*="bg-cyan-pink"] {
-  background-color: var(--color-cyan-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-cyan-pink"] .callout-title,
-div.callout[data-callout*="all-cyan-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-cyan-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-cyan-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-cyan-pink"] .callout-title,
-div.callout[data-callout*="title-cyan-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-cyan-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-cyan-pink"] .callout-icon .svg-icon {
   color: var(--color-cyan-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-cyan"],
-div.callout[data-callout-metadata*="all-pink-cyan"],
-div.callout[data-callout*="bg-pink-cyan"],
-div.callout[data-callout-metadata*="bg-pink-cyan"] {
-  background-color: var(--color-cyan-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-cyan"] .callout-title,
-div.callout[data-callout*="all-pink-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-cyan"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-cyan"] .callout-title,
-div.callout[data-callout*="title-pink-cyan"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-cyan"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-cyan"] .callout-icon .svg-icon {
-  color: var(--color-cyan-pink-mix);
-}
-
-div.callout[data-callout*="all-blue-purple"],
-div.callout[data-callout-metadata*="all-blue-purple"],
-div.callout[data-callout*="bg-blue-purple"],
-div.callout[data-callout-metadata*="bg-blue-purple"] {
+div div.callout[data-callout*="all-purple-blue"],
+div div.callout[data-callout-metadata*="all-purple-blue"],
+div div.callout[data-callout*="bg-purple-blue"],
+div div.callout[data-callout-metadata*="bg-purple-blue"],
+div div.callout[data-callout*="all-blue-purple"],
+div div.callout[data-callout-metadata*="all-blue-purple"],
+div div.callout[data-callout*="bg-blue-purple"],
+div div.callout[data-callout-metadata*="bg-blue-purple"] {
   background-color: var(--color-blue-purple-mix-bg);
 }
-
-div.callout[data-callout*="all-blue-purple"] .callout-title,
-div.callout[data-callout*="all-blue-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-purple"] .callout-title,
-div.callout[data-callout*="title-blue-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-purple"]
+div div.callout[data-callout*="all-purple-blue"] .callout-title,
+div div.callout[data-callout*="all-purple-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-blue"] .callout-title,
+div div.callout[data-callout*="title-purple-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-blue-purple"] .callout-title,
+div div.callout[data-callout*="all-blue-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-blue-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-blue-purple"] .callout-title,
+div div.callout[data-callout*="title-blue-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-purple"]
   .callout-icon
   .svg-icon {
   color: var(--color-blue-purple-mix);
 }
 
-div.callout[data-callout*="all-purple-blue"],
-div.callout[data-callout-metadata*="all-purple-blue"],
-div.callout[data-callout*="bg-purple-blue"],
-div.callout[data-callout-metadata*="bg-purple-blue"] {
-  background-color: var(--color-blue-purple-mix-bg);
-}
-
-div.callout[data-callout*="all-purple-blue"] .callout-title,
-div.callout[data-callout*="all-purple-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-blue"] .callout-title,
-div.callout[data-callout*="title-purple-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-blue"]
-  .callout-icon
-  .svg-icon {
-  color: var(--color-blue-purple-mix);
-}
-
-div.callout[data-callout*="all-blue-pink"],
-div.callout[data-callout-metadata*="all-blue-pink"],
-div.callout[data-callout*="bg-blue-pink"],
-div.callout[data-callout-metadata*="bg-blue-pink"] {
+div div.callout[data-callout*="all-pink-blue"],
+div div.callout[data-callout-metadata*="all-pink-blue"],
+div div.callout[data-callout*="bg-pink-blue"],
+div div.callout[data-callout-metadata*="bg-pink-blue"],
+div div.callout[data-callout*="all-blue-pink"],
+div div.callout[data-callout-metadata*="all-blue-pink"],
+div div.callout[data-callout*="bg-blue-pink"],
+div div.callout[data-callout-metadata*="bg-blue-pink"] {
   background-color: var(--color-blue-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-blue-pink"] .callout-title,
-div.callout[data-callout*="all-blue-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-blue-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-blue-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-blue-pink"] .callout-title,
-div.callout[data-callout*="title-blue-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-blue-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-blue-pink"] .callout-icon .svg-icon {
+div div.callout[data-callout*="all-pink-blue"] .callout-title,
+div div.callout[data-callout*="all-pink-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-blue"] .callout-title,
+div div.callout[data-callout-metadata*="all-pink-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-pink-blue"] .callout-title,
+div div.callout[data-callout*="title-pink-blue"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-blue"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-blue"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-blue-pink"] .callout-title,
+div div.callout[data-callout*="all-blue-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-blue-pink"] .callout-title,
+div div.callout[data-callout-metadata*="all-blue-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout*="title-blue-pink"] .callout-title,
+div div.callout[data-callout*="title-blue-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-blue-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-blue-pink"]
+  .callout-icon
+  .svg-icon {
   color: var(--color-blue-pink-mix);
 }
 
-div.callout[data-callout*="all-pink-blue"],
-div.callout[data-callout-metadata*="all-pink-blue"],
-div.callout[data-callout*="bg-pink-blue"],
-div.callout[data-callout-metadata*="bg-pink-blue"] {
-  background-color: var(--color-blue-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-blue"] .callout-title,
-div.callout[data-callout*="all-pink-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-blue"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-blue"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-blue"] .callout-title,
-div.callout[data-callout*="title-pink-blue"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-blue"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-blue"] .callout-icon .svg-icon {
-  color: var(--color-blue-pink-mix);
-}
-
-div.callout[data-callout*="all-purple-pink"],
-div.callout[data-callout-metadata*="all-purple-pink"],
-div.callout[data-callout*="bg-purple-pink"],
-div.callout[data-callout-metadata*="bg-purple-pink"] {
+div div.callout[data-callout*="all-pink-purple"],
+div div.callout[data-callout-metadata*="all-pink-purple"],
+div div.callout[data-callout*="bg-pink-purple"],
+div div.callout[data-callout-metadata*="bg-pink-purple"],
+div div.callout[data-callout*="all-purple-pink"],
+div div.callout[data-callout-metadata*="all-purple-pink"],
+div div.callout[data-callout*="bg-purple-pink"],
+div div.callout[data-callout-metadata*="bg-purple-pink"] {
   background-color: var(--color-purple-pink-mix-bg);
 }
-
-div.callout[data-callout*="all-purple-pink"] .callout-title,
-div.callout[data-callout*="all-purple-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-purple-pink"] .callout-title,
-div.callout[data-callout-metadata*="all-purple-pink"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-purple-pink"] .callout-title,
-div.callout[data-callout*="title-purple-pink"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-purple-pink"] .callout-title,
-div.callout[data-callout-metadata*="title-purple-pink"]
+div div.callout[data-callout*="all-pink-purple"] .callout-title,
+div div.callout[data-callout*="all-pink-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-pink-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-pink-purple"]
   .callout-icon
-  .svg-icon {
-  color: var(--color-purple-pink-mix);
-}
-
-div.callout[data-callout*="all-pink-purple"],
-div.callout[data-callout-metadata*="all-pink-purple"],
-div.callout[data-callout*="bg-pink-purple"],
-div.callout[data-callout-metadata*="bg-pink-purple"] {
-  background-color: var(--color-purple-pink-mix-bg);
-}
-
-div.callout[data-callout*="all-pink-purple"] .callout-title,
-div.callout[data-callout*="all-pink-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="all-pink-purple"] .callout-title,
-div.callout[data-callout-metadata*="all-pink-purple"] .callout-icon .svg-icon,
-div.callout[data-callout*="title-pink-purple"] .callout-title,
-div.callout[data-callout*="title-pink-purple"] .callout-icon .svg-icon,
-div.callout[data-callout-metadata*="title-pink-purple"] .callout-title,
-div.callout[data-callout-metadata*="title-pink-purple"]
+  .svg-icon,
+div div.callout[data-callout*="title-pink-purple"] .callout-title,
+div div.callout[data-callout*="title-pink-purple"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-pink-purple"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-pink-purple"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="all-purple-pink"] .callout-title,
+div div.callout[data-callout*="all-purple-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="all-purple-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="all-purple-pink"]
+  .callout-icon
+  .svg-icon,
+div div.callout[data-callout*="title-purple-pink"] .callout-title,
+div div.callout[data-callout*="title-purple-pink"] .callout-icon .svg-icon,
+div div.callout[data-callout-metadata*="title-purple-pink"] .callout-title,
+div
+  div.callout[data-callout-metadata*="title-purple-pink"]
   .callout-icon
   .svg-icon {
   color: var(--color-purple-pink-mix);
@@ -11622,8 +11946,12 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 }
 
 /* Modifications for tab containers */
+body {
+  --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
+}
+
 body:not(.show-ribbon) .sidebar-toggle-button {
-  padding: 11px 16px 7px 0px;
+  padding: var(--flexcyon-side-toggle-button-no-ribbon);
 }
 body:not(.show-ribbon) .sidebar-toggle-button.mod-left {
   padding-top: 16px;
@@ -13583,15 +13911,24 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   color: var(--text-muted);
 }
 
-body.flexcyon-display-screen-dimens
-  :not(.mod-stacked)
-  .view-header-left::after {
+body.flexcyon-display-screen-dimens:not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active::before,
+body.flexcyon-display-screen-dimens:not(.mod-stacked) .view-header-left::after {
   padding-top: -0.5vh;
   padding-left: var(--flexcyon-screen-dimens-padding-l);
   font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
+}
+
+body.flexcyon-display-screen-dimens:not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active::before {
+  padding-top: 4px;
 }
 
 body .view-actions {
@@ -13618,11 +13955,6 @@ body.flexcyon-display-os .view-actions::before {
   color: var(--text-muted);
 }
 
-body.flexcyon-display-os.is-mobile .titlebar::before,
-body.flexcyon-display-os.is-mobile .view-actions::before {
-  content: "Unknown Device";
-}
-
 body.flexcyon-display-os .titlebar::before {
   padding-top: 11.5px;
   padding-left: calc(5 * var(--flexcyon-os-detail-padding-r));
@@ -13636,53 +13968,125 @@ body.flexcyon-display-os .titlebar::before {
   right: 0;
   left: 0px;
   font-size: var(--file-header-font-size);
-  content: "Unknown Desktop";
   color: var(--text-muted);
 }
 
+body.flexcyon-display-os .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
   content: "Unknown Desktop";
 }
 
+body.flexcyon-display-os.is-mobile .view-actions::before,
+body.flexcyon-display-os.is-mobile .titlebar::before {
+  content: "Unknown Device";
+}
+
+body.flexcyon-display-os
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
+  position: fixed;
+  right: 16px;
+  top: 2px;
+}
+
+body.flexcyon-display-os:not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content {
+  padding-top: 6px;
+}
+
+body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before,
 body.flexcyon-display-os.is-mobile.emulate-mobile .titlebar::before,
-body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
+body.flexcyon-display-os.is-mobile.emulate-mobile
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "Mobile Emulation";
 }
 
+body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before,
 body.flexcyon-display-os.is-ios:not(.is-tablet) .titlebar::before,
-body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
-  content: "iOS Device";
+body.flexcyon-display-os.is-ios:not(.is-tablet)
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
+  content: "ios Device";
 }
 
+body.flexcyon-display-os.is-ios.is-tablet .view-actions::before,
 body.flexcyon-display-os.is-ios.is-tablet .titlebar::before,
-body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
-  content: "iOS Tablet";
+body.flexcyon-display-os.is-ios.is-tablet
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
+  content: "ios Tablet";
 }
 
+body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before,
 body.flexcyon-display-os.is-android:not(.is-tablet) .titlebar::before,
-body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
+body.flexcyon-display-os.is-android:not(.is-tablet)
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "Android Device";
 }
 
+body.flexcyon-display-os.is-android.is-tablet .view-actions::before,
 body.flexcyon-display-os.is-android.is-tablet .titlebar::before,
-body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
+body.flexcyon-display-os.is-android.is-tablet
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "Android Tablet";
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before,
 body.flexcyon-display-os:not(.is-mobile).mod-linux .titlebar::before,
-body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
+body.flexcyon-display-os:not(.is-mobile).mod-linux
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "Linux Desktop";
 }
 
+body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before,
 body.flexcyon-display-os:not(.is-mobile).mod-windows .titlebar::before,
-body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
+body.flexcyon-display-os:not(.is-mobile).mod-windows
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "Windows Desktop";
 }
 
 body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
+  .view-actions::before,
+body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
   .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
-  .view-actions::before {
+  :not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content::after {
   content: "MacOS Desktop";
 }
 
@@ -16246,18 +16650,13 @@ settings:
     type: variable-number
     default: 12.5
     format: vw
-  - title: Display device operating system details in view header
+
+  - title: Debug
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Display device operating system details
     id: flexcyon-display-os
-    type: class-toggle
-    default: false
-  - title: Number tabs
-    id: flexcyon-number-tabs
-    description: Numbers your tabs in sequential order. Each tab group has its own counter. Meant for RTZ mode, but can be enabled separately.
-    type: class-toggle
-    default: false
-  - title: Remove Tab Headers
-    id: flexcyon-remove-tab-headers
-    description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
     type: class-toggle
     default: false
   - title: Device operating system details right padding
@@ -16275,6 +16674,21 @@ settings:
     id: flexcyon-screen-dimens-padding-l
     default: 16
     format: px
+
+  - title: Tabs
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Number tabs
+    id: flexcyon-number-tabs
+    description: Numbers your tabs in sequential order. Each tab group has its own counter. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
+  - title: Remove Tab Headers
+    id: flexcyon-remove-tab-headers
+    description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
 
   - title: Icons
     description: For icon related styling
@@ -18165,8 +18579,14 @@ div.bases-cards-cover:not([style*="background-image"]) * {
   --input-placeholder-color: var(--color-red);
 }
 
+body {
+  --flexcyon-search-container-verti-padding: 8px;
+  --flexcyon-search-container-horiz-padding: 16px;
+}
+
 .workspace-leaf-content[data-type="search"] {
-  padding: 8px 16px;
+  padding: var(--flexcyon-search-container-verti-padding)
+    var(--flexcyon-search-container-horiz-padding);
 }
 .workspace-leaf-content[data-type="search"]
   .search-row

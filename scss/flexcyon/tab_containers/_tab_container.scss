@@ -2,9 +2,13 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
+body {
+  --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
+}
+
 body:not(.show-ribbon) {
   .sidebar-toggle-button {
-    padding: 11px 16px 7px 0px;
+    padding: var(--flexcyon-side-toggle-button-no-ribbon);
   }
 
   .sidebar-toggle-button.mod-left {

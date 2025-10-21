@@ -1,5 +1,11 @@
+body {
+  --flexcyon-search-container-verti-padding: 8px;
+  --flexcyon-search-container-horiz-padding: 16px;
+}
+
 .workspace-leaf-content[data-type="search"] {
-  padding: 8px 16px;
+  padding: var(--flexcyon-search-container-verti-padding)
+    var(--flexcyon-search-container-horiz-padding);
 
   .search-row {
     .search-input-container {

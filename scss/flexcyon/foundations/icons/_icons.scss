@@ -10,6 +10,8 @@ body {
   --flexcyon-tree-item-horiz-padding: 10px;
   --flexcyon-tree-item-verti-padding: 2px;
 
+  --flexcyon-comm-text-padding: 3px 16px;
+
   .clickable-icon {
     opacity: var(--dimmed);
     padding: 4px 8px;
@@ -36,15 +38,8 @@ body {
     .setting-item.mod-toggle {
     margin-top: -8px;
   }
-  .modal-sidebar:not(:has(+ .community-modal-details))
-    .community-modal-controls {
-    display: flex;
-    .community-modal-search-summary {
-      margin-top: 3px;
-    }
-  }
   .modal-sidebar {
-    padding: 12px;
+    padding: 16px 8px;
   }
   .community-modal-search-summary {
     padding: 6px 16px;
@@ -94,7 +89,7 @@ body.flexcyon-workspace-card-layout {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     border-bottom: 0px;
-    padding: 3px 16px;
+    padding: var(--flexcyon-comm-text-padding);
     padding-top: 16px;
     margin-bottom: 0px;
     margin-top: 8px;
@@ -107,7 +102,7 @@ body.flexcyon-workspace-card-layout {
     border: 2px solid var(--text-faint);
     border-top: 0px;
     border-bottom: 0px;
-    padding: 3px 16px;
+    padding: var(--flexcyon-comm-text-padding);
     overflow-wrap: break-word;
   }
   .community-modal-info-desc {

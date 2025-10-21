@@ -77,15 +77,20 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   color: var(--text-muted);
 }
 
-body.flexcyon-display-screen-dimens
-  :not(.mod-stacked)
-  .view-header-left::after {
+$screen-dim-no-vh-sel: ":not(.show-view-header) .mod-root .workspace-tab-container .mod-active::before";
+$screen-dim-sel: ":not(.mod-stacked) .view-header-left::after";
+
+body.flexcyon-display-screen-dimens#{$screen-dim-no-vh-sel},
+body.flexcyon-display-screen-dimens#{$screen-dim-sel} {
   padding-top: -0.5vh;
   padding-left: var(--flexcyon-screen-dimens-padding-l);
   font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
+}
+body.flexcyon-display-screen-dimens#{$screen-dim-no-vh-sel} {
+  padding-top: 4px;
 }
 
 body .view-actions {
@@ -112,11 +117,6 @@ body.flexcyon-display-os .view-actions::before {
   color: var(--text-muted);
 }
 
-body.flexcyon-display-os.is-mobile .titlebar::before,
-body.flexcyon-display-os.is-mobile .view-actions::before {
-  content: "Unknown Device";
-}
-
 body.flexcyon-display-os .titlebar::before {
   padding-top: 11.5px;
   padding-left: calc(5 * var(--flexcyon-os-detail-padding-r));
@@ -129,57 +129,58 @@ body.flexcyon-display-os .titlebar::before {
   max-width: 85%;
   right: 0;
   left: calc(0px * 2);
-
   font-size: var(--file-header-font-size);
-  content: "Unknown Desktop";
   color: var(--text-muted);
 }
 
+body.flexcyon-display-os .titlebar::before,
 body.flexcyon-display-os:not(.is-mobile) .view-actions::before {
   content: "Unknown Desktop";
 }
 
-body.flexcyon-display-os.is-mobile.emulate-mobile .titlebar::before,
-body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before {
-  content: "Mobile Emulation";
+$disp-os-sel: ".view-actions::before, .titlebar::before";
+$disp-os-no-vh-sel: ":not(.show-view-header) .mod-root .workspace-tab-container .mod-active .workspace-leaf-content::after";
+
+body.flexcyon-display-os.is-mobile {
+  #{$disp-os-sel} {
+    content: "Unknown Device";
+  }
+}
+body.flexcyon-display-os {
+  #{$disp-os-no-vh-sel} {
+    position: fixed;
+    right: 16px;
+    top: 2px;
+  }
+}
+body.flexcyon-display-os:not(.show-view-header)
+  .mod-root
+  .workspace-tab-container
+  .mod-active
+  .workspace-leaf-content {
+  padding-top: 6px;
 }
 
-body.flexcyon-display-os.is-ios:not(.is-tablet) .titlebar::before,
-body.flexcyon-display-os.is-ios:not(.is-tablet) .view-actions::before {
-  content: "iOS Device";
+@mixin os-wrapper($device-selector, $desc) {
+  body.flexcyon-display-os#{$device-selector} {
+    #{$disp-os-sel},
+    #{$disp-os-no-vh-sel} {
+      content: $desc;
+    }
+  }
 }
 
-body.flexcyon-display-os.is-ios.is-tablet .titlebar::before,
-body.flexcyon-display-os.is-ios.is-tablet .view-actions::before {
-  content: "iOS Tablet";
-}
-
-body.flexcyon-display-os.is-android:not(.is-tablet) .titlebar::before,
-body.flexcyon-display-os.is-android:not(.is-tablet) .view-actions::before {
-  content: "Android Device";
-}
-
-body.flexcyon-display-os.is-android.is-tablet .titlebar::before,
-body.flexcyon-display-os.is-android.is-tablet .view-actions::before {
-  content: "Android Tablet";
-}
-
-body.flexcyon-display-os:not(.is-mobile).mod-linux .titlebar::before,
-body.flexcyon-display-os:not(.is-mobile).mod-linux .view-actions::before {
-  content: "Linux Desktop";
-}
-
-body.flexcyon-display-os:not(.is-mobile).mod-windows .titlebar::before,
-body.flexcyon-display-os:not(.is-mobile).mod-windows .view-actions::before {
-  content: "Windows Desktop";
-}
-
-body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
-  .titlebar::before,
-body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux)
-  .view-actions::before {
-  content: "MacOS Desktop";
-}
+@include os-wrapper(".is-mobile.emulate-mobile", "Mobile Emulation");
+@include os-wrapper(".is-ios:not(.is-tablet)", "ios Device");
+@include os-wrapper(".is-ios.is-tablet", "ios Tablet");
+@include os-wrapper(".is-android:not(.is-tablet)", "Android Device");
+@include os-wrapper(".is-android.is-tablet", "Android Tablet");
+@include os-wrapper(":not(.is-mobile).mod-linux", "Linux Desktop");
+@include os-wrapper(":not(.is-mobile).mod-windows", "Windows Desktop");
+@include os-wrapper(
+  ":not(.is-mobile, .mod-windows, .mod-linux)",
+  "MacOS Desktop"
+);
 
 .markdown-source-view.mod-cm6 .cm-sizer {
   margin-top: var(--flexcyon-editor-margin-top);
