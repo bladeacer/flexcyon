@@ -315,28 +315,30 @@ div.callout[data-callout-metadata*="center-content"] {
 
 /* obsi-snip-coll start: extended-color-palette */
 @mixin callout-ext-color($color-1, $color-2) {
-  $color-var: "--color-#{$color-1}-#{$color-2}-mix";
+  $color-1-wrapper: "#{$color-1}-#{$color-2}";
+  $color-2-wrapper: "#{$color-2}-#{$color-1}";
+  $color-var: "--color-#{$color-1-wrapper}-mix";
 
   div {
-    div.callout[data-callout*="all-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout-metadata*="all-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout*="bg-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout-metadata*="bg-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout*="all-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout-metadata*="all-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout*="bg-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout-metadata*="bg-#{$color-1}-#{$color-2}"] {
+    div.callout[data-callout*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout*="bg-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="bg-#{$color-2-wrapper}"],
+    div.callout[data-callout*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout*="bg-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="bg-#{$color-1-wrapper}"] {
       background-color: var(#{$color-var}-bg);
     }
 
-    div.callout[data-callout*="all-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout-metadata*="all-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout*="title-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout-metadata*="title-#{$color-2}-#{$color-1}"],
-    div.callout[data-callout*="all-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout-metadata*="all-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout*="title-#{$color-1}-#{$color-2}"],
-    div.callout[data-callout-metadata*="title-#{$color-1}-#{$color-2}"] {
+    div.callout[data-callout*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout*="title-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="title-#{$color-2-wrapper}"],
+    div.callout[data-callout*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout*="title-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="title-#{$color-1-wrapper}"] {
       .callout-title,
       .callout-icon .svg-icon {
         color: var(#{$color-var});
@@ -752,6 +754,7 @@ div.callout[data-callout-metadata*="center-img"] {
 }
 /* obsi-snip-coll end */
 
+/* obsi-snip-coll start: tui-callout */
 $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], [data-callout-metadata*='vertical'], [data-callout-metadata*='plain']";
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
 $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
@@ -761,8 +764,7 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
         :is(#{$flexcyon-tui-exclusions})
       )
   ) {
-  margin-top: -28px;
-  margin-bottom: -4px;
+  margin-top: -30px;
 }
 
 body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
@@ -771,9 +773,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   background-color: var(--background-primary);
   padding: 0px;
   margin: 0px;
-  &.is-collapsed .callout-title {
-    min-height: 50px;
-  }
+
   .callout-icon {
     display: none;
   }
@@ -789,12 +789,11 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
       color: unset;
       font-size: inherit;
     }
-  }
-  .callout-title:has(~ .callout-content) {
     transform: translate(24px, 50%);
-    background-color: var(--background-primary);
+    min-height: 50px;
     padding: 2px 8px;
     width: max-content;
+    background-color: var(--background-primary);
   }
   .callout-content {
     border-radius: var(--flexcyon-callout-radix);
@@ -803,6 +802,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
     z-index: 1;
   }
 }
+/* obsi-snip-coll end */
 
 @mixin border-wrapper($color) {
   div.callout[data-callout*="border-#{$color}"]:is(
@@ -847,6 +847,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
 @include border-wrapper("green");
 @include border-wrapper("orange");
 
+/* obsi-snip-coll start: plain-callout */
 body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout*="pln"]:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout-metadata*="pln"]:not(:is(#{$flexcyon-plain-exclusions})) {
@@ -902,7 +903,9 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 @include plain-wrapper("pink");
 @include plain-wrapper("green");
 @include plain-wrapper("orange");
+/* obsi-snip-coll end */
 
+/* obsi-snip-coll start: vertical-callout */
 body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
 .callout[data-callout*="vertical"]:not(:is(#{$flexcyon-vert-exclusions})),
 .callout[data-callout-metadata*="vertical"]:not(
@@ -974,3 +977,4 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
 @include vert-wrapper("pink");
 @include vert-wrapper("green");
 @include vert-wrapper("orange");
+/* obsi-snip-coll end */

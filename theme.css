@@ -61,6 +61,7 @@ body.theme-dark {
   --color-pink: var(--flexcyon-pink);
 }
 
+/* obsi-snip-coll start: extended-color*/
 body.flexcyon-flex-max-mode,
 body.flexcyon-ext-colors-enabled {
   --color-red-blue-mix: color-mix(in hsl, var(--color-red), var(--color-blue));
@@ -657,6 +658,7 @@ body.flexcyon-ext-colors-enabled {
   );
 }
 
+/* obsi-snip-coll end */
 body.theme-dark {
   --flexcyon-base-01: #14161c;
   --flexcyon-base-02: #191d28;
@@ -9501,6 +9503,7 @@ div.callout[data-callout-metadata*="center-img"] img {
 }
 
 /* obsi-snip-coll end */
+/* obsi-snip-coll start: tui-callout */
 .markdown-rendered:has(
     :is([data-callout*="tui"], [data-callout-metadata*="tui"]):not(
         :is(
@@ -9511,8 +9514,7 @@ div.callout[data-callout-metadata*="center-img"] img {
         )
       )
   ) {
-  margin-top: -28px;
-  margin-bottom: -4px;
+  margin-top: -30px;
 }
 
 body.flexcyon-tui-callouts
@@ -9543,36 +9545,6 @@ body.flexcyon-tui-callouts
   background-color: var(--background-primary);
   padding: 0px;
   margin: 0px;
-}
-body.flexcyon-tui-callouts
-  .callout:not(
-    :is(
-      [data-callout*="vertical"],
-      [data-callout*="plain"],
-      [data-callout-metadata*="vertical"],
-      [data-callout-metadata*="plain"]
-    )
-  ).is-collapsed
-  .callout-title,
-.callout[data-callout*="tui"]:not(
-    :is(
-      [data-callout*="vertical"],
-      [data-callout*="plain"],
-      [data-callout-metadata*="vertical"],
-      [data-callout-metadata*="plain"]
-    )
-  ).is-collapsed
-  .callout-title,
-.callout[data-callout-metadata*="tui"]:not(
-    :is(
-      [data-callout*="vertical"],
-      [data-callout*="plain"],
-      [data-callout-metadata*="vertical"],
-      [data-callout-metadata*="plain"]
-    )
-  ).is-collapsed
-  .callout-title {
-  min-height: 50px;
 }
 body.flexcyon-tui-callouts
   .callout:not(
@@ -9833,7 +9805,7 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-title:has(~ .callout-content),
+  .callout-title,
 .callout[data-callout*="tui"]:not(
     :is(
       [data-callout*="vertical"],
@@ -9842,7 +9814,7 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-title:has(~ .callout-content),
+  .callout-title,
 .callout[data-callout-metadata*="tui"]:not(
     :is(
       [data-callout*="vertical"],
@@ -9851,11 +9823,12 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-title:has(~ .callout-content) {
+  .callout-title {
   transform: translate(24px, 50%);
-  background-color: var(--background-primary);
+  min-height: 50px;
   padding: 2px 8px;
   width: max-content;
+  background-color: var(--background-primary);
 }
 body.flexcyon-tui-callouts
   .callout:not(
@@ -9891,6 +9864,7 @@ body.flexcyon-tui-callouts
   z-index: 1;
 }
 
+/* obsi-snip-coll end */
 div.callout[data-callout*="border-yellow"]:is(
     [data-callout*="tui"],
     [data-callout-metadata*="tui"]
@@ -10227,6 +10201,7 @@ div.callout[data-callout-metadata*="border-orange"]:not(
   z-index: 1;
 }
 
+/* obsi-snip-coll start: plain-callout */
 body.flexcyon-plain-callouts
   .callout:not(
     :is(
@@ -11032,6 +11007,8 @@ body.flexcyon-plain-callouts
   padding: 4px 12px;
 }
 
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: vertical-callout */
 body.flexcyon-vert-callouts
   .callout:not(
     :is(
@@ -11919,6 +11896,7 @@ body.flexcyon-vert-callouts
   padding: 4px 12px;
 }
 
+/* obsi-snip-coll end */
 body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;

@@ -60,25 +60,28 @@ body.theme-dark {
   --color-pink: var(--flexcyon-pink);
 }
 
+/* obsi-snip-coll start: extended-color*/
 @mixin ext-col-wrapper($color-1, $color-2) {
-  --color-#{$color-1}-#{$color-2}-mix: color-mix(
+  $color-1-wrapper: "#{$color-1}-#{$color-2}";
+  $color-2-wrapper: "#{$color-2}-#{$color-1}";
+
+  --color-#{$color-1-wrapper}-mix: color-mix(
     in hsl,
     var(--color-#{$color-1}),
     var(--color-#{$color-2})
   );
-  --color-#{$color-1}-#{$color-2}-mix-bg: color-mix(
+  --color-#{$color-1-wrapper}-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-#{$color-1}), var(--color-#{$color-2}))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
-
-  --color-#{$color-2}-#{$color-1}-mix: color-mix(
+  --color-#{$color-2-wrapper}-mix: color-mix(
     in hsl,
     var(--color-#{$color-2}),
     var(--color-#{$color-1})
   );
-  --color-#{$color-2}-#{$color-1}-mix-bg: color-mix(
+  --color-#{$color-2-wrapper}-mix-bg: color-mix(
     in hsl,
     color-mix(in hsl, var(--color-#{$color-2}), var(--color-#{$color-1}))
       var(--flexcyon-callout-bg-opacity),
@@ -117,3 +120,4 @@ body.flexcyon-ext-colors-enabled {
   @include ext-col-wrapper(blue, pink);
   @include ext-col-wrapper(purple, pink);
 }
+/* obsi-snip-coll end */
