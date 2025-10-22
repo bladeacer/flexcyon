@@ -764,7 +764,7 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
         :is(#{$flexcyon-tui-exclusions})
       )
   ) {
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
 body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
@@ -774,7 +774,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   padding: 0px;
   margin: 0px;
 
-  .callout-icon {
+  .callout-fold {
     display: none;
   }
   .callout-title {
@@ -790,10 +790,18 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
       font-size: inherit;
     }
     transform: translate(24px, 50%);
-    min-height: 50px;
-    padding: 2px 8px;
+    padding: 0px 8px;
     width: max-content;
     background-color: var(--background-primary);
+    div {
+      transform: translateY(-2px);
+    }
+  }
+  &.is-collapsed .callout-title {
+    min-height: 40px;
+  }
+  .callout-title:not(:has(~ .callout-content)) {
+    height: 40px;
   }
   .callout-content {
     border-radius: var(--flexcyon-callout-radix);

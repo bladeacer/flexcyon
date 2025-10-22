@@ -9514,7 +9514,7 @@ div.callout[data-callout-metadata*="center-img"] img {
         )
       )
   ) {
-  margin-top: -30px;
+  margin-top: -25px;
 }
 
 body.flexcyon-tui-callouts
@@ -9555,7 +9555,7 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-icon,
+  .callout-fold,
 .callout[data-callout*="tui"]:not(
     :is(
       [data-callout*="vertical"],
@@ -9564,7 +9564,7 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-icon,
+  .callout-fold,
 .callout[data-callout-metadata*="tui"]:not(
     :is(
       [data-callout*="vertical"],
@@ -9573,7 +9573,7 @@ body.flexcyon-tui-callouts
       [data-callout-metadata*="plain"]
     )
   )
-  .callout-icon {
+  .callout-fold {
   display: none;
 }
 body.flexcyon-tui-callouts
@@ -9825,10 +9825,102 @@ body.flexcyon-tui-callouts
   )
   .callout-title {
   transform: translate(24px, 50%);
-  min-height: 50px;
-  padding: 2px 8px;
+  padding: 0px 8px;
   width: max-content;
   background-color: var(--background-primary);
+}
+body.flexcyon-tui-callouts
+  .callout:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title
+  div,
+.callout[data-callout*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title
+  div,
+.callout[data-callout-metadata*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title
+  div {
+  transform: translateY(-2px);
+}
+body.flexcyon-tui-callouts
+  .callout:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  ).is-collapsed
+  .callout-title,
+.callout[data-callout*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  ).is-collapsed
+  .callout-title,
+.callout[data-callout-metadata*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  ).is-collapsed
+  .callout-title {
+  min-height: 40px;
+}
+body.flexcyon-tui-callouts
+  .callout:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title:not(:has(~ .callout-content)),
+.callout[data-callout*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title:not(:has(~ .callout-content)),
+.callout[data-callout-metadata*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-title:not(:has(~ .callout-content)) {
+  height: 40px;
 }
 body.flexcyon-tui-callouts
   .callout:not(
