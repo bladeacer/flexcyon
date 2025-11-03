@@ -21,6 +21,7 @@ body {
   --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-quote-font-size: 24px;
   --flexcyon-ascii-line-height: 1.5;
+  --flexcyon-ascii-scaling-factor: 1;
   --flexcyon-quote-val: "This is a placeholder quote\ain the Flexcyon Theme.";
   --flexcyon-quote-credit-prefix: "-";
   --flexcyon-quote-credit: "bladeacer";
@@ -57,14 +58,16 @@ body.flexcyon-ascii-enable {
     -webkit-text-fill-color: transparent;
     line-height: var(--flexcyon-ascii-line-height);
     white-space: pre;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     text-align: center;
     display: inline;
     font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
   }
 
   div.empty-state-container {
-    transform: translateY(-115px);
+    max-height: unset;
+    max-width: unset;
+    scale: var(--flexcyon-ascii-scaling-factor);
   }
 }
 

@@ -1273,6 +1273,10 @@ settings:
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
+  - title: Enable alternate link styling
+    id: flexcyon-alt-link-style
+    type: class-toggle
+    default: false
 
   - title: Properties
     type: heading
@@ -1462,6 +1466,11 @@ settings:
     type: variable-text
     default: "->"
     quotes: true
+  - title: Replaced active line number string letter spacing
+    id: flexcyon-repl-active-str-space
+    type: variable-number
+    default: 0
+    format: px
 
   - title: Cursor
     type: heading
@@ -1993,6 +2002,11 @@ settings:
     id: flexcyon-ascii-line-height
     type: variable-number
     default: 1.5
+  - title: ASCII art scaling factor
+    description: The scale of the ASCII art
+    id: flexcyon-ascii-scaling-factor
+    type: variable-number
+    default: 1
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title

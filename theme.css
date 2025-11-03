@@ -3309,6 +3309,10 @@ body .view-header-nav-buttons .clickable-icon,
 body .view-actions .clickable-icon {
   padding: 5px 10px;
 }
+body .modal-title {
+  padding-top: 10px;
+  padding-bottom: 16px;
+}
 body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
@@ -3366,6 +3370,32 @@ body .tree-item:not(.graph-control-section) {
     var(--flexcyon-tree-item-horiz-padding);
 }
 
+body .text-snippets-class > * {
+  width: min(50em, 50vw);
+}
+body .text-snippets-class > * > textarea {
+  width: min(30em, 35vw);
+  margin-block: 16px;
+}
+
+@media screen and (width < 900px) {
+  div.setting-item {
+    flex-direction: column;
+    align-items: unset;
+  }
+  div.setting-item .setting-item-control {
+    align-items: unset;
+    justify-content: unset;
+  }
+  .text-snippets-class > * {
+    width: 50%;
+    height: max-content;
+  }
+  .text-snippets-class > * > textarea {
+    width: 50%;
+    height: 100px;
+  }
+}
 body.flexcyon-workspace-card-layout .community-modal-info-name {
   border: 2px solid var(--text-faint);
   border-top-left-radius: 16px;
@@ -4590,6 +4620,51 @@ body .outgoing-link-pane .search-result-file-title {
   margin-left: 2px;
 }
 
+body.flexcyon-alt-link-style {
+  --link-decoration: none;
+  --link-color-hover: var(--color-base-05);
+  --link-color: var(--color-base-05);
+  --link-external-decoration: none;
+  --link-external-color: var(--color-base-05);
+  --link-external-color-hover: var(--color-base-05);
+  --link-unresolved-color: var(--color-base-05);
+  --link-unresolved-decoration-color: var(--color-base-05);
+  --link-unresolved-decoration-style: dashed;
+}
+body.flexcyon-alt-link-style .markdown-rendered .internal-link,
+body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-internal-link {
+  background-color: rgba(var(--color-purple-rgb), var(--dimmed));
+  font-size: var(--font-ui-medium);
+  padding: 2px 4px;
+}
+body.flexcyon-alt-link-style
+  .bases-rendered-value.markdown-rendered
+  .internal-link {
+  background-color: unset;
+  --link-color: var(--flexcyon-link-color);
+  --link-color-hover: var(--flexcyon-link-hover);
+  --link-unresolved-color: var(--flexcyon-link-unresolved-color);
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
+  --link-external-color: var(--flexcyon-external-link-color);
+  --link-external-color-hover: var(--flexcyon-external-link-hover);
+  font-size: unset;
+}
+body.flexcyon-alt-link-style .cm-string.cm-url {
+  background-color: transparent;
+  color: rgba(var(--color-blue-rgb), var(--dimmed));
+}
+body.flexcyon-alt-link-style .cm-link,
+body.flexcyon-alt-link-style .markdown-rendered .external-link,
+body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-external-link {
+  background-color: rgba(var(--color-blue-rgb), var(--dimmed));
+  font-size: var(--font-ui-medium);
+  padding: 2px 4px;
+}
+body.flexcyon-alt-link-style .external-link {
+  background-image: none;
+}
+
 body {
   --drag-ghost-background: var(--flexcyon-base-03);
   --drag-ghost-text-color: var(--interactive-accent);
@@ -4940,6 +5015,7 @@ body > .progress-bar-container .progress-bar-indicator > * {
 }
 body {
   --flexcyon-repl-active-line-str: "->";
+  --flexcyon-repl-active-str-space: 0px;
 }
 body .cm-gutterElement.cm-active {
   font-weight: 900;
@@ -5951,6 +6027,7 @@ body.flexcyon-repl-active-line-num-str .cm-gutterElement.cm-active {
 body.flexcyon-repl-active-line-num-str .cm-gutterElement.cm-active::before {
   content: var(--flexcyon-repl-active-line-str);
   font-size: calc(var(--font-ui-medium) + 0.07rem);
+  letter-spacing: var(--flexcyon-repl-active-str-space);
 }
 
 body.flexcyon-highlight-active-line .cm-active.cm-line,
@@ -14849,6 +14926,7 @@ body {
   --flexcyon-ascii-max-font-size: 14px;
   --flexcyon-quote-font-size: 24px;
   --flexcyon-ascii-line-height: 1.5;
+  --flexcyon-ascii-scaling-factor: 1;
   --flexcyon-quote-val: "This is a placeholder quote\ain the Flexcyon Theme.";
   --flexcyon-quote-credit-prefix: "-";
   --flexcyon-quote-credit: "bladeacer";
@@ -14877,14 +14955,16 @@ body.flexcyon-ascii-enable div.empty-state-container::before {
   -webkit-text-fill-color: transparent;
   line-height: var(--flexcyon-ascii-line-height);
   white-space: pre;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   text-align: center;
   display: inline;
   font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
 }
 body.flexcyon-flex-max-mode div.empty-state-container,
 body.flexcyon-ascii-enable div.empty-state-container {
-  transform: translateY(-115px);
+  max-height: unset;
+  max-width: unset;
+  scale: var(--flexcyon-ascii-scaling-factor);
 }
 
 body.is-mobile.flexcyon-flex-max-mode div.empty-state-container::before,
@@ -16483,6 +16563,10 @@ settings:
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
+  - title: Enable alternate link styling
+    id: flexcyon-alt-link-style
+    type: class-toggle
+    default: false
 
   - title: Properties
     type: heading
@@ -16672,6 +16756,11 @@ settings:
     type: variable-text
     default: "->"
     quotes: true
+  - title: Replaced active line number string letter spacing
+    id: flexcyon-repl-active-str-space
+    type: variable-number
+    default: 0
+    format: px
 
   - title: Cursor
     type: heading
@@ -17203,6 +17292,11 @@ settings:
     id: flexcyon-ascii-line-height
     type: variable-number
     default: 1.5
+  - title: ASCII art scaling factor
+    description: The scale of the ASCII art
+    id: flexcyon-ascii-scaling-factor
+    type: variable-number
+    default: 1
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title
@@ -18647,6 +18741,17 @@ div.bases-cards-cover:not([style*="background-image"]) * {
 
 .bases-table-cell {
   --input-placeholder-color: var(--color-red);
+}
+
+.bases-td .metadata-input-number,
+.bases-td[data-property-type="number"] {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.value-list-container:not(:has(.value-list-element))::before {
+  content: "None found";
+  color: var(--color-red);
 }
 
 body {

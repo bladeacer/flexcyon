@@ -170,3 +170,14 @@ div.bases-cards-cover:not([style*="background-image"]) {
 .bases-table-cell {
   --input-placeholder-color: var(--color-red);
 }
+
+.bases-td .metadata-input-number,
+.bases-td[data-property-type="number"] {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.value-list-container:not(:has(.value-list-element))::before {
+  content: "None found";
+  color: var(--color-red);
+}

@@ -25,6 +25,10 @@ body {
   .view-actions .clickable-icon {
     padding: 5px 10px;
   }
+  .modal-title {
+    padding-top: 10px;
+    padding-bottom: 16px;
+  }
 
   .graph-controls .clickable-icon,
   .clickable-icon.side-dock-ribbon-action {
@@ -80,6 +84,35 @@ body {
   .tree-item:not(.graph-control-section) {
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
+  }
+}
+
+body {
+  .text-snippets-class > * {
+    width: min(50em, 50vw);
+  }
+  .text-snippets-class > * > textarea {
+    width: min(30em, 35vw);
+    margin-block: 16px;
+  }
+}
+
+@media screen and (width < 900px) {
+  div.setting-item {
+    flex-direction: column;
+    align-items: unset;
+    .setting-item-control {
+      align-items: unset;
+      justify-content: unset;
+    }
+  }
+  .text-snippets-class > * {
+    width: 50%;
+    height: max-content;
+  }
+  .text-snippets-class > * > textarea {
+    width: 50%;
+    height: 100px;
   }
 }
 

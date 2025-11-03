@@ -1,5 +1,6 @@
 body {
   --flexcyon-repl-active-line-str: "->";
+  --flexcyon-repl-active-str-space: 0px;
   .cm-gutterElement.cm-active {
     font-weight: 900;
     font-size: var(--font-ui-medium);
@@ -207,6 +208,7 @@ body.flexcyon-repl-active-line-num-str {
     &::before {
       content: var(--flexcyon-repl-active-line-str);
       font-size: calc(var(--font-ui-medium) + 0.07rem);
+      letter-spacing: var(--flexcyon-repl-active-str-space);
     }
   }
 }
