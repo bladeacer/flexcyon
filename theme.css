@@ -14257,21 +14257,29 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
 
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
 }
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller:not(.cm-vimMode)
   .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller:not(.cm-vimMode)
@@ -14288,12 +14296,16 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-family: var(--font-interface);
   z-index: 2;
 }
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
   .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
@@ -14310,13 +14322,17 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-family: var(--font-interface);
   z-index: 2;
 }
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .cm-panels
   .cm-panel
   div
   div:not(.cm-vim-message)
   span:first-child,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel
   div
@@ -14325,30 +14341,38 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: 75px;
 }
-body.flexcyon-flex-max-mode .cm-panels .cm-panel,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root > html > body.flexcyon-flex-max-mode .cm-panels .cm-panel,
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel {
   background-color: var(--color-base-00);
   padding-top: 5px;
   font-weight: 500;
 }
-body.flexcyon-flex-max-mode .cm-panels input,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root > html > body.flexcyon-flex-max-mode .cm-panels input,
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   input {
   transform: translateY(-4px);
   font-size: 0.9rem;
   z-index: 16;
 }
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .cm-editor
   > .cm-scroller
   + .cm-panels
   .cm-panel
   div
   div:not(.cm-vim-message)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
   + .cm-panels
@@ -14361,13 +14385,17 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
-body.flexcyon-flex-max-mode
+:root
+  > html
+  > body.flexcyon-flex-max-mode
   .cm-editor
   > .cm-scroller
   + .cm-panels
   .cm-panel
   div,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
   + .cm-panels
@@ -14375,8 +14403,10 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   div {
   color: var(--text-muted);
 }
-body.flexcyon-flex-max-mode div.cm-vim-message,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+:root > html > body.flexcyon-flex-max-mode div.cm-vim-message,
+:root
+  > html
+  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   div.cm-vim-message {
   color: var(--color-red) !important;
   font-weight: bold;
