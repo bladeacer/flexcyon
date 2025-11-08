@@ -22,6 +22,8 @@ body {
   --flexcyon-anim-start-opacity: 0.55;
 
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
+  --flexcyon-mode-view-header-title-verti-padding: 4px;
+  --flexcyon-mode-view-header-title-horiz-padding: 12px;
 
   .view-header-breadcrumb {
     max-width: var(--flexcyon-view-header-breadcrumb-max-w);
@@ -39,7 +41,8 @@ body.flexcyon-workspace-angled-layout {
     transform: skewX(-22.5deg);
     border-radius: 0px;
     background-color: var(--color-base-20);
-    padding: 4px 12px;
+    padding: var(--flexcyon-mode-view-header-title-verti-padding)
+      var(--flexcyon-mode-view-header-title-horiz-padding);
   }
 
   .view-header-title-parent {
@@ -47,7 +50,8 @@ body.flexcyon-workspace-angled-layout {
   }
 
   .view-header-title-parent .view-header-breadcrumb {
-    padding: 4px 12px;
+    padding: var(--flexcyon-mode-view-header-title-verti-padding)
+      var(--flexcyon-mode-view-header-title-horiz-padding);
     background-color: var(--color-base-05);
   }
 }
@@ -105,7 +109,8 @@ body.flexcyon-workspace-pl10k-layout {
   }
 
   .view-header-title {
-    padding: 4px 12px;
+    padding: var(--flexcyon-mode-view-header-title-verti-padding)
+      var(--flexcyon-mode-view-header-title-horiz-padding);
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
     background-color: var(--color-base-05);
@@ -215,21 +220,17 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-@mixin anims-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
-  body.flexcyon-anims-#{$anim-class} {
+@mixin anims-modal-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
+  body.flexcyon-modal-anims-#{$anim-class} {
     .modal .community-modal-info,
     .modal .vertical-tab-content,
-    .mod-stacked
-      .workspace-leaf.mod-active
-      .workspace-leaf-content:not([data-type="file-explorer"]),
-    .view-content,
     .modal,
     .prompt {
       animation: $anim-type var(--flexcyon-anim-duration)
         var(--flexcyon-anim-easing);
     }
   }
-  body.flexcyon-anims-#{$anim-class}.flexcyon-anim-style-settings-contain {
+  body.flexcyon-anims-modal-#{$anim-class}.flexcyon-anim-style-settings-contain {
     .style-settings-container {
       animation: $anim-type var(--flexcyon-anim-duration)
         var(--flexcyon-anim-easing);
@@ -239,13 +240,33 @@ body.flexcyon-workspace-card-layout {
     body.flexcyon-flex-max-mode {
       .modal .community-modal-info,
       .modal .vertical-tab-content,
+      .modal,
+      .style-settings-container,
+      .prompt {
+        animation: $anim-type
+          var(--flexcyon-anim-duration)
+          var(--flexcyon-anim-easing);
+      }
+    }
+  }
+}
+
+@mixin anims-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
+  body.flexcyon-anims-#{$anim-class} {
+    .mod-stacked
+      .workspace-leaf.mod-active
+      .workspace-leaf-content:not([data-type="file-explorer"]),
+    .view-content {
+      animation: $anim-type var(--flexcyon-anim-duration)
+        var(--flexcyon-anim-easing);
+    }
+  }
+  @if ($is-flex-max == 1) {
+    body.flexcyon-flex-max-mode {
       .mod-stacked
         .workspace-leaf.mod-active
         .workspace-leaf-content:not([data-type="file-explorer"]),
-      .modal,
-      .view-content,
-      .style-settings-container,
-      .prompt {
+      .view-content {
         animation: $anim-type
           var(--flexcyon-anim-duration)
           var(--flexcyon-anim-easing);
@@ -262,3 +283,12 @@ body.flexcyon-workspace-card-layout {
 @include anims-wrapper(spin-rl, spin-in-rl);
 @include anims-wrapper(spin-bt, spin-in-bt);
 @include anims-wrapper(fade-in, fade-in, 1);
+
+@include anims-modal-wrapper(scale-up, scale-up);
+@include anims-modal-wrapper(slide-rtl, slide-in-right);
+@include anims-modal-wrapper(slide-ltr, slide-in-left, 1);
+@include anims-modal-wrapper(slide-tb, slide-in-tb);
+@include anims-modal-wrapper(slide-bt, slide-in-bt);
+@include anims-modal-wrapper(spin-rl, spin-in-rl);
+@include anims-modal-wrapper(spin-bt, spin-in-bt);
+@include anims-modal-wrapper(fade-in, fade-in);

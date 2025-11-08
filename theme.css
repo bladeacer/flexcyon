@@ -1268,6 +1268,8 @@ body {
   --flexcyon-anim-start-scale-amt: 0.33;
   --flexcyon-anim-start-opacity: 0.55;
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
+  --flexcyon-mode-view-header-title-verti-padding: 4px;
+  --flexcyon-mode-view-header-title-horiz-padding: 12px;
 }
 body .view-header-breadcrumb {
   max-width: var(--flexcyon-view-header-breadcrumb-max-w);
@@ -1282,7 +1284,8 @@ body.flexcyon-workspace-angled-layout .view-header-title {
   transform: skewX(-22.5deg);
   border-radius: 0px;
   background-color: var(--color-base-20);
-  padding: 4px 12px;
+  padding: var(--flexcyon-mode-view-header-title-verti-padding)
+    var(--flexcyon-mode-view-header-title-horiz-padding);
 }
 body.flexcyon-workspace-angled-layout .view-header-title-parent {
   transform: skewX(-22.5deg);
@@ -1290,7 +1293,8 @@ body.flexcyon-workspace-angled-layout .view-header-title-parent {
 body.flexcyon-workspace-angled-layout
   .view-header-title-parent
   .view-header-breadcrumb {
-  padding: 4px 12px;
+  padding: var(--flexcyon-mode-view-header-title-verti-padding)
+    var(--flexcyon-mode-view-header-title-horiz-padding);
   background-color: var(--color-base-05);
 }
 
@@ -1382,7 +1386,8 @@ body.flexcyon-workspace-pl10k-layout
 }
 body.flexcyon-flex-max-mode .view-header-title,
 body.flexcyon-workspace-pl10k-layout .view-header-title {
-  padding: 4px 12px;
+  padding: var(--flexcyon-mode-view-header-title-verti-padding)
+    var(--flexcyon-mode-view-header-title-horiz-padding);
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: var(--color-base-05);
@@ -1513,164 +1518,198 @@ body.flexcyon-workspace-card-layout .view-header-title {
     opacity: 1;
   }
 }
-body.flexcyon-anims-scale-up .modal .community-modal-info,
-body.flexcyon-anims-scale-up .modal .vertical-tab-content,
 body.flexcyon-anims-scale-up
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-scale-up .view-content,
-body.flexcyon-anims-scale-up .modal,
-body.flexcyon-anims-scale-up .prompt {
+body.flexcyon-anims-scale-up .view-content {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-scale-up.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-slide-rtl .modal .community-modal-info,
-body.flexcyon-anims-slide-rtl .modal .vertical-tab-content,
 body.flexcyon-anims-slide-rtl
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-slide-rtl .view-content,
-body.flexcyon-anims-slide-rtl .modal,
-body.flexcyon-anims-slide-rtl .prompt {
+body.flexcyon-anims-slide-rtl .view-content {
   animation: slide-in-right var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-rtl.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: slide-in-right var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-slide-ltr .modal .community-modal-info,
-body.flexcyon-anims-slide-ltr .modal .vertical-tab-content,
 body.flexcyon-anims-slide-ltr
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-slide-ltr .view-content,
-body.flexcyon-anims-slide-ltr .modal,
-body.flexcyon-anims-slide-ltr .prompt {
+body.flexcyon-anims-slide-ltr .view-content {
   animation: slide-in-left var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-ltr.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: slide-in-left var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-slide-tb .modal .community-modal-info,
-body.flexcyon-anims-slide-tb .modal .vertical-tab-content,
 body.flexcyon-anims-slide-tb
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-slide-tb .view-content,
-body.flexcyon-anims-slide-tb .modal,
-body.flexcyon-anims-slide-tb .prompt {
+body.flexcyon-anims-slide-tb .view-content {
   animation: slide-in-tb var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-tb.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: slide-in-tb var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-slide-bt .modal .community-modal-info,
-body.flexcyon-anims-slide-bt .modal .vertical-tab-content,
 body.flexcyon-anims-slide-bt
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-slide-bt .view-content,
-body.flexcyon-anims-slide-bt .modal,
-body.flexcyon-anims-slide-bt .prompt {
+body.flexcyon-anims-slide-bt .view-content {
   animation: slide-in-bt var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-bt.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: slide-in-bt var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-spin-rl .modal .community-modal-info,
-body.flexcyon-anims-spin-rl .modal .vertical-tab-content,
 body.flexcyon-anims-spin-rl
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-spin-rl .view-content,
-body.flexcyon-anims-spin-rl .modal,
-body.flexcyon-anims-spin-rl .prompt {
+body.flexcyon-anims-spin-rl .view-content {
   animation: spin-in-rl var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-rl.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: spin-in-rl var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-spin-bt .modal .community-modal-info,
-body.flexcyon-anims-spin-bt .modal .vertical-tab-content,
 body.flexcyon-anims-spin-bt
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-spin-bt .view-content,
-body.flexcyon-anims-spin-bt .modal,
-body.flexcyon-anims-spin-bt .prompt {
+body.flexcyon-anims-spin-bt .view-content {
   animation: spin-in-bt var(--flexcyon-anim-duration)
     var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-bt.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: spin-in-bt var(--flexcyon-anim-duration)
-    var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-anims-fade-in .modal .community-modal-info,
-body.flexcyon-anims-fade-in .modal .vertical-tab-content,
 body.flexcyon-anims-fade-in
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
-body.flexcyon-anims-fade-in .view-content,
-body.flexcyon-anims-fade-in .modal,
-body.flexcyon-anims-fade-in .prompt {
+body.flexcyon-anims-fade-in .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-fade-in.flexcyon-anim-style-settings-contain
-  .style-settings-container {
-  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-flex-max-mode .modal .community-modal-info,
-body.flexcyon-flex-max-mode .modal .vertical-tab-content,
 body.flexcyon-flex-max-mode
   .mod-stacked
   .workspace-leaf.mod-active
   .workspace-leaf-content:not([data-type="file-explorer"]),
+body.flexcyon-flex-max-mode .view-content {
+  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-scale-up .modal .community-modal-info,
+body.flexcyon-modal-anims-scale-up .modal .vertical-tab-content,
+body.flexcyon-modal-anims-scale-up .modal,
+body.flexcyon-modal-anims-scale-up .prompt {
+  animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-scale-up.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-slide-rtl .modal .community-modal-info,
+body.flexcyon-modal-anims-slide-rtl .modal .vertical-tab-content,
+body.flexcyon-modal-anims-slide-rtl .modal,
+body.flexcyon-modal-anims-slide-rtl .prompt {
+  animation: slide-in-right var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-slide-rtl.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: slide-in-right var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-slide-ltr .modal .community-modal-info,
+body.flexcyon-modal-anims-slide-ltr .modal .vertical-tab-content,
+body.flexcyon-modal-anims-slide-ltr .modal,
+body.flexcyon-modal-anims-slide-ltr .prompt {
+  animation: slide-in-left var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-slide-ltr.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: slide-in-left var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-flex-max-mode .modal .community-modal-info,
+body.flexcyon-flex-max-mode .modal .vertical-tab-content,
 body.flexcyon-flex-max-mode .modal,
-body.flexcyon-flex-max-mode .view-content,
 body.flexcyon-flex-max-mode .style-settings-container,
 body.flexcyon-flex-max-mode .prompt {
+  animation: slide-in-left var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-slide-tb .modal .community-modal-info,
+body.flexcyon-modal-anims-slide-tb .modal .vertical-tab-content,
+body.flexcyon-modal-anims-slide-tb .modal,
+body.flexcyon-modal-anims-slide-tb .prompt {
+  animation: slide-in-tb var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-slide-tb.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: slide-in-tb var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-slide-bt .modal .community-modal-info,
+body.flexcyon-modal-anims-slide-bt .modal .vertical-tab-content,
+body.flexcyon-modal-anims-slide-bt .modal,
+body.flexcyon-modal-anims-slide-bt .prompt {
+  animation: slide-in-bt var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-slide-bt.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: slide-in-bt var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-spin-rl .modal .community-modal-info,
+body.flexcyon-modal-anims-spin-rl .modal .vertical-tab-content,
+body.flexcyon-modal-anims-spin-rl .modal,
+body.flexcyon-modal-anims-spin-rl .prompt {
+  animation: spin-in-rl var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-spin-rl.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: spin-in-rl var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-spin-bt .modal .community-modal-info,
+body.flexcyon-modal-anims-spin-bt .modal .vertical-tab-content,
+body.flexcyon-modal-anims-spin-bt .modal,
+body.flexcyon-modal-anims-spin-bt .prompt {
+  animation: spin-in-bt var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-spin-bt.flexcyon-anim-style-settings-contain
+  .style-settings-container {
+  animation: spin-in-bt var(--flexcyon-anim-duration)
+    var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-modal-anims-fade-in .modal .community-modal-info,
+body.flexcyon-modal-anims-fade-in .modal .vertical-tab-content,
+body.flexcyon-modal-anims-fade-in .modal,
+body.flexcyon-modal-anims-fade-in .prompt {
+  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body.flexcyon-anims-modal-fade-in.flexcyon-anim-style-settings-contain
+  .style-settings-container {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
@@ -3310,7 +3349,6 @@ body .view-actions .clickable-icon {
   padding: 5px 10px;
 }
 body .modal-title {
-  padding-top: 10px;
   padding-bottom: 16px;
 }
 body .graph-controls .clickable-icon,
@@ -9594,6 +9632,39 @@ div.callout[data-callout-metadata*="center-img"] img {
   margin-top: -25px;
 }
 
+body.flexcyon-tui-no-icons
+  .callout[data-callout*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-icon,
+body.flexcyon-tui-no-icons
+  .callout[data-callout-metadata*="tui"]:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-icon,
+body.flexcyon-tui-callouts.flexcyon-tui-no-icons
+  .callout:not(
+    :is(
+      [data-callout*="vertical"],
+      [data-callout*="plain"],
+      [data-callout-metadata*="vertical"],
+      [data-callout-metadata*="plain"]
+    )
+  )
+  .callout-icon {
+  display: none;
+}
+
 body.flexcyon-tui-callouts
   .callout:not(
     :is(
@@ -12066,6 +12137,360 @@ body.flexcyon-vert-callouts
 }
 
 /* obsi-snip-coll end */
+/* obsi-snip-coll start: font-size-callout */
+.callout[data-callout*="title-smaller"] .callout-title,
+.callout[data-callout-metadata*="title-smaller"] .callout-title,
+.callout[data-callout*="all-smaller"] .callout-title,
+.callout[data-callout-metadata*="all-smaller"] .callout-title {
+  font-size: var(--font-ui-smaller);
+}
+
+.callout[data-callout*="content-smaller"] .callout-content,
+.callout[data-callout-metadata*="content-smaller"] .callout-content,
+.callout[data-callout*="all-smaller"] .callout-content,
+.callout[data-callout-metadata*="all-smaller"] .callout-content {
+  font-size: var(--font-ui-smaller);
+}
+
+.callout[data-callout*="title-small"] .callout-title,
+.callout[data-callout-metadata*="title-small"] .callout-title,
+.callout[data-callout*="all-small"] .callout-title,
+.callout[data-callout-metadata*="all-small"] .callout-title {
+  font-size: var(--font-ui-small);
+}
+
+.callout[data-callout*="content-small"] .callout-content,
+.callout[data-callout-metadata*="content-small"] .callout-content,
+.callout[data-callout*="all-small"] .callout-content,
+.callout[data-callout-metadata*="all-small"] .callout-content {
+  font-size: var(--font-ui-small);
+}
+
+.callout[data-callout*="title-medium"] .callout-title,
+.callout[data-callout-metadata*="title-medium"] .callout-title,
+.callout[data-callout*="all-medium"] .callout-title,
+.callout[data-callout-metadata*="all-medium"] .callout-title {
+  font-size: var(--font-ui-medium);
+}
+
+.callout[data-callout*="content-medium"] .callout-content,
+.callout[data-callout-metadata*="content-medium"] .callout-content,
+.callout[data-callout*="all-medium"] .callout-content,
+.callout[data-callout-metadata*="all-medium"] .callout-content {
+  font-size: var(--font-ui-medium);
+}
+
+.callout[data-callout*="title-large"] .callout-title,
+.callout[data-callout-metadata*="title-large"] .callout-title,
+.callout[data-callout*="all-large"] .callout-title,
+.callout[data-callout-metadata*="all-large"] .callout-title {
+  font-size: var(--font-ui-large);
+}
+
+.callout[data-callout*="content-large"] .callout-content,
+.callout[data-callout-metadata*="content-large"] .callout-content,
+.callout[data-callout*="all-large"] .callout-content,
+.callout[data-callout-metadata*="all-large"] .callout-content {
+  font-size: var(--font-ui-large);
+}
+
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: opacity-callout */
+.callout[data-callout*="title-opacity-0"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0"] .callout-title,
+.callout[data-callout*="all-opacity-0"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0"] .callout-title {
+  opacity: 0;
+}
+
+.callout[data-callout*="content-opacity-0"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0"] .callout-content,
+.callout[data-callout*="all-opacity-0"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0"] .callout-content {
+  opacity: 0;
+}
+
+.callout[data-callout*="title-opacity-0.05"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.05"] .callout-title,
+.callout[data-callout*="all-opacity-0.05"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.05"] .callout-title {
+  opacity: 0.05;
+}
+
+.callout[data-callout*="content-opacity-0.05"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.05"] .callout-content,
+.callout[data-callout*="all-opacity-0.05"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.05"] .callout-content {
+  opacity: 0.05;
+}
+
+.callout[data-callout*="title-opacity-0.1"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.1"] .callout-title,
+.callout[data-callout*="all-opacity-0.1"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.1"] .callout-title {
+  opacity: 0.1;
+}
+
+.callout[data-callout*="content-opacity-0.1"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.1"] .callout-content,
+.callout[data-callout*="all-opacity-0.1"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.1"] .callout-content {
+  opacity: 0.1;
+}
+
+.callout[data-callout*="title-opacity-0.15"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.15"] .callout-title,
+.callout[data-callout*="all-opacity-0.15"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.15"] .callout-title {
+  opacity: 0.15;
+}
+
+.callout[data-callout*="content-opacity-0.15"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.15"] .callout-content,
+.callout[data-callout*="all-opacity-0.15"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.15"] .callout-content {
+  opacity: 0.15;
+}
+
+.callout[data-callout*="title-opacity-0.2"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.2"] .callout-title,
+.callout[data-callout*="all-opacity-0.2"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.2"] .callout-title {
+  opacity: 0.2;
+}
+
+.callout[data-callout*="content-opacity-0.2"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.2"] .callout-content,
+.callout[data-callout*="all-opacity-0.2"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.2"] .callout-content {
+  opacity: 0.2;
+}
+
+.callout[data-callout*="title-opacity-0.25"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.25"] .callout-title,
+.callout[data-callout*="all-opacity-0.25"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.25"] .callout-title {
+  opacity: 0.25;
+}
+
+.callout[data-callout*="content-opacity-0.25"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.25"] .callout-content,
+.callout[data-callout*="all-opacity-0.25"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.25"] .callout-content {
+  opacity: 0.25;
+}
+
+.callout[data-callout*="title-opacity-0.3"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.3"] .callout-title,
+.callout[data-callout*="all-opacity-0.3"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.3"] .callout-title {
+  opacity: 0.3;
+}
+
+.callout[data-callout*="content-opacity-0.3"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.3"] .callout-content,
+.callout[data-callout*="all-opacity-0.3"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.3"] .callout-content {
+  opacity: 0.3;
+}
+
+.callout[data-callout*="title-opacity-0.35"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.35"] .callout-title,
+.callout[data-callout*="all-opacity-0.35"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.35"] .callout-title {
+  opacity: 0.35;
+}
+
+.callout[data-callout*="content-opacity-0.35"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.35"] .callout-content,
+.callout[data-callout*="all-opacity-0.35"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.35"] .callout-content {
+  opacity: 0.35;
+}
+
+.callout[data-callout*="title-opacity-0.4"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.4"] .callout-title,
+.callout[data-callout*="all-opacity-0.4"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.4"] .callout-title {
+  opacity: 0.4;
+}
+
+.callout[data-callout*="content-opacity-0.4"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.4"] .callout-content,
+.callout[data-callout*="all-opacity-0.4"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.4"] .callout-content {
+  opacity: 0.4;
+}
+
+.callout[data-callout*="title-opacity-0.45"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.45"] .callout-title,
+.callout[data-callout*="all-opacity-0.45"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.45"] .callout-title {
+  opacity: 0.45;
+}
+
+.callout[data-callout*="content-opacity-0.45"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.45"] .callout-content,
+.callout[data-callout*="all-opacity-0.45"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.45"] .callout-content {
+  opacity: 0.45;
+}
+
+.callout[data-callout*="title-opacity-0.5"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.5"] .callout-title,
+.callout[data-callout*="all-opacity-0.5"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.5"] .callout-title {
+  opacity: 0.5;
+}
+
+.callout[data-callout*="content-opacity-0.5"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.5"] .callout-content,
+.callout[data-callout*="all-opacity-0.5"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.5"] .callout-content {
+  opacity: 0.5;
+}
+
+.callout[data-callout*="title-opacity-0.55"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.55"] .callout-title,
+.callout[data-callout*="all-opacity-0.55"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.55"] .callout-title {
+  opacity: 0.55;
+}
+
+.callout[data-callout*="content-opacity-0.55"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.55"] .callout-content,
+.callout[data-callout*="all-opacity-0.55"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.55"] .callout-content {
+  opacity: 0.55;
+}
+
+.callout[data-callout*="title-opacity-0.6"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.6"] .callout-title,
+.callout[data-callout*="all-opacity-0.6"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.6"] .callout-title {
+  opacity: 0.6;
+}
+
+.callout[data-callout*="content-opacity-0.6"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.6"] .callout-content,
+.callout[data-callout*="all-opacity-0.6"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.6"] .callout-content {
+  opacity: 0.6;
+}
+
+.callout[data-callout*="title-opacity-0.65"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.65"] .callout-title,
+.callout[data-callout*="all-opacity-0.65"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.65"] .callout-title {
+  opacity: 0.65;
+}
+
+.callout[data-callout*="content-opacity-0.65"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.65"] .callout-content,
+.callout[data-callout*="all-opacity-0.65"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.65"] .callout-content {
+  opacity: 0.65;
+}
+
+.callout[data-callout*="title-opacity-0.7"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.7"] .callout-title,
+.callout[data-callout*="all-opacity-0.7"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.7"] .callout-title {
+  opacity: 0.7;
+}
+
+.callout[data-callout*="content-opacity-0.7"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.7"] .callout-content,
+.callout[data-callout*="all-opacity-0.7"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.7"] .callout-content {
+  opacity: 0.7;
+}
+
+.callout[data-callout*="title-opacity-0.75"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.75"] .callout-title,
+.callout[data-callout*="all-opacity-0.75"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.75"] .callout-title {
+  opacity: 0.75;
+}
+
+.callout[data-callout*="content-opacity-0.75"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.75"] .callout-content,
+.callout[data-callout*="all-opacity-0.75"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.75"] .callout-content {
+  opacity: 0.75;
+}
+
+.callout[data-callout*="title-opacity-0.8"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.8"] .callout-title,
+.callout[data-callout*="all-opacity-0.8"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.8"] .callout-title {
+  opacity: 0.8;
+}
+
+.callout[data-callout*="content-opacity-0.8"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.8"] .callout-content,
+.callout[data-callout*="all-opacity-0.8"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.8"] .callout-content {
+  opacity: 0.8;
+}
+
+.callout[data-callout*="title-opacity-0.85"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.85"] .callout-title,
+.callout[data-callout*="all-opacity-0.85"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.85"] .callout-title {
+  opacity: 0.85;
+}
+
+.callout[data-callout*="content-opacity-0.85"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.85"] .callout-content,
+.callout[data-callout*="all-opacity-0.85"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.85"] .callout-content {
+  opacity: 0.85;
+}
+
+.callout[data-callout*="title-opacity-0.9"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.9"] .callout-title,
+.callout[data-callout*="all-opacity-0.9"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.9"] .callout-title {
+  opacity: 0.9;
+}
+
+.callout[data-callout*="content-opacity-0.9"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.9"] .callout-content,
+.callout[data-callout*="all-opacity-0.9"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.9"] .callout-content {
+  opacity: 0.9;
+}
+
+.callout[data-callout*="title-opacity-0.95"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-0.95"] .callout-title,
+.callout[data-callout*="all-opacity-0.95"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-0.95"] .callout-title {
+  opacity: 0.95;
+}
+
+.callout[data-callout*="content-opacity-0.95"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-0.95"] .callout-content,
+.callout[data-callout*="all-opacity-0.95"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-0.95"] .callout-content {
+  opacity: 0.95;
+}
+
+.callout[data-callout*="title-opacity-1"] .callout-title,
+.callout[data-callout-metadata*="title-opacity-1"] .callout-title,
+.callout[data-callout*="all-opacity-1"] .callout-title,
+.callout[data-callout-metadata*="all-opacity-1"] .callout-title {
+  opacity: 1;
+}
+
+.callout[data-callout*="content-opacity-1"] .callout-content,
+.callout[data-callout-metadata*="content-opacity-1"] .callout-content,
+.callout[data-callout*="all-opacity-1"] .callout-content,
+.callout[data-callout-metadata*="all-opacity-1"] .callout-content {
+  opacity: 1;
+}
+
+/* obsi-snip-coll end */
 body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
@@ -14257,29 +14682,21 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
 
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-panels.cm-panels-bottom {
   border-top: unset;
   padding-top: 6px;
 }
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller:not(.cm-vimMode)
   .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller:not(.cm-vimMode)
@@ -14296,16 +14713,12 @@ body {
   font-family: var(--font-interface);
   z-index: 2;
 }
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
   .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .markdown-source-view.mod-cm6
   .cm-editor
   .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
@@ -14322,17 +14735,13 @@ body {
   font-family: var(--font-interface);
   z-index: 2;
 }
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .cm-panels
   .cm-panel
   div
   div:not(.cm-vim-message)
   span:first-child,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel
   div
@@ -14341,38 +14750,30 @@ body {
   bottom: var(--flexcyon-vim-bottom-positioning);
   left: 75px;
 }
-:root > html > body.flexcyon-flex-max-mode .cm-panels .cm-panel,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-flex-max-mode .cm-panels .cm-panel,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   .cm-panel {
   background-color: var(--color-base-00);
   padding-top: 5px;
   font-weight: 500;
 }
-:root > html > body.flexcyon-flex-max-mode .cm-panels input,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-flex-max-mode .cm-panels input,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-panels
   input {
   transform: translateY(-4px);
   font-size: 0.9rem;
   z-index: 16;
 }
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .cm-editor
   > .cm-scroller
   + .cm-panels
   .cm-panel
   div
   div:not(.cm-vim-message)::before,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
   + .cm-panels
@@ -14385,17 +14786,13 @@ body {
   font-size: var(--cm-font-size);
   font-family: var(--font-interface);
 }
-:root
-  > html
-  > body.flexcyon-flex-max-mode
+body.flexcyon-flex-max-mode
   .cm-editor
   > .cm-scroller
   + .cm-panels
   .cm-panel
   div,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   .cm-editor
   > .cm-scroller
   + .cm-panels
@@ -14403,10 +14800,8 @@ body {
   div {
   color: var(--text-muted);
 }
-:root > html > body.flexcyon-flex-max-mode div.cm-vim-message,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
+body.flexcyon-flex-max-mode div.cm-vim-message,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color)
   div.cm-vim-message {
   color: var(--color-red) !important;
   font-weight: bold;
@@ -16152,8 +16547,9 @@ settings:
     level: 5
     collapsed: true
     description: Please note that Bases Cards View plus animations might not be good for performance.
-  - title: Animation type
-    description: Configure animation type for transitions of prompts, modals and tab containers.
+
+  - title: Note Animation type
+    description: Configure animation type for note content
     type: class-select
     id: flexcyon-anim-type
     allowEmpty: true
@@ -16183,6 +16579,38 @@ settings:
       - 
         label: Fade In
         value: flexcyon-anims-fade-in
+
+  - title: Modal Animation type
+    description: Configure animation type for transitions of prompts, modals and tab containers.
+    type: class-select
+    id: flexcyon-modal-anim-type
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Slide in Left to Right
+        value: flexcyon-modal-anims-slide-ltr
+      - 
+        label: Slide in Right to Left
+        value: flexcyon-modal-anims-slide-rtl
+      - 
+        label: Slide in Top to Bottom
+        value: flexcyon-modal-anims-slide-tb
+      - 
+        label: Slide in Bottom to Top
+        value: flexcyon-modal-anims-slide-bt
+      - 
+        label: Rotate in Bottom to Top
+        value: flexcyon-modal-anims-spin-bt
+      - 
+        label: Rotate in Right to Left
+        value: flexcyon-modal-anims-spin-rl
+      - 
+        label: Scale Up
+        value: flexcyon-modal-anims-scale-up
+      - 
+        label: Fade In
+        value: flexcyon-modal-anims-fade-in
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -16346,6 +16774,11 @@ settings:
       - 
         label: Vertical Callouts
         value: flexcyon-vert-callouts
+  - title: Disable icons for TUI callout
+    description: Do not display icons for TUI callout
+    id: flexcyon-tui-no-icons
+    type: class-toggle
+    default: false
   - title: Flashcard callout width
     id: flexcyon-callouts-flashcard-width
     description: Configures the width of flashcard callouts
@@ -16839,6 +17272,16 @@ settings:
     type: variable-number
     default: 12.5
     format: vw
+  - title: Mode View Header Title Vertical Padding
+    id: flexcyon-mode-view-header-title-verti-padding
+    description: Horizontal mode of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 4
+  - title: Mode View Header Title Horizontal Padding
+    id: flexcyon-mode-view-header-title-horiz-padding
+    description: Horizontal padding of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 12
 
   - title: Debug
     type: heading
@@ -17148,7 +17591,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Currently experimental, will add to docs later
+    description: Currently experimental
   - title: Bases Cards View
     type: heading
     level: 6
@@ -18476,14 +18919,131 @@ div.mermaid svg .nodes node * {
   stroke: var(--color-base-20);
 }
 
+.theme-dark .mermaid > svg {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
 .theme-light .mermaid > svg[aria-roledescription="flowchart-v2"],
 .theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
   filter: none;
 }
 
+.mermaid > svg[aria-roledescription="stateDiagram"] g.root g.nodes g :is(*),
+.mermaid > svg[aria-roledescription="stateDiagram-v2"] g.root g.nodes g :is(*) {
+  fill: var(--text-normal) !important;
+  stroke: var(--text-faint) !important;
+  fill-opacity: var(--dimmed) !important;
+}
+.mermaid > svg[aria-roledescription="stateDiagram"] g.root g.nodes g.red :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.red
+  :is(*) {
+  fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+  stroke: var(--color-red-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.purple
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.purple
+  :is(*) {
+  fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+  stroke: var(--color-purple-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.cyan
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.cyan
+  :is(*) {
+  fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+  stroke: var(--color-cyan-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.yellow
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.yellow
+  :is(*) {
+  fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+  stroke: var(--color-yellow-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.blue
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.blue
+  :is(*) {
+  fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+  stroke: var(--color-blue-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.green
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.green
+  :is(*) {
+  fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+  stroke: var(--color-green-rgb) !important;
+}
+.mermaid
+  > svg[aria-roledescription="stateDiagram"]
+  g.root
+  g.nodes
+  g.orange
+  :is(*),
+.mermaid
+  > svg[aria-roledescription="stateDiagram-v2"]
+  g.root
+  g.nodes
+  g.orange
+  :is(*) {
+  fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+  stroke: var(--color-orange-rgb) !important;
+}
+
+.mermaid > svg[aria-roledescription="flowchart"] g.root,
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
   /* Edge labels */
 }
+.mermaid
+  > svg[aria-roledescription="flowchart"]
+  g.root
+  g.edgeLabels
+  div.labelBkg,
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18491,6 +19051,13 @@ div.mermaid svg .nodes node * {
   div.labelBkg {
   display: contents !important;
 }
+.mermaid
+  > svg[aria-roledescription="flowchart"]
+  g.root
+  g.edgeLabels
+  div.labelBkg
+  .edgeLabel
+  p,
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18503,12 +19070,19 @@ div.mermaid svg .nodes node * {
   vertical-align: super;
   background-color: var(--background-primary) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root,
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root {
   /* Nodes */
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes,
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
   /* Node labels */
 }
+.mermaid
+  > svg[aria-roledescription="flowchart"]
+  g.root
+  g.nodes
+  div:has(.nodeLabel),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18516,6 +19090,13 @@ div.mermaid svg .nodes node * {
   div:has(.nodeLabel) {
   display: block !important;
 }
+.mermaid
+  > svg[aria-roledescription="flowchart"]
+  g.root
+  g.nodes
+  div:has(.nodeLabel)
+  .nodeLabel
+  p,
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18525,17 +19106,21 @@ div.mermaid svg .nodes node * {
   p {
   color: var(--text-normal) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes,
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
   /* Node default colors */
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g :is(*),
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes g :is(*) {
   stroke: var(--text-faint) !important;
   fill: var(--background-secondary) !important;
   fill-opacity: calc(var(--dimmed) - 0.25) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes,
 .mermaid > svg[aria-roledescription="flowchart-v2"] g.root g.nodes {
   /* Colorize individual nodes with classes */
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.red :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18545,6 +19130,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
   stroke: var(--color-red-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.purple :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18554,6 +19140,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
   stroke: var(--color-purple-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.cyan :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18563,6 +19150,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
   stroke: var(--color-cyan-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.yellow :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18572,6 +19160,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
   stroke: var(--color-yellow-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.blue :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18581,6 +19170,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
   stroke: var(--color-blue-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.green :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root
@@ -18590,6 +19180,7 @@ div.mermaid svg .nodes node * {
   fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
   stroke: var(--color-green-rgb) !important;
 }
+.mermaid > svg[aria-roledescription="flowchart"] g.root g.nodes g.orange :is(*),
 .mermaid
   > svg[aria-roledescription="flowchart-v2"]
   g.root

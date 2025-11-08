@@ -832,8 +832,9 @@ settings:
     level: 5
     collapsed: true
     description: Please note that Bases Cards View plus animations might not be good for performance.
-  - title: Animation type
-    description: Configure animation type for transitions of prompts, modals and tab containers.
+
+  - title: Note Animation type
+    description: Configure animation type for note content
     type: class-select
     id: flexcyon-anim-type
     allowEmpty: true
@@ -863,6 +864,38 @@ settings:
       - 
         label: Fade In
         value: flexcyon-anims-fade-in
+
+  - title: Modal Animation type
+    description: Configure animation type for transitions of prompts, modals and tab containers.
+    type: class-select
+    id: flexcyon-modal-anim-type
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Slide in Left to Right
+        value: flexcyon-modal-anims-slide-ltr
+      - 
+        label: Slide in Right to Left
+        value: flexcyon-modal-anims-slide-rtl
+      - 
+        label: Slide in Top to Bottom
+        value: flexcyon-modal-anims-slide-tb
+      - 
+        label: Slide in Bottom to Top
+        value: flexcyon-modal-anims-slide-bt
+      - 
+        label: Rotate in Bottom to Top
+        value: flexcyon-modal-anims-spin-bt
+      - 
+        label: Rotate in Right to Left
+        value: flexcyon-modal-anims-spin-rl
+      - 
+        label: Scale Up
+        value: flexcyon-modal-anims-scale-up
+      - 
+        label: Fade In
+        value: flexcyon-modal-anims-fade-in
 
   - title: Animation duration
     id: flexcyon-anim-duration
@@ -1026,6 +1059,11 @@ settings:
       - 
         label: Vertical Callouts
         value: flexcyon-vert-callouts
+  - title: Disable icons for TUI callout
+    description: Do not display icons for TUI callout
+    id: flexcyon-tui-no-icons
+    type: class-toggle
+    default: false
   - title: Flashcard callout width
     id: flexcyon-callouts-flashcard-width
     description: Configures the width of flashcard callouts
@@ -1519,6 +1557,16 @@ settings:
     type: variable-number
     default: 12.5
     format: vw
+  - title: Mode View Header Title Vertical Padding
+    id: flexcyon-mode-view-header-title-verti-padding
+    description: Horizontal mode of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 4
+  - title: Mode View Header Title Horizontal Padding
+    id: flexcyon-mode-view-header-title-horiz-padding
+    description: Horizontal padding of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 12
 
   - title: Debug
     type: heading
@@ -1828,7 +1876,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Currently experimental, will add to docs later
+    description: Currently experimental
   - title: Bases Cards View
     type: heading
     level: 6

@@ -767,6 +767,17 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
   margin-top: -25px;
 }
 
+body.flexcyon-tui-no-icons
+  .callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
+body.flexcyon-tui-no-icons
+  .callout[data-callout-metadata*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
+body.flexcyon-tui-callouts.flexcyon-tui-no-icons
+  .callout:not(:is(#{$flexcyon-tui-exclusions})) {
+  .callout-icon {
+    display: none;
+  }
+}
+
 body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
 .callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
 .callout[data-callout-metadata*="tui"]:not(:is(#{$flexcyon-tui-exclusions})) {
@@ -985,4 +996,56 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
 @include vert-wrapper("pink");
 @include vert-wrapper("green");
 @include vert-wrapper("orange");
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: font-size-callout */
+@mixin font-size-wrapper($size) {
+  .callout[data-callout*="title-#{$size}"],
+  .callout[data-callout-metadata*="title-#{$size}"],
+  .callout[data-callout*="all-#{$size}"],
+  .callout[data-callout-metadata*="all-#{$size}"] {
+    .callout-title {
+      font-size: var(--font-ui-#{$size});
+    }
+  }
+  .callout[data-callout*="content-#{$size}"],
+  .callout[data-callout-metadata*="content-#{$size}"],
+  .callout[data-callout*="all-#{$size}"],
+  .callout[data-callout-metadata*="all-#{$size}"] {
+    .callout-content {
+      font-size: var(--font-ui-#{$size});
+    }
+  }
+}
+
+@include font-size-wrapper(smaller);
+@include font-size-wrapper(small);
+@include font-size-wrapper(medium);
+@include font-size-wrapper(large);
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: opacity-callout */
+@mixin opacity-wrapper($increment) {
+  $i: 0;
+  @while $i <= 1 {
+    .callout[data-callout*="title-opacity-#{$i}"],
+    .callout[data-callout-metadata*="title-opacity-#{$i}"],
+    .callout[data-callout*="all-opacity-#{$i}"],
+    .callout[data-callout-metadata*="all-opacity-#{$i}"] {
+      .callout-title {
+        opacity: #{$i};
+      }
+    }
+    .callout[data-callout*="content-opacity-#{$i}"],
+    .callout[data-callout-metadata*="content-opacity-#{$i}"],
+    .callout[data-callout*="all-opacity-#{$i}"],
+    .callout[data-callout-metadata*="all-opacity-#{$i}"] {
+      .callout-content {
+        opacity: #{$i};
+      }
+    }
+    $i: $i + $increment;
+  }
+}
+@include opacity-wrapper(0.05);
 /* obsi-snip-coll end */

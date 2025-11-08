@@ -12,10 +12,8 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
 
-:root > html > body.flexcyon-flex-max-mode,
-:root
-  > html
-  > body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
+body.flexcyon-flex-max-mode,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
     border-top: unset;
     padding-top: 6px;
