@@ -2,6 +2,9 @@ body {
   --bases-no-img-str: "No image path could be found for this file";
   --bases-border-r: 16px;
   --bases-cards-group-padding: 16px;
+  --bases-embed-padding: 4px;
+  --bases-cards-cover-background: var(--background-secondary);
+  --bases-cards-scale: 1;
 
   --flexcyon-bases-card-padding-top: 8px;
   --flexcyon-bases-card-padding-right: 0px;
@@ -17,15 +20,13 @@ body {
   --input-padding: var(--flexcyon-input-verti-padding)
     var(--flexcyon-input-horiz-padding);
 
-  --bases-cards-cover-background: var(--background-secondary);
-
   --flexcyon-bases-card-flex-grow: 0.55;
   --flexcyon-bases-card-delay-factor: 12.5;
 
   --flexcyon-bases-padding-horiz: 16px;
   --flexcyon-bases-padding-verti: 16px;
-  --bases-embed-padding: 4px;
   --flexcyon-bases-td-padding-l: 2px;
+  --flexcyon-bases-table-content-alignment: left;
 }
 
 .workspace-leaf-content[data-type="bases"] .view-content {
@@ -41,8 +42,10 @@ body {
 }
 
 .bases-table {
-  margin-left: 1px;
   border-right: 0.5px solid var(--text-faint);
+}
+.bases-tr {
+  border-left: 0.5px solid var(--text-faint);
 }
 
 .bases-view {
@@ -167,17 +170,29 @@ div.bases-cards-cover:not([style*="background-image"]) {
     margin-left: 8px;
   }
 }
+
+.bases-table-cell .metadata-input-number,
+.bases-table-cell[data-property-type="number"] {
+  justify-content: var(--flexcyon-bases-table-content-alignment);
+}
+.bases-table-cell[data-property-type="checkbox"] {
+  justify-content: var(--flexcyon-bases-table-content-alignment);
+}
 .bases-table-cell {
   --input-placeholder-color: var(--color-red);
+  justify-content: var(--flexcyon-bases-table-content-alignment);
 }
 
-.bases-td .metadata-input-number,
-.bases-td[data-property-type="number"] {
-  text-align: left;
-  font-variant-numeric: tabular-nums;
+.bases-thead .bases-table-header {
+  justify-content: var(--flexcyon-bases-table-content-alignment);
 }
 
 .value-list-container:not(:has(.value-list-element))::before {
   content: "None found";
   color: var(--color-red);
+}
+.bases-rendered-value {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
