@@ -5007,50 +5007,6 @@ body .suggestion-item.mod-complex.is-selected .suggestion-prefix {
   padding: 2px 4px;
 }
 
-/* From https://css-loaders.com/wobbling/ */
-body > .progress-bar-container .progress-bar-indicator {
-  height: 97.0818px;
-  width: 60px;
-  color: var(--text-accent);
-  background:
-    repeating-linear-gradient(
-      calc(30deg + var(--flexcyon-editor-bg-rotation)),
-      currentColor,
-      currentColor 1px,
-      transparent 1px,
-      transparent var(--flexcyon-editor-bg-width)
-    ),
-    repeating-linear-gradient(
-      calc(150deg + var(--flexcyon-editor-bg-rotation)),
-      currentColor,
-      currentColor 1px,
-      transparent 1px,
-      transparent var(--flexcyon-editor-bg-width)
-    );
-  animation: buffer 0.65s infinite;
-  transform-origin: 50% 0px;
-}
-body > .progress-bar-container .progress-bar-indicator > * {
-  display: none;
-}
-
-@keyframes buffer {
-  0% {
-    background-position:
-      0%,
-      0 0;
-  }
-  50% {
-    background-position:
-      25%,
-      12.5px 0;
-  }
-  100% {
-    background-position:
-      50%,
-      12.5px 12.5px;
-  }
-}
 body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
@@ -15408,6 +15364,10 @@ body.flexcyon-status-style-pl10k
 }
 
 /* obsi-snip-coll start: ascii-art */
+body .empty-state-container {
+  content-visibility: auto;
+}
+
 body.theme-dark {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
@@ -15442,7 +15402,7 @@ body {
   /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                   /____/                \a\a\a ";
 }
-body div.empty-state-action {
+body div.empty-state-action-list {
   font-size: 1.05rem;
   color: var(--text-accent);
   opacity: 0.95;
@@ -15451,12 +15411,52 @@ body div.empty-state-title {
   font-size: 1.25rem;
 }
 
-body.flexcyon-flex-max-mode div.empty-state-title,
-body.flexcyon-ascii-enable div.empty-state-title {
+body.flexcyon-flex-max-mode .workspace-leaf > div > div > div.empty-state,
+body.flexcyon-ascii-enable .workspace-leaf > div > div > div.empty-state {
+  content-visibility: auto;
+}
+body.flexcyon-flex-max-mode
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-title,
+body.flexcyon-ascii-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-title {
   display: unset;
 }
-body.flexcyon-flex-max-mode div.empty-state-container::before,
-body.flexcyon-ascii-enable div.empty-state-container::before {
+body.flexcyon-flex-max-mode
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container,
+body.flexcyon-ascii-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container {
+  max-height: unset;
+  max-width: unset;
+  scale: var(--flexcyon-ascii-scaling-factor);
+}
+body.flexcyon-flex-max-mode
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before,
+body.flexcyon-ascii-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before {
   font-family: var(--font-interface);
   content: var(--flexcyon-ascii-art);
   font-weight: bold;
@@ -15470,31 +15470,56 @@ body.flexcyon-ascii-enable div.empty-state-container::before {
   display: inline;
   font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
 }
-body.flexcyon-flex-max-mode div.empty-state-container,
-body.flexcyon-ascii-enable div.empty-state-container {
-  max-height: unset;
-  max-width: unset;
-  scale: var(--flexcyon-ascii-scaling-factor);
-}
 
-body.is-mobile.flexcyon-flex-max-mode div.empty-state-container::before,
-body.is-mobile.flexcyon-ascii-enable div.empty-state-container::before {
+body.is-mobile.flexcyon-flex-max-mode
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before,
+body.is-mobile.flexcyon-ascii-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before {
   font-size: min(3vw - 3px, var(--flexcyon-ascii-max-font-size));
   margin-bottom: 1rem;
   line-height: 0.8;
 }
 
 /* obsi-snip-coll end */
-body.flexcyon-flex-max-mode div.empty-state-title,
-body.flexcyon-empty-state-title-disable div.empty-state-title {
+body.flexcyon-flex-max-mode
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-title,
+body.flexcyon-empty-state-title-disable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-title {
   display: none;
 }
 
-body.flexcyon-empty-state-actions-disable div.empty-state-action-list {
+body.flexcyon-empty-state-actions-disable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div
+  > div.empty-state-action-list {
   display: none;
 }
 
-body.flexcyon-quote-enable div.empty-state-container::before {
+body.flexcyon-quote-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before {
   font-family: var(--font-interface);
   content: var(--flexcyon-quote-val) "\a\a" var(--flexcyon-quote-credit-prefix)
     " " var(--flexcyon-quote-credit);
@@ -15508,15 +15533,30 @@ body.flexcyon-quote-enable div.empty-state-container::before {
   display: inline;
   font-size: var(--flexcyon-quote-font-size);
 }
-body.flexcyon-quote-enable div.empty-state-container {
+body.flexcyon-quote-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container {
   transform: translateY(-105px);
 }
-body.flexcyon-quote-enable div.empty-state-action-list {
+body.flexcyon-quote-enable
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container
+  > div.empty-state-action-list {
   margin-top: 32px;
 }
 
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  div.empty-state-container::before {
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-container::before {
   content: "0" !important;
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
   font-family: var(--font-interface);
@@ -15531,10 +15571,19 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
   display: inline;
 }
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
-  div.empty-state-action-list {
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > div.empty-state-action-list {
   display: none;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .sidebar-toggle-button {
+body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode)
+  .workspace-leaf
+  > div
+  > div
+  > div.empty-state
+  > .sidebar-toggle-button {
   display: none;
 }
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls,
@@ -17864,7 +17913,7 @@ settings:
     id: flexcyon-empty-state-actions-disable
     description: Toggle the empty state actions
     type: class-toggle
-    default: false
+    default: true
 
   - title: Side Dock
     type: heading
