@@ -2,6 +2,22 @@ body {
   --flexcyon-style-settings-indent-width: 4px;
 }
 
+body:not(.css-settings-manager) .app-container::after {
+  content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
+  z-index: 999;
+  background-color: var(--background-primary);
+  font-size: var(--font-ui-large);
+  justify-content: center;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 85%;
+  right: 2px;
+  left: calc(0px * 2);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
 /* @settings
 name: Flexcyon Style Settings 
 id: flexcyon
@@ -10,7 +26,7 @@ settings:
     title: About 
     type: info-text
     markdown: true
-    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). There are some **legacy style settings** options kept for backwards compatibility, but if given the choice an option's new equivalent should be preferred.<br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
+    description: Flexcyon is a theme based around the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). <br><br>It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
   -
     title: Documentation 
     type: info-text

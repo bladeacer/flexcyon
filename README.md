@@ -77,11 +77,7 @@ A huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.g
 
 ## Features
 
-[Here is a web showcase](https://share.note.sx/j4wqojpy#xi8TbTY58w4JaoiHcPdRJA+V60W3jT0qDoLyUhkTE3U)
-of the features this theme has to offer.
-
-- Some features will not have a 1 to 1 correspondence to the main theme, but
-  this site should give you a preview of how the theme looks before installing it
+Refer to the documentation for the full set of features in Flexcyon.
 
 #### What this theme has
 
