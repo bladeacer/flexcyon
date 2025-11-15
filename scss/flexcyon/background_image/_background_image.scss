@@ -1,98 +1,69 @@
 body {
-  image-rendering: auto;
   --flexcyon-bg-image-sidebar-left-url: url("");
   --flexcyon-bg-image-sidebar-right-url: url("");
   --flexcyon-bg-image-blend-mode: darken;
   --flexcyon-bg-image-repeat: no-repeat;
   --flexcyon-bg-image-blur: 0px;
   --flexcyon-bg-image-brightness: unset;
-  --flexcyon-bg-image-size: contain;
+  --flexcyon-bg-image-size: cover;
   --flexcyon-bg-image-position: center;
 
   --flexcyon-modal-bg-url: url("");
-  --flexcyon-modal-image-blend-mode: lighten;
+  --flexcyon-modal-image-blend-mode: darken;
   --flexcyon-modal-image-repeat: no-repeat;
   --flexcyon-modal-image-blur: 0px;
-  --flexcyon-modal-image-brightness: unset;
+  --flexcyon-modal-image-brightness: 2;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
   --flexcyon-modal-dark-intensity: 1;
 
-  --nav-item-background-hover: transparent;
-
-  .mod-left-split .workspace-leaf-content {
-    background-image: var(--flexcyon-bg-image-sidebar-left-url);
-    background-size: var(--flexcyon-bg-image-size);
-    background-position: var(--flexcyon-bg-image-position);
-    background-blend-mode: var(--flexcyon-bg-image-blend-mode);
-    background-color: var(--color-base-05);
-
-    * {
-      backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
-        blur(var(--flexcyon-bg-image-blur));
-    }
-
-    div.oz-nav-buttons-right-block {
-      backdrop-filter: none;
-    }
-    .tree-item-self.is-clickable:hover {
-      background-color: var(--nav-item-background-hover);
-    }
-  }
-
-  .mod-right-split .workspace-leaf-content {
-    background-image: var(--flexcyon-bg-image-sidebar-right-url);
-    background-size: var(--flexcyon-bg-image-size);
-    background-position: var(--flexcyon-bg-image-position);
-    background-blend-mode: var(--flexcyon-bg-image-blend-mode);
-    background-color: var(--color-base-05);
-
-    * {
-      backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
-        blur(var(--flexcyon-bg-image-blur));
-    }
-
-    div.oz-nav-buttons-right-block {
-      backdrop-filter: none;
-    }
-  }
-
   @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-    .mod-left-split {
-      .oz-folders-action-items *,
-      .oz-flex-container *,
-      .fc *,
-      .fc,
-      .nav-header *,
-      .tree-item,
-      .tree-item-self,
-      .tree-item-inner,
-      .tree-item-children {
-        backdrop-filter: none;
+    .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      background-color: var(--color-base-05);
+    }
+  }
+  @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+    .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      background-color: var(--color-base-05);
+    }
+  }
+
+  @container not style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+    .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      background-image: var(--flexcyon-bg-image-sidebar-left-url);
+      background-size: var(--flexcyon-bg-image-size);
+      background-position: var(--flexcyon-bg-image-position);
+      background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+      --nav-item-background-hover: transparent;
+      image-rendering: auto;
+
+      > div {
+        backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
+          blur(var(--flexcyon-bg-image-blur));
       }
-      .tree-item-inner,
-      .tree-item-icon::before {
-        background-color: transparent;
+
+      > div.oz-nav-buttons-right-block {
+        backdrop-filter: none;
       }
     }
   }
 
-  @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-    .mod-right-split {
-      .oz-folders-action-items *,
-      .oz-flex-container *,
-      .fc *,
-      .fc,
-      .nav-header *,
-      .tree-item,
-      .tree-item-self,
-      .tree-item-inner,
-      .tree-item-children {
-        backdrop-filter: none;
+  @container not style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+    .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      background-image: var(--flexcyon-bg-image-sidebar-right-url);
+      background-size: var(--flexcyon-bg-image-size);
+      background-position: var(--flexcyon-bg-image-position);
+      background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+      --nav-item-background-hover: transparent;
+      image-rendering: auto;
+
+      > div {
+        backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
+          blur(var(--flexcyon-bg-image-blur));
       }
-      .tree-item-inner,
-      .tree-item-icon::before {
-        background-color: transparent;
+
+      > div.oz-nav-buttons-right-block {
+        backdrop-filter: none;
       }
     }
   }
@@ -103,6 +74,8 @@ body {
     background-position: var(--flexcyon-modal-image-position);
     background-blend-mode: var(--flexcyon-modal-image-blend-mode);
     opacity: var(--flexcyon-modal-dark-intensity) !important;
+
+    image-rendering: auto;
 
     filter: brightness(var(--flexcyon-modal-image-brightness))
       blur(var(--flexcyon-modal-image-blur));

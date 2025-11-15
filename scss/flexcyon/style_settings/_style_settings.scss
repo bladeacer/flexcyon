@@ -2169,7 +2169,7 @@ settings:
   - title: Sidebar Background image size
     id: flexcyon-bg-image-size
     type: variable-text
-    default: contain
+    default: cover
   - title: Sidebar Background image position
     id: flexcyon-bg-image-position
     type: variable-text
@@ -2187,7 +2187,7 @@ settings:
   - title: Modal background image blend mode
     id: flexcyon-modal-image-blend-mode
     type: variable-text
-    default: lighten
+    default: darken
   - title: Modal Background image repeat
     id: flexcyon-modal-image-repeat
     type: variable-text

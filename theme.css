@@ -13487,6 +13487,7 @@ body.flexcyon-vertical-nav
 
 body {
   --flexcyon-active-indicator: ">> ";
+  --flexcyon-exp-dimmed-nav-size: 13.36227px;
 }
 
 body.flexcyon-flex-max-mode .tree-item-inner,
@@ -13496,33 +13497,111 @@ body.flexcyon-wrap-long-filenames .tree-item-inner {
   text-overflow: clip;
 }
 
-body.flexcyon-flex-max-mode div[data-path$=".md"] div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled
+body.flexcyon-flex-max-mode
+  .nav-files-container
+  > div
+  > div
   div[data-path$=".md"]
-  div.nav-file-tag {
+  > div.nav-file-tag,
+body.flexcyon-flex-max-mode
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div[data-path$=".md"]
+  > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-files-container
+  > div
+  > div
+  div[data-path$=".md"]
+  > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div[data-path$=".md"]
+  > div.nav-file-tag {
   display: none;
 }
 body.flexcyon-flex-max-mode
-  div[data-path$=".md"]
-  div.nav-file-title-content::after,
+  .nav-files-container
+  > div
+  > div
+  div[data-path$=".md"]::after,
+body.flexcyon-flex-max-mode
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div[data-path$=".md"]::after,
 body.flexcyon-file-exp-dimmed-file-exts-enabled
-  div[data-path$=".md"]
-  div.nav-file-title-content::after {
+  .nav-files-container
+  > div
+  > div
+  div[data-path$=".md"]::after,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div[data-path$=".md"]::after {
   content: ".md";
   opacity: var(--dimmed);
 }
-body.flexcyon-flex-max-mode div div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag {
+body.flexcyon-flex-max-mode
+  .nav-files-container
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag,
+body.flexcyon-flex-max-mode
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-files-container
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag {
+  color: var(--text-muted);
   opacity: var(--dimmed);
-  background-color: unset;
   text-transform: lowercase;
-  font-size: calc(var(--nav-item-size) - 0.075rem);
+  font-size: var(--flexcyon-exp-dimmed-nav-size);
   margin: unset;
   padding: unset;
   font-weight: unset;
 }
-body.flexcyon-flex-max-mode div div.nav-file-tag::before,
-body.flexcyon-file-exp-dimmed-file-exts-enabled div div.nav-file-tag::before {
+body.flexcyon-flex-max-mode
+  .nav-files-container
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag::before,
+body.flexcyon-flex-max-mode
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag::before,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-files-container
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag::before,
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .nav-folder:not(.is-collapsed)
+  > div
+  > div
+  div:not([data-path$=".md"])
+  > div.nav-file-tag::before {
   content: ".";
 }
 
@@ -17890,7 +17969,7 @@ settings:
   - title: Sidebar Background image size
     id: flexcyon-bg-image-size
     type: variable-text
-    default: contain
+    default: cover
   - title: Sidebar Background image position
     id: flexcyon-bg-image-position
     type: variable-text
@@ -17908,7 +17987,7 @@ settings:
   - title: Modal background image blend mode
     id: flexcyon-modal-image-blend-mode
     type: variable-text
-    default: lighten
+    default: darken
   - title: Modal Background image repeat
     id: flexcyon-modal-image-repeat
     type: variable-text
@@ -18147,91 +18226,77 @@ body .setting-item:not(.is-collapsed).setting-item-heading {
 }
 
 body {
-  image-rendering: auto;
   --flexcyon-bg-image-sidebar-left-url: url("");
   --flexcyon-bg-image-sidebar-right-url: url("");
   --flexcyon-bg-image-blend-mode: darken;
   --flexcyon-bg-image-repeat: no-repeat;
   --flexcyon-bg-image-blur: 0px;
   --flexcyon-bg-image-brightness: unset;
-  --flexcyon-bg-image-size: contain;
+  --flexcyon-bg-image-size: cover;
   --flexcyon-bg-image-position: center;
   --flexcyon-modal-bg-url: url("");
-  --flexcyon-modal-image-blend-mode: lighten;
+  --flexcyon-modal-image-blend-mode: darken;
   --flexcyon-modal-image-repeat: no-repeat;
   --flexcyon-modal-image-blur: 0px;
-  --flexcyon-modal-image-brightness: unset;
+  --flexcyon-modal-image-brightness: 2;
   --flexcyon-modal-image-size: cover;
   --flexcyon-modal-image-position: center;
   --flexcyon-modal-dark-intensity: 1;
-  --nav-item-background-hover: transparent;
-}
-body .mod-left-split .workspace-leaf-content {
-  background-image: var(--flexcyon-bg-image-sidebar-left-url);
-  background-size: var(--flexcyon-bg-image-size);
-  background-position: var(--flexcyon-bg-image-position);
-  background-blend-mode: var(--flexcyon-bg-image-blend-mode);
-  background-color: var(--color-base-05);
-}
-body .mod-left-split .workspace-leaf-content * {
-  backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
-    blur(var(--flexcyon-bg-image-blur));
-}
-body .mod-left-split .workspace-leaf-content div.oz-nav-buttons-right-block {
-  backdrop-filter: none;
-}
-body
-  .mod-left-split
-  .workspace-leaf-content
-  .tree-item-self.is-clickable:hover {
-  background-color: var(--nav-item-background-hover);
-}
-body .mod-right-split .workspace-leaf-content {
-  background-image: var(--flexcyon-bg-image-sidebar-right-url);
-  background-size: var(--flexcyon-bg-image-size);
-  background-position: var(--flexcyon-bg-image-position);
-  background-blend-mode: var(--flexcyon-bg-image-blend-mode);
-  background-color: var(--color-base-05);
-}
-body .mod-right-split .workspace-leaf-content * {
-  backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
-    blur(var(--flexcyon-bg-image-blur));
-}
-body .mod-right-split .workspace-leaf-content div.oz-nav-buttons-right-block {
-  backdrop-filter: none;
 }
 @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
-  body .mod-left-split .oz-folders-action-items *,
-  body .mod-left-split .oz-flex-container *,
-  body .mod-left-split .fc *,
-  body .mod-left-split .fc,
-  body .mod-left-split .nav-header *,
-  body .mod-left-split .tree-item,
-  body .mod-left-split .tree-item-self,
-  body .mod-left-split .tree-item-inner,
-  body .mod-left-split .tree-item-children {
-    backdrop-filter: none;
-  }
-  body .mod-left-split .tree-item-inner,
-  body .mod-left-split .tree-item-icon::before {
-    background-color: transparent;
+  body .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+    background-color: var(--color-base-05);
   }
 }
 @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
-  body .mod-right-split .oz-folders-action-items *,
-  body .mod-right-split .oz-flex-container *,
-  body .mod-right-split .fc *,
-  body .mod-right-split .fc,
-  body .mod-right-split .nav-header *,
-  body .mod-right-split .tree-item,
-  body .mod-right-split .tree-item-self,
-  body .mod-right-split .tree-item-inner,
-  body .mod-right-split .tree-item-children {
+  body .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+    background-color: var(--color-base-05);
+  }
+}
+@container not style(--flexcyon-bg-image-sidebar-left-url: url("")) {
+  body .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+    background-image: var(--flexcyon-bg-image-sidebar-left-url);
+    background-size: var(--flexcyon-bg-image-size);
+    background-position: var(--flexcyon-bg-image-position);
+    background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+    --nav-item-background-hover: transparent;
+    image-rendering: auto;
+  }
+  body
+    .mod-left-split:not(.is-sidedock-collapsed)
+    .workspace-leaf-content
+    > div {
+    backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
+      blur(var(--flexcyon-bg-image-blur));
+  }
+  body
+    .mod-left-split:not(.is-sidedock-collapsed)
+    .workspace-leaf-content
+    > div.oz-nav-buttons-right-block {
     backdrop-filter: none;
   }
-  body .mod-right-split .tree-item-inner,
-  body .mod-right-split .tree-item-icon::before {
-    background-color: transparent;
+}
+@container not style(--flexcyon-bg-image-sidebar-right-url: url("")) {
+  body .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+    background-image: var(--flexcyon-bg-image-sidebar-right-url);
+    background-size: var(--flexcyon-bg-image-size);
+    background-position: var(--flexcyon-bg-image-position);
+    background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+    --nav-item-background-hover: transparent;
+    image-rendering: auto;
+  }
+  body
+    .mod-right-split:not(.is-sidedock-collapsed)
+    .workspace-leaf-content
+    > div {
+    backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
+      blur(var(--flexcyon-bg-image-blur));
+  }
+  body
+    .mod-right-split:not(.is-sidedock-collapsed)
+    .workspace-leaf-content
+    > div.oz-nav-buttons-right-block {
+    backdrop-filter: none;
   }
 }
 body .modal-bg {
@@ -18240,6 +18305,7 @@ body .modal-bg {
   background-position: var(--flexcyon-modal-image-position);
   background-blend-mode: var(--flexcyon-modal-image-blend-mode);
   opacity: var(--flexcyon-modal-dark-intensity) !important;
+  image-rendering: auto;
   filter: brightness(var(--flexcyon-modal-image-brightness))
     blur(var(--flexcyon-modal-image-blur));
 }
