@@ -32,3 +32,21 @@ body {
     width: 28px;
   }
 }
+
+@mixin slides-number-wrapper($slide-no, $max-slides) {
+  @for $i from $slide-no through ($max-slides + 1) {
+    .slides-container
+      .backgrounds
+      :nth-of-type(#{$max-slides}n + #{$i}).present
+      .slide-background-content::before {
+      content: "Page #{$i}";
+      padding: 4px 14px;
+      top: 8px;
+      color: var(--text-accent);
+      font-size: var(--font-ui-medium);
+      position: absolute;
+    }
+  }
+}
+
+@include slides-number-wrapper(1, 99);

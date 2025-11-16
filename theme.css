@@ -19624,6 +19624,1206 @@ body {
   width: 28px;
 }
 
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 1).present
+  .slide-background-content::before {
+  content: "Page 1";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 2).present
+  .slide-background-content::before {
+  content: "Page 2";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 3).present
+  .slide-background-content::before {
+  content: "Page 3";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 4).present
+  .slide-background-content::before {
+  content: "Page 4";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 5).present
+  .slide-background-content::before {
+  content: "Page 5";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 6).present
+  .slide-background-content::before {
+  content: "Page 6";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 7).present
+  .slide-background-content::before {
+  content: "Page 7";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 8).present
+  .slide-background-content::before {
+  content: "Page 8";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 9).present
+  .slide-background-content::before {
+  content: "Page 9";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 10).present
+  .slide-background-content::before {
+  content: "Page 10";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 11).present
+  .slide-background-content::before {
+  content: "Page 11";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 12).present
+  .slide-background-content::before {
+  content: "Page 12";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 13).present
+  .slide-background-content::before {
+  content: "Page 13";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 14).present
+  .slide-background-content::before {
+  content: "Page 14";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 15).present
+  .slide-background-content::before {
+  content: "Page 15";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 16).present
+  .slide-background-content::before {
+  content: "Page 16";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 17).present
+  .slide-background-content::before {
+  content: "Page 17";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 18).present
+  .slide-background-content::before {
+  content: "Page 18";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 19).present
+  .slide-background-content::before {
+  content: "Page 19";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 20).present
+  .slide-background-content::before {
+  content: "Page 20";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 21).present
+  .slide-background-content::before {
+  content: "Page 21";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 22).present
+  .slide-background-content::before {
+  content: "Page 22";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 23).present
+  .slide-background-content::before {
+  content: "Page 23";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 24).present
+  .slide-background-content::before {
+  content: "Page 24";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 25).present
+  .slide-background-content::before {
+  content: "Page 25";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 26).present
+  .slide-background-content::before {
+  content: "Page 26";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 27).present
+  .slide-background-content::before {
+  content: "Page 27";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 28).present
+  .slide-background-content::before {
+  content: "Page 28";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 29).present
+  .slide-background-content::before {
+  content: "Page 29";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 30).present
+  .slide-background-content::before {
+  content: "Page 30";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 31).present
+  .slide-background-content::before {
+  content: "Page 31";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 32).present
+  .slide-background-content::before {
+  content: "Page 32";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 33).present
+  .slide-background-content::before {
+  content: "Page 33";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 34).present
+  .slide-background-content::before {
+  content: "Page 34";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 35).present
+  .slide-background-content::before {
+  content: "Page 35";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 36).present
+  .slide-background-content::before {
+  content: "Page 36";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 37).present
+  .slide-background-content::before {
+  content: "Page 37";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 38).present
+  .slide-background-content::before {
+  content: "Page 38";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 39).present
+  .slide-background-content::before {
+  content: "Page 39";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 40).present
+  .slide-background-content::before {
+  content: "Page 40";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 41).present
+  .slide-background-content::before {
+  content: "Page 41";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 42).present
+  .slide-background-content::before {
+  content: "Page 42";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 43).present
+  .slide-background-content::before {
+  content: "Page 43";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 44).present
+  .slide-background-content::before {
+  content: "Page 44";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 45).present
+  .slide-background-content::before {
+  content: "Page 45";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 46).present
+  .slide-background-content::before {
+  content: "Page 46";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 47).present
+  .slide-background-content::before {
+  content: "Page 47";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 48).present
+  .slide-background-content::before {
+  content: "Page 48";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 49).present
+  .slide-background-content::before {
+  content: "Page 49";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 50).present
+  .slide-background-content::before {
+  content: "Page 50";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 51).present
+  .slide-background-content::before {
+  content: "Page 51";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 52).present
+  .slide-background-content::before {
+  content: "Page 52";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 53).present
+  .slide-background-content::before {
+  content: "Page 53";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 54).present
+  .slide-background-content::before {
+  content: "Page 54";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 55).present
+  .slide-background-content::before {
+  content: "Page 55";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 56).present
+  .slide-background-content::before {
+  content: "Page 56";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 57).present
+  .slide-background-content::before {
+  content: "Page 57";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 58).present
+  .slide-background-content::before {
+  content: "Page 58";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 59).present
+  .slide-background-content::before {
+  content: "Page 59";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 60).present
+  .slide-background-content::before {
+  content: "Page 60";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 61).present
+  .slide-background-content::before {
+  content: "Page 61";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 62).present
+  .slide-background-content::before {
+  content: "Page 62";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 63).present
+  .slide-background-content::before {
+  content: "Page 63";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 64).present
+  .slide-background-content::before {
+  content: "Page 64";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 65).present
+  .slide-background-content::before {
+  content: "Page 65";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 66).present
+  .slide-background-content::before {
+  content: "Page 66";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 67).present
+  .slide-background-content::before {
+  content: "Page 67";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 68).present
+  .slide-background-content::before {
+  content: "Page 68";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 69).present
+  .slide-background-content::before {
+  content: "Page 69";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 70).present
+  .slide-background-content::before {
+  content: "Page 70";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 71).present
+  .slide-background-content::before {
+  content: "Page 71";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 72).present
+  .slide-background-content::before {
+  content: "Page 72";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 73).present
+  .slide-background-content::before {
+  content: "Page 73";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 74).present
+  .slide-background-content::before {
+  content: "Page 74";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 75).present
+  .slide-background-content::before {
+  content: "Page 75";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 76).present
+  .slide-background-content::before {
+  content: "Page 76";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 77).present
+  .slide-background-content::before {
+  content: "Page 77";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 78).present
+  .slide-background-content::before {
+  content: "Page 78";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 79).present
+  .slide-background-content::before {
+  content: "Page 79";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 80).present
+  .slide-background-content::before {
+  content: "Page 80";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 81).present
+  .slide-background-content::before {
+  content: "Page 81";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 82).present
+  .slide-background-content::before {
+  content: "Page 82";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 83).present
+  .slide-background-content::before {
+  content: "Page 83";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 84).present
+  .slide-background-content::before {
+  content: "Page 84";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 85).present
+  .slide-background-content::before {
+  content: "Page 85";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 86).present
+  .slide-background-content::before {
+  content: "Page 86";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 87).present
+  .slide-background-content::before {
+  content: "Page 87";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 88).present
+  .slide-background-content::before {
+  content: "Page 88";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 89).present
+  .slide-background-content::before {
+  content: "Page 89";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 90).present
+  .slide-background-content::before {
+  content: "Page 90";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 91).present
+  .slide-background-content::before {
+  content: "Page 91";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 92).present
+  .slide-background-content::before {
+  content: "Page 92";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 93).present
+  .slide-background-content::before {
+  content: "Page 93";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 94).present
+  .slide-background-content::before {
+  content: "Page 94";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 95).present
+  .slide-background-content::before {
+  content: "Page 95";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 96).present
+  .slide-background-content::before {
+  content: "Page 96";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 97).present
+  .slide-background-content::before {
+  content: "Page 97";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 98).present
+  .slide-background-content::before {
+  content: "Page 98";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 99).present
+  .slide-background-content::before {
+  content: "Page 99";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
+.slides-container
+  .backgrounds
+  :nth-of-type(99n + 100).present
+  .slide-background-content::before {
+  content: "Page 100";
+  padding: 4px 14px;
+  top: 8px;
+  color: var(--text-accent);
+  font-size: var(--font-ui-medium);
+  position: absolute;
+}
+
 .plugin-tasks-list-item .task-list-item-checkbox {
   transform: translateY(2px);
 }
