@@ -2,6 +2,7 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
+  --icon-xs: 12.25px;
   --dimmed: 0.55;
   --upsize: 103%;
   --expand: 110%;
@@ -592,4 +593,31 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
       opacity: 0;
     }
   }
+}
+
+// body.flexcyon-stylised-pins
+body
+  :is(.mod-left-split, .mod-right-split)
+  .workspace-tab-header-container-inner {
+  .workspace-tab-header-inner-icon
+    + div
+    + div.workspace-tab-header-status-container {
+    width: 0px;
+  }
+  .workspace-tab-header-inner-icon
+    + div
+    + div.workspace-tab-header-status-container
+    .mod-pinned {
+    --icon-size: var(--icon-xs);
+    transform: translate(-3px, -11px);
+    color: var(--color-accent-2);
+  }
+}
+
+.mod-root .workspace-tab-header-status-icon {
+  color: var(--color-accent-2);
+}
+
+body.flexcyon-reverse-tab-header-content .workspace-tab-header-inner {
+  flex-direction: row-reverse;
 }

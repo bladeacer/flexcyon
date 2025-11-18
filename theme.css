@@ -3327,6 +3327,7 @@ body span.cm-blockid {
 }
 
 body {
+  --icon-xs: 12.25px;
   --dimmed: 0.55;
   --upsize: 103%;
   --expand: 110%;
@@ -4519,6 +4520,34 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon)
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*="iconic"])
   .search-input-clear-button::after {
   opacity: 0;
+}
+
+body
+  :is(.mod-left-split, .mod-right-split)
+  .workspace-tab-header-container-inner
+  .workspace-tab-header-inner-icon
+  + div
+  + div.workspace-tab-header-status-container {
+  width: 0px;
+}
+body
+  :is(.mod-left-split, .mod-right-split)
+  .workspace-tab-header-container-inner
+  .workspace-tab-header-inner-icon
+  + div
+  + div.workspace-tab-header-status-container
+  .mod-pinned {
+  --icon-size: var(--icon-xs);
+  transform: translate(-3px, -11px);
+  color: var(--color-accent-2);
+}
+
+.mod-root .workspace-tab-header-status-icon {
+  color: var(--color-accent-2);
+}
+
+body.flexcyon-reverse-tab-header-content .workspace-tab-header-inner {
+  flex-direction: row-reverse;
 }
 
 body {
@@ -19590,20 +19619,42 @@ audio {
 }
 
 body {
-  --r-heading-text-transform: capitalize;
   --r-main-font: var(--font-text);
   --r-main-font-size: max-content;
+  --r-background-color: var(--color-base-05);
+  --r-heading-text-transform: capitalize;
   --r-heading-color: var(--text-normal);
   --r-heading-margin: 16px 0px;
+  --r-link-color: var(--text-accent);
+  --r-heading1-size: var(--h1-size);
+  --r-heading2-size: var(--h2-size);
+  --r-heading3-size: var(--h3-size);
+  --r-heading4-size: var(--h4-size);
+}
+
+.reveal .controls button {
+  color: var(--text-accent);
+  box-shadow: none;
+}
+
+.reveal.center,
+.reveal.center .slides,
+.reveal.center .slides section {
+  max-height: 100%;
+}
+
+.slides-container {
+  overflow: hidden;
+}
+
+.reveal .slides > section.present,
+.reveal .slides > section > section.present {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .reveal .slides {
-  overflow-x: hidden;
-  overflow-y: scroll;
   text-align: left;
-}
-.reveal .slides span[alt="banner"] img {
-  transform: translateY(-150px);
 }
 .reveal .slides input[type="checkbox"] {
   width: 16px;
@@ -19612,11 +19663,18 @@ body {
 
 .reveal blockquote {
   padding: 4px 12px;
-  margin: var(--r-block-margin) 0px;
+  margin: var(--r-block-margin) 2px;
+  background-color: var(--color-base-20);
+  width: 90%;
 }
 
 .reveal li {
   margin: var(--r-block-margin);
+}
+
+.reveal pre {
+  margin: var(--r-block-margin) 2px;
+  font-size: var(--font-ui-medium);
 }
 
 .slides-close-btn svg.svg-icon {
@@ -19631,7 +19689,7 @@ body {
   content: "Page 1";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19643,7 +19701,7 @@ body {
   content: "Page 2";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19655,7 +19713,7 @@ body {
   content: "Page 3";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19667,7 +19725,7 @@ body {
   content: "Page 4";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19679,7 +19737,7 @@ body {
   content: "Page 5";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19691,7 +19749,7 @@ body {
   content: "Page 6";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19703,7 +19761,7 @@ body {
   content: "Page 7";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19715,7 +19773,7 @@ body {
   content: "Page 8";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19727,7 +19785,7 @@ body {
   content: "Page 9";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19739,7 +19797,7 @@ body {
   content: "Page 10";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19751,7 +19809,7 @@ body {
   content: "Page 11";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19763,7 +19821,7 @@ body {
   content: "Page 12";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19775,7 +19833,7 @@ body {
   content: "Page 13";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19787,7 +19845,7 @@ body {
   content: "Page 14";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19799,7 +19857,7 @@ body {
   content: "Page 15";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19811,7 +19869,7 @@ body {
   content: "Page 16";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19823,7 +19881,7 @@ body {
   content: "Page 17";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19835,7 +19893,7 @@ body {
   content: "Page 18";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19847,7 +19905,7 @@ body {
   content: "Page 19";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19859,7 +19917,7 @@ body {
   content: "Page 20";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19871,7 +19929,7 @@ body {
   content: "Page 21";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19883,7 +19941,7 @@ body {
   content: "Page 22";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19895,7 +19953,7 @@ body {
   content: "Page 23";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19907,7 +19965,7 @@ body {
   content: "Page 24";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19919,7 +19977,7 @@ body {
   content: "Page 25";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19931,7 +19989,7 @@ body {
   content: "Page 26";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19943,7 +20001,7 @@ body {
   content: "Page 27";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19955,7 +20013,7 @@ body {
   content: "Page 28";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19967,7 +20025,7 @@ body {
   content: "Page 29";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19979,7 +20037,7 @@ body {
   content: "Page 30";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -19991,7 +20049,7 @@ body {
   content: "Page 31";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20003,7 +20061,7 @@ body {
   content: "Page 32";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20015,7 +20073,7 @@ body {
   content: "Page 33";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20027,7 +20085,7 @@ body {
   content: "Page 34";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20039,7 +20097,7 @@ body {
   content: "Page 35";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20051,7 +20109,7 @@ body {
   content: "Page 36";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20063,7 +20121,7 @@ body {
   content: "Page 37";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20075,7 +20133,7 @@ body {
   content: "Page 38";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20087,7 +20145,7 @@ body {
   content: "Page 39";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20099,7 +20157,7 @@ body {
   content: "Page 40";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20111,7 +20169,7 @@ body {
   content: "Page 41";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20123,7 +20181,7 @@ body {
   content: "Page 42";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20135,7 +20193,7 @@ body {
   content: "Page 43";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20147,7 +20205,7 @@ body {
   content: "Page 44";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20159,7 +20217,7 @@ body {
   content: "Page 45";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20171,7 +20229,7 @@ body {
   content: "Page 46";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20183,7 +20241,7 @@ body {
   content: "Page 47";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20195,7 +20253,7 @@ body {
   content: "Page 48";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20207,7 +20265,7 @@ body {
   content: "Page 49";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20219,7 +20277,7 @@ body {
   content: "Page 50";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20231,7 +20289,7 @@ body {
   content: "Page 51";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20243,7 +20301,7 @@ body {
   content: "Page 52";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20255,7 +20313,7 @@ body {
   content: "Page 53";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20267,7 +20325,7 @@ body {
   content: "Page 54";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20279,7 +20337,7 @@ body {
   content: "Page 55";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20291,7 +20349,7 @@ body {
   content: "Page 56";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20303,7 +20361,7 @@ body {
   content: "Page 57";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20315,7 +20373,7 @@ body {
   content: "Page 58";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20327,7 +20385,7 @@ body {
   content: "Page 59";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20339,7 +20397,7 @@ body {
   content: "Page 60";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20351,7 +20409,7 @@ body {
   content: "Page 61";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20363,7 +20421,7 @@ body {
   content: "Page 62";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20375,7 +20433,7 @@ body {
   content: "Page 63";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20387,7 +20445,7 @@ body {
   content: "Page 64";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20399,7 +20457,7 @@ body {
   content: "Page 65";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20411,7 +20469,7 @@ body {
   content: "Page 66";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20423,7 +20481,7 @@ body {
   content: "Page 67";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20435,7 +20493,7 @@ body {
   content: "Page 68";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20447,7 +20505,7 @@ body {
   content: "Page 69";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20459,7 +20517,7 @@ body {
   content: "Page 70";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20471,7 +20529,7 @@ body {
   content: "Page 71";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20483,7 +20541,7 @@ body {
   content: "Page 72";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20495,7 +20553,7 @@ body {
   content: "Page 73";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20507,7 +20565,7 @@ body {
   content: "Page 74";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20519,7 +20577,7 @@ body {
   content: "Page 75";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20531,7 +20589,7 @@ body {
   content: "Page 76";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20543,7 +20601,7 @@ body {
   content: "Page 77";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20555,7 +20613,7 @@ body {
   content: "Page 78";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20567,7 +20625,7 @@ body {
   content: "Page 79";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20579,7 +20637,7 @@ body {
   content: "Page 80";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20591,7 +20649,7 @@ body {
   content: "Page 81";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20603,7 +20661,7 @@ body {
   content: "Page 82";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20615,7 +20673,7 @@ body {
   content: "Page 83";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20627,7 +20685,7 @@ body {
   content: "Page 84";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20639,7 +20697,7 @@ body {
   content: "Page 85";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20651,7 +20709,7 @@ body {
   content: "Page 86";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20663,7 +20721,7 @@ body {
   content: "Page 87";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20675,7 +20733,7 @@ body {
   content: "Page 88";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20687,7 +20745,7 @@ body {
   content: "Page 89";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20699,7 +20757,7 @@ body {
   content: "Page 90";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20711,7 +20769,7 @@ body {
   content: "Page 91";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20723,7 +20781,7 @@ body {
   content: "Page 92";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20735,7 +20793,7 @@ body {
   content: "Page 93";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20747,7 +20805,7 @@ body {
   content: "Page 94";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20759,7 +20817,7 @@ body {
   content: "Page 95";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20771,7 +20829,7 @@ body {
   content: "Page 96";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20783,7 +20841,7 @@ body {
   content: "Page 97";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20795,7 +20853,7 @@ body {
   content: "Page 98";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20807,7 +20865,7 @@ body {
   content: "Page 99";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
@@ -20819,7 +20877,7 @@ body {
   content: "Page 100";
   padding: 4px 14px;
   top: 8px;
-  color: var(--text-accent);
+  color: var(--text-normal);
   font-size: var(--font-ui-medium);
   position: absolute;
 }
