@@ -1658,6 +1658,11 @@ settings:
     id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: false
+  - title: Stylised pin icons
+    id: flexcyon-stylised-pins
+    description: Stylise pin icons in the sidebars
+    type: class-toggle
+    default: true
 
   - title: Settings
     type: heading

@@ -595,8 +595,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 }
 
-// body.flexcyon-stylised-pins
-body
+body.flexcyon-stylised-pins
   :is(.mod-left-split, .mod-right-split)
   .workspace-tab-header-container-inner {
   .workspace-tab-header-inner-icon
@@ -610,6 +609,24 @@ body
     .mod-pinned {
     --icon-size: var(--icon-xs);
     transform: translate(-3px, -11px);
+    color: var(--color-accent-2);
+  }
+}
+
+body.flexcyon-stylised-pins.flexcyon-vertical-nav
+  :is(.mod-left-split, .mod-right-split)
+  .workspace-tab-header-container-inner {
+  .workspace-tab-header-inner-icon:has(
+      + div + div.workspace-tab-header-status-container > .mod-pinned
+    ) {
+    transform: translateY(8px);
+  }
+  .workspace-tab-header-inner-icon
+    + div
+    + div.workspace-tab-header-status-container
+    .mod-pinned {
+    --icon-size: var(--icon-xs);
+    transform: translate(5px, -22px);
     color: var(--color-accent-2);
   }
 }

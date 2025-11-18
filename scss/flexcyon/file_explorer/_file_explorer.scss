@@ -6,12 +6,13 @@ body {
 body.flexcyon-flex-max-mode,
 body.flexcyon-wrap-long-filenames {
   .tree-item-inner {
-    white-space: normal;
+    white-space: collapse;
     overflow: visible;
     text-overflow: clip;
   }
 }
 
+// TODO: Better handle file name wrapping
 body.flexcyon-flex-max-mode,
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
   .nav-files-container > div > div,
@@ -295,6 +296,13 @@ body.flexcyon-vertical-nav {
 
     div {
       flex-direction: inherit;
+      div.sidebar-toggle-button.mod-left {
+        position: absolute;
+        margin-left: 1px;
+      }
+      div.workspace-tab-header-container-inner {
+        margin-top: 48px;
+      }
     }
     div.workspace-leaf-content[data-type*="search"] {
       flex-direction: column;
