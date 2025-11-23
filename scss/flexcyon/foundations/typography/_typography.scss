@@ -119,6 +119,7 @@ body {
 
   .cm-s-obsidian span.cm-formatting-highlight,
   .cm-s-obsidian span.cm-highlight,
+  .cm-highlight + .cm-widgetBuffer + .math,
   .markdown-source-view:is(.is-live-preview) mark {
     color: var(--text-normal);
     background-color: var(--text-highlight-bg);

@@ -4917,6 +4917,7 @@ body .cm-line .cm-matchingbracket {
 }
 body .cm-s-obsidian span.cm-formatting-highlight,
 body .cm-s-obsidian span.cm-highlight,
+body .cm-highlight + .cm-widgetBuffer + .math,
 body .markdown-source-view:is(.is-live-preview) mark {
   color: var(--text-normal);
   background-color: var(--text-highlight-bg);
