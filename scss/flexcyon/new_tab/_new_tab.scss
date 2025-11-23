@@ -25,8 +25,9 @@ body.theme-light {
 
 body {
   --flexcyon-ascii-max-font-size: 14px;
+  --flexcyon-ascii-max-width: 50rem;
   --flexcyon-quote-font-size: 24px;
-  --flexcyon-ascii-line-height: 1.5;
+  --flexcyon-ascii-line-height: 1;
   --flexcyon-ascii-scaling-factor: 1;
   --flexcyon-quote-val: "This is a placeholder quote\ain the Flexcyon Theme.";
   --flexcyon-quote-credit-prefix: "-";
@@ -38,8 +39,9 @@ __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
 _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
 /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                 /____/                \a\a\a ";
+  --flexcyon-ascii-alignment: left;
 
-  div.empty-state-action-list {
+  div.empty-state-action {
     font-size: 1.05rem;
     color: var(--text-accent);
     opacity: 0.95;
@@ -51,32 +53,48 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
 
 body.flexcyon-flex-max-mode,
 body.flexcyon-ascii-enable {
-  .workspace-leaf > div > div > div.empty-state {
+  div.empty-state {
     content-visibility: auto;
+  }
 
-    > div.empty-state-title {
-      display: unset;
+  div.empty-state-title {
+    display: unset;
+  }
+
+  div.empty-state-container {
+    max-width: var(--flexcyon-ascii-max-width);
+    max-height: unset;
+    scale: var(--flexcyon-ascii-scaling-factor);
+  }
+
+  .reveal .pause-overlay,
+  div.empty-state-container {
+    &::before {
+      font-family: var(--font-interface);
+      content: var(--flexcyon-ascii-art);
+      font-weight: bold;
+      background: var(--flexcyon-new-tab-bg-wrapper);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: var(--flexcyon-ascii-line-height);
+      white-space: pre;
+      text-align: var(--flexcyon-ascii-alignment);
+      display: inline;
+      font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
     }
+  }
 
-    > div.empty-state-container {
-      max-height: unset;
-      max-width: unset;
-      scale: var(--flexcyon-ascii-scaling-factor);
-
-      &::before {
-        font-family: var(--font-interface);
-        content: var(--flexcyon-ascii-art);
-        font-weight: bold;
-        background: var(--flexcyon-new-tab-bg-wrapper);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: var(--flexcyon-ascii-line-height);
-        white-space: pre;
-        margin-top: 2rem;
-        text-align: center;
-        display: inline;
-        font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
-      }
+  .reveal .pause-overlay {
+    &::before {
+      position: absolute;
+      line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
+      margin: auto;
+      max-width: max-content;
+      max-height: max-content;
+      right: 0;
+      left: calc(16px + 6px * 2 + 4px * 2);
+      top: 0;
+      bottom: calc(16px * 2 + 4px * 2);
     }
   }
 }
@@ -85,7 +103,6 @@ body.is-mobile.flexcyon-flex-max-mode,
 body.is-mobile.flexcyon-ascii-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
-      // preprocess this
       font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
       margin-bottom: 1rem;
       line-height: 0.8;

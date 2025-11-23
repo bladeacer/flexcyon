@@ -2007,7 +2007,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values
+    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values. 
   - title: Add before empty state title
     type: class-select
     id: flexcyon-new-tab-mod
@@ -2050,7 +2050,7 @@ settings:
     format: px
   - title: ASCII Art
     id: flexcyon-ascii-art
-    description: ASCII art to display in new tab
+    description: ASCII art to display in new tab. Will also appear in other parts of the UI like core Slides plugin pause presentation mode.
     type: variable-text
     default: " \a\
     _______________                                       \a\
@@ -2076,6 +2076,10 @@ settings:
     id: flexcyon-ascii-scaling-factor
     type: variable-number
     default: 1
+  - title: ASCII art text alignment
+    id: flexcyon-ascii-alignment
+    type: variable-text
+    default: left
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title

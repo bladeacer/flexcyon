@@ -15462,8 +15462,9 @@ body.theme-light {
 
 body {
   --flexcyon-ascii-max-font-size: 14px;
+  --flexcyon-ascii-max-width: 50rem;
   --flexcyon-quote-font-size: 24px;
-  --flexcyon-ascii-line-height: 1.5;
+  --flexcyon-ascii-line-height: 1;
   --flexcyon-ascii-scaling-factor: 1;
   --flexcyon-quote-val: "This is a placeholder quote\ain the Flexcyon Theme.";
   --flexcyon-quote-credit-prefix: "-";
@@ -15475,8 +15476,9 @@ body {
   _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
   /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                   /____/                \a\a\a ";
+  --flexcyon-ascii-alignment: left;
 }
-body div.empty-state-action-list {
+body div.empty-state-action {
   font-size: 1.05rem;
   color: var(--text-accent);
   opacity: 0.95;
@@ -15485,52 +15487,24 @@ body div.empty-state-title {
   font-size: 1.25rem;
 }
 
-body.flexcyon-flex-max-mode .workspace-leaf > div > div > div.empty-state,
-body.flexcyon-ascii-enable .workspace-leaf > div > div > div.empty-state {
+body.flexcyon-flex-max-mode div.empty-state,
+body.flexcyon-ascii-enable div.empty-state {
   content-visibility: auto;
 }
-body.flexcyon-flex-max-mode
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-title,
-body.flexcyon-ascii-enable
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-title {
+body.flexcyon-flex-max-mode div.empty-state-title,
+body.flexcyon-ascii-enable div.empty-state-title {
   display: unset;
 }
-body.flexcyon-flex-max-mode
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-container,
-body.flexcyon-ascii-enable
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-container {
+body.flexcyon-flex-max-mode div.empty-state-container,
+body.flexcyon-ascii-enable div.empty-state-container {
+  max-width: var(--flexcyon-ascii-max-width);
   max-height: unset;
-  max-width: unset;
   scale: var(--flexcyon-ascii-scaling-factor);
 }
-body.flexcyon-flex-max-mode
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-container::before,
-body.flexcyon-ascii-enable
-  .workspace-leaf
-  > div
-  > div
-  > div.empty-state
-  > div.empty-state-container::before {
+body.flexcyon-flex-max-mode .reveal .pause-overlay::before,
+body.flexcyon-flex-max-mode div.empty-state-container::before,
+body.flexcyon-ascii-enable .reveal .pause-overlay::before,
+body.flexcyon-ascii-enable div.empty-state-container::before {
   font-family: var(--font-interface);
   content: var(--flexcyon-ascii-art);
   font-weight: bold;
@@ -15539,10 +15513,21 @@ body.flexcyon-ascii-enable
   -webkit-text-fill-color: transparent;
   line-height: var(--flexcyon-ascii-line-height);
   white-space: pre;
-  margin-top: 2rem;
-  text-align: center;
+  text-align: var(--flexcyon-ascii-alignment);
   display: inline;
   font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
+}
+body.flexcyon-flex-max-mode .reveal .pause-overlay::before,
+body.flexcyon-ascii-enable .reveal .pause-overlay::before {
+  position: absolute;
+  line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
+  margin: auto;
+  max-width: max-content;
+  max-height: max-content;
+  right: 0;
+  left: 36px;
+  top: 0;
+  bottom: 40px;
 }
 
 body.is-mobile.flexcyon-flex-max-mode
@@ -17930,7 +17915,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values
+    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values. 
   - title: Add before empty state title
     type: class-select
     id: flexcyon-new-tab-mod
@@ -17973,7 +17958,7 @@ settings:
     format: px
   - title: ASCII Art
     id: flexcyon-ascii-art
-    description: ASCII art to display in new tab
+    description: ASCII art to display in new tab. Will also appear in other parts of the UI like core Slides plugin pause presentation mode.
     type: variable-text
     default: " \a\
     _______________                                       \a\
@@ -17999,6 +17984,10 @@ settings:
     id: flexcyon-ascii-scaling-factor
     type: variable-number
     default: 1
+  - title: ASCII art text alignment
+    id: flexcyon-ascii-alignment
+    type: variable-text
+    default: left
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title
@@ -19668,6 +19657,7 @@ audio {
   border-radius: 12px;
 }
 
+/* obsi-snip-coll start: improved-slides */
 body {
   --r-main-font: var(--font-text);
   --r-main-font-size: max-content;
@@ -19675,7 +19665,7 @@ body {
   --r-heading-text-transform: capitalize;
   --r-heading-color: var(--text-normal);
   --r-heading-margin: 16px 0px;
-  --r-link-color: var(--text-accent);
+  --r-link-color: var(--color-accent-2);
   --r-heading1-size: var(--h1-size);
   --r-heading2-size: var(--h2-size);
   --r-heading3-size: var(--h3-size);
@@ -19683,7 +19673,6 @@ body {
 }
 
 .reveal .controls button {
-  color: var(--text-accent);
   box-shadow: none;
 }
 
@@ -19730,6 +19719,10 @@ body {
 .slides-close-btn svg.svg-icon {
   height: 28px;
   width: 28px;
+}
+
+.reveal .pause-overlay {
+  background: var(--color-base-00);
 }
 
 .slides-container
@@ -20932,6 +20925,7 @@ body {
   position: absolute;
 }
 
+/* obsi-snip-coll end */
 .plugin-tasks-list-item .task-list-item-checkbox {
   transform: translateY(2px);
 }

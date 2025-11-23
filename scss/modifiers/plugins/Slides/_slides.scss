@@ -1,3 +1,4 @@
+/* obsi-snip-coll start: improved-slides */
 body {
   --r-main-font: var(--font-text);
   --r-main-font-size: max-content;
@@ -7,7 +8,7 @@ body {
   --r-heading-color: var(--text-normal);
   --r-heading-margin: 16px 0px;
 
-  --r-link-color: var(--text-accent);
+  --r-link-color: var(--color-accent-2);
   --r-heading1-size: var(--h1-size);
   --r-heading2-size: var(--h2-size);
   --r-heading3-size: var(--h3-size);
@@ -15,7 +16,6 @@ body {
 }
 
 .reveal .controls button {
-  color: var(--text-accent);
   box-shadow: none;
 }
 .reveal.center,
@@ -59,6 +59,10 @@ body {
   }
 }
 
+.reveal .pause-overlay {
+  background: var(--color-base-00);
+}
+
 @mixin slides-number-wrapper($slide-no, $max-slides) {
   @for $i from $slide-no through ($max-slides + 1) {
     .slides-container
@@ -76,3 +80,4 @@ body {
 }
 
 @include slides-number-wrapper(1, 99);
+/* obsi-snip-coll end */
