@@ -1353,6 +1353,10 @@ settings:
     type: variable-number
     default: 14
     format: px
+  - title: Do not show properties title
+    id: flexcyon-metadata-no-properties-title
+    type: class-toggle
+    default: false
 
   - title: Status Bar
     type: heading

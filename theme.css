@@ -1761,7 +1761,6 @@ body .metadata-container .svg-icon {
   transform: translateY(-0.75px);
 }
 
-body.flexcyon-flex-max-mode,
 body.flexcyon-metadata-display-reading-disabled {
   --metadata-display-reading: none;
 }
@@ -9699,6 +9698,7 @@ body.flexcyon-tui-callouts
   background-color: var(--background-primary);
   padding: 0px;
   margin: 0px;
+  --callout-color: var(--text-faint);
 }
 body.flexcyon-tui-callouts
   .callout:not(
@@ -14521,6 +14521,10 @@ body.flexcyon-vertical-nav.is-hidden-frameless:not(.is-fullscreen)
   z-index: -5;
 }
 
+body.flexcyon-metadata-no-properties-title .metadata-properties-title {
+  display: none;
+}
+
 body {
   --flexcyon-os-detail-padding-r: 24px;
   --flexcyon-screen-dimens-padding-l: 16px;
@@ -17262,6 +17266,10 @@ settings:
     type: variable-number
     default: 14
     format: px
+  - title: Do not show properties title
+    id: flexcyon-metadata-no-properties-title
+    type: class-toggle
+    default: false
 
   - title: Status Bar
     type: heading
@@ -19661,6 +19669,7 @@ audio {
 /* obsi-snip-coll start: improved-slides */
 body {
   --r-main-font: var(--font-text);
+  --r-heading-font: var(--font-text);
   --r-main-font-size: max-content;
   --r-background-color: var(--color-base-05);
   --r-heading-text-transform: capitalize;
@@ -19713,7 +19722,7 @@ body {
 }
 
 .reveal pre {
-  margin: var(--r-block-margin) 2px;
+  margin: var(--r-block-margin) 0.75px;
   font-size: var(--font-ui-medium);
 }
 
@@ -19724,6 +19733,13 @@ body {
 
 .reveal .pause-overlay {
   background: var(--color-base-00);
+}
+
+.reveal img,
+.reveal video,
+.reveal iframe {
+  padding: 0px 0.75px;
+  padding-right: 5px;
 }
 
 .slides-container

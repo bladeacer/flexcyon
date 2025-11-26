@@ -1,6 +1,7 @@
 /* obsi-snip-coll start: improved-slides */
 body {
   --r-main-font: var(--font-text);
+  --r-heading-font: var(--font-text);
   --r-main-font-size: max-content;
   --r-background-color: var(--color-base-05);
 
@@ -18,6 +19,7 @@ body {
 .reveal .controls button {
   box-shadow: none;
 }
+
 .reveal.center,
 .reveal.center .slides,
 .reveal.center .slides section {
@@ -49,7 +51,7 @@ body {
   margin: var(--r-block-margin);
 }
 .reveal pre {
-  margin: var(--r-block-margin) 2px;
+  margin: var(--r-block-margin) 0.75px;
   font-size: var(--font-ui-medium);
 }
 .slides-close-btn {
@@ -61,6 +63,12 @@ body {
 
 .reveal .pause-overlay {
   background: var(--color-base-00);
+}
+.reveal img,
+.reveal video,
+.reveal iframe {
+  padding: 0px 0.75px;
+  padding-right: 5px;
 }
 
 @mixin slides-number-wrapper($slide-no, $max-slides) {

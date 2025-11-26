@@ -57,7 +57,8 @@ To install this theme via the community store, navigate to `Settings > Appearanc
 1. Under `Themes`, click Manage
 2. `Type "Flexcyon in the search bar > Select it > Click "Install and Use"`
 
-Installation of [Style Settings](#style-settings) is highly recommended for this theme, as most customisation and functionality is built around it.
+Installation of [Style Settings](#style-settings) is highly recommended for this
+theme, as most customisation and functionality is built around it.
 
 ### Installation via BRAT
 
@@ -74,6 +75,21 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 A huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.github.io/docs-en/).
 
 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
+
+## Design Principles
+
+This theme tries to:
+
+- be "reasonably opinionated"
+  - Choose between the opinionated Flex Max mode
+  - or customising the theme extensively
+  - Opt into customisations you choose instead of opting out
+- be decently lightweight, meaning:
+  - fonts, svgs and the like are not embedded in this theme
+  - (hopefully) sane defaults, customisable with style settings
+- dim inactive or unfocused UI elements to reduce information overload
+- have a decent feature set of style settings for customisation
+- bundle numerous callout metadata utilites
 
 ## Features
 
@@ -98,7 +114,8 @@ Refer to the documentation for the full set of features in Flexcyon.
 
 #### What this theme does not have
 
-- multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
+- multiple colour schemes (though you can override the existing one with your
+  own, see [Style Settings](#style-settings))
 - alternate checkboxes
 - embedded fonts, svgs
 
@@ -109,13 +126,9 @@ View [supported plugins and snippets here](https://flexcyon.github.io/docs-en/RE
 For plugins/snippets that are not styled yet, feel free to open a Pull Request/
 Feature Request/start a Discussion on it.
 
-#### Roadmap
+#### Snippet collection
 
-The Roadmap for this theme can be found [here](https://flexcyon.github.io/docs-en/README/roadmap/).
-
-#### Changelogs
-
-The Changelogs for this theme can be found [here](https://flexcyon.github.io/docs-en/changelogs/).
+Some of the theme's snippets like ASCII Art and its callouts can be [found here](https://github.com/bladeacer/obsi-snip-coll).
 
 #### Questions, Issues?
 
@@ -132,21 +145,6 @@ Alternatively, you can open an issue at
 
 Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md)
 and [Contributing Guide](./CONTRIBUTING.md).
-
-## Design Principles
-
-This theme tries to:
-
-- be "reasonably opinionated"
-  - Choose between the opinionated Flex Max mode
-  - or customising the theme extensively
-  - Opt into customisations you choose instead of opting out
-- be decently lightweight, meaning:
-  - fonts, svgs and the like are not embedded in this theme
-  - (hopefully) sane defaults, customisable with style settings
-- dim inactive or unfocused UI elements to reduce information overload
-- have a decent feature set of style settings for customisation
-- bundle numerous callout metadata utilites
 
 ## Style Settings
 

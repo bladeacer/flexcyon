@@ -1,6 +1,2 @@
 *.swp
-./TODO.md
-./docs/site
-./docs/.venv
-./docs/.venv/*
 node_modules

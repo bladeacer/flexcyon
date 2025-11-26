@@ -12,7 +12,6 @@ body.flexcyon-wrap-long-filenames {
   }
 }
 
-// TODO: Better handle file name wrapping
 body.flexcyon-flex-max-mode,
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
   .nav-files-container > div > div,
@@ -371,4 +370,10 @@ body.flexcyon-vertical-nav {
   .workspace-tabs.mod-top-right-space
   .workspace-tab-header-container:after {
   z-index: -5;
+}
+
+body.flexcyon-metadata-no-properties-title {
+  .metadata-properties-title {
+    display: none;
+  }
 }

@@ -784,6 +784,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   background-color: var(--background-primary);
   padding: 0px;
   margin: 0px;
+  --callout-color: var(--text-faint);
 
   .callout-fold {
     display: none;
