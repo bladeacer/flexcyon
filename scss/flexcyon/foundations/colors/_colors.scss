@@ -60,7 +60,7 @@ body.theme-dark {
   --color-pink: var(--flexcyon-pink);
 }
 
-/* obsi-snip-coll start: extended-color*/
+/* obsi-snip-coll start: extended-color */
 @mixin ext-col-wrapper($color-1, $color-2) {
   $color-1-wrapper: "#{$color-1}-#{$color-2}";
   $color-2-wrapper: "#{$color-2}-#{$color-1}";
@@ -120,4 +120,5 @@ body.flexcyon-ext-colors-enabled {
   @include ext-col-wrapper(blue, pink);
   @include ext-col-wrapper(purple, pink);
 }
+
 /* obsi-snip-coll end */

@@ -8,14 +8,15 @@ body {
   --flexcyon-editor-margin-top: 18px;
 
   .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
-    border-right-width: 0px;
+    border-right-width: 0;
   }
+
   .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
-    border-left-width: 0px;
+    border-left-width: 0;
   }
 
   .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
-    border-bottom-width: 0px;
+    border-bottom-width: 0;
   }
 }
 
@@ -38,9 +39,11 @@ body {
 
 body .view-header-left {
   padding-top: 1vh;
+
   .view-header-nav-buttons {
     gap: 2px;
   }
+
   button {
     margin-top: 0.15vh;
     scale: var(--upsize);
@@ -50,6 +53,7 @@ body .view-header-left {
 body .view-header-title-container {
   padding-top: 1.1vh;
 }
+
 body .view-header-left::after {
   font-size: 0;
 }
@@ -70,7 +74,6 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   max-width: 85%;
   right: 0;
   left: calc(0px * 2);
-
   font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
@@ -96,6 +99,7 @@ body.flexcyon-display-screen-dimens#{$screen-dim-no-vh-sel} {
 body .view-actions {
   padding-top: 1vh;
   gap: 4px;
+
   button {
     margin-top: 0.15vh;
     scale: var(--upsize);
@@ -121,7 +125,6 @@ body.flexcyon-display-os .titlebar::before {
   padding-top: 11.5px;
   padding-left: calc(5 * var(--flexcyon-os-detail-padding-r));
   position: absolute;
-  position: absolute;
   justify-content: center;
   display: flex;
   width: fit-content;
@@ -146,6 +149,7 @@ body.flexcyon-display-os.is-mobile {
     content: "Unknown Device";
   }
 }
+
 body.flexcyon-display-os {
   #{$disp-os-no-vh-sel} {
     position: fixed;
@@ -153,6 +157,7 @@ body.flexcyon-display-os {
     top: 2px;
   }
 }
+
 body.flexcyon-display-os:not(.show-view-header)
   .mod-root
   .workspace-tab-container

@@ -1,11 +1,12 @@
 /* Modifications for MiniTabs plugin */
 body {
   .TabsCodeBlock-tabs:nth-child(odd) {
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
     box-shadow: none;
   }
+
   div.TabsCodeBlock.TabsCodeBlock-buns {
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
     background-color: var(--color-base-20);
     padding: 4px 6px;
 
@@ -25,17 +26,17 @@ body {
 
     & + div {
       border: 1px solid var(--color-base-20);
-      padding: 0px 12px;
+      padding: 0 12px;
     }
   }
 
   div.TabsCodeBlock-tabs-pages {
     div.block-language-dataview:only-child {
-      padding: 0px var(--flexcyon-dataview-horizontal-padding);
+      padding: 0 var(--flexcyon-dataview-horizontal-padding);
     }
   }
 
   .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 8px 8px 0 0;
   }
 }

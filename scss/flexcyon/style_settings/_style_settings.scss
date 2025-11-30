@@ -2281,6 +2281,7 @@ body {
     background-color: #191d28aa;
     scale: var(--upsize);
   }
+
   .theme-light .pickr-reset button {
     color: #080808aa;
     background-color: #edebe5aa;
@@ -2324,6 +2325,7 @@ body .setting-item:not(.is-collapsed).setting-item-heading {
 .style-settings-export {
   text-decoration: none;
 }
+
 .style-settings-import {
   color: var(--color-blue);
 }

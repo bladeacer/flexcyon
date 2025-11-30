@@ -79,10 +79,12 @@ body.flexcyon-editor-grid .view-content [class*="markdown-"] {
         transparent var(--flexcyon-editor-bg-width)
       );
   }
+
   * {
     background-image: none;
   }
 }
+
 /* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-grid {
@@ -131,6 +133,7 @@ body.flexcyon-editor-dots .view-content [class*="markdown-"] {
     background-image: none;
   }
 }
+
 /* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-dots {
@@ -160,6 +163,7 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
   .canvas-background {
     display: none;
   }
+
   & {
     background-image:
       repeating-linear-gradient(
@@ -177,10 +181,12 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
         transparent var(--flexcyon-editor-bg-width)
       );
   }
+
   * {
     background-image: none;
   }
 }
+
 /* obsi-snip-coll end */
 
 body.flexcyon-sidebar-bg-rhombus {

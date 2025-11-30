@@ -1,14 +1,17 @@
 body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
+
   .cm-gutterElement.cm-active {
     font-weight: 900;
     font-size: var(--font-ui-medium);
     color: var(--text-accent);
   }
+
   .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"])
     + .cm-gutterElement {
     background-color: var(--background-primary);
+
     &::before {
       content: "'";
     }
@@ -18,6 +21,7 @@ body {
 body.theme-dark .cm-gutterElement.cm-active {
   color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
 }
+
 body.theme-light .cm-gutterElement.cm-active {
   color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
 }
@@ -38,6 +42,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 
     @for $j from 0 through $i {
       $sibling-selector: $sibling-selector + " + *";
+
       @if $j > 1 {
         $sibling-selector-1: $sibling-selector-1 + "* +";
       }
@@ -48,6 +53,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
       font-size: 0;
     }
   }
+
   .cm-lineNumbers *:has(+ .cm-active) {
     font-size: 0;
   }
@@ -56,12 +62,14 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 @mixin write-relative-lines($lines-to-hide) {
   $sibling-selector: "";
   $sibling-selector-1: "+";
+
   @for $j from 0 through ($lines-to-hide) {
     $sibling-selector: $sibling-selector + " + *";
 
     @if $j != $lines-to-hide {
       .cm-lineNumbers .cm-active #{$sibling-selector}::before {
         --flexcyon-rel-bel-#{$j+1}: "#{$j+1}";
+
         content: var(--flexcyon-rel-bel-#{$j + 1});
       }
     }
@@ -72,6 +80,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 
     .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active)::before {
       --flexcyon-rel-abv-#{$j}: "#{$j}";
+
       content: var(--flexcyon-rel-abv-#{$j});
     }
   }
@@ -79,6 +88,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 
 @mixin target-relative-line-abv($line-no, $content, $mod-font-size: 0) {
   $sibling-selector: "+";
+
   @for $j from 0 through $line-no {
     @if $j > 1 {
       $sibling-selector: $sibling-selector + "* +";
@@ -87,6 +97,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
   .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
     --flexcyon-rel-abv-#{$line-no}: "#{$content}";
   }
+
   @if $mod-font-size != 0 {
     .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
       font-size: #{$mod-font-size}rem;
@@ -96,6 +107,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 
 @mixin target-relative-line-bel($line-no, $content, $mod-font-size: 0) {
   $sibling-selector: "";
+
   @for $j from 1 through ($line-no) {
     $sibling-selector: $sibling-selector + " + *";
   }
@@ -103,6 +115,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
   .cm-lineNumbers .cm-active #{$sibling-selector}::before {
     --flexcyon-rel-bel-#{$line-no}: "#{$content}";
   }
+
   @if $mod-font-size != 0 {
     .cm-lineNumbers .cm-active #{$sibling-selector}::before {
       font-size: #{$mod-font-size}rem;
@@ -139,7 +152,6 @@ body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) {
   @include target-relative-line-abv(8, "θ", 0.925);
   @include target-relative-line-abv(9, "ι", 0.95);
   @include target-relative-line-abv(10, "κ", 0.95);
-
   @include target-relative-line-bel(1, "α", 0.925);
   @include target-relative-line-bel(2, "β", 0.925);
   @include target-relative-line-bel(3, "γ", 0.925);
@@ -164,7 +176,6 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
   @include target-relative-line-abv(8, "VIII");
   @include target-relative-line-abv(9, "IX");
   @include target-relative-line-abv(10, "X");
-
   @include target-relative-line-bel(1, "I");
   @include target-relative-line-bel(2, "II");
   @include target-relative-line-bel(3, "III");
@@ -189,7 +200,6 @@ body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
   @include target-relative-line-abv(8, "八");
   @include target-relative-line-abv(9, "九");
   @include target-relative-line-abv(10, "十");
-
   @include target-relative-line-bel(1, "一");
   @include target-relative-line-bel(2, "二");
   @include target-relative-line-bel(3, "三");
@@ -205,6 +215,7 @@ body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
 body.flexcyon-repl-active-line-num-str {
   .cm-gutterElement.cm-active {
     font-size: 0;
+
     &::before {
       content: var(--flexcyon-repl-active-line-str);
       font-size: calc(var(--font-ui-medium) + 0.07rem);

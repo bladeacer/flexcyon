@@ -2,9 +2,9 @@
   .task-list-item-checkbox {
     transform: translateY(2px);
   }
+
   .tasks-list-text {
     padding-left: 8px;
-    -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
 }
@@ -14,9 +14,6 @@
   font-size: var(--h2-size);
   line-height: var(--h2-line-height);
   color: var(--h2-color);
-}
-
-.block-language-tasks > div::before {
   justify-content: center;
   display: flex;
   width: max-content;
@@ -30,6 +27,7 @@ div.task-count {
   color: var(--color-red);
   font-weight: bold;
   font-size: var(--font-ui-large);
+
   &::before {
     content: "Pending: ";
     color: var(--text-normal);
@@ -53,7 +51,6 @@ span.task-id {
 .tasks-backlink,
 .tasks-backlink a,
 .tasks-list-text span[class*="task"] {
-  padding: 0px 4px;
-  -webkit-box-decoration-break: clone;
+  padding: 0 4px;
   box-decoration-break: clone;
 }

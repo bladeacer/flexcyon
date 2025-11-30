@@ -17,6 +17,7 @@ body.flexcyon-workspace-angled-layout {
 .graph-controls {
   padding: var(--graph-control-verti-padding);
 }
+
 .graph-control-section {
   padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
   border-bottom: none;
@@ -25,6 +26,7 @@ body.flexcyon-workspace-angled-layout {
     padding: var(--graph-control-verti-padding) 8px
       var(--graph-control-verti-padding) 14px;
   }
+
   .tree-item-children .graph-color-button-container,
   .tree-item-children .graph-color-groups-container,
   .tree-item-children .mod-toggle {
@@ -37,6 +39,7 @@ body.flexcyon-workspace-angled-layout {
   padding: calc(var(--graph-control-verti-padding) * 1.25)
     var(--graph-control-horiz-padding);
 }
+
 .graph-color-group {
   padding: 0 0 calc(var(--graph-control-verti-padding) * 1.25) 0;
 }

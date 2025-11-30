@@ -1,9 +1,6 @@
 body {
-  --color-accent: hsla(
-    var(--accent-h),
-    var(--accent-s),
-    var(--accent-l),
-    var(--dimmed)
+  --color-accent: hsl(
+    var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
   );
   --flexcyon-canvas-blur-intensity: 1px;
 }

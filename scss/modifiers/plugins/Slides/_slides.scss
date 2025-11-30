@@ -4,11 +4,9 @@ body {
   --r-heading-font: var(--font-text);
   --r-main-font-size: max-content;
   --r-background-color: var(--color-base-05);
-
   --r-heading-text-transform: capitalize;
   --r-heading-color: var(--text-normal);
   --r-heading-margin: 16px 0px;
-
   --r-link-color: var(--color-accent-2);
   --r-heading1-size: var(--h1-size);
   --r-heading2-size: var(--h2-size);
@@ -20,26 +18,30 @@ body {
   box-shadow: none;
 }
 
-.reveal.center,
-.reveal.center .slides,
-.reveal.center .slides section {
-  max-height: 100%;
-}
-.slides-container {
-  overflow: hidden;
-}
-.reveal .slides > section.present,
-.reveal .slides > section > section.present {
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
 .reveal .slides {
   text-align: left;
+
   input[type="checkbox"] {
     width: 16px;
     height: 16px;
   }
 }
+
+.reveal.center,
+.reveal.center .slides,
+.reveal.center .slides section {
+  max-height: 100%;
+}
+
+.slides-container {
+  overflow: hidden;
+}
+
+.reveal .slides > section.present,
+.reveal .slides > section > section.present {
+  overflow: hidden scroll;
+}
+
 .reveal blockquote {
   padding: 4px 12px;
   margin: var(--r-block-margin) 2px;
@@ -50,10 +52,12 @@ body {
 .reveal li {
   margin: var(--r-block-margin);
 }
+
 .reveal pre {
   margin: var(--r-block-margin) 0.75px;
   font-size: var(--font-ui-medium);
 }
+
 .slides-close-btn {
   svg.svg-icon {
     height: 28px;
@@ -64,10 +68,11 @@ body {
 .reveal .pause-overlay {
   background: var(--color-base-00);
 }
+
 .reveal img,
 .reveal video,
 .reveal iframe {
-  padding: 0px 0.75px;
+  padding: 0 0.75px;
   padding-right: 5px;
 }
 
@@ -88,4 +93,5 @@ body {
 }
 
 @include slides-number-wrapper(1, 99);
+
 /* obsi-snip-coll end */

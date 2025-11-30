@@ -22,6 +22,7 @@ body.flexcyon-wrap-long-filenames {
     overflow: visible;
     text-overflow: clip;
   }
+
   div.oz-nav-file-title-content {
     white-space: normal;
     overflow: visible;
@@ -34,9 +35,11 @@ body {
     padding: 4px 16px;
     margin-left: 18px !important;
   }
+
   .oz-folder-contents:not(:has(> .treeview)) {
     border-left: none;
   }
+
   div.oz-folder-name {
     opacity: var(--dimmed);
   }
@@ -86,18 +89,21 @@ body {
   .oz-folders-action-items {
     text-align: var(--flexcyon-top-actions-alignment);
     padding: 0;
+
     &:hover {
       opacity: unset;
     }
+
     .oz-nav-action-button {
       margin-right: 8px;
       scale: var(--upsize);
     }
   }
+
   .oz-nav-action-button {
     margin-left: 0;
     margin-right: 8px;
-    padding: 0px 2px;
+    padding: 0 2px;
     opacity: var(--dimmed);
   }
 }
@@ -165,6 +171,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
     div svg {
       display: none;
     }
+
     padding: var(--flexcyon-tree-item-verti-padding)
       var(--flexcyon-tree-item-horiz-padding);
 

@@ -9,7 +9,6 @@ body {
   --h4-weight: 625;
   --h5-weight: 600;
   --h6-weight: 575;
-
   --h1-size: 1.81803em;
   --h2-size: 1.61803em;
   --h3-size: 1.41803em;
@@ -32,26 +31,32 @@ body.flexcyon-headings-glow-enabled {
   .cm-header-1 {
     text-shadow: 2px 2px 4px var(--h1-color);
   }
+
   h2,
   .cm-header-2 {
     text-shadow: 1.75px 1.75px 3.5px var(--h2-color);
   }
+
   h3,
   .cm-header-3 {
     text-shadow: 1.5px 1.5px 3px var(--h3-color);
   }
+
   h4,
   .cm-header-4 {
     text-shadow: 1.25px 1.25px 2.5px var(--h4-color);
   }
+
   h5,
   .cm-header-5 {
     text-shadow: 1px 1px 2px var(--h5-color);
   }
+
   h6,
   .cm-header-6 {
     text-shadow: 0.75px 0.75px 1.5px var(--h6-color);
   }
+
   .cm-formatting-header {
     text-shadow: none;
   }

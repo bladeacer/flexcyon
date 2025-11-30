@@ -7,7 +7,6 @@ body {
   --flexcyon-bg-image-brightness: unset;
   --flexcyon-bg-image-size: cover;
   --flexcyon-bg-image-position: center;
-
   --flexcyon-modal-bg-url: url("");
   --flexcyon-modal-image-blend-mode: darken;
   --flexcyon-modal-image-repeat: no-repeat;
@@ -22,6 +21,7 @@ body {
       background-color: var(--color-base-05);
     }
   }
+
   @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
     .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
       background-color: var(--color-base-05);
@@ -34,7 +34,9 @@ body {
       background-size: var(--flexcyon-bg-image-size);
       background-position: var(--flexcyon-bg-image-position);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+
       --nav-item-background-hover: transparent;
+
       image-rendering: auto;
 
       > div {
@@ -54,7 +56,9 @@ body {
       background-size: var(--flexcyon-bg-image-size);
       background-position: var(--flexcyon-bg-image-position);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
+
       --nav-item-background-hover: transparent;
+
       image-rendering: auto;
 
       > div {
@@ -74,9 +78,7 @@ body {
     background-position: var(--flexcyon-modal-image-position);
     background-blend-mode: var(--flexcyon-modal-image-blend-mode);
     opacity: var(--flexcyon-modal-dark-intensity) !important;
-
     image-rendering: auto;
-
     filter: brightness(var(--flexcyon-modal-image-brightness))
       blur(var(--flexcyon-modal-image-blur));
   }

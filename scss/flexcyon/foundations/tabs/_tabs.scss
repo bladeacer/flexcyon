@@ -8,19 +8,16 @@ body {
   --tab-text-color-focused-active: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
   --tab-divider-color: var(--titlebar-background);
-
   --tab-outline-width: 0px;
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
   --flexcyon-anim-duration: 0.3s;
-
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 56.63105px;
   --flexcyon-anim-rotate-amount: 50deg;
   --flexcyon-anim-start-scale-amt: 0.33;
   --flexcyon-anim-start-opacity: 0.55;
-
   --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
   --flexcyon-mode-view-header-title-verti-padding: 4px;
   --flexcyon-mode-view-header-title-horiz-padding: 12px;
@@ -39,7 +36,7 @@ body.flexcyon-workspace-angled-layout {
 
   .view-header-title {
     transform: skewX(-22.5deg);
-    border-radius: 0px;
+    border-radius: 0;
     background-color: var(--color-base-20);
     padding: var(--flexcyon-mode-view-header-title-verti-padding)
       var(--flexcyon-mode-view-header-title-horiz-padding);
@@ -61,6 +58,7 @@ body.flexcyon-workspace-pl10k-layout {
   .view-header-title-parent {
     :nth-of-type(5n + 1) {
       background-color: var(--color-base-20);
+
       &::after {
         background-color: var(--color-base-25);
       }
@@ -68,6 +66,7 @@ body.flexcyon-workspace-pl10k-layout {
 
     :nth-of-type(5n + 3) {
       background-color: var(--color-base-25);
+
       &::after {
         background-color: var(--color-base-05);
       }
@@ -75,14 +74,17 @@ body.flexcyon-workspace-pl10k-layout {
 
     :nth-of-type(5n) {
       background-color: var(--color-base-05);
+
       &::after {
         background-color: var(--color-base-20);
       }
     }
+
     :has(+ :last-child)::after {
       background-color: var(--color-base-05);
     }
   }
+
   .view-header-title-container:not(:has(.view-header-breadcrumb))
     .view-header-title {
     border-radius: var(--flexcyon-callout-radix);
@@ -95,7 +97,7 @@ body.flexcyon-workspace-pl10k-layout {
   }
 
   .view-header-title-parent .view-header-breadcrumb {
-    padding: 4px 0px;
+    padding: 4px 0;
 
     &::after {
       padding: 10px 6px;
@@ -115,12 +117,14 @@ body.flexcyon-workspace-pl10k-layout {
     border-bottom-right-radius: 16px;
     background-color: var(--color-base-05);
   }
+
   .view-header-breadcrumb-separator {
     display: none;
   }
+
   .view-header,
   .view-header-title-container {
-    gap: 0px;
+    gap: 0;
   }
 }
 
@@ -128,16 +132,19 @@ body.flexcyon-workspace-card-layout {
   .view-header-breadcrumb-separator {
     display: none;
   }
+
   .view-header-breadcrumb {
     border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
   }
+
   .view-header-title-container {
     gap: 8px;
   }
 
   .view-header-title-parent {
     gap: 8px;
+
     :nth-of-type(5n + 1) {
       background-color: var(--color-base-20);
     }
@@ -149,10 +156,12 @@ body.flexcyon-workspace-card-layout {
     :nth-of-type(5n) {
       background-color: var(--color-base-05);
     }
+
     :has(+ :last-child)::after {
       background-color: var(--color-base-05);
     }
   }
+
   .view-header-title {
     padding: 4px 8px;
     background-color: var(--color-base-05);
@@ -166,6 +175,7 @@ body.flexcyon-workspace-card-layout {
       opacity: var(--flexcyon-anim-start-opacity);
       transform: $transform-1;
     }
+
     100% {
       opacity: 1;
       transform: $transform-2;
@@ -203,7 +213,6 @@ body.flexcyon-workspace-card-layout {
   rotateX(var(--flexcyon-anim-rotate-amount)),
   rotateX(0)
 );
-
 @include anims-def(
   scale-up,
   scale(var(--flexcyon-anim-start-scale-amt)),
@@ -236,7 +245,8 @@ body.flexcyon-workspace-card-layout {
         var(--flexcyon-anim-easing);
     }
   }
-  @if ($is-flex-max == 1) {
+
+  @if $is-flex-max == 1 {
     body.flexcyon-flex-max-mode {
       .modal .community-modal-info,
       .modal .vertical-tab-content,
@@ -261,7 +271,8 @@ body.flexcyon-workspace-card-layout {
         var(--flexcyon-anim-easing);
     }
   }
-  @if ($is-flex-max == 1) {
+
+  @if $is-flex-max == 1 {
     body.flexcyon-flex-max-mode {
       .mod-stacked
         .workspace-leaf.mod-active
@@ -283,7 +294,6 @@ body.flexcyon-workspace-card-layout {
 @include anims-wrapper(spin-rl, spin-in-rl);
 @include anims-wrapper(spin-bt, spin-in-bt);
 @include anims-wrapper(fade-in, fade-in, 1);
-
 @include anims-modal-wrapper(scale-up, scale-up);
 @include anims-modal-wrapper(slide-rtl, slide-in-right);
 @include anims-modal-wrapper(slide-ltr, slide-in-left, 1);

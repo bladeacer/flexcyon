@@ -23,6 +23,7 @@ div.mermaid svg .nodes node * {
       stroke: var(--text-faint) !important;
       fill-opacity: var(--dimmed) !important;
     }
+
     & g.red :is(*) {
       fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
       stroke: var(--color-red-rgb) !important;

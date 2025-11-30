@@ -7,10 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx pretty-quick --staged"
+    "lint": "stylelint '**/*.scss'",
+    "fix": "stylelint '**/*.scss' --fix"
   },
   "repository": {
     "type": "git",
@@ -25,7 +23,10 @@
   },
   "homepage": "https://github.com/bladeacer/flexcyon#readme",
   "devDependencies": {
-    "pretty-quick": "^4.2.2",
-    "simple-git-hooks": "^2.13.1"
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0"
+  },
+  "dependencies": {
+    "stylelint-scss": "^6.12.1"
   }
 }

@@ -1,6 +1,53 @@
+// The code snippets in this file are derived from the Halcyon theme
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
+
 body {
+  --prompt-border-color: var(--flexcyon-base-02-03-mix);
+  --search-clear-button-color: var(--flexcyon-red-salmon);
+  --search-icon-color: var(--flexcyon-accent);
   --flexcyon-search-container-verti-padding: 8px;
   --flexcyon-search-container-horiz-padding: 16px;
+  --flexcyon-suggestion-verti-padding: 8px;
+  --flexcyon-suggestion-horiz-padding: 12px;
+
+  .search-input-container > input {
+    background-color: var(--background-primary);
+  }
+
+  .suggestion-title {
+    padding: 2px 8px;
+  }
+
+  .prompt > .prompt-results > .suggestion-item .suggestion-highlight {
+    color: var(--interactive-accent);
+  }
+
+  .prompt input.prompt-input {
+    color: var(--interactive-accent);
+    font-weight: bold;
+  }
+
+  .search-result:not(.is-collapsed) .search-result-file-title {
+    color: var(--text-normal);
+  }
+
+  .search-result:not(.is-collapsed) .search-result-file-matched-text {
+    color: var(--text-accent);
+    font-weight: bold;
+  }
+}
+
+body.flexcyon-prompt-align-bottom-left {
+  .modal-container .prompt {
+    top: 30vh;
+    left: 0;
+  }
+}
+
+body.flexcyon-prompt-align-bottom-center {
+  .modal-container .prompt {
+    top: 30vh;
+  }
 }
 
 .workspace-leaf-content[data-type="search"] {
@@ -11,18 +58,22 @@ body {
     .search-input-container {
       flex-grow: 0.975;
     }
+
     .clickable-icon {
       margin-left: 12px;
     }
   }
+
   .search-params .setting-item .setting-item-name {
     color: var(--text-muted);
   }
+
   .search-results-info .search-results-result-count {
     color: var(--text-normal);
     font-size: calc(var(--font-ui-small) - 0.809015px);
     opacity: 1;
   }
+
   .search-info-container:has(~ .search-result-container .search-empty-state) {
     display: none;
   }

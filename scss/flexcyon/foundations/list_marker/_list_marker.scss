@@ -15,6 +15,7 @@ body.theme-light {
 body {
   --flexcyon-default-ol-style: decimal;
   --list-numbered-style: var(--flexcyon-default-ol-style);
+
   ol {
     list-style-position: inside;
   }

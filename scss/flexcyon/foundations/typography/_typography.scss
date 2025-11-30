@@ -1,5 +1,5 @@
 // The code snippets in this file are derived from the Halcyon theme
-//- https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
 body.theme-dark {
   --text-normal: #d3d5d3;
@@ -13,14 +13,16 @@ body {
   --text-highlight-bg: color-mix(in hsl, var(--color-cyan) 20%, transparent);
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
+
   word-spacing: var(--flexcyon-w-spacing);
   letter-spacing: var(--flexcyon-l-spacing);
+
   --oz-fta-file-font-size: 0.9rem;
   --oz-fta-folder-font-size: 0.925rem;
+
   text-underline-offset: 0.1em;
 
   --flexcyon-settings-installed-tooltip-left-margin: 1rem;
-
   --h1-line-height: 1.61;
   --h2-line-height: 1.51;
   --h3-line-height: 1.41;
@@ -29,7 +31,6 @@ body {
   --h6-line-height: 1.21;
   --line-height-normal: 1.4;
   --line-height-tight: 1.25;
-
   --flexcyon-text-muted: #6f768599;
   --text-muted: color-mix(
     in hsl,
@@ -37,24 +38,19 @@ body {
     var(--text-normal)
   );
   --text-faint: var(--flexcyon-text-muted);
-
   --text-accent: var(--flexcyon-accent);
   --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
-
   --text-error: var(--flexcyon-red-salmon);
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
-
   --text-selection: color-mix(
     in hsl shorter hue,
     var(--flexcyon-base-04) 20%,
     transparent
   );
-
   --bold-color: var(--flexcyon-red-salmon);
   --italic-color: var(--flexcyon-accent);
-
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;
@@ -66,6 +62,7 @@ body {
   .cm-em.cm-quote {
     color: var(--italic-color);
   }
+
   .cm-formatting-em,
   .cm-formatting-strong,
   .cm-formatting-code,
@@ -77,22 +74,6 @@ body {
     color: var(--bold-color);
   }
 
-  .cm-line .ͼi {
-    color: var(--flexcyon-cyan);
-  }
-
-  .cm-line .ͼj {
-    color: var(--flexcyon-orange);
-  }
-
-  .cm-line .ͼc {
-    color: var(--flexcyon-accent);
-  }
-
-  .cm-line .ͼb {
-    color: var(--flexcyon-yellow);
-  }
-
   .cm-line .cm-matchingbracket {
     color: var(--flexcyon-purple-lilac);
   }
@@ -111,10 +92,6 @@ body {
 
   .cm-line .ͼb {
     color: var(--flexcyon-yellow);
-  }
-
-  .cm-line .cm-matchingbracket {
-    color: var(--flexcyon-purple-lilac);
   }
 
   .cm-s-obsidian span.cm-formatting-highlight,
@@ -128,26 +105,11 @@ body {
     border-radius: var(--flexcyon-highlight-border-radius);
     font-weight: 525;
   }
+
   .cm-s-obsidian span.cm-formatting-highlight {
-    border-radius: 0px;
+    border-radius: 0;
     color: var(--text-highlight-bg);
     background-color: inherit;
-  }
-
-  .cm-line .ͼi {
-    color: var(--flexcyon-cyan);
-  }
-
-  .cm-line .ͼj {
-    color: var(--flexcyon-orange);
-  }
-
-  .cm-line .ͼc {
-    color: var(--flexcyon-accent);
-  }
-
-  .cm-line .ͼb {
-    color: var(--flexcyon-yellow);
   }
 
   .cm-line .cm-matchingbracket {

@@ -6,12 +6,10 @@ body {
   --table-row-alt-background: var(--color-base-15);
   --table-column-alt-background: var(--table-background);
   --table-add-button-background: var(--color-base-15);
-
   --table-background: var(--background-primary);
   --table-header-background-hover: var(--table-background);
   --table-header-size: large;
   --flexcyon-table-reading-mode-width: 100%;
-
   --flexcyon-td-verti-padding: 5px;
   --flexcyon-td-horiz-padding: 10px;
   --flexcyon-td-live-pad-scale: 0.2;
@@ -37,12 +35,14 @@ body {
   table {
     border-color: var(--table-border-color);
   }
+
   .cm-html-embed td,
   .markdown-rendered td,
   .cm-html-embed th,
   .markdown-rendered th {
     padding: var(--flexcyon-td-verti-padding) var(--flexcyon-td-horiz-padding);
   }
+
   .markdown-source-view.mod-cm6 .cm-table-widget th,
   .markdown-source-view.mod-cm6 .cm-table-widget td {
     padding: calc(

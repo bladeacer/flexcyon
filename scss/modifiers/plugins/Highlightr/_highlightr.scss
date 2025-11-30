@@ -25,6 +25,7 @@ body {
 body.highlightr-lowlight
   :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
+
   background-image: linear-gradient(
     to right,
     0,
@@ -39,6 +40,7 @@ body.highlightr-floating
   mark[class*="hltr"]:last-of-type:not(mark[class*="hltr"]:only-of-type) {
   --floating-background: var(--background-primary);
   --floating-size: 20%;
+
   padding-bottom: 0.1em;
   background-image: linear-gradient(
     to right,

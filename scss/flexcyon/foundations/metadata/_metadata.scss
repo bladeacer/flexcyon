@@ -29,7 +29,7 @@ body {
   .metadata-property {
     :focus,
     :focus-within,
-    :focus:before {
+    :focus::before {
       border-radius: 2px;
     }
   }
@@ -43,14 +43,14 @@ body {
   }
 
   :is(
-      textarea,
-      input:not([type="checkbox"]),
-      input.metadata-input-text,
-      select
-    ):is(:focus, :active, :focus-visible),
+    textarea,
+    input:not([type="checkbox"]),
+    input.metadata-input-text,
+    select
+  ):is(:focus, :active, :focus-visible),
   .metadata-property:is(:focus, :focus-within),
   .text-icon-button:focus,
-  .metadata-properties-heading:focus:before {
+  .metadata-properties-heading:focus::before {
     box-shadow: 0 0 0 1px var(--interactive-accent);
   }
 

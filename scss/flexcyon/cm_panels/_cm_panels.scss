@@ -1,6 +1,7 @@
 body.theme-dark {
   --cm-panel-bg: var(--color-base-00);
 }
+
 body.theme-light {
   --cm-panel-bg: color-mix(
     in srgb,
@@ -8,6 +9,7 @@ body.theme-light {
     var(--color-base-10) 45%
   );
 }
+
 body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
 }
@@ -30,7 +32,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     background-color: var(--cm-panel-bg);
     color: var(--text-muted);
     height: 30px;
-    padding: 0px 8px;
+    padding: 0 8px;
     font-size: var(--cm-font-size);
     font-family: var(--font-interface);
     z-index: 2;
@@ -47,7 +49,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     left: var(--flexcyon-vim-left-positioning);
     height: 30px;
     color: var(--text-muted);
-    padding: 0px 8px;
+    padding: 0 8px;
     font-size: var(--cm-font-size);
     font-family: var(--font-interface);
     z-index: 2;
@@ -108,7 +110,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
     position: fixed;
     color: var(--text-accent);
     height: 30px;
-    padding: 0px 8px;
+    padding: 0 8px;
   }
 
   .cm-editor
@@ -121,7 +123,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
     height: 30px;
     color: var(--color-purple);
     font-family: var(--font-interface);
-    padding: 0px 8px;
+    padding: 0 8px;
   }
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
@@ -213,7 +215,7 @@ body.flexcyon-status-style-card {
     .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     border-radius: var(--flexcyon-callout-radix);
     border: 2px solid var(--color-base-20);
-    margin: 0px 8px;
+    margin: 0 8px;
     line-height: 30px;
   }
 
@@ -222,8 +224,9 @@ body.flexcyon-status-style-card {
     .cm-panel.cm-vim-panel {
     border-radius: var(--flexcyon-callout-radix);
     border: 2px solid var(--color-base-20);
-    margin: 0px 8px;
+    margin: 0 8px;
   }
+
   div:has(.cm-vim-panel) + .status-bar {
     margin-bottom: 50px;
   }

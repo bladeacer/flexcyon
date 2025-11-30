@@ -8,8 +8,10 @@
   background-color: transparent !important;
   border: unset !important;
 }
+
 .internal-link.BC-prev {
   text-decoration: none;
+
   strong::before {
     content: "<";
     transform: scaleY(1.1);
@@ -18,11 +20,13 @@
 
 .internal-link.BC-next {
   text-decoration: none;
+
   strong::after {
     content: ">";
     transform: scaleY(1.1);
   }
 }
+
 .BC-grid-options {
   transform: translateY(-7px);
 }

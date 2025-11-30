@@ -34,14 +34,17 @@ body {
   .workspace-ribbon .sidebar-toggle-button {
     top: -1px;
   }
+
   .sidebar-toggle-button.mod-left {
     padding-top: 12px;
   }
+
   .sidebar-toggle-button.mod-right {
     padding-top: 9px;
   }
+
   .workspace-tab-header {
-    padding: 0px 4px;
+    padding: 0 4px;
   }
 
   .workspace-tab-header-inner {
@@ -63,8 +66,8 @@ body {
   .workspace-split:not(.mod-left-split, .mod-right-split)
     .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header-container-inner {
-    padding-left: 0px;
-    margin-top: 0px;
+    padding-left: 0;
+    margin-top: 0;
     margin-left: -10px;
   }
 
@@ -77,7 +80,7 @@ body {
   .workspace-split:not(.mod-left-split, .mod-right-split)
     .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header-inner-icon {
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split)
@@ -145,7 +148,7 @@ body.flexcyon-workspace-card-layout {
     border: 2px solid var(--color-base-20);
 
     .metadata-content {
-      padding: 0px 8px;
+      padding: 0 8px;
     }
   }
 
@@ -188,7 +191,7 @@ body.flexcyon-workspace-card-layout {
   }
 
   .sidebar-toggle-button.mod-left {
-    margin: 8px 0px;
+    margin: 8px 0;
   }
 
   .sidebar-toggle-button.mod-right {
@@ -241,8 +244,9 @@ body.show-ribbon {
     height: calc(1.12 * var(--header-height));
     background-color: var(--color-base-00);
   }
+
   .side-dock-actions {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -263,7 +267,7 @@ body.show-ribbon {
       z-index: 1;
       color: rgba(var(--color-#{$color}-rgb), 0.85);
       background-color: var(--color-base-00);
-      padding: 0px 8px;
+      padding: 0 8px;
     }
   }
 }
@@ -335,7 +339,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
     div.collapse-indicator,
     .metadata-properties-title {
       background-color: var(--color-base-10);
-      padding: 0px 8px;
+      padding: 0 8px;
     }
   }
 
@@ -356,6 +360,7 @@ body.flexcyon-workspace-pl10k-layout {
       border-bottom: none;
     }
   }
+
   .view-actions,
   .view-header-left .view-header-nav-buttons {
     border-radius: var(--flexcyon-callout-radix);
@@ -363,6 +368,7 @@ body.flexcyon-workspace-pl10k-layout {
     border: 1px solid var(--color-base-20);
     opacity: 1;
     z-index: 10;
+
     button {
       border-radius: var(--flexcyon-callout-radix);
     }
@@ -371,6 +377,7 @@ body.flexcyon-workspace-pl10k-layout {
   .view-actions {
     padding: 4px 2px;
     margin-top: 8px;
+
     button {
       border-radius: var(--flexcyon-callout-radix);
     }

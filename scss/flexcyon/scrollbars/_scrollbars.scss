@@ -2,6 +2,7 @@
 body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
+
   div.modal-content.vertical-tabs-container {
     & ::-webkit-scrollbar-thumb {
       display: none;
@@ -18,6 +19,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .markdown-preview-view {
   will-change: scroll-position;
 }
+
 .markdown-preview-view > .markdown-preview-pusher {
   will-change: margin-bottom;
 }

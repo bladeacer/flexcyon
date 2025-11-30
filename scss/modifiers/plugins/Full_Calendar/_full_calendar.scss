@@ -17,6 +17,11 @@ body {
     }
   }
 
+  th.fc-day-today div a {
+    font-weight: bold;
+    color: var(--text-accent);
+  }
+
   div.fc-daygrid-body div div a {
     color: var(--text-normal);
     opacity: var(--flexcyon-fc-dimmed-items-opacity);
@@ -31,14 +36,11 @@ body {
   div.fc-button-group button.fc-button-active {
     opacity: unset;
   }
+
   div.fc-button-group button {
     opacity: var(--flexcyon-fc-dimmed-items-opacity);
   }
 
-  th.fc-day-today div a {
-    font-weight: bold;
-    color: var(--text-accent);
-  }
   a.fc-timegrid-event {
     background-color: var(--color-blue) !important;
     border: unset;
@@ -48,28 +50,35 @@ body {
     background-color: var(--color-green) !important;
     border: unset;
   }
+
   .fc .fc-list-empty {
     background-color: var(--color-base-10);
   }
+
   .fc .fc-toolbar-title {
     font-size: 1.2rem;
     color: var(--text-normal);
   }
+
   .fc .fc-toolbar-chunk {
-    padding: 0px 8px;
+    padding: 0 8px;
     overflow: scroll;
   }
+
   .fc {
     font-size: var(--font-ui-small);
   }
+
   div.workspace-leaf-content[data-type*="calendar"] {
     .fc-header-toolbar {
       flex-direction: column;
     }
+
     .fc-header-toolbar .fc-button-group {
       flex-direction: row;
     }
   }
+
   .fc .fc-button-primary:focus {
     box-shadow: 0 0 0 0.15rem var(--text-faint);
   }

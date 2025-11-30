@@ -1,15 +1,15 @@
 /* Compact mode */
 
-body.flexcyon-var-comps-compact-mode .various-complements__suggestion-item {
-  padding: 4px 8px;
-}
-
 body {
   --flexcyon-var-comps-sugg-vert-padding: 7px;
   --flexcyon-var-comps-sugg-horiz-padding: 12px;
+
   /* Inactive dimming, icon alignment */
   .various-complements__suggestion-item {
     opacity: var(--dimmed);
+    padding: var(--flexcyon-var-comps-sugg-vert-padding)
+      var(--flexcyon-var-comps-sugg-horiz-padding);
+
     &::before {
       transform: translateY(-2.5px);
     }
@@ -20,9 +20,8 @@ body {
     opacity: calc(var(--dimmed) + 0.3);
     color: var(--text-accent);
   }
+}
 
-  .various-complements__suggestion-item {
-    padding: var(--flexcyon-var-comps-sugg-vert-padding)
-      var(--flexcyon-var-comps-sugg-horiz-padding);
-  }
+body.flexcyon-var-comps-compact-mode .various-complements__suggestion-item {
+  padding: 4px 8px;
 }

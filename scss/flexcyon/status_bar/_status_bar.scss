@@ -5,9 +5,7 @@ body {
   --flexcyon-vim-command-text: "COMMAND";
   --flexcyon-vim-bottom-positioning: -4px;
   --flexcyon-vim-left-positioning: 6px;
-
   --flexcyon-vim-bottom-pos-w-status: 40px;
-
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 80vw;
   --flexcyon-status-hide-hover-duration: 0.25s;
@@ -144,6 +142,7 @@ body:is(
   ).flexcyon-status-centre-align
   .status-bar {
   transform: translateY(40px);
+
   &::before {
     position: absolute;
     justify-content: center;
@@ -166,6 +165,7 @@ body:is(
   transform: translateX(
     calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
   );
+
   &::before {
     transform: translateX(
       calc(1 * var(--flexcyon-status-hide-until-hover-translation))
@@ -211,8 +211,8 @@ body.flexcyon-status-style-angled {
   .status-bar {
     background-color: transparent;
     border: none;
-    border-radius: 0px;
-    gap: 0px;
+    border-radius: 0;
+    gap: 0;
     margin: 0;
   }
 
@@ -220,7 +220,7 @@ body.flexcyon-status-style-angled {
     background-color: var(--color-base-20);
     transform: skewX(-22.5deg);
     padding: 4px 8px;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   .status-bar :nth-of-type(2n):is(.status-bar-item) {
@@ -240,11 +240,13 @@ body.flexcyon-status-style-card {
     background-color: transparent;
     right: 10px;
   }
+
   .status-bar :nth-of-type(2n).status-bar-item {
     background-color: var(--color-base-05);
     border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
   }
+
   .status-bar :nth-of-type(2n + 1).status-bar-item {
     background-color: var(--color-base-25);
     border-radius: var(--flexcyon-callout-radix);
@@ -264,25 +266,29 @@ body.flexcyon-status-style-pl10k {
   .status-bar {
     border: transparent;
     background-color: transparent;
-    gap: 0px;
+    gap: 0;
     scale: var(--expand);
+
     &::before {
-      right: 0px;
+      right: 0;
     }
 
     .status-bar-item .status-bar-item-icon {
       transform: translateX(-1px);
     }
+
     .status-bar-item[style="display: none;"]::after {
       display: none;
     }
+
     .status-bar-item[style="display: none;"] + .status-bar-item {
       border-top-left-radius: 16px;
       border-bottom-left-radius: 16px;
     }
 
     .status-bar-item {
-      padding: 0px;
+      padding: 0;
+
       &::after {
         padding: 4px 4px;
         content: "e";
@@ -293,12 +299,14 @@ body.flexcyon-status-style-pl10k {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
       }
     }
+
     :first-child:empty,
     :first-child.status-bar-item {
       border-top-left-radius: 16px;
       border-bottom-left-radius: 16px;
       padding-left: 6px;
     }
+
     .status-bar-item:empty {
       display: flex;
     }
@@ -325,6 +333,7 @@ body.flexcyon-status-style-pl10k {
       padding-right: 6px;
       margin-right: 46px;
     }
+
     :last-child.status-bar-item::after {
       display: none;
     }

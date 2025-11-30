@@ -11,7 +11,6 @@ body.theme-dark {
   --flexcyon-base-03: #24262c;
   --flexcyon-base-04: #4d566b;
   --flexcyon-base-05: #6f7685;
-
   --flexcyon-base-grey-dark: #898c93;
   --flexcyon-base-grey-light: #d3d5d3;
 }
@@ -22,6 +21,7 @@ body.theme-light {
   --flexcyon-base-03: #dddcd6;
   --flexcyon-base-04: #d3d3ce;
   --flexcyon-base-05: #b4b3af;
+
   /* ------------------------------ */
   --flexcyon-base-grey-dark: #797876;
   --flexcyon-base-grey-light: #080808;
@@ -57,13 +57,11 @@ body:is(.theme-light) {
     var(--flexcyon-base-04),
     var(--flexcyon-base-05)
   );
-
   --flexcyon-base-grey-mix: color-mix(
     in hsl,
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
-
   --color-base-00: var(--flexcyon-base-01);
   --color-base-05: var(--flexcyon-base-01-02-mix);
   --color-base-10: var(--flexcyon-base-02);

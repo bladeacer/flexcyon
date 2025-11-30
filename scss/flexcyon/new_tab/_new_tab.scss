@@ -46,6 +46,7 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
     color: var(--text-accent);
     opacity: 0.95;
   }
+
   div.empty-state-title {
     font-size: 1.25rem;
   }
@@ -91,10 +92,7 @@ body.flexcyon-ascii-enable {
       margin: auto;
       max-width: max-content;
       max-height: max-content;
-      right: 0;
-      left: calc(16px + 6px * 2 + 4px * 2);
-      top: 0;
-      bottom: calc(16px * 2 + 4px * 2);
+      inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 6px * 2 + 4px * 2);
     }
   }
 }
@@ -109,6 +107,7 @@ body.is-mobile.flexcyon-ascii-enable {
     }
   }
 }
+
 /* obsi-snip-coll end */
 
 body.flexcyon-flex-max-mode,
@@ -147,6 +146,7 @@ body.flexcyon-quote-enable {
 
     > div.empty-state-container {
       transform: translateY(-105px);
+
       > div.empty-state-action-list {
         margin-top: 32px;
       }
@@ -160,7 +160,6 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
       content: "0" !important;
       font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
       font-family: var(--font-interface);
-      background-clip: text;
       font-weight: bold;
       background: var(--text-accent);
       background-clip: text;
@@ -174,6 +173,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
     > div.empty-state-action-list {
       display: none;
     }
+
     > .sidebar-toggle-button {
       display: none;
     }
@@ -191,6 +191,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   .workspace-tab-header-tab-list,
   .workspace-sidedock-vault-profile {
     opacity: 0;
+
     &:hover {
       opacity: unset;
     }
@@ -200,6 +201,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   .metadata-container,
   .status-bar {
     opacity: var(--dimmed);
+
     &:hover {
       opacity: unset;
     }
@@ -210,6 +212,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
 body.flexcyon-rtz-mode,
 body.flexcyon-number-tabs {
   counter-reset: numTab 0;
+
   .workspace-tab-header-inner-title::before {
     content: counter(numTab);
     color: inherit;
@@ -218,6 +221,7 @@ body.flexcyon-number-tabs {
     font-size: var(--font-ui-medium);
     overflow: hidden;
   }
+
   .workspace-tab-header {
     counter-increment: numTab;
   }
@@ -226,17 +230,21 @@ body.flexcyon-number-tabs {
     margin-bottom: 12px;
   }
 }
+
 /* obsi-snip-coll end */
 
 body.flexcyon-rtz-mode,
 body.flexcyon-remove-tab-headers {
   --tab-stacked-font-size: 0px;
+
   .workspace-tabs .workspace-tab-header {
     --tab-width: 90px;
+
     .workspace-tab-header-inner-title {
       font-size: 0;
+
       &::before {
-        margin-right: 0px;
+        margin-right: 0;
       }
     }
   }

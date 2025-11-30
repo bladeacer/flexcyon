@@ -1,8 +1,9 @@
 body {
   --flexcyon-dataview-horizontal-padding: 8px;
 }
+
 div.dataview-error-box {
   p.dataview-error-message {
-    padding: 0px var(--flexcyon-dataview-horizontal-padding);
+    padding: 0 var(--flexcyon-dataview-horizontal-padding);
   }
 }
