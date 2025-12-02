@@ -62,14 +62,25 @@ this bug.
 How has this issue affected you?
 What are you trying to accomplish?
 
-Providing context helps us come up with a solution that is most useful in the
-real world.
+Does this issue arise when interacting with a specific plugin?
 
 Please include screenshots and/or code snippets if applicable
+
 -->
 
 ## Your Environment
 
+### Which version of Obsidian are you using?
+- [ ] Public Release (Desktop)
+- [ ] Public Release (Mobile)
+- [ ] Insider Release (Desktop)
+- [ ] Insider Release (Mobile)
+
+### Checklist
+- [ ] I have updated to the latest version of the theme (`Obsidian Settings -> Appearance -> Themes -> Manage -> Update`).
+- [ ] I made sure that the issue is related to only this theme, by checking that the issue does not occur with other themes or the default theme.
+
+### Other details
 <!--
 Include as many relevant details about the environment you experienced the bug in
 -->
