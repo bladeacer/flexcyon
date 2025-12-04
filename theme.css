@@ -2608,7 +2608,7 @@ body:is(.theme-light) {
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05), var(--color-base-00) 40%);
+  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05) 70%, var(--color-base-10) 30%);
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 }
@@ -13629,7 +13629,6 @@ body {
   --flexcyon-bases-padding-verti: 16px;
   --flexcyon-bases-td-padding-l: 2px;
   --flexcyon-bases-table-content-alignment: left;
-  --flexcyon-editor-bg-color: var(--background-primary);
 }
 
 .workspace-leaf-content[data-type=bases] .view-content {
