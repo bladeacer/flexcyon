@@ -2614,17 +2614,13 @@ body:is(.theme-light) {
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(
-    in hsl,
-    var(--color-base-00),
-    var(--color-base-05)
-  );
+  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05), var(--color-base-00) 40%);
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 }
 
 body.theme-light {
-  --flexcyon-editor-bg-color: var(--color-base-10);
+  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05), var(--color-base-10));
 }
 
 /* obsi-snip-coll start: grid-background */

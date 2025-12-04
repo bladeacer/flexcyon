@@ -15,18 +15,16 @@
     "url": "git+https://github.com/bladeacer/flexcyon.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "bladeacer",
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/bladeacer/flexcyon/issues"
   },
-  "homepage": "https://github.com/bladeacer/flexcyon#readme",
+  "homepage": "https://github.com/bladeacer/flexcyon",
   "devDependencies": {
     "stylelint": "^16.26.1",
-    "stylelint-config-standard-scss": "^16.0.0"
-  },
-  "dependencies": {
+    "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-scss": "^6.12.1"
   }
 }
