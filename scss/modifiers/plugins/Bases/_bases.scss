@@ -23,6 +23,7 @@ body {
   --flexcyon-bases-padding-verti: 16px;
   --flexcyon-bases-td-padding-l: 2px;
   --flexcyon-bases-table-content-alignment: left;
+  --flexcyon-editor-bg-color: var(--background-primary);
 }
 
 .workspace-leaf-content[data-type="bases"] .view-content {
@@ -60,7 +61,21 @@ body {
 }
 
 div.bases-cards-cover:not([style*="background-image"]) {
-  --flexcyon-editor-bg-color: var(--background-primary);
+  background-image:
+    repeating-linear-gradient(
+      calc(30deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    ),
+    repeating-linear-gradient(
+      calc(150deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    );
 
   &::after {
     content: var(--bases-no-img-str);
@@ -73,24 +88,6 @@ div.bases-cards-cover:not([style*="background-image"]) {
     max-width: 85%;
     right: 0;
     left: calc(16px + 6px * 2 + 4px * 2);
-  }
-
-  & {
-    background-image:
-      repeating-linear-gradient(
-        calc(30deg + var(--flexcyon-editor-bg-rotation)),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      ),
-      repeating-linear-gradient(
-        calc(150deg + var(--flexcyon-editor-bg-rotation)),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      );
   }
 
   * {

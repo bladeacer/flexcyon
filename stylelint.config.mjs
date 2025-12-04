@@ -6,5 +6,6 @@ export default {
     "selector-type-no-unknown": false,
     "shorthand-property-no-redundant-values": false,
     "color-function-alias-notation": false,
+    "number-max-precision": false
   },
 };

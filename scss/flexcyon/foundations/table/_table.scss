@@ -14,6 +14,10 @@ body {
   --flexcyon-td-horiz-padding: 10px;
   --flexcyon-td-live-pad-scale: 0.2;
 
+  table {
+    border-color: var(--table-border-color);
+  }
+
   table:not(.table-view-table) {
     width: var(--flexcyon-table-reading-mode-width);
     margin-left: calc((100% - var(--flexcyon-table-reading-mode-width)) / 2);
@@ -25,15 +29,6 @@ body {
 
   thead tr th {
     background-color: var(--table-column-alt-background);
-  }
-
-  .cm-html-embed tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2),
-  .markdown-rendered tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2) {
-    background-color: var(--table-row-alt-background);
-  }
-
-  table {
-    border-color: var(--table-border-color);
   }
 
   .cm-html-embed td,
@@ -49,5 +44,10 @@ body {
         var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-verti-padding)
       )
       calc(var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-horiz-padding));
+  }
+
+  .cm-html-embed tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2),
+  .markdown-rendered tbody tr:nth-of-type(2n + 1) > td:nth-of-type(2n + 2) {
+    background-color: var(--table-row-alt-background);
   }
 }

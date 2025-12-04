@@ -29,6 +29,41 @@ body {
   }
 }
 
+body.flexcyon-workspace-card-layout {
+  .view-header-breadcrumb-separator {
+    display: none;
+  }
+
+  .view-header-breadcrumb {
+    border-radius: var(--flexcyon-callout-radix);
+    padding: 4px 8px;
+  }
+
+  .view-header-title-container {
+    gap: 8px;
+  }
+
+  .view-header-title-parent {
+    gap: 8px;
+
+    :nth-of-type(5n + 1) {
+      background-color: var(--color-base-20);
+    }
+
+    :nth-of-type(5n + 3) {
+      background-color: var(--color-base-25);
+    }
+
+    :nth-of-type(5n) {
+      background-color: var(--color-base-05);
+    }
+
+    :has(+ :last-child)::after {
+      background-color: var(--color-base-05);
+    }
+  }
+}
+
 body.flexcyon-workspace-angled-layout {
   .view-header-breadcrumb-separator {
     display: none;
@@ -85,15 +120,25 @@ body.flexcyon-workspace-pl10k-layout {
     }
   }
 
+  .view-header-title {
+    padding: var(--flexcyon-mode-view-header-title-verti-padding)
+      var(--flexcyon-mode-view-header-title-horiz-padding);
+    border-radius: var(--flexcyon-callout-radix);
+    background-color: var(--color-base-05);
+  }
+
+  .view-header-breadcrumb-separator {
+    display: none;
+  }
+
+  .view-header,
+  .view-header-title-container {
+    gap: 0;
+  }
+
   .view-header-title-container:not(:has(.view-header-breadcrumb))
     .view-header-title {
     border-radius: var(--flexcyon-callout-radix);
-  }
-
-  .view-header-title-parent :first-child.view-header-breadcrumb {
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-    padding-left: 12px;
   }
 
   .view-header-title-parent .view-header-breadcrumb {
@@ -110,63 +155,12 @@ body.flexcyon-workspace-pl10k-layout {
     }
   }
 
-  .view-header-title {
-    padding: var(--flexcyon-mode-view-header-title-verti-padding)
-      var(--flexcyon-mode-view-header-title-horiz-padding);
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    background-color: var(--color-base-05);
+  .view-header-title-parent :first-child.view-header-breadcrumb {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding-left: 12px;
   }
 
-  .view-header-breadcrumb-separator {
-    display: none;
-  }
-
-  .view-header,
-  .view-header-title-container {
-    gap: 0;
-  }
-}
-
-body.flexcyon-workspace-card-layout {
-  .view-header-breadcrumb-separator {
-    display: none;
-  }
-
-  .view-header-breadcrumb {
-    border-radius: var(--flexcyon-callout-radix);
-    padding: 4px 8px;
-  }
-
-  .view-header-title-container {
-    gap: 8px;
-  }
-
-  .view-header-title-parent {
-    gap: 8px;
-
-    :nth-of-type(5n + 1) {
-      background-color: var(--color-base-20);
-    }
-
-    :nth-of-type(5n + 3) {
-      background-color: var(--color-base-25);
-    }
-
-    :nth-of-type(5n) {
-      background-color: var(--color-base-05);
-    }
-
-    :has(+ :last-child)::after {
-      background-color: var(--color-base-05);
-    }
-  }
-
-  .view-header-title {
-    padding: 4px 8px;
-    background-color: var(--color-base-05);
-    border-radius: var(--flexcyon-callout-radix);
-  }
 }
 
 @mixin anims-def($anim-name, $transform-1, $transform-2) {

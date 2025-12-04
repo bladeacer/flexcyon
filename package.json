@@ -7,8 +7,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "stylelint '**/*.scss'",
-    "fix": "stylelint '**/*.scss' --fix"
+    "lint-once": "stylelint '**/*.scss'",
+    "fix": "stylelint '**/*.scss' --fix",
+    "lint": "onchange '**/*.scss' -- npm run lint-once",
+    "dev": "sass --watch --no-source-map scss/theme.scss theme.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/bladeacer/flexcyon",
   "devDependencies": {
+    "onchange": "^7.1.0",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-scss": "^6.12.1"
