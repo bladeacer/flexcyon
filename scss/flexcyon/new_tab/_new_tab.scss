@@ -1,10 +1,4 @@
 /* obsi-snip-coll start: ascii-art */
-body {
-  .empty-state-container {
-    content-visibility: auto;
-  }
-}
-
 body.theme-dark {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
@@ -49,6 +43,10 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
 
   div.empty-state-title {
     font-size: 1.25rem;
+  }
+
+  .empty-state-container {
+    content-visibility: auto;
   }
 }
 

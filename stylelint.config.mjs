@@ -2,10 +2,12 @@
 export default {
   extends: ["stylelint-config-standard-scss"],
   rules: {
-    "selector-class-pattern": false,
-    "selector-type-no-unknown": false,
-    "shorthand-property-no-redundant-values": false,
-    "color-function-alias-notation": false,
-    "number-max-precision": false
+    "selector-class-pattern": null,
+    "selector-type-no-unknown": null,
+    "shorthand-property-no-redundant-values": null,
+    "color-function-alias-notation": null,
+    "number-max-precision": null,
+    "no-descending-specificity": null,
+    "custom-property-pattern": null
   },
 };

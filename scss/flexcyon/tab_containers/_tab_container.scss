@@ -2,10 +2,6 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
-body {
-  --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
-}
-
 body:not(.show-ribbon) {
   .sidebar-toggle-button {
     padding: var(--flexcyon-side-toggle-button-no-ribbon);
@@ -24,19 +20,18 @@ body:not(
   }
 }
 
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-  .sidebar-toggle-button.mod-left {
-    padding-top: 7px;
-  }
-}
-
 body {
+  --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
+
   .workspace-ribbon .sidebar-toggle-button {
     top: -1px;
   }
 
   .sidebar-toggle-button.mod-left {
     padding-top: 12px;
+    transform: translateY(-4px);
+    background-color: transparent;
+    height: unset;
   }
 
   .sidebar-toggle-button.mod-right {
@@ -51,62 +46,46 @@ body {
     padding: 2px 9px;
   }
 
-  .workspace-tabs:not(.mod-stacked)
+  .workspace-tabs:not(.mod-stacked) {
     .workspace-tab-header:is(.mod-active, .is-active)
-    > .workspace-tab-header-inner {
-    opacity: 1;
-  }
+      > .workspace-tab-header-inner {
+      opacity: 1;
+    }
 
-  .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header
-    > .workspace-tab-header-inner {
-    opacity: var(--dimmed);
-  }
-
-  .workspace-split:not(.mod-left-split, .mod-right-split)
-    .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header-container-inner {
-    padding-left: 0;
-    margin-top: 0;
-    margin-left: -10px;
-  }
-
-  .workspace-split:not(.mod-left-split, .mod-right-split)
-    .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header-inner-title {
-    padding-left: 10px;
-  }
-
-  .workspace-split:not(.mod-left-split, .mod-right-split)
-    .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header-inner-icon {
-    padding-right: 0;
-  }
-
-  .workspace-split:not(.mod-left-split, .mod-right-split)
-    .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header-container-inner
-    > .workspace-tab-header {
-    padding: 3px 6px 0;
-  }
-
-  .workspace-tabs:not(.mod-stacked)
+    .workspace-tab-header > .workspace-tab-header-inner:hover,
     .workspace-tab-header:is(.mod-active, .is-active)
-    > .workspace-tab-header-inner {
-    border-bottom: 1px solid var(--interactive-accent);
-  }
+      > .workspace-tab-header-inner {
+      border-bottom: 1px solid var(--interactive-accent);
+    }
 
-  .workspace-tabs:not(.mod-stacked)
-    .workspace-tab-header
-    > .workspace-tab-header-inner:hover {
-    border-bottom: 1px solid var(--interactive-accent);
-  }
-
-  .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header
     > .workspace-tab-header-inner {
-    border-bottom: 1px solid var(--background-secondary);
+      opacity: var(--dimmed);
+      border-bottom: 1px solid var(--background-secondary);
+    }
   }
+
+  .workspace-split:not(.mod-left-split, .mod-right-split)
+    .workspace-tabs:not(.mod-stacked) {
+      .workspace-tab-header-container-inner {
+        padding-left: 0;
+        margin-top: 0;
+        margin-left: -10px;
+      }
+
+      .workspace-tab-header-inner-title {
+        padding-left: 10px;
+      }
+
+      .workspace-tab-header-inner-icon {
+        padding-right: 0;
+      }
+
+      .workspace-tab-header-container-inner
+        > .workspace-tab-header {
+        padding: 3px 6px 0;
+      }
+    }
 
   :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
     margin-bottom: 0;
@@ -122,12 +101,6 @@ body {
 
   .workspace-leaf {
     background-color: transparent;
-  }
-
-  .sidebar-toggle-button.mod-left {
-    transform: translateY(-4px);
-    background-color: transparent;
-    height: unset;
   }
 }
 
@@ -323,6 +296,10 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
+  .sidebar-toggle-button.mod-left {
+    padding-top: 7px;
+  }
+
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
     border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
   }
@@ -353,9 +330,7 @@ body.flexcyon-workspace-pl10k-layout {
   .workspace-split.mod-sidedock .workspace-tab-header.is-active {
     aspect-ratio: cos(30deg);
     clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
-  }
 
-  .workspace-split.mod-sidedock .workspace-tab-header.is-active {
     .workspace-tab-header-inner {
       border-bottom: none;
     }

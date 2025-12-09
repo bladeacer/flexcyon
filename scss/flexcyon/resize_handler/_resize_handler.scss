@@ -20,21 +20,21 @@ body {
   }
 }
 
-@property --w_raw {
+@property --w-raw {
   syntax: "<length>";
   inherits: true;
   initial-value: 100vw;
 }
 
-@property --h_raw {
+@property --h-raw {
   syntax: "<length>";
   inherits: true;
   initial-value: 100vh;
 }
 
 :root {
-  --w: tan(atan2(var(--w_raw), 1px));
-  --h: tan(atan2(var(--h_raw), 1px));
+  --w: tan(atan2(var(--w-raw), 1px));
+  --h: tan(atan2(var(--h-raw), 1px));
 }
 
 body .view-header-left {

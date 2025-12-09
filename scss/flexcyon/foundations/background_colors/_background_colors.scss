@@ -4,13 +4,12 @@
 // - https://github.com/kepano/flexoki-obsidian
 // And the great origami theme
 // - https://github.com/7368697661/Origami
-//
+
 body:is(.theme-dark) {
-  /* ------------------------------ */
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
   --background-secondary: var(--color-base-00);
-  --background-secondary-alt: var(--color-base-15);
+  --background-secondary-alt: var(--color-base-20);
   --background-modifier-hover: var(--color-base-20);
 }
 
@@ -19,7 +18,8 @@ body:is(.theme-light) {
   --background-primary-alt: var(--color-base-10);
   --background-secondary: var(--color-base-05);
   --background-secondary-alt: var(--color-base-10);
-  --background-modifier-hover: var(--color-base-15);
+  --background-modifier-hover: var(--color-base-10);
+  --background-modifier-message: var(--color-base-70);
 }
 
 body:is(.theme-dark),
@@ -33,10 +33,6 @@ body:is(.theme-light) {
     var(--color-red-rgb),
     calc(var(--dimmed) + 0.3)
   );
-}
-
-body:is(.theme-light) {
-  --background-modifier-message: var(--color-base-70);
 }
 
 body {

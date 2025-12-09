@@ -30,9 +30,7 @@ body {
   --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
   --link-external-color: var(--flexcyon-external-link-color);
   --link-external-color-hover: var(--flexcyon-external-link-hover);
-}
 
-body {
   .backlink-pane,
   .outgoing-link-pane {
     .search-result-container {
@@ -96,15 +94,15 @@ body.flexcyon-alt-link-style {
     color: rgba(var(--color-blue-rgb), var(--dimmed));
   }
 
+  .external-link {
+    background-image: none;
+  }
+
   .cm-link,
   .markdown-rendered .external-link,
   .cm-s-obsidian span.cm-hmd-external-link {
     background-color: rgba(var(--color-blue-rgb), var(--dimmed));
     font-size: var(--font-ui-medium);
     padding: 2px 4px;
-  }
-
-  .external-link {
-    background-image: none;
   }
 }

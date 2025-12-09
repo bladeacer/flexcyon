@@ -119,29 +119,10 @@ body:is(
     .flexcyon-flex-max-mode
   ).flexcyon-status-centre-align
   .status-bar {
-  transform: translateX(
-    calc(0.5 * var(--flexcyon-status-hide-until-hover-translation))
+  transform: translate(
+    calc(0.5 * var(--flexcyon-status-hide-until-hover-translation)),
+    40px
   );
-}
-
-body:is(
-    .flexcyon-status-hide-until-hover,
-    .flexcyon-status-hide-until-hold,
-    .flexcyon-flex-max-mode
-  ).flexcyon-status-left-align
-  .status-bar {
-  transform: translateX(
-    calc(0 * var(--flexcyon-status-hide-until-hover-translation))
-  );
-}
-
-body:is(
-    .flexcyon-status-hide-until-hold,
-    .flexcyon-status-hide-until-hover,
-    .flexcyon-flex-max-mode
-  ).flexcyon-status-centre-align
-  .status-bar {
-  transform: translateY(40px);
 
   &::before {
     position: absolute;

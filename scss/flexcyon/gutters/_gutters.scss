@@ -68,7 +68,7 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
 
     @if $j != $lines-to-hide {
       .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-        --flexcyon-rel-bel-#{$j+1}: "#{$j+1}";
+        --flexcyon-rel-bel-#{$j + 1}: "#{$j + 1}";
 
         content: var(--flexcyon-rel-bel-#{$j + 1});
       }

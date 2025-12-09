@@ -25,6 +25,12 @@ body {
     }
   }
 
+  .workspace-sidedock-vault-profile {
+    .workspace-drawer-vault-actions {
+      gap: 4px;
+    }
+  }
+
   .tree-item-flair {
     color: var(--text-muted);
   }
@@ -170,13 +176,5 @@ body.flexcyon-vault-switch-top {
 body.flexcyon-vault-reverse {
   .workspace-sidedock-vault-profile {
     flex-direction: row-reverse;
-  }
-}
-
-body {
-  .workspace-sidedock-vault-profile {
-    .workspace-drawer-vault-actions {
-      gap: 4px;
-    }
   }
 }

@@ -1,5 +1,33 @@
 body {
   --flexcyon-style-settings-indent-width: 4px;
+
+  div.pcr-app.visible {
+    background-color: var(--color-base-30);
+  }
+
+  .pcr-app .pcr-interaction {
+    .pcr-type {
+      color: var(--text-normal);
+      background: var(--color-base-50);
+      opacity: 0.85;
+    }
+
+    .pcr-type.active {
+      background: var(--text-accent);
+      border: unset;
+      opacity: unset;
+    }
+
+    .pcr-cancel {
+      color: var(--text-normal);
+      background: var(--color-red);
+    }
+
+    .pcr-save {
+      color: var(--text-normal);
+      background: var(--color-blue);
+    }
+  }
 }
 
 body:not(.css-settings-manager) .app-container::after {
@@ -2244,36 +2272,6 @@ settings:
     type: variable-number
     default: 1
  */
-
-body {
-  div.pcr-app.visible {
-    background-color: var(--color-base-30);
-  }
-
-  .pcr-app .pcr-interaction {
-    .pcr-type {
-      color: var(--text-normal);
-      background: var(--color-base-50);
-      opacity: 0.85;
-    }
-
-    .pcr-type.active {
-      background: var(--text-accent);
-      border: unset;
-      opacity: unset;
-    }
-
-    .pcr-cancel {
-      color: var(--text-normal);
-      background: var(--color-red);
-    }
-
-    .pcr-save {
-      color: var(--text-normal);
-      background: var(--color-blue);
-    }
-  }
-}
 
 .themed-color-wrapper {
   .theme-dark .pickr-reset button {
