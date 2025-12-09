@@ -58,8 +58,7 @@ body {
       border-bottom: 1px solid var(--interactive-accent);
     }
 
-    .workspace-tab-header
-    > .workspace-tab-header-inner {
+    .workspace-tab-header > .workspace-tab-header-inner {
       opacity: var(--dimmed);
       border-bottom: 1px solid var(--background-secondary);
     }
@@ -67,25 +66,24 @@ body {
 
   .workspace-split:not(.mod-left-split, .mod-right-split)
     .workspace-tabs:not(.mod-stacked) {
-      .workspace-tab-header-container-inner {
-        padding-left: 0;
-        margin-top: 0;
-        margin-left: -10px;
-      }
-
-      .workspace-tab-header-inner-title {
-        padding-left: 10px;
-      }
-
-      .workspace-tab-header-inner-icon {
-        padding-right: 0;
-      }
-
-      .workspace-tab-header-container-inner
-        > .workspace-tab-header {
-        padding: 3px 6px 0;
-      }
+    .workspace-tab-header-container-inner {
+      padding-left: 0;
+      margin-top: 0;
+      margin-left: -10px;
     }
+
+    .workspace-tab-header-inner-title {
+      padding-left: 10px;
+    }
+
+    .workspace-tab-header-inner-icon {
+      padding-right: 0;
+    }
+
+    .workspace-tab-header-container-inner > .workspace-tab-header {
+      padding: 3px 6px 0;
+    }
+  }
 
   :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
     margin-bottom: 0;

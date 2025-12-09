@@ -26,8 +26,10 @@
   "homepage": "https://github.com/bladeacer/flexcyon",
   "devDependencies": {
     "onchange": "^7.1.0",
+    "prettier": "^3.7.4",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-scss": "^6.12.1"
+    "stylelint-no-unsupported-browser-features": "^8.0.5",
+    "stylelint-prettier": "^5.0.3"
   }
 }

@@ -27,6 +27,23 @@ look funky with the theme`. Even better, submit a pull request or a video
 
 ## Pull requests
 
+Pull requests should follow the following conventions.
+
+- Prefer official
+[Obsidian CSS variables](https://docs.obsidian.md/Reference/CSS+variables/About+styling)
+when it makes sense (sufficiently documented and stable)
+- Follow the existing directory structure
+- Clear variables names
+- Pass the linter checks
+- Only edit parts of the source code where necessary
+- Test if the added features or fixes works as intended
+- Check that your feature works with minAppVersion of Obsidian 1.6.3
+  - last Electron update to v28.2.3 was in Obsidian 1.5.8
+  - Electron v28.2.23 uses Chromium 120.0.6099.283
+  - You can look up MDN whether specific CSS features are supported or not
+  - If not, document and specify the minimum version for the feature to work
+- [Do not attempt to add these](./README.md#what-this-theme-does-not-have)
+
 ### Prerequisite
 
 - If the changes are large or breaking, open an issue discussing it first.

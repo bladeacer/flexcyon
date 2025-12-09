@@ -781,12 +781,15 @@ body {
 body.theme-dark,
 body.theme-light {
   --color-accent-1: hsl(
-    calc(var(--accent-h) - 3) calc(var(--accent-s) * 1.02)
-      calc(var(--accent-l) * 1.15)
+    calc(var(--accent-h) - 3),
+    calc(var(--accent-s) * 1.02),
+    calc(var(--accent-l) * 1.15)
   );
-  --color-accent-2: hsl(
-    calc(var(--accent-h) - 20) calc(var(--accent-s) * 0.85)
-      calc(var(--accent-l) * 1.1) / 87.5%
+  --color-accent-2: hsla(
+    calc(var(--accent-h) - 20),
+    calc(var(--accent-s) * 0.85),
+    calc(var(--accent-l) * 1.1),
+    87.5%
   );
 }
 
@@ -2569,6 +2572,18 @@ body ol {
   list-style-position: inside;
 }
 
+body {
+  --flexcyon-editor-bg-width: 15px;
+  --flexcyon-editor-dot-size: 2.5px;
+  --flexcyon-editor-bg-color: color-mix(
+    in oklch,
+    var(--color-base-05) 70%,
+    var(--color-base-10) 30%
+  );
+  --flexcyon-editor-bg-color-2: var(--color-base-20);
+  --flexcyon-editor-bg-rotation: 0deg;
+}
+
 body:is(.theme-dark) {
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
@@ -2599,16 +2614,12 @@ body:is(.theme-light) {
   );
 }
 
-body {
-  --flexcyon-editor-bg-width: 15px;
-  --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05) 70%, var(--color-base-10) 30%);
-  --flexcyon-editor-bg-color-2: var(--color-base-20);
-  --flexcyon-editor-bg-rotation: 0deg;
-}
-
 body.theme-light {
-  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05), var(--color-base-10));
+  --flexcyon-editor-bg-color: color-mix(
+    in oklch,
+    var(--color-base-05),
+    var(--color-base-10)
+  );
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -2666,20 +2677,16 @@ body.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content:not([
   background-repeat: repeat;
   background-size: var(--flexcyon-editor-bg-width) var(--flexcyon-editor-bg-width);
 }
+body.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * .canvas-background,
+body.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * .canvas-background {
+  display: none;
+}
 body.flexcyon-sidebar-bg-dots div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * *,
 body.flexcyon-sidebar-bg-dots div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * * {
   background-image: none;
 }
 
 /* obsi-snip-coll start: rhombus-background */
-body.flexcyon-editor-rhombus .canvas-background .canvas-background,
-body.flexcyon-editor-rhombus .kanban-plugin div .canvas-background,
-div.callout[data-callout*=bg-rhombus] .callout-content .canvas-background,
-div.callout[data-callout-metadata*=bg-rhombus] .callout-content .canvas-background,
-.editor-rhombus .canvas-background,
-body.flexcyon-editor-rhombus .view-content [class*=markdown-] .canvas-background {
-  display: none;
-}
 body.flexcyon-editor-rhombus .canvas-background,
 body.flexcyon-editor-rhombus .kanban-plugin div,
 div.callout[data-callout*=bg-rhombus] .callout-content,
@@ -2687,6 +2694,14 @@ div.callout[data-callout-metadata*=bg-rhombus] .callout-content,
 .editor-rhombus,
 body.flexcyon-editor-rhombus .view-content [class*=markdown-] {
   background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.flexcyon-editor-rhombus .canvas-background .canvas-background,
+body.flexcyon-editor-rhombus .kanban-plugin div .canvas-background,
+div.callout[data-callout*=bg-rhombus] .callout-content .canvas-background,
+div.callout[data-callout-metadata*=bg-rhombus] .callout-content .canvas-background,
+.editor-rhombus .canvas-background,
+body.flexcyon-editor-rhombus .view-content [class*=markdown-] .canvas-background {
+  display: none;
 }
 body.flexcyon-editor-rhombus .canvas-background *,
 body.flexcyon-editor-rhombus .kanban-plugin div *,
@@ -2701,6 +2716,10 @@ body.flexcyon-editor-rhombus .view-content [class*=markdown-] * {
 body.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content:not([data-type=graph]) *,
 body.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * {
   background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color-2), var(--flexcyon-editor-bg-color-2) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
+}
+body.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * .canvas-background,
+body.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * .canvas-background {
+  display: none;
 }
 body.flexcyon-sidebar-bg-rhombus div .mod-left-split .workspace-leaf-content:not([data-type=graph]) * *,
 body.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:not([data-type=graph]) * * {
@@ -3152,6 +3171,20 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal.mod-settin
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal.mod-settings .vertical-tab-content {
   padding-top: 48px;
 }
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back] svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-add svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-drag svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-rule-icon svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back] svg {
+  opacity: 0;
+}
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag,
@@ -3208,20 +3241,6 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-he
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::after {
   content: "x_x";
   font-size: var(--font-ui-small);
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back] svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-add svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-drag svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-rule-icon svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back] svg {
-  opacity: 0;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Uninstall],
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Uninstall] {
@@ -3584,7 +3603,7 @@ body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
 }
 
 .graph-color-group {
-  padding: 0 0 calc(var(--graph-control-verti-padding) * 1.25) 0;
+  padding: 0 0 calc(var(--graph-control-verti-padding) * 1.25);
 }
 
 .graph-control-section-header {
@@ -4395,7 +4414,7 @@ div.callout[data-callout-metadata*=tategaki] div.callout-content :is(h1, h2, h3,
 div.callout[data-callout*=vert-ltr] div.callout-content,
 div.callout[data-callout-metadata*=vert-ltr] div.callout-content {
   writing-mode: vertical-lr;
-  overflow: scroll scroll;
+  overflow: scroll;
   max-width: 95%;
   padding-top: 2vh;
   padding-bottom: 1vh !important;
@@ -9322,11 +9341,6 @@ body .view-header-left::after {
   font-size: 0;
 }
 
-body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
-body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
-  display: none;
-}
-
 body.flexcyon-display-screen-dimens .titlebar::after {
   padding-top: 12px;
   padding-right: calc(8 * var(--flexcyon-screen-dimens-padding-l));
@@ -9342,6 +9356,11 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
+}
+
+body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
+body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
+  display: none;
 }
 
 body.flexcyon-display-screen-dimens:not(.show-view-header) .mod-root .workspace-tab-container .mod-active::before,
@@ -9371,15 +9390,15 @@ body .view-actions::before {
   font-size: 0;
 }
 
-body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
-body.flexcyon-display-os .mod-stacked .view-actions::before {
-  display: none;
-}
-
 body.flexcyon-display-os .view-actions::before {
   font-size: var(--file-header-font-size);
   padding-right: var(--flexcyon-os-detail-padding-r);
   color: var(--text-muted);
+}
+
+body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
+body.flexcyon-display-os .mod-stacked .view-actions::before {
+  display: none;
 }
 
 body.flexcyon-display-os .titlebar::before {
@@ -9637,6 +9656,9 @@ body.flexcyon-status-style-card div:has(.cm-vim-panel) + .status-bar {
   margin-bottom: 50px;
 }
 
+body .outgoing-link-pane div.tree-item-flair-outer > span {
+  transform: translateX(-7px);
+}
 body .backlink-pane .tree-item.search-result {
   padding-inline-start: 8px;
 }
@@ -9649,9 +9671,6 @@ body .backlink-pane .search-result-file-title {
 }
 body .backlink-pane .search-result-file-title div.tree-item-flair-outer > span {
   transform: translateX(13.5px);
-}
-body .outgoing-link-pane div.tree-item-flair-outer > span {
-  transform: translateX(-7px);
 }
 
 body {
@@ -9878,7 +9897,7 @@ body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
 }
 body.flexcyon-flex-max-mode .status-bar .status-bar-item::after,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
-  padding: 4px 4px;
+  padding: 4px;
   content: "e";
   position: relative;
   width: inherit;
@@ -13249,8 +13268,11 @@ div.dataview-error-box p.dataview-error-message {
 }
 
 body {
-  --color-accent: hsl(
-    var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
+  --color-accent: hsla(
+    var(--accent-h),
+    var(--accent-s),
+    var(--accent-l),
+    var(--dimmed)
   );
   --flexcyon-canvas-blur-intensity: 1px;
 }
@@ -13785,7 +13807,7 @@ body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
 }
 
 .view-content.webviewer-content {
-  padding: 12px 16px 40px 16px;
+  padding: 12px 16px 40px;
   border-radius: 16px;
 }
 

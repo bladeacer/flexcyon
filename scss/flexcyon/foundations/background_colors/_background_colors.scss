@@ -5,6 +5,18 @@
 // And the great origami theme
 // - https://github.com/7368697661/Origami
 
+body {
+  --flexcyon-editor-bg-width: 15px;
+  --flexcyon-editor-dot-size: 2.5px;
+  --flexcyon-editor-bg-color: color-mix(
+    in oklch,
+    var(--color-base-05) 70%,
+    var(--color-base-10) 30%
+  );
+  --flexcyon-editor-bg-color-2: var(--color-base-20);
+  --flexcyon-editor-bg-rotation: 0deg;
+}
+
 body:is(.theme-dark) {
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
@@ -35,16 +47,12 @@ body:is(.theme-light) {
   );
 }
 
-body {
-  --flexcyon-editor-bg-width: 15px;
-  --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05) 70%, var(--color-base-10) 30%);
-  --flexcyon-editor-bg-color-2: var(--color-base-20);
-  --flexcyon-editor-bg-rotation: 0deg;
-}
-
 body.theme-light {
-  --flexcyon-editor-bg-color: color-mix(in oklch, var(--color-base-05), var(--color-base-10));
+  --flexcyon-editor-bg-color: color-mix(
+    in oklch,
+    var(--color-base-05),
+    var(--color-base-10)
+  );
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -54,23 +62,21 @@ div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 .editor-grid,
 body.flexcyon-editor-grid .view-content [class*="markdown-"] {
-  & {
-    background-image:
-      repeating-linear-gradient(
-        var(--flexcyon-editor-bg-rotation),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      ),
-      repeating-linear-gradient(
-        calc(90deg + var(--flexcyon-editor-bg-rotation)),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      );
-  }
+  background-image:
+    repeating-linear-gradient(
+      var(--flexcyon-editor-bg-rotation),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    ),
+    repeating-linear-gradient(
+      calc(90deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    );
 
   * {
     background-image: none;
@@ -82,23 +88,21 @@ body.flexcyon-editor-grid .view-content [class*="markdown-"] {
 body.flexcyon-sidebar-bg-grid {
   div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
   div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-    & {
-      background-image:
-        repeating-linear-gradient(
-          var(--flexcyon-editor-bg-rotation),
-          var(--flexcyon-editor-bg-color-2),
-          var(--flexcyon-editor-bg-color-2) 1px,
-          transparent 1px,
-          transparent var(--flexcyon-editor-bg-width)
-        ),
-        repeating-linear-gradient(
-          calc(90deg + var(--flexcyon-editor-bg-rotation)),
-          var(--flexcyon-editor-bg-color-2),
-          var(--flexcyon-editor-bg-color-2) 1px,
-          transparent 1px,
-          transparent var(--flexcyon-editor-bg-width)
-        );
-    }
+    background-image:
+      repeating-linear-gradient(
+        var(--flexcyon-editor-bg-rotation),
+        var(--flexcyon-editor-bg-color-2),
+        var(--flexcyon-editor-bg-color-2) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      ),
+      repeating-linear-gradient(
+        calc(90deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color-2),
+        var(--flexcyon-editor-bg-color-2) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      );
 
     * {
       background-image: none;
@@ -139,6 +143,10 @@ body.flexcyon-sidebar-bg-dots {
     background-size: var(--flexcyon-editor-bg-width)
       var(--flexcyon-editor-bg-width);
 
+    .canvas-background {
+      display: none;
+    }
+
     * {
       background-image: none;
     }
@@ -152,26 +160,24 @@ div.callout[data-callout*="bg-rhombus"] .callout-content,
 div.callout[data-callout-metadata*="bg-rhombus"] .callout-content,
 .editor-rhombus,
 body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
+  background-image:
+    repeating-linear-gradient(
+      calc(30deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    ),
+    repeating-linear-gradient(
+      calc(150deg + var(--flexcyon-editor-bg-rotation)),
+      var(--flexcyon-editor-bg-color),
+      var(--flexcyon-editor-bg-color) 1px,
+      transparent 1px,
+      transparent var(--flexcyon-editor-bg-width)
+    );
+
   .canvas-background {
     display: none;
-  }
-
-  & {
-    background-image:
-      repeating-linear-gradient(
-        calc(30deg + var(--flexcyon-editor-bg-rotation)),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      ),
-      repeating-linear-gradient(
-        calc(150deg + var(--flexcyon-editor-bg-rotation)),
-        var(--flexcyon-editor-bg-color),
-        var(--flexcyon-editor-bg-color) 1px,
-        transparent 1px,
-        transparent var(--flexcyon-editor-bg-width)
-      );
   }
 
   * {
@@ -184,22 +190,24 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
 body.flexcyon-sidebar-bg-rhombus {
   div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
   div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-    & {
-      background-image:
-        repeating-linear-gradient(
-          calc(30deg + var(--flexcyon-editor-bg-rotation)),
-          var(--flexcyon-editor-bg-color-2),
-          var(--flexcyon-editor-bg-color-2) 1px,
-          transparent 1px,
-          transparent var(--flexcyon-editor-bg-width)
-        ),
-        repeating-linear-gradient(
-          calc(150deg + var(--flexcyon-editor-bg-rotation)),
-          var(--flexcyon-editor-bg-color-2),
-          var(--flexcyon-editor-bg-color-2) 1px,
-          transparent 1px,
-          transparent var(--flexcyon-editor-bg-width)
-        );
+    background-image:
+      repeating-linear-gradient(
+        calc(30deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color-2),
+        var(--flexcyon-editor-bg-color-2) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      ),
+      repeating-linear-gradient(
+        calc(150deg + var(--flexcyon-editor-bg-rotation)),
+        var(--flexcyon-editor-bg-color-2),
+        var(--flexcyon-editor-bg-color-2) 1px,
+        transparent 1px,
+        transparent var(--flexcyon-editor-bg-width)
+      );
+
+    .canvas-background {
+      display: none;
     }
 
     * {

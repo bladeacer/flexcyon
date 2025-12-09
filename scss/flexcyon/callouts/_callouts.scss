@@ -86,7 +86,7 @@ div.callout[data-callout*="vert-ltr"],
 div.callout[data-callout-metadata*="vert-ltr"] {
   div.callout-content {
     writing-mode: vertical-lr;
-    overflow: scroll scroll;
+    overflow: scroll;
     max-width: 95%;
     padding-top: 2vh;
     padding-bottom: 1vh !important;
@@ -773,6 +773,7 @@ div.callout[data-callout-metadata*="center-img"] {
 }
 
 /* obsi-snip-coll start: lucide-icons */
+// Requires at least Obsidian 1.9.12
 .callout[data-callout*="lucide"] {
   --callout-icon: attr(data-callout);
 }

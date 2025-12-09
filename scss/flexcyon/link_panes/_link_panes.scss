@@ -1,4 +1,10 @@
 body {
+  .outgoing-link-pane {
+    div.tree-item-flair-outer > span {
+      transform: translateX(-7px);
+    }
+  }
+
   .backlink-pane {
     .tree-item.search-result {
       padding-inline-start: 8px;
@@ -15,12 +21,6 @@ body {
       div.tree-item-flair-outer > span {
         transform: translateX(13.5px);
       }
-    }
-  }
-
-  .outgoing-link-pane {
-    div.tree-item-flair-outer > span {
-      transform: translateX(-7px);
     }
   }
 }

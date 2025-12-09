@@ -58,11 +58,6 @@ body .view-header-left::after {
   font-size: 0;
 }
 
-body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
-body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
-  display: none;
-}
-
 body.flexcyon-display-screen-dimens .titlebar::after {
   padding-top: 12px;
   padding-right: calc(8 * var(--flexcyon-screen-dimens-padding-l));
@@ -78,6 +73,11 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
   color: var(--text-muted);
+}
+
+body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
+body.flexcyon-display-screen-dimens .mod-stacked .view-header-left::after {
+  display: none;
 }
 
 $screen-dim-no-vh-sel: ":not(.show-view-header) .mod-root .workspace-tab-container .mod-active::before";
@@ -110,15 +110,15 @@ body .view-actions::before {
   font-size: 0;
 }
 
-body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
-body.flexcyon-display-os .mod-stacked .view-actions::before {
-  display: none;
-}
-
 body.flexcyon-display-os .view-actions::before {
   font-size: var(--file-header-font-size);
   padding-right: var(--flexcyon-os-detail-padding-r);
   color: var(--text-muted);
+}
+
+body.flexcyon-display-os:not(:has(.mod-stacked)) .titlebar::before,
+body.flexcyon-display-os .mod-stacked .view-actions::before {
+  display: none;
 }
 
 body.flexcyon-display-os .titlebar::before {
