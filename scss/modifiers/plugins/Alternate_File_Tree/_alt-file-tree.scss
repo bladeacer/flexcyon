@@ -19,11 +19,11 @@ body.theme-light {
 body {
   .oz-folder-contents {
     padding: 4px 16px;
-    margin-left: 18px !important;
+    margin-inline-start: 18px !important;
   }
 
   .oz-folder-contents:not(:has(> .treeview)) {
-    border-left: none;
+    border-inline-start: none;
   }
 
   div.oz-folder-name {
@@ -43,18 +43,18 @@ body {
   div.oz-file-tree-header {
     background-color: var(--color-base-00);
     padding: 8px 5px;
-    margin-top: 0;
+    margin-block-start: 0;
     text-align: var(--flexcyon-top-actions-alignment);
   }
 
   .oz-folders-action-items,
   .oz-flex-container {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   div.oz-folder-pane {
     position: relative;
-    top: -4px;
+    inset-block-start: -4px;
   }
 
   div.oz-folders-action-items.file-tree-header-fixed {
@@ -73,8 +73,7 @@ body {
   }
 
   .oz-nav-action-button {
-    margin-left: 0;
-    margin-right: 8px;
+    margin-inline: 0 8px;
     padding: 0 2px;
     opacity: var(--dimmed);
   }
@@ -88,7 +87,7 @@ body {
     }
 
     .oz-nav-action-button {
-      margin-right: 8px;
+      margin-inline-end: 8px;
       scale: var(--upsize);
     }
   }
@@ -126,7 +125,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
       var(--flexcyon-tree-item-horiz-padding);
 
     .oz-nav-file-title-content {
-      width: unset;
+      inline-size: unset;
     }
 
     span.oz-nav-file-tag {
@@ -174,16 +173,16 @@ body.flexcyon-oz-alternate-folder-count {
   }
 
   div.oz-folder-line:hover {
-    max-width: max-content;
+    max-inline-size: max-content;
 
     div.oz-folder-count {
       span.oz-nav-file-tag {
-        margin-top: 0.5px;
+        margin-block-start: 0.5px;
         font-weight: inherit;
         transform: translateY(-1000px);
         text-transform: none;
         display: inline;
-        text-align: left;
+        text-align: start;
 
         &::before {
           content: "Count: ";

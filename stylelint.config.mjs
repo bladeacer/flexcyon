@@ -3,15 +3,17 @@ export default {
   extends: ["stylelint-config-standard-scss"],
   plugins: [
     "stylelint-prettier",
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-use-logical"
   ],
   rules: {
     "prettier/prettier": true,
+    "csstools/use-logical": ("always" || true) || ("ignore" || false || null),
     "selector-class-pattern": null,
     "selector-type-no-unknown": null,
     "custom-property-pattern": null,
     "no-descending-specificity": null,
-    "number-max-precision": null,
+    // "number-max-precision": null,
     "color-function-alias-notation": null,
     "color-function-notation": "legacy",
     "plugin/no-unsupported-browser-features": [

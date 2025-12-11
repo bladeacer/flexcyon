@@ -39,14 +39,14 @@ body {
 
 body.flexcyon-prompt-align-bottom-left {
   .modal-container .prompt {
-    top: 30vh;
-    left: 0;
+    inset-block-start: 30vh;
+    inset-inline-start: 0;
   }
 }
 
 body.flexcyon-prompt-align-bottom-center {
   .modal-container .prompt {
-    top: 30vh;
+    inset-block-start: 30vh;
   }
 }
 
@@ -60,7 +60,7 @@ body.flexcyon-prompt-align-bottom-center {
     }
 
     .clickable-icon {
-      margin-left: 12px;
+      margin-inline-start: 12px;
     }
   }
 

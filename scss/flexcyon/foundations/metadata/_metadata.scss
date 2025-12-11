@@ -7,7 +7,7 @@ body {
   --flexcyon-meta-container-padding-left: 14px;
 
   .metadata-container {
-    padding-left: var(--flexcyon-meta-container-padding-left);
+    padding-inline-start: var(--flexcyon-meta-container-padding-left);
   }
 
   .cm-hmd-frontmatter.cm-atom {

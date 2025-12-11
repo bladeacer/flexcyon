@@ -24,7 +24,7 @@ body {
     }
 
     .callout-content :first-child:is(pre, img, iframe) {
-      margin-top: var(--flexcyon-callout-first-codeblock-margin-top);
+      margin-block-start: var(--flexcyon-callout-first-codeblock-margin-top);
     }
   }
 
@@ -40,9 +40,8 @@ div.callout[data-callout-metadata*="tategaki"] {
   div.callout-content {
     writing-mode: vertical-rl;
     overflow: scroll;
-    max-width: 95%;
-    padding-top: 2vh;
-    padding-bottom: 1vh !important;
+    max-inline-size: 95%;
+    padding-block: 2vh 1vh;
     line-height: 1.667;
     margin: auto;
     text-indent: 1rem;
@@ -73,7 +72,7 @@ div.callout[data-callout-metadata*="tategaki"] {
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
-      margin-top: 0;
+      margin-block-start: 0;
       line-height: 1.667;
     }
   }
@@ -87,12 +86,11 @@ div.callout[data-callout-metadata*="vert-ltr"] {
   div.callout-content {
     writing-mode: vertical-lr;
     overflow: scroll;
-    max-width: 95%;
-    padding-top: 2vh;
-    padding-bottom: 1vh !important;
+    max-inline-size: 95%;
+    padding-block: 2vh 1vh;
     line-height: 1.667;
     margin: auto;
-    min-height: max-content !important;
+    min-block-size: max-content !important;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
 
@@ -121,9 +119,9 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
-      margin-top: 0;
+      margin-block-start: 0;
       line-height: 1.667;
-      min-height: auto !important;
+      min-block-size: auto !important;
     }
   }
 }
@@ -264,9 +262,9 @@ div.callout[data-callout-metadata*="center-content"] {
       code[class*="language-"],
       pre[class*="language-"] {
         @if $dir == "rtl" {
-          text-align: right;
+          text-align: end;
         } @else {
-          text-align: left;
+          text-align: start;
         }
       }
     }
@@ -399,8 +397,8 @@ body.is-mobile {
   .markdown-reading-view {
     .callout[data-callout*="$pop"],
     .callout[data-callout-metadata*="$pop"] {
-      margin-left: min(-5vw, -40px);
-      width: max(calc(var(--file-line-width) / 2), 40vw);
+      margin-inline-start: min(-5vw, -40px);
+      inline-size: max(calc(var(--file-line-width) / 2), 40vw);
     }
   }
 }
@@ -414,16 +412,16 @@ body.is-mobile {
   .callout[data-callout-metadata*="$pop"] {
     display: block;
     position: absolute;
-    margin-left: min(-3vw, -40px);
+    margin-inline-start: min(-3vw, -40px);
     transform: translateY(-70px);
     transition: all var(--flexcyon-callout-pop-animation-duration) ease;
-    width: calc(var(--file-line-width) / 2 + min(3vw, 40px));
+    inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
     backdrop-filter: blur(20px);
     z-index: 999;
 
     .callout-title {
-      margin-top: 3px;
-      margin-left: 22px;
+      margin-block-start: 3px;
+      margin-inline-start: 22px;
     }
   }
 
@@ -592,15 +590,15 @@ div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 div.callout[data-callout*="bg-dots"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content {
-  margin-top: 16px;
+  margin-block-start: 16px;
   padding: 0 8px;
 }
 
 /* obsi-snip-coll start: flashcard */
 div.callout[data-callout*="flashcard"],
 div.callout[data-callout-metadata*="flashcard"] {
-  width: var(--flexcyon-callouts-flashcard-width);
-  height: var(--flexcyon-callouts-flashcard-height);
+  inline-size: var(--flexcyon-callouts-flashcard-width);
+  block-size: var(--flexcyon-callouts-flashcard-height);
   perspective: 1000px;
   transform-style: preserve-3d;
   transition: all var(--flexcyon-callout-flashcard-animation-duration)
@@ -613,7 +611,7 @@ div.callout[data-callout-metadata*="flashcard"] {
 
   .callout-title {
     position: absolute;
-    top: 25%;
+    inset-block-start: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -764,11 +762,10 @@ div.callout[data-callout-metadata*="center-img"] {
   img {
     justify-content: center;
     display: flex;
-    width: max-content;
+    inline-size: max-content;
     margin: 0 auto;
-    max-width: 85%;
-    right: 0;
-    left: calc(16px + 6px * 2 + 4px * 2);
+    max-inline-size: 85%;
+    inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
   }
 }
 
@@ -794,7 +791,7 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
     :is(#{$flexcyon-tui-exclusions})
   )
 ) {
-  margin-top: -25px;
+  margin-block-start: -25px;
 }
 
 body.flexcyon-tui-no-icons
@@ -837,7 +834,7 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
 
     transform: translate(24px, 50%);
     padding: 0 8px;
-    width: max-content;
+    inline-size: max-content;
     background-color: var(--background-primary);
 
     div {
@@ -846,11 +843,11 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   }
 
   &.is-collapsed .callout-title {
-    min-height: 40px;
+    min-block-size: 40px;
   }
 
   .callout-title:not(:has(~ .callout-content)) {
-    height: 40px;
+    block-size: 40px;
   }
 
   .callout-content {
@@ -995,7 +992,7 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
   }
 
   .callout-content {
-    margin-left: 12px;
+    margin-inline-start: 12px;
     padding: 4px 12px;
   }
 }
@@ -1028,7 +1025,7 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
     }
 
     .callout-content {
-      margin-left: 12px;
+      margin-inline-start: 12px;
       padding: 4px 12px;
     }
   }

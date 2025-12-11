@@ -32,7 +32,7 @@ body:not(.is-mobile) .cm-lineNumbers *::before {
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active {
-  padding-right: 4px;
+  padding-inline-end: 4px;
 }
 
 @mixin hide-preceding-lines($lines-to-hide) {

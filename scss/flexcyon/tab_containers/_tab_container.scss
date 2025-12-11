@@ -8,7 +8,7 @@ body:not(.show-ribbon) {
   }
 
   .sidebar-toggle-button.mod-left {
-    padding-top: 16px;
+    padding-block-start: 16px;
   }
 }
 
@@ -16,7 +16,7 @@ body:not(
     .show-ribbon
   ).flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   .sidebar-toggle-button.mod-left {
-    padding-top: 9px;
+    padding-block-start: 9px;
   }
 }
 
@@ -24,18 +24,18 @@ body {
   --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
 
   .workspace-ribbon .sidebar-toggle-button {
-    top: -1px;
+    inset-block-start: -1px;
   }
 
   .sidebar-toggle-button.mod-left {
-    padding-top: 12px;
+    padding-block-start: 12px;
     transform: translateY(-4px);
     background-color: transparent;
-    height: unset;
+    block-size: unset;
   }
 
   .sidebar-toggle-button.mod-right {
-    padding-top: 9px;
+    padding-block-start: 9px;
   }
 
   .workspace-tab-header {
@@ -55,29 +55,29 @@ body {
     .workspace-tab-header > .workspace-tab-header-inner:hover,
     .workspace-tab-header:is(.mod-active, .is-active)
       > .workspace-tab-header-inner {
-      border-bottom: 1px solid var(--interactive-accent);
+      border-block-end: 1px solid var(--interactive-accent);
     }
 
     .workspace-tab-header > .workspace-tab-header-inner {
       opacity: var(--dimmed);
-      border-bottom: 1px solid var(--background-secondary);
+      border-block-end: 1px solid var(--background-secondary);
     }
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split)
     .workspace-tabs:not(.mod-stacked) {
     .workspace-tab-header-container-inner {
-      padding-left: 0;
-      margin-top: 0;
-      margin-left: -10px;
+      padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-inline-start: -10px;
     }
 
     .workspace-tab-header-inner-title {
-      padding-left: 10px;
+      padding-inline-start: 10px;
     }
 
     .workspace-tab-header-inner-icon {
-      padding-right: 0;
+      padding-inline-end: 0;
     }
 
     .workspace-tab-header-container-inner > .workspace-tab-header {
@@ -86,15 +86,14 @@ body {
   }
 
   :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-top: 0;
+    margin-block: 0;
+    padding-block-end: 0;
     gap: 1px;
-    padding-left: 0;
+    padding-inline-start: 0;
   }
 
   .workspace-leaf-content {
-    width: unset;
+    inline-size: unset;
   }
 
   .workspace-leaf {
@@ -139,21 +138,21 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-split.mod-right-split :last-child .workspace-tab-container {
-    margin-bottom: 38px;
+    margin-block-end: 38px;
   }
 
   .titlebar {
-    margin-top: 4px;
-    margin-right: 16px;
+    margin-block-start: 4px;
+    margin-inline-end: 16px;
   }
 
   .workspace-ribbon {
     background-color: var(--color-base-00);
-    border-right: none;
+    border-inline-end: none;
   }
 
   .workspace-ribbon.mod-left {
-    margin-top: 50px;
+    margin-block-start: 50px;
     border: none;
 
     &::before {
@@ -166,11 +165,11 @@ body.flexcyon-workspace-card-layout {
   }
 
   .sidebar-toggle-button.mod-right {
-    margin-top: -2px;
+    margin-block-start: -2px;
   }
 
   .side-dock-actions {
-    margin-top: 2px;
+    margin-block-start: 2px;
   }
 
   .workspace-split
@@ -212,12 +211,12 @@ body.flexcyon-workspace-angled-layout {
 
 body.show-ribbon {
   .sidebar-toggle-button.mod-left {
-    height: calc(1.12 * var(--header-height));
+    block-size: calc(1.12 * var(--header-height));
     background-color: var(--color-base-00);
   }
 
   .side-dock-actions {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 
@@ -233,8 +232,8 @@ body.show-ribbon {
     &::before {
       content: "#{$content}";
       position: absolute;
-      top: 44px;
-      left: 32px;
+      inset-block-start: 44px;
+      inset-inline-start: 32px;
       z-index: 1;
       color: rgba(var(--color-#{$color}-rgb), 0.85);
       background-color: var(--color-base-00);
@@ -295,7 +294,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   .sidebar-toggle-button.mod-left {
-    padding-top: 7px;
+    padding-block-start: 7px;
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
@@ -304,8 +303,8 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
 
   .metadata-properties-heading {
     position: absolute;
-    top: -15px;
-    left: 32px;
+    inset-block-start: -15px;
+    inset-inline-start: 32px;
 
     * {
       color: rgba(var(--color-purple-rgb), 0.9);
@@ -319,7 +318,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   }
 
   .metadata-content {
-    margin-top: 4px;
+    margin-block-start: 4px;
   }
 }
 
@@ -330,7 +329,7 @@ body.flexcyon-workspace-pl10k-layout {
     clip-path: polygon(-50% 50%, 50% 100%, 150% 50%, 50% 0);
 
     .workspace-tab-header-inner {
-      border-bottom: none;
+      border-block-end: none;
     }
   }
 
@@ -349,7 +348,7 @@ body.flexcyon-workspace-pl10k-layout {
 
   .view-actions {
     padding: 4px 2px;
-    margin-top: 8px;
+    margin-block-start: 8px;
 
     button {
       border-radius: var(--flexcyon-callout-radix);
@@ -360,7 +359,7 @@ body.flexcyon-workspace-pl10k-layout {
 body.flexcyon-vertical-nav .workspace.is-right-sidedock-open {
   .mod-right-split .mod-top {
     .view-content {
-      padding-top: 40px;
+      padding-block-start: 40px;
     }
   }
 }

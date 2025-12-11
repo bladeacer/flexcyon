@@ -41,7 +41,7 @@ body.highlightr-floating
   --floating-background: var(--background-primary);
   --floating-size: 20%;
 
-  padding-bottom: 0.1em;
+  padding-block-end: 0.1em;
   background-image: linear-gradient(
     to right,
     0,
@@ -54,6 +54,5 @@ body.highlightr-rounded
   :is(mark, span.cm-highlight, .markdown-preview-view mark),
 body.highlightr-realistic
   :is(mark, span.cm-highlight, .markdown-preview-view mark) {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-block: 0;
 }

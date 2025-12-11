@@ -15,7 +15,7 @@ body {
 }
 
 .canvas-controls {
-  top: 24px;
+  inset-block-start: 24px;
   gap: 8px;
   scale: var(--expand);
 }
@@ -39,44 +39,44 @@ body.flexcyon-canvas-blur-inactive-nodes {
 
 body.flexcyon-canvas-menu-bottom-left {
   .canvas-card-menu {
-    left: 1%;
+    inset-inline-start: 1%;
     transform: none;
   }
 }
 
 body.flexcyon-canvas-menu-bottom-right {
   .canvas-card-menu {
-    left: 89%;
+    inset-inline-start: 89%;
     transform: none;
   }
 }
 
 body.flexcyon-canvas-menu-top-center {
   .canvas-card-menu {
-    bottom: 94%;
+    inset-block-end: 94%;
   }
 }
 
 body.flexcyon-canvas-menu-top-left {
   .canvas-card-menu {
-    bottom: 94%;
-    left: 1%;
+    inset-block-end: 94%;
+    inset-inline-start: 1%;
     transform: none;
   }
 }
 
 body.flexcyon-canvas-menu-top-right {
   .canvas-card-menu {
-    bottom: 94%;
-    left: 87.5%;
+    inset-block-end: 94%;
+    inset-inline-start: 87.5%;
     transform: none;
   }
 }
 
 body.flexcyon-canvas-menu-lcenter-center {
   .canvas-card-menu {
-    left: 1%;
-    bottom: 50%;
+    inset-inline-start: 1%;
+    inset-block-end: 50%;
     transform: none;
     flex-direction: column;
   }
@@ -84,8 +84,8 @@ body.flexcyon-canvas-menu-lcenter-center {
 
 body.flexcyon-canvas-menu-lcenter-top {
   .canvas-card-menu {
-    left: 1%;
-    bottom: 82.5%;
+    inset-inline-start: 1%;
+    inset-block-end: 82.5%;
     transform: none;
     flex-direction: column;
   }
@@ -93,8 +93,8 @@ body.flexcyon-canvas-menu-lcenter-top {
 
 body.flexcyon-canvas-menu-lcenter-bottom {
   .canvas-card-menu {
-    left: 1%;
-    bottom: 2.5%;
+    inset-inline-start: 1%;
+    inset-block-end: 2.5%;
     transform: none;
     flex-direction: column;
   }
@@ -102,8 +102,8 @@ body.flexcyon-canvas-menu-lcenter-bottom {
 
 body.flexcyon-canvas-menu-rcenter-bottom {
   .canvas-card-menu {
-    left: 96.1%;
-    bottom: 7.5%;
+    inset-inline-start: 96.1%;
+    inset-block-end: 7.5%;
     transform: none;
     flex-direction: column;
   }
@@ -111,8 +111,8 @@ body.flexcyon-canvas-menu-rcenter-bottom {
 
 body.flexcyon-canvas-menu-rcenter-align {
   .canvas-card-menu {
-    left: 96.1%;
-    bottom: 40%;
+    inset-inline-start: 96.1%;
+    inset-block-end: 40%;
     transform: none;
     flex-direction: column;
   }
@@ -120,8 +120,8 @@ body.flexcyon-canvas-menu-rcenter-align {
 
 body.flexcyon-canvas-menu-rcenter-center {
   .canvas-card-menu {
-    left: 96.1%;
-    bottom: 40%;
+    inset-inline-start: 96.1%;
+    inset-block-end: 40%;
     transform: none;
     flex-direction: column;
   }
@@ -129,8 +129,8 @@ body.flexcyon-canvas-menu-rcenter-center {
 
 body.flexcyon-canvas-menu-rcenter-top {
   .canvas-card-menu {
-    left: 96.1%;
-    bottom: 82.5%;
+    inset-inline-start: 96.1%;
+    inset-block-end: 82.5%;
     transform: none;
     flex-direction: column;
   }

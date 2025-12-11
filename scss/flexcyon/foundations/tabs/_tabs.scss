@@ -23,7 +23,7 @@ body {
   --flexcyon-mode-view-header-title-horiz-padding: 12px;
 
   .view-header-breadcrumb {
-    max-width: var(--flexcyon-view-header-breadcrumb-max-w);
+    max-inline-size: var(--flexcyon-view-header-breadcrumb-max-w);
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -148,17 +148,17 @@ body.flexcyon-workspace-pl10k-layout {
       padding: 10px 6px;
       content: "e";
       position: relative;
-      width: inherit;
-      height: inherit;
+      inline-size: inherit;
+      block-size: inherit;
       color: transparent;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
     }
   }
 
   .view-header-title-parent :first-child.view-header-breadcrumb {
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-    padding-left: 12px;
+    border-start-start-radius: 16px;
+    border-end-start-radius: 16px;
+    padding-inline-start: 12px;
   }
 }
 

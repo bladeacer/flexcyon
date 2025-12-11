@@ -4,7 +4,7 @@
   }
 
   .tasks-list-text {
-    padding-left: 8px;
+    padding-inline-start: 8px;
     box-decoration-break: clone;
   }
 }
@@ -16,11 +16,10 @@
   color: var(--h2-color);
   justify-content: center;
   display: flex;
-  width: max-content;
+  inline-size: max-content;
   margin: 0 auto;
-  max-width: 85%;
-  right: 0;
-  left: calc(16px + 6px * 2 + 4px * 2);
+  max-inline-size: 85%;
+  inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
 }
 
 div.task-count {

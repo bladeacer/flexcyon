@@ -35,15 +35,15 @@ body {
   --bases-header-padding-end: 0px;
   --bases-header-border-width: 0 0 1px 0;
 
-  width: min(calc(100% - 8px), 99.5%);
+  inline-size: min(calc(100% - 8px), 99.5%);
 }
 
 .bases-table {
-  border-right: 0.5px solid var(--text-faint);
+  border-inline-end: 0.5px solid var(--text-faint);
 }
 
 .bases-tr {
-  border-left: 0.5px solid var(--text-faint);
+  border-inline-start: 0.5px solid var(--text-faint);
 }
 
 .bases-view {
@@ -81,12 +81,11 @@ div.bases-cards-cover:not([style*="background-image"]) {
     color: var(--text-muted);
     justify-content: center;
     display: flex;
-    width: max-content;
+    inline-size: max-content;
     margin: 30% auto;
     text-align: center;
-    max-width: 85%;
-    right: 0;
-    left: calc(16px + 6px * 2 + 4px * 2);
+    max-inline-size: 85%;
+    inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
   }
 
   * {
@@ -110,11 +109,11 @@ div.bases-cards-cover:not([style*="background-image"]) {
 }
 
 .bases-td {
-  padding-left: var(--flexcyon-bases-td-padding-l);
+  padding-inline-start: var(--flexcyon-bases-td-padding-l);
 }
 
 .query-toolbar-menu .bases-query-container {
-  margin-top: 4px;
+  margin-block-start: 4px;
 }
 
 .query-toolbar-menu .query-toolbar-section-header {
@@ -137,7 +136,7 @@ div.bases-cards-cover:not([style*="background-image"]) {
   }
 
   .filter-group .filter-group-actions {
-    padding-top: 8px;
+    padding-block-start: 8px;
   }
 
   .filter-group .filter-group-header .conjunction.dropdown {
@@ -146,12 +145,12 @@ div.bases-cards-cover:not([style*="background-image"]) {
 }
 
 .query-toolbar-menu .query-toolbar-section:not(:last-child) {
-  border-bottom: none;
+  border-block-end: none;
 }
 
 .workspace-leaf-content[data-type="markdown"] .block-language-base .bases-view,
 .workspace-leaf-content[data-type="markdown"] .bases-embed .bases-view {
-  min-height: 100px;
+  min-block-size: 100px;
   border: none;
 }
 
@@ -172,7 +171,7 @@ div.bases-cards-cover:not([style*="background-image"]) {
     color: var(--color-red);
     content: "N/A";
     font-size: var(--font-ui-small);
-    margin-left: 8px;
+    margin-inline-start: 8px;
   }
 }
 

@@ -20,7 +20,7 @@ body.flexcyon-workspace-angled-layout {
 
 .graph-control-section {
   padding: var(--graph-control-verti-padding) var(--graph-control-horiz-padding);
-  border-bottom: none;
+  border-block-end: none;
 
   .tree-item-self {
     padding: var(--graph-control-verti-padding) 8px

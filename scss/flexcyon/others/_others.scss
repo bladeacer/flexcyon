@@ -36,7 +36,7 @@ body {
   }
 
   .workspace-ribbon {
-    border-right: unset;
+    border-inline-end: unset;
   }
 
   &:not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
@@ -63,11 +63,11 @@ body {
 
 body.flexcyon-enable-alt-active-item-effect {
   .vertical-tab-nav-item {
-    padding-left: 0.5rem;
+    padding-inline-start: 0.5rem;
   }
 
   .vertical-tab-nav-item.search-settings-input {
-    padding-left: 0.1rem;
+    padding-inline-start: 0.1rem;
   }
 
   .vertical-tab-nav-item.is-active {
@@ -79,7 +79,7 @@ body.flexcyon-enable-alt-active-item-effect {
       var(--text-on-accent) 87.5%,
       transparent 100%
     );
-    padding-left: 0.75rem;
+    padding-inline-start: 0.75rem;
 
     &:hover {
       font-weight: bold;
@@ -92,7 +92,7 @@ body span.media-embed * {
 }
 
 .cm-s-obsidian .cm-line.HyperMD-footnote span.cm-hmd-footnote {
-  top: -0.1em;
+  inset-block-start: -0.1em;
 }
 
 body .cm-hr {
@@ -112,11 +112,10 @@ body.flexcyon-cust-str-hr {
     position: absolute;
     justify-content: center;
     display: flex;
-    width: fit-content;
+    inline-size: fit-content;
     margin: 0 auto;
-    max-width: 85%;
-    right: 0;
-    left: calc(0px * 2);
+    max-inline-size: 85%;
+    inset-inline: calc(0px * 2) 0;
     content: var(--flexcyon-cust-hr-str);
     font-size: var(--flexcyon-cust-hr-str-font-size);
     color: var(--hr-color);
@@ -130,7 +129,7 @@ body.flexcyon-cust-str-hr {
   }
 
   .markdown-embed:has(.el-hr) .markdown-preview-sizer {
-    padding-bottom: 12px !important;
+    padding-block-end: 12px !important;
   }
 }
 
@@ -149,20 +148,20 @@ body.flexcyon-ribbon-top {
 
   .workspace {
     .workspace-ribbon {
-      padding-left: 8px;
-      margin-left: 8px;
+      padding-inline-start: 8px;
+      margin-inline-start: 8px;
       position: absolute;
-      top: -42px;
+      inset-block-start: -42px;
 
       .side-dock-actions {
-        margin-left: 69px;
+        margin-inline-start: 69px;
         flex-direction: row;
-        padding-right: 150vw;
+        padding-inline-end: 150vw;
       }
     }
 
     .workspace-split {
-      padding-top: 48px;
+      padding-block-start: 48px;
     }
   }
 }

@@ -9,7 +9,7 @@ body.flexcyon-enable-smooth-cursor {
   .cm-cursor-primary {
     transition: all var(--flexcyon-cursor-duration)
       var(--flexcyon-cursor-timing-fn);
-    min-width: var(--flexcyon-cursor-min-width);
+    min-inline-size: var(--flexcyon-cursor-min-width);
   }
 }
 

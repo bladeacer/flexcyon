@@ -3,17 +3,16 @@
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
   writing-mode: vertical-rl;
   overflow: scroll;
-  max-width: 95%;
-  padding-bottom: 0 !important;
-  padding-top: 7.5vh;
+  max-inline-size: 95%;
+  padding-block: 7.5vh 0 !important;
   line-height: 1.667;
   margin: auto;
-  min-height: 0 !important;
-  max-height: 85vh;
+  min-block-size: 0 !important;
+  max-block-size: 85vh;
   text-indent: 1rem;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
-    margin-top: 0;
+    margin-block-start: 0;
     line-height: 1.667;
   }
 
@@ -29,17 +28,16 @@
 .app-container .view-content:has(.vertical-ltr) .markdown-preview-section {
   writing-mode: vertical-lr;
   overflow: scroll;
-  max-width: 95%;
-  padding-bottom: 0 !important;
-  padding-top: 7.5vh;
+  max-inline-size: 95%;
+  padding-block: 7.5vh 0 !important;
   line-height: 1.667;
   margin: auto;
-  min-height: 0 !important;
-  max-height: 85vh;
+  min-block-size: 0 !important;
+  max-block-size: 85vh;
   text-indent: 1rem;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
-    margin-top: 0;
+    margin-block-start: 0;
     line-height: 1.667;
   }
 

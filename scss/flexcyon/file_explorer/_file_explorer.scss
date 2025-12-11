@@ -174,7 +174,7 @@ body.flexcyon-md-file-tree-style {
   .nav-folder,
   .nav-folder-children {
     position: relative;
-    padding-left: 2px;
+    padding-inline-start: 2px;
   }
 
   .nav-file::before,
@@ -186,25 +186,24 @@ body.flexcyon-md-file-tree-style {
 
   .tree-item.nav-file::before,
   .tree-item.nav-folder::before {
-    height: 1px;
-    width: 20px;
-    top: 50%;
+    block-size: 1px;
+    inline-size: 20px;
+    inset-block-start: 50%;
     transform: translate(0, -50%);
     margin-inline-start: -3px;
   }
 
   .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
-    bottom: 6px;
+    inset-block-end: 6px;
   }
 
   .tree-item-children.nav-folder-children {
-    border-left-width: 0;
+    border-inline-start-width: 0;
 
     &::before {
-      left: 0;
-      top: 0;
-      bottom: 12px;
-      width: 1px;
+      inset-inline-start: 0;
+      inset-block: 0 12px;
+      inline-size: 1px;
     }
   }
 
@@ -303,11 +302,11 @@ body.flexcyon-vertical-nav {
 
       div.sidebar-toggle-button.mod-left {
         position: absolute;
-        margin-left: 1px;
+        margin-inline-start: 1px;
       }
 
       div.workspace-tab-header-container-inner {
-        margin-top: 48px;
+        margin-block-start: 48px;
       }
     }
 
@@ -340,7 +339,7 @@ body.flexcyon-vertical-nav {
     }
 
     .nav-header {
-      width: min-content;
+      inline-size: min-content;
     }
 
     .metadata-properties {
@@ -355,28 +354,28 @@ body.flexcyon-vertical-nav {
       }
 
       .metadata-property-key {
-        width: 100%;
+        inline-size: 100%;
       }
     }
 
     .nav-buttons-container {
       gap: 8px;
-      margin-top: 8px;
+      margin-block-start: 8px;
     }
 
     .workspace-tab-header-container-inner {
-      margin-top: 8px;
+      margin-block-start: 8px;
       gap: 8px;
       flex-direction: column;
-      height: min-content;
+      block-size: min-content;
     }
 
     .workspace-leaf-content {
-      width: 100%;
+      inline-size: 100%;
     }
 
     .workspace-leaf-content .nav-header + div {
-      margin-top: 12px;
+      margin-block-start: 12px;
       flex-direction: row;
     }
   }
@@ -385,7 +384,7 @@ body.flexcyon-vertical-nav {
     .is-right-sidedock-open
     .workspace-tabs.mod-top-right-space
     .workspace-tab-header-container {
-    padding-right: 0;
+    padding-inline-end: 0;
   }
 }
 

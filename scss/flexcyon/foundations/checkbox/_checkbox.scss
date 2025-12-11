@@ -22,7 +22,7 @@ body {
   li[data-task="#{$data-task}"] > p > input:checked {
     background-color: inherit;
     border: none;
-    padding-right: 6px;
+    padding-inline-end: 6px;
 
     &:hover {
       filter: brightness(1.25);
@@ -36,7 +36,7 @@ body {
       font-weight: 900;
       text-align: center;
       mask-image: none;
-      top: -0.325em;
+      inset-block-start: -0.325em;
     }
   }
 }
@@ -65,7 +65,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="!"]:checked::after,
   li[data-task="!"] > input:checked::after,
   li[data-task="!"] > p > input:checked::after {
-    top: -0.15em;
+    inset-block-start: -0.15em;
   }
 
   input[data-task="'"]:checked::after,
@@ -73,7 +73,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task="'"] > p > input:checked::after {
     content: "‘";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
-    top: -0.175rem;
+    inset-block-start: -0.175rem;
   }
 
   input[data-task="#"]:checked::after,
@@ -92,7 +92,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task=">"] > input:checked::after,
   li[data-task=">"] > p > input:checked::after {
     transform: scaleY(1.1);
-    top: -0.175rem;
+    inset-block-start: -0.175rem;
   }
 
   input[data-task="."]:checked::after,
@@ -101,44 +101,44 @@ body.flexcyon-ascii-checkboxes-enabled {
     content: "...";
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
     letter-spacing: -0.5px;
-    top: -0.1rem;
+    inset-block-start: -0.1rem;
   }
 
   input[data-task="*"]:checked::after,
   li[data-task="*"] > input:checked::after,
   li[data-task="*"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
-    top: -0.25rem;
+    inset-block-start: -0.25rem;
   }
 
   input[data-task="@"]:checked::after,
   li[data-task="@"] > input:checked::after,
   li[data-task="@"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
-    top: -0.125rem;
+    inset-block-start: -0.125rem;
   }
 
   input[data-task="%"]:checked::after,
   li[data-task="%"] > input:checked::after,
   li[data-task="%"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
-    top: -0.05rem;
+    inset-block-start: -0.05rem;
   }
 
   input[data-task="+"]:checked::after,
   li[data-task="+"] > input:checked::after,
   li[data-task="+"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
-    top: -0.1rem;
+    inset-block-start: -0.1rem;
   }
 
   input[data-task="-"]:checked::after,
   li[data-task="-"] > input:checked::after,
   li[data-task="-"] > p > input:checked::after {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
-    top: -0.3rem;
+    inset-block-start: -0.3rem;
     content: "--";
-    margin-left: -7.5%;
+    margin-inline-start: -7.5%;
     letter-spacing: var(--less-letter-spacing);
   }
 
@@ -147,7 +147,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task='"'] > p > input:checked {
     background-color: inherit;
     border: none;
-    padding-right: 6px;
+    padding-inline-end: 6px;
 
     &::after {
       content: "“";
@@ -165,7 +165,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task="i"] > p > input:checked {
     background-color: inherit;
     border: none;
-    padding-right: 6px;
+    padding-inline-end: 6px;
 
     &::after {
       font-weight: 900;
@@ -178,9 +178,9 @@ body.flexcyon-ascii-checkboxes-enabled {
       font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
       border-radius: 50%;
       line-height: 1.1;
-      padding-top: 10%;
-      margin-left: -1.5px;
-      top: -0.075rem;
+      padding-block-start: 10%;
+      margin-inline-start: -1.5px;
+      inset-block-start: -0.075rem;
       scale: var(--upsize);
     }
   }
@@ -193,7 +193,7 @@ body.flexcyon-ascii-checkboxes-enabled {
     background-color: $color;
     border: none;
     font-weight: 900;
-    padding-right: 6px;
+    padding-inline-end: 6px;
     clip-path: $clip-path;
 
     &::after {

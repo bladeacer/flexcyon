@@ -30,6 +30,7 @@
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-no-unsupported-browser-features": "^8.0.5",
-    "stylelint-prettier": "^5.0.3"
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-use-logical": "^2.1.2"
   }
 }

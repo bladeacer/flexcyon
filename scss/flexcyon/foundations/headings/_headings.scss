@@ -89,7 +89,7 @@ body.flexcyon-headings-glow-enabled {
       color: var(--h#{$h_level}-color);
       opacity: calc(var(--dimmed) + 0.25);
       font-size: var(--font-ui-medium);
-      padding-right: 8px;
+      padding-inline-end: 8px;
     }
 
     h#{$h_level}:not(:hover) svg,

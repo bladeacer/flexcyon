@@ -37,13 +37,12 @@ body:not(.css-settings-manager) .app-container::after {
   font-size: var(--font-ui-large);
   justify-content: center;
   display: flex;
-  width: fit-content;
+  inline-size: fit-content;
   margin: 0 auto;
-  max-width: 85%;
-  right: 2px;
-  left: calc(0px * 2);
+  max-inline-size: 85%;
+  inset-inline: calc(0px * 2) 2px;
   padding: 20px;
-  margin-bottom: 50px;
+  margin-block-end: 50px;
 }
 
 /* @settings
@@ -2291,7 +2290,7 @@ settings:
   .setting-item-heading[data-level="#{$data-level}"],
   .setting-item-heading[data-level="#{$data-level}"]
     + .style-settings-container {
-    margin-left: calc(
+    margin-inline-start: calc(
       ($data-level + 1) * var(--flexcyon-style-settings-indent-width)
     );
   }
@@ -2316,7 +2315,7 @@ body.flexcyon-style-settings-dim-collapsed-headings {
 }
 
 body .setting-item:not(.is-collapsed).setting-item-heading {
-  border-bottom: 1px solid var(--text-faint);
+  border-block-end: 1px solid var(--text-faint);
 }
 
 .style-settings-import,

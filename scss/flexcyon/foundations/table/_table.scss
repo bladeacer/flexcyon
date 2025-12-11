@@ -19,8 +19,10 @@ body {
   }
 
   table:not(.table-view-table) {
-    width: var(--flexcyon-table-reading-mode-width);
-    margin-left: calc((100% - var(--flexcyon-table-reading-mode-width)) / 2);
+    inline-size: var(--flexcyon-table-reading-mode-width);
+    margin-inline-start: calc(
+      (100% - var(--flexcyon-table-reading-mode-width)) / 2
+    );
   }
 
   .table-view-table > :is(thead, tbody) > tr > :is(th, td) {

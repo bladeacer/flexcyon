@@ -16,7 +16,7 @@ body {
   --status-bar-position: absolute;
 
   div:has(.cm-vim-panel) + .status-bar {
-    margin-bottom: 36px;
+    margin-block-end: 36px;
   }
 }
 
@@ -24,7 +24,7 @@ body.flexcyon-status-left-align {
   --flexcyon-vim-bottom-positioning: var(--flexcyon-vim-bottom-pos-w-status);
 
   div.status-bar {
-    right: unset;
+    inset-inline-end: unset;
   }
 }
 
@@ -32,11 +32,10 @@ body.flexcyon-status-centre-align {
   .status-bar {
     justify-content: center;
     display: flex;
-    width: max-content;
+    inline-size: max-content;
     margin: 0 auto;
-    max-width: 85%;
-    right: 0;
-    left: calc(16px + 6px * 2 + 4px * 2);
+    max-inline-size: 85%;
+    inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
   }
 }
 
@@ -100,10 +99,10 @@ body:is(
     content: var(--flexcyon-status-hide-until-hover-text);
     background-color: var(--color-base-00);
     border-radius: inherit;
-    margin-right: 8px;
+    margin-inline-end: 8px;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    inset-block-end: 0;
+    inset-inline-end: 0;
     transform: translateX(
       calc(-1 * var(--flexcyon-status-hide-until-hover-translation))
     );
@@ -128,11 +127,10 @@ body:is(
     position: absolute;
     justify-content: center;
     display: flex;
-    width: max-content;
+    inline-size: max-content;
     margin: 0 auto;
-    max-width: 85%;
-    right: 0;
-    left: calc(16px + 6px * 2 + 4px * 2);
+    max-inline-size: 85%;
+    inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
     transform: translateY(-40px);
   }
 }
@@ -151,7 +149,7 @@ body:is(
     transform: translateX(
       calc(1 * var(--flexcyon-status-hide-until-hover-translation))
     );
-    right: unset;
+    inset-inline-end: unset;
   }
 }
 
@@ -210,7 +208,7 @@ body.flexcyon-status-style-angled {
 }
 
 body:not(.is-fullscreen) .status-bar {
-  padding-right: 0;
+  padding-inline-end: 0;
 }
 
 body.flexcyon-status-style-card {
@@ -219,7 +217,7 @@ body.flexcyon-status-style-card {
     margin: 4px 8px;
     gap: 8px;
     background-color: transparent;
-    right: 10px;
+    inset-inline-end: 10px;
   }
 
   .status-bar :nth-of-type(2n).status-bar-item {
@@ -238,7 +236,7 @@ body.flexcyon-status-style-card {
 body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type="empty"])),
 body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type="empty"])) {
   .status-bar::before {
-    right: 28px;
+    inset-inline-end: 28px;
   }
 }
 
@@ -251,7 +249,7 @@ body.flexcyon-status-style-pl10k {
     scale: var(--expand);
 
     &::before {
-      right: 0;
+      inset-inline-end: 0;
     }
 
     .status-bar-item .status-bar-item-icon {
@@ -263,8 +261,8 @@ body.flexcyon-status-style-pl10k {
     }
 
     .status-bar-item[style="display: none;"] + .status-bar-item {
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
+      border-start-start-radius: 16px;
+      border-end-start-radius: 16px;
     }
 
     .status-bar-item {
@@ -274,8 +272,8 @@ body.flexcyon-status-style-pl10k {
         padding: 4px;
         content: "e";
         position: relative;
-        width: inherit;
-        height: inherit;
+        inline-size: inherit;
+        block-size: inherit;
         color: transparent;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
       }
@@ -283,9 +281,9 @@ body.flexcyon-status-style-pl10k {
 
     :first-child:empty,
     :first-child.status-bar-item {
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-      padding-left: 6px;
+      border-start-start-radius: 16px;
+      border-end-start-radius: 16px;
+      padding-inline-start: 6px;
     }
 
     .status-bar-item:empty {
@@ -309,10 +307,10 @@ body.flexcyon-status-style-pl10k {
     }
 
     :last-child.status-bar-item {
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      padding-right: 6px;
-      margin-right: 46px;
+      border-start-end-radius: 16px;
+      border-end-end-radius: 16px;
+      padding-inline-end: 6px;
+      margin-inline-end: 46px;
     }
 
     :last-child.status-bar-item::after {

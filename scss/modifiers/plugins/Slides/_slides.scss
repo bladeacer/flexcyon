@@ -19,18 +19,18 @@ body {
 }
 
 .reveal .slides {
-  text-align: left;
+  text-align: start;
 
   input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    inline-size: 16px;
+    block-size: 16px;
   }
 }
 
 .reveal.center,
 .reveal.center .slides,
 .reveal.center .slides section {
-  max-height: 100%;
+  max-block-size: 100%;
 }
 
 .slides-container {
@@ -46,7 +46,7 @@ body {
   padding: 4px 12px;
   margin: var(--r-block-margin) 2px;
   background-color: var(--color-base-20);
-  width: 90%;
+  inline-size: 90%;
 }
 
 .reveal li {
@@ -60,8 +60,8 @@ body {
 
 .slides-close-btn {
   svg.svg-icon {
-    height: 28px;
-    width: 28px;
+    block-size: 28px;
+    inline-size: 28px;
   }
 }
 
@@ -73,7 +73,7 @@ body {
 .reveal video,
 .reveal iframe {
   padding: 0 0.75px;
-  padding-right: 5px;
+  padding-inline-end: 5px;
 }
 
 @mixin slides-number-wrapper($slide-no, $max-slides) {
@@ -84,7 +84,7 @@ body {
       .slide-background-content::before {
       content: "Page #{$i}";
       padding: 4px 14px;
-      top: 8px;
+      inset-block-start: 8px;
       color: var(--text-normal);
       font-size: var(--font-ui-medium);
       position: absolute;

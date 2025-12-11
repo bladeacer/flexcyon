@@ -61,8 +61,8 @@ body.flexcyon-ascii-enable {
   }
 
   div.empty-state-container {
-    max-width: var(--flexcyon-ascii-max-width);
-    max-height: unset;
+    max-inline-size: var(--flexcyon-ascii-max-width);
+    max-block-size: unset;
     scale: var(--flexcyon-ascii-scaling-factor);
   }
 
@@ -88,8 +88,8 @@ body.flexcyon-ascii-enable {
       position: absolute;
       line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
       margin: auto;
-      max-width: max-content;
-      max-height: max-content;
+      max-inline-size: max-content;
+      max-block-size: max-content;
       inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 6px * 2 + 4px * 2);
     }
   }
@@ -100,7 +100,7 @@ body.is-mobile.flexcyon-ascii-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
       font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
-      margin-bottom: 1rem;
+      margin-block-end: 1rem;
       line-height: 0.8;
     }
   }
@@ -146,7 +146,7 @@ body.flexcyon-quote-enable {
       transform: translateY(-105px);
 
       > div.empty-state-action-list {
-        margin-top: 32px;
+        margin-block-start: 32px;
       }
     }
   }
@@ -215,7 +215,7 @@ body.flexcyon-number-tabs {
     content: counter(numTab);
     color: inherit;
     font-weight: bold;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     font-size: var(--font-ui-medium);
     overflow: hidden;
   }
@@ -225,7 +225,7 @@ body.flexcyon-number-tabs {
   }
 
   .mod-stacked .workspace-tab-header-inner-title::before {
-    margin-bottom: 12px;
+    margin-block-end: 12px;
   }
 }
 
@@ -242,7 +242,7 @@ body.flexcyon-remove-tab-headers {
       font-size: 0;
 
       &::before {
-        margin-right: 0;
+        margin-inline-end: 0;
       }
     }
   }
