@@ -372,7 +372,7 @@ settings:
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
-    default: 1.81803
+    default: 1.818
     format: em
   - title: Heading 1 font weight
     id: h1-weight
@@ -410,7 +410,7 @@ settings:
   - title: Heading 2 font size
     id: h2-size
     type: variable-number
-    default: 1.61803
+    default: 1.618
     format: em
   - title: Heading 2 font weight
     id: h2-weight
@@ -448,7 +448,7 @@ settings:
   - title: Heading 3 font size
     id: h3-size
     type: variable-number
-    default: 1.41803
+    default: 1.418
     format: em
   - title: Heading 3 font weight
     id: h3-weight
@@ -486,7 +486,7 @@ settings:
   - title: Heading 4 font size
     id: h4-size
     type: variable-number
-    default: 1.21803
+    default: 1.218
     format: em
   - title: Heading 4 font weight
     id: h4-weight
@@ -524,7 +524,7 @@ settings:
   - title: Heading 5 font size
     id: h5-size
     type: variable-number
-    default: 1.11803
+    default: 1.118
     format: em
   - title: Heading 5 font weight
     id: h5-weight
@@ -562,7 +562,7 @@ settings:
   - title: Heading 6 font size
     id: h6-size
     type: variable-number
-    default: 1.01803
+    default: 1.018
     format: em
   - title: Heading 6 font weight
     id: h6-weight
@@ -663,12 +663,12 @@ settings:
   - title: Smaller UI Font size
     id: font-ui-smaller
     type: variable-number
-    default: 12.94424
+    default: 12.9442
     format: px
   - title: Small UI Font size
     id: font-ui-small
     type: variable-number
-    default: 14.56227
+    default: 14.5622
     format: px
   - title: Medium UI Font size
     id: font-ui-medium 
@@ -678,7 +678,7 @@ settings:
   - title: Large UI Font size
     id: font-ui-large
     type: variable-number
-    default: 17.79833
+    default: 17.7983
     format: px
 
   - title: Table
@@ -723,6 +723,11 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: false
+  - title: Dimmed File Extensions font size
+    id: flexcyon-exp-dimmed-nav-size
+    type: variable-number
+    format: px
+    default: 13.3623
   - title: Enable Active File Indicator
     id: flexcyon-enable-active-indicator
     type: class-toggle
@@ -955,7 +960,7 @@ settings:
     id: flexcyon-anim-slide-amount
     description: The amount of pixels the slide animations will slide
     type: variable-number
-    default: 56.63105 
+    default: 56.6311 
     format: px
   - title: Enable Animations in Style Settings containers
     id: flexcyon-anim-style-settings-contain
@@ -1157,7 +1162,7 @@ settings:
   - title: Horizontal rule custom string font size
     id: flexcyon-cust-hr-str-font-size
     type: variable-number
-    default: 1.11803
+    default: 1.118
     format: em
   - title: Horizontal rule custom string horizontal padding
     type: variable-number
@@ -1467,7 +1472,7 @@ settings:
   - title: Status bar font size
     id: status-bar-font-size
     type: variable-number
-    default: 13.753255
+    default: 13.7533
     format: px
   - title: Select status bar style
     description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.

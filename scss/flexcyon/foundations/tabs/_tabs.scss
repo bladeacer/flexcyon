@@ -14,7 +14,7 @@ body {
   --tab-radius-active: 0px;
   --flexcyon-anim-duration: 0.3s;
   --flexcyon-anim-easing: ease-in-out;
-  --flexcyon-anim-slide-amount: 56.63105px;
+  --flexcyon-anim-slide-amount: 56.6311px;
   --flexcyon-anim-rotate-amount: 50deg;
   --flexcyon-anim-start-scale-amt: 0.33;
   --flexcyon-anim-start-opacity: 0.55;
@@ -123,7 +123,10 @@ body.flexcyon-workspace-pl10k-layout {
   .view-header-title {
     padding: var(--flexcyon-mode-view-header-title-verti-padding)
       var(--flexcyon-mode-view-header-title-horiz-padding);
+    margin-inline-start: -1.5px;
     border-radius: var(--flexcyon-callout-radix);
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
     background-color: var(--color-base-05);
   }
 

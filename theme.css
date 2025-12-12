@@ -800,12 +800,12 @@ body {
   --h4-weight: 625;
   --h5-weight: 600;
   --h6-weight: 575;
-  --h1-size: 1.81803em;
-  --h2-size: 1.61803em;
-  --h3-size: 1.41803em;
-  --h4-size: 1.21803em;
-  --h5-size: 1.11803em;
-  --h6-size: 1.01803em;
+  --h1-size: 1.818em;
+  --h2-size: 1.618em;
+  --h3-size: 1.418em;
+  --h4-size: 1.218em;
+  --h5-size: 1.118em;
+  --h6-size: 1.018em;
 }
 
 body.flexcyon-coloured-headings {
@@ -1210,7 +1210,7 @@ body {
   --tab-radius-active: 0px;
   --flexcyon-anim-duration: 0.3s;
   --flexcyon-anim-easing: ease-in-out;
-  --flexcyon-anim-slide-amount: 56.63105px;
+  --flexcyon-anim-slide-amount: 56.6311px;
   --flexcyon-anim-rotate-amount: 50deg;
   --flexcyon-anim-start-scale-amt: 0.33;
   --flexcyon-anim-start-opacity: 0.55;
@@ -1298,7 +1298,10 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :has(+ :last-chil
 body.flexcyon-flex-max-mode .view-header-title,
 body.flexcyon-workspace-pl10k-layout .view-header-title {
   padding: var(--flexcyon-mode-view-header-title-verti-padding) var(--flexcyon-mode-view-header-title-horiz-padding);
+  margin-inline-start: -1.5px;
   border-radius: var(--flexcyon-callout-radix);
+  border-start-start-radius: 0;
+  border-end-start-radius: 0;
   background-color: var(--color-base-05);
 }
 body.flexcyon-flex-max-mode .view-header-breadcrumb-separator,
@@ -3854,10 +3857,10 @@ body {
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;
-  --font-ui-smaller: 12.94424px;
-  --font-ui-small: 14.56227px;
+  --font-ui-smaller: 12.9442px;
+  --font-ui-small: 14.5622px;
   --font-ui-medium: 16.1803px;
-  --font-ui-large: 17.79833px;
+  --font-ui-large: 17.7983px;
 }
 body .cm-em.cm-quote {
   color: var(--italic-color);
@@ -8844,7 +8847,7 @@ body.flexcyon-vertical-nav .workspace.is-right-sidedock-open .mod-right-split .m
 
 body {
   --flexcyon-active-indicator: ">> ";
-  --flexcyon-exp-dimmed-nav-size: 13.36227px;
+  --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
 body.flexcyon-flex-max-mode .tree-item-inner,
@@ -9484,7 +9487,7 @@ body.theme-light {
 }
 
 body {
-  --cm-font-size: calc(var(--font-ui-small) + 0.809015px);
+  --cm-font-size: calc(var(--font-ui-small) + 0.809px);
 }
 
 body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom,
@@ -9666,7 +9669,7 @@ body .backlink-pane .search-result-file-title div.tree-item-flair-outer > span {
 }
 
 body {
-  --status-bar-font-size: 13.753255px;
+  --status-bar-font-size: 13.7533px;
   --flexcyon-vim-insert-text: "INSERT";
   --flexcyon-vim-normal-text: "NORMAL";
   --flexcyon-vim-command-text: "COMMAND";
@@ -10171,7 +10174,7 @@ body {
   --workspace-background-translucent: unset;
   --hr-color: #393e48;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
-  --flexcyon-cust-hr-str-font-size: 1.11803em;
+  --flexcyon-cust-hr-str-font-size: 1.118em;
   --flexcyon-cust-hr-str: "f";
 }
 body div.nav-buttons-container {
@@ -10664,7 +10667,7 @@ settings:
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
-    default: 1.81803
+    default: 1.818
     format: em
   - title: Heading 1 font weight
     id: h1-weight
@@ -10702,7 +10705,7 @@ settings:
   - title: Heading 2 font size
     id: h2-size
     type: variable-number
-    default: 1.61803
+    default: 1.618
     format: em
   - title: Heading 2 font weight
     id: h2-weight
@@ -10740,7 +10743,7 @@ settings:
   - title: Heading 3 font size
     id: h3-size
     type: variable-number
-    default: 1.41803
+    default: 1.418
     format: em
   - title: Heading 3 font weight
     id: h3-weight
@@ -10778,7 +10781,7 @@ settings:
   - title: Heading 4 font size
     id: h4-size
     type: variable-number
-    default: 1.21803
+    default: 1.218
     format: em
   - title: Heading 4 font weight
     id: h4-weight
@@ -10816,7 +10819,7 @@ settings:
   - title: Heading 5 font size
     id: h5-size
     type: variable-number
-    default: 1.11803
+    default: 1.118
     format: em
   - title: Heading 5 font weight
     id: h5-weight
@@ -10854,7 +10857,7 @@ settings:
   - title: Heading 6 font size
     id: h6-size
     type: variable-number
-    default: 1.01803
+    default: 1.018
     format: em
   - title: Heading 6 font weight
     id: h6-weight
@@ -10955,12 +10958,12 @@ settings:
   - title: Smaller UI Font size
     id: font-ui-smaller
     type: variable-number
-    default: 12.94424
+    default: 12.9442
     format: px
   - title: Small UI Font size
     id: font-ui-small
     type: variable-number
-    default: 14.56227
+    default: 14.5622
     format: px
   - title: Medium UI Font size
     id: font-ui-medium 
@@ -10970,7 +10973,7 @@ settings:
   - title: Large UI Font size
     id: font-ui-large
     type: variable-number
-    default: 17.79833
+    default: 17.7983
     format: px
 
   - title: Table
@@ -11015,6 +11018,11 @@ settings:
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
     default: false
+  - title: Dimmed File Extensions font size
+    id: flexcyon-exp-dimmed-nav-size
+    type: variable-number
+    format: px
+    default: 13.3623
   - title: Enable Active File Indicator
     id: flexcyon-enable-active-indicator
     type: class-toggle
@@ -11247,7 +11255,7 @@ settings:
     id: flexcyon-anim-slide-amount
     description: The amount of pixels the slide animations will slide
     type: variable-number
-    default: 56.63105 
+    default: 56.6311 
     format: px
   - title: Enable Animations in Style Settings containers
     id: flexcyon-anim-style-settings-contain
@@ -11449,7 +11457,7 @@ settings:
   - title: Horizontal rule custom string font size
     id: flexcyon-cust-hr-str-font-size
     type: variable-number
-    default: 1.11803
+    default: 1.118
     format: em
   - title: Horizontal rule custom string horizontal padding
     type: variable-number
@@ -11759,7 +11767,7 @@ settings:
   - title: Status bar font size
     id: status-bar-font-size
     type: variable-number
-    default: 13.753255
+    default: 13.7533
     format: px
   - title: Select status bar style
     description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
@@ -13782,7 +13790,7 @@ body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
 }
 .workspace-leaf-content[data-type=search] .search-results-info .search-results-result-count {
   color: var(--text-normal);
-  font-size: calc(var(--font-ui-small) - 0.809015px);
+  font-size: calc(var(--font-ui-small) - 0.809px);
   opacity: 1;
 }
 .workspace-leaf-content[data-type=search] .search-info-container:has(~ .search-result-container .search-empty-state) {

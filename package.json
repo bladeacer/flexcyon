@@ -10,7 +10,8 @@
     "lint-once": "stylelint '**/*.scss'",
     "fix": "stylelint '**/*.scss' --fix",
     "lint": "onchange '**/*.scss' -- npm run lint-once",
-    "dev": "sass --watch --no-source-map scss/theme.scss theme.css"
+    "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
+    "compile-once": "sass --no-source-map scss/theme.scss theme.css"
   },
   "repository": {
     "type": "git",
