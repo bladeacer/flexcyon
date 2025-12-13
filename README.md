@@ -81,8 +81,10 @@ added then.
 
 Beta or insider versions of Obsidian will not be officially supported, although
 the theme should (hopefully) not break too much.
-> If significant issues are found, do open an issue here. I will still try to
+> If significant issues are found, do open an issue here. I (bladeacer) will try to
 > troubleshoot them once the beta or insider version of Obsidian has a public equivalent.
+
+You can also find this in the documentation.
 
 ## Documentation
 
@@ -154,7 +156,7 @@ Feel free to talk about it at:
 ## Contributing
 
 You can create your own fork before making a pull request.
-> Before doing this, do open an issue on this repository first.
+> Before doing this, do open an issue at this repository first.
 
 This repository comes with some scripts. The important ones include:
 

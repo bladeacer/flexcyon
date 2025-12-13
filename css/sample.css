@@ -1,0 +1,12 @@
+/* 
+ * This is a sample file. I will not be including it in the codebase.
+ * When making new CSS files in this directory in your own fork, do remember to name the files based on their intended purpose.
+ * E.g. improved-status-bar.css.
+ * Try not to modify the SCSS code, unless you know what you are doing.
+ *
+ * Do open a GitHub issue first before working on your feature.
+ */
+
+body {
+  --text-accent: red;
+}
