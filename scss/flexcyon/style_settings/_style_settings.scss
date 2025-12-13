@@ -1398,8 +1398,8 @@ settings:
     description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
     type: class-select
     id: flexcyon-status-hide-until-trigger
-    allowEmpty: true
-    default: none
+    allowEmpty: false
+    default: flexcyon-status-hide-until-hover
     options: 
       - 
         label: Hide until hover
@@ -1407,18 +1407,21 @@ settings:
       - 
         label: Hide until hold
         value: flexcyon-status-hide-until-hold
+      -
+        label: None
+        value: none
   - title: Status bar alignment
     type: class-select
     id: flexcyon-status-alignment
-    allowEmpty: true
-    default: none
+    allowEmpty: false
+    default: flexcyon-status-right-align
     options: 
-      - 
-        label: Left
-        value: flexcyon-status-left-align
       - 
         label: Centre
         value: flexcyon-status-centre-align
+      - 
+        label: Right
+        value: flexcyon-status-right-align
   - title: Text when hide until hover enabled
     id: flexcyon-status-hide-until-hover-text
     description: Text to show when hide until hover is enabled, do not leave empty
@@ -1435,7 +1438,7 @@ settings:
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 0.35
+    default: 0.325
     format: s
   - title: Transition timing function for showing status bar on hover
     description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.

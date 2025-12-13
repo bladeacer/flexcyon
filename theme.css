@@ -9339,8 +9339,6 @@ body .view-header-left::after {
 }
 
 body.flexcyon-display-screen-dimens .titlebar::after {
-  padding-block-start: 12px;
-  padding-inline-end: calc(8 * var(--flexcyon-screen-dimens-padding-l));
   position: absolute;
   justify-content: center;
   display: flex;
@@ -9348,6 +9346,11 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   margin: 0 auto;
   max-inline-size: 85%;
   inset-inline: 0px 0;
+}
+
+body.flexcyon-display-screen-dimens .titlebar::after {
+  padding-block-start: 12px;
+  padding-inline-end: calc(8 * var(--flexcyon-screen-dimens-padding-l));
   font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
@@ -9400,13 +9403,6 @@ body.flexcyon-display-os .mod-stacked .view-actions::before {
 body.flexcyon-display-os .titlebar::before {
   padding-block-start: 11.5px;
   padding-inline-start: calc(5 * var(--flexcyon-os-detail-padding-r));
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  inline-size: fit-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
-  inset-inline: 0px 0;
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
 }
@@ -9678,7 +9674,7 @@ body {
   --flexcyon-vim-bottom-pos-w-status: 40px;
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 80vw;
-  --flexcyon-status-hide-hover-duration: 0.25s;
+  --flexcyon-status-hide-hover-duration: 0.325s;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
   --flexcyon-status-source-text: "SOURCE";
@@ -9687,22 +9683,6 @@ body {
 }
 body div:has(.cm-vim-panel) + .status-bar {
   margin-block-end: 36px;
-}
-
-body.flexcyon-status-left-align {
-  --flexcyon-vim-bottom-positioning: var(--flexcyon-vim-bottom-pos-w-status);
-}
-body.flexcyon-status-left-align div.status-bar {
-  inset-inline-end: unset;
-}
-
-body.flexcyon-status-centre-align .status-bar {
-  justify-content: center;
-  display: flex;
-  inline-size: max-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
-  inset-inline: 36px 0;
 }
 
 body.flexcyon-status-text-enable-color .plugin-editor-status[aria-label=Reading]::before {
@@ -9736,40 +9716,33 @@ body.flexcyon-status-text-mode .plugin-editor-status[aria-label="Live Preview"]:
   content: var(--flexcyon-status-live-text);
 }
 
-body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode) .status-bar {
+body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(.flexcyon-status-right-align,
+.flexcyon-status-centre-align) .status-bar {
   border: none;
   font-size: var(--font-ui-medium);
   z-index: 1;
-  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
-  transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
+  transition: transform calc(1.05 * var(--flexcyon-status-hide-hover-duration)) var(--flexcyon-status-hide-hover-function);
 }
-body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode) .status-bar::before {
+
+body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(.flexcyon-status-right-align,
+.flexcyon-status-centre-align) .status-bar::before {
+  z-index: 2;
+  position: absolute;
+  transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
   font-size: var(--status-bar-font-size);
   padding: 8px 10px;
   content: var(--flexcyon-status-hide-until-hover-text);
   background-color: var(--color-base-00);
   border-radius: inherit;
-  margin-inline-end: 8px;
-  position: fixed;
   inset-block-end: 0;
   inset-inline-end: 0;
-  transform: translateX(calc(-1 * var(--flexcyon-status-hide-until-hover-translation)));
-  transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
+  inline-size: max-content;
   user-select: none;
 }
 
 body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode).flexcyon-status-centre-align .status-bar {
-  transform: translate(calc(0.5 * var(--flexcyon-status-hide-until-hover-translation)), 40px);
-}
-body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode).flexcyon-status-centre-align .status-bar::before {
+.flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar::before, body:is(.flexcyon-status-hide-until-hover,
+.flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar {
   position: absolute;
   justify-content: center;
   display: flex;
@@ -9777,19 +9750,24 @@ body:is(.flexcyon-status-hide-until-hover,
   margin: 0 auto;
   max-inline-size: 85%;
   inset-inline: 36px 0;
-  transform: translateY(-40px);
 }
 
 body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode).flexcyon-status-left-align .status-bar {
-  transform: translateX(calc(-1 * var(--flexcyon-status-hide-until-hover-translation)));
+.flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar {
+  transform: translateY(var(--flexcyon-anim-slide-amount));
 }
 body:is(.flexcyon-status-hide-until-hover,
-.flexcyon-status-hide-until-hold,
-.flexcyon-flex-max-mode).flexcyon-status-left-align .status-bar::before {
-  transform: translateX(calc(1 * var(--flexcyon-status-hide-until-hover-translation)));
-  inset-inline-end: unset;
+.flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar::before {
+  transform: translateY(calc(-1 * var(--flexcyon-anim-slide-amount)));
+}
+
+body:is(.flexcyon-status-hide-until-hover,
+.flexcyon-status-hide-until-hold).flexcyon-status-right-align .status-bar {
+  transform: translateX(var(--flexcyon-status-hide-until-hover-translation));
+}
+body:is(.flexcyon-status-hide-until-hover,
+.flexcyon-status-hide-until-hold).flexcyon-status-right-align .status-bar::before {
+  transform: translateX(calc(-1 * var(--flexcyon-status-hide-until-hover-translation)));
 }
 
 body.flexcyon-flex-max-mode .status-bar:hover::before,
@@ -11693,8 +11671,8 @@ settings:
     description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
     type: class-select
     id: flexcyon-status-hide-until-trigger
-    allowEmpty: true
-    default: none
+    allowEmpty: false
+    default: flexcyon-status-hide-until-hover
     options: 
       - 
         label: Hide until hover
@@ -11702,18 +11680,21 @@ settings:
       - 
         label: Hide until hold
         value: flexcyon-status-hide-until-hold
+      -
+        label: None
+        value: none
   - title: Status bar alignment
     type: class-select
     id: flexcyon-status-alignment
-    allowEmpty: true
-    default: none
+    allowEmpty: false
+    default: flexcyon-status-right-align
     options: 
-      - 
-        label: Left
-        value: flexcyon-status-left-align
       - 
         label: Centre
         value: flexcyon-status-centre-align
+      - 
+        label: Right
+        value: flexcyon-status-right-align
   - title: Text when hide until hover enabled
     id: flexcyon-status-hide-until-hover-text
     description: Text to show when hide until hover is enabled, do not leave empty
@@ -11730,7 +11711,7 @@ settings:
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 0.35
+    default: 0.325
     format: s
   - title: Transition timing function for showing status bar on hover
     description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.

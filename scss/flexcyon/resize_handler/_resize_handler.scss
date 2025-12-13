@@ -58,9 +58,7 @@ body .view-header-left::after {
   font-size: 0;
 }
 
-body.flexcyon-display-screen-dimens .titlebar::after {
-  padding-block-start: 12px;
-  padding-inline-end: calc(8 * var(--flexcyon-screen-dimens-padding-l));
+%centre-div-resize {
   position: absolute;
   justify-content: center;
   display: flex;
@@ -68,6 +66,14 @@ body.flexcyon-display-screen-dimens .titlebar::after {
   margin: 0 auto;
   max-inline-size: 85%;
   inset-inline: calc(0px * 2) 0;
+}
+
+body.flexcyon-display-screen-dimens .titlebar::after {
+  padding-block-start: 12px;
+  padding-inline-end: calc(8 * var(--flexcyon-screen-dimens-padding-l));
+
+  @extend %centre-div-resize;
+
   font-size: var(--file-header-font-size);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
@@ -123,13 +129,6 @@ body.flexcyon-display-os .mod-stacked .view-actions::before {
 body.flexcyon-display-os .titlebar::before {
   padding-block-start: 11.5px;
   padding-inline-start: calc(5 * var(--flexcyon-os-detail-padding-r));
-  position: absolute;
-  justify-content: center;
-  display: flex;
-  inline-size: fit-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
-  inset-inline: calc(0px * 2) 0;
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
 }
