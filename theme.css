@@ -11887,14 +11887,16 @@ settings:
     format: vw
   - title: Mode View Header Title Vertical Padding
     id: flexcyon-mode-view-header-title-verti-padding
-    description: Horizontal mode of View Header title in modes like Angled and Powerlevel10k
+    description: Vertical paddding of View Header title in modes like Angled and Powerlevel10k
     type: variable-number
     default: 4
+    format: px
   - title: Mode View Header Title Horizontal Padding
     id: flexcyon-mode-view-header-title-horiz-padding
     description: Horizontal padding of View Header title in modes like Angled and Powerlevel10k
     type: variable-number
     default: 12
+    format: px
 
   - title: Debug
     type: heading
