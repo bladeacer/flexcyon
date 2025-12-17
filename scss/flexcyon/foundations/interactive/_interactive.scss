@@ -5,7 +5,7 @@ body.theme-dark,
 body.theme-light {
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
-  --interactive-accent: var(--text-accent);
+  --interactive-accent: color-mix(in oklch, var(--text-accent) 80%, transparent 20%);
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
     in hsl shorter hue,
