@@ -13,9 +13,10 @@ export default {
     "selector-type-no-unknown": null,
     "custom-property-pattern": null,
     "no-descending-specificity": null,
-    // "number-max-precision": null,
-    "color-function-alias-notation": null,
-    "color-function-notation": "legacy",
+    "color-function-alias-notation": "without-alpha",
+    "color-function-notation": "modern",
+    // List of allowed units
+    "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh"],
     "plugin/no-unsupported-browser-features": [
         true, {
         "severity": "warning",

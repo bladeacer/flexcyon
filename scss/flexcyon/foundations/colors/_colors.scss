@@ -66,23 +66,23 @@ body.theme-dark {
   $color-2-wrapper: "#{$color-2}-#{$color-1}";
 
   --color-#{$color-1-wrapper}-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-#{$color-1}),
     var(--color-#{$color-2})
   );
   --color-#{$color-1-wrapper}-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-#{$color-1}), var(--color-#{$color-2}))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-#{$color-2-wrapper}-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-#{$color-2}),
     var(--color-#{$color-1})
   );
   --color-#{$color-2-wrapper}-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-#{$color-2}), var(--color-#{$color-1}))
       var(--flexcyon-callout-bg-opacity),
     transparent

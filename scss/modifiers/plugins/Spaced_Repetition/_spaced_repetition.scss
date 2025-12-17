@@ -1,5 +1,5 @@
 .sr-bg-green {
-  background-color: rgba(var(--color-green-rgb), 0.925) !important;
+  background-color: rgb(var(--color-green-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
@@ -8,7 +8,7 @@
 }
 
 .sr-bg-blue {
-  background-color: rgba(var(--color-blue-rgb), 0.925) !important;
+  background-color: rgb(var(--color-blue-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
@@ -17,7 +17,7 @@
 }
 
 .sr-bg-red {
-  background-color: rgba(var(--color-red-rgb), 0.925) !important;
+  background-color: rgb(var(--color-red-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,

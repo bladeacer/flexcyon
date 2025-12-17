@@ -86,7 +86,7 @@ body.flexcyon-syntax-catppuccin {
   --code-keyword: var(--flexcyon-code-keyword);
   --code-property: var(--flexcyon-cyan);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: rgba(var(--color-red-rgb), var(--dimmed));
+  --code-punctuation: rgb(var(--color-red-rgb), var(--dimmed));
   --code-string: var(--flexcyon-lime-green);
   --code-tag: var(--flexcyon-base-grey-dark);
   --code-value: var(--flexcyon-yellow);

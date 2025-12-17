@@ -36,27 +36,27 @@ body:is(.theme-light) {
 
   /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-01),
     var(--flexcyon-base-02)
   );
   --flexcyon-base-02-03-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-02),
     var(--flexcyon-base-03)
   );
   --flexcyon-base-03-04-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-03),
     var(--flexcyon-base-04)
   );
   --flexcyon-base-04-05-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-04),
     var(--flexcyon-base-05)
   );
   --flexcyon-base-grey-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
@@ -76,7 +76,7 @@ body:is(.theme-light) {
 
 body:is(.theme-light) {
   --flexcyon-base-01-02-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-01) 70%,
     var(--flexcyon-base-02) 30%
   );

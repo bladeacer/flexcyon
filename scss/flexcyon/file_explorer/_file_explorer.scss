@@ -68,10 +68,10 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
 
       .nav-folder .nav-folder-title {
         @if $is-bg == 0 {
-          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+          color: rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
         } @else {
           color: var(--text-normal);
-          background-color: rgba(
+          background-color: rgb(
             var(--color-#{$color}-rgb),
             calc(var(--dimmed) + 0.2)
           );
@@ -80,7 +80,7 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
 
       .nav-folder .nav-folder-title .collapse-icon svg {
         @if $is-bg == 0 {
-          color: rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+          color: rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
         } @else {
           background-color: transparent;
           color: var(--text-normal);
@@ -155,9 +155,7 @@ body.flexcyon-alt-folder-style {
   }
 
   .nav-file-title.is-active .nav-file-title-content {
-    transform: all ease-in-out 0.35s;
-
-    // margin-inline-start: 0.25rem;
+    transform: all ease-in-out 350ms;
     font-weight: bold;
   }
 }

@@ -26,6 +26,10 @@ body {
     }
   }
 
+  &.is-mobile .view-actions {
+    justify-content: center;
+  }
+
   .view-header-nav-buttons .clickable-icon,
   .view-actions .clickable-icon {
     padding: 5px 10px;
@@ -122,7 +126,11 @@ body {
   }
 }
 
-@media screen and (width < 900px) {
+.is-phone .setting-item-control input {
+  inline-size: max-content;
+}
+
+body.is-mobile {
   div.setting-item {
     flex-direction: column;
     align-items: unset;
@@ -223,18 +231,18 @@ body.flexcyon-settings-comm-item-enabled {
 
   .community-item-downloads,
   .community-modal-info-downloads {
-    color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
+    color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
   }
 
   .community-item-updated {
-    color: rgba(
+    color: rgb(
       var(--color-blue-rgb),
       calc(var(--flexcyon-comm-item-opacity) - 0.1)
     );
   }
 
   .community-modal-info-version {
-    color: rgba(
+    color: rgb(
       var(--color-green-rgb),
       calc(var(--flexcyon-comm-item-opacity) - 0.1)
     );
@@ -248,7 +256,7 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
     border: none;
 
     span.flair.mod-pop {
-      background-color: rgba(var(--color-blue-rgb), var(--dimmed));
+      background-color: rgb(var(--color-blue-rgb), var(--dimmed));
     }
 
     .community-item-name {
@@ -284,7 +292,7 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
     border: none;
 
     span.flair.mod-pop {
-      background-color: rgba(var(--color-yellow-rgb), var(--dimmed));
+      background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
     }
 
     .community-item-name {
@@ -413,11 +421,11 @@ body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
 body.flexcyon-flex-max-mode,
 body.flexcyon-settings-coloured-icons {
   [aria-label^="Uninstall"] {
-    color: rgba(var(--color-red-rgb), 0.9);
+    color: rgb(var(--color-red-rgb), 0.9);
   }
 
   [aria-label^="Options"] {
-    color: rgba(var(--color-blue-rgb), 0.9);
+    color: rgb(var(--color-blue-rgb), 0.9);
   }
 
   [aria-label^="Customise this command"],
@@ -425,20 +433,20 @@ body.flexcyon-settings-coloured-icons {
   [aria-label^="Hotkeys"],
   [aria-label^="Open snippets folder"],
   [aria-label^="Open plugins folder"] {
-    color: rgba(var(--color-green-rgb), 0.9);
+    color: rgb(var(--color-green-rgb), 0.9);
   }
 
   [aria-label^="Donate to support"] {
-    color: rgba(var(--color-pink-rgb), 0.9);
+    color: rgb(var(--color-pink-rgb), 0.9);
   }
 
   [aria-label^="Reload plugins"],
   [aria-label^="Reload snippets"] {
-    color: rgba(var(--color-cyan-rgb), 0.9);
+    color: rgb(var(--color-cyan-rgb), 0.9);
   }
 
   [aria-label^="Restore default"] {
-    color: rgba(var(--color-purple-rgb), 0.9);
+    color: rgb(var(--color-purple-rgb), 0.9);
   }
 }
 

@@ -6,10 +6,10 @@ body {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
-  --flexcyon-callout-pop-animation-duration: 0.2s;
+  --flexcyon-callout-pop-animation-duration: 200ms;
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
-  --flexcyon-callout-flashcard-animation-duration: 0.5s;
+  --flexcyon-callout-flashcard-animation-duration: 500ms;
   --flexcyon-editor-writing-indentation: 16px;
   --flexcyon-callout-verti-padding: 12px;
   --flexcyon-callout-horiz-padding: 24px;
@@ -177,7 +177,7 @@ div.callout[data-callout-metadata*="transparent-bg"] {
   div.callout[data-callout-metadata*="all-#{$color-name}"],
   div.callout[data-callout*="bg-#{$color-name}"],
   div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-    background-color: rgba(
+    background-color: rgb(
       var(--#{$color-var}-rgb),
       var(--flexcyon-callout-bg-opacity)
     );
@@ -186,7 +186,7 @@ div.callout[data-callout-metadata*="transparent-bg"] {
       div.callout-title,
     &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
       .callout-content {
-      background-color: rgba(
+      background-color: rgb(
         var(--#{$color-var}-rgb),
         var(--flexcyon-callout-bg-opacity)
       );

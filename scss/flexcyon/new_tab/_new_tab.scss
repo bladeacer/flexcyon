@@ -34,6 +34,7 @@ _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
 /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                 /____/                \a\a\a ";
   --flexcyon-ascii-alignment: left;
+  --flexcyon-new-tab-font-group: var(--font-monospace);
 
   div.empty-state-action {
     font-size: 1.05rem;
@@ -69,7 +70,7 @@ body.flexcyon-ascii-enable {
   .reveal .pause-overlay,
   div.empty-state-container {
     &::before {
-      font-family: var(--font-interface);
+      font-family: var(--flexcyon-new-tab-font-group);
       content: var(--flexcyon-ascii-art);
       font-weight: bold;
       background: var(--flexcyon-new-tab-bg-wrapper);
@@ -79,7 +80,7 @@ body.flexcyon-ascii-enable {
       white-space: pre;
       text-align: var(--flexcyon-ascii-alignment);
       display: inline;
-      font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
+      font-size: min(calc(5vw - 3.25px), var(--flexcyon-ascii-max-font-size));
     }
   }
 
@@ -99,7 +100,7 @@ body.is-mobile.flexcyon-flex-max-mode,
 body.is-mobile.flexcyon-ascii-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
-      font-size: min(calc(3vw - 3px), var(--flexcyon-ascii-max-font-size));
+      font-size: min(calc(3.5vw - 3px), var(--flexcyon-ascii-max-font-size));
       margin-block-end: 1rem;
       line-height: 0.8;
     }
@@ -128,7 +129,7 @@ body.flexcyon-empty-state-actions-disable {
 body.flexcyon-quote-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
-      font-family: var(--font-interface);
+      font-family: var(--flexcyon-new-tab-font-group);
       content: var(--flexcyon-quote-val) "\a\a"
         var(--flexcyon-quote-credit-prefix) " " var(--flexcyon-quote-credit);
       font-weight: bold;
@@ -157,7 +158,7 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
     > div.empty-state-container::before {
       content: "0" !important;
       font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
-      font-family: var(--font-interface);
+      font-family: var(--flexcyon-new-tab-font-group);
       font-weight: bold;
       background: var(--text-accent);
       background-clip: text;

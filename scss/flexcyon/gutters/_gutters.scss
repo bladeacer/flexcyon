@@ -19,11 +19,11 @@ body {
 }
 
 body.theme-dark .cm-gutterElement.cm-active {
-  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
+  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body.theme-light .cm-gutterElement.cm-active {
-  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
+  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,

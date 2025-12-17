@@ -65,617 +65,617 @@ body.theme-dark {
 body.flexcyon-flex-max-mode,
 body.flexcyon-ext-colors-enabled {
   --color-red-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-blue)
   );
   --color-red-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-red)
   );
   --color-blue-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-orange)
   );
   --color-red-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-red)
   );
   --color-orange-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-yellow)
   );
   --color-red-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-red)
   );
   --color-yellow-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-green)
   );
   --color-red-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-red)
   );
   --color-green-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-cyan)
   );
   --color-red-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-red)
   );
   --color-cyan-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-purple)
   );
   --color-red-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-red)
   );
   --color-purple-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-red-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-red),
     var(--color-pink)
   );
   --color-red-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-red), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-red-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-red)
   );
   --color-pink-red-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-red))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-yellow)
   );
   --color-orange-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-orange)
   );
   --color-yellow-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-green)
   );
   --color-orange-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-orange)
   );
   --color-green-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-cyan)
   );
   --color-orange-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-orange)
   );
   --color-cyan-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-blue)
   );
   --color-orange-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-orange)
   );
   --color-blue-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-purple)
   );
   --color-orange-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-orange)
   );
   --color-purple-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-orange-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-orange),
     var(--color-pink)
   );
   --color-orange-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-orange), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-orange-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-orange)
   );
   --color-pink-orange-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-orange))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-green)
   );
   --color-yellow-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-yellow)
   );
   --color-green-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-cyan)
   );
   --color-yellow-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-yellow)
   );
   --color-cyan-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-blue)
   );
   --color-yellow-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-yellow)
   );
   --color-blue-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-purple)
   );
   --color-yellow-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-yellow)
   );
   --color-purple-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-yellow-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-yellow),
     var(--color-pink)
   );
   --color-yellow-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-yellow), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-yellow-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-yellow)
   );
   --color-pink-yellow-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-yellow))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-cyan)
   );
   --color-green-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-green)
   );
   --color-cyan-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-blue)
   );
   --color-green-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-green)
   );
   --color-blue-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-purple)
   );
   --color-green-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-green)
   );
   --color-purple-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-green-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-green),
     var(--color-pink)
   );
   --color-green-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-green), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-green-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-green)
   );
   --color-pink-green-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-green))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-blue)
   );
   --color-cyan-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-cyan)
   );
   --color-blue-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-purple)
   );
   --color-cyan-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-cyan)
   );
   --color-purple-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-cyan-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-cyan),
     var(--color-pink)
   );
   --color-cyan-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-cyan), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-cyan-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-cyan)
   );
   --color-pink-cyan-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-cyan))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-purple)
   );
   --color-blue-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-blue)
   );
   --color-purple-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-blue-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-blue),
     var(--color-pink)
   );
   --color-blue-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-blue), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-blue-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-blue)
   );
   --color-pink-blue-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-blue))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-purple-pink-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-purple),
     var(--color-pink)
   );
   --color-purple-pink-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-purple), var(--color-pink))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
   --color-pink-purple-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--color-pink),
     var(--color-purple)
   );
   --color-pink-purple-mix-bg: color-mix(
-    in hsl,
+    in oklch,
     color-mix(in hsl, var(--color-pink), var(--color-purple))
       var(--flexcyon-callout-bg-opacity),
     transparent
@@ -712,27 +712,27 @@ body:is(.theme-light) {
   --flexcyon-base-grey-scroll-hover: #5c6782;
   /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-01),
     var(--flexcyon-base-02)
   );
   --flexcyon-base-02-03-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-02),
     var(--flexcyon-base-03)
   );
   --flexcyon-base-03-04-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-03),
     var(--flexcyon-base-04)
   );
   --flexcyon-base-04-05-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-04),
     var(--flexcyon-base-05)
   );
   --flexcyon-base-grey-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
@@ -752,7 +752,7 @@ body:is(.theme-light) {
 
 body:is(.theme-light) {
   --flexcyon-base-01-02-mix: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-base-01) 70%,
     var(--flexcyon-base-02) 30%
   );
@@ -781,15 +781,12 @@ body {
 body.theme-dark,
 body.theme-light {
   --color-accent-1: hsl(
-    calc(var(--accent-h) - 3),
-    calc(var(--accent-s) * 1.02),
-    calc(var(--accent-l) * 1.15)
+    calc(var(--accent-h) - 3) calc(var(--accent-s) * 1.02)
+      calc(var(--accent-l) * 1.15)
   );
-  --color-accent-2: hsla(
-    calc(var(--accent-h) - 20),
-    calc(var(--accent-s) * 0.85),
-    calc(var(--accent-l) * 1.1),
-    87.5%
+  --color-accent-2: hsl(
+    calc(var(--accent-h) - 20) calc(var(--accent-s) * 0.85)
+      calc(var(--accent-l) * 1.1) / 87.5%
   );
 }
 
@@ -1140,7 +1137,7 @@ body.flexcyon-syntax-catppuccin {
   --code-keyword: var(--flexcyon-code-keyword);
   --code-property: var(--flexcyon-cyan);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: rgba(var(--color-red-rgb), var(--dimmed));
+  --code-punctuation: rgb(var(--color-red-rgb), var(--dimmed));
   --code-string: var(--flexcyon-lime-green);
   --code-tag: var(--flexcyon-base-grey-dark);
   --code-value: var(--flexcyon-yellow);
@@ -1208,7 +1205,7 @@ body {
   --tab-curve: 0px;
   --tab-radius: 0px;
   --tab-radius-active: 0px;
-  --flexcyon-anim-duration: 0.3s;
+  --flexcyon-anim-duration: 300ms;
   --flexcyon-anim-easing: ease-in-out;
   --flexcyon-anim-slide-amount: 56.6311px;
   --flexcyon-anim-rotate-amount: 50deg;
@@ -2611,7 +2608,7 @@ body:is(.theme-light) {
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--color-base-30);
   --background-modifier-message: var(--color-base-20);
-  --background-modifier-error: rgba(
+  --background-modifier-error: rgb(
     var(--color-red-rgb),
     calc(var(--dimmed) + 0.3)
   );
@@ -2770,6 +2767,9 @@ body .clickable-icon:hover {
   opacity: unset;
   scale: var(--upsize);
 }
+body.is-mobile .view-actions {
+  justify-content: center;
+}
 body .view-header-nav-buttons .clickable-icon,
 body .view-actions .clickable-icon {
   padding: 5px 10px;
@@ -2843,24 +2843,27 @@ body span.flair.mod-pop {
   margin-inline-start: var(--flexcyon-settings-installed-tooltip-left-margin);
 }
 
-@media screen and (width < 900px) {
-  div.setting-item {
-    flex-direction: column;
-    align-items: unset;
-  }
-  div.setting-item .setting-item-control {
-    align-items: unset;
-    justify-content: unset;
-  }
-  .text-snippets-class > * {
-    inline-size: 50%;
-    block-size: max-content;
-  }
-  .text-snippets-class > * > textarea {
-    inline-size: 50%;
-    block-size: 100px;
-  }
+.is-phone .setting-item-control input {
+  inline-size: max-content;
 }
+
+body.is-mobile div.setting-item {
+  flex-direction: column;
+  align-items: unset;
+}
+body.is-mobile div.setting-item .setting-item-control {
+  align-items: unset;
+  justify-content: unset;
+}
+body.is-mobile .text-snippets-class > * {
+  inline-size: 50%;
+  block-size: max-content;
+}
+body.is-mobile .text-snippets-class > * > textarea {
+  inline-size: 50%;
+  block-size: 100px;
+}
+
 body.flexcyon-workspace-card-layout .community-modal-info-name {
   border: 2px solid var(--text-faint);
   border-start-start-radius: 16px;
@@ -2927,13 +2930,13 @@ body.flexcyon-settings-comm-item-enabled .community-item-name {
 }
 body.flexcyon-settings-comm-item-enabled .community-item-downloads,
 body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
-  color: rgba(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
+  color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
 }
 body.flexcyon-settings-comm-item-enabled .community-item-updated {
-  color: rgba(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+  color: rgb(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
-  color: rgba(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+  color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
@@ -2943,7 +2946,7 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-i
 }
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgba(var(--color-blue-rgb), var(--dimmed));
+  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
 }
 body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
 body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
@@ -2977,7 +2980,7 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-it
 }
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgba(var(--color-yellow-rgb), var(--dimmed));
+  background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
 }
 body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
 body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
@@ -3095,11 +3098,11 @@ body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
 
 body.flexcyon-flex-max-mode [aria-label^=Uninstall],
 body.flexcyon-settings-coloured-icons [aria-label^=Uninstall] {
-  color: rgba(var(--color-red-rgb), 0.9);
+  color: rgb(var(--color-red-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^=Options],
 body.flexcyon-settings-coloured-icons [aria-label^=Options] {
-  color: rgba(var(--color-blue-rgb), 0.9);
+  color: rgb(var(--color-blue-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Customise this command"],
 body.flexcyon-flex-max-mode [aria-label^="Customize this command"],
@@ -3111,21 +3114,21 @@ body.flexcyon-settings-coloured-icons [aria-label^="Customize this command"],
 body.flexcyon-settings-coloured-icons [aria-label^=Hotkeys],
 body.flexcyon-settings-coloured-icons [aria-label^="Open snippets folder"],
 body.flexcyon-settings-coloured-icons [aria-label^="Open plugins folder"] {
-  color: rgba(var(--color-green-rgb), 0.9);
+  color: rgb(var(--color-green-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Donate to support"],
 body.flexcyon-settings-coloured-icons [aria-label^="Donate to support"] {
-  color: rgba(var(--color-pink-rgb), 0.9);
+  color: rgb(var(--color-pink-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Reload plugins"],
 body.flexcyon-flex-max-mode [aria-label^="Reload snippets"],
 body.flexcyon-settings-coloured-icons [aria-label^="Reload plugins"],
 body.flexcyon-settings-coloured-icons [aria-label^="Reload snippets"] {
-  color: rgba(var(--color-cyan-rgb), 0.9);
+  color: rgb(var(--color-cyan-rgb), 0.9);
 }
 body.flexcyon-flex-max-mode [aria-label^="Restore default"],
 body.flexcyon-settings-coloured-icons [aria-label^="Restore default"] {
-  color: rgba(var(--color-purple-rgb), 0.9);
+  color: rgb(var(--color-purple-rgb), 0.9);
 }
 
 body.is-mobile .vertical-tab-content {
@@ -3718,7 +3721,7 @@ body.flexcyon-alt-link-style {
 }
 body.flexcyon-alt-link-style .markdown-rendered .internal-link,
 body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-internal-link {
-  background-color: rgba(var(--color-purple-rgb), var(--dimmed));
+  background-color: rgb(var(--color-purple-rgb), var(--dimmed));
   font-size: var(--font-ui-medium);
   padding: 2px 4px;
 }
@@ -3735,7 +3738,7 @@ body.flexcyon-alt-link-style .bases-rendered-value.markdown-rendered .internal-l
 }
 body.flexcyon-alt-link-style .cm-string.cm-url {
   background-color: transparent;
-  color: rgba(var(--color-blue-rgb), var(--dimmed));
+  color: rgb(var(--color-blue-rgb), var(--dimmed));
 }
 body.flexcyon-alt-link-style .external-link {
   background-image: none;
@@ -3743,7 +3746,7 @@ body.flexcyon-alt-link-style .external-link {
 body.flexcyon-alt-link-style .cm-link,
 body.flexcyon-alt-link-style .markdown-rendered .external-link,
 body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-external-link {
-  background-color: rgba(var(--color-blue-rgb), var(--dimmed));
+  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
   font-size: var(--font-ui-medium);
   padding: 2px 4px;
 }
@@ -3817,7 +3820,13 @@ body.theme-light {
 }
 
 body {
-  --text-highlight-bg: color-mix(in hsl, var(--color-cyan) 20%, transparent);
+  --flexcyon-highlight-colour: var(--color-cyan);
+  --flexcyon-highlight-opacity: 22.5%;
+  --text-highlight-bg: color-mix(
+    in oklch,
+    var(--flexcyon-highlight-colour) var(--flexcyon-highlight-opacity),
+    transparent
+  );
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
   word-spacing: var(--flexcyon-w-spacing);
@@ -3929,11 +3938,11 @@ body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) 
 }
 
 body.theme-dark .cm-gutterElement.cm-active {
-  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
+  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body.theme-light .cm-gutterElement.cm-active {
-  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
+  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
@@ -4345,10 +4354,10 @@ body {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
-  --flexcyon-callout-pop-animation-duration: 0.2s;
+  --flexcyon-callout-pop-animation-duration: 200ms;
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
-  --flexcyon-callout-flashcard-animation-duration: 0.5s;
+  --flexcyon-callout-flashcard-animation-duration: 500ms;
   --flexcyon-editor-writing-indentation: 16px;
   --flexcyon-callout-verti-padding: 12px;
   --flexcyon-callout-horiz-padding: 24px;
@@ -4504,7 +4513,7 @@ div.callout[data-callout*=all-yellow],
 div.callout[data-callout-metadata*=all-yellow],
 div.callout[data-callout*=bg-yellow],
 div.callout[data-callout-metadata*=bg-yellow] {
-  background-color: rgba(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4513,7 +4522,7 @@ div.callout[data-callout*=bg-yellow]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-yellow] div.callout-title,
@@ -4531,7 +4540,7 @@ div.callout[data-callout*=all-blue],
 div.callout[data-callout-metadata*=all-blue],
 div.callout[data-callout*=bg-blue],
 div.callout[data-callout-metadata*=bg-blue] {
-  background-color: rgba(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4540,7 +4549,7 @@ div.callout[data-callout*=bg-blue]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-blue] div.callout-title,
@@ -4558,7 +4567,7 @@ div.callout[data-callout*=all-purple],
 div.callout[data-callout-metadata*=all-purple],
 div.callout[data-callout*=bg-purple],
 div.callout[data-callout-metadata*=bg-purple] {
-  background-color: rgba(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4567,7 +4576,7 @@ div.callout[data-callout*=bg-purple]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-purple] div.callout-title,
@@ -4585,7 +4594,7 @@ div.callout[data-callout*=all-red],
 div.callout[data-callout-metadata*=all-red],
 div.callout[data-callout*=bg-red],
 div.callout[data-callout-metadata*=bg-red] {
-  background-color: rgba(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4594,7 +4603,7 @@ div.callout[data-callout*=bg-red]:has([data-callout*=tui], [data-callout-metadat
 div.callout[data-callout*=bg-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-red] div.callout-title,
@@ -4612,7 +4621,7 @@ div.callout[data-callout*=all-cyan],
 div.callout[data-callout-metadata*=all-cyan],
 div.callout[data-callout*=bg-cyan],
 div.callout[data-callout-metadata*=bg-cyan] {
-  background-color: rgba(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4621,7 +4630,7 @@ div.callout[data-callout*=bg-cyan]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-cyan] div.callout-title,
@@ -4639,7 +4648,7 @@ div.callout[data-callout*=all-pink],
 div.callout[data-callout-metadata*=all-pink],
 div.callout[data-callout*=bg-pink],
 div.callout[data-callout-metadata*=bg-pink] {
-  background-color: rgba(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4648,7 +4657,7 @@ div.callout[data-callout*=bg-pink]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-pink] div.callout-title,
@@ -4666,7 +4675,7 @@ div.callout[data-callout*=all-green],
 div.callout[data-callout-metadata*=all-green],
 div.callout[data-callout*=bg-green],
 div.callout[data-callout-metadata*=bg-green] {
-  background-color: rgba(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4675,7 +4684,7 @@ div.callout[data-callout*=bg-green]:has([data-callout*=tui], [data-callout-metad
 div.callout[data-callout*=bg-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-green] div.callout-title,
@@ -4693,7 +4702,7 @@ div.callout[data-callout*=all-orange],
 div.callout[data-callout-metadata*=all-orange],
 div.callout[data-callout*=bg-orange],
 div.callout[data-callout-metadata*=bg-orange] {
-  background-color: rgba(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4702,7 +4711,7 @@ div.callout[data-callout*=bg-orange]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgba(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: rgb(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-orange] div.callout-title,
@@ -8418,7 +8427,7 @@ body.show-ribbon .side-dock-actions {
 }
 
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   content: "Files";
@@ -8426,12 +8435,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-blue-rgb), 0.85);
+  color: rgb(var(--color-blue-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   content: "Alternate File Tree";
@@ -8439,12 +8448,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-purple-rgb), 0.85);
+  color: rgb(var(--color-purple-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   content: "Bookmarks";
@@ -8452,12 +8461,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-cyan-rgb), 0.85);
+  color: rgb(var(--color-cyan-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   content: "All Properties";
@@ -8465,12 +8474,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-pink-rgb), 0.85);
+  color: rgb(var(--color-pink-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   content: "Outline";
@@ -8478,12 +8487,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-green-rgb), 0.85);
+  color: rgb(var(--color-green-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   content: "Full Calendar | Sidebar";
@@ -8491,12 +8500,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-yellow-rgb), 0.85);
+  color: rgb(var(--color-yellow-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   content: "Backlinks";
@@ -8504,12 +8513,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-orange-rgb), 0.85);
+  color: rgb(var(--color-orange-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-red-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-red-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   content: "Review Queue";
@@ -8517,12 +8526,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-red-rgb), 0.85);
+  color: rgb(var(--color-red-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   content: "Properties";
@@ -8530,12 +8539,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-blue-rgb), 0.85);
+  color: rgb(var(--color-blue-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   content: "Outgoing Links";
@@ -8543,12 +8552,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-purple-rgb), 0.85);
+  color: rgb(var(--color-purple-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   content: "Graph View";
@@ -8556,12 +8565,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-cyan-rgb), 0.85);
+  color: rgb(var(--color-cyan-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   content: "Full Calendar";
@@ -8569,12 +8578,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-pink-rgb), 0.85);
+  color: rgb(var(--color-pink-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   content: "Local Graph";
@@ -8582,12 +8591,12 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-green-rgb), 0.85);
+  color: rgb(var(--color-green-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   content: "Calendar";
@@ -8595,13 +8604,13 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-yellow-rgb), 0.85);
+  color: rgb(var(--color-yellow-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   content: "Files";
@@ -8609,12 +8618,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-blue-rgb), 0.85);
+  color: rgb(var(--color-blue-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   content: "Alternate File Tree";
@@ -8622,12 +8631,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-purple-rgb), 0.85);
+  color: rgb(var(--color-purple-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   content: "Bookmarks";
@@ -8635,12 +8644,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-cyan-rgb), 0.85);
+  color: rgb(var(--color-cyan-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   content: "All Properties";
@@ -8648,12 +8657,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-pink-rgb), 0.85);
+  color: rgb(var(--color-pink-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   content: "Outline";
@@ -8661,12 +8670,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-green-rgb), 0.85);
+  color: rgb(var(--color-green-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   content: "Full Calendar | Sidebar";
@@ -8674,12 +8683,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-yellow-rgb), 0.85);
+  color: rgb(var(--color-yellow-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-orange-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   content: "Backlinks";
@@ -8687,12 +8696,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-orange-rgb), 0.85);
+  color: rgb(var(--color-orange-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-red-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-red-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   content: "Review Queue";
@@ -8700,12 +8709,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-red-rgb), 0.85);
+  color: rgb(var(--color-red-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-blue-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   content: "Properties";
@@ -8713,12 +8722,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-blue-rgb), 0.85);
+  color: rgb(var(--color-blue-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   content: "Outgoing Links";
@@ -8726,12 +8735,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-purple-rgb), 0.85);
+  color: rgb(var(--color-purple-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-cyan-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   content: "Graph View";
@@ -8739,12 +8748,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-cyan-rgb), 0.85);
+  color: rgb(var(--color-cyan-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-pink-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   content: "Full Calendar";
@@ -8752,12 +8761,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-pink-rgb), 0.85);
+  color: rgb(var(--color-pink-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-green-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   content: "Local Graph";
@@ -8765,12 +8774,12 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-green-rgb), 0.85);
+  color: rgb(var(--color-green-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
-  border: 2px solid rgba(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-yellow-rgb), calc(var(--dimmed) - 0.15));
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   content: "Calendar";
@@ -8778,7 +8787,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  color: rgba(var(--color-yellow-rgb), 0.85);
+  color: rgb(var(--color-yellow-rgb), 0.85);
   background-color: var(--color-base-00);
   padding: 0 8px;
 }
@@ -8787,7 +8796,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .sidebar-to
   padding-block-start: 7px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
-  border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading {
   position: absolute;
@@ -8795,7 +8804,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-p
   inset-inline-start: 32px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading * {
-  color: rgba(var(--color-purple-rgb), 0.9);
+  color: rgb(var(--color-purple-rgb), 0.9);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading div.collapse-indicator,
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading .metadata-properties-title {
@@ -8897,80 +8906,80 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8
   color: var(--color-purple);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder-title {
   color: var(--color-cyan);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder-title {
   color: var(--color-blue);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder-title {
   color: var(--color-pink);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder-title {
   color: var(--color-green);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder-title {
   color: var(--color-yellow);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder-title {
   color: var(--color-orange);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder-title {
   color: var(--color-red);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title {
-  color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
 }
 
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder-title .collapse-icon svg,
@@ -8980,7 +8989,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -8993,7 +9002,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9006,7 +9015,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9019,7 +9028,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9032,7 +9041,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9045,7 +9054,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9058,7 +9067,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9071,7 +9080,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgba(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  background-color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title .collapse-icon svg {
   background-color: transparent;
@@ -9094,7 +9103,7 @@ body.flexcyon-alt-folder-style .nav-folder.is-collapsed .collapse-icon svg {
   color: unset;
 }
 body.flexcyon-alt-folder-style .nav-file-title.is-active .nav-file-title-content {
-  transform: all ease-in-out 0.35s;
+  transform: all ease-in-out 350ms;
   font-weight: bold;
 }
 
@@ -9674,7 +9683,7 @@ body {
   --flexcyon-vim-bottom-pos-w-status: 40px;
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 80vw;
-  --flexcyon-status-hide-hover-duration: 0.325s;
+  --flexcyon-status-hide-hover-duration: 325ms;
   --flexcyon-status-hide-hover-function: ease-out;
   --flexcyon-status-reading-text: "READ";
   --flexcyon-status-source-text: "SOURCE";
@@ -9952,6 +9961,7 @@ body {
   /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
                                   /____/                \a\a\a ";
   --flexcyon-ascii-alignment: left;
+  --flexcyon-new-tab-font-group: var(--font-monospace);
 }
 body div.empty-state-action {
   font-size: 1.05rem;
@@ -9983,7 +9993,7 @@ body.flexcyon-flex-max-mode .reveal .pause-overlay::before,
 body.flexcyon-flex-max-mode div.empty-state-container::before,
 body.flexcyon-ascii-enable .reveal .pause-overlay::before,
 body.flexcyon-ascii-enable div.empty-state-container::before {
-  font-family: var(--font-interface);
+  font-family: var(--flexcyon-new-tab-font-group);
   content: var(--flexcyon-ascii-art);
   font-weight: bold;
   background: var(--flexcyon-new-tab-bg-wrapper);
@@ -9993,7 +10003,7 @@ body.flexcyon-ascii-enable div.empty-state-container::before {
   white-space: pre;
   text-align: var(--flexcyon-ascii-alignment);
   display: inline;
-  font-size: min(3vw - 3.25px, var(--flexcyon-ascii-max-font-size));
+  font-size: min(5vw - 3.25px, var(--flexcyon-ascii-max-font-size));
 }
 body.flexcyon-flex-max-mode .reveal .pause-overlay::before,
 body.flexcyon-ascii-enable .reveal .pause-overlay::before {
@@ -10007,7 +10017,7 @@ body.flexcyon-ascii-enable .reveal .pause-overlay::before {
 
 body.is-mobile.flexcyon-flex-max-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before,
 body.is-mobile.flexcyon-ascii-enable .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
-  font-size: min(3vw - 3px, var(--flexcyon-ascii-max-font-size));
+  font-size: min(3.5vw - 3px, var(--flexcyon-ascii-max-font-size));
   margin-block-end: 1rem;
   line-height: 0.8;
 }
@@ -10023,7 +10033,7 @@ body.flexcyon-empty-state-actions-disable .workspace-leaf > div > div > div.empt
 }
 
 body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
-  font-family: var(--font-interface);
+  font-family: var(--flexcyon-new-tab-font-group);
   content: var(--flexcyon-quote-val) "\a\a" var(--flexcyon-quote-credit-prefix) " " var(--flexcyon-quote-credit);
   font-weight: bold;
   background: var(--flexcyon-new-tab-bg-wrapper);
@@ -10045,7 +10055,7 @@ body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.e
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
   content: "0" !important;
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
-  font-family: var(--font-interface);
+  font-family: var(--flexcyon-new-tab-font-group);
   font-weight: bold;
   background: var(--text-accent);
   background-clip: text;
@@ -10142,7 +10152,6 @@ body.flexcyon-remove-tab-headers .workspace-tabs .workspace-tab-header .workspac
 body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
-  --flexcyon-anim-duration: 0.35s;
   --modal-border-color: var(--flexcyon-base-02);
   --toggle-thumb-color: var(--text-on-accent);
   --ribbon-width: 48px;
@@ -10602,6 +10611,31 @@ settings:
     type: variable-number
     default: 0
     format: px
+  - title: Highlight Text Colour
+    id: flexcyon-highlight-colour
+    type: variable-select
+    default: var(--color-cyan)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+  - title: Highlight text opacity
+    id: flexcyon-highlight-opacity
+    type: variable-text
+    default: 22.5%
   - title: Highlight Text Vertical Padding
     id: flexcyon-highlight-verti-padding
     type: variable-number
@@ -11222,8 +11256,8 @@ settings:
     id: flexcyon-anim-duration
     description: Transition duration for animations. Affects Bases Cards View flex grow transition as well as many other UI elements when animations are enabled
     type: variable-number
-    default: 0.3
-    format: s
+    default: 300
+    format: ms
   - title: Animation easing function
     id: flexcyon-anim-easing
     description: Transition easing fucntion for animations
@@ -11400,13 +11434,13 @@ settings:
   - title: Flashcard callout animation duration
     id: flexcyon-callout-flashcard-animation-duration
     type: variable-number
-    default: 0.5
-    format: s
+    default: 500
+    format: ms
   - title: Popup callout animation duration
     type: variable-number
     id: flexcyon-callout-pop-animation-duration
-    default: 0.2
-    format: s
+    default: 200
+    format: ms
 
   - title: Horizontal Rule
     type: heading
@@ -11711,8 +11745,8 @@ settings:
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 0.325
-    format: s
+    default: 325
+    format: ms
   - title: Transition timing function for showing status bar on hover
     description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
     id: flexcyon-status-hide-hover-function
@@ -12334,6 +12368,17 @@ settings:
       - 
         label: Quote
         value: flexcyon-quote-enable
+  - title: New tab font group
+    id: flexcyon-new-tab-font-group
+    type: variable-select
+    default: var(--font-monospace)
+    options: 
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
   - title: Background for add before empty state title
     description: Background color for the add before empty state title, accepts CSS variables.
     type: variable-text
@@ -12947,7 +12992,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title[data-path$=".md"
 }
 
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line {
-  transition: all 0.35s ease-in-out;
+  transition: all 0.325ms ease-in-out;
 }
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line div.oz-folder-count {
   transform: translateY(1000px);
@@ -13021,54 +13066,54 @@ body .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
 body :is(.hltr-pink,
 mark.hltr-pink,
 .markdown-preview-view mark.hltr-pink) {
-  background: rgba(var(--color-pink-rgb), 65%);
+  background: rgb(var(--color-pink-rgb), 65%);
 }
 body :is(.hltr-red,
 mark.hltr-red,
 .markdown-preview-view mark.hltr-red) {
-  background: rgba(var(--color-red-rgb), 65%);
+  background: rgb(var(--color-red-rgb), 65%);
 }
 body :is(.hltr-orange,
 mark.hltr-orange,
 .markdown-preview-view mark.hltr-orange) {
-  background: rgba(var(--color-orange-rgb), 65%);
+  background: rgb(var(--color-orange-rgb), 65%);
 }
 body :is(.hltr-yellow,
 mark.hltr-yellow,
 .markdown-preview-view mark.hltr-yellow) {
-  background: rgba(var(--color-yellow-rgb), 65%);
+  background: rgb(var(--color-yellow-rgb), 65%);
 }
 body :is(.hltr-green,
 mark.hltr-green,
 .markdown-preview-view mark.hltr-green) {
-  background: rgba(var(--color-green-rgb), 65%);
+  background: rgb(var(--color-green-rgb), 65%);
 }
 body :is(.hltr-cyan,
 mark.hltr-cyan,
 .markdown-preview-view mark.hltr-cyan) {
-  background: rgba(var(--color-cyan-rgb), 65%);
+  background: rgb(var(--color-cyan-rgb), 65%);
 }
 body :is(.hltr-blue,
 mark.hltr-blue,
 .markdown-preview-view mark.hltr-blue) {
-  background: rgba(var(--color-blue-rgb), 65%);
+  background: rgb(var(--color-blue-rgb), 65%);
 }
 body :is(.hltr-purple,
 mark.hltr-purple,
 .markdown-preview-view mark.hltr-purple) {
-  background: rgba(var(--color-purple-rgb), 65%);
+  background: rgb(var(--color-purple-rgb), 65%);
 }
 
 body.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
-  background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgba(var(--mono-rgb-0), 0) 10%, rgba(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important;
+  background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgb(var(--mono-rgb-0), 0) 10%, rgb(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important;
 }
 
 body.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
   --floating-background: var(--background-primary);
   --floating-size: 20%;
   padding-block-end: 0.1em;
-  background-image: linear-gradient(to right, 0, rgba(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important;
+  background-image: linear-gradient(to right, 0, rgb(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important;
 }
 
 body.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark),
@@ -13173,7 +13218,7 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 .sr-bg-green {
-  background-color: rgba(var(--color-green-rgb), 0.925) !important;
+  background-color: rgb(var(--color-green-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
@@ -13182,7 +13227,7 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 .sr-bg-blue {
-  background-color: rgba(var(--color-blue-rgb), 0.925) !important;
+  background-color: rgb(var(--color-blue-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
@@ -13191,7 +13236,7 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 .sr-bg-red {
-  background-color: rgba(var(--color-red-rgb), 0.925) !important;
+  background-color: rgb(var(--color-red-rgb), 0.925) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
@@ -13243,11 +13288,8 @@ div.dataview-error-box p.dataview-error-message {
 }
 
 body {
-  --color-accent: hsla(
-    var(--accent-h),
-    var(--accent-s),
-    var(--accent-l),
-    var(--dimmed)
+  --color-accent: hsl(
+    var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
   );
   --flexcyon-canvas-blur-intensity: 1px;
 }
@@ -13428,37 +13470,37 @@ div.mermaid svg .nodes node * {
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.red :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.red :is(*) {
-  fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
   stroke: var(--color-red-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.purple :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.purple :is(*) {
-  fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
   stroke: var(--color-purple-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.cyan :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.cyan :is(*) {
-  fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
   stroke: var(--color-cyan-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.yellow :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.yellow :is(*) {
-  fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
   stroke: var(--color-yellow-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.blue :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.blue :is(*) {
-  fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
   stroke: var(--color-blue-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.green :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.green :is(*) {
-  fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
   stroke: var(--color-green-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.orange :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.orange :is(*) {
-  fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
   stroke: var(--color-orange-rgb) !important;
 }
 
@@ -13509,37 +13551,37 @@ div.mermaid svg .nodes node * {
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.red :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.red :is(*) {
-  fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
   stroke: var(--color-red-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.purple :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.purple :is(*) {
-  fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
   stroke: var(--color-purple-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.cyan :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.cyan :is(*) {
-  fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
   stroke: var(--color-cyan-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.yellow :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.yellow :is(*) {
-  fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
   stroke: var(--color-yellow-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.blue :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.blue :is(*) {
-  fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
   stroke: var(--color-blue-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.green :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.green :is(*) {
-  fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
   stroke: var(--color-green-rgb) !important;
 }
 .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.orange :is(*),
 .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.orange :is(*) {
-  fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+  fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
   stroke: var(--color-orange-rgb) !important;
 }
 

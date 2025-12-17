@@ -329,6 +329,31 @@ settings:
     type: variable-number
     default: 0
     format: px
+  - title: Highlight Text Colour
+    id: flexcyon-highlight-colour
+    type: variable-select
+    default: var(--color-cyan)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+  - title: Highlight text opacity
+    id: flexcyon-highlight-opacity
+    type: variable-text
+    default: 22.5%
   - title: Highlight Text Vertical Padding
     id: flexcyon-highlight-verti-padding
     type: variable-number
@@ -949,8 +974,8 @@ settings:
     id: flexcyon-anim-duration
     description: Transition duration for animations. Affects Bases Cards View flex grow transition as well as many other UI elements when animations are enabled
     type: variable-number
-    default: 0.3
-    format: s
+    default: 300
+    format: ms
   - title: Animation easing function
     id: flexcyon-anim-easing
     description: Transition easing fucntion for animations
@@ -1127,13 +1152,13 @@ settings:
   - title: Flashcard callout animation duration
     id: flexcyon-callout-flashcard-animation-duration
     type: variable-number
-    default: 0.5
-    format: s
+    default: 500
+    format: ms
   - title: Popup callout animation duration
     type: variable-number
     id: flexcyon-callout-pop-animation-duration
-    default: 0.2
-    format: s
+    default: 200
+    format: ms
 
   - title: Horizontal Rule
     type: heading
@@ -1438,8 +1463,8 @@ settings:
     id: flexcyon-status-hide-hover-duration
     description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
     type: variable-number
-    default: 0.325
-    format: s
+    default: 325
+    format: ms
   - title: Transition timing function for showing status bar on hover
     description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
     id: flexcyon-status-hide-hover-function
@@ -2061,6 +2086,17 @@ settings:
       - 
         label: Quote
         value: flexcyon-quote-enable
+  - title: New tab font group
+    id: flexcyon-new-tab-font-group
+    type: variable-select
+    default: var(--font-monospace)
+    options: 
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
   - title: Background for add before empty state title
     description: Background color for the add before empty state title, accepts CSS variables.
     type: variable-text

@@ -10,7 +10,13 @@ body.theme-light {
 }
 
 body {
-  --text-highlight-bg: color-mix(in hsl, var(--color-cyan) 20%, transparent);
+  --flexcyon-highlight-colour: var(--color-cyan);
+  --flexcyon-highlight-opacity: 22.5%;
+  --text-highlight-bg: color-mix(
+    in oklch,
+    var(--flexcyon-highlight-colour) var(--flexcyon-highlight-opacity),
+    transparent
+  );
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
 

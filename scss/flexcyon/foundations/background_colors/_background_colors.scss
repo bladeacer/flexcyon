@@ -41,7 +41,7 @@ body:is(.theme-light) {
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--color-base-30);
   --background-modifier-message: var(--color-base-20);
-  --background-modifier-error: rgba(
+  --background-modifier-error: rgb(
     var(--color-red-rgb),
     calc(var(--dimmed) + 0.3)
   );

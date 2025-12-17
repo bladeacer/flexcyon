@@ -7,7 +7,7 @@
     mark.hltr-#{$color},
     .markdown-preview-view mark.hltr-#{$color}
   ) {
-    background: rgba(var(--color-#{$color}-rgb), 65%);
+    background: rgb(var(--color-#{$color}-rgb), 65%);
   }
 }
 
@@ -30,8 +30,8 @@ body.highlightr-lowlight
     to right,
     0,
     var(--lowlight-background) 10%,
-    rgba(var(--mono-rgb-0), 0) 10%,
-    rgba(var(--mono-rgb-0), 0) 25%,
+    rgb(var(--mono-rgb-0), 0) 10%,
+    rgb(var(--mono-rgb-0), 0) 25%,
     var(--lowlight-background) 40%
   ) !important;
 }
@@ -45,7 +45,7 @@ body.highlightr-floating
   background-image: linear-gradient(
     to right,
     0,
-    rgba(var(--mono-rgb-0), 0) var(--floating-size),
+    rgb(var(--mono-rgb-0), 0) var(--floating-size),
     var(--floating-background) var(--floating-size)
   ) !important;
 }

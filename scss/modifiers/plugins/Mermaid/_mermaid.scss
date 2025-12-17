@@ -25,37 +25,37 @@ div.mermaid svg .nodes node * {
     }
 
     & g.red :is(*) {
-      fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
       stroke: var(--color-red-rgb) !important;
     }
 
     & g.purple :is(*) {
-      fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
       stroke: var(--color-purple-rgb) !important;
     }
 
     & g.cyan :is(*) {
-      fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
       stroke: var(--color-cyan-rgb) !important;
     }
 
     & g.yellow :is(*) {
-      fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
       stroke: var(--color-yellow-rgb) !important;
     }
 
     & g.blue :is(*) {
-      fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
       stroke: var(--color-blue-rgb) !important;
     }
 
     & g.green :is(*) {
-      fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
       stroke: var(--color-green-rgb) !important;
     }
 
     & g.orange :is(*) {
-      fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
       stroke: var(--color-orange-rgb) !important;
     }
   }
@@ -97,37 +97,37 @@ div.mermaid svg .nodes node * {
 
     /* Colorize individual nodes with classes */
     & g.red :is(*) {
-      fill: rgba(var(--color-red-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
       stroke: var(--color-red-rgb) !important;
     }
 
     & g.purple :is(*) {
-      fill: rgba(var(--color-purple-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
       stroke: var(--color-purple-rgb) !important;
     }
 
     & g.cyan :is(*) {
-      fill: rgba(var(--color-cyan-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
       stroke: var(--color-cyan-rgb) !important;
     }
 
     & g.yellow :is(*) {
-      fill: rgba(var(--color-yellow-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
       stroke: var(--color-yellow-rgb) !important;
     }
 
     & g.blue :is(*) {
-      fill: rgba(var(--color-blue-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
       stroke: var(--color-blue-rgb) !important;
     }
 
     & g.green :is(*) {
-      fill: rgba(var(--color-green-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
       stroke: var(--color-green-rgb) !important;
     }
 
     & g.orange :is(*) {
-      fill: rgba(var(--color-orange-rgb), var(--dimmed)) !important;
+      fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
       stroke: var(--color-orange-rgb) !important;
     }
   }

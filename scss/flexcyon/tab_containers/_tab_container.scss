@@ -227,7 +227,7 @@ body.show-ribbon {
     )
     + .workspace-tab-container {
     border: 2px solid
-      rgba(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
+      rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
 
     &::before {
       content: "#{$content}";
@@ -235,7 +235,7 @@ body.show-ribbon {
       inset-block-start: 44px;
       inset-inline-start: 32px;
       z-index: 1;
-      color: rgba(var(--color-#{$color}-rgb), 0.85);
+      color: rgb(var(--color-#{$color}-rgb), 0.85);
       background-color: var(--color-base-00);
       padding: 0 8px;
     }
@@ -298,7 +298,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
-    border: 2px solid rgba(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+    border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
   }
 
   .metadata-properties-heading {
@@ -307,7 +307,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
     inset-inline-start: 32px;
 
     * {
-      color: rgba(var(--color-purple-rgb), 0.9);
+      color: rgb(var(--color-purple-rgb), 0.9);
     }
 
     div.collapse-indicator,
