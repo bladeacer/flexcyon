@@ -3913,6 +3913,10 @@ body .cm-s-obsidian span.cm-formatting-highlight {
   color: var(--text-highlight-bg);
   background-color: inherit;
 }
+body .tooltip {
+  background-color: var(--color-base-00);
+  color: var(--text-normal);
+}
 
 body {
   --radius-s: 2px;
