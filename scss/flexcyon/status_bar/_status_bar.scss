@@ -186,7 +186,7 @@ body.flexcyon-status-style-angled {
     border-radius: 0;
   }
 
-  .status-bar :nth-of-type(2n):is(.status-bar-item) {
+  .status-bar :nth-child(2n):is(.status-bar-item) {
     background-color: var(--color-base-05);
   }
 }
@@ -204,13 +204,13 @@ body.flexcyon-status-style-card {
     inset-inline-end: 10px;
   }
 
-  .status-bar :nth-of-type(2n).status-bar-item {
+  .status-bar :nth-child(2n).status-bar-item {
     background-color: var(--color-base-05);
     border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
   }
 
-  .status-bar :nth-of-type(2n + 1).status-bar-item {
+  .status-bar :nth-child(2n + 1).status-bar-item {
     background-color: var(--color-base-25);
     border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
@@ -231,6 +231,7 @@ body.flexcyon-status-style-pl10k {
     background-color: transparent;
     gap: 0;
     scale: var(--expand);
+    padding-inline-end: 1vw;
 
     &::before {
       inset-inline-end: 0;
@@ -240,17 +241,15 @@ body.flexcyon-status-style-pl10k {
       transform: translateX(-1px);
     }
 
-    .status-bar-item[style="display: none;"]::after {
-      display: none;
-    }
-
     .status-bar-item[style="display: none;"] + .status-bar-item {
       border-start-start-radius: 16px;
       border-end-start-radius: 16px;
+      padding-inline-start: 12px;
     }
 
     .status-bar-item {
       padding: 0;
+      padding-inline-start: 2px;
 
       &::after {
         padding: 4px;
@@ -270,11 +269,18 @@ body.flexcyon-status-style-pl10k {
       padding-inline-start: 6px;
     }
 
-    .status-bar-item:empty {
-      display: flex;
+    :last-child.status-bar-item,
+    :nth-last-child(2).status-bar-item {
+      border-start-end-radius: 16px;
+      border-end-end-radius: 16px;
+      margin-inline-end: 1.25vw;
+
+      * {
+        margin-inline-end: 0;
+      }
     }
 
-    :nth-of-type(2n + 1).status-bar-item {
+    :nth-child(2n + 1).status-bar-item {
       background-color: var(--color-base-20);
 
       &::after {
@@ -282,7 +288,7 @@ body.flexcyon-status-style-pl10k {
       }
     }
 
-    :nth-of-type(2n).status-bar-item {
+    :nth-child(2n).status-bar-item {
       background-color: var(--color-base-05);
 
       &::after {
@@ -290,15 +296,10 @@ body.flexcyon-status-style-pl10k {
       }
     }
 
-    :last-child.status-bar-item {
-      border-start-end-radius: 16px;
-      border-end-end-radius: 16px;
-      padding-inline-end: 6px;
-      margin-inline-end: 46px;
-    }
-
+    :nth-last-child(2).status-bar-item::after,
+    :last-child.status-bar-item,
     :last-child.status-bar-item::after {
-      display: none;
+      background-color: transparent;
     }
   }
 }

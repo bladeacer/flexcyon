@@ -2730,7 +2730,11 @@ body.theme-dark,
 body.theme-light {
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
-  --interactive-accent: color-mix(in oklch, var(--text-accent) 80%, transparent 20%);
+  --interactive-accent: color-mix(
+    in oklch,
+    var(--text-accent) 80%,
+    transparent 20%
+  );
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
     in hsl shorter hue,
@@ -9820,7 +9824,7 @@ body.flexcyon-status-style-angled .status-bar-item {
   padding: 4px 8px;
   border-radius: 0;
 }
-body.flexcyon-status-style-angled .status-bar :nth-of-type(2n):is(.status-bar-item) {
+body.flexcyon-status-style-angled .status-bar :nth-child(2n):is(.status-bar-item) {
   background-color: var(--color-base-05);
 }
 
@@ -9835,12 +9839,12 @@ body.flexcyon-status-style-card .status-bar {
   background-color: transparent;
   inset-inline-end: 10px;
 }
-body.flexcyon-status-style-card .status-bar :nth-of-type(2n).status-bar-item {
+body.flexcyon-status-style-card .status-bar :nth-child(2n).status-bar-item {
   background-color: var(--color-base-05);
   border-radius: var(--flexcyon-callout-radix);
   padding: 4px 8px;
 }
-body.flexcyon-status-style-card .status-bar :nth-of-type(2n + 1).status-bar-item {
+body.flexcyon-status-style-card .status-bar :nth-child(2n+1).status-bar-item {
   background-color: var(--color-base-25);
   border-radius: var(--flexcyon-callout-radix);
   padding: 4px 8px;
@@ -9857,6 +9861,7 @@ body.flexcyon-status-style-pl10k .status-bar {
   background-color: transparent;
   gap: 0;
   scale: var(--expand);
+  padding-inline-end: 1vw;
 }
 body.flexcyon-flex-max-mode .status-bar::before,
 body.flexcyon-status-style-pl10k .status-bar::before {
@@ -9866,18 +9871,16 @@ body.flexcyon-flex-max-mode .status-bar .status-bar-item .status-bar-item-icon,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item .status-bar-item-icon {
   transform: translateX(-1px);
 }
-body.flexcyon-flex-max-mode .status-bar .status-bar-item[style="display: none;"]::after,
-body.flexcyon-status-style-pl10k .status-bar .status-bar-item[style="display: none;"]::after {
-  display: none;
-}
 body.flexcyon-flex-max-mode .status-bar .status-bar-item[style="display: none;"] + .status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item[style="display: none;"] + .status-bar-item {
   border-start-start-radius: 16px;
   border-end-start-radius: 16px;
+  padding-inline-start: 12px;
 }
 body.flexcyon-flex-max-mode .status-bar .status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
   padding: 0;
+  padding-inline-start: 2px;
 }
 body.flexcyon-flex-max-mode .status-bar .status-bar-item::after,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
@@ -9897,36 +9900,43 @@ body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
   border-end-start-radius: 16px;
   padding-inline-start: 6px;
 }
-body.flexcyon-flex-max-mode .status-bar .status-bar-item:empty,
-body.flexcyon-status-style-pl10k .status-bar .status-bar-item:empty {
-  display: flex;
-}
-body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n + 1).status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n + 1).status-bar-item {
-  background-color: var(--color-base-20);
-}
-body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n + 1).status-bar-item::after,
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n + 1).status-bar-item::after {
-  background-color: var(--color-base-05);
-}
-body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n).status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n).status-bar-item {
-  background-color: var(--color-base-05);
-}
-body.flexcyon-flex-max-mode .status-bar :nth-of-type(2n).status-bar-item::after,
-body.flexcyon-status-style-pl10k .status-bar :nth-of-type(2n).status-bar-item::after {
-  background-color: var(--color-base-20);
-}
 body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item {
+body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item,
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item,
+body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item {
   border-start-end-radius: 16px;
   border-end-end-radius: 16px;
-  padding-inline-end: 6px;
-  margin-inline-end: 46px;
+  margin-inline-end: 1.25vw;
 }
+body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item *,
+body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item *,
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item *,
+body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item * {
+  margin-inline-end: 0;
+}
+body.flexcyon-flex-max-mode .status-bar :nth-child(2n+1).status-bar-item,
+body.flexcyon-status-style-pl10k .status-bar :nth-child(2n+1).status-bar-item {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-flex-max-mode .status-bar :nth-child(2n+1).status-bar-item::after,
+body.flexcyon-status-style-pl10k .status-bar :nth-child(2n+1).status-bar-item::after {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-flex-max-mode .status-bar :nth-child(2n).status-bar-item,
+body.flexcyon-status-style-pl10k .status-bar :nth-child(2n).status-bar-item {
+  background-color: var(--color-base-05);
+}
+body.flexcyon-flex-max-mode .status-bar :nth-child(2n).status-bar-item::after,
+body.flexcyon-status-style-pl10k .status-bar :nth-child(2n).status-bar-item::after {
+  background-color: var(--color-base-20);
+}
+body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item::after,
+body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item,
 body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item::after,
+body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item::after,
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after {
-  display: none;
+  background-color: transparent;
 }
 
 /* obsi-snip-coll start: ascii-art */
