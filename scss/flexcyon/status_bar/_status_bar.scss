@@ -13,6 +13,7 @@ body {
   --flexcyon-status-reading-text: "READ";
   --flexcyon-status-source-text: "SOURCE";
   --flexcyon-status-live-text: "LIVE";
+  --flexcyon-status-new-tab-opacity: 0.55;
   --status-bar-position: absolute;
 
   div:has(.cm-vim-panel) + .status-bar {
@@ -221,6 +222,18 @@ body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type="empty"])),
 body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type="empty"])) {
   .status-bar::before {
     inset-inline-end: 28px;
+  }
+}
+
+body:has(.mod-active > [data-type="empty"]) {
+  .status-bar {
+    opacity: var(--flexcyon-status-new-tab-opacity);
+  }
+}
+
+body.flexcyon-no-status-in-new-tab:has(.mod-active > [data-type="empty"]) {
+  .status-bar {
+    display: none;
   }
 }
 

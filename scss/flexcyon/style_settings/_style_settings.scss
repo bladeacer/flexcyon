@@ -1524,6 +1524,15 @@ settings:
     description: Affects text colors for vim mode status text as well.
     type: class-toggle
     default: false
+  - title: Do not show status bar in new tab
+    id: flexcyon-no-status-in-new-tab
+    description: Does not show status bar in new empty tabs where ASCII art or actions are shown by default.
+    type: class-toggle
+    default: false
+  - title: Opacity of status bar in new tab
+    id: flexcyon-status-new-tab-opacity
+    type: variable-number
+    default: 0.55
 
   - title: Title Bar
     type: heading
@@ -1539,6 +1548,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
+    description: Configure and customise line numbers.
   - title: Highlight Active Line
     description: Highlights the active line while editing.
     id: flexcyon-highlight-active-line
@@ -1654,6 +1664,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
+    description: Debugging details like operating system and screen dimension.
   - title: Display device operating system details
     id: flexcyon-display-os
     type: class-toggle
@@ -1730,6 +1741,27 @@ settings:
     type: class-toggle
     default: true
 
+  - title: Input
+    type: heading
+    level: 5
+    collapsed: true
+    description: Customise the appearance of inputs
+  - title: Input border radius
+    type: variable-number
+    id: input-radius
+    default: 0
+    format: px
+  - title: Input box Vertical Padding
+    type: variable-number
+    id: flexcyon-input-verti-padding
+    default: 4
+    format: px
+  - title: Input box Horizontal Padding
+    type: variable-number
+    id: flexcyon-input-verti-padding
+    default: 8
+    format: px
+
   - title: Settings
     type: heading
     level: 4
@@ -1759,16 +1791,6 @@ settings:
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
     default: true
-  - title: Input box Vertical Padding
-    type: variable-number
-    id: flexcyon-input-verti-padding
-    default: 4
-    format: px
-  - title: Input box Horizontal Padding
-    type: variable-number
-    id: flexcyon-input-verti-padding
-    default: 8
-    format: px
 
   - title: Style Settings
     type: heading

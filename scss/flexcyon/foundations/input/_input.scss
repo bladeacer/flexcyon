@@ -2,6 +2,10 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body {
   --input-radius: 0px;
+  --flexcyon-input-verti-padding: 4px;
+  --flexcyon-input-horiz-padding: 8px;
+  --input-padding: var(--flexcyon-input-verti-padding)
+    var(--flexcyon-input-horiz-padding);
 
   .metadata-input-longtext::selection,
   input::selection,
