@@ -1990,6 +1990,11 @@ settings:
     type: heading
     level: 6
     collapsed: false
+  - title: Bases Card Label Opacity
+    id: flexcyon-bases-cards-label-opacity
+    description: Opacity of Labels in Cards View
+    type: variable-number
+    default: 0.85
   - title: Default string when Card View item image not found
     id: bases-no-img-str
     type: variable-text

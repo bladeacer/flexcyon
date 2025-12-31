@@ -19,6 +19,7 @@ body {
   --flexcyon-bases-padding-verti: 16px;
   --flexcyon-bases-td-padding-l: 2px;
   --flexcyon-bases-table-content-alignment: left;
+  --flexcyon-bases-cards-label-opacity: 0.85;
 }
 
 .workspace-leaf-content[data-type="bases"] .view-content {
@@ -102,6 +103,7 @@ div.bases-cards-cover:not([style*="background-image"]) {
 
 .bases-cards-label {
   padding: 2px 4px;
+  opacity: var(--flexcyon-bases-cards-label-opacity);
 }
 
 .bases-td {
