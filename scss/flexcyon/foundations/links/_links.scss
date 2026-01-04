@@ -30,6 +30,7 @@ body {
   --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
   --link-external-color: var(--flexcyon-external-link-color);
   --link-external-color-hover: var(--flexcyon-external-link-hover);
+  --flexcyon-alt-link-opacity: 55%;
 
   .backlink-pane,
   .outgoing-link-pane {
@@ -68,41 +69,45 @@ body.flexcyon-alt-link-style {
   --link-unresolved-decoration-color: var(--color-base-05);
   --link-unresolved-decoration-style: dashed;
 
+  a.style-settings-import {
+    margin-block-start: 2px;
+  }
+
+  a.style-settings-import,
+  a.style-settings-export,
   .markdown-rendered .internal-link,
-  .cm-s-obsidian span.cm-hmd-internal-link {
-    background-color: rgb(var(--color-purple-rgb), var(--dimmed));
+  .cm-s-obsidian span.cm-hmd-internal-link,
+  .cm-link,
+  .markdown-rendered .external-link,
+  .cm-s-obsidian span.cm-hmd-external-link {
     font-size: var(--font-ui-medium);
     padding: 2px 4px;
   }
 
   .bases-rendered-value.markdown-rendered .internal-link {
-    background-color: unset;
-
-    --link-color: var(--flexcyon-link-color);
-    --link-color-hover: var(--flexcyon-link-hover);
-    --link-unresolved-color: var(--flexcyon-link-unresolved-color);
-    --link-unresolved-decoration-style: dashed;
-    --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
-    --link-external-color: var(--flexcyon-external-link-color);
-    --link-external-color-hover: var(--flexcyon-external-link-hover);
-
+    padding: unset;
     font-size: unset;
   }
 
-  .cm-string.cm-url {
-    background-color: transparent;
-    color: rgb(var(--color-blue-rgb), var(--dimmed));
+  a.style-settings-import,
+  .markdown-rendered .internal-link,
+  .cm-s-obsidian span.cm-hmd-internal-link {
+    color: var(--color-base-05);
+    background-color: color-mix(
+      in oklch,
+      var(--flexcyon-link-color) var(--flexcyon-alt-link-opacity),
+      transparent
+    );
   }
 
-  .external-link {
-    background-image: none;
-  }
-
+  a.style-settings-export,
   .cm-link,
   .markdown-rendered .external-link,
   .cm-s-obsidian span.cm-hmd-external-link {
-    background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-    font-size: var(--font-ui-medium);
-    padding: 2px 4px;
+    background-color: color-mix(
+      in oklch,
+      var(--flexcyon-external-link-color) var(--flexcyon-alt-link-opacity),
+      transparent
+    );
   }
 }

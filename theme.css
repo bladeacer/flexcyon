@@ -3686,6 +3686,7 @@ body {
   --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
   --link-external-color: var(--flexcyon-external-link-color);
   --link-external-color-hover: var(--flexcyon-external-link-hover);
+  --flexcyon-alt-link-opacity: 55%;
 }
 body .backlink-pane .search-result-container,
 body .outgoing-link-pane .search-result-container {
@@ -3723,36 +3724,34 @@ body.flexcyon-alt-link-style {
   --link-unresolved-decoration-color: var(--color-base-05);
   --link-unresolved-decoration-style: dashed;
 }
+body.flexcyon-alt-link-style a.style-settings-import {
+  margin-block-start: 2px;
+}
+body.flexcyon-alt-link-style a.style-settings-import,
+body.flexcyon-alt-link-style a.style-settings-export,
 body.flexcyon-alt-link-style .markdown-rendered .internal-link,
-body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-internal-link {
-  background-color: rgb(var(--color-purple-rgb), var(--dimmed));
+body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-internal-link,
+body.flexcyon-alt-link-style .cm-link,
+body.flexcyon-alt-link-style .markdown-rendered .external-link,
+body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-external-link {
   font-size: var(--font-ui-medium);
   padding: 2px 4px;
 }
 body.flexcyon-alt-link-style .bases-rendered-value.markdown-rendered .internal-link {
-  background-color: unset;
-  --link-color: var(--flexcyon-link-color);
-  --link-color-hover: var(--flexcyon-link-hover);
-  --link-unresolved-color: var(--flexcyon-link-unresolved-color);
-  --link-unresolved-decoration-style: dashed;
-  --link-unresolved-decoration-color: var(--flexcyon-link-unresolved-color);
-  --link-external-color: var(--flexcyon-external-link-color);
-  --link-external-color-hover: var(--flexcyon-external-link-hover);
+  padding: unset;
   font-size: unset;
 }
-body.flexcyon-alt-link-style .cm-string.cm-url {
-  background-color: transparent;
-  color: rgb(var(--color-blue-rgb), var(--dimmed));
+body.flexcyon-alt-link-style a.style-settings-import,
+body.flexcyon-alt-link-style .markdown-rendered .internal-link,
+body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--color-base-05);
+  background-color: color-mix(in oklch, var(--flexcyon-link-color) var(--flexcyon-alt-link-opacity), transparent);
 }
-body.flexcyon-alt-link-style .external-link {
-  background-image: none;
-}
+body.flexcyon-alt-link-style a.style-settings-export,
 body.flexcyon-alt-link-style .cm-link,
 body.flexcyon-alt-link-style .markdown-rendered .external-link,
 body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-external-link {
-  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-  font-size: var(--font-ui-medium);
-  padding: 2px 4px;
+  background-color: color-mix(in oklch, var(--flexcyon-external-link-color) var(--flexcyon-alt-link-opacity), transparent);
 }
 
 body {
@@ -11393,7 +11392,7 @@ settings:
   - title: Callout Metadata Background Opacity
     id: flexcyon-callout-bg-opacity
     description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
-    type: variable-text;
+    type: variable-text
     default: 20%
   - title: Callout Vertical Margin
     id: flexcyon-callout-vertical-margin
@@ -11697,6 +11696,10 @@ settings:
     id: flexcyon-alt-link-style
     type: class-toggle
     default: false
+  - title: Alternate link styling opacity
+    id: flexcyon-alt-link-opacity
+    type: variable-text
+    default: 55%
 
   - title: Properties
     type: heading

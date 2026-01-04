@@ -1084,7 +1084,7 @@ settings:
   - title: Callout Metadata Background Opacity
     id: flexcyon-callout-bg-opacity
     description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
-    type: variable-text;
+    type: variable-text
     default: 20%
   - title: Callout Vertical Margin
     id: flexcyon-callout-vertical-margin
@@ -1388,6 +1388,10 @@ settings:
     id: flexcyon-alt-link-style
     type: class-toggle
     default: false
+  - title: Alternate link styling opacity
+    id: flexcyon-alt-link-opacity
+    type: variable-text
+    default: 55%
 
   - title: Properties
     type: heading
