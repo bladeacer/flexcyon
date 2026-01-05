@@ -19,7 +19,7 @@ body {
 
 .is-mobile {
   --tag-background: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--tag-color) 25%,
     transparent
   );

@@ -12,7 +12,7 @@ body.theme-light {
   );
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-accent) 75%,
     transparent
   );

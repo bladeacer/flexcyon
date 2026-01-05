@@ -2542,7 +2542,7 @@ body h3[data-heading*="find section #"] a.tag {
 
 .is-mobile {
   --tag-background: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--tag-color) 25%,
     transparent
   );
@@ -2733,7 +2733,7 @@ body.theme-light {
   );
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-accent) 75%,
     transparent
   );
@@ -3666,12 +3666,12 @@ body.theme-light {
 
 body {
   --flexcyon-link-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-link-color),
     var(--flexcyon-base-grey-dark)
   );
   --flexcyon-external-link-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-external-link-color),
     var(--flexcyon-base-grey-dark)
   );
@@ -3867,7 +3867,7 @@ body {
   --line-height-tight: 1.25;
   --flexcyon-text-muted: #6f768599;
   --text-muted: color-mix(
-    in hsl,
+    in oklch,
     var(--flexcyon-text-muted),
     var(--text-normal)
   );
@@ -3879,7 +3879,7 @@ body {
   --text-warning: var(--flexcyon-red-salmon);
   --text-success: var(--flexcyon-lime-green);
   --text-selection: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-base-04) 20%,
     transparent
   );

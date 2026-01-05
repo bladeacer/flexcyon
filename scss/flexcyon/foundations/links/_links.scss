@@ -14,12 +14,12 @@ body.theme-light {
 
 body {
   --flexcyon-link-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-link-color),
     var(--flexcyon-base-grey-dark)
   );
   --flexcyon-external-link-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-external-link-color),
     var(--flexcyon-base-grey-dark)
   );

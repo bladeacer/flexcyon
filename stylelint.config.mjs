@@ -39,7 +39,8 @@ export default {
     "plugin/use-defensive-css": [true, {
       "severity": "warning",
       "background-repeat": true,
-      "scroll-chaining": true
+      "scroll-chaining": true,
+      "vendor-prefix-grouping": true
     }]
   }
 };
