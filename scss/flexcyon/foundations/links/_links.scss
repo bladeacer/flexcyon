@@ -70,18 +70,20 @@ body.flexcyon-alt-link-style {
   --link-unresolved-decoration-style: dashed;
 
   a.style-settings-import {
-    margin-block-start: 2px;
+    margin-block-start: 1px;
   }
 
-  a.style-settings-import,
-  a.style-settings-export,
+  a,
   .markdown-rendered .internal-link,
   .cm-s-obsidian span.cm-hmd-internal-link,
   .cm-link,
   .markdown-rendered .external-link,
   .cm-s-obsidian span.cm-hmd-external-link {
-    font-size: var(--font-ui-medium);
     padding: 2px 4px;
+
+    a {
+      padding: unset;
+    }
   }
 
   .bases-rendered-value.markdown-rendered .internal-link {
@@ -89,6 +91,7 @@ body.flexcyon-alt-link-style {
     font-size: unset;
   }
 
+  a:not(:is(.style-settings-import, .style-settings-export)),
   a.style-settings-import,
   .markdown-rendered .internal-link,
   .cm-s-obsidian span.cm-hmd-internal-link {
@@ -98,6 +101,12 @@ body.flexcyon-alt-link-style {
       var(--flexcyon-link-color) var(--flexcyon-alt-link-opacity),
       transparent
     );
+
+    a {
+      color: unset;
+      background-color: unset;
+      padding: unset;
+    }
   }
 
   a.style-settings-export,
@@ -109,5 +118,11 @@ body.flexcyon-alt-link-style {
       var(--flexcyon-external-link-color) var(--flexcyon-alt-link-opacity),
       transparent
     );
+
+    a {
+      color: unset;
+      background-color: unset;
+      padding: unset;
+    }
   }
 }
