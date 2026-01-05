@@ -40,6 +40,7 @@ body {
 .reveal .slides > section.present,
 .reveal .slides > section > section.present {
   overflow: hidden scroll;
+  overscroll-behavior: contain;
 }
 
 .reveal blockquote {

@@ -4,8 +4,9 @@ export default {
   plugins: [
     "stylelint-prettier",
     "stylelint-use-logical",
+    "stylelint-plugin-defensive-css",
     "stylelint-high-performance-animation",
-    "stylelint-no-unsupported-browser-features",
+    "stylelint-no-unsupported-browser-features"
   ],
   rules: {
     "prettier/prettier": true,
@@ -35,5 +36,10 @@ export default {
         "ignorePartialSupport": true
       }
     ],
+    "plugin/use-defensive-css": [true, {
+      "severity": "warning",
+      "background-repeat": true,
+      "scroll-chaining": true
+    }]
   }
 };

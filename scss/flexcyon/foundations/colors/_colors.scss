@@ -72,7 +72,7 @@ body.theme-dark {
   );
   --color-#{$color-1-wrapper}-mix-bg: color-mix(
     in oklch,
-    color-mix(in hsl, var(--color-#{$color-1}), var(--color-#{$color-2}))
+    color-mix(in oklch, var(--color-#{$color-1}), var(--color-#{$color-2}))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );
@@ -83,7 +83,7 @@ body.theme-dark {
   );
   --color-#{$color-2-wrapper}-mix-bg: color-mix(
     in oklch,
-    color-mix(in hsl, var(--color-#{$color-2}), var(--color-#{$color-1}))
+    color-mix(in oklch, var(--color-#{$color-2}), var(--color-#{$color-1}))
       var(--flexcyon-callout-bg-opacity),
     transparent
   );

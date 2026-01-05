@@ -63,6 +63,7 @@ body {
   .fc .fc-toolbar-chunk {
     padding: 0 8px;
     overflow: scroll;
+    overscroll-behavior: contain;
   }
 
   .fc {

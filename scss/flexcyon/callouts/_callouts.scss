@@ -42,6 +42,7 @@ div.callout[data-callout-metadata*="tategaki"] {
     padding-block: 2vh 1vh;
     margin: auto;
     overflow: scroll;
+    overscroll-behavior: contain;
     line-height: 1.667;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
@@ -89,6 +90,7 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     padding-block: 2vh 1vh;
     margin: auto;
     overflow: scroll;
+    overscroll-behavior: contain;
     line-height: 1.667;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);

@@ -7,6 +7,7 @@
   padding-block: 7.5vh 0 !important;
   margin: auto;
   overflow: scroll;
+  overscroll-behavior: contain;
   line-height: 1.667;
   text-indent: 1rem;
   writing-mode: vertical-rl;
@@ -32,6 +33,7 @@
   padding-block: 7.5vh 0 !important;
   margin: auto;
   overflow: scroll;
+  overscroll-behavior: contain;
   line-height: 1.667;
   text-indent: 1rem;
   writing-mode: vertical-lr;
