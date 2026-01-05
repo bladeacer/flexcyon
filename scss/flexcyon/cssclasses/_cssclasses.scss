@@ -1,15 +1,15 @@
 // Credits: @OWA/bennyyip on the Obisidian Members' Group Discord for the tategaki snippet
 
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
-  writing-mode: vertical-rl;
-  overflow: scroll;
   max-inline-size: 95%;
-  padding-block: 7.5vh 0 !important;
-  line-height: 1.667;
-  margin: auto;
   min-block-size: 0 !important;
   max-block-size: 85vh;
+  padding-block: 7.5vh 0 !important;
+  margin: auto;
+  overflow: scroll;
+  line-height: 1.667;
   text-indent: 1rem;
+  writing-mode: vertical-rl;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
     margin-block-start: 0;
@@ -26,15 +26,15 @@
 }
 
 .app-container .view-content:has(.vertical-ltr) .markdown-preview-section {
-  writing-mode: vertical-lr;
-  overflow: scroll;
   max-inline-size: 95%;
-  padding-block: 7.5vh 0 !important;
-  line-height: 1.667;
-  margin: auto;
   min-block-size: 0 !important;
   max-block-size: 85vh;
+  padding-block: 7.5vh 0 !important;
+  margin: auto;
+  overflow: scroll;
+  line-height: 1.667;
   text-indent: 1rem;
+  writing-mode: vertical-lr;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
     margin-block-start: 0;

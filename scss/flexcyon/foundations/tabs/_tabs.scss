@@ -35,8 +35,8 @@ body.flexcyon-workspace-card-layout {
   }
 
   .view-header-breadcrumb {
-    border-radius: var(--flexcyon-callout-radix);
     padding: 4px 8px;
+    border-radius: var(--flexcyon-callout-radix);
   }
 
   .view-header-title-container {
@@ -70,11 +70,11 @@ body.flexcyon-workspace-angled-layout {
   }
 
   .view-header-title {
-    transform: skewX(-22.5deg);
-    border-radius: 0;
-    background-color: var(--color-base-20);
     padding: var(--flexcyon-mode-view-header-title-verti-padding)
       var(--flexcyon-mode-view-header-title-horiz-padding);
+    background-color: var(--color-base-20);
+    border-radius: 0;
+    transform: skewX(-22.5deg);
   }
 
   .view-header-title-parent {
@@ -124,10 +124,10 @@ body.flexcyon-workspace-pl10k-layout {
     padding: var(--flexcyon-mode-view-header-title-verti-padding)
       var(--flexcyon-mode-view-header-title-horiz-padding);
     margin-inline-start: -1.5px;
+    background-color: var(--color-base-05);
     border-radius: var(--flexcyon-callout-radix);
     border-start-start-radius: 0;
     border-end-start-radius: 0;
-    background-color: var(--color-base-05);
   }
 
   .view-header-breadcrumb-separator {
@@ -148,20 +148,20 @@ body.flexcyon-workspace-pl10k-layout {
     padding: 4px 0;
 
     &::after {
-      padding: 10px 6px;
-      content: "e";
       position: relative;
       inline-size: inherit;
       block-size: inherit;
+      padding: 10px 6px;
       color: transparent;
+      content: "e";
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
     }
   }
 
   .view-header-title-parent :first-child.view-header-breadcrumb {
+    padding-inline-start: 12px;
     border-start-start-radius: 16px;
     border-end-start-radius: 16px;
-    padding-inline-start: 12px;
   }
 }
 

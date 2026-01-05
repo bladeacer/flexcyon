@@ -6,9 +6,9 @@ body {
 
   /* Inactive dimming, icon alignment */
   .various-complements__suggestion-item {
-    opacity: var(--dimmed);
     padding: var(--flexcyon-var-comps-sugg-vert-padding)
       var(--flexcyon-var-comps-sugg-horiz-padding);
+    opacity: var(--dimmed);
 
     &::before {
       transform: translateY(-2.5px);
@@ -17,8 +17,8 @@ body {
 
   .various-complements__selection-lock,
   .various-complements__suggestion-item.is-selected {
-    opacity: calc(var(--dimmed) + 0.3);
     color: var(--text-accent);
+    opacity: calc(var(--dimmed) + 0.3);
   }
 }
 

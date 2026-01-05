@@ -31,18 +31,18 @@ body {
 }
 
 body:not(.css-settings-manager) .app-container::after {
-  content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
-  z-index: 999;
-  background-color: var(--background-primary);
-  font-size: var(--font-ui-large);
-  justify-content: center;
-  display: flex;
-  inline-size: fit-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
   inset-inline: calc(0px * 2) 2px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  inline-size: fit-content;
+  max-inline-size: 85%;
   padding: 20px;
+  margin: 0 auto;
   margin-block-end: 50px;
+  font-size: var(--font-ui-large);
+  content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
+  background-color: var(--background-primary);
 }
 
 /* @settings

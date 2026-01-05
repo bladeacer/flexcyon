@@ -28,9 +28,9 @@ body {
   }
 
   div.fc-daygrid-body td.fc-day-today div div a {
-    opacity: unset;
     font-weight: bold;
     color: var(--text-accent);
+    opacity: unset;
   }
 
   div.fc-button-group button.fc-button-active {

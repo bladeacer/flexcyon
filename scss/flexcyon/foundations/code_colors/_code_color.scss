@@ -59,18 +59,18 @@ body {
   }
 
   .HyperMD-codeblock span.code-block-flair {
-    text-transform: var(--flexcyon-codeblock-fmt-ext);
     font-weight: var(--flexcyon-code-file-ext-font-w);
+    text-transform: var(--flexcyon-codeblock-fmt-ext);
   }
 }
 
 mark {
-  color: var(--text-normal);
-  background-color: var(--text-highlight-bg);
   padding: var(--flexcyon-highlight-verti-padding)
     var(--flexcyon-highlight-horiz-padding);
-  border-radius: var(--flexcyon-highlight-border-radius);
   font-weight: 525;
+  color: var(--text-normal);
+  background-color: var(--text-highlight-bg);
+  border-radius: var(--flexcyon-highlight-border-radius);
 }
 
 body.flexcyon-syntax-catppuccin {

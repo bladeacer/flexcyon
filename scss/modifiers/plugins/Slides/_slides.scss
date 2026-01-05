@@ -43,10 +43,10 @@ body {
 }
 
 .reveal blockquote {
+  inline-size: 90%;
   padding: 4px 12px;
   margin: var(--r-block-margin) 2px;
   background-color: var(--color-base-20);
-  inline-size: 90%;
 }
 
 .reveal li {
@@ -60,8 +60,8 @@ body {
 
 .slides-close-btn {
   svg.svg-icon {
-    block-size: 28px;
     inline-size: 28px;
+    block-size: 28px;
   }
 }
 
@@ -82,12 +82,12 @@ body {
       .backgrounds
       :nth-of-type(#{$max-slides}n + #{$i}).present
       .slide-background-content::before {
-      content: "Page #{$i}";
-      padding: 4px 14px;
-      inset-block-start: 8px;
-      color: var(--text-normal);
-      font-size: var(--font-ui-medium);
       position: absolute;
+      inset-block-start: 8px;
+      padding: 4px 14px;
+      font-size: var(--font-ui-medium);
+      color: var(--text-normal);
+      content: "Page #{$i}";
     }
   }
 }

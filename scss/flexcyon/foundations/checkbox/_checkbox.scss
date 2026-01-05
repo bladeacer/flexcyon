@@ -20,23 +20,23 @@ body {
   input[data-task="#{$data-task}"]:checked,
   li[data-task="#{$data-task}"] > input:checked,
   li[data-task="#{$data-task}"] > p > input:checked {
+    padding-inline-end: 6px;
     background-color: inherit;
     border: none;
-    padding-inline-end: 6px;
 
     &:hover {
       filter: brightness(1.25);
     }
 
     &::after {
-      background-color: inherit;
-      content: $data-task;
-      color: $color;
+      inset-block-start: -0.325em;
       font-size: var(--flexcyon-ascii-checkboxes-font-size);
       font-weight: 900;
+      color: $color;
       text-align: center;
+      content: $data-task;
+      background-color: inherit;
       mask-image: none;
-      inset-block-start: -0.325em;
     }
   }
 }
@@ -71,9 +71,9 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="'"]:checked::after,
   li[data-task="'"] > input:checked::after,
   li[data-task="'"] > p > input:checked::after {
-    content: "‘";
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
     inset-block-start: -0.175rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
+    content: "‘";
   }
 
   input[data-task="#"]:checked::after,
@@ -91,71 +91,71 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task=">"]:checked::after,
   li[data-task=">"] > input:checked::after,
   li[data-task=">"] > p > input:checked::after {
-    transform: scaleY(1.1);
     inset-block-start: -0.175rem;
+    transform: scaleY(1.1);
   }
 
   input[data-task="."]:checked::after,
   li[data-task="."] > input:checked::after,
   li[data-task="."] > p > input:checked::after {
-    content: "...";
+    inset-block-start: -0.1rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
     letter-spacing: -0.5px;
-    inset-block-start: -0.1rem;
+    content: "...";
   }
 
   input[data-task="*"]:checked::after,
   li[data-task="*"] > input:checked::after,
   li[data-task="*"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
     inset-block-start: -0.25rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
   }
 
   input[data-task="@"]:checked::after,
   li[data-task="@"] > input:checked::after,
   li[data-task="@"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
     inset-block-start: -0.125rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
   }
 
   input[data-task="%"]:checked::after,
   li[data-task="%"] > input:checked::after,
   li[data-task="%"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
     inset-block-start: -0.05rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
   }
 
   input[data-task="+"]:checked::after,
   li[data-task="+"] > input:checked::after,
   li[data-task="+"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
     inset-block-start: -0.1rem;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   }
 
   input[data-task="-"]:checked::after,
   li[data-task="-"] > input:checked::after,
   li[data-task="-"] > p > input:checked::after {
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
     inset-block-start: -0.3rem;
-    content: "--";
     margin-inline-start: -7.5%;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
     letter-spacing: var(--less-letter-spacing);
+    content: "--";
   }
 
   input[data-task='"']:checked,
   li[data-task='"'] > input:checked,
   li[data-task='"'] > p > input:checked {
+    padding-inline-end: 6px;
     background-color: inherit;
     border: none;
-    padding-inline-end: 6px;
 
     &::after {
-      content: "“";
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
       font-weight: 900;
       color: var(--color-green);
-      background-color: inherit;
-      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
       text-align: center;
+      content: "“";
+      background-color: inherit;
       mask-image: none;
     }
   }
@@ -163,24 +163,24 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="i"]:checked,
   li[data-task="i"] > input:checked,
   li[data-task="i"] > p > input:checked {
+    padding-inline-end: 6px;
     background-color: inherit;
     border: none;
-    padding-inline-end: 6px;
 
     &::after {
-      font-weight: 900;
-      content: "i";
-      color: var(--color-cyan);
-      background-color: inherit;
-      text-align: center;
-      mask-image: none;
-      border: 1.5px solid var(--color-blue);
-      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
-      border-radius: 50%;
-      line-height: 1.1;
+      inset-block-start: -0.075rem;
       padding-block-start: 10%;
       margin-inline-start: -1.5px;
-      inset-block-start: -0.075rem;
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--color-cyan);
+      text-align: center;
+      content: "i";
+      background-color: inherit;
+      border: 1.5px solid var(--color-blue);
+      border-radius: 50%;
+      mask-image: none;
       scale: var(--upsize);
     }
   }
@@ -190,10 +190,10 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="#{$data-task}"]:checked,
   li[data-task="#{$data-task}"] > input:checked,
   li[data-task="#{$data-task}"] > p > input:checked {
+    padding-inline-end: 6px;
+    font-weight: 900;
     background-color: $color;
     border: none;
-    font-weight: 900;
-    padding-inline-end: 6px;
     clip-path: $clip-path;
 
     &::after {

@@ -30,14 +30,13 @@ body {
 
   @container not style(--flexcyon-bg-image-sidebar-left-url: url("")) {
     .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      image-rendering: auto;
       background-image: var(--flexcyon-bg-image-sidebar-left-url);
-      background-size: var(--flexcyon-bg-image-size);
       background-position: var(--flexcyon-bg-image-position);
+      background-size: var(--flexcyon-bg-image-size);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 
       --nav-item-background-hover: transparent;
-
-      image-rendering: auto;
 
       > div {
         backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
@@ -52,14 +51,13 @@ body {
 
   @container not style(--flexcyon-bg-image-sidebar-right-url: url("")) {
     .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
+      image-rendering: auto;
       background-image: var(--flexcyon-bg-image-sidebar-right-url);
-      background-size: var(--flexcyon-bg-image-size);
       background-position: var(--flexcyon-bg-image-position);
+      background-size: var(--flexcyon-bg-image-size);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
 
       --nav-item-background-hover: transparent;
-
-      image-rendering: auto;
 
       > div {
         backdrop-filter: brightness(var(--flexcyon-bg-image-brightness))
@@ -73,12 +71,12 @@ body {
   }
 
   .modal-bg {
+    image-rendering: auto;
     background-image: var(--flexcyon-modal-bg-url);
-    background-size: var(--flexcyon-modal-image-size);
     background-position: var(--flexcyon-modal-image-position);
+    background-size: var(--flexcyon-modal-image-size);
     background-blend-mode: var(--flexcyon-modal-image-blend-mode);
     opacity: var(--flexcyon-modal-dark-intensity) !important;
-    image-rendering: auto;
     filter: brightness(var(--flexcyon-modal-image-brightness))
       blur(var(--flexcyon-modal-image-blur));
   }

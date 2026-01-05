@@ -104,22 +104,22 @@ body {
   .cm-s-obsidian span.cm-highlight,
   .cm-highlight + .cm-widgetBuffer + .math,
   .markdown-source-view:is(.is-live-preview) mark {
-    color: var(--text-normal);
-    background-color: var(--text-highlight-bg);
     padding: var(--flexcyon-highlight-verti-padding)
       var(--flexcyon-highlight-horiz-padding);
-    border-radius: var(--flexcyon-highlight-border-radius);
     font-weight: 525;
+    color: var(--text-normal);
+    background-color: var(--text-highlight-bg);
+    border-radius: var(--flexcyon-highlight-border-radius);
   }
 
   .cm-s-obsidian span.cm-formatting-highlight {
-    border-radius: 0;
     color: var(--text-highlight-bg);
     background-color: inherit;
+    border-radius: 0;
   }
 
   .tooltip {
-    background-color: var(--color-base-00);
     color: var(--text-normal);
+    background-color: var(--color-base-00);
   }
 }

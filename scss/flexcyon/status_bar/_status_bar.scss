@@ -63,27 +63,27 @@ body.flexcyon-status-text-mode {
 }
 
 %status-aln-wrapper {
-  border: none;
-  font-size: var(--font-ui-medium);
   z-index: 1;
+  font-size: var(--font-ui-medium);
+  border: none;
   transition: transform calc(1.05 * var(--flexcyon-status-hide-hover-duration))
     var(--flexcyon-status-hide-hover-function);
 }
 
 %status-aln-bef-wrapper {
-  z-index: 2;
   position: absolute;
-  transition: transform var(--flexcyon-status-hide-hover-duration)
-    var(--flexcyon-status-hide-hover-function);
-  font-size: var(--status-bar-font-size);
+  inset-block-end: 0;
+  inset-inline-end: 0;
+  z-index: 2;
+  inline-size: max-content;
   padding: 8px 10px;
+  font-size: var(--status-bar-font-size);
+  user-select: none;
   content: var(--flexcyon-status-hide-until-hover-text);
   background-color: var(--color-base-00);
   border-radius: inherit;
-  inset-block-end: 0;
-  inset-inline-end: 0;
-  inline-size: max-content;
-  user-select: none;
+  transition: transform var(--flexcyon-status-hide-hover-duration)
+    var(--flexcyon-status-hide-hover-function);
 }
 
 body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(
@@ -100,12 +100,12 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(
 
 %centre-div-status-bar {
   position: absolute;
-  justify-content: center;
-  display: flex;
-  inline-size: max-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
   inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+  display: flex;
+  justify-content: center;
+  inline-size: max-content;
+  max-inline-size: 85%;
+  margin: 0 auto;
 }
 
 body:is(
@@ -173,18 +173,18 @@ body.is-mobile.flexcyon-status-mobile-enabled .status-bar {
 
 body.flexcyon-status-style-angled {
   .status-bar {
+    gap: 0;
+    margin: 0;
     background-color: transparent;
     border: none;
     border-radius: 0;
-    gap: 0;
-    margin: 0;
   }
 
   .status-bar-item {
-    background-color: var(--color-base-20);
-    transform: skewX(-22.5deg);
     padding: 4px 8px;
+    background-color: var(--color-base-20);
     border-radius: 0;
+    transform: skewX(-22.5deg);
   }
 
   .status-bar :nth-child(2n):is(.status-bar-item) {
@@ -198,23 +198,23 @@ body:not(.is-fullscreen) .status-bar {
 
 body.flexcyon-status-style-card {
   .status-bar {
-    border: none;
-    margin: 4px 8px;
-    gap: 8px;
-    background-color: transparent;
     inset-inline-end: 10px;
+    gap: 8px;
+    margin: 4px 8px;
+    background-color: transparent;
+    border: none;
   }
 
   .status-bar :nth-child(2n).status-bar-item {
+    padding: 4px 8px;
     background-color: var(--color-base-05);
     border-radius: var(--flexcyon-callout-radix);
-    padding: 4px 8px;
   }
 
   .status-bar :nth-child(2n + 1).status-bar-item {
+    padding: 4px 8px;
     background-color: var(--color-base-25);
     border-radius: var(--flexcyon-callout-radix);
-    padding: 4px 8px;
   }
 }
 
@@ -240,11 +240,11 @@ body.flexcyon-no-status-in-new-tab:has(.mod-active > [data-type="empty"]) {
 body.flexcyon-flex-max-mode,
 body.flexcyon-status-style-pl10k {
   .status-bar {
-    border: transparent;
-    background-color: transparent;
     gap: 0;
-    scale: var(--expand);
     padding-inline-end: 1vw;
+    background-color: transparent;
+    border: transparent;
+    scale: var(--expand);
 
     &::before {
       inset-inline-end: 0;
@@ -255,9 +255,9 @@ body.flexcyon-status-style-pl10k {
     }
 
     .status-bar-item[style="display: none;"] + .status-bar-item {
+      padding-inline-start: 12px;
       border-start-start-radius: 16px;
       border-end-start-radius: 16px;
-      padding-inline-start: 12px;
     }
 
     .status-bar-item {
@@ -265,28 +265,28 @@ body.flexcyon-status-style-pl10k {
       padding-inline-start: 2px;
 
       &::after {
-        padding: 4px;
-        content: "e";
         position: relative;
         inline-size: inherit;
         block-size: inherit;
+        padding: 4px;
         color: transparent;
+        content: "e";
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
       }
     }
 
     :first-child:empty,
     :first-child.status-bar-item {
+      padding-inline-start: 6px;
       border-start-start-radius: 16px;
       border-end-start-radius: 16px;
-      padding-inline-start: 6px;
     }
 
     :last-child.status-bar-item,
     :nth-last-child(2).status-bar-item {
+      margin-inline-end: 1.25vw;
       border-start-end-radius: 16px;
       border-end-end-radius: 16px;
-      margin-inline-end: 1.25vw;
 
       * {
         margin-inline-end: 0;

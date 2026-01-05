@@ -20,8 +20,8 @@ div.mermaid svg .nodes node * {
   & g.nodes {
     & g :is(*) {
       fill: var(--text-normal) !important;
-      stroke: var(--text-faint) !important;
       fill-opacity: var(--dimmed) !important;
+      stroke: var(--text-faint) !important;
     }
 
     & g.red :is(*) {
@@ -69,9 +69,9 @@ div.mermaid svg .nodes node * {
       display: contents !important;
 
       & .edgeLabel p {
-        color: var(--text-normal) !important;
         font-size: var(--font-ui-small) !important;
         vertical-align: super;
+        color: var(--text-normal) !important;
         background-color: var(--background-primary) !important;
       }
     }
@@ -90,9 +90,9 @@ div.mermaid svg .nodes node * {
 
     /* Node default colors */
     & g :is(*) {
-      stroke: var(--text-faint) !important;
       fill: var(--background-secondary) !important;
       fill-opacity: calc(var(--dimmed) - 0.25) !important;
+      stroke: var(--text-faint) !important;
     }
 
     /* Colorize individual nodes with classes */

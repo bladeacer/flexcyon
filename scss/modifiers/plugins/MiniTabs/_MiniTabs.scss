@@ -6,27 +6,27 @@ body {
   }
 
   div.TabsCodeBlock.TabsCodeBlock-buns {
-    border-radius: 8px 8px 0 0;
-    background-color: var(--color-base-20);
     padding: 4px 6px;
+    background-color: var(--color-base-20);
+    border-radius: 8px 8px 0 0;
 
     button {
-      box-shadow: none;
-      border-radius: 8px;
       background-color: inherit;
+      border-radius: 8px;
+      box-shadow: none;
       opacity: var(--dimmed);
     }
 
     button.active {
-      background-color: var(--color-base-10);
       font-weight: bold;
       color: var(--text-accent);
+      background-color: var(--color-base-10);
       opacity: 1;
     }
 
     & + div {
-      border: 1px solid var(--color-base-20);
       padding: 0 12px;
+      border: 1px solid var(--color-base-20);
     }
   }
 

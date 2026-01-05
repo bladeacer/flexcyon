@@ -60,24 +60,23 @@ body .view-header-left::after {
 
 %centre-div-resize {
   position: absolute;
-  justify-content: center;
-  display: flex;
-  inline-size: fit-content;
-  margin: 0 auto;
-  max-inline-size: 85%;
   inset-inline: calc(0px * 2) 0;
+  display: flex;
+  justify-content: center;
+  inline-size: fit-content;
+  max-inline-size: 85%;
+  margin: 0 auto;
 }
 
 body.flexcyon-display-screen-dimens .titlebar::after {
   padding-block-start: 12px;
   padding-inline-end: calc(8 * var(--flexcyon-screen-dimens-padding-l));
-
-  @extend %centre-div-resize;
-
   font-size: var(--file-header-font-size);
+  color: var(--text-muted);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
-  color: var(--text-muted);
+
+  @extend %centre-div-resize;
 }
 
 body.flexcyon-display-screen-dimens:not(:has(.mod-stacked)) .titlebar::after,
@@ -93,17 +92,17 @@ body.flexcyon-display-screen-dimens#{$screen-dim-sel} {
   padding-block-start: -0.5vh;
   padding-inline-start: var(--flexcyon-screen-dimens-padding-l);
   font-size: var(--file-header-font-size);
+  color: var(--text-muted);
   content: counter(w) "x" counter(h);
   counter-reset: h var(--h) w var(--w);
-  color: var(--text-muted);
 }
 body.flexcyon-display-screen-dimens#{$screen-dim-no-vh-sel} {
   padding-block-start: 4px;
 }
 
 body .view-actions {
-  padding-block-start: 1vh;
   gap: 4px;
+  padding-block-start: 1vh;
 
   button {
     margin-block-start: 0.15vh;
@@ -116,8 +115,8 @@ body .view-actions::before {
 }
 
 body.flexcyon-display-os .view-actions::before {
-  font-size: var(--file-header-font-size);
   padding-inline-end: var(--flexcyon-os-detail-padding-r);
+  font-size: var(--file-header-font-size);
   color: var(--text-muted);
 }
 
@@ -150,8 +149,8 @@ body.flexcyon-display-os.is-mobile {
 body.flexcyon-display-os {
   #{$disp-os-no-vh-sel} {
     position: fixed;
-    inset-inline-end: 16px;
     inset-block-start: 2px;
+    inset-inline-end: 16px;
   }
 }
 

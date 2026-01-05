@@ -1,11 +1,11 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard-scss"],
+  extends: ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
   plugins: [
     "stylelint-prettier",
-    "stylelint-no-unsupported-browser-features",
     "stylelint-use-logical",
-    "stylelint-high-performance-animation"
+    "stylelint-high-performance-animation",
+    "stylelint-no-unsupported-browser-features",
   ],
   rules: {
     "prettier/prettier": true,
@@ -14,11 +14,11 @@ export default {
     "selector-type-no-unknown": null,
     "custom-property-pattern": null,
     "no-descending-specificity": null,
-    "plugin/no-low-performance-animation-properties": true,
     "color-function-alias-notation": "without-alpha",
     "color-function-notation": "modern",
-    // List of allowed units
     "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh"],
+    // Plugins
+    "plugin/no-low-performance-animation-properties": true,
     "plugin/no-unsupported-browser-features": [
         true, {
         "severity": "warning",

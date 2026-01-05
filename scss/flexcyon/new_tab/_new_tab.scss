@@ -70,28 +70,28 @@ body.flexcyon-ascii-enable {
   .reveal .pause-overlay,
   div.empty-state-container {
     &::before {
+      display: inline;
       font-family: var(--flexcyon-new-tab-font-group);
-      content: var(--flexcyon-ascii-art);
+      font-size: min(calc(5vw - 3.25px), var(--flexcyon-ascii-max-font-size));
       font-weight: bold;
+      line-height: var(--flexcyon-ascii-line-height);
+      text-align: var(--flexcyon-ascii-alignment);
+      white-space: pre;
+      content: var(--flexcyon-ascii-art);
       background: var(--flexcyon-new-tab-bg-wrapper);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: var(--flexcyon-ascii-line-height);
-      white-space: pre;
-      text-align: var(--flexcyon-ascii-alignment);
-      display: inline;
-      font-size: min(calc(5vw - 3.25px), var(--flexcyon-ascii-max-font-size));
     }
   }
 
   .reveal .pause-overlay {
     &::before {
       position: absolute;
-      line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
-      margin: auto;
+      inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 6px * 2 + 4px * 2);
       max-inline-size: max-content;
       max-block-size: max-content;
-      inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 6px * 2 + 4px * 2);
+      margin: auto;
+      line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
     }
   }
 }
@@ -100,8 +100,8 @@ body.is-mobile.flexcyon-flex-max-mode,
 body.is-mobile.flexcyon-ascii-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
-      font-size: min(calc(3.5vw - 3px), var(--flexcyon-ascii-max-font-size));
       margin-block-end: 1rem;
+      font-size: min(calc(3.5vw - 3px), var(--flexcyon-ascii-max-font-size));
       line-height: 0.8;
     }
   }
@@ -129,18 +129,18 @@ body.flexcyon-empty-state-actions-disable {
 body.flexcyon-quote-enable {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
+      display: inline;
       font-family: var(--flexcyon-new-tab-font-group);
+      font-size: var(--flexcyon-quote-font-size);
+      font-weight: bold;
+      line-height: var(--flexcyon-ascii-line-height);
+      text-align: center;
+      white-space: pre;
       content: var(--flexcyon-quote-val) "\a\a"
         var(--flexcyon-quote-credit-prefix) " " var(--flexcyon-quote-credit);
-      font-weight: bold;
       background: var(--flexcyon-new-tab-bg-wrapper);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: var(--flexcyon-ascii-line-height);
-      white-space: pre;
-      text-align: center;
-      display: inline;
-      font-size: var(--flexcyon-quote-font-size);
     }
 
     > div.empty-state-container {
@@ -156,17 +156,17 @@ body.flexcyon-quote-enable {
 body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) {
   .workspace-leaf > div > div > div.empty-state {
     > div.empty-state-container::before {
-      content: "0" !important;
-      font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
+      display: inline;
       font-family: var(--flexcyon-new-tab-font-group);
+      font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
       font-weight: bold;
+      line-height: var(--flexcyon-ascii-line-height);
+      text-align: center;
+      white-space: pre;
+      content: "0" !important;
       background: var(--text-accent);
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      line-height: var(--flexcyon-ascii-line-height);
-      white-space: pre;
-      text-align: center;
-      display: inline;
     }
 
     > div.empty-state-action-list {
@@ -213,12 +213,12 @@ body.flexcyon-number-tabs {
   counter-reset: numTab 0;
 
   .workspace-tab-header-inner-title::before {
-    content: counter(numTab);
-    color: inherit;
-    font-weight: bold;
     margin-inline-end: 12px;
-    font-size: var(--font-ui-medium);
     overflow: hidden;
+    font-size: var(--font-ui-medium);
+    font-weight: bold;
+    color: inherit;
+    content: counter(numTab);
   }
 
   .workspace-tab-header {

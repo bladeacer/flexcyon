@@ -17,8 +17,8 @@ body {
   --clickable-icon-radius: 0;
 
   .clickable-icon {
-    opacity: var(--dimmed);
     padding: 4px 8px;
+    opacity: var(--dimmed);
 
     &:hover {
       opacity: unset;
@@ -64,8 +64,8 @@ body {
   }
 
   .community-modal-search-results {
-    padding: 16px;
     gap: 14px;
+    padding: 16px;
   }
 
   .community-modal-info hr {
@@ -80,8 +80,8 @@ body {
     border-block-end: 1px solid var(--background-modifier-border);
 
     .setting-item-name {
-      line-height: 1.5;
       padding-inline-end: 4px;
+      line-height: 1.5;
     }
   }
 
@@ -154,13 +154,13 @@ body.is-mobile {
 
 body.flexcyon-workspace-card-layout {
   .community-modal-info-name {
-    border: 2px solid var(--text-faint);
-    border-start-start-radius: 16px;
-    border-start-end-radius: 16px;
-    border-block-end: 0;
     padding: var(--flexcyon-comm-text-padding);
     padding-block-start: 16px;
     margin-block: 8px 0;
+    border: 2px solid var(--text-faint);
+    border-block-end: 0;
+    border-start-start-radius: 16px;
+    border-start-end-radius: 16px;
   }
 
   .community-modal-info-downloads,
@@ -168,11 +168,11 @@ body.flexcyon-workspace-card-layout {
   .community-modal-info-author,
   .community-modal-info-repo,
   .community-modal-info-desc {
+    padding: var(--flexcyon-comm-text-padding);
+    overflow-wrap: break-word;
     border: 2px solid var(--text-faint);
     border-block-start: 0;
     border-block-end: 0;
-    padding: var(--flexcyon-comm-text-padding);
-    overflow-wrap: break-word;
   }
 
   .community-modal-info-desc {
@@ -185,13 +185,13 @@ body.flexcyon-workspace-card-layout {
   }
 
   .community-modal-button-container {
-    border: 2px solid var(--text-faint);
-    border-end-start-radius: 16px;
-    border-end-end-radius: 16px;
-    border-block-start: 0;
     padding: 16px;
     padding-block-end: 24px;
     margin: 0;
+    border: 2px solid var(--text-faint);
+    border-block-start: 0;
+    border-end-start-radius: 16px;
+    border-end-end-radius: 16px;
   }
 
   .community-modal-readme {
@@ -205,28 +205,28 @@ body.flexcyon-settings-comm-item-enabled {
   }
 
   div.community-modal-search-results div.community-item.is-selected {
-    opacity: unset;
-    border: unset;
     font-weight: bold;
+    border: unset;
+    opacity: unset;
   }
 
   div.community-item div.community-item-name span.flair.mod-pop {
     position: absolute;
-    inset-inline-end: 0.5rem;
     inset-block-start: 0.7rem;
-    background-color: var(--text-accent);
+    inset-inline-end: 0.5rem;
     color: var(--color-base-25);
+    background-color: var(--text-accent);
   }
 
   div.community-item.is-selected div.community-item-name span.flair.mod-pop {
-    background-color: var(--color-base-25);
     color: var(--text-normal);
+    background-color: var(--color-base-25);
   }
 
   .community-item-name {
     inline-size: 75%;
-    overflow-wrap: break-word;
     color: var(--color-blue);
+    overflow-wrap: break-word;
   }
 
   .community-item-downloads,
@@ -260,23 +260,23 @@ body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
     }
 
     .community-item-name {
-      color: var(--color-red);
       font-weight: bold;
+      color: var(--color-red);
     }
 
     .community-item-author {
-      color: var(--color-yellow);
       font-weight: bold;
+      color: var(--color-yellow);
     }
 
     .community-item-downloads {
-      color: var(--color-purple);
       font-weight: bold;
+      color: var(--color-purple);
     }
 
     .community-item-updated {
-      color: var(--color-green);
       font-weight: bold;
+      color: var(--color-green);
     }
 
     .community-item-desc {
@@ -296,23 +296,23 @@ body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
     }
 
     .community-item-name {
-      color: var(--color-red);
       font-weight: bold;
+      color: var(--color-red);
     }
 
     .community-item-author {
-      color: var(--color-blue);
       font-weight: bold;
+      color: var(--color-blue);
     }
 
     .community-item-downloads {
-      color: var(--color-pink);
       font-weight: bold;
+      color: var(--color-pink);
     }
 
     .community-item-updated {
-      color: var(--color-purple);
       font-weight: bold;
+      color: var(--color-purple);
     }
 
     .community-item-desc {
@@ -330,8 +330,8 @@ body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
   ) {
   div.setting-item-control {
     div.checkbox-container::after {
-      filter: saturate(2.5);
       font-weight: bold;
+      filter: saturate(2.5);
     }
   }
 }
@@ -343,25 +343,25 @@ body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
 body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) {
   div.setting-item-control {
     div.checkbox-container {
+      font-weight: bolder;
       background-color: var(--color-base-05);
       box-shadow: unset;
-      font-weight: bolder;
     }
 
     div.checkbox-container::after {
-      content: ":(";
-      transform: translateY(-10%);
       inline-size: fit-content;
       block-size: fit-content;
-      background-color: inherit;
       color: var(--color-red);
-      box-shadow: unset;
+      content: ":(";
+      background-color: inherit;
       border-radius: 25%;
+      box-shadow: unset;
+      transform: translateY(-10%);
     }
 
     div.checkbox-container.is-enabled::after {
-      content: ":)";
       color: var(--color-green);
+      content: ":)";
       transform: translate(16px, -10%);
     }
 
@@ -469,9 +469,9 @@ body.flexcyon-workspace-angled-layout {
     inline-size: 24px;
 
     &::after {
-      content: "#{$content}";
       font-size: var(--font-ui-small);
       letter-spacing: -0.75px;
+      content: "#{$content}";
     }
 
     svg {
@@ -486,8 +486,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   ) {
   .modal-close-button {
     position: absolute;
-    inset-inline-end: 2.5%;
     inset-block-start: 16px;
+    inset-inline-end: 2.5%;
     inline-size: 24px;
     padding-inline-end: 48px;
 
@@ -496,8 +496,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
 
     &::after {
-      content: "x_x";
       font-size: var(--font-ui-small);
+      content: "x_x";
     }
   }
 
@@ -507,12 +507,12 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
 
     &::after {
-      margin: 0 8px;
-      content: "?/";
       position: absolute;
-      inset-inline-start: 0;
       inset-block-end: 6px;
+      inset-inline-start: 0;
+      margin: 0 8px;
       font-size: var(--font-ui-small);
+      content: "?/";
     }
   }
 
@@ -539,44 +539,44 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 
   .iconic-rule-icon::after {
-    content: "./^";
     font-size: var(--font-ui-small);
     letter-spacing: -0.75px;
+    content: "./^";
   }
 
   .iconic-add::after {
-    content: "[~]";
     font-size: var(--font-ui-small);
-    letter-spacing: -0.75px;
-    transform: translateX(-24px);
     color: var(--color-green);
+    letter-spacing: -0.75px;
+    content: "[~]";
+    transform: translateX(-24px);
   }
 
   .iconic-drag::after {
-    content: "|||";
     font-size: var(--font-ui-small);
     letter-spacing: -0.75px;
+    content: "|||";
   }
 
   .omnisearch-result__icon {
     &:has(.lucide-file)::before {
-      content: "''";
       font-size: var(--font-ui-smaller);
       letter-spacing: -2px;
+      content: "''";
     }
 
     &:has(.lucide-file-text)::before {
-      content: "``";
       font-size: var(--font-ui-smaller);
       letter-spacing: -2px;
+      content: "``";
     }
   }
 
   .workspace-left-content[aria-label*="Back"] {
     &::after {
-      content: "<";
       font-size: var(--font-ui-small);
       letter-spacing: -0.75px;
+      content: "<";
     }
   }
 
@@ -584,8 +584,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     color: inherit;
 
     &::after {
-      content: "x_x";
       font-size: var(--font-ui-small);
+      content: "x_x";
     }
   }
 
@@ -646,8 +646,8 @@ body.flexcyon-stylised-pins
     .mod-pinned {
     --icon-size: var(--icon-xs);
 
-    transform: translate(-3px, -11px);
     color: var(--color-accent-2);
+    transform: translate(-3px, -11px);
   }
 }
 
@@ -666,8 +666,8 @@ body.flexcyon-stylised-pins.flexcyon-vertical-nav
     .mod-pinned {
     --icon-size: var(--icon-xs);
 
-    transform: translate(5px, -22px);
     color: var(--color-accent-2);
+    transform: translate(5px, -22px);
   }
 }
 

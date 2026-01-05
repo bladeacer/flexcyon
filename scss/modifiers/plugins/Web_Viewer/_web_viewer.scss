@@ -4,9 +4,9 @@
 }
 
 .webviewer-history-view-item {
-  white-space: normal;
   overflow: visible;
   text-overflow: clip;
+  white-space: normal;
 }
 
 .workspace-leaf-content[data-type*="webviewer"] {

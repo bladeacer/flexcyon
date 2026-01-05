@@ -6,9 +6,9 @@ body {
 body.flexcyon-flex-max-mode,
 body.flexcyon-wrap-long-filenames {
   .tree-item-inner {
-    white-space: collapse;
     overflow: visible;
     text-overflow: clip;
+    white-space: collapse;
   }
 }
 
@@ -29,13 +29,13 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
 
     div:not([data-path$=".md"]) {
       > div.nav-file-tag {
-        color: var(--text-muted);
-        opacity: var(--dimmed);
-        text-transform: lowercase;
-        font-size: var(--flexcyon-exp-dimmed-nav-size);
-        margin: unset;
         padding: unset;
+        margin: unset;
+        font-size: var(--flexcyon-exp-dimmed-nav-size);
         font-weight: unset;
+        color: var(--text-muted);
+        text-transform: lowercase;
+        opacity: var(--dimmed);
 
         &::before {
           content: ".";
@@ -61,8 +61,8 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
         @if $is-bg == 0 {
           color: var(--color-#{$color});
         } @else {
-          background-color: var(--color-#{$color});
           color: var(--text-normal);
+          background-color: var(--color-#{$color});
         }
       }
 
@@ -82,8 +82,8 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
         @if $is-bg == 0 {
           color: rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
         } @else {
-          background-color: transparent;
           color: var(--text-normal);
+          background-color: transparent;
         }
       }
     }
@@ -155,8 +155,8 @@ body.flexcyon-alt-folder-style {
   }
 
   .nav-file-title.is-active .nav-file-title-content {
-    transform: all ease-in-out 350ms;
     font-weight: bold;
+    transform: all ease-in-out 350ms;
   }
 }
 
@@ -177,18 +177,18 @@ body.flexcyon-md-file-tree-style {
 
   .nav-file::before,
   .nav-folder-children::before {
-    content: "";
     position: absolute;
+    content: "";
     background: var(--nav-collapse-icon-color);
   }
 
   .tree-item.nav-file::before,
   .tree-item.nav-folder::before {
-    block-size: 1px;
-    inline-size: 20px;
     inset-block-start: 50%;
-    transform: translate(0, -50%);
+    inline-size: 20px;
+    block-size: 1px;
     margin-inline-start: -3px;
+    transform: translate(0, -50%);
   }
 
   .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
@@ -199,8 +199,8 @@ body.flexcyon-md-file-tree-style {
     border-inline-start-width: 0;
 
     &::before {
-      inset-inline-start: 0;
       inset-block: 0 12px;
+      inset-inline-start: 0;
       inline-size: 1px;
     }
   }
@@ -228,9 +228,9 @@ body.flexcyon-md-file-tree-style {
     body:not(.is-grabbing) .nav-folder-title.is-active:hover,
     .nav-file-title.is-active,
     .nav-folder-title.is-active {
+      font-weight: var(--nav-item-weight-active);
       color: var(--nav-item-color-active);
       background-color: var(--nav-item-background-active);
-      font-weight: var(--nav-item-weight-active);
     }
   }
 }
@@ -252,9 +252,9 @@ body.flexcyon-md-file-tree-style {
     body:not(.is-grabbing) .nav-folder-title.is-active:hover,
     .nav-file-title.is-active,
     .nav-folder-title.is-active {
+      font-weight: var(--nav-item-weight-active);
       color: var(--nav-item-color-active);
       background-color: var(--nav-item-background-active);
-      font-weight: var(--nav-item-weight-active);
     }
   }
 }
@@ -362,10 +362,10 @@ body.flexcyon-vertical-nav {
     }
 
     .workspace-tab-header-container-inner {
-      margin-block-start: 8px;
-      gap: 8px;
       flex-direction: column;
+      gap: 8px;
       block-size: min-content;
+      margin-block-start: 8px;
     }
 
     .workspace-leaf-content {
@@ -373,8 +373,8 @@ body.flexcyon-vertical-nav {
     }
 
     .workspace-leaf-content .nav-header + div {
-      margin-block-start: 12px;
       flex-direction: row;
+      margin-block-start: 12px;
     }
   }
 

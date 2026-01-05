@@ -28,10 +28,10 @@ body {
   }
 
   .sidebar-toggle-button.mod-left {
-    padding-block-start: 12px;
-    transform: translateY(-4px);
-    background-color: transparent;
     block-size: unset;
+    padding-block-start: 12px;
+    background-color: transparent;
+    transform: translateY(-4px);
   }
 
   .sidebar-toggle-button.mod-right {
@@ -59,8 +59,8 @@ body {
     }
 
     .workspace-tab-header > .workspace-tab-header-inner {
-      opacity: var(--dimmed);
       border-block-end: 1px solid var(--background-secondary);
+      opacity: var(--dimmed);
     }
   }
 
@@ -86,10 +86,10 @@ body {
   }
 
   :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
-    margin-block: 0;
-    padding-block-end: 0;
     gap: 1px;
+    padding-block-end: 0;
     padding-inline-start: 0;
+    margin-block: 0;
   }
 
   .workspace-leaf-content {
@@ -114,8 +114,8 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
-    border-radius: var(--flexcyon-callout-radix);
     border: 2px solid var(--color-base-20);
+    border-radius: var(--flexcyon-callout-radix);
 
     .metadata-content {
       padding: 0 8px;
@@ -124,9 +124,9 @@ body.flexcyon-workspace-card-layout {
 
   .workspace-tab-container,
   .workspace-tab-header-container {
-    border-radius: var(--flexcyon-callout-radix);
-    border: 2px solid var(--color-base-20);
     margin: 4px 8px;
+    border: 2px solid var(--color-base-20);
+    border-radius: var(--flexcyon-callout-radix);
   }
 
   .workspace-split.mod-vertical.mod-root .workspace-tab-container {
@@ -230,14 +230,14 @@ body.show-ribbon {
       rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
 
     &::before {
-      content: "#{$content}";
       position: absolute;
       inset-block-start: 44px;
       inset-inline-start: 32px;
       z-index: 1;
-      color: rgb(var(--color-#{$color}-rgb), 0.85);
-      background-color: var(--color-base-00);
       padding: 0 8px;
+      color: rgb(var(--color-#{$color}-rgb), 0.85);
+      content: "#{$content}";
+      background-color: var(--color-base-00);
     }
   }
 }
@@ -312,8 +312,8 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
 
     div.collapse-indicator,
     .metadata-properties-title {
-      background-color: var(--color-base-10);
       padding: 0 8px;
+      background-color: var(--color-base-10);
     }
   }
 
@@ -335,11 +335,11 @@ body.flexcyon-workspace-pl10k-layout {
 
   .view-actions,
   .view-header-left .view-header-nav-buttons {
-    border-radius: var(--flexcyon-callout-radix);
+    z-index: 10;
     background-color: var(--color-base-20);
     border: 1px solid var(--color-base-20);
+    border-radius: var(--flexcyon-callout-radix);
     opacity: 1;
-    z-index: 10;
 
     button {
       border-radius: var(--flexcyon-callout-radix);

@@ -85,11 +85,11 @@ body.flexcyon-headings-glow-enabled {
     h#{$h_level}:not(:hover)::before,
     .HyperMD-header-#{$h_level}::before {
       position: relative;
-      content: "h#{$h_level}";
-      color: var(--h#{$h_level}-color);
-      opacity: calc(var(--dimmed) + 0.25);
-      font-size: var(--font-ui-medium);
       padding-inline-end: 8px;
+      font-size: var(--font-ui-medium);
+      color: var(--h#{$h_level}-color);
+      content: "h#{$h_level}";
+      opacity: calc(var(--dimmed) + 0.25);
     }
 
     h#{$h_level}:not(:hover) svg,

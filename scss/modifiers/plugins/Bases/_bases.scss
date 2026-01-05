@@ -74,15 +74,15 @@ div.bases-cards-cover:not([style*="background-image"]) {
     );
 
   &::after {
-    content: var(--bases-no-img-str);
-    color: var(--text-muted);
-    justify-content: center;
-    display: flex;
-    inline-size: max-content;
-    margin: 30% auto;
-    text-align: center;
-    max-inline-size: 85%;
     inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+    display: flex;
+    justify-content: center;
+    inline-size: max-content;
+    max-inline-size: 85%;
+    margin: 30% auto;
+    color: var(--text-muted);
+    text-align: center;
+    content: var(--bases-no-img-str);
   }
 
   * {
@@ -93,10 +93,10 @@ div.bases-cards-cover:not([style*="background-image"]) {
 .bases-cards-property.mod-title div,
 .bases-cards-property.mod-title,
 .bases-cards-item {
-  border: none;
-  white-space: normal;
   overflow: visible;
   text-overflow: clip;
+  white-space: normal;
+  border: none;
 
   --input-padding: 0px 4px;
 }
@@ -119,8 +119,8 @@ div.bases-cards-cover:not([style*="background-image"]) {
 
   span.flair {
     font-size: var(--font-ui-smaller);
-    color: var(--color-blue);
     font-weight: 900;
+    color: var(--color-blue);
   }
 }
 
@@ -154,11 +154,11 @@ div.bases-cards-cover:not([style*="background-image"]) {
 
 .bases-tbody[style*="height: 0px"] {
   &::after {
+    font-size: var(--font-ui-small);
+    color: var(--color-red);
     white-space: pre;
     content: " \a\
  No entries could be found";
-    font-size: var(--font-ui-small);
-    color: var(--color-red);
   }
 }
 
@@ -166,10 +166,10 @@ div.bases-cards-cover:not([style*="background-image"]) {
   background-color: transparent;
 
   &::after {
+    margin-inline-start: 8px;
+    font-size: var(--font-ui-small);
     color: var(--color-red);
     content: "N/A";
-    font-size: var(--font-ui-small);
-    margin-inline-start: 8px;
   }
 }
 
@@ -193,12 +193,12 @@ div.bases-cards-cover:not([style*="background-image"]) {
 }
 
 .value-list-container:not(:has(.value-list-element))::before {
-  content: "None found";
   color: var(--color-red);
+  content: "None found";
 }
 
 .bases-rendered-value {
-  white-space: normal;
   overflow: visible;
   text-overflow: clip;
+  white-space: normal;
 }

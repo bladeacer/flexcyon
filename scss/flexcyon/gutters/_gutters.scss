@@ -5,8 +5,8 @@ body {
   --flexcyon-typewriter-mode-opacity: 0.55;
 
   .cm-gutterElement.cm-active {
-    font-weight: 900;
     font-size: var(--font-ui-medium);
+    font-weight: 900;
     color: var(--text-accent);
   }
 
@@ -219,9 +219,9 @@ body.flexcyon-repl-active-line-num-str {
     font-size: 0;
 
     &::before {
-      content: var(--flexcyon-repl-active-line-str);
       font-size: calc(var(--font-ui-medium) + 0.07rem);
       letter-spacing: var(--flexcyon-repl-active-str-space);
+      content: var(--flexcyon-repl-active-line-str);
     }
   }
 }

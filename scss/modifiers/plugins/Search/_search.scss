@@ -23,8 +23,8 @@ body {
   }
 
   .prompt input.prompt-input {
-    color: var(--interactive-accent);
     font-weight: bold;
+    color: var(--interactive-accent);
   }
 
   .search-result:not(.is-collapsed) .search-result-file-title {
@@ -32,8 +32,8 @@ body {
   }
 
   .search-result:not(.is-collapsed) .search-result-file-matched-text {
-    color: var(--text-accent);
     font-weight: bold;
+    color: var(--text-accent);
   }
 }
 
@@ -69,8 +69,8 @@ body.flexcyon-prompt-align-bottom-center {
   }
 
   .search-results-info .search-results-result-count {
-    color: var(--text-normal);
     font-size: calc(var(--font-ui-small) - 0.809px);
+    color: var(--text-normal);
     opacity: 1;
   }
 

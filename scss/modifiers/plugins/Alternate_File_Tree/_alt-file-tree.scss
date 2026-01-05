@@ -41,10 +41,10 @@ body {
   }
 
   div.oz-file-tree-header {
-    background-color: var(--color-base-00);
     padding: 8px 5px;
     margin-block-start: 0;
     text-align: var(--flexcyon-top-actions-alignment);
+    background-color: var(--color-base-00);
   }
 
   .oz-folders-action-items,
@@ -58,9 +58,9 @@ body {
   }
 
   div.oz-folders-action-items.file-tree-header-fixed {
-    border-radius: unset;
     background-color: var(--color-base-00);
     border: unset;
+    border-radius: unset;
 
     svg {
       scale: calc(var(--upsize) + 10%);
@@ -73,14 +73,14 @@ body {
   }
 
   .oz-nav-action-button {
-    margin-inline: 0 8px;
     padding: 0 2px;
+    margin-inline: 0 8px;
     opacity: var(--dimmed);
   }
 
   .oz-folders-action-items {
-    text-align: var(--flexcyon-top-actions-alignment);
     padding: 0;
+    text-align: var(--flexcyon-top-actions-alignment);
 
     &:hover {
       opacity: unset;
@@ -96,9 +96,9 @@ body {
 body.flexcyon-wrap-long-filenames {
   div.oz-folder-name,
   div.oz-nav-file-title-content {
-    white-space: normal;
     overflow: visible;
     text-overflow: clip;
+    white-space: normal;
   }
 }
 
@@ -129,16 +129,16 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
     }
 
     span.oz-nav-file-tag {
-      text-transform: lowercase;
-      background-color: unset;
-      margin: unset;
-      border: unset;
       padding: unset;
-      letter-spacing: unset;
-      color: var(--oz-fta-file-pane-file-name-color);
-      opacity: var(--dimmed);
+      margin: unset;
       font-size: var(--font-ui-small);
       font-weight: unset;
+      color: var(--oz-fta-file-pane-file-name-color);
+      text-transform: lowercase;
+      letter-spacing: unset;
+      background-color: unset;
+      border: unset;
+      opacity: var(--dimmed);
 
       &::before {
         content: ".";
@@ -156,8 +156,8 @@ body.flexcyon-oz-dimmed-file-exts-enabled {
     }
 
     div::after {
-      content: ".md";
       font-size: var(--font-ui-small);
+      content: ".md";
       opacity: var(--dimmed);
     }
   }
@@ -177,12 +177,12 @@ body.flexcyon-oz-alternate-folder-count {
 
     div.oz-folder-count {
       span.oz-nav-file-tag {
+        display: inline;
         margin-block-start: 0.5px;
         font-weight: inherit;
-        transform: translateY(-1000px);
-        text-transform: none;
-        display: inline;
         text-align: start;
+        text-transform: none;
+        transform: translateY(-1000px);
 
         &::before {
           content: "Count: ";
@@ -195,6 +195,7 @@ body.flexcyon-oz-alternate-folder-count {
 div.oz-nav-file.is-active,
 div.oz-nav-file.is-active div.oz-nav-file-title,
 div.oz-nav-file.is-active div.oz-nav-file-title-content {
+  font-weight: bold;
   background: linear-gradient(
     to right,
     transparent 0%,
@@ -202,7 +203,6 @@ div.oz-nav-file.is-active div.oz-nav-file-title-content {
     var(--oz-fta-file-pane-active-file-background-color) 90%,
     transparent 100%
   );
-  font-weight: bold;
 }
 
 .oz-nav-file {
@@ -212,6 +212,6 @@ div.oz-nav-file.is-active div.oz-nav-file-title-content {
 .drag-entered,
 .oz-folder-element:hover,
 .oz-nav-file:hover {
-  background-color: var(--nav-item-background-hover);
   color: var(--text-normal);
+  background-color: var(--nav-item-background-hover);
 }

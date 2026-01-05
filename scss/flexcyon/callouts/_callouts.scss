@@ -38,14 +38,14 @@ body {
 div.callout[data-callout*="tategaki"],
 div.callout[data-callout-metadata*="tategaki"] {
   div.callout-content {
-    writing-mode: vertical-rl;
-    overflow: scroll;
     max-inline-size: 95%;
     padding-block: 2vh 1vh;
-    line-height: 1.667;
     margin: auto;
+    overflow: scroll;
+    line-height: 1.667;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
+    writing-mode: vertical-rl;
 
     h1 {
       letter-spacing: var(--h1-size);
@@ -84,15 +84,15 @@ div.callout[data-callout-metadata*="tategaki"] {
 div.callout[data-callout*="vert-ltr"],
 div.callout[data-callout-metadata*="vert-ltr"] {
   div.callout-content {
-    writing-mode: vertical-lr;
-    overflow: scroll;
     max-inline-size: 95%;
-    padding-block: 2vh 1vh;
-    line-height: 1.667;
-    margin: auto;
     min-block-size: max-content !important;
+    padding-block: 2vh 1vh;
+    margin: auto;
+    overflow: scroll;
+    line-height: 1.667;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
+    writing-mode: vertical-lr;
 
     h1 {
       letter-spacing: var(--h1-size);
@@ -119,9 +119,9 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     }
 
     :is(h1, h2, h3, h4, h5, h6) {
+      min-block-size: auto !important;
       margin-block-start: 0;
       line-height: 1.667;
-      min-block-size: auto !important;
     }
   }
 }
@@ -397,8 +397,8 @@ body.is-mobile {
   .markdown-reading-view {
     .callout[data-callout*="$pop"],
     .callout[data-callout-metadata*="$pop"] {
-      margin-inline-start: min(-5vw, -40px);
       inline-size: max(calc(var(--file-line-width) / 2), 40vw);
+      margin-inline-start: min(-5vw, -40px);
     }
   }
 }
@@ -410,15 +410,15 @@ body.is-mobile {
 .markdown-reading-view {
   .callout[data-callout*="$pop"],
   .callout[data-callout-metadata*="$pop"] {
-    display: block;
     position: absolute;
+    z-index: 999;
+    display: block;
+    inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
     margin-inline-start: min(-3vw, -40px);
+    backdrop-filter: blur(20px);
     transform: translateY(-70px);
     transition: transform hover var(--flexcyon-callout-pop-animation-duration)
       ease;
-    inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
-    backdrop-filter: blur(20px);
-    z-index: 999;
 
     .callout-title {
       margin-block-start: 3px;
@@ -435,13 +435,13 @@ body.is-mobile {
 
   .callout[data-callout*="$pop"]::before,
   .callout[data-callout-metadata*="$pop"]::before {
-    visibility: visible;
-    content: ">";
-    display: block;
     position: absolute;
+    z-index: 1;
+    display: block;
+    visibility: visible;
     padding: 2px;
     color: rgb(var(--callout-color));
-    z-index: 1;
+    content: ">";
   }
 
   .callout[data-callout*="$pop"]:not(:hover),
@@ -591,8 +591,8 @@ div.callout[data-callout*="bg-grid"] .callout-content,
 div.callout[data-callout-metadata*="bg-grid"] .callout-content,
 div.callout[data-callout*="bg-dots"] .callout-content,
 div.callout[data-callout-metadata*="bg-dots"] .callout-content {
-  margin-block-start: 16px;
   padding: 0 8px;
+  margin-block-start: 16px;
 }
 
 /* obsi-snip-coll start: flashcard */
@@ -600,14 +600,14 @@ div.callout[data-callout*="flashcard"],
 div.callout[data-callout-metadata*="flashcard"] {
   inline-size: var(--flexcyon-callouts-flashcard-width);
   block-size: var(--flexcyon-callouts-flashcard-height);
-  perspective: 1000px;
   transform-style: preserve-3d;
+  perspective: 1000px;
   transition: transform var(--flexcyon-callout-flashcard-animation-duration)
     ease-in-out;
 
   .callout-content {
-    transform: rotateY(180deg);
     opacity: 0;
+    transform: rotateY(180deg);
   }
 
   .callout-title {
@@ -639,10 +639,10 @@ div.callout[data-callout-metadata*="flashcard"] {
 .editor-writing .cm-line,
 div.callout[data-callout*="writing"] .callout-content p,
 div.callout[data-callout-metadata*="writing"] .callout-content p {
-  text-indent: var(--flexcyon-editor-writing-indentation);
-  white-space: initial;
-  overflow-wrap: break-word;
   margin-block-end: calc(1.25 * var(--p-spacing));
+  text-indent: var(--flexcyon-editor-writing-indentation);
+  overflow-wrap: break-word;
+  white-space: initial;
 }
 
 /* obsi-snip-coll end */
@@ -681,8 +681,8 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
   div.callout[data-callout*="ol-#{$style-type}"],
   div.callout[data-callout-metadata*="ol-#{$style-type}"] {
     ol {
-      list-style-type: $style-type;
       list-style-position: inside;
+      list-style-type: $style-type;
     }
   }
 
@@ -691,8 +691,8 @@ div.callout[data-callout-metadata*="writing"] .callout-content p {
   div.callout[data-callout*="ul-#{$style-type}"],
   div.callout[data-callout-metadata*="ul-#{$style-type}"] {
     ul {
-      list-style-type: $style-type;
       list-style-position: inside;
+      list-style-type: $style-type;
     }
   }
 }
@@ -761,12 +761,12 @@ div.callout[data-callout-metadata*="center-img"] {
   background-color: transparent;
 
   img {
-    justify-content: center;
-    display: flex;
-    inline-size: max-content;
-    margin: 0 auto;
-    max-inline-size: 85%;
     inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+    display: flex;
+    justify-content: center;
+    inline-size: max-content;
+    max-inline-size: 85%;
+    margin: 0 auto;
   }
 }
 
@@ -809,9 +809,9 @@ body.flexcyon-tui-callouts.flexcyon-tui-no-icons
 body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
 .callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
 .callout[data-callout-metadata*="tui"]:not(:is(#{$flexcyon-tui-exclusions})) {
-  background-color: var(--background-primary);
   padding: 0;
   margin: 0;
+  background-color: var(--background-primary);
 
   --callout-color: var(--text-faint);
 
@@ -820,8 +820,12 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   }
 
   .callout-title {
-    color: var(--text-faint);
     z-index: 2;
+    inline-size: max-content;
+    padding: 0 8px;
+    color: var(--text-faint);
+    background-color: var(--background-primary);
+    transform: translate(24px, 50%);
 
     h1,
     h2,
@@ -829,14 +833,9 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
     h4,
     h5,
     h6 {
-      color: unset;
       font-size: inherit;
+      color: unset;
     }
-
-    transform: translate(24px, 50%);
-    padding: 0 8px;
-    inline-size: max-content;
-    background-color: var(--background-primary);
 
     div {
       transform: translateY(-2px);
@@ -852,10 +851,10 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
   }
 
   .callout-content {
-    border-radius: var(--flexcyon-callout-radix);
-    border: 1px solid var(--text-faint);
-    padding: 8px 16px;
     z-index: 1;
+    padding: 8px 16px;
+    border: 1px solid var(--text-faint);
+    border-radius: var(--flexcyon-callout-radix);
   }
 }
 
@@ -875,10 +874,10 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
     }
 
     .callout-content {
-      border-radius: var(--flexcyon-callout-radix);
-      border: 1px solid var(--color-#{$color});
-      padding: 8px 16px;
       z-index: 1;
+      padding: 8px 16px;
+      border: 1px solid var(--color-#{$color});
+      border-radius: var(--flexcyon-callout-radix);
     }
   }
   div.callout[data-callout*="border-#{$color}"]:not(
@@ -889,10 +888,10 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
       [data-callout*="tui"],
       [data-callout-metadata*="tui"]
     ) {
-    border-radius: var(--flexcyon-callout-radix);
-    border: 1px solid var(--color-#{$color});
-    padding: 8px 16px;
     z-index: 1;
+    padding: 8px 16px;
+    border: 1px solid var(--color-#{$color});
+    border-radius: var(--flexcyon-callout-radix);
   }
 }
 
@@ -909,14 +908,14 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
 body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout*="pln"]:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout-metadata*="pln"]:not(:is(#{$flexcyon-plain-exclusions})) {
+  padding: 0;
   border: 1px solid var(--color-blue);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-  padding: 0;
 
   .callout-title {
-    background-color: var(--color-blue);
-    color: var(--background-primary);
     padding: 4px 12px;
+    color: var(--background-primary);
+    background-color: var(--color-blue);
 
     .callout-icon {
       display: none;
@@ -935,14 +934,14 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
   .callout[data-callout-metadata*="plain-#{$color}"]:not(
       :is(#{$flexcyon-plain-exclusions})
     ) {
+    padding: 0;
     border: 1px solid var(--color-#{$color});
     border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-    padding: 0;
 
     .callout-title {
-      background-color: var(--color-#{$color});
-      color: var(--background-primary);
       padding: 4px 12px;
+      color: var(--background-primary);
+      background-color: var(--color-#{$color});
 
       .callout-icon {
         display: none;
@@ -972,20 +971,20 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
 .callout[data-callout-metadata*="vertical"]:not(
     :is(#{$flexcyon-vert-exclusions})
   ) {
-  border: 1px solid var(--color-blue);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-  padding: 0;
   display: flex;
   flex-direction: row;
+  padding: 0;
   letter-spacing: 2px;
+  border: 1px solid var(--color-blue);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
   .callout-title {
-    background-color: var(--color-blue);
-    color: var(--background-primary);
-    padding: 8px 12px;
-    writing-mode: vertical-lr;
     justify-content: center;
+    padding: 8px 12px;
     text-overflow: hidden;
+    color: var(--background-primary);
+    background-color: var(--color-blue);
+    writing-mode: vertical-lr;
 
     .callout-icon svg {
       color: var(--background-primary);
@@ -993,8 +992,8 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
   }
 
   .callout-content {
-    margin-inline-start: 12px;
     padding: 4px 12px;
+    margin-inline-start: 12px;
   }
 }
 
@@ -1005,20 +1004,20 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
   .callout[data-callout-metadata*="vert-#{$color}"]:not(
       :is(#{$flexcyon-vert-exclusions})
     ) {
-    border: 1px solid var(--color-#{$color});
-    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-    padding: 0;
     display: flex;
     flex-direction: row;
+    padding: 0;
     letter-spacing: 2px;
+    border: 1px solid var(--color-#{$color});
+    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
     .callout-title {
-      background-color: var(--color-#{$color});
-      color: var(--background-primary);
-      padding: 8px 12px;
-      writing-mode: vertical-lr;
       justify-content: center;
+      padding: 8px 12px;
       text-overflow: hidden;
+      color: var(--background-primary);
+      background-color: var(--color-#{$color});
+      writing-mode: vertical-lr;
 
       .callout-icon svg {
         color: var(--background-primary);
@@ -1026,8 +1025,8 @@ body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
     }
 
     .callout-content {
-      margin-inline-start: 12px;
       padding: 4px 12px;
+      margin-inline-start: 12px;
     }
   }
 }

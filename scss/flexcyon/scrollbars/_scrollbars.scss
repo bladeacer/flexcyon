@@ -11,8 +11,8 @@ body.flexcyon-settings-scrollbar-removed {
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-  background-color: var(--scrollbar-bg);
   inline-size: 8px;
+  background-color: var(--scrollbar-bg);
 }
 
 // Ultra performant scrolling thanks to Kapirklaa and Floodlight

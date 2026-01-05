@@ -70,6 +70,7 @@ body.flexcyon-enable-alt-active-item-effect {
   }
 
   .vertical-tab-nav-item.is-active {
+    padding-inline-start: 0.75rem;
     color: var(--text-accent);
     background: linear-gradient(
       to right,
@@ -78,7 +79,6 @@ body.flexcyon-enable-alt-active-item-effect {
       var(--text-on-accent) 87.5%,
       transparent 100%
     );
-    padding-inline-start: 0.75rem;
 
     &:hover {
       font-weight: bold;
@@ -109,17 +109,17 @@ body.flexcyon-cust-str-hr {
   .el-hr::before,
   .hr::before {
     position: absolute;
-    justify-content: center;
-    display: flex;
-    inline-size: fit-content;
-    margin: 0 auto;
-    max-inline-size: 85%;
     inset-inline: calc(0px * 2) 0;
-    content: var(--flexcyon-cust-hr-str);
-    font-size: var(--flexcyon-cust-hr-str-font-size);
-    color: var(--hr-color);
+    display: flex;
+    justify-content: center;
+    inline-size: fit-content;
+    max-inline-size: 85%;
     padding: 0 var(--flexcyon-cust-hr-str-horiz-padding);
+    margin: 0 auto;
+    font-size: var(--flexcyon-cust-hr-str-font-size);
     font-style: italic;
+    color: var(--hr-color);
+    content: var(--flexcyon-cust-hr-str);
     background-color: var(--background-primary);
   }
 
@@ -147,15 +147,15 @@ body.flexcyon-ribbon-top {
 
   .workspace {
     .workspace-ribbon {
-      padding-inline-start: 8px;
-      margin-inline-start: 8px;
       position: absolute;
       inset-block-start: -42px;
+      padding-inline-start: 8px;
+      margin-inline-start: 8px;
 
       .side-dock-actions {
-        margin-inline-start: 69px;
         flex-direction: row;
         padding-inline-end: 150vw;
+        margin-inline-start: 69px;
       }
     }
 
