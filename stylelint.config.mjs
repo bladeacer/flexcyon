@@ -4,7 +4,8 @@ export default {
   plugins: [
     "stylelint-prettier",
     "stylelint-no-unsupported-browser-features",
-    "stylelint-use-logical"
+    "stylelint-use-logical",
+    "stylelint-high-performance-animation"
   ],
   rules: {
     "prettier/prettier": true,
@@ -13,6 +14,7 @@ export default {
     "selector-type-no-unknown": null,
     "custom-property-pattern": null,
     "no-descending-specificity": null,
+    "plugin/no-low-performance-animation-properties": true,
     "color-function-alias-notation": "without-alpha",
     "color-function-notation": "modern",
     // List of allowed units

@@ -7,7 +7,7 @@ body {
 /* obsi-snip-coll start: smooth-cursor */
 body.flexcyon-enable-smooth-cursor {
   .cm-cursor-primary {
-    transition: all var(--flexcyon-cursor-duration)
+    transition: transform var(--flexcyon-cursor-duration)
       var(--flexcyon-cursor-timing-fn);
     min-inline-size: var(--flexcyon-cursor-min-width);
   }

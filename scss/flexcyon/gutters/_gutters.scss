@@ -1,6 +1,8 @@
 body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
+  --flexcyon-highlight-active-line-opacity: 7.5%;
+  --flexcyon-typewriter-mode-opacity: 0.55;
 
   .cm-gutterElement.cm-active {
     font-weight: 900;
@@ -227,6 +229,17 @@ body.flexcyon-repl-active-line-num-str {
 body.flexcyon-highlight-active-line {
   .cm-active.cm-line,
   .cm-active > span.cm-quote {
-    background-color: color-mix(in hsl, var(--text-accent) 7%, transparent);
+    background-color: color-mix(
+      in oklch,
+      var(--text-accent) var(--flexcyon-highlight-active-line-opacity),
+      transparent
+    );
+  }
+}
+
+.typewriter-mode,
+body.flexcyon-typewriter-mode {
+  .cm-line:not(.cm-active) {
+    opacity: var(--flexcyon-typewriter-mode-opacity);
   }
 }

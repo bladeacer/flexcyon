@@ -75,6 +75,16 @@ settings:
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
     id: flexcyon-flex-max-mode
     default: true
+  - title: Typewriter Mode
+    type: class-toggle
+    description: Reduce opacity of all but the active line in source and live preview mode
+    id: flexcyon-typewriter-mode
+    default: false
+  - title: Typewriter Mode Opacity
+    id: flexcyon-typewriter-mode-opacity
+    description: Opacity of dimmed non-active lines in typewriter mode
+    type: variable-number
+    default: 0.55
   - title: Enable Writing mode globally
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
@@ -1558,6 +1568,10 @@ settings:
     id: flexcyon-highlight-active-line
     type: class-toggle
     default: false
+  - title: Highlight Active Line Opacity
+    id: flexcyon-highlight-active-line-opacity
+    type: variable-text
+    default: 7.5%
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums

@@ -1055,12 +1055,12 @@ body h6 {
 body {
   --flexcyon-accent-hover: var(--flexcyon-green);
   --flexcyon-palette-lilac-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-purple-lilac),
     var(--flexcyon-base-grey-dark)
   );
   --flexcyon-palette-cyan-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-cyan),
     var(--flexcyon-base-grey-dark)
   );
@@ -2529,13 +2529,9 @@ body {
   --tag-color: var(--flexcyon-cyan);
   --tag-color-hover: var(--flexcyon-palette-cyan-hover);
   --tag-decoration-hover: underline;
-  --tag-background: color-mix(
-    in hsl shorter hue,
-    var(--tag-color) 25%,
-    transparent
-  );
+  --tag-background: color-mix(in oklch, var(--tag-color) 25%, transparent);
   --tag-background-hover: color-mix(
-    in hsl shorter hue,
+    in oklch,
     var(--tag-color-hover) 25%,
     transparent
   );
@@ -3837,10 +3833,6 @@ body textarea::selection {
   background-color: var(--flexcyon-base-03-04-mix);
 }
 
-body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
-  stroke: var(--flexcyon-accent);
-}
-
 body.theme-dark {
   --text-normal: #d3d5d3;
 }
@@ -3958,6 +3950,8 @@ body {
 body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
+  --flexcyon-highlight-active-line-opacity: 7.5%;
+  --flexcyon-typewriter-mode-opacity: 0.55;
 }
 body .cm-gutterElement.cm-active {
   font-weight: 900;
@@ -4379,7 +4373,12 @@ body.flexcyon-repl-active-line-num-str .cm-gutterElement.cm-active::before {
 
 body.flexcyon-highlight-active-line .cm-active.cm-line,
 body.flexcyon-highlight-active-line .cm-active > span.cm-quote {
-  background-color: color-mix(in hsl, var(--text-accent) 7%, transparent);
+  background-color: color-mix(in oklch, var(--text-accent) var(--flexcyon-highlight-active-line-opacity), transparent);
+}
+
+.typewriter-mode .cm-line:not(.cm-active),
+body.flexcyon-typewriter-mode .cm-line:not(.cm-active) {
+  opacity: var(--flexcyon-typewriter-mode-opacity);
 }
 
 /* Callout modifications */
@@ -5760,7 +5759,7 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
   position: absolute;
   margin-inline-start: min(-3vw, -40px);
   transform: translateY(-70px);
-  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  transition: transform hover var(--flexcyon-callout-pop-animation-duration) ease;
   inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
   backdrop-filter: blur(20px);
   z-index: 999;
@@ -5774,7 +5773,7 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
 .markdown-reading-view .callout[data-callout-metadata*="$pop"]:hover::before {
   display: block;
   border: none;
-  transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+  transition: hover var(--flexcyon-callout-pop-animation-duration) ease;
 }
 .markdown-reading-view .callout[data-callout*="$pop"]::before,
 .markdown-reading-view .callout[data-callout-metadata*="$pop"]::before {
@@ -6170,7 +6169,7 @@ div.callout[data-callout-metadata*=flashcard] {
   block-size: var(--flexcyon-callouts-flashcard-height);
   perspective: 1000px;
   transform-style: preserve-3d;
-  transition: all var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
+  transition: transform var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
 }
 div.callout[data-callout*=flashcard] .callout-content,
 div.callout[data-callout-metadata*=flashcard] .callout-content {
@@ -9690,6 +9689,10 @@ body.flexcyon-status-style-card div:has(.cm-vim-panel) + .status-bar {
   margin-block-end: 50px;
 }
 
+body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
+  stroke: var(--flexcyon-accent);
+}
+
 body .outgoing-link-pane div.tree-item-flair-outer > span {
   transform: translateX(-7px);
 }
@@ -10406,6 +10409,16 @@ settings:
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
     id: flexcyon-flex-max-mode
     default: true
+  - title: Typewriter Mode
+    type: class-toggle
+    description: Reduce opacity of all but the active line in source and live preview mode
+    id: flexcyon-typewriter-mode
+    default: false
+  - title: Typewriter Mode Opacity
+    id: flexcyon-typewriter-mode-opacity
+    description: Opacity of dimmed non-active lines in typewriter mode
+    type: variable-number
+    default: 0.55
   - title: Enable Writing mode globally
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
@@ -11889,6 +11902,10 @@ settings:
     id: flexcyon-highlight-active-line
     type: class-toggle
     default: false
+  - title: Highlight Active Line Opacity
+    id: flexcyon-highlight-active-line-opacity
+    type: variable-text
+    default: 7.5%
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums
@@ -12940,7 +12957,7 @@ body {
 
 /* obsi-snip-coll start: smooth-cursor */
 body.flexcyon-enable-smooth-cursor .cm-cursor-primary {
-  transition: all var(--flexcyon-cursor-duration) var(--flexcyon-cursor-timing-fn);
+  transition: transform var(--flexcyon-cursor-duration) var(--flexcyon-cursor-timing-fn);
   min-inline-size: var(--flexcyon-cursor-min-width);
 }
 
@@ -13083,7 +13100,7 @@ body.flexcyon-oz-dimmed-file-exts-enabled div.oz-nav-file-title[data-path$=".md"
 }
 
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line {
-  transition: all 0.325ms ease-in-out;
+  transition: transform hover 0.325ms ease-in-out;
 }
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line div.oz-folder-count {
   transform: translateY(1000px);

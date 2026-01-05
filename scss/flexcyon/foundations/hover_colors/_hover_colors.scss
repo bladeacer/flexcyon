@@ -5,12 +5,12 @@
 body {
   --flexcyon-accent-hover: var(--flexcyon-green);
   --flexcyon-palette-lilac-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-purple-lilac),
     var(--flexcyon-base-grey-dark)
   );
   --flexcyon-palette-cyan-hover: color-mix(
-    in hsl shorter hue,
+    in oklch shorter hue,
     var(--flexcyon-cyan),
     var(--flexcyon-base-grey-dark)
   );

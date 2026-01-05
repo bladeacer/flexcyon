@@ -414,7 +414,8 @@ body.is-mobile {
     position: absolute;
     margin-inline-start: min(-3vw, -40px);
     transform: translateY(-70px);
-    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+    transition: transform hover var(--flexcyon-callout-pop-animation-duration)
+      ease;
     inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
     backdrop-filter: blur(20px);
     z-index: 999;
@@ -429,7 +430,7 @@ body.is-mobile {
   .callout[data-callout-metadata*="$pop"]:hover::before {
     display: block;
     border: none;
-    transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+    transition: hover var(--flexcyon-callout-pop-animation-duration) ease;
   }
 
   .callout[data-callout*="$pop"]::before,
@@ -601,7 +602,7 @@ div.callout[data-callout-metadata*="flashcard"] {
   block-size: var(--flexcyon-callouts-flashcard-height);
   perspective: 1000px;
   transform-style: preserve-3d;
-  transition: all var(--flexcyon-callout-flashcard-animation-duration)
+  transition: transform var(--flexcyon-callout-flashcard-animation-duration)
     ease-in-out;
 
   .callout-content {

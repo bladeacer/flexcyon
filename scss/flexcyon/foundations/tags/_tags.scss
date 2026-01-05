@@ -5,13 +5,9 @@ body {
   --tag-color: var(--flexcyon-cyan);
   --tag-color-hover: var(--flexcyon-palette-cyan-hover);
   --tag-decoration-hover: underline;
-  --tag-background: color-mix(
-    in hsl shorter hue,
-    var(--tag-color) 25%,
-    transparent
-  );
+  --tag-background: color-mix(in oklch, var(--tag-color) 25%, transparent);
   --tag-background-hover: color-mix(
-    in hsl shorter hue,
+    in oklch,
     var(--tag-color-hover) 25%,
     transparent
   );
