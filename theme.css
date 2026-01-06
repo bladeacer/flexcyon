@@ -11954,8 +11954,83 @@ settings:
     type: heading
     level: 5
     collapsed: true
+  - title: Default cursor type
+    description: Sets the cursor type when it is not specified by the app
+    id: flexcyon-cursor-type
+    type: variable-select
+    default: auto
+    options: 
+      - label: Auto
+        value: auto
+      - label: Default
+        value: default
+      - label: None
+        value: none
+      - label: Context Menu
+        value: context-menu
+      - label: Help
+        value: help
+      - label: Pointer
+        value: pointer
+      - label: Progress
+        value: progress
+      - label: Wait
+        value: wait
+      - label: Cell
+        value: cell
+      - label: Crosshair
+        value: crosshair
+      - label: Text
+        value: text
+      - label: Vertical Text
+        value: vertical-text
+      - label: Alias
+        value: alias
+      - label: Copy
+        value: copy
+      - label: Move
+        value: move
+      - label: No Drop
+        value: no-drop
+      - label: Not Allowed
+        value: not-allowed
+      - label: Grab
+        value: grab
+      - label: Grabbing
+        value: grabbing
+      - label: All Scroll
+        value: all-scroll
+      - label: Col Resize
+        value: col-resize
+      - label: Row Resize
+        value: row-resize
+      - label: N Resize
+        value: n-resize
+      - label: E Resize
+        value: e-resize
+      - label: S Resize
+        value: s-resize
+      - label: W Resize
+        value: w-resize
+      - label: N Resize
+        value: ne-resize
+      - label: NW Resize
+        value: nw-resize
+      - label: SE Resize
+        value: se-resize
+      - label: SW Resize
+        value: sw-resize
+      - label: EW Resize
+        value: ew-resize
+      - label: NS Resize
+        value: ns-resize
+      - label: NESW Resize
+        value: nesw-resize
+      - label: NWSE Resize
+        value: nwse-resize
   - title: Enable Smooth Cursor
     id: flexcyon-enable-smooth-cursor
+    description: Enable Smooth transition for vim mode block cursor
     type: class-toggle
     default: true
   - title: Smooth cursor transition duration
@@ -12949,13 +13024,19 @@ body {
 }
 
 /* obsi-snip-coll end */
+/* obsi-snip-coll start: cursor-type */
 body {
+  --flexcyon-cursor-type: auto;
+  cursor: var(--flexcyon-cursor-type);
+}
+
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: smooth-cursor */
+body.flexcyon-enable-smooth-cursor {
   --flexcyon-cursor-duration: 42.5ms;
   --flexcyon-cursor-timing-fn: ease-in;
   --flexcyon-cursor-min-width: unset;
 }
-
-/* obsi-snip-coll start: smooth-cursor */
 body.flexcyon-enable-smooth-cursor .cm-cursor-primary {
   min-inline-size: var(--flexcyon-cursor-min-width);
   transition: transform var(--flexcyon-cursor-duration) var(--flexcyon-cursor-timing-fn);
