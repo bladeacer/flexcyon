@@ -8,11 +8,27 @@ body {
   --table-add-button-background: var(--color-base-15);
   --table-background: var(--background-primary);
   --table-header-background-hover: var(--table-background);
-  --table-header-size: large;
+  --table-header-size: var(--font-ui-large);
+  --table-text-size: var(--font-ui-medium);
   --flexcyon-table-reading-mode-width: 100%;
   --flexcyon-td-verti-padding: 5px;
   --flexcyon-td-horiz-padding: 10px;
   --flexcyon-td-live-pad-scale: 0.2;
+  --flexcyon-td-table-alignment: left;
+  --flexcyon-th-verti-padding: 5px;
+  --flexcyon-th-horiz-padding: 10px;
+  --flexcyon-th-live-pad-scale: 0.2;
+  --flexcyon-th-table-alignment: left;
+
+  .el-table td,
+  td div.table-cell-wrapper {
+    text-align: var(--flexcyon-td-table-alignment);
+  }
+
+  .el-table th,
+  th div.table-cell-wrapper {
+    text-align: var(--flexcyon-td-table-alignment);
+  }
 
   table {
     border-color: var(--table-border-color);
@@ -33,14 +49,23 @@ body {
     background-color: var(--table-column-alt-background);
   }
 
-  .cm-html-embed td,
-  .markdown-rendered td,
   .cm-html-embed th,
   .markdown-rendered th {
+    padding: var(--flexcyon-th-verti-padding) var(--flexcyon-th-horiz-padding);
+  }
+
+  .cm-html-embed td,
+  .markdown-rendered td {
     padding: var(--flexcyon-td-verti-padding) var(--flexcyon-td-horiz-padding);
   }
 
-  .markdown-source-view.mod-cm6 .cm-table-widget th,
+  .markdown-source-view.mod-cm6 .cm-table-widget th {
+    padding: calc(
+        var(--flexcyon-th-live-pad-scale) * var(--flexcyon-th-verti-padding)
+      )
+      calc(var(--flexcyon-th-live-pad-scale) * var(--flexcyon-th-horiz-padding));
+  }
+
   .markdown-source-view.mod-cm6 .cm-table-widget td {
     padding: calc(
         var(--flexcyon-td-live-pad-scale) * var(--flexcyon-td-verti-padding)

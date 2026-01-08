@@ -404,6 +404,28 @@ settings:
     description: If the Obsidian installer version is below 1.9.0, use this option instead.
     type: class-toggle
     default: false
+  - title: Heading 1 Colour
+    description: Colour of Heading 1 when coloured headings is enabled.
+    id: flexcyon-h1-color
+    type: variable-select
+    default: var(--color-blue)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
@@ -442,6 +464,28 @@ settings:
     id: flexcyon-headings-indicator-h2
     type: class-toggle
     default: false
+  - title: Heading 2 Colour
+    description: Colour of Heading 2 when coloured headings is enabled.
+    id: flexcyon-h2-color
+    type: variable-select
+    default: var(--color-purple)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 2 font size
     id: h2-size
     type: variable-number
@@ -480,6 +524,28 @@ settings:
     id: flexcyon-headings-indicator-h3
     type: class-toggle
     default: false
+  - title: Heading 3 Colour
+    description: Colour of Heading 3 when coloured headings is enabled.
+    id: flexcyon-h3-color
+    type: variable-select
+    default: var(--color-cyan)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 3 font size
     id: h3-size
     type: variable-number
@@ -518,6 +584,28 @@ settings:
     id: flexcyon-headings-indicator-h4
     type: class-toggle
     default: false
+  - title: Heading 4 Colour
+    description: Colour of Heading 4 when coloured headings is enabled.
+    id: flexcyon-h4-color
+    type: variable-select
+    default: var(--color-pink)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 4 font size
     id: h4-size
     type: variable-number
@@ -556,6 +644,28 @@ settings:
     id: flexcyon-headings-indicator-h5
     type: class-toggle
     default: false
+  - title: Heading 5 Colour
+    description: Colour of Heading 5 when coloured headings is enabled.
+    id: flexcyon-h5-color
+    type: variable-select
+    default: var(--color-green)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 5 font size
     id: h5-size
     type: variable-number
@@ -594,6 +704,28 @@ settings:
     id: flexcyon-headings-indicator-h6
     type: class-toggle
     default: false
+  - title: Heading 6 Colour
+    description: Colour of Heading 6 when coloured headings is enabled.
+    id: flexcyon-h6-color
+    type: variable-select
+    default: var(--color-yellow)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
   - title: Heading 6 font size
     id: h6-size
     type: variable-number
@@ -726,14 +858,51 @@ settings:
     opacity: true
     format: hex
     default: "#6f768566"
-  - title: Table header size
-    id: table-header-size
-    type: variable-text
-    default: "large"
   - title: Width of table in reading mode
     id: flexcyon-table-reading-mode-width
     type: variable-text
     default: 100%
+  - title: Table header font size
+    id: table-header-size
+    type: variable-select
+    default: var(--font-ui-large)
+    options: 
+      - label: Smaller UI Font size
+        value: var(--font-ui-smaller)
+      - label: Small UI Font size
+        value: var(--font-ui-small)
+      - label: Medium UI Font size
+        value: var(--font-ui-medium)
+      - label: Large UI Font size
+        value: var(--font-ui-large)
+  - title: Table Heading Vertical Padding
+    id: flexcyon-th-verti-padding
+    type: variable-number
+    format: px
+    default: 5
+  - title: Table Heading Horizontal Padding
+    id: flexcyon-th-horiz-padding
+    type: variable-number
+    format: px
+    default: 10
+  - title: Table Heading Live Preview Scaling
+    description: Proportion to scale Live Preview table heading padding when compared to Reading mode.
+    id: flexcyon-th-live-pad-scale
+    type: variable-number
+    default: 0.2
+  - title: Table Cell font size
+    id: table-text-size
+    type: variable-select
+    default: var(--font-ui-medium)
+    options: 
+      - label: Smaller UI Font size
+        value: var(--font-ui-smaller)
+      - label: Small UI Font size
+        value: var(--font-ui-small)
+      - label: Medium UI Font size
+        value: var(--font-ui-medium)
+      - label: Large UI Font size
+        value: var(--font-ui-large)
   - title: Table Cell Vertical Padding
     id: flexcyon-td-verti-padding
     type: variable-number
@@ -745,7 +914,7 @@ settings:
     format: px
     default: 10
   - title: Table Cell Live Preview Scaling
-    description: Proportion to scale Live Preview table cell rendering when compared to Reading mode.
+    description: Proportion to scale Live Preview table cell padding when compared to Reading mode.
     id: flexcyon-td-live-pad-scale
     type: variable-number
     default: 0.2
@@ -914,7 +1083,6 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Note that Bases Cards View plus animations might not be good for performance.
 
   - title: Note Animation type
     description: Configure animation type for note content
@@ -2079,6 +2247,24 @@ settings:
     level: 5
     collapsed: true
     description: Currently experimental
+  - title: Bases View Vertical Padding
+    description: Sets vertical padding for Base file content
+    id: flexcyon-bases-padding-verti
+    type: variable-number
+    default: 16
+    format: px
+  - title: Bases View Horizontal Padding
+    description: Sets horizontal padding for Base file content
+    id: flexcyon-bases-padding-horiz
+    type: variable-number
+    default: 16
+    format: px
+  - title: Bases Embed Padding
+    description: Sets padding for Base embeds
+    id: bases-embed-padding
+    type: variable-number
+    default: 4
+    format: px
   - title: Bases Cards View
     type: heading
     level: 6

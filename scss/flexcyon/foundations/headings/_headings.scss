@@ -15,15 +15,21 @@ body {
   --h4-size: 1.218em;
   --h5-size: 1.118em;
   --h6-size: 1.018em;
+  --flexcyon-h1-color: var(--color-blue);
+  --flexcyon-h2-color: var(--color-purple);
+  --flexcyon-h3-color: var(--color-cyan);
+  --flexcyon-h4-color: var(--color-pink);
+  --flexcyon-h5-color: var(--color-green);
+  --flexcyon-h6-color: var(--color-yellow);
 }
 
 body.flexcyon-coloured-headings {
-  --h1-color: var(--flexcyon-blue);
-  --h2-color: var(--flexcyon-purple-lilac);
-  --h3-color: var(--flexcyon-cyan);
-  --h4-color: var(--flexcyon-pink);
-  --h5-color: var(--flexcyon-lime-green);
-  --h6-color: var(--flexcyon-yellow);
+  --h1-color: var(--flexcyon-h1-color);
+  --h2-color: var(--flexcyon-h2-color);
+  --h3-color: var(--flexcyon-h3-color);
+  --h4-color: var(--flexcyon-h4-color);
+  --h5-color: var(--flexcyon-h5-color);
+  --h6-color: var(--flexcyon-h6-color);
 }
 
 body.flexcyon-headings-glow-enabled {

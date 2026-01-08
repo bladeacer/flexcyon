@@ -1,0 +1,11 @@
+body {
+  --flexcyon-view-header-breadcrumb-max-w: 12.5vw;
+  --flexcyon-mode-view-header-title-verti-padding: 4px;
+  --flexcyon-mode-view-header-title-horiz-padding: 12px;
+
+  .view-header-breadcrumb {
+    max-inline-size: var(--flexcyon-view-header-breadcrumb-max-w);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
