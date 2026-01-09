@@ -1104,6 +1104,9 @@ body {
 body .cm-s-obsidian span.cm-inline-code {
   color: var(--flexcyon-orange);
 }
+body .markdown-source-view.mod-cm6 .code-block-flair {
+  padding: 2px 8px;
+}
 body .cm-def {
   color: var(--flexcyon-yellow);
 }
@@ -4167,8 +4170,8 @@ body.flexcyon-highlight-active-line .cm-active > span.cm-quote {
   background-color: color-mix(in oklch, var(--text-accent) var(--flexcyon-highlight-active-line-opacity), transparent);
 }
 
-.typewriter-mode .cm-line:not(.cm-active),
-body.flexcyon-typewriter-mode .cm-line:not(.cm-active) {
+.typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock),
+body.flexcyon-typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock) {
   opacity: var(--flexcyon-typewriter-mode-opacity);
 }
 

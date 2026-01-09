@@ -239,7 +239,7 @@ body.flexcyon-highlight-active-line {
 
 .typewriter-mode,
 body.flexcyon-typewriter-mode {
-  .cm-line:not(.cm-active) {
+  .cm-line:not(.cm-active, .HyperMD-codeblock) {
     opacity: var(--flexcyon-typewriter-mode-opacity);
   }
 }
