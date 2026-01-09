@@ -5,7 +5,7 @@ body {
   --flexcyon-vim-command-text: "COMMAND";
   --flexcyon-vim-bottom-positioning: -4px;
   --flexcyon-vim-left-positioning: 6px;
-  --flexcyon-vim-bottom-pos-w-status: 40px;
+  --flexcyon-status-hide-trigger-translation: 50px;
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 80vw;
   --flexcyon-status-hide-hover-duration: 325ms;
@@ -141,7 +141,7 @@ body:is(
 body.flexcyon-flex-max-mode .status-bar,
 body.flexcyon-status-hide-until-hover .status-bar {
   &:hover::before {
-    transform: translateY(50px);
+    transform: translateY(var(--flexcyon-status-hide-trigger-translation));
     transition: transform var(--flexcyon-status-hide-hover-duration)
       var(--flexcyon-status-hide-hover-function);
   }
@@ -155,7 +155,7 @@ body.flexcyon-status-hide-until-hover .status-bar {
 
 body.flexcyon-status-hide-until-hold .status-bar {
   &:active::before {
-    transform: translateY(50px);
+    transform: translateY(var(--flexcyon-status-hide-trigger-translation));
     transition: transform var(--flexcyon-status-hide-hover-duration)
       var(--flexcyon-status-hide-hover-function);
   }

@@ -397,3 +397,10 @@ body.flexcyon-metadata-no-properties-title {
     display: none;
   }
 }
+
+body.flexcyon-reverse-mode,
+body.flexcyon-reverse-workspace-content {
+  .workspace-leaf-content {
+    flex-direction: column-reverse;
+  }
+}

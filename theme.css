@@ -8679,6 +8679,16 @@ body.flexcyon-vertical-nav .workspace.is-right-sidedock-open .mod-right-split .m
   padding-block-start: 40px;
 }
 
+body.flexcyon-reverse-mode .workspace-tabs,
+body.flexcyon-reverse-tab-header-container .workspace-tabs {
+  flex-direction: column-reverse;
+}
+body.flexcyon-reverse-mode .status-bar,
+body.flexcyon-reverse-tab-header-container .status-bar {
+  inset-block-end: 40px;
+  --flexcyon-status-hide-trigger-translation: 80px;
+}
+
 body {
   --flexcyon-active-indicator: ">> ";
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
@@ -9122,6 +9132,11 @@ body.flexcyon-metadata-no-properties-title .metadata-properties-title {
   display: none;
 }
 
+body.flexcyon-reverse-mode .workspace-leaf-content,
+body.flexcyon-reverse-workspace-content .workspace-leaf-content {
+  flex-direction: column-reverse;
+}
+
 body {
   --flexcyon-os-detail-padding-r: 24px;
   --flexcyon-screen-dimens-padding-l: 16px;
@@ -9509,7 +9524,7 @@ body {
   --flexcyon-vim-command-text: "COMMAND";
   --flexcyon-vim-bottom-positioning: -4px;
   --flexcyon-vim-left-positioning: 6px;
-  --flexcyon-vim-bottom-pos-w-status: 40px;
+  --flexcyon-status-hide-trigger-translation: 50px;
   --flexcyon-status-hide-until-hover-text: "Show status";
   --flexcyon-status-hide-until-hover-translation: 80vw;
   --flexcyon-status-hide-hover-duration: 325ms;
@@ -9611,7 +9626,7 @@ body:is(.flexcyon-status-hide-until-hover,
 
 body.flexcyon-flex-max-mode .status-bar:hover::before,
 body.flexcyon-status-hide-until-hover .status-bar:hover::before {
-  transform: translateY(50px);
+  transform: translateY(var(--flexcyon-status-hide-trigger-translation));
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 }
 body.flexcyon-flex-max-mode .status-bar:hover,
@@ -9621,7 +9636,7 @@ body.flexcyon-status-hide-until-hover .status-bar:hover {
 }
 
 body.flexcyon-status-hide-until-hold .status-bar:active::before {
-  transform: translateY(50px);
+  transform: translateY(var(--flexcyon-status-hide-trigger-translation));
   transition: transform var(--flexcyon-status-hide-hover-duration) var(--flexcyon-status-hide-hover-function);
 }
 body.flexcyon-status-hide-until-hold .status-bar:active {
@@ -10127,6 +10142,7 @@ body.flexcyon-vault-switch-top .workspace-split:has(> .workspace-sidedock-vault-
   flex-direction: column-reverse;
 }
 
+body.flexcyon-reverse-mode .workspace-sidedock-vault-profile,
 body.flexcyon-vault-reverse .workspace-sidedock-vault-profile {
   flex-direction: row-reverse;
 }
@@ -10211,6 +10227,11 @@ settings:
     description: Opacity of dimmed non-active lines in typewriter mode
     type: variable-number
     default: 0.55
+  - title: Reverse Mode
+    type: class-toggle
+    description: Reverses the rendering of stuff in the UI
+    id: flexcyon-reverse-mode
+    default: false
   - title: Enable Writing mode globally
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
@@ -10899,6 +10920,10 @@ settings:
     id: inline-title-line-height
     type: variable-number
     default: 1.2
+  - title: Do not display inline title
+    id: flexcyon-no-inline-title
+    type: class-toggle
+    default: false
 
   - title: Code Blocks
     type: heading
@@ -11115,6 +11140,11 @@ settings:
     id: flexcyon-wrap-long-filenames
     type: class-toggle
     default: true
+  - title: Reverse order of Nav Header and other content
+    id: flexcyon-reverse-workspace-content
+    description: Places nav header below other content, for example placing the New Note and other icons below the file explorer.
+    type: class-toggle
+    default: false
 
   - title: Workspace
     type: heading
@@ -12046,6 +12076,10 @@ settings:
     type: variable-number
     default: 12
     format: px
+  - title: Do not display view header
+    id: flexcyon-no-view-header
+    type: class-toggle
+    default: false
 
   - title: Debug
     type: heading
@@ -12084,6 +12118,11 @@ settings:
   - title: Remove Tab Headers
     id: flexcyon-remove-tab-headers
     description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
+    type: class-toggle
+    default: false
+  - title: Reverse order of Tab Header Container and Tabs Content
+    id: flexcyon-reverse-tab-header-container
+    description: Places tab header container at the bottom instead of the top of the screen, does not do anything for Stacked Tabs.
     type: class-toggle
     default: false
 
@@ -12598,8 +12637,15 @@ settings:
     default: 1
   - title: ASCII art text alignment
     id: flexcyon-ascii-alignment
-    type: variable-text
+    type: variable-select
     default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
   - title: Disable Empty State title
     id: flexcyon-empty-state-title-disable
     description: Toggle the empty state title
@@ -12923,6 +12969,15 @@ body .setting-item:not(.is-collapsed).setting-item-heading {
 
 .file-w-95vw {
   --file-line-width: 95vw;
+}
+
+body.flexcyon-no-inline-title .inline-title,
+.no-inline-title .inline-title {
+  display: none;
+}
+
+body.flexcyon-no-view-header .view-header {
+  display: none;
 }
 
 body {

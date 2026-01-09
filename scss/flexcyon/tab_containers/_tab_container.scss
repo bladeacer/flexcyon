@@ -363,3 +363,17 @@ body.flexcyon-vertical-nav .workspace.is-right-sidedock-open {
     }
   }
 }
+
+// Tab header container at the bottom instead
+body.flexcyon-reverse-mode,
+body.flexcyon-reverse-tab-header-container {
+  .workspace-tabs {
+    flex-direction: column-reverse;
+  }
+
+  .status-bar {
+    inset-block-end: 40px;
+
+    --flexcyon-status-hide-trigger-translation: 80px;
+  }
+}
