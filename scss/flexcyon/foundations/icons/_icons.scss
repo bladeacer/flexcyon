@@ -26,6 +26,10 @@ body {
     }
   }
 
+  .nav-buttons-container {
+    gap: 1px;
+  }
+
   &.is-mobile .view-actions {
     justify-content: center;
   }
@@ -677,4 +681,13 @@ body.flexcyon-stylised-pins.flexcyon-vertical-nav
 
 body.flexcyon-reverse-tab-header-content .workspace-tab-header-inner {
   flex-direction: row-reverse;
+}
+
+body
+  :is(.mod-left-split, .mod-right-split)
+  .workspace-tab-header-container
+  .workspace-tab-header-container-inner {
+  gap: 1px;
+  padding: unset;
+  margin: unset;
 }
