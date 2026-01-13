@@ -2367,7 +2367,7 @@ body:is(.theme-dark) {
   --background-secondary-alt: var(--color-base-20);
   --background-modifier-hover: var(--color-base-20);
   --background-modifier-form-field: var(--color-base-20);
-  --background-modifier-cover: var(--color-base-20);
+  --background-modifier-cover: var(--color-base-15);
   --background-modifier-message: var(--color-base-20);
 }
 
