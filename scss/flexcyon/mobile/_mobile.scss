@@ -1,0 +1,13 @@
+body.is-mobile.theme-dark {
+  --settings-home-background: var(--color-base-10);
+  --settings-background: var(--color-base-10);
+  --setting-items-background: var(--color-base-10);
+  --menu-divider-color: transparent;
+  --mobile-sidebar-background: var(--titlebar-background);
+  --modal-background: var(--color-base-05);
+}
+
+.is-phone .nav-buttons-container {
+  inset-block: unset;
+  background-color: var(--color-base-10);
+}

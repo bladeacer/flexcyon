@@ -704,6 +704,7 @@ body.theme-light {
   --flexcyon-base-grey-light: #080808;
 }
 
+body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
   --flexcyon-base-grey-tab: #71777f;
@@ -2300,6 +2301,7 @@ body.flexcyon-rainbow-bullet-points ul :nth-of-type(8n + 7) .list-bullet::after 
   --list-marker-color: var(--color-red);
 }
 
+body.is-mobile,
 body {
   --tag-size: var(--code-size);
   --tag-color: var(--flexcyon-cyan);
@@ -2312,6 +2314,7 @@ body {
     transparent
   );
 }
+body.is-mobile h3[data-heading*="find section #"] a.tag,
 body h3[data-heading*="find section #"] a.tag {
   all: unset;
 }
@@ -2356,12 +2359,16 @@ body {
   --flexcyon-editor-bg-rotation: 0deg;
 }
 
+body.is-mobile.theme-dark,
 body:is(.theme-dark) {
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
   --background-secondary: var(--color-base-00);
   --background-secondary-alt: var(--color-base-20);
   --background-modifier-hover: var(--color-base-20);
+  --background-modifier-form-field: var(--color-base-20);
+  --background-modifier-cover: var(--color-base-20);
+  --background-modifier-message: var(--color-base-20);
 }
 
 body:is(.theme-light) {
@@ -2498,6 +2505,7 @@ body.flexcyon-sidebar-bg-rhombus div .mod-right-split .workspace-leaf-content:no
   background-image: none;
 }
 
+body.is-mobile.theme-dark,
 body.theme-dark,
 body.theme-light {
   --interactive-normal: var(--color-base-05);
@@ -2533,9 +2541,11 @@ body {
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
 }
+body:not(.is-mobile) .clickable-icon {
+  opacity: var(--dimmed);
+}
 body .clickable-icon {
   padding: 4px 8px;
-  opacity: var(--dimmed);
 }
 body .clickable-icon:hover {
   opacity: unset;
@@ -2580,7 +2590,7 @@ body span.flair.mod-pop {
   margin-inline-start: var(--flexcyon-settings-installed-tooltip-left-margin);
 }
 
-.is-phone .setting-item-control input {
+.is-phone .modal .setting-item-control input {
   inline-size: max-content;
 }
 
@@ -9809,11 +9819,11 @@ body {
   --flexcyon-cust-hr-str-font-size: 1.118em;
   --flexcyon-cust-hr-str: "f";
 }
-body div.nav-buttons-container {
+body:not(.is-mobile) div.nav-buttons-container {
   justify-content: var(--flexcyon-top-actions-alignment);
   opacity: calc(var(--dimmed) + 0.2);
 }
-body div.nav-buttons-container:hover {
+body:not(.is-mobile) div.nav-buttons-container:hover {
   opacity: unset;
 }
 body .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
@@ -13354,6 +13364,20 @@ body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control input.
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control input.slider,
 body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control input.slider {
   border-radius: unset;
+}
+
+body.is-mobile.theme-dark {
+  --settings-home-background: var(--color-base-10);
+  --settings-background: var(--color-base-10);
+  --setting-items-background: var(--color-base-10);
+  --menu-divider-color: transparent;
+  --mobile-sidebar-background: var(--titlebar-background);
+  --modal-background: var(--color-base-05);
+}
+
+.is-phone .nav-buttons-container {
+  inset-block: unset;
+  background-color: var(--color-base-10);
 }
 
 /* Modifications for alternate file tree plugin */

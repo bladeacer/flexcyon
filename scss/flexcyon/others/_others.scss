@@ -15,7 +15,7 @@ body {
   --flexcyon-cust-hr-str-font-size: 1.118em;
   --flexcyon-cust-hr-str: "f";
 
-  div.nav-buttons-container {
+  &:not(.is-mobile) div.nav-buttons-container {
     justify-content: var(--flexcyon-top-actions-alignment);
     opacity: calc(var(--dimmed) + 0.2);
 

@@ -14,9 +14,12 @@ body {
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
 
+  &:not(.is-mobile) .clickable-icon {
+    opacity: var(--dimmed);
+  }
+
   .clickable-icon {
     padding: 4px 8px;
-    opacity: var(--dimmed);
 
     &:hover {
       opacity: unset;
@@ -75,7 +78,7 @@ body {
   }
 }
 
-.is-phone .setting-item-control input {
+.is-phone .modal .setting-item-control input {
   inline-size: max-content;
 }
 

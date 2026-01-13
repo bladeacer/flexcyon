@@ -27,6 +27,7 @@ body.theme-light {
   --flexcyon-base-grey-light: #080808;
 }
 
+body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
   --flexcyon-base-grey-tab: #71777f;

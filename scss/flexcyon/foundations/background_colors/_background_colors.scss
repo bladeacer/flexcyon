@@ -17,12 +17,16 @@ body {
   --flexcyon-editor-bg-rotation: 0deg;
 }
 
+body.is-mobile.theme-dark,
 body:is(.theme-dark) {
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
   --background-secondary: var(--color-base-00);
   --background-secondary-alt: var(--color-base-20);
   --background-modifier-hover: var(--color-base-20);
+  --background-modifier-form-field: var(--color-base-20);
+  --background-modifier-cover: var(--color-base-20);
+  --background-modifier-message: var(--color-base-20);
 }
 
 body:is(.theme-light) {
