@@ -3,6 +3,8 @@ body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 
+  div.community-modal-search-results-wrapper,
+  div.modal.mod-settings .vertical-tab-header,
   div.modal-content.vertical-tabs-container {
     & ::-webkit-scrollbar-thumb {
       display: none;

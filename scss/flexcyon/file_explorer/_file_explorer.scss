@@ -1,5 +1,5 @@
 body {
-  --flexcyon-active-indicator: ">> ";
+  --flexcyon-active-indicator: ">>";
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
@@ -284,6 +284,7 @@ body.flexcyon-enable-active-indicator {
   .tree-item-self.is-active .tree-item-inner,
   .vertical-tab-nav-item.is-active {
     &::before {
+      padding-inline-end: 4px;
       content: var(--flexcyon-active-indicator);
     }
   }

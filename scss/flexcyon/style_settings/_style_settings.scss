@@ -2068,7 +2068,7 @@ settings:
     format: rem
   - title: Do not show scrollbar in settings
     id: flexcyon-settings-scrollbar-removed
-    description: Do not show scrollbar in settings
+    description: Do not show scrollbar in settings where it is not necessary.
     type: class-toggle
     default: false
   - title: Enable alternate active item effect in settings
@@ -2707,10 +2707,6 @@ body.flexcyon-style-settings-dim-collapsed-headings {
   }
 }
 
-body .setting-item:not(.is-collapsed).setting-item-heading {
-  border-block-end: 1px solid var(--text-faint);
-}
-
 .style-settings-import,
 .style-settings-export {
   text-decoration: none;
@@ -2718,12 +2714,4 @@ body .setting-item:not(.is-collapsed).setting-item-heading {
 
 .style-settings-import {
   color: var(--color-blue);
-}
-
-.setting-item-heading .setting-item-name {
-  font-size: var(--font-ui-large);
-}
-
-.mod-settings hr {
-  border-color: transparent;
 }

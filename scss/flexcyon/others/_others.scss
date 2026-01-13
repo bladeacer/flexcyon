@@ -56,6 +56,11 @@ body {
 
     & div.vertical-tab-nav-item.is-active {
       opacity: 1;
+
+      div.vertical-tab-nav-item-icon {
+        padding-inline-start: 4px;
+        color: var(--text-accent);
+      }
     }
   }
 }

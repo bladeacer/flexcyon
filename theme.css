@@ -2526,10 +2526,8 @@ body {
   --upsize: 103%;
   --expand: 110%;
   --less-letter-spacing: -3px;
-  --flexcyon-comm-item-opacity: 0.89;
   --flexcyon-tree-item-horiz-padding: 10px;
   --flexcyon-tree-item-verti-padding: 2px;
-  --flexcyon-comm-text-padding: 3px 16px;
   --icon-stroke: 2px;
   --icon-color-active: var(--interactive-accent);
   --icon-color-focused: var(--interactive-accent);
@@ -2559,46 +2557,6 @@ body .modal-title {
 body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
-}
-body .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
-  padding: 6px 16px;
-}
-body .mod-community-modal .modal-sidebar:not(:has(+ .community-modal-details)) .setting-item.mod-toggle {
-  margin-block-start: -8px;
-}
-body .modal-sidebar {
-  padding: 16px 8px;
-}
-body .community-modal-search-summary {
-  padding: 6px 16px;
-  margin-inline-start: 4px;
-}
-body .community-modal-search-results {
-  gap: 14px;
-  padding: 16px;
-}
-body .community-modal-info hr {
-  display: none;
-}
-body .setting-item {
-  border-block-start: none;
-}
-body .setting-item.setting-item-heading {
-  border-block-end: 1px solid var(--background-modifier-border);
-}
-body .setting-item.setting-item-heading .setting-item-name {
-  padding-inline-end: 4px;
-  line-height: 1.5;
-}
-body .setting-item + div > .setting-item-heading,
-body .setting-item + .setting-item-heading {
-  margin-block-start: 1.5em;
-}
-body .horizontal-tab-nav-item,
-body .vertical-tab-nav-item {
-  padding: calc(var(--size-4-1) + 1px) var(--size-4-2);
-  margin-block-end: 1px;
-  font-size: calc(var(--font-ui-small) + 1.25px);
 }
 body .LazyLoad.is-visible {
   block-size: unset !important;
@@ -2641,188 +2599,6 @@ body.is-mobile .text-snippets-class > * {
 body.is-mobile .text-snippets-class > * > textarea {
   inline-size: 50%;
   block-size: 100px;
-}
-
-body.flexcyon-workspace-card-layout .community-modal-info-name {
-  padding: var(--flexcyon-comm-text-padding);
-  padding-block-start: 16px;
-  margin-block: 8px 0;
-  border: 2px solid var(--text-faint);
-  border-block-end: 0;
-  border-start-start-radius: 16px;
-  border-start-end-radius: 16px;
-}
-body.flexcyon-workspace-card-layout .community-modal-info-downloads,
-body.flexcyon-workspace-card-layout .community-modal-info-version,
-body.flexcyon-workspace-card-layout .community-modal-info-author,
-body.flexcyon-workspace-card-layout .community-modal-info-repo,
-body.flexcyon-workspace-card-layout .community-modal-info-desc {
-  padding: var(--flexcyon-comm-text-padding);
-  overflow-wrap: break-word;
-  border: 2px solid var(--text-faint);
-  border-block-start: 0;
-  border-block-end: 0;
-}
-body.flexcyon-workspace-card-layout .community-modal-info-desc {
-  margin-block-start: 0;
-}
-body.flexcyon-workspace-card-layout .community-modal-info-downloads {
-  inline-size: 100%;
-  margin-block-start: 0;
-}
-body.flexcyon-workspace-card-layout .community-modal-button-container {
-  padding: 16px;
-  padding-block-end: 24px;
-  margin: 0;
-  border: 2px solid var(--text-faint);
-  border-block-start: 0;
-  border-end-start-radius: 16px;
-  border-end-end-radius: 16px;
-}
-body.flexcyon-workspace-card-layout .community-modal-readme {
-  margin-block-start: 32px;
-}
-
-body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item {
-  opacity: var(--flexcyon-comm-item-opacity);
-}
-body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item.is-selected {
-  font-weight: bold;
-  border: unset;
-  opacity: unset;
-}
-body.flexcyon-settings-comm-item-enabled div.community-item div.community-item-name span.flair.mod-pop {
-  position: absolute;
-  inset-block-start: 0.7rem;
-  inset-inline-end: 0.5rem;
-  color: var(--color-base-25);
-  background-color: var(--text-accent);
-}
-body.flexcyon-settings-comm-item-enabled div.community-item.is-selected div.community-item-name span.flair.mod-pop {
-  color: var(--text-normal);
-  background-color: var(--color-base-25);
-}
-body.flexcyon-settings-comm-item-enabled .community-item-name {
-  inline-size: 75%;
-  color: var(--color-blue);
-  overflow-wrap: break-word;
-}
-body.flexcyon-settings-comm-item-enabled .community-item-downloads,
-body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
-  color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
-}
-body.flexcyon-settings-comm-item-enabled .community-item-updated {
-  color: rgb(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
-}
-body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
-  color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
-}
-
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
-  background-color: var(--background-primary);
-  border: none;
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
-  font-weight: bold;
-  color: var(--color-red);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
-  font-weight: bold;
-  color: var(--color-yellow);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
-  font-weight: bold;
-  color: var(--color-purple);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
-  font-weight: bold;
-  color: var(--color-green);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
-  color: var(--text-normal);
-}
-
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
-  background-color: var(--background-primary);
-  border: none;
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
-  font-weight: bold;
-  color: var(--color-red);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
-  font-weight: bold;
-  color: var(--color-blue);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
-  font-weight: bold;
-  color: var(--color-pink);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
-  font-weight: bold;
-  color: var(--color-purple);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
-  color: var(--text-normal);
-}
-
-body.theme-light.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.theme-light.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
-  font-weight: bold;
-  filter: saturate(2.5);
-}
-
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container {
-  font-weight: bolder;
-  background-color: var(--color-base-05);
-  box-shadow: unset;
-}
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
-  inline-size: fit-content;
-  block-size: fit-content;
-  color: var(--color-red);
-  content: ":(";
-  background-color: inherit;
-  border-radius: 25%;
-  box-shadow: unset;
-  transform: translateY(-10%);
-}
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container.is-enabled::after {
-  color: var(--color-green);
-  content: ":)";
-  transform: translate(16px, -10%);
-}
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control input.slider,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control input.slider,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control input.slider {
-  border-radius: unset;
 }
 
 body.flexcyon-flex-max-mode div.side-dock-actions,
@@ -2869,10 +2645,6 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n + 6):h
 body.flexcyon-flex-max-mode div.side-dock-actions :nth-of-type(8n + 7):hover,
 body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n + 7):hover {
   color: var(--color-red);
-}
-
-body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
-  color: var(--color-yellow);
 }
 
 body.flexcyon-flex-max-mode [aria-label^=Uninstall],
@@ -8081,7 +7853,11 @@ body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
+body.flexcyon-flex-max-mode div.community-modal-search-results-wrapper ::-webkit-scrollbar-thumb,
+body.flexcyon-flex-max-mode div.modal.mod-settings .vertical-tab-header ::-webkit-scrollbar-thumb,
 body.flexcyon-flex-max-mode div.modal-content.vertical-tabs-container ::-webkit-scrollbar-thumb,
+body.flexcyon-settings-scrollbar-removed div.community-modal-search-results-wrapper ::-webkit-scrollbar-thumb,
+body.flexcyon-settings-scrollbar-removed div.modal.mod-settings .vertical-tab-header ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.modal-content.vertical-tabs-container ::-webkit-scrollbar-thumb {
   display: none;
 }
@@ -8699,7 +8475,7 @@ body.flexcyon-reverse-tab-header-container .status-bar {
 }
 
 body {
-  --flexcyon-active-indicator: ">> ";
+  --flexcyon-active-indicator: ">>";
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
@@ -9040,6 +8816,7 @@ body.flexcyon-flex-max-mode .tree-item-self.is-active .tree-item-inner::before,
 body.flexcyon-flex-max-mode .vertical-tab-nav-item.is-active::before,
 body.flexcyon-enable-active-indicator .tree-item-self.is-active .tree-item-inner::before,
 body.flexcyon-enable-active-indicator .vertical-tab-nav-item.is-active::before {
+  padding-inline-end: 4px;
   content: var(--flexcyon-active-indicator);
 }
 
@@ -10059,6 +9836,10 @@ body div.modal-content.vertical-tabs-container > div.vertical-tab-header > div >
 }
 body div.modal-content.vertical-tabs-container > div.vertical-tab-header > div > div.vertical-tab-header-group-items div.vertical-tab-nav-item.is-active {
   opacity: 1;
+}
+body div.modal-content.vertical-tabs-container > div.vertical-tab-header > div > div.vertical-tab-header-group-items div.vertical-tab-nav-item.is-active div.vertical-tab-nav-item-icon {
+  padding-inline-start: 4px;
+  color: var(--text-accent);
 }
 
 body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item {
@@ -12219,7 +12000,7 @@ settings:
     format: rem
   - title: Do not show scrollbar in settings
     id: flexcyon-settings-scrollbar-removed
-    description: Do not show scrollbar in settings
+    description: Do not show scrollbar in settings where it is not necessary.
     type: class-toggle
     default: false
   - title: Enable alternate active item effect in settings
@@ -12869,10 +12650,6 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
   opacity: calc(var(--dimmed) + 0.05);
 }
 
-body .setting-item:not(.is-collapsed).setting-item-heading {
-  border-block-end: 1px solid var(--text-faint);
-}
-
 .style-settings-import,
 .style-settings-export {
   text-decoration: none;
@@ -12880,14 +12657,6 @@ body .setting-item:not(.is-collapsed).setting-item-heading {
 
 .style-settings-import {
   color: var(--color-blue);
-}
-
-.setting-item-heading .setting-item-name {
-  font-size: var(--font-ui-large);
-}
-
-.mod-settings hr {
-  border-color: transparent;
 }
 
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
@@ -13324,6 +13093,267 @@ body.flexcyon-modal-anims-fade-in .prompt {
 
 body.flexcyon-anims-modal-fade-in.flexcyon-anim-style-settings-contain .style-settings-container {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
+}
+
+body {
+  --settings-background: var(--color-base-05);
+  --setting-items-background: unset;
+  --setting-items-padding: 2px 0px;
+  --setting-items-radius: unset;
+  --flexcyon-comm-item-opacity: 0.89;
+  --flexcyon-comm-text-padding: 3px 16px;
+}
+body .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
+  padding: 6px 16px;
+}
+body .mod-settings hr {
+  border-color: transparent;
+}
+body .setting-item-heading .setting-item-name {
+  font-size: var(--font-ui-large);
+}
+body .mod-community-modal .modal-sidebar:not(:has(+ .community-modal-details)) .setting-item.mod-toggle {
+  margin-block-start: -8px;
+}
+body .community-modal-controls {
+  padding-inline: 4px;
+}
+body .community-item {
+  padding: 8px 0;
+}
+body .community-item div {
+  margin-inline: 8px;
+}
+body .modal-sidebar {
+  padding: 16px 8px;
+}
+body .community-modal-search-summary {
+  padding: 6px 16px;
+  margin-inline-start: 4px;
+}
+body .community-modal-search-results {
+  gap: 14px;
+  padding: 16px;
+}
+body .community-modal-info hr {
+  display: none;
+}
+body .setting-item {
+  border-block-start: none;
+}
+body .setting-item.setting-item-heading .setting-item-name {
+  padding-inline-end: 4px;
+  line-height: 1.5;
+}
+body .setting-item + div > .setting-item-heading,
+body .setting-item + .setting-item-heading {
+  margin-block-start: 1.5em;
+}
+body .setting-group .setting-item-heading {
+  padding: 0;
+}
+body .setting-group .setting-group-search {
+  padding-block: 0 12px;
+}
+body .horizontal-tab-nav-item,
+body .vertical-tab-nav-item {
+  padding: calc(var(--size-4-1) + 1px) var(--size-4-2);
+  margin-block-end: 1px;
+  font-size: calc(var(--font-ui-medium) - 0.75px);
+}
+
+body.flexcyon-no-settings-icons .mod-settings .vertical-tab-nav-item-icon {
+  display: none;
+}
+
+body.flexcyon-no-keychain-setting-item .mod-settings .vertical-tab-nav-item[data-setting-id=keychain] {
+  display: none;
+}
+
+body.flexcyon-workspace-card-layout .community-modal-info-name {
+  padding: var(--flexcyon-comm-text-padding);
+  padding-block-start: 16px;
+  margin-block: 8px 0;
+  border: 2px solid var(--text-faint);
+  border-block-end: 0;
+  border-start-start-radius: 16px;
+  border-start-end-radius: 16px;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-downloads,
+body.flexcyon-workspace-card-layout .community-modal-info-version,
+body.flexcyon-workspace-card-layout .community-modal-info-author,
+body.flexcyon-workspace-card-layout .community-modal-info-repo,
+body.flexcyon-workspace-card-layout .community-modal-info-desc {
+  padding: var(--flexcyon-comm-text-padding);
+  overflow-wrap: break-word;
+  border: 2px solid var(--text-faint);
+  border-block-start: 0;
+  border-block-end: 0;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-desc {
+  margin-block-start: 0;
+}
+body.flexcyon-workspace-card-layout .community-modal-info-downloads {
+  inline-size: 100%;
+  margin-block-start: 0;
+}
+body.flexcyon-workspace-card-layout .community-modal-button-container {
+  padding: 16px;
+  padding-block-end: 24px;
+  margin: 0;
+  border: 2px solid var(--text-faint);
+  border-block-start: 0;
+  border-end-start-radius: 16px;
+  border-end-end-radius: 16px;
+}
+body.flexcyon-workspace-card-layout .community-modal-readme {
+  margin-block-start: 32px;
+}
+
+body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item {
+  opacity: var(--flexcyon-comm-item-opacity);
+}
+body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item.is-selected {
+  font-weight: bold;
+  border: unset;
+  opacity: unset;
+}
+body.flexcyon-settings-comm-item-enabled div.community-item div.community-item-name span.flair.mod-pop {
+  position: absolute;
+  inset-block-start: 0.7rem;
+  inset-inline-end: 0.5rem;
+  color: var(--color-base-25);
+  background-color: var(--text-accent);
+}
+body.flexcyon-settings-comm-item-enabled div.community-item.is-selected div.community-item-name span.flair.mod-pop {
+  color: var(--text-normal);
+  background-color: var(--color-base-25);
+}
+body.flexcyon-settings-comm-item-enabled .community-item-name {
+  inline-size: 75%;
+  color: var(--color-blue);
+  overflow-wrap: break-word;
+}
+body.flexcyon-settings-comm-item-enabled .community-item-downloads,
+body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
+  color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
+}
+body.flexcyon-settings-comm-item-enabled .community-item-updated {
+  color: rgb(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+}
+body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
+  color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+}
+
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
+  background-color: var(--background-primary);
+  border: none;
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
+  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
+  font-weight: bold;
+  color: var(--color-red);
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
+  font-weight: bold;
+  color: var(--color-yellow);
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
+  font-weight: bold;
+  color: var(--color-purple);
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
+  font-weight: bold;
+  color: var(--color-green);
+}
+body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
+body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
+  color: var(--text-normal);
+}
+
+body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
+  color: var(--color-yellow);
+}
+
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
+  background-color: var(--background-primary);
+  border: none;
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
+  background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
+  font-weight: bold;
+  color: var(--color-red);
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
+  font-weight: bold;
+  color: var(--color-blue);
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
+  font-weight: bold;
+  color: var(--color-pink);
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
+  font-weight: bold;
+  color: var(--color-purple);
+}
+body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
+body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
+  color: var(--text-normal);
+}
+
+body.theme-light.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
+body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
+body.theme-light.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
+  font-weight: bold;
+  filter: saturate(2.5);
+}
+
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container {
+  font-weight: bolder;
+  background-color: var(--color-base-05);
+  box-shadow: unset;
+}
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
+  inline-size: fit-content;
+  block-size: fit-content;
+  color: var(--color-red);
+  content: ":(";
+  background-color: inherit;
+  border-radius: 25%;
+  box-shadow: unset;
+  transform: translateY(-10%);
+}
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container.is-enabled::after {
+  color: var(--color-green);
+  content: ":)";
+  transform: translate(16px, -10%);
+}
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control input.slider,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control input.slider,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control input.slider {
+  border-radius: unset;
 }
 
 /* Modifications for alternate file tree plugin */
