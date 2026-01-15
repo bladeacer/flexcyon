@@ -10060,6 +10060,16 @@ settings:
     id: flexcyon-saturation-ratio
     default: 1
   -
+    title: Mobile
+    type: heading
+    level: 4
+    collapsed: true
+  - title: Revert 1.11 Navigation UI
+    id: flexcyon-revert-nav-item-alignment
+    type: class-toggle
+    default: true
+
+  -
     title: Editor
     type: heading
     level: 4
@@ -13366,6 +13376,7 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) di
   border-radius: unset;
 }
 
+/* obsi-snip-coll start: mobile-fixes */
 body.is-mobile.theme-dark {
   --settings-home-background: var(--color-base-10);
   --settings-background: var(--color-base-10);
@@ -13375,11 +13386,44 @@ body.is-mobile.theme-dark {
   --modal-background: var(--color-base-05);
 }
 
-.is-phone .nav-buttons-container {
-  inset-block: unset;
-  background-color: var(--color-base-10);
+body.is-phone,
+body.is-mobile {
+  --safe-area-inset-top: 4px;
 }
 
+.is-phone .nav-buttons-container {
+  background-color: var(--color-base-00);
+}
+
+body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-buttons-container {
+  inset-block: unset;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-header ~ div:last-child {
+  padding-block-start: 60px;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .nav-files-container {
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-header {
+  padding-block-end: 4px;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-inner {
+  flex-direction: column-reverse;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-leaf-content {
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-leaf {
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-active-tab-content > * {
+  block-size: unset;
+}
+
+/* obsi-snip-coll end */
 /* Modifications for alternate file tree plugin */
 body.theme-light,
 body.theme-dark {

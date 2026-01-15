@@ -118,6 +118,16 @@ settings:
     id: flexcyon-saturation-ratio
     default: 1
   -
+    title: Mobile
+    type: heading
+    level: 4
+    collapsed: true
+  - title: Revert 1.11 Navigation UI
+    id: flexcyon-revert-nav-item-alignment
+    type: class-toggle
+    default: true
+
+  -
     title: Editor
     type: heading
     level: 4

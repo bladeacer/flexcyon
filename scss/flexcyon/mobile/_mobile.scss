@@ -1,3 +1,4 @@
+/* obsi-snip-coll start: mobile-fixes */
 body.is-mobile.theme-dark {
   --settings-home-background: var(--color-base-10);
   --settings-background: var(--color-base-10);
@@ -7,7 +8,52 @@ body.is-mobile.theme-dark {
   --modal-background: var(--color-base-05);
 }
 
-.is-phone .nav-buttons-container {
-  inset-block: unset;
-  background-color: var(--color-base-10);
+body.is-phone,
+body.is-mobile {
+  --safe-area-inset-top: 4px;
 }
+
+.is-phone .nav-buttons-container {
+  background-color: var(--color-base-00);
+}
+
+body.flexcyon-revert-nav-item-alignment.is-mobile {
+  &.is-phone {
+    .nav-buttons-container {
+      inset-block: unset;
+    }
+
+    .nav-header ~ div:last-child {
+      padding-block-start: 60px;
+    }
+  }
+
+  .nav-files-container {
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+  }
+
+  .workspace-drawer-header {
+    padding-block-end: 4px;
+  }
+
+  .workspace-drawer-inner {
+    flex-direction: column-reverse;
+  }
+
+  .workspace-leaf-content {
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+  }
+
+  .workspace-leaf {
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+  }
+
+  .workspace-drawer-active-tab-content > * {
+    block-size: unset;
+  }
+}
+
+/* obsi-snip-coll end */
