@@ -34,7 +34,7 @@ body.flexcyon-revert-nav-item-alignment.is-mobile {
   }
 
   .workspace-drawer-header {
-    padding-block-end: 4px;
+    padding-block-end: 8px;
   }
 
   .workspace-drawer-inner {
@@ -53,6 +53,11 @@ body.flexcyon-revert-nav-item-alignment.is-mobile {
 
   .workspace-drawer-active-tab-content > * {
     block-size: unset;
+  }
+
+  .workspace-drawer-active-tab-container {
+    flex-direction: column-reverse;
+    gap: 2px;
   }
 }
 

@@ -12,7 +12,7 @@
     "lint": "onchange '**/*.scss' -- npm run lint-once",
     "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
     "compile-once": "sass --no-source-map scss/theme.scss theme.css",
-    "pre-push": "npm run lint-once && npm run compile-once"
+    "pre-push": "npm run fix && npm run lint-once && npm run compile-once"
   },
   "repository": {
     "type": "git",
