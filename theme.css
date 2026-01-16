@@ -14171,6 +14171,7 @@ body {
   --bases-embed-padding: 4px;
   --bases-cards-cover-background: var(--background-secondary);
   --bases-cards-scale: 1;
+  --bases-embed-border-width: 0px;
   --flexcyon-bases-card-padding-top: 8px;
   --flexcyon-bases-card-padding-right: 0px;
   --flexcyon-bases-card-padding-bottom: 0px;
@@ -14200,12 +14201,17 @@ body {
   inline-size: min(100% - 8px, 99.5%);
 }
 
-.bases-table {
+.workspace-leaf-content[data-type=markdown] .block-language-base .bases-view,
+.workspace-leaf-content[data-type=markdown] .bases-embed .bases-view {
+  border: none;
+}
+.workspace-leaf-content[data-type=markdown] .block-language-base .bases-view .bases-tr,
+.workspace-leaf-content[data-type=markdown] .bases-embed .bases-view .bases-tr {
   border-inline-end: 0.5px solid var(--text-faint);
 }
 
-.bases-tr {
-  border-inline-start: 0.5px solid var(--text-faint);
+span.bases-embed .bases-view .bases-tr {
+  border-inline-end: none !important;
 }
 
 .bases-view {
@@ -14284,12 +14290,6 @@ div.bases-cards-cover:not([style*=background-image]) * {
   border-block-end: none;
 }
 
-.workspace-leaf-content[data-type=markdown] .block-language-base .bases-view,
-.workspace-leaf-content[data-type=markdown] .bases-embed .bases-view {
-  min-block-size: 100px;
-  border: none;
-}
-
 .bases-tbody[style*="height: 0px"]::after {
   font-size: var(--font-ui-small);
   color: var(--color-red);
@@ -14334,6 +14334,10 @@ div.bases-cards-cover:not([style*=background-image]) * {
   overflow: visible;
   text-overflow: clip;
   white-space: normal;
+}
+
+.bases-list-container {
+  min-block-size: unset;
 }
 
 body {
