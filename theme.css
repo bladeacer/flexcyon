@@ -1300,6 +1300,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title {
 body.flexcyon-flex-max-mode .view-header-breadcrumb-separator,
 body.flexcyon-workspace-pl10k-layout .view-header-breadcrumb-separator {
   display: none;
+  padding: 0;
 }
 body.flexcyon-flex-max-mode .view-header,
 body.flexcyon-flex-max-mode .view-header-title-container,
@@ -1314,6 +1315,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-container:not(:has(.view
 body.flexcyon-flex-max-mode .view-header-title-parent .view-header-breadcrumb,
 body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-breadcrumb {
   padding: 4px 0;
+  border-radius: 0;
 }
 body.flexcyon-flex-max-mode .view-header-title-parent .view-header-breadcrumb::after,
 body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-breadcrumb::after {
