@@ -8832,6 +8832,11 @@ body.flexcyon-enable-active-indicator .vertical-tab-nav-item.is-active::before {
   content: var(--flexcyon-active-indicator);
 }
 
+body:not(.show-ribbon).flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs div.workspace-tab-header-container-inner,
+body:not(.show-ribbon).flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs div.workspace-tab-header-container-inner {
+  margin-block-start: 48px;
+}
+
 body.flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs,
 body.flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs {
   display: flex;
@@ -8845,10 +8850,6 @@ body.flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs div div
 body.flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs div div.sidebar-toggle-button.mod-left {
   position: absolute;
   margin-inline-start: 1px;
-}
-body.flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs div div.workspace-tab-header-container-inner,
-body.flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs div div.workspace-tab-header-container-inner {
-  margin-block-start: 48px;
 }
 body.flexcyon-vertical-nav .mod-sidedock.mod-right-split .workspace-tabs div.workspace-leaf-content[data-type*=search],
 body.flexcyon-vertical-nav .mod-sidedock.mod-left-split .workspace-tabs div.workspace-leaf-content[data-type*=search] {

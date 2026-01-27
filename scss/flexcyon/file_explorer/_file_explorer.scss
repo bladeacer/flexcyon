@@ -290,6 +290,15 @@ body.flexcyon-enable-active-indicator {
   }
 }
 
+body:not(.show-ribbon).flexcyon-vertical-nav {
+  .mod-sidedock.mod-right-split .workspace-tabs,
+  .mod-sidedock.mod-left-split .workspace-tabs {
+    div.workspace-tab-header-container-inner {
+      margin-block-start: 48px;
+    }
+  }
+}
+
 body.flexcyon-vertical-nav {
   .mod-sidedock.mod-right-split .workspace-tabs,
   .mod-sidedock.mod-left-split .workspace-tabs {
@@ -302,10 +311,6 @@ body.flexcyon-vertical-nav {
       div.sidebar-toggle-button.mod-left {
         position: absolute;
         margin-inline-start: 1px;
-      }
-
-      div.workspace-tab-header-container-inner {
-        margin-block-start: 48px;
       }
     }
 
