@@ -34,6 +34,12 @@ body {
     div {
       margin-inline: 8px;
     }
+
+    img {
+      padding: 8px;
+      padding-block-end: 4px;
+      margin: 0;
+    }
   }
 
   .modal-sidebar {
@@ -84,6 +90,14 @@ body {
     margin-block-end: 1px;
     font-size: calc(var(--font-ui-medium) - 0.75px);
   }
+}
+
+body.theme-dark .community-item {
+  background-color: var(--color-base-00);
+}
+
+body.theme-light .community-item {
+  background-color: var(--color-base-05);
 }
 
 body.flexcyon-no-settings-icons {
