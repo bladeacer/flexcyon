@@ -1958,10 +1958,15 @@ settings:
     id: flexcyon-display-os
     type: class-toggle
     default: false
+  - title: Device operating system details left padding
+    type: variable-number
+    id: flexcyon-os-detail-padding-l
+    default: 12
+    format: px
   - title: Device operating system details right padding
     type: variable-number
     id: flexcyon-os-detail-padding-r
-    default: 24
+    default: 8
     format: px
   - title: Display screen dimensions
     description: Display the width and height of the current Obsidian window using pure CSS

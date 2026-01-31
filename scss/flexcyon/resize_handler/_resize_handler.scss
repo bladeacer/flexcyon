@@ -2,7 +2,8 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-  --flexcyon-os-detail-padding-r: 24px;
+  --flexcyon-os-detail-padding-r: 8px;
+  --flexcyon-os-detail-padding-l: 12px;
   --flexcyon-screen-dimens-padding-l: 16px;
   --file-header-font-size: var(--font-ui-small);
   --flexcyon-editor-margin-top: 18px;
@@ -115,7 +116,8 @@ body .view-actions::before {
 }
 
 body.flexcyon-display-os .view-actions::before {
-  padding-inline-end: var(--flexcyon-os-detail-padding-r);
+  padding-inline: var(--flexcyon-os-detail-padding-l)
+    var(--flexcyon-os-detail-padding-r);
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
 }

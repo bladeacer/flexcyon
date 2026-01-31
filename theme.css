@@ -8937,7 +8937,8 @@ body.flexcyon-reverse-workspace-content .workspace-leaf-content {
 }
 
 body {
-  --flexcyon-os-detail-padding-r: 24px;
+  --flexcyon-os-detail-padding-r: 8px;
+  --flexcyon-os-detail-padding-l: 12px;
   --flexcyon-screen-dimens-padding-l: 16px;
   --file-header-font-size: var(--font-ui-small);
   --flexcyon-editor-margin-top: 18px;
@@ -9038,7 +9039,7 @@ body .view-actions::before {
 }
 
 body.flexcyon-display-os .view-actions::before {
-  padding-inline-end: var(--flexcyon-os-detail-padding-r);
+  padding-inline: var(--flexcyon-os-detail-padding-l) var(--flexcyon-os-detail-padding-r);
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
 }
@@ -11903,10 +11904,15 @@ settings:
     id: flexcyon-display-os
     type: class-toggle
     default: false
+  - title: Device operating system details left padding
+    type: variable-number
+    id: flexcyon-os-detail-padding-l
+    default: 12
+    format: px
   - title: Device operating system details right padding
     type: variable-number
     id: flexcyon-os-detail-padding-r
-    default: 24
+    default: 8
     format: px
   - title: Display screen dimensions
     description: Display the width and height of the current Obsidian window using pure CSS
