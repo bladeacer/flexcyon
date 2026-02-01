@@ -820,7 +820,15 @@ body.flexcyon-coloured-headings {
   --h5-color: var(--flexcyon-h5-color);
   --h6-color: var(--flexcyon-h6-color);
 }
+body.flexcyon-coloured-headings .print :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-normal);
+}
 
+@media print {
+  body.flexcyon-coloured-headings .print :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-normal);
+  }
+}
 body.flexcyon-headings-glow-enabled h1,
 body.flexcyon-headings-glow-enabled .cm-header-1 {
   text-shadow: 2px 2px 4px var(--h1-color);

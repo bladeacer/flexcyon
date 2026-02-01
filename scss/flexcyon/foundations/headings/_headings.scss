@@ -30,6 +30,18 @@ body.flexcyon-coloured-headings {
   --h4-color: var(--flexcyon-h4-color);
   --h5-color: var(--flexcyon-h5-color);
   --h6-color: var(--flexcyon-h6-color);
+
+  .print :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-normal);
+  }
+}
+
+@media print {
+  body.flexcyon-coloured-headings {
+    .print :is(h1, h2, h3, h4, h5, h6) {
+      color: var(--text-normal);
+    }
+  }
 }
 
 body.flexcyon-headings-glow-enabled {
