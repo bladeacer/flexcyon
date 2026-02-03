@@ -3971,11 +3971,13 @@ body.flexcyon-highlight-active-line .cm-active > span.cm-quote {
   background-color: color-mix(in oklch, var(--text-accent) var(--flexcyon-highlight-active-line-opacity), transparent);
 }
 
+/* obsi-snip-coll start: typewriter-mode */
 .typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock),
 body.flexcyon-typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock) {
   opacity: var(--flexcyon-typewriter-mode-opacity);
 }
 
+/* obsi-snip-coll end */
 /* Callout modifications */
 body {
   --flexcyon-callout-bg-opacity: 20%;
@@ -11898,10 +11900,6 @@ settings:
     type: variable-number
     default: 12
     format: px
-  - title: Do not display view header
-    id: flexcyon-no-view-header
-    type: class-toggle
-    default: false
 
   - title: Debug
     type: heading
@@ -12991,47 +12989,56 @@ body {
     opacity: 1;
   }
 }
-body.flexcyon-anims-scale-up .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-scale-up .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-scale-up .view-content {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-rtl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-slide-rtl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-slide-rtl .view-content {
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-ltr .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-slide-ltr .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-slide-ltr .view-content {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-tb .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-slide-tb .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-slide-tb .view-content {
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-slide-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-slide-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-slide-bt .view-content {
   animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-rl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-spin-rl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-spin-rl .view-content {
   animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-spin-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-spin-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-spin-bt .view-content {
   animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-anims-fade-in .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-anims-fade-in .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-anims-fade-in .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-flex-max-mode .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer]),
+body.flexcyon-flex-max-mode .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
+[data-type=undefined]),
 body.flexcyon-flex-max-mode .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }

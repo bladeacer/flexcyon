@@ -103,7 +103,10 @@ body {
   body.flexcyon-anims-#{$anim-class} {
     .mod-stacked
       .workspace-leaf.mod-active
-      .workspace-leaf-content:not([data-type="file-explorer"]),
+      .workspace-leaf-content:not(
+        [data-type="file-explorer"],
+        [data-type="undefined"]
+      ),
     .view-content {
       animation: $anim-type var(--flexcyon-anim-duration)
         var(--flexcyon-anim-easing);
@@ -114,7 +117,10 @@ body {
     body.flexcyon-flex-max-mode {
       .mod-stacked
         .workspace-leaf.mod-active
-        .workspace-leaf-content:not([data-type="file-explorer"]),
+        .workspace-leaf-content:not(
+          [data-type="file-explorer"],
+          [data-type="undefined"]
+        ),
       .view-content {
         animation: $anim-type
           var(--flexcyon-anim-duration)
