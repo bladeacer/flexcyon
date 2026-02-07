@@ -8501,13 +8501,7 @@ body {
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
-body.flexcyon-flex-max-mode .tree-item-inner,
-body.flexcyon-wrap-long-filenames .tree-item-inner {
-  overflow: visible;
-  text-overflow: clip;
-  white-space: collapse;
-}
-
+/* obsi-snip-coll start: file-exts */
 body.flexcyon-flex-max-mode .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
 body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
@@ -8538,6 +8532,14 @@ body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div:not([
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before {
   content: ".";
+}
+
+/* obsi-snip-coll end */
+body.flexcyon-flex-max-mode .tree-item-inner,
+body.flexcyon-wrap-long-filenames .tree-item-inner {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: collapse;
 }
 
 body.flexcyon-rainbow-folders .tree-item-children {
@@ -12789,7 +12791,7 @@ body.flexcyon-no-inline-title .inline-title,
   display: none;
 }
 
-body.flexcyon-no-view-header .view-header {
+.no-view-header .view-header {
   display: none;
 }
 

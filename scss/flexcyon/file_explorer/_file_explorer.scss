@@ -3,15 +3,7 @@ body {
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
-body.flexcyon-flex-max-mode,
-body.flexcyon-wrap-long-filenames {
-  .tree-item-inner {
-    overflow: visible;
-    text-overflow: clip;
-    white-space: collapse;
-  }
-}
-
+/* obsi-snip-coll start: file-exts */
 body.flexcyon-flex-max-mode,
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
   .nav-files-container > div > div,
@@ -42,6 +34,17 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
         }
       }
     }
+  }
+}
+
+/* obsi-snip-coll end */
+
+body.flexcyon-flex-max-mode,
+body.flexcyon-wrap-long-filenames {
+  .tree-item-inner {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: collapse;
   }
 }
 
