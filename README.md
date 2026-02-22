@@ -1,4 +1,17 @@
-<p align="center">
+<div align="center">
+    <a href="https://flexcyon.github.io/docs-en/">
+        <img alt="English Documentation" src="https://img.shields.io/badge/english-docs-blue?style=for-the-badge">
+    </a>
+    <a href="https://flexcyon.github.io/docs-en/">
+        <img alt="中文文档" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E6%96%87%E6%A1%A3-purple?style=for-the-badge">
+    </a>
+    <a href="https://matrix.to/#/#flexcyon-space:matrix.org">
+        <img alt="Matrix Space" src="https://img.shields.io/matrix/flexcyon-space%3Amatrix.org?style=for-the-badge&logo=matrix&label=Matrix%20Space">
+    </a>
+</div>
+
+<div align="center">
+    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
     <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
         <img src="https://img.shields.io/badge/dynamic/json?query=%24%5B%22flexcyon%22%5D.download&url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&style=for-the-badge&label=Downloads&logo=obsidian" referrerpolicy="noreferrer">
     </a>
@@ -6,19 +19,23 @@
         <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?style=for-the-badge&sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
     </a>
     <img alt="Min App Version" src="https://img.shields.io/github/manifest-json/minAppVersion/bladeacer/flexcyon?style=for-the-badge&logo=semver">
-</p>
+</div>
+
 <div align="center">
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?style=for-the-badge" referrerpolicy="noreferrer"> 
     </a>
-    <a href="https://flexcyon.github.io/docs-en/">
+    <a href="https://github.com/flexcyon/docs-en">
         <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/flexcyon/docs-en/github-pages?style=for-the-badge&logo=github">
     </a>
 </div>
+
 <br>
+
 <div align="center">
     <img alt="Dark mode theme thumbnail" src="./docs/dark_thumb.webp">
 </div>
+
 <div align="center">
     <img alt="Light mode theme thumbnail" src="./docs/light_thumb.webp">
 </div>
@@ -150,10 +167,19 @@ Some of the theme's snippets like ASCII Art and its callouts can be [found here]
 
 Feel free to talk about it at:
 
-- [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357).
+- [this Matrix Space](https://matrix.to/#/#flexcyon-space:matrix.org)
 - [this Obsidian forum topic](https://forum.obsidian.md/t/flexcyon-a-dark-theme-for-obsidian/99869)
+- [this Discord thread](https://discord.com/channels/686053708261228577/1338130333698359357)
+- [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions)
+
+Methods of communication are listed in order of preference.
 
 ## Contributing
+
+When contributing do open an issue at
+[the repository](https://github.com/bladeacer/flexcyon/issues) or
+[start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) first.
+
 
 You can create your own fork before making a pull request.
 > Before doing this, do open an issue at this repository first.
@@ -170,10 +196,6 @@ your file changes are saved.
 
 If you prefer to use CSS instead of SCSS, place your proposed code changes or
 snippets in the `css/` folder. The maintainer will try to integrate them.
-
-Alternatively, you can open an issue at
-[the repository](https://github.com/bladeacer/flexcyon/issues) or
-[start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) here.
 
 Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md)
 and [Contributing Guide](./CONTRIBUTING.md).
