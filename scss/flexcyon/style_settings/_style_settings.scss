@@ -2280,7 +2280,7 @@ settings:
     type: heading
     level: 5
     collapsed: true
-    description: Currently experimental
+    description: For configuring the core Bases plugin
   - title: Bases View Vertical Padding
     description: Sets vertical padding for Base file content
     id: flexcyon-bases-padding-verti
@@ -2344,13 +2344,8 @@ settings:
     default: 2
     format: px
   - title: Bases Card View Flex Grow
-    id: flexcyon-bases-card-flex-gorw
-    description: How much the Card View tries to scale up or down depending on tab size e.g. when toggling sidebars.
-    type: variable-number
-    default: 0.55
-  - title: Bases Card View Delay Factor
     id: flexcyon-bases-card-flex-grow
-    description: This is the factor of how long the Card View takes to scale depending on tab size. Technically just this value multiplied by the animation duration value.
+    description: This is the factor of how long the Card View takes to scale depending on tab size.
     type: variable-number
     default: 0.55
   - title: Bases Table View
