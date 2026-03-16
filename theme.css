@@ -15492,7 +15492,7 @@ span.task-id {
 
 /* Modifications for HandaArchitect's banner snippet */
 body .banner img[alt=banner] {
-  z-index: 0;
+  z-index: 1;
   padding: 1px;
 }
 body div.card-content-container img[alt=banner],
@@ -15503,6 +15503,10 @@ body .banner .internal-embed .markdown-preview-pusher,
 body .banner span.internal-embed .image-embed img[alt=banner] {
   display: none;
 }
-body .banner.markdown-preview-view .el-p .image-embed img[alt=banner] {
-  display: unset;
+body {
+  /* Banner hotfix */
+}
+body .banner.is-live-preview .image-embed img[alt=banner] {
+  position: fixed;
+  inline-size: 99%;
 }

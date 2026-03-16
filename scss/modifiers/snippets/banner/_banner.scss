@@ -1,7 +1,7 @@
 /* Modifications for HandaArchitect's banner snippet */
 body {
   .banner img[alt="banner"] {
-    z-index: 0;
+    z-index: 1;
     padding: 1px;
   }
 
@@ -17,9 +17,9 @@ body {
     }
   }
 
-  .banner.markdown-preview-view {
-    .el-p .image-embed img[alt="banner"] {
-      display: unset;
-    }
+  /* Banner hotfix */
+  .banner.is-live-preview .image-embed img[alt="banner"] {
+    position: fixed;
+    inline-size: 99%;
   }
 }
