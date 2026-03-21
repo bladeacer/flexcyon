@@ -225,7 +225,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
 
     &::after {
-      font-size: var(--font-ui-small);
+      // font-size: var(--font-ui-small);
       content: "x_x";
     }
   }
@@ -240,7 +240,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
       inset-block-end: 6px;
       inset-inline-start: 0;
       margin: 0 8px;
-      font-size: var(--font-ui-small);
+
+      // font-size: var(--font-ui-small);
       content: "?/";
     }
   }
@@ -268,43 +269,43 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 
   .iconic-rule-icon::after {
-    font-size: var(--font-ui-small);
-    letter-spacing: -0.75px;
+    // font-size: var(--font-ui-small);
+    // letter-spacing: -0.75px;
     content: "./^";
   }
 
   .iconic-add::after {
-    font-size: var(--font-ui-small);
-    color: var(--color-green);
-    letter-spacing: -0.75px;
+    // font-size: var(--font-ui-small);
+    // color: var(--color-green);
+    // letter-spacing: -0.75px;
     content: "[~]";
     transform: translateX(-24px);
   }
 
   .iconic-drag::after {
-    font-size: var(--font-ui-small);
-    letter-spacing: -0.75px;
+    // font-size: var(--font-ui-small);
+    // letter-spacing: -0.75px;
     content: "|||";
   }
 
   .omnisearch-result__icon {
     &:has(.lucide-file)::before {
-      font-size: var(--font-ui-smaller);
-      letter-spacing: -2px;
+      // font-size: var(--font-ui-smaller);
+      // letter-spacing: -2px;
       content: "''";
     }
 
     &:has(.lucide-file-text)::before {
-      font-size: var(--font-ui-smaller);
-      letter-spacing: -2px;
+      // font-size: var(--font-ui-smaller);
+      // letter-spacing: -2px;
       content: "``";
     }
   }
 
   .workspace-left-content[aria-label*="Back"] {
     &::after {
-      font-size: var(--font-ui-small);
-      letter-spacing: -0.75px;
+      // font-size: var(--font-ui-small);
+      // letter-spacing: -0.75px;
       content: "<";
     }
   }
@@ -313,7 +314,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     color: inherit;
 
     &::after {
-      font-size: var(--font-ui-small);
+      // font-size: var(--font-ui-small);
       content: "x_x";
     }
   }
