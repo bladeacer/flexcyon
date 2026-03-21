@@ -199,7 +199,8 @@ body.flexcyon-workspace-angled-layout {
 
     &::after {
       font-size: var(--font-ui-small);
-      letter-spacing: -0.75px;
+
+      // letter-spacing: -0.75px;
       content: "#{$content}";
     }
 
@@ -225,7 +226,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
 
     &::after {
-      // font-size: var(--font-ui-small);
+      font-size: var(--font-ui-small);
       content: "x_x";
     }
   }
@@ -240,8 +241,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
       inset-block-end: 6px;
       inset-inline-start: 0;
       margin: 0 8px;
-
-      // font-size: var(--font-ui-small);
+      font-size: var(--font-ui-small);
       content: "?/";
     }
   }
@@ -256,56 +256,46 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   .omnisearch-result__icon,
   .workspace-tab-header-inner-close-button,
   .workspace-left-content[aria-label*="Back"] {
+    inline-size: 24px;
+
     svg {
       opacity: 0;
     }
   }
 
-  .iconic-rule-icon,
-  .iconic-add,
-  .iconic-drag,
-  .workspace-left-content[aria-label*="Back"] {
-    inline-size: 24px;
-  }
-
   .iconic-rule-icon::after {
-    // font-size: var(--font-ui-small);
-    // letter-spacing: -0.75px;
+    font-size: var(--font-ui-small);
     content: "./^";
   }
 
   .iconic-add::after {
-    // font-size: var(--font-ui-small);
+    font-size: var(--font-ui-small);
+
     // color: var(--color-green);
-    // letter-spacing: -0.75px;
     content: "[~]";
     transform: translateX(-24px);
   }
 
   .iconic-drag::after {
-    // font-size: var(--font-ui-small);
-    // letter-spacing: -0.75px;
+    font-size: var(--font-ui-small);
     content: "|||";
   }
 
   .omnisearch-result__icon {
     &:has(.lucide-file)::before {
-      // font-size: var(--font-ui-smaller);
-      // letter-spacing: -2px;
+      font-size: var(--font-ui-smaller);
       content: "''";
     }
 
     &:has(.lucide-file-text)::before {
-      // font-size: var(--font-ui-smaller);
-      // letter-spacing: -2px;
+      font-size: var(--font-ui-smaller);
       content: "``";
     }
   }
 
   .workspace-left-content[aria-label*="Back"] {
     &::after {
-      // font-size: var(--font-ui-small);
-      // letter-spacing: -0.75px;
+      font-size: var(--font-ui-small);
       content: "<";
     }
   }
@@ -314,7 +304,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     color: inherit;
 
     &::after {
-      // font-size: var(--font-ui-small);
+      font-size: var(--font-ui-small);
       content: "x_x";
     }
   }
@@ -328,7 +318,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   @include ascii-aria-icon("Donate", "<3");
   @include ascii-aria-icon("Reload", "[R]");
   @include ascii-aria-icon("Change sort order", "|'|");
-  @include ascii-aria-icon("folder", "./^");
+  @include ascii-aria-icon("folder", "./");
   @include ascii-aria-icon("Restore default", "[0]");
   @include ascii-aria-icon("Reset all settings to default", "[0]");
   @include ascii-aria-icon("New note", "[N]");

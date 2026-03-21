@@ -2702,6 +2702,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .m
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button::after {
+  font-size: var(--font-ui-small);
   content: "x_x";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::before,
@@ -2714,11 +2715,26 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .s
   inset-block-end: 6px;
   inset-inline-start: 0;
   margin: 0 8px;
+  font-size: var(--font-ui-small);
   content: "?/";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal.mod-settings .vertical-tab-content,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal.mod-settings .vertical-tab-content {
   padding-block-start: 48px;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back],
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-add,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-drag,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-rule-icon,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back] {
+  inline-size: 24px;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add svg,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag svg,
@@ -2734,39 +2750,35 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back] svg {
   opacity: 0;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back],
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-rule-icon,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-add,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-drag,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back] {
-  inline-size: 24px;
-}
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-rule-icon::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-rule-icon::after {
+  font-size: var(--font-ui-small);
   content: "./^";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-add::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-add::after {
+  font-size: var(--font-ui-small);
   content: "[~]";
   transform: translateX(-24px);
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .iconic-drag::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .iconic-drag::after {
+  font-size: var(--font-ui-small);
   content: "|||";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon:has(.lucide-file)::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon:has(.lucide-file)::before {
+  font-size: var(--font-ui-smaller);
   content: "''";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon:has(.lucide-file-text)::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon:has(.lucide-file-text)::before {
+  font-size: var(--font-ui-smaller);
   content: "``";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back]::after {
+  font-size: var(--font-ui-small);
   content: "<";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button,
@@ -2775,6 +2787,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::after {
+  font-size: var(--font-ui-small);
   content: "x_x";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Uninstall],
@@ -2784,7 +2797,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Uninstall]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Uninstall]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "*_*";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Uninstall] svg,
@@ -2798,7 +2810,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Options]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Options]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[*]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Options] svg,
@@ -2812,7 +2823,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Hotkeys]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Hotkeys]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[%]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Hotkeys] svg,
@@ -2826,7 +2836,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Customise this command"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Customise this command"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[~]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Customise this command"] svg,
@@ -2840,7 +2849,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Customize this command"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Customize this command"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[~]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Customize this command"] svg,
@@ -2854,7 +2862,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Export settings"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Export settings"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: ".>";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Export settings"] svg,
@@ -2868,7 +2875,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Donate]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Donate]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "<3";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Donate] svg,
@@ -2882,7 +2888,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Reload]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Reload]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[R]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Reload] svg,
@@ -2896,7 +2901,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Change sort order"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Change sort order"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "|'|";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Change sort order"] svg,
@@ -2910,8 +2914,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=folder]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=folder]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
-  content: "./^";
+  content: "./";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=folder] svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=folder] svg {
@@ -2924,7 +2927,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Restore default"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Restore default"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[0]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Restore default"] svg,
@@ -2938,7 +2940,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Reset all settings to default"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Reset all settings to default"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[0]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Reset all settings to default"] svg,
@@ -2952,7 +2953,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="New note"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="New note"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[N]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="New note"] svg,
@@ -2966,7 +2966,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Expand]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Expand]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[+]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Expand] svg,
@@ -2980,7 +2979,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Collapse]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*=Collapse]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[-]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*=Collapse] svg,
@@ -2994,7 +2992,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Auto-reveal current file"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Auto-reveal current file"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[>]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Auto-reveal current file"] svg,
@@ -3008,7 +3005,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Auto-scroll to current section"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Auto-scroll to current section"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[>]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Auto-scroll to current section"] svg,
@@ -3022,7 +3018,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Show search filter"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Show search filter"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "?/";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Show search filter"] svg,
@@ -3036,7 +3031,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Bookmark the active tab"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="Bookmark the active tab"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "[B]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="Bookmark the active tab"] svg,
@@ -3050,7 +3044,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [a
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="New bookmark group"]::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) [aria-label*="New bookmark group"]::after {
   font-size: var(--font-ui-small);
-  letter-spacing: -0.75px;
   content: "{+}";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) [aria-label*="New bookmark group"] svg,
