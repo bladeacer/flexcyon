@@ -1,16 +1,17 @@
-body.theme-dark {
-  --cm-panel-bg: var(--color-base-00);
-}
+// body.theme-dark {
+//   --cm-panel-bg: var(--color-base-00);
+// }
 
-body.theme-light {
-  --cm-panel-bg: color-mix(
-    in srgb,
-    var(--color-base-05) 55%,
-    var(--color-base-10) 45%
-  );
-}
+// body.theme-light {
+//   --cm-panel-bg: color-mix(
+//     in srgb,
+//     var(--color-base-05) 55%,
+//     var(--color-base-10) 45%
+//   );
+// }
 
 body {
+  --cm-panel-bg: var(--color-base-00);
   --cm-font-size: calc(var(--font-ui-small) + 0.809px);
 }
 

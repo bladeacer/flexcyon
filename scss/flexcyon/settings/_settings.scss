@@ -30,6 +30,7 @@ body {
 
   .community-item {
     padding: 8px 0;
+    background-color: var(--color-base-00);
 
     div {
       margin-inline: 8px;
@@ -92,13 +93,13 @@ body {
   }
 }
 
-body.theme-dark .community-item {
-  background-color: var(--color-base-00);
-}
+// body.theme-dark .community-item {
+//   background-color: var(--color-base-00);
+// }
 
-body.theme-light .community-item {
-  background-color: var(--color-base-05);
-}
+// body.theme-light .community-item {
+//   background-color: var(--color-base-05);
+// }
 
 body.flexcyon-no-settings-icons {
   .mod-settings .vertical-tab-nav-item-icon {
@@ -209,96 +210,96 @@ body.flexcyon-settings-comm-item-enabled {
   }
 }
 
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
-  .community-item.is-selected {
-    background-color: var(--background-primary);
-    border: none;
+// body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
+// body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
+//   .community-item.is-selected {
+//     background-color: var(--background-primary);
+//     border: none;
 
-    span.flair.mod-pop {
-      background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-    }
+//     span.flair.mod-pop {
+//       background-color: rgb(var(--color-blue-rgb), var(--dimmed));
+//     }
 
-    .community-item-name {
-      font-weight: bold;
-      color: var(--color-red);
-    }
+//     .community-item-name {
+//       font-weight: bold;
+//       color: var(--color-red);
+//     }
 
-    .community-item-author {
-      font-weight: bold;
-      color: var(--color-yellow);
-    }
+//     .community-item-author {
+//       font-weight: bold;
+//       color: var(--color-yellow);
+//     }
 
-    .community-item-downloads {
-      font-weight: bold;
-      color: var(--color-purple);
-    }
+//     .community-item-downloads {
+//       font-weight: bold;
+//       color: var(--color-purple);
+//     }
 
-    .community-item-updated {
-      font-weight: bold;
-      color: var(--color-green);
-    }
+//     .community-item-updated {
+//       font-weight: bold;
+//       color: var(--color-green);
+//     }
 
-    .community-item-desc {
-      color: var(--text-normal);
-    }
-  }
-}
+//     .community-item-desc {
+//       color: var(--text-normal);
+//     }
+//   }
+// }
 
-body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
-  color: var(--color-yellow);
-}
+// body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
+//   color: var(--color-yellow);
+// }
 
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
-  .community-item.is-selected {
-    background-color: var(--background-primary);
-    border: none;
+// body.theme-dark.flexcyon-flex-max-mode:not(.is-phone),
+// body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) {
+//   .community-item.is-selected {
+//     background-color: var(--background-primary);
+//     border: none;
 
-    span.flair.mod-pop {
-      background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
-    }
+//     span.flair.mod-pop {
+//       background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
+//     }
 
-    .community-item-name {
-      font-weight: bold;
-      color: var(--color-red);
-    }
+//     .community-item-name {
+//       font-weight: bold;
+//       color: var(--color-red);
+//     }
 
-    .community-item-author {
-      font-weight: bold;
-      color: var(--color-blue);
-    }
+//     .community-item-author {
+//       font-weight: bold;
+//       color: var(--color-blue);
+//     }
 
-    .community-item-downloads {
-      font-weight: bold;
-      color: var(--color-pink);
-    }
+//     .community-item-downloads {
+//       font-weight: bold;
+//       color: var(--color-pink);
+//     }
 
-    .community-item-updated {
-      font-weight: bold;
-      color: var(--color-purple);
-    }
+//     .community-item-updated {
+//       font-weight: bold;
+//       color: var(--color-purple);
+//     }
 
-    .community-item-desc {
-      color: var(--text-normal);
-    }
-  }
-}
+//     .community-item-desc {
+//       color: var(--text-normal);
+//     }
+//   }
+// }
 
-body.theme-light.flexcyon-flex-max-mode:not([class*="iconic"]),
-body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
-    [class*="iconic"]
-  ),
-body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
-    .flexcyon-ensure-plugin-icon
-  ) {
-  div.setting-item-control {
-    div.checkbox-container::after {
-      font-weight: bold;
-      filter: saturate(2.5);
-    }
-  }
-}
+// body.theme-light.flexcyon-flex-max-mode:not([class*="iconic"]),
+// body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
+//     [class*="iconic"]
+//   ),
+// body.theme-light.flexcyon-settings-smiley-icons-enabled:not(
+//     .flexcyon-ensure-plugin-icon
+//   ) {
+//   div.setting-item-control {
+//     div.checkbox-container::after {
+//       font-weight: bold;
+//       filter: saturate(2.5);
+//     }
+//   }
+// }
 
 body.flexcyon-flex-max-mode:not([class*="iconic"]),
 body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(

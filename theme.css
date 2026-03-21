@@ -694,8 +694,8 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --flexcyon-base-01: #faf7ef;
-  --flexcyon-base-02: #edebe5;
+  --flexcyon-base-01: #edebe5;
+  --flexcyon-base-02: #faf7ef;
   --flexcyon-base-03: #dddcd6;
   --flexcyon-base-04: #d3d3ce;
   --flexcyon-base-05: #b4b3af;
@@ -2367,10 +2367,7 @@ body {
   );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
-}
-
-body.is-mobile.theme-dark,
-body:is(.theme-dark) {
+  /* Colours */
   --background-primary: var(--color-base-10);
   --background-primary-alt: var(--color-base-25);
   --background-secondary: var(--color-base-00);
@@ -2379,35 +2376,13 @@ body:is(.theme-dark) {
   --background-modifier-form-field: var(--color-base-20);
   --background-modifier-cover: var(--color-base-15);
   --background-modifier-message: var(--color-base-20);
-}
-
-body:is(.theme-light) {
-  --background-primary: var(--color-base-00);
-  --background-primary-alt: var(--color-base-10);
-  --background-secondary: var(--color-base-05);
-  --background-secondary-alt: var(--color-base-10);
-  --background-modifier-hover: var(--color-base-10);
-  --background-modifier-message: var(--color-base-70);
-}
-
-body:is(.theme-dark),
-body:is(.theme-light) {
   --background-modifier-active-hover: var(--color-base-25);
   --background-modifier-border: var(--color-base-20);
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-message: var(--color-base-20);
   --background-modifier-error: rgb(
     var(--color-red-rgb),
     calc(var(--dimmed) + 0.3)
-  );
-}
-
-body.theme-light {
-  --flexcyon-editor-bg-color: color-mix(
-    in oklch,
-    var(--color-base-05),
-    var(--color-base-10)
   );
 }
 
@@ -9131,19 +9106,8 @@ body.flexcyon-display-os:not(.is-mobile, .mod-windows, .mod-linux) :not(.show-vi
   margin-block-start: var(--flexcyon-editor-margin-top);
 }
 
-body.theme-dark {
-  --cm-panel-bg: var(--color-base-00);
-}
-
-body.theme-light {
-  --cm-panel-bg: color-mix(
-    in srgb,
-    var(--color-base-05) 55%,
-    var(--color-base-10) 45%
-  );
-}
-
 body {
+  --cm-panel-bg: var(--color-base-00);
   --cm-font-size: calc(var(--font-ui-small) + 0.809px);
 }
 
@@ -9926,14 +9890,9 @@ body.flexcyon-cust-str-hr .markdown-embed:has(.el-hr) .markdown-preview-sizer {
   padding-block-end: 12px !important;
 }
 
-body.theme-dark.flexcyon-flex-max-mode .hr::before,
-body.theme-dark.flexcyon-cust-str-hr .hr::before {
+body.flexcyon-flex-max-mode .hr::before,
+body.flexcyon-cust-str-hr .hr::before {
   background-color: var(--color-base-10);
-}
-
-body.theme-light.flexcyon-flex-max-mode .hr::before,
-body.theme-light.flexcyon-cust-str-hr .hr::before {
-  background-color: var(--color-base-00);
 }
 
 body.flexcyon-ribbon-top {
@@ -13159,6 +13118,7 @@ body .community-modal-controls {
 }
 body .community-item {
   padding: 8px 0;
+  background-color: var(--color-base-00);
 }
 body .community-item div {
   margin-inline: 8px;
@@ -13204,14 +13164,6 @@ body .vertical-tab-nav-item {
   padding: calc(var(--size-4-1) + 1px) var(--size-4-2);
   margin-block-end: 1px;
   font-size: calc(var(--font-ui-medium) - 0.75px);
-}
-
-body.theme-dark .community-item {
-  background-color: var(--color-base-00);
-}
-
-body.theme-light .community-item {
-  background-color: var(--color-base-05);
 }
 
 body.flexcyon-no-settings-icons .mod-settings .vertical-tab-nav-item-icon {
@@ -13295,85 +13247,6 @@ body.flexcyon-settings-comm-item-enabled .community-item-updated {
 }
 body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
   color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
-}
-
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
-  background-color: var(--background-primary);
-  border: none;
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
-  font-weight: bold;
-  color: var(--color-red);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
-  font-weight: bold;
-  color: var(--color-yellow);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
-  font-weight: bold;
-  color: var(--color-purple);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
-  font-weight: bold;
-  color: var(--color-green);
-}
-body.theme-light.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
-body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
-  color: var(--text-normal);
-}
-
-body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
-  color: var(--color-yellow);
-}
-
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
-  background-color: var(--background-primary);
-  border: none;
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected span.flair.mod-pop,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected span.flair.mod-pop {
-  background-color: rgb(var(--color-yellow-rgb), var(--dimmed));
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-name,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-name {
-  font-weight: bold;
-  color: var(--color-red);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-author,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-author {
-  font-weight: bold;
-  color: var(--color-blue);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-downloads,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-downloads {
-  font-weight: bold;
-  color: var(--color-pink);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-updated,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-updated {
-  font-weight: bold;
-  color: var(--color-purple);
-}
-body.theme-dark.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected .community-item-desc,
-body.theme-dark.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected .community-item-desc {
-  color: var(--text-normal);
-}
-
-body.theme-light.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.theme-light.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.theme-light.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
-  font-weight: bold;
-  filter: saturate(2.5);
 }
 
 body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container,

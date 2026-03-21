@@ -16,8 +16,10 @@ body.theme-dark {
 }
 
 body.theme-light {
-  --flexcyon-base-01: #faf7ef;
-  --flexcyon-base-02: #edebe5;
+  // Less generic colours???
+  // Too milky base 02?
+  --flexcyon-base-01: #edebe5;
+  --flexcyon-base-02: #faf7ef;
   --flexcyon-base-03: #dddcd6;
   --flexcyon-base-04: #d3d3ce;
   --flexcyon-base-05: #b4b3af;
@@ -30,6 +32,7 @@ body.theme-light {
 body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
+  // Define colours properly??
   --flexcyon-base-grey-tab: #71777f;
   --flexyon-base-grey-token: #586582;
   --flexcyon-base-grey-scroll: #3f495e;
