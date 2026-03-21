@@ -1,6 +1,8 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
+// TODO: Modal deserves its own file
+
 body {
   --icon-xs: 12.25px;
   --dimmed: 0.55;
@@ -13,6 +15,10 @@ body {
   --icon-color-active: var(--interactive-accent);
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
+
+  .modal-content {
+    background-color: var(--modal-background);
+  }
 
   &:not(.is-mobile) .clickable-icon {
     opacity: var(--dimmed);
@@ -147,37 +153,39 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   );
 }
 
-body.flexcyon-flex-max-mode,
-body.flexcyon-settings-coloured-icons {
-  [aria-label^="Uninstall"] {
-    color: rgb(var(--color-red-rgb), 0.9);
-  }
+// TODO: Move this in the new opinionated setup
 
-  [aria-label^="Options"] {
-    color: rgb(var(--color-blue-rgb), 0.9);
-  }
+// body.flexcyon-flex-max-mode,
+// body.flexcyon-settings-coloured-icons {
+//   [aria-label^="Uninstall"] {
+//     color: rgb(var(--color-red-rgb), 0.9);
+//   }
 
-  [aria-label^="Customise this command"],
-  [aria-label^="Customize this command"],
-  [aria-label^="Hotkeys"],
-  [aria-label^="Open snippets folder"],
-  [aria-label^="Open plugins folder"] {
-    color: rgb(var(--color-green-rgb), 0.9);
-  }
+//   [aria-label^="Options"] {
+//     color: rgb(var(--color-blue-rgb), 0.9);
+//   }
 
-  [aria-label^="Donate to support"] {
-    color: rgb(var(--color-pink-rgb), 0.9);
-  }
+//   [aria-label^="Customise this command"],
+//   [aria-label^="Customize this command"],
+//   [aria-label^="Hotkeys"],
+//   [aria-label^="Open snippets folder"],
+//   [aria-label^="Open plugins folder"] {
+//     color: rgb(var(--color-green-rgb), 0.9);
+//   }
 
-  [aria-label^="Reload plugins"],
-  [aria-label^="Reload snippets"] {
-    color: rgb(var(--color-cyan-rgb), 0.9);
-  }
+//   [aria-label^="Donate to support"] {
+//     color: rgb(var(--color-pink-rgb), 0.9);
+//   }
 
-  [aria-label^="Restore default"] {
-    color: rgb(var(--color-purple-rgb), 0.9);
-  }
-}
+//   [aria-label^="Reload plugins"],
+//   [aria-label^="Reload snippets"] {
+//     color: rgb(var(--color-cyan-rgb), 0.9);
+//   }
+
+//   [aria-label^="Restore default"] {
+//     color: rgb(var(--color-purple-rgb), 0.9);
+//   }
+// }
 
 body.is-mobile .vertical-tab-content {
   background-color: var(--color-base-05);
@@ -210,37 +218,28 @@ body.flexcyon-workspace-angled-layout {
   }
 }
 
+// TODO: Redundant selector?
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   ) {
   .modal-close-button {
-    position: absolute;
-    inset-block-start: 16px;
-    inset-inline-end: 2.5%;
-    inline-size: 24px;
-    padding-inline-end: 48px;
-
     &::before {
-      opacity: 0;
-    }
-
-    &::after {
       font-size: var(--font-ui-small);
       content: "x_x";
+    }
+
+    svg {
+      display: none;
     }
   }
 
   .search-input-container {
-    &::before {
-      opacity: 0;
+    svg {
+      display: none;
     }
 
     &::after {
-      position: absolute;
-      inset-block-end: 6px;
-      inset-inline-start: 0;
-      margin: 0 8px;
       font-size: var(--font-ui-small);
       content: "?/";
     }
@@ -250,18 +249,16 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     padding-block-start: 48px;
   }
 
-  .iconic-add,
-  .iconic-drag,
-  .iconic-rule-icon,
-  .omnisearch-result__icon,
-  .workspace-tab-header-inner-close-button,
-  .workspace-left-content[aria-label*="Back"] {
-    inline-size: 24px;
-
-    svg {
-      opacity: 0;
-    }
-  }
+  // .iconic-add,
+  // .iconic-drag,
+  // .iconic-rule-icon,
+  // .omnisearch-result__icon,
+  // .workspace-tab-header-inner-close-button,
+  // .workspace-left-content[aria-label*="Back"] {
+  //   svg {
+  //     opacity: 0;
+  //   }
+  // }
 
   .iconic-rule-icon::after {
     font-size: var(--font-ui-small);
@@ -281,6 +278,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     content: "|||";
   }
 
+  // TODO: Fix these with the display none pattern
   .omnisearch-result__icon {
     &:has(.lucide-file)::before {
       font-size: var(--font-ui-smaller);
@@ -309,44 +307,217 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
   }
 
-  @include ascii-aria-icon("Uninstall", "*_*");
-  @include ascii-aria-icon("Options", "[*]");
-  @include ascii-aria-icon("Hotkeys", "[%]");
-  @include ascii-aria-icon("Customise this command", "[~]");
-  @include ascii-aria-icon("Customize this command", "[~]");
-  @include ascii-aria-icon("Export settings", ".>");
-  @include ascii-aria-icon("Donate", "<3");
-  @include ascii-aria-icon("Reload", "[R]");
-  @include ascii-aria-icon("Change sort order", "|'|");
-  @include ascii-aria-icon("folder", "./");
-  @include ascii-aria-icon("Restore default", "[0]");
-  @include ascii-aria-icon("Reset all settings to default", "[0]");
-  @include ascii-aria-icon("New note", "[N]");
-  @include ascii-aria-icon("Expand", "[+]");
-  @include ascii-aria-icon("Collapse", "[-]");
-  @include ascii-aria-icon("Auto-reveal current file", "[>]");
-  @include ascii-aria-icon("Auto-scroll to current section", "[>]");
-  @include ascii-aria-icon("Show search filter", "?/");
-  @include ascii-aria-icon("Bookmark the active tab", "[B]");
-  @include ascii-aria-icon("New bookmark group", "{+}");
+  // TODO: Function factory for whatever this is
+  .mod-settings {
+    div.installed-plugins-container
+      > div.setting-items
+      .setting-item-control
+      :last-of-type:not(.checkbox-container) {
+      &::after {
+        content: "*_*";
+      }
 
-  [aria-label*="New bookmark group"]::after,
-  [aria-label*="Collapse"]::after,
-  [aria-label*="Expand"]::after {
-    letter-spacing: -2px;
+      svg {
+        display: none;
+      }
+    }
+
+    div.installed-plugins-container
+      > div.setting-items
+      .setting-item-control
+      :nth-of-type(4n + 3):not(.checkbox-container, :last-of-type) {
+      &::after {
+        content: ":3";
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    div.installed-plugins-container
+      > div.setting-items
+      .setting-item-control
+      :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type) {
+      &::after {
+        content: "[%]";
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    div.installed-plugins-container
+      > div.setting-items
+      .setting-item-control
+      :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type) {
+      &::after {
+        content: "[*]";
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    .setting-restore-hotkey-button {
+      &::after {
+        content: "[0]";
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    .setting-add-hotkey-button {
+      &::after {
+        content: "[+]";
+      }
+
+      svg {
+        display: none;
+      }
+    }
   }
+
+  .style-settings-heading > div.setting-item-control :last-of-type {
+    &::after {
+      content: "-<";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .style-settings-heading
+    > div.setting-item-control
+    :nth-of-type(2n + 1):not(:last-of-type) {
+    &::after {
+      content: "[0]";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .setting-item-heading:not(.style-settings-heading)
+    > div.setting-item-control
+    :last-of-type {
+    &::after {
+      content: "./";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .setting-item-heading:not(.style-settings-heading)
+    > div.setting-item-control
+    :first-of-type {
+    &::after {
+      content: "[R]";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  div.setting-item-control > div:has(+ select + button) {
+    &::after {
+      content: "./";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  div.setting-item-control > div:has(+ input) {
+    &::after {
+      content: "[R]";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  div.setting-item-control > div:has(+ label.checkbox-container) {
+    &::after {
+      content: "[i]";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  div.setting-item-control > input + div,
+  div.setting-item-control > label.checkbox-container + div {
+    &::after {
+      content: "[0]";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .style-settings-collapse-indicator {
+    &::after {
+      content: ">";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  // @include ascii-aria-icon("Uninstall", "*_*");
+  // @include ascii-aria-icon("Options", "[*]");
+  // @include ascii-aria-icon("Hotkeys", "[%]");
+  // @include ascii-aria-icon("Customise this command", "[~]");
+  // @include ascii-aria-icon("Customize this command", "[~]");
+  // @include ascii-aria-icon("Export settings", ".>");
+  // @include ascii-aria-icon("Donate", "<3");
+  // @include ascii-aria-icon("Reload", "[R]");
+  // @include ascii-aria-icon("folder", "./");
+  // @include ascii-aria-icon("Restore default", "[0]");
+  // @include ascii-aria-icon("Reset all settings to default", "[0]");
+
+  // @include ascii-aria-icon("Change sort order", "|'|");
+  // @include ascii-aria-icon("New note", "[N]");
+  // @include ascii-aria-icon("Expand", "[+]");
+  // @include ascii-aria-icon("Collapse", "[-]");
+  // @include ascii-aria-icon("Auto-reveal current file", "[>]");
+  // @include ascii-aria-icon("Auto-scroll to current section", "[>]");
+  // @include ascii-aria-icon("Show search filter", "?/");
+  // @include ascii-aria-icon("Bookmark the active tab", "[B]");
+  // @include ascii-aria-icon("New bookmark group", "{+}");
+
+  // [aria-label*="New bookmark group"]::after,
+  // [aria-label*="Collapse"]::after,
+  // [aria-label*="Expand"]::after {
+  //   letter-spacing: -2px;
+  // }
 
   .nav-buttons-container {
     gap: 6px;
   }
 
   .search-input-clear-button {
-    &::before {
-      content: "x_x";
+    svg {
+      display: none;
     }
 
-    &::after {
-      opacity: 0;
+    &::before {
+      content: "x_x";
     }
   }
 }
