@@ -1,7 +1,6 @@
 // The code snippets in this file are derived from the Halcyon theme
-// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
-// TODO: Modal deserves its own file
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
   --icon-xs: 12.25px;
@@ -15,10 +14,6 @@ body {
   --icon-color-active: var(--interactive-accent);
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
-
-  .modal-content {
-    background-color: var(--modal-background);
-  }
 
   &:not(.is-mobile) .clickable-icon {
     opacity: var(--dimmed);
@@ -37,17 +32,9 @@ body {
     gap: 1px;
   }
 
-  &.is-mobile .view-actions {
-    justify-content: center;
-  }
-
   .view-header-nav-buttons .clickable-icon,
   .view-actions .clickable-icon {
     padding: 5px 10px;
-  }
-
-  .modal-title {
-    padding-block-end: 16px;
   }
 
   .graph-controls .clickable-icon,
@@ -89,6 +76,10 @@ body {
 }
 
 body.is-mobile {
+  .view-actions {
+    justify-content: center;
+  }
+
   div.setting-item {
     flex-direction: column;
     align-items: unset;
@@ -201,28 +192,29 @@ body.flexcyon-workspace-angled-layout {
   }
 }
 
-@mixin ascii-aria-icon($aria-label, $content) {
-  [aria-label*="#{$aria-label}"] {
-    inline-size: 24px;
+// @mixin ascii-aria-icon($aria-label, $content) {
+//   [aria-label*="#{$aria-label}"] {
+//     inline-size: 24px;
 
-    &::after {
-      font-size: var(--font-ui-small);
+//     &::after {
+//       font-size: var(--font-ui-small);
 
-      // letter-spacing: -0.75px;
-      content: "#{$content}";
-    }
+//       content: "#{$content}";
+//     }
 
-    svg {
-      opacity: 0;
-    }
-  }
-}
+//     svg {
+//       opacity: 0;
+//     }
+//   }
+// }
 
 // TODO: Redundant selector?
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   ) {
+  .search-input-clear-button,
+  .workspace-tab-header-inner-close-button,
   .modal-close-button {
     &::before {
       font-size: var(--font-ui-small);
@@ -235,11 +227,15 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 
   .search-input-container {
+    &::before,
     svg {
       display: none;
     }
 
     &::after {
+      position: absolute;
+      inset-block-end: 6px;
+      inset-inline-start: 0;
       font-size: var(--font-ui-small);
       content: "?/";
     }
@@ -248,17 +244,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   .modal.mod-settings .vertical-tab-content {
     padding-block-start: 48px;
   }
-
-  // .iconic-add,
-  // .iconic-drag,
-  // .iconic-rule-icon,
-  // .omnisearch-result__icon,
-  // .workspace-tab-header-inner-close-button,
-  // .workspace-left-content[aria-label*="Back"] {
-  //   svg {
-  //     opacity: 0;
-  //   }
-  // }
 
   .iconic-rule-icon::after {
     font-size: var(--font-ui-small);
@@ -279,33 +264,44 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 
   // TODO: Fix these with the display none pattern
-  .omnisearch-result__icon {
-    &:has(.lucide-file)::before {
-      font-size: var(--font-ui-smaller);
-      content: "''";
-    }
+  // .omnisearch-result__icon {
+  //   &:has(.lucide-file)::before {
+  //     font-size: var(--font-ui-smaller);
+  //     content: "''";
+  //   }
 
-    &:has(.lucide-file-text)::before {
-      font-size: var(--font-ui-smaller);
-      content: "``";
-    }
-  }
+  //   &:has(.lucide-file-text)::before {
+  //     font-size: var(--font-ui-smaller);
+  //     content: "``";
+  //   }
+  // }
 
-  .workspace-left-content[aria-label*="Back"] {
+  .modal-setting-nav-bar div {
     &::after {
-      font-size: var(--font-ui-small);
       content: "<";
     }
-  }
 
-  .workspace-tab-header-inner-close-button {
-    color: inherit;
-
-    &::after {
-      font-size: var(--font-ui-small);
-      content: "x_x";
+    svg {
+      display: none;
     }
   }
+
+  .view-actions button:last-of-type {
+    &::after {
+      content: "...";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  // .workspace-left-content[aria-label*="Back"] {
+  //   &::after {
+  //     font-size: var(--font-ui-small);
+  //     content: "<";
+  //   }
+  // }
 
   // TODO: Function factory for whatever this is
   .mod-settings {
@@ -440,7 +436,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
 
   div.setting-item-control > div:has(+ input) {
     &::after {
-      content: "[R]";
+      content: "[0]";
     }
 
     svg {
@@ -479,6 +475,52 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
   }
 
+  .workspace-tab-header-status-icon.mod-pinned {
+    &::after {
+      font-size: var(--font-ui-large);
+      font-weight: 900;
+      content: "!";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .workspace-tab-header-tab-list span {
+    &::after {
+      font-size: var(--font-ui-small);
+      content: "...";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .sidebar-toggle-button.mod-left div {
+    &::after {
+      font-size: var(--font-ui-small);
+      content: "{";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  // Unexplained cursed 180 degree rotation
+  .sidebar-toggle-button.mod-right div {
+    &::after {
+      font-size: var(--font-ui-small);
+      content: "{";
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
   // @include ascii-aria-icon("Uninstall", "*_*");
   // @include ascii-aria-icon("Options", "[*]");
   // @include ascii-aria-icon("Hotkeys", "[%]");
@@ -509,16 +551,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
 
   .nav-buttons-container {
     gap: 6px;
-  }
-
-  .search-input-clear-button {
-    svg {
-      display: none;
-    }
-
-    &::before {
-      content: "x_x";
-    }
   }
 }
 

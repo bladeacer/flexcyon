@@ -2527,9 +2527,6 @@ body {
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
 }
-body .modal-content {
-  background-color: var(--modal-background);
-}
 body:not(.is-mobile) .clickable-icon {
   opacity: var(--dimmed);
 }
@@ -2543,15 +2540,9 @@ body .clickable-icon:hover {
 body .nav-buttons-container {
   gap: 1px;
 }
-body.is-mobile .view-actions {
-  justify-content: center;
-}
 body .view-header-nav-buttons .clickable-icon,
 body .view-actions .clickable-icon {
   padding: 5px 10px;
-}
-body .modal-title {
-  padding-block-end: 16px;
 }
 body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
@@ -2583,6 +2574,9 @@ body span.flair.mod-pop {
   inline-size: max-content;
 }
 
+body.is-mobile .view-actions {
+  justify-content: center;
+}
 body.is-mobile div.setting-item {
   flex-direction: column;
   align-items: unset;
@@ -2657,21 +2651,34 @@ body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
   transform: skewX(7.5deg);
 }
 
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::before,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::before,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button::before {
   font-size: var(--font-ui-small);
   content: "x_x";
 }
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button svg {
   display: none;
 }
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::before,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-container::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-container svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-container::after {
+  position: absolute;
+  inset-block-end: 6px;
+  inset-inline-start: 0;
   font-size: var(--font-ui-small);
   content: "?/";
 }
@@ -2695,29 +2702,21 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .i
   font-size: var(--font-ui-small);
   content: "|||";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon:has(.lucide-file)::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon:has(.lucide-file)::before {
-  font-size: var(--font-ui-smaller);
-  content: "''";
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .omnisearch-result__icon:has(.lucide-file-text)::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .omnisearch-result__icon:has(.lucide-file-text)::before {
-  font-size: var(--font-ui-smaller);
-  content: "``";
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-left-content[aria-label*=Back]::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-left-content[aria-label*=Back]::after {
-  font-size: var(--font-ui-small);
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-setting-nav-bar div::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-setting-nav-bar div::after {
   content: "<";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button {
-  color: inherit;
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-setting-nav-bar div svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-setting-nav-bar div svg {
+  display: none;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::after {
-  font-size: var(--font-ui-small);
-  content: "x_x";
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .view-actions button:last-of-type::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .view-actions button:last-of-type::after {
+  content: "...";
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .view-actions button:last-of-type svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .view-actions button:last-of-type svg {
+  display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :last-of-type:not(.checkbox-container)::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :last-of-type:not(.checkbox-container)::after {
@@ -2809,7 +2808,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) di
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > div:has(+ input)::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > div:has(+ input)::after {
-  content: "[R]";
+  content: "[0]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > div:has(+ input) svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > div:has(+ input) svg {
@@ -2843,17 +2842,46 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .style-settings-c
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .style-settings-collapse-indicator svg {
   display: none;
 }
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-status-icon.mod-pinned::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-status-icon.mod-pinned::after {
+  content: "!";
+  font-weight: 900;
+  font-size: var(--font-ui-large);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-status-icon.mod-pinned svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-status-icon.mod-pinned svg {
+  display: none;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-tab-list span::after {
+  content: "...";
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-tab-list span svg {
+  display: none;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div::after {
+  content: "{";
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div svg {
+  display: none;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div::after {
+  content: "{";
+  font-size: var(--font-ui-small);
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div svg {
+  display: none;
+}
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .nav-buttons-container,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .nav-buttons-container {
   gap: 6px;
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button svg {
-  display: none;
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::before {
-  content: "x_x";
 }
 
 body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon + div + div.workspace-tab-header-status-container {
@@ -13092,6 +13120,13 @@ body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-active-tab-c
 }
 
 /* obsi-snip-coll end */
+body .modal-title {
+  padding-block-end: 16px;
+}
+body .modal-content {
+  background-color: var(--modal-background);
+}
+
 /* Modifications for alternate file tree plugin */
 body.theme-light,
 body.theme-dark {
