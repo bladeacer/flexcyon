@@ -213,7 +213,6 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     [class*="iconic"]
   ) {
-  .search-input-clear-button,
   .workspace-tab-header-inner-close-button,
   .modal-close-button {
     &::before {
@@ -222,6 +221,17 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
 
     svg {
+      display: none;
+    }
+  }
+
+  .search-input-clear-button {
+    &::before {
+      font-size: var(--font-ui-small);
+      content: "x_x";
+    }
+
+    &::after {
       display: none;
     }
   }

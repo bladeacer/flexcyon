@@ -2651,21 +2651,26 @@ body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
   transform: skewX(7.5deg);
 }
 
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::before,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::before,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::before,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button::before {
   font-size: var(--font-ui-small);
   content: "x_x";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button svg,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg,
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button svg {
+  display: none;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::before,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::before {
+  font-size: var(--font-ui-small);
+  content: "x_x";
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::after {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::before,
@@ -2844,9 +2849,9 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .s
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-status-icon.mod-pinned::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-status-icon.mod-pinned::after {
-  content: "!";
-  font-weight: 900;
   font-size: var(--font-ui-large);
+  font-weight: 900;
+  content: "!";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-status-icon.mod-pinned svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-status-icon.mod-pinned svg {
@@ -2854,8 +2859,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-tab-list span::after {
-  content: "...";
   font-size: var(--font-ui-small);
+  content: "...";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-tab-list span svg {
@@ -2863,8 +2868,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div::after {
-  content: "{";
   font-size: var(--font-ui-small);
+  content: "{";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div svg {
@@ -2872,8 +2877,8 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .s
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div::after {
-  content: "{";
   font-size: var(--font-ui-small);
+  content: "{";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div svg {
