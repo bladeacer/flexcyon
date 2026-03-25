@@ -6,18 +6,36 @@ export default {
     "stylelint-use-logical",
     "stylelint-plugin-defensive-css",
     "stylelint-high-performance-animation",
-    "stylelint-no-unsupported-browser-features"
+    "stylelint-no-unsupported-browser-features",
+    "stylelint-scales"
   ],
   rules: {
     "prettier/prettier": true,
+
     "csstools/use-logical": ("always" || true) || ("ignore" || false || null),
+
     "selector-class-pattern": null,
     "selector-type-no-unknown": null,
+
     "custom-property-pattern": null,
     "no-descending-specificity": null,
     "color-function-alias-notation": "without-alpha",
     "color-function-notation": "modern",
     "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh"],
+
+    "scales/font-sizes": [
+      [
+        { "scale": [0, 0.5, 0.75, 3], "units": ["px"]}
+      ]
+    ],
+    "scales/sizes": [
+      [
+        { "scale": [0, 1, 2, 8, 16, 24, 32, 40, 48], "units": ["em", "px"]}
+      ]
+    ],
+    "scales/line-heights": [0.21, 0.51, 0.81, 1, 1.21, 1.31, 1.41, 1.51, 1.61],
+    "scales/font-weights": [500, 525, 900],
+
     // Plugins
     "plugin/no-low-performance-animation-properties": true,
     "plugin/no-unsupported-browser-features": [

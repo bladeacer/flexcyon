@@ -2106,7 +2106,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::afte
   margin-inline-start: -1.5px;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1;
   color: var(--color-cyan);
   text-align: center;
   content: "i";
@@ -2557,10 +2557,10 @@ body .tree-item:not(.graph-control-section) {
   padding: var(--flexcyon-tree-item-verti-padding) var(--flexcyon-tree-item-horiz-padding);
 }
 body .text-snippets-class > * {
-  inline-size: min(50em, 50vw);
+  inline-size: min(48em, 50vw);
 }
 body .text-snippets-class > * > textarea {
-  inline-size: min(30em, 35vw);
+  inline-size: min(32em, 35vw);
   margin-block: 16px;
 }
 body [aria-label^="Collapse results"] {
@@ -2585,13 +2585,10 @@ body.is-mobile div.setting-item .setting-item-control {
   align-items: unset;
   justify-content: unset;
 }
-body.is-mobile .text-snippets-class > * {
-  inline-size: 50%;
-  block-size: max-content;
-}
+body.is-mobile .text-snippets-class > *,
 body.is-mobile .text-snippets-class > * > textarea {
   inline-size: 50%;
-  block-size: 100px;
+  block-size: max-content;
 }
 
 body.flexcyon-flex-max-mode div.side-dock-actions,
@@ -3785,7 +3782,7 @@ div.callout[data-callout-metadata*=tategaki] div.callout-content {
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   letter-spacing: var(--font-ui-large);
   writing-mode: vertical-rl;
@@ -3817,7 +3814,7 @@ div.callout[data-callout-metadata*=tategaki] div.callout-content h6 {
 div.callout[data-callout*=tategaki] div.callout-content :is(h1, h2, h3, h4, h5, h6),
 div.callout[data-callout-metadata*=tategaki] div.callout-content :is(h1, h2, h3, h4, h5, h6) {
   margin-block-start: 0;
-  line-height: 1.667;
+  line-height: 1.61;
 }
 
 /* obsi-snip-coll end */
@@ -3830,7 +3827,7 @@ div.callout[data-callout-metadata*=vert-ltr] div.callout-content {
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   letter-spacing: var(--font-ui-large);
   writing-mode: vertical-lr;
@@ -3863,7 +3860,7 @@ div.callout[data-callout*=vert-ltr] div.callout-content :is(h1, h2, h3, h4, h5, 
 div.callout[data-callout-metadata*=vert-ltr] div.callout-content :is(h1, h2, h3, h4, h5, h6) {
   min-block-size: auto !important;
   margin-block-start: 0;
-  line-height: 1.667;
+  line-height: 1.61;
 }
 
 /* obsi-snip-coll end */
@@ -8543,7 +8540,7 @@ body.flexcyon-md-file-tree-style .nav-folder-children::before {
 body.flexcyon-md-file-tree-style .tree-item.nav-file::before,
 body.flexcyon-md-file-tree-style .tree-item.nav-folder::before {
   inset-block-start: 50%;
-  inline-size: 20px;
+  inline-size: 24px;
   block-size: 1px;
   margin-inline-start: -3px;
   transform: translate(0, -50%);
@@ -8917,7 +8914,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .mark
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
   z-index: 2;
-  block-size: 30px;
+  block-size: 32px;
   padding: 0 8px;
   font-family: var(--font-interface);
   font-size: var(--cm-font-size);
@@ -8931,7 +8928,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .mark
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
   z-index: 2;
-  block-size: 30px;
+  block-size: 32px;
   padding: 0 8px;
   font-family: var(--font-interface);
   font-size: var(--cm-font-size);
@@ -8982,7 +8979,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor 
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
-  block-size: 30px;
+  block-size: 32px;
   padding: 0 8px;
   color: var(--text-accent);
   content: var(--flexcyon-vim-insert-text);
@@ -8991,7 +8988,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor 
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
-  block-size: 30px;
+  block-size: 32px;
   padding: 0 8px;
   font-family: var(--font-interface);
   color: var(--color-purple);
@@ -9029,7 +9026,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller:not(.cm-vim
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
-  block-size: 30px;
+  block-size: 32px;
   padding-inline-start: 4px;
   content: var(--flexcyon-vim-insert-text);
 }
@@ -9037,7 +9034,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable .cm-editor .cm-scroller.cm-vimMode:
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
-  block-size: 30px;
+  block-size: 32px;
   padding-inline-start: 4px;
   content: var(--flexcyon-vim-normal-text);
 }
@@ -9054,7 +9051,7 @@ body.flexcyon-status-style-angled .cm-panels .cm-panel {
 body.flexcyon-status-style-card .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
 body.flexcyon-status-style-card .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   margin: 0 8px;
-  line-height: 30px;
+  line-height: 32px;
   border: 2px solid var(--color-base-20);
   border-radius: var(--flexcyon-callout-radix);
 }
@@ -9425,7 +9422,7 @@ body.flexcyon-ascii-enable .reveal .pause-overlay::before,
 body.flexcyon-ascii-enable div.empty-state-container::before {
   display: inline;
   font-family: var(--flexcyon-new-tab-font-group);
-  font-size: min(5vw - 3.25px, var(--flexcyon-ascii-max-font-size));
+  font-size: min(5vw - 3px, var(--flexcyon-ascii-max-font-size));
   font-weight: bold;
   line-height: var(--flexcyon-ascii-line-height);
   text-align: var(--flexcyon-ascii-alignment);
@@ -9442,14 +9439,14 @@ body.flexcyon-ascii-enable .reveal .pause-overlay::before {
   max-inline-size: max-content;
   max-block-size: max-content;
   margin: auto;
-  line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
+  line-height: calc(var(--flexcyon-ascii-line-height) + 0.21);
 }
 
 body.is-mobile.flexcyon-flex-max-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before,
 body.is-mobile.flexcyon-ascii-enable .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
   margin-block-end: 1rem;
   font-size: min(3.5vw - 3px, var(--flexcyon-ascii-max-font-size));
-  line-height: 0.8;
+  line-height: 0.81;
 }
 
 /* obsi-snip-coll end */
@@ -12448,13 +12445,13 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   writing-mode: vertical-rl;
 }
 .app-container .view-content:has(.tategaki) .markdown-preview-section div > :is(h1, h2, h3, h4, h5, h6) {
   margin-block-start: 0;
-  line-height: 1.667;
+  line-height: 1.61;
 }
 .app-container .view-content:has(.tategaki) .markdown-preview-section .footnotes p {
   text-indent: 0;
@@ -12471,13 +12468,13 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   writing-mode: vertical-lr;
 }
 .app-container .view-content:has(.vertical-ltr) .markdown-preview-section div > :is(h1, h2, h3, h4, h5, h6) {
   margin-block-start: 0;
-  line-height: 1.667;
+  line-height: 1.61;
 }
 .app-container .view-content:has(.vertical-ltr) .markdown-preview-section .footnotes p {
   text-indent: 0;
@@ -12939,7 +12936,7 @@ body .setting-item {
 }
 body .setting-item.setting-item-heading .setting-item-name {
   padding-inline-end: 4px;
-  line-height: 1.5;
+  line-height: 1.51;
 }
 body .setting-item + div > .setting-item-heading,
 body .setting-item + .setting-item-heading {
@@ -14096,7 +14093,7 @@ body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
   color: var(--text-muted);
 }
 .workspace-leaf-content[data-type=search] .search-results-info .search-results-result-count {
-  font-size: calc(var(--font-ui-small) - 0.809px);
+  font-size: calc(var(--font-ui-small) - 0.75px);
   color: var(--text-normal);
   opacity: 1;
 }
@@ -14188,8 +14185,8 @@ body {
 }
 
 .slides-close-btn svg.svg-icon {
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: 32px;
+  block-size: 32px;
 }
 
 .reveal .pause-overlay {

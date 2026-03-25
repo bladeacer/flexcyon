@@ -43,7 +43,7 @@ div.callout[data-callout-metadata*="tategaki"] {
     margin: auto;
     overflow: scroll;
     overscroll-behavior: contain;
-    line-height: 1.667;
+    line-height: 1.61;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
     writing-mode: vertical-rl;
@@ -74,7 +74,7 @@ div.callout[data-callout-metadata*="tategaki"] {
 
     :is(h1, h2, h3, h4, h5, h6) {
       margin-block-start: 0;
-      line-height: 1.667;
+      line-height: 1.61;
     }
   }
 }
@@ -91,7 +91,7 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     margin: auto;
     overflow: scroll;
     overscroll-behavior: contain;
-    line-height: 1.667;
+    line-height: 1.61;
     text-indent: 1rem;
     letter-spacing: var(--font-ui-large);
     writing-mode: vertical-lr;
@@ -123,7 +123,7 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     :is(h1, h2, h3, h4, h5, h6) {
       min-block-size: auto !important;
       margin-block-start: 0;
-      line-height: 1.667;
+      line-height: 1.61;
     }
   }
 }

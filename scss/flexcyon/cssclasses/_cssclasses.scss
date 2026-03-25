@@ -8,13 +8,13 @@
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   writing-mode: vertical-rl;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
     margin-block-start: 0;
-    line-height: 1.667;
+    line-height: 1.61;
   }
 
   .footnotes p {
@@ -34,13 +34,13 @@
   margin: auto;
   overflow: scroll;
   overscroll-behavior: contain;
-  line-height: 1.667;
+  line-height: 1.61;
   text-indent: 1rem;
   writing-mode: vertical-lr;
 
   div > :is(h1, h2, h3, h4, h5, h6) {
     margin-block-start: 0;
-    line-height: 1.667;
+    line-height: 1.61;
   }
 
   .footnotes p {

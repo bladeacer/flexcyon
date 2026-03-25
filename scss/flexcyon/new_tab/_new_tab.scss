@@ -72,7 +72,7 @@ body.flexcyon-ascii-enable {
     &::before {
       display: inline;
       font-family: var(--flexcyon-new-tab-font-group);
-      font-size: min(calc(5vw - 3.25px), var(--flexcyon-ascii-max-font-size));
+      font-size: min(calc(5vw - 3px), var(--flexcyon-ascii-max-font-size));
       font-weight: bold;
       line-height: var(--flexcyon-ascii-line-height);
       text-align: var(--flexcyon-ascii-alignment);
@@ -91,7 +91,7 @@ body.flexcyon-ascii-enable {
       max-inline-size: max-content;
       max-block-size: max-content;
       margin: auto;
-      line-height: calc(var(--flexcyon-ascii-line-height) + 0.25);
+      line-height: calc(var(--flexcyon-ascii-line-height) + 0.21);
     }
   }
 }
@@ -102,7 +102,7 @@ body.is-mobile.flexcyon-ascii-enable {
     > div.empty-state-container::before {
       margin-block-end: 1rem;
       font-size: min(calc(3.5vw - 3px), var(--flexcyon-ascii-max-font-size));
-      line-height: 0.8;
+      line-height: 0.81;
     }
   }
 }

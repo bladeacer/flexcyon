@@ -39,5 +39,8 @@
     "stylelint-plugin-defensive-css": "^1.0.4",
     "stylelint-prettier": "^5.0.3",
     "stylelint-use-logical": "^2.1.2"
+  },
+  "dependencies": {
+    "stylelint-scales": "^5.0.0"
   }
 }

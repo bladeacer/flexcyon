@@ -30,7 +30,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
     z-index: 2;
-    block-size: 30px;
+    block-size: 32px;
     padding: 0 8px;
     font-family: var(--font-interface);
     font-size: var(--cm-font-size);
@@ -47,7 +47,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
     z-index: 2;
-    block-size: 30px;
+    block-size: 32px;
     padding: 0 8px;
     font-family: var(--font-interface);
     font-size: var(--cm-font-size);
@@ -108,7 +108,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
     position: fixed;
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
-    block-size: 30px;
+    block-size: 32px;
     padding: 0 8px;
     color: var(--text-accent);
     content: var(--flexcyon-vim-insert-text);
@@ -120,7 +120,7 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
     position: fixed;
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
-    block-size: 30px;
+    block-size: 32px;
     padding: 0 8px;
     font-family: var(--font-interface);
     color: var(--color-purple);
@@ -175,7 +175,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable {
     position: fixed;
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
-    block-size: 30px;
+    block-size: 32px;
     padding-inline-start: 4px;
     content: var(--flexcyon-vim-insert-text);
   }
@@ -186,7 +186,7 @@ body.is-mobile.flexcyon-vim-mode-text-enable {
     position: fixed;
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
     inset-inline-start: var(--flexcyon-vim-left-positioning);
-    block-size: 30px;
+    block-size: 32px;
     padding-inline-start: 4px;
     content: var(--flexcyon-vim-normal-text);
   }
@@ -216,7 +216,7 @@ body.flexcyon-status-style-card {
     .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
     .cm-sizer:has(+ .cm-vimCursorLayer)::before {
     margin: 0 8px;
-    line-height: 30px;
+    line-height: 32px;
     border: 2px solid var(--color-base-20);
     border-radius: var(--flexcyon-callout-radix);
   }

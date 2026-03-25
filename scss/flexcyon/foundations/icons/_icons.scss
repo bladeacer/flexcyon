@@ -54,11 +54,11 @@ body {
   }
 
   .text-snippets-class > * {
-    inline-size: min(50em, 50vw);
+    inline-size: min(48em, 50vw);
   }
 
   .text-snippets-class > * > textarea {
-    inline-size: min(30em, 35vw);
+    inline-size: min(32em, 35vw);
     margin-block: 16px;
   }
 
@@ -90,14 +90,10 @@ body.is-mobile {
     }
   }
 
-  .text-snippets-class > * {
-    inline-size: 50%;
-    block-size: max-content;
-  }
-
+  .text-snippets-class > *,
   .text-snippets-class > * > textarea {
     inline-size: 50%;
-    block-size: 100px;
+    block-size: max-content;
   }
 }
 
