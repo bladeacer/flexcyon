@@ -18,7 +18,7 @@ body {
 body.flexcyon-flex-max-mode,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
-    padding-block-start: 6px;
+    padding-block-start: 4px;
     border-block-start: unset;
   }
 
@@ -58,11 +58,11 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    inset-inline-start: 75px;
+    inset-inline-start: 48px;
   }
 
   .cm-panels .cm-panel {
-    padding-block-start: 5px;
+    padding-block-start: 4px;
     font-weight: 500;
     background-color: var(--color-base-00);
   }
@@ -98,7 +98,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
 
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
   .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
-    padding-block-start: 6px;
+    padding-block-start: 4px;
     border-block-start: unset;
   }
 
@@ -129,11 +129,11 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color {
 
   .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
     inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    inset-inline-start: 75px;
+    inset-inline-start: 48px;
   }
 
   .cm-panels .cm-panel {
-    padding-block-start: 5px;
+    padding-block-start: 4px;
     font-weight: 500;
     background-color: var(--color-base-00);
   }
@@ -230,6 +230,6 @@ body.flexcyon-status-style-card {
   }
 
   div:has(.cm-vim-panel) + .status-bar {
-    margin-block-end: 50px;
+    margin-block-end: 48px;
   }
 }

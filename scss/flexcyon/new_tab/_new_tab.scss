@@ -87,7 +87,7 @@ body.flexcyon-ascii-enable {
   .reveal .pause-overlay {
     &::before {
       position: absolute;
-      inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 6px * 2 + 4px * 2);
+      inset: 0 0 calc(16px * 2 + 4px * 2) calc(16px + 4px * 2 + 4px * 2);
       max-inline-size: max-content;
       max-block-size: max-content;
       margin: auto;

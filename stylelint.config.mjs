@@ -35,6 +35,11 @@ export default {
     ],
     "scales/line-heights": [0.21, 0.51, 0.81, 1, 1.21, 1.31, 1.41, 1.51, 1.61],
     "scales/font-weights": [500, 525, 900],
+    "scales/space": [
+      [
+        {"scale": [0, 1, 2, 4, 8, 12, 16, 24, 32, 40, 48], "units": ["px"]}
+      ]
+    ],
 
     // Plugins
     "plugin/no-low-performance-animation-properties": true,

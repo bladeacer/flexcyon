@@ -19,7 +19,7 @@ body.theme-light {
 body {
   .oz-folder-contents {
     padding: 4px 16px;
-    margin-inline-start: 18px !important;
+    margin-inline-start: 16px !important;
   }
 
   .oz-folder-contents:not(:has(> .treeview)) {
@@ -41,7 +41,7 @@ body {
   }
 
   div.oz-file-tree-header {
-    padding: 8px 5px;
+    padding: 8px 4px;
     margin-block-start: 0;
     text-align: var(--flexcyon-top-actions-alignment);
     background-color: var(--color-base-00);
@@ -178,7 +178,7 @@ body.flexcyon-oz-alternate-folder-count {
     div.oz-folder-count {
       span.oz-nav-file-tag {
         display: inline;
-        margin-block-start: 0.5px;
+        margin-block-start: 0;
         font-weight: inherit;
         text-align: start;
         text-transform: none;

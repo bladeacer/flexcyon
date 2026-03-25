@@ -37,9 +37,9 @@ body:not(.css-settings-manager) .app-container::after {
   justify-content: center;
   inline-size: fit-content;
   max-inline-size: 85%;
-  padding: 20px;
+  padding: 16px;
   margin: 0 auto;
-  margin-block-end: 50px;
+  margin-block-end: 48px;
   font-size: var(--font-ui-large);
   content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
   background-color: var(--background-primary);

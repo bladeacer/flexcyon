@@ -128,7 +128,7 @@ body.flexcyon-display-os .mod-stacked .view-actions::before {
 }
 
 body.flexcyon-display-os .titlebar::before {
-  padding-block-start: 11.5px;
+  padding-block-start: 12px;
   padding-inline-start: calc(5 * var(--flexcyon-os-detail-padding-r));
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
@@ -161,7 +161,7 @@ body.flexcyon-display-os:not(.show-view-header)
   .workspace-tab-container
   .mod-active
   .workspace-leaf-content {
-  padding-block-start: 6px;
+  padding-block-start: 4px;
 }
 
 @mixin os-wrapper($device-selector, $desc) {

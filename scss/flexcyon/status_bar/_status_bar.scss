@@ -17,7 +17,7 @@ body {
   --status-bar-position: absolute;
 
   div:has(.cm-vim-panel) + .status-bar {
-    margin-block-end: 36px;
+    margin-block-end: 32px;
   }
 }
 
@@ -76,7 +76,7 @@ body.flexcyon-status-text-mode {
   inset-inline-end: 0;
   z-index: 2;
   inline-size: max-content;
-  padding: 8px 10px;
+  padding: 8px;
   font-size: var(--status-bar-font-size);
   user-select: none;
   content: var(--flexcyon-status-hide-until-hover-text);
@@ -100,7 +100,7 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(
 
 %centre-div-status-bar {
   position: absolute;
-  inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+  inset-inline: calc(16px + 4px * 2 + 4px * 2) 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;
@@ -198,7 +198,7 @@ body:not(.is-fullscreen) .status-bar {
 
 body.flexcyon-status-style-card {
   .status-bar {
-    inset-inline-end: 10px;
+    inset-inline-end: 8px;
     gap: 8px;
     margin: 4px 8px;
     background-color: transparent;
@@ -221,7 +221,7 @@ body.flexcyon-status-style-card {
 body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type="empty"])),
 body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type="empty"])) {
   .status-bar::before {
-    inset-inline-end: 28px;
+    inset-inline-end: 24px;
   }
 }
 
@@ -277,7 +277,7 @@ body.flexcyon-status-style-pl10k {
 
     :first-child:empty,
     :first-child.status-bar-item {
-      padding-inline-start: 6px;
+      padding-inline-start: 4px;
       border-start-start-radius: 16px;
       border-end-start-radius: 16px;
     }

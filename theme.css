@@ -1299,7 +1299,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :has(+ :last-chil
 body.flexcyon-flex-max-mode .view-header-title,
 body.flexcyon-workspace-pl10k-layout .view-header-title {
   padding: var(--flexcyon-mode-view-header-title-verti-padding) var(--flexcyon-mode-view-header-title-horiz-padding);
-  margin-inline-start: -1.5px;
+  margin-inline-start: -1px;
   background-color: var(--color-base-05);
   border-radius: var(--flexcyon-callout-radix);
   border-start-start-radius: 0;
@@ -1330,7 +1330,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent .view-header-brea
   position: relative;
   inline-size: inherit;
   block-size: inherit;
-  padding: 10px 6px;
+  padding: 8px 4px;
   color: transparent;
   content: "e";
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
@@ -1456,7 +1456,7 @@ body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="!"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="!"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1489,7 +1489,7 @@ body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=">"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=">"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1522,7 +1522,7 @@ body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1555,7 +1555,7 @@ body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1588,7 +1588,7 @@ body.flexcyon-flex-max-mode li[data-task="."] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="."]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="."] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1621,7 +1621,7 @@ body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1654,7 +1654,7 @@ body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1687,7 +1687,7 @@ body.flexcyon-flex-max-mode li[data-task="*"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="*"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="*"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1720,7 +1720,7 @@ body.flexcyon-flex-max-mode li[data-task="'"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="'"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1753,7 +1753,7 @@ body.flexcyon-flex-max-mode li[data-task="@"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="@"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="@"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1786,7 +1786,7 @@ body.flexcyon-flex-max-mode li[data-task="%"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="%"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1819,7 +1819,7 @@ body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1852,7 +1852,7 @@ body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1885,7 +1885,7 @@ body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -1918,7 +1918,7 @@ body.flexcyon-flex-max-mode li[data-task="~"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="~"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -2067,7 +2067,7 @@ body.flexcyon-flex-max-mode li[data-task='"'] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task='"']:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task='"'] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -2091,7 +2091,7 @@ body.flexcyon-flex-max-mode li[data-task=i] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
@@ -2103,7 +2103,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
   inset-block-start: -0.075rem;
   padding-block-start: 10%;
-  margin-inline-start: -1.5px;
+  margin-inline-start: -1px;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
   font-weight: 900;
   line-height: 1;
@@ -2123,7 +2123,7 @@ body.flexcyon-flex-max-mode li[data-task=s] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=s]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=s] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=s] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-purple);
   border: none;
@@ -2143,7 +2143,7 @@ body.flexcyon-flex-max-mode li[data-task=c] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=c]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=c] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=c] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-cyan);
   border: none;
@@ -2163,7 +2163,7 @@ body.flexcyon-flex-max-mode li[data-task=h] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=h]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=h] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=h] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-blue);
   border: none;
@@ -2183,7 +2183,7 @@ body.flexcyon-flex-max-mode li[data-task=m] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=m]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=m] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=m] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-pink);
   border: none;
@@ -2203,7 +2203,7 @@ body.flexcyon-flex-max-mode li[data-task=t] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=t]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=t] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=t] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-green);
   border: none;
@@ -2223,7 +2223,7 @@ body.flexcyon-flex-max-mode li[data-task=r] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=r]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=r] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=r] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-yellow);
   border: none;
@@ -2243,7 +2243,7 @@ body.flexcyon-flex-max-mode li[data-task=d] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=d]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-orange);
   border: none;
@@ -2263,7 +2263,7 @@ body.flexcyon-flex-max-mode li[data-task=l] > p > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=l]:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=l] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=l] > p > input:checked {
-  padding-inline-end: 6px;
+  padding-inline-end: 4px;
   font-weight: 900;
   background-color: var(--color-red);
   border: none;
@@ -2542,7 +2542,7 @@ body .nav-buttons-container {
 }
 body .view-header-nav-buttons .clickable-icon,
 body .view-actions .clickable-icon {
-  padding: 5px 10px;
+  padding: 4px 8px;
 }
 body .graph-controls .clickable-icon,
 body .clickable-icon.side-dock-ribbon-action {
@@ -2679,7 +2679,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .s
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-container::after {
   position: absolute;
-  inset-block-end: 6px;
+  inset-block-end: 4px;
   inset-inline-start: 0;
   font-size: var(--font-ui-small);
   content: "?/";
@@ -2883,7 +2883,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .s
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .nav-buttons-container,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .nav-buttons-container {
-  gap: 6px;
+  gap: 4px;
 }
 
 body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon + div + div.workspace-tab-header-status-container {
@@ -2939,7 +2939,7 @@ body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
   border-block-end: none;
 }
 .graph-control-section .tree-item-self {
-  padding: var(--graph-control-verti-padding) 8px var(--graph-control-verti-padding) 14px;
+  padding: var(--graph-control-verti-padding) 8px var(--graph-control-verti-padding) 12px;
 }
 .graph-control-section .tree-item-children .graph-color-button-container,
 .graph-control-section .tree-item-children .graph-color-groups-container,
@@ -3030,13 +3030,13 @@ body {
 }
 body .backlink-pane .search-result-container,
 body .outgoing-link-pane .search-result-container {
-  padding: 1.5px 3px;
+  padding: 1px 2px;
 }
 body .backlink-pane .tree-item-inner-text,
 body .backlink-pane .tree-item-inner-subtext,
 body .outgoing-link-pane .tree-item-inner-text,
 body .outgoing-link-pane .tree-item-inner-subtext {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 body .backlink-pane .tree-item-inner,
 body .backlink-pane .tree-item-icon,
@@ -3046,7 +3046,7 @@ body .outgoing-link-pane .tree-item-icon {
 }
 body .backlink-pane .search-empty-state,
 body .outgoing-link-pane .search-empty-state {
-  padding-inline-start: 6px;
+  padding-inline-start: 4px;
 }
 body .backlink-pane .search-result-file-title,
 body .outgoing-link-pane .search-result-file-title {
@@ -5132,8 +5132,8 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
 }
 .markdown-reading-view .callout[data-callout*="$pop"] .callout-title,
 .markdown-reading-view .callout[data-callout-metadata*="$pop"] .callout-title {
-  margin-block-start: 3px;
-  margin-inline-start: 22px;
+  margin-block-start: 2px;
+  margin-inline-start: 24px;
 }
 .markdown-reading-view .callout[data-callout*="$pop"]:hover::before,
 .markdown-reading-view .callout[data-callout-metadata*="$pop"]:hover::before {
@@ -6525,7 +6525,7 @@ div.callout[data-callout-metadata*=center-img] {
 }
 div.callout[data-callout*=center-img] img,
 div.callout[data-callout-metadata*=center-img] img {
-  inset-inline: 36px 0;
+  inset-inline: 32px 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;
@@ -6545,7 +6545,7 @@ div.callout[data-callout-metadata*=center-img] img {
 /* obsi-snip-coll end */
 /* obsi-snip-coll start: tui-callout */
 .markdown-rendered:has(:is([data-callout*=tui], [data-callout-metadata*=tui]):not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain]))) {
-  margin-block-start: -25px;
+  margin-block-start: -24px;
 }
 
 body.flexcyon-tui-no-icons .callout[data-callout*=tui]:not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain])) .callout-icon,
@@ -7673,7 +7673,7 @@ body:not(.show-ribbon) .sidebar-toggle-button.mod-left {
 }
 
 body:not(.show-ribbon).flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .sidebar-toggle-button.mod-left {
-  padding-block-start: 9px;
+  padding-block-start: 8px;
 }
 
 body {
@@ -7689,13 +7689,13 @@ body .sidebar-toggle-button.mod-left {
   transform: translateY(-4px);
 }
 body .sidebar-toggle-button.mod-right {
-  padding-block-start: 9px;
+  padding-block-start: 8px;
 }
 body .workspace-tab-header {
   padding: 0 4px;
 }
 body .workspace-tab-header-inner {
-  padding: 2px 9px;
+  padding: 2px 8px;
 }
 body .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active) > .workspace-tab-header-inner {
   opacity: 1;
@@ -7711,16 +7711,16 @@ body .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-he
 body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   padding-inline-start: 0;
   margin-block-start: 0;
-  margin-inline-start: -10px;
+  margin-inline-start: -8px;
 }
 body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
-  padding-inline-start: 10px;
+  padding-inline-start: 8px;
 }
 body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
   padding-inline-end: 0;
 }
 body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
-  padding: 3px 6px 0;
+  padding: 2px 4px 0;
 }
 body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
   gap: 1px;
@@ -7743,7 +7743,7 @@ body.flexcyon-workspace-card-layout .workspace-leaf-content {
   border-radius: var(--flexcyon-callout-radix);
 }
 body.flexcyon-workspace-card-layout .workspace-leaf-content:not([data-type=markdown]) {
-  margin: 10px;
+  margin: 8px;
 }
 body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
   border: 2px solid var(--color-base-20);
@@ -7765,7 +7765,7 @@ body.flexcyon-workspace-card-layout .workspace-tabs.mod-active .workspace-tab-he
   border: 2px solid var(--text-on-accent);
 }
 body.flexcyon-workspace-card-layout .workspace-split.mod-right-split :last-child .workspace-tab-container {
-  margin-block-end: 38px;
+  margin-block-end: 40px;
 }
 body.flexcyon-workspace-card-layout .titlebar {
   margin-block-start: 4px;
@@ -7776,7 +7776,7 @@ body.flexcyon-workspace-card-layout .workspace-ribbon {
   border-inline-end: none;
 }
 body.flexcyon-workspace-card-layout .workspace-ribbon.mod-left {
-  margin-block-start: 50px;
+  margin-block-start: 48px;
   border: none;
 }
 body.flexcyon-workspace-card-layout .workspace-ribbon.mod-left::before {
@@ -7793,7 +7793,7 @@ body.flexcyon-workspace-card-layout .side-dock-actions {
 }
 body.flexcyon-workspace-card-layout .workspace-split .workspace-tabs .workspace-tab-header-container-inner > .workspace-tab-header,
 body.flexcyon-workspace-card-layout .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
-  padding: 3px;
+  padding: 2px;
   transform: translateX(8px);
 }
 
@@ -7830,7 +7830,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7843,7 +7843,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7856,7 +7856,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7869,7 +7869,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7882,7 +7882,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7895,7 +7895,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7908,7 +7908,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7921,7 +7921,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7934,7 +7934,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7947,7 +7947,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7960,7 +7960,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7973,7 +7973,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7986,7 +7986,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -7999,7 +7999,7 @@ body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext 
 }
 body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8013,7 +8013,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8026,7 +8026,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8039,7 +8039,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8052,7 +8052,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8065,7 +8065,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8078,7 +8078,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8091,7 +8091,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8104,7 +8104,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8117,7 +8117,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8130,7 +8130,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8143,7 +8143,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8156,7 +8156,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8169,7 +8169,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8182,7 +8182,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   position: absolute;
-  inset-block-start: 44px;
+  inset-block-start: 40px;
   inset-inline-start: 32px;
   z-index: 1;
   padding: 0 8px;
@@ -8192,14 +8192,14 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 }
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .sidebar-toggle-button.mod-left {
-  padding-block-start: 7px;
+  padding-block-start: 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
   border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading {
   position: absolute;
-  inset-block-start: -15px;
+  inset-block-start: -16px;
   inset-inline-start: 32px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading * {
@@ -8542,11 +8542,11 @@ body.flexcyon-md-file-tree-style .tree-item.nav-folder::before {
   inset-block-start: 50%;
   inline-size: 24px;
   block-size: 1px;
-  margin-inline-start: -3px;
+  margin-inline-start: -2px;
   transform: translate(0, -50%);
 }
 body.flexcyon-md-file-tree-style .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
-  inset-block-end: 6px;
+  inset-block-end: 4px;
 }
 body.flexcyon-md-file-tree-style .tree-item-children.nav-folder-children {
   border-inline-start-width: 0;
@@ -8829,7 +8829,7 @@ body.flexcyon-display-os .mod-stacked .view-actions::before {
 }
 
 body.flexcyon-display-os .titlebar::before {
-  padding-block-start: 11.5px;
+  padding-block-start: 12px;
   padding-inline-start: calc(5 * var(--flexcyon-os-detail-padding-r));
   font-size: var(--file-header-font-size);
   color: var(--text-muted);
@@ -8851,7 +8851,7 @@ body.flexcyon-display-os :not(.show-view-header) .mod-root .workspace-tab-contai
 }
 
 body.flexcyon-display-os:not(.show-view-header) .mod-root .workspace-tab-container .mod-active .workspace-leaf-content {
-  padding-block-start: 6px;
+  padding-block-start: 4px;
 }
 
 body.flexcyon-display-os.is-mobile.emulate-mobile .view-actions::before, body.flexcyon-display-os.is-mobile.emulate-mobile .titlebar::before,
@@ -8905,7 +8905,7 @@ body {
 
 body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
-  padding-block-start: 6px;
+  padding-block-start: 4px;
   border-block-start: unset;
 }
 body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
@@ -8939,11 +8939,11 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .mark
 body.flexcyon-flex-max-mode .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
-  inset-inline-start: 75px;
+  inset-inline-start: 48px;
 }
 body.flexcyon-flex-max-mode .cm-panels .cm-panel,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel {
-  padding-block-start: 5px;
+  padding-block-start: 4px;
   font-weight: 500;
   background-color: var(--color-base-00);
 }
@@ -8972,7 +8972,7 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) div.c
 }
 
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
-  padding-block-start: 6px;
+  padding-block-start: 4px;
   border-block-start: unset;
 }
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
@@ -8996,10 +8996,10 @@ body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-editor 
 }
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
-  inset-inline-start: 75px;
+  inset-inline-start: 48px;
 }
 body.flexcyon-vim-mode-text-enable.flexcyon-status-text-enable-color .cm-panels .cm-panel {
-  padding-block-start: 5px;
+  padding-block-start: 4px;
   font-weight: 500;
   background-color: var(--color-base-00);
 }
@@ -9061,7 +9061,7 @@ body.flexcyon-status-style-card .markdown-source-view.mod-cm6 .cm-panels.cm-pane
   border-radius: var(--flexcyon-callout-radix);
 }
 body.flexcyon-status-style-card div:has(.cm-vim-panel) + .status-bar {
-  margin-block-end: 50px;
+  margin-block-end: 48px;
 }
 
 body :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
@@ -9075,10 +9075,10 @@ body .backlink-pane .tree-item.search-result {
   padding-inline-start: 8px;
 }
 body .backlink-pane .search-result-file-matches {
-  padding: 10px;
+  padding: 8px;
 }
 body .backlink-pane .search-result-file-title {
-  padding-block-start: 10px;
+  padding-block-start: 8px;
   transform: translateX(-12.5px);
 }
 body .backlink-pane .search-result-file-title div.tree-item-flair-outer > span {
@@ -9104,7 +9104,7 @@ body {
   --status-bar-position: absolute;
 }
 body div:has(.cm-vim-panel) + .status-bar {
-  margin-block-end: 36px;
+  margin-block-end: 32px;
 }
 
 body.flexcyon-status-text-enable-color .plugin-editor-status[aria-label=Reading]::before {
@@ -9153,7 +9153,7 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(
   inset-inline-end: 0;
   z-index: 2;
   inline-size: max-content;
-  padding: 8px 10px;
+  padding: 8px;
   font-size: var(--status-bar-font-size);
   user-select: none;
   content: var(--flexcyon-status-hide-until-hover-text);
@@ -9166,7 +9166,7 @@ body:is(.flexcyon-status-hide-until-hover,
 .flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar::before, body:is(.flexcyon-status-hide-until-hover,
 .flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar {
   position: absolute;
-  inset-inline: 36px 0;
+  inset-inline: 32px 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;
@@ -9238,7 +9238,7 @@ body:not(.is-fullscreen) .status-bar {
 }
 
 body.flexcyon-status-style-card .status-bar {
-  inset-inline-end: 10px;
+  inset-inline-end: 8px;
   gap: 8px;
   margin: 4px 8px;
   background-color: transparent;
@@ -9257,7 +9257,7 @@ body.flexcyon-status-style-card .status-bar :nth-child(2n+1).status-bar-item {
 
 body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type=empty])) .status-bar::before,
 body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type=empty])) .status-bar::before {
-  inset-inline-end: 28px;
+  inset-inline-end: 24px;
 }
 
 body:has(.mod-active > [data-type=empty]) .status-bar {
@@ -9309,7 +9309,7 @@ body.flexcyon-flex-max-mode .status-bar :first-child:empty,
 body.flexcyon-flex-max-mode .status-bar :first-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :first-child:empty,
 body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
-  padding-inline-start: 6px;
+  padding-inline-start: 4px;
   border-start-start-radius: 16px;
   border-end-start-radius: 16px;
 }
@@ -9435,7 +9435,7 @@ body.flexcyon-ascii-enable div.empty-state-container::before {
 body.flexcyon-flex-max-mode .reveal .pause-overlay::before,
 body.flexcyon-ascii-enable .reveal .pause-overlay::before {
   position: absolute;
-  inset: 0 0 40px 36px;
+  inset: 0 0 40px 32px;
   max-inline-size: max-content;
   max-block-size: max-content;
   margin: auto;
@@ -9692,14 +9692,14 @@ body.flexcyon-ribbon-top {
 }
 body.flexcyon-ribbon-top .workspace .workspace-ribbon {
   position: absolute;
-  inset-block-start: -42px;
+  inset-block-start: -40px;
   padding-inline-start: 8px;
   margin-inline-start: 8px;
 }
 body.flexcyon-ribbon-top .workspace .workspace-ribbon .side-dock-actions {
   flex-direction: row;
   padding-inline-end: 150vw;
-  margin-inline-start: 69px;
+  margin-inline-start: 48px;
 }
 body.flexcyon-ribbon-top .workspace .workspace-split {
   padding-block-start: 48px;
@@ -9746,9 +9746,9 @@ body:not(.css-settings-manager) .app-container::after {
   justify-content: center;
   inline-size: fit-content;
   max-inline-size: 85%;
-  padding: 20px;
+  padding: 16px;
   margin: 0 auto;
-  margin-block-end: 50px;
+  margin-block-end: 48px;
   font-size: var(--font-ui-large);
   content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
   background-color: var(--background-primary);
@@ -12888,10 +12888,10 @@ body {
   --setting-items-padding: 2px 0px;
   --setting-items-radius: unset;
   --flexcyon-comm-item-opacity: 0.89;
-  --flexcyon-comm-text-padding: 3px 16px;
+  --flexcyon-comm-text-padding: 4px 16px;
 }
 body .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
-  padding: 6px 16px;
+  padding: 4px 16px;
 }
 body .mod-settings hr {
   border-color: transparent;
@@ -12921,11 +12921,11 @@ body .modal-sidebar {
   padding: 16px 8px;
 }
 body .community-modal-search-summary {
-  padding: 6px 16px;
+  padding: 4px 16px;
   margin-inline-start: 4px;
 }
 body .community-modal-search-results {
-  gap: 14px;
+  gap: 12px;
   padding: 16px;
 }
 body .community-modal-info hr {
@@ -13093,7 +13093,7 @@ body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-buttons-containe
   inset-block: unset;
 }
 body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-header ~ div:last-child {
-  padding-block-start: 60px;
+  padding-block-start: 48px;
 }
 body.flexcyon-revert-nav-item-alignment.is-mobile .nav-files-container {
   overflow-y: scroll;
@@ -13148,7 +13148,7 @@ body.theme-light {
 
 body .oz-folder-contents {
   padding: 4px 16px;
-  margin-inline-start: 18px !important;
+  margin-inline-start: 16px !important;
 }
 body .oz-folder-contents:not(:has(> .treeview)) {
   border-inline-start: none;
@@ -13165,7 +13165,7 @@ body div.oz-folder-name.is-folder-active {
   opacity: unset;
 }
 body div.oz-file-tree-header {
-  padding: 8px 5px;
+  padding: 8px 4px;
   margin-block-start: 0;
   text-align: var(--flexcyon-top-actions-alignment);
   background-color: var(--color-base-00);
@@ -13277,7 +13277,7 @@ body.flexcyon-oz-alternate-folder-count div.oz-folder-line:hover {
 }
 body.flexcyon-oz-alternate-folder-count div.oz-folder-line:hover div.oz-folder-count span.oz-nav-file-tag {
   display: inline;
-  margin-block-start: 0.5px;
+  margin-block-start: 0;
   font-weight: inherit;
   text-align: start;
   text-transform: none;
@@ -13311,7 +13311,7 @@ body .TabsCodeBlock-tabs:nth-child(odd) {
   box-shadow: none;
 }
 body div.TabsCodeBlock.TabsCodeBlock-buns {
-  padding: 4px 6px;
+  padding: 4px;
   background-color: var(--color-base-20);
   border-radius: 8px 8px 0 0;
 }
@@ -13928,7 +13928,7 @@ div.bases-cards-cover:not([style*=background-image]) {
   background-image: repeating-linear-gradient(calc(30deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width)), repeating-linear-gradient(calc(150deg + var(--flexcyon-editor-bg-rotation)), var(--flexcyon-editor-bg-color), var(--flexcyon-editor-bg-color) 1px, transparent 1px, transparent var(--flexcyon-editor-bg-width));
 }
 div.bases-cards-cover:not([style*=background-image])::after {
-  inset-inline: 36px 0;
+  inset-inline: 32px 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;
@@ -14117,7 +14117,7 @@ body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
 }
 
 .view-header-reload-button {
-  margin-block-start: 10px;
+  margin-block-start: 8px;
 }
 
 audio {
@@ -14180,7 +14180,7 @@ body {
 }
 
 .reveal pre {
-  margin: var(--r-block-margin) 0.75px;
+  margin: var(--r-block-margin) 1px;
   font-size: var(--font-ui-medium);
 }
 
@@ -14196,14 +14196,14 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-  padding: 0 0.75px;
-  padding-inline-end: 5px;
+  padding: 0 1px;
+  padding-inline-end: 4px;
 }
 
 .slides-container .backgrounds :nth-of-type(99n + 1).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 1";
@@ -14212,7 +14212,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 2).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 2";
@@ -14221,7 +14221,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 3).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 3";
@@ -14230,7 +14230,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 4).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 4";
@@ -14239,7 +14239,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 5).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 5";
@@ -14248,7 +14248,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 6).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 6";
@@ -14257,7 +14257,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 7).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 7";
@@ -14266,7 +14266,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 8).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 8";
@@ -14275,7 +14275,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 9).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 9";
@@ -14284,7 +14284,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 10).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 10";
@@ -14293,7 +14293,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 11).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 11";
@@ -14302,7 +14302,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 12).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 12";
@@ -14311,7 +14311,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 13).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 13";
@@ -14320,7 +14320,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 14).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 14";
@@ -14329,7 +14329,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 15).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 15";
@@ -14338,7 +14338,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 16).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 16";
@@ -14347,7 +14347,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 17).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 17";
@@ -14356,7 +14356,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 18).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 18";
@@ -14365,7 +14365,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 19).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 19";
@@ -14374,7 +14374,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 20).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 20";
@@ -14383,7 +14383,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 21).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 21";
@@ -14392,7 +14392,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 22).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 22";
@@ -14401,7 +14401,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 23).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 23";
@@ -14410,7 +14410,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 24).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 24";
@@ -14419,7 +14419,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 25).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 25";
@@ -14428,7 +14428,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 26).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 26";
@@ -14437,7 +14437,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 27).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 27";
@@ -14446,7 +14446,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 28).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 28";
@@ -14455,7 +14455,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 29).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 29";
@@ -14464,7 +14464,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 30).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 30";
@@ -14473,7 +14473,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 31).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 31";
@@ -14482,7 +14482,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 32).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 32";
@@ -14491,7 +14491,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 33).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 33";
@@ -14500,7 +14500,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 34).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 34";
@@ -14509,7 +14509,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 35).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 35";
@@ -14518,7 +14518,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 36).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 36";
@@ -14527,7 +14527,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 37).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 37";
@@ -14536,7 +14536,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 38).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 38";
@@ -14545,7 +14545,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 39).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 39";
@@ -14554,7 +14554,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 40).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 40";
@@ -14563,7 +14563,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 41).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 41";
@@ -14572,7 +14572,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 42).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 42";
@@ -14581,7 +14581,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 43).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 43";
@@ -14590,7 +14590,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 44).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 44";
@@ -14599,7 +14599,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 45).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 45";
@@ -14608,7 +14608,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 46).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 46";
@@ -14617,7 +14617,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 47).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 47";
@@ -14626,7 +14626,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 48).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 48";
@@ -14635,7 +14635,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 49).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 49";
@@ -14644,7 +14644,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 50).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 50";
@@ -14653,7 +14653,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 51).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 51";
@@ -14662,7 +14662,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 52).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 52";
@@ -14671,7 +14671,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 53).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 53";
@@ -14680,7 +14680,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 54).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 54";
@@ -14689,7 +14689,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 55).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 55";
@@ -14698,7 +14698,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 56).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 56";
@@ -14707,7 +14707,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 57).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 57";
@@ -14716,7 +14716,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 58).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 58";
@@ -14725,7 +14725,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 59).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 59";
@@ -14734,7 +14734,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 60).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 60";
@@ -14743,7 +14743,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 61).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 61";
@@ -14752,7 +14752,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 62).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 62";
@@ -14761,7 +14761,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 63).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 63";
@@ -14770,7 +14770,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 64).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 64";
@@ -14779,7 +14779,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 65).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 65";
@@ -14788,7 +14788,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 66).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 66";
@@ -14797,7 +14797,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 67).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 67";
@@ -14806,7 +14806,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 68).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 68";
@@ -14815,7 +14815,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 69).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 69";
@@ -14824,7 +14824,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 70).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 70";
@@ -14833,7 +14833,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 71).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 71";
@@ -14842,7 +14842,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 72).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 72";
@@ -14851,7 +14851,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 73).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 73";
@@ -14860,7 +14860,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 74).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 74";
@@ -14869,7 +14869,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 75).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 75";
@@ -14878,7 +14878,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 76).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 76";
@@ -14887,7 +14887,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 77).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 77";
@@ -14896,7 +14896,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 78).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 78";
@@ -14905,7 +14905,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 79).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 79";
@@ -14914,7 +14914,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 80).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 80";
@@ -14923,7 +14923,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 81).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 81";
@@ -14932,7 +14932,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 82).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 82";
@@ -14941,7 +14941,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 83).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 83";
@@ -14950,7 +14950,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 84).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 84";
@@ -14959,7 +14959,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 85).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 85";
@@ -14968,7 +14968,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 86).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 86";
@@ -14977,7 +14977,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 87).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 87";
@@ -14986,7 +14986,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 88).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 88";
@@ -14995,7 +14995,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 89).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 89";
@@ -15004,7 +15004,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 90).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 90";
@@ -15013,7 +15013,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 91).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 91";
@@ -15022,7 +15022,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 92).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 92";
@@ -15031,7 +15031,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 93).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 93";
@@ -15040,7 +15040,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 94).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 94";
@@ -15049,7 +15049,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 95).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 95";
@@ -15058,7 +15058,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 96).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 96";
@@ -15067,7 +15067,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 97).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 97";
@@ -15076,7 +15076,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 98).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 98";
@@ -15085,7 +15085,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 99).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 99";
@@ -15094,7 +15094,7 @@ body {
 .slides-container .backgrounds :nth-of-type(99n + 100).present .slide-background-content::before {
   position: absolute;
   inset-block-start: 8px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   font-size: var(--font-ui-medium);
   color: var(--text-normal);
   content: "Page 100";
@@ -15110,7 +15110,7 @@ body {
 }
 
 .block-language-tasks > div::before {
-  inset-inline: 36px 0;
+  inset-inline: 32px 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;

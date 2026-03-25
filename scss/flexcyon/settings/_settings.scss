@@ -4,10 +4,10 @@ body {
   --setting-items-padding: 2px 0px;
   --setting-items-radius: unset;
   --flexcyon-comm-item-opacity: 0.89;
-  --flexcyon-comm-text-padding: 3px 16px;
+  --flexcyon-comm-text-padding: 4px 16px;
 
   .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
-    padding: 6px 16px;
+    padding: 4px 16px;
   }
 
   .mod-settings hr {
@@ -48,12 +48,12 @@ body {
   }
 
   .community-modal-search-summary {
-    padding: 6px 16px;
+    padding: 4px 16px;
     margin-inline-start: 4px;
   }
 
   .community-modal-search-results {
-    gap: 14px;
+    gap: 12px;
     padding: 16px;
   }
 

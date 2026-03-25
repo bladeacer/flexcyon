@@ -108,7 +108,7 @@ body.flexcyon-workspace-pl10k-layout {
   .view-header-title {
     padding: var(--flexcyon-mode-view-header-title-verti-padding)
       var(--flexcyon-mode-view-header-title-horiz-padding);
-    margin-inline-start: -1.5px;
+    margin-inline-start: -1px;
     background-color: var(--color-base-05);
     border-radius: var(--flexcyon-callout-radix);
     border-start-start-radius: 0;
@@ -138,7 +138,7 @@ body.flexcyon-workspace-pl10k-layout {
       position: relative;
       inline-size: inherit;
       block-size: inherit;
-      padding: 10px 6px;
+      padding: 8px 4px;
       color: transparent;
       content: "e";
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);

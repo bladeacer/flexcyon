@@ -423,8 +423,8 @@ body.is-mobile {
       ease;
 
     .callout-title {
-      margin-block-start: 3px;
-      margin-inline-start: 22px;
+      margin-block-start: 2px;
+      margin-inline-start: 24px;
     }
   }
 
@@ -763,7 +763,7 @@ div.callout[data-callout-metadata*="center-img"] {
   background-color: transparent;
 
   img {
-    inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+    inset-inline: calc(16px + 4px * 2 + 4px * 2) 0;
     display: flex;
     justify-content: center;
     inline-size: max-content;
@@ -794,7 +794,7 @@ $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [dat
     :is(#{$flexcyon-tui-exclusions})
   )
 ) {
-  margin-block-start: -25px;
+  margin-block-start: -24px;
 }
 
 body.flexcyon-tui-no-icons

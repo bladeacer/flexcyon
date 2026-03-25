@@ -10,7 +10,7 @@
 }
 
 .block-language-tasks > div::before {
-  inset-inline: calc(16px + 6px * 2 + 4px * 2) 0;
+  inset-inline: calc(16px + 4px * 2 + 4px * 2) 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;

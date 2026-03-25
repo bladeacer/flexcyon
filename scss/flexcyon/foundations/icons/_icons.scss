@@ -34,7 +34,7 @@ body {
 
   .view-header-nav-buttons .clickable-icon,
   .view-actions .clickable-icon {
-    padding: 5px 10px;
+    padding: 4px 8px;
   }
 
   .graph-controls .clickable-icon,
@@ -240,7 +240,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
 
     &::after {
       position: absolute;
-      inset-block-end: 6px;
+      inset-block-end: 4px;
       inset-inline-start: 0;
       font-size: var(--font-ui-small);
       content: "?/";
@@ -556,7 +556,7 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   // }
 
   .nav-buttons-container {
-    gap: 6px;
+    gap: 4px;
   }
 }
 

@@ -20,7 +20,7 @@ body {
   input[data-task="#{$data-task}"]:checked,
   li[data-task="#{$data-task}"] > input:checked,
   li[data-task="#{$data-task}"] > p > input:checked {
-    padding-inline-end: 6px;
+    padding-inline-end: 4px;
     background-color: inherit;
     border: none;
 
@@ -145,7 +145,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task='"']:checked,
   li[data-task='"'] > input:checked,
   li[data-task='"'] > p > input:checked {
-    padding-inline-end: 6px;
+    padding-inline-end: 4px;
     background-color: inherit;
     border: none;
 
@@ -163,14 +163,14 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="i"]:checked,
   li[data-task="i"] > input:checked,
   li[data-task="i"] > p > input:checked {
-    padding-inline-end: 6px;
+    padding-inline-end: 4px;
     background-color: inherit;
     border: none;
 
     &::after {
       inset-block-start: -0.075rem;
       padding-block-start: 10%;
-      margin-inline-start: -1.5px;
+      margin-inline-start: -1px;
       font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
       font-weight: 900;
       line-height: 1;
@@ -190,7 +190,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="#{$data-task}"]:checked,
   li[data-task="#{$data-task}"] > input:checked,
   li[data-task="#{$data-task}"] > p > input:checked {
-    padding-inline-end: 6px;
+    padding-inline-end: 4px;
     font-weight: 900;
     background-color: $color;
     border: none;

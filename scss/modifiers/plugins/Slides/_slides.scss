@@ -55,7 +55,7 @@ body {
 }
 
 .reveal pre {
-  margin: var(--r-block-margin) 0.75px;
+  margin: var(--r-block-margin) 1px;
   font-size: var(--font-ui-medium);
 }
 
@@ -73,8 +73,8 @@ body {
 .reveal img,
 .reveal video,
 .reveal iframe {
-  padding: 0 0.75px;
-  padding-inline-end: 5px;
+  padding: 0 1px;
+  padding-inline-end: 4px;
 }
 
 @mixin slides-number-wrapper($slide-no, $max-slides) {
@@ -85,7 +85,7 @@ body {
       .slide-background-content::before {
       position: absolute;
       inset-block-start: 8px;
-      padding: 4px 14px;
+      padding: 4px 12px;
       font-size: var(--font-ui-medium);
       color: var(--text-normal);
       content: "Page #{$i}";

@@ -158,14 +158,14 @@ body.flexcyon-ribbon-top {
   .workspace {
     .workspace-ribbon {
       position: absolute;
-      inset-block-start: -42px;
+      inset-block-start: -40px;
       padding-inline-start: 8px;
       margin-inline-start: 8px;
 
       .side-dock-actions {
         flex-direction: row;
         padding-inline-end: 150vw;
-        margin-inline-start: 69px;
+        margin-inline-start: 48px;
       }
     }
 

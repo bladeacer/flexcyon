@@ -190,12 +190,12 @@ body.flexcyon-md-file-tree-style {
     inset-block-start: 50%;
     inline-size: 24px;
     block-size: 1px;
-    margin-inline-start: -3px;
+    margin-inline-start: -2px;
     transform: translate(0, -50%);
   }
 
   .tree-item-children.nav-folder-children:not(:has(.nav-file))::before {
-    inset-block-end: 6px;
+    inset-block-end: 4px;
   }
 
   .tree-item-children.nav-folder-children {

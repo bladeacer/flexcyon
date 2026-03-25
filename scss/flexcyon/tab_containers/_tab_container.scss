@@ -16,7 +16,7 @@ body:not(
     .show-ribbon
   ).flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   .sidebar-toggle-button.mod-left {
-    padding-block-start: 9px;
+    padding-block-start: 8px;
   }
 }
 
@@ -35,7 +35,7 @@ body {
   }
 
   .sidebar-toggle-button.mod-right {
-    padding-block-start: 9px;
+    padding-block-start: 8px;
   }
 
   .workspace-tab-header {
@@ -43,7 +43,7 @@ body {
   }
 
   .workspace-tab-header-inner {
-    padding: 2px 9px;
+    padding: 2px 8px;
   }
 
   .workspace-tabs:not(.mod-stacked) {
@@ -69,11 +69,11 @@ body {
     .workspace-tab-header-container-inner {
       padding-inline-start: 0;
       margin-block-start: 0;
-      margin-inline-start: -10px;
+      margin-inline-start: -8px;
     }
 
     .workspace-tab-header-inner-title {
-      padding-inline-start: 10px;
+      padding-inline-start: 8px;
     }
 
     .workspace-tab-header-inner-icon {
@@ -81,7 +81,7 @@ body {
     }
 
     .workspace-tab-header-container-inner > .workspace-tab-header {
-      padding: 3px 6px 0;
+      padding: 2px 4px 0;
     }
   }
 
@@ -110,7 +110,7 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-leaf-content:not([data-type="markdown"]) {
-    margin: 10px;
+    margin: 8px;
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
@@ -138,7 +138,7 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-split.mod-right-split :last-child .workspace-tab-container {
-    margin-block-end: 38px;
+    margin-block-end: 40px;
   }
 
   .titlebar {
@@ -152,7 +152,7 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-ribbon.mod-left {
-    margin-block-start: 50px;
+    margin-block-start: 48px;
     border: none;
 
     &::before {
@@ -180,7 +180,7 @@ body.flexcyon-workspace-card-layout {
     .workspace-tabs:not(.mod-stacked)
     .workspace-tab-header-container-inner
     > .workspace-tab-header {
-    padding: 3px;
+    padding: 2px;
     transform: translateX(8px);
   }
 }
@@ -231,7 +231,7 @@ body.show-ribbon {
 
     &::before {
       position: absolute;
-      inset-block-start: 44px;
+      inset-block-start: 40px;
       inset-inline-start: 32px;
       z-index: 1;
       padding: 0 8px;
@@ -294,7 +294,7 @@ body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   .sidebar-toggle-button.mod-left {
-    padding-block-start: 7px;
+    padding-block-start: 8px;
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
@@ -303,7 +303,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
 
   .metadata-properties-heading {
     position: absolute;
-    inset-block-start: -15px;
+    inset-block-start: -16px;
     inset-inline-start: 32px;
 
     * {
