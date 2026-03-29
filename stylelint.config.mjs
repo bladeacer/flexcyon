@@ -1,13 +1,18 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ["stylelint-config-standard-scss", "stylelint-config-recess-order"],
+  extends: [
+    "stylelint-config-standard-scss", 
+    "stylelint-config-recess-order"
+  ],
   plugins: [
     "stylelint-prettier",
     "stylelint-use-logical",
     "stylelint-plugin-defensive-css",
     "stylelint-high-performance-animation",
     "stylelint-no-unsupported-browser-features",
-    "stylelint-scales"
+
+    // Takes a lot of performance to check, disabled by default
+    // "stylelint-scales"
   ],
   rules: {
     "prettier/prettier": true,
@@ -23,23 +28,25 @@ export default {
     "color-function-notation": "modern",
     "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh"],
 
-    "scales/font-sizes": [
-      [
-        { "scale": [0, 0.5, 0.75, 3], "units": ["px"]}
-      ]
-    ],
-    "scales/sizes": [
-      [
-        { "scale": [0, 1, 2, 8, 16, 24, 32, 40, 48], "units": ["em", "px"]}
-      ]
-    ],
-    "scales/line-heights": [0.21, 0.51, 0.81, 1, 1.21, 1.31, 1.41, 1.51, 1.61],
-    "scales/font-weights": [500, 525, 900],
-    "scales/space": [
-      [
-        {"scale": [0, 1, 2, 4, 8, 12, 16, 24, 32, 40, 48], "units": ["px"]}
-      ]
-    ],
+    // Takes a lot of performance to check, disabled by default
+
+    // "scales/font-sizes": [
+    //   [
+    //     { "scale": [0, 0.5, 0.75, 3], "units": ["px"]}
+    //   ]
+    // ],
+    // "scales/sizes": [
+    //   [
+    //     { "scale": [0, 1, 2, 8, 16, 24, 32, 40, 48], "units": ["em", "px"]}
+    //   ]
+    // ],
+    // "scales/line-heights": [0.21, 0.51, 0.81, 1, 1.21, 1.31, 1.41, 1.51, 1.61],
+    // "scales/font-weights": [500, 525, 900],
+    // "scales/space": [
+    //   [
+    //     {"scale": [0, 1, 2, 4, 8, 12, 16, 24, 32, 40, 48], "units": ["px"]}
+    //   ]
+    // ],
 
     // Plugins
     "plugin/no-low-performance-animation-properties": true,

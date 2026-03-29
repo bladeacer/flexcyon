@@ -2648,26 +2648,24 @@ body.flexcyon-workspace-angled-layout .tree-item-self .collapse-icon svg {
   transform: skewX(7.5deg);
 }
 
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::before,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button::before {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button::after, body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button::after {
   font-size: var(--font-ui-small);
   content: "x_x";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button svg,
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-inner-close-button svg, body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .modal-close-button svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-inner-close-button svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .modal-close-button svg {
   display: none;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::before,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::before {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::after {
   font-size: var(--font-ui-small);
   content: "x_x";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button::after {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-clear-button svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .search-input-clear-button svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .search-input-container::before,
@@ -2736,20 +2734,20 @@ body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 3):not(.checkbox-container, :last-of-type) svg {
   display: none;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type)::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type)::after {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-container, :last-of-type)::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-container, :last-of-type)::after {
   content: "[%]";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type) svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type) svg {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-container, :last-of-type) svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-container, :last-of-type) svg {
   display: none;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type)::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type)::after {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-container, :last-of-type)::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-container, :last-of-type)::after {
   content: "[*]";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type) svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type) svg {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-container, :last-of-type) svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .mod-settings div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-container, :last-of-type) svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .mod-settings .setting-restore-hotkey-button::after,
@@ -2825,15 +2823,19 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) di
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > input + div::after,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container + div::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > input + div::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container + div::after {
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > input + div::after {
   content: "[0]";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > input + div svg,
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container + div svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > input + div svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container + div svg {
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > input + div svg {
+  display: none;
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container::after {
+  content: "[0]";
+}
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .style-settings-collapse-indicator::after,
@@ -2856,7 +2858,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .workspace-tab-header-tab-list span::after {
-  font-size: var(--font-ui-small);
   content: "...";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .workspace-tab-header-tab-list span svg,
@@ -2865,20 +2866,18 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .w
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div::after,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div::after {
-  font-size: var(--font-ui-small);
   content: "{";
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-left div svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-left div svg {
   display: none;
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div::after {
-  font-size: var(--font-ui-small);
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-righ div::after,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-righ div::after {
   content: "{";
 }
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-right div svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-right div svg {
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .sidebar-toggle-button.mod-righ div svg,
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .sidebar-toggle-button.mod-righ div svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .nav-buttons-container,

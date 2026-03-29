@@ -188,49 +188,41 @@ body.flexcyon-workspace-angled-layout {
   }
 }
 
-// @mixin ascii-aria-icon($aria-label, $content) {
-//   [aria-label*="#{$aria-label}"] {
-//     inline-size: 24px;
-
-//     &::after {
-//       font-size: var(--font-ui-small);
-
-//       content: "#{$content}";
-//     }
-
-//     svg {
-//       opacity: 0;
-//     }
-//   }
-// }
-
-// TODO: Redundant selector?
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
-    [class*="iconic"]
-  ) {
-  .workspace-tab-header-inner-close-button,
-  .modal-close-button {
-    &::before {
-      font-size: var(--font-ui-small);
-      content: "x_x";
+// can pass selectors as string
+@mixin ascii-icon-sel-after-wrapper($selector, $content) {
+  #{$selector} {
+    &::after {
+      content: "#{$content}";
     }
 
     svg {
       display: none;
     }
   }
+}
 
-  .search-input-clear-button {
-    &::before {
+@mixin ascii-icon-small-after-wrapper($selector, $content) {
+  #{$selector} {
+    &::after {
       font-size: var(--font-ui-small);
-      content: "x_x";
+      content: "#{$content}";
     }
 
-    &::after {
+    svg {
       display: none;
     }
   }
+}
+
+body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon),
+body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
+    [class*="iconic"]
+  ) {
+  @include ascii-icon-small-after-wrapper(
+    ".workspace-tab-header-inner-close-button, .modal-close-button",
+    "x_x"
+  );
+  @include ascii-icon-small-after-wrapper(".search-input-clear-button", "x_x");
 
   .search-input-container {
     &::before,
@@ -269,217 +261,65 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     content: "|||";
   }
 
-  // TODO: Fix these with the display none pattern
-  // .omnisearch-result__icon {
-  //   &:has(.lucide-file)::before {
-  //     font-size: var(--font-ui-smaller);
-  //     content: "''";
-  //   }
+  @include ascii-icon-sel-after-wrapper(".modal-setting-nav-bar div", "<");
+  @include ascii-icon-sel-after-wrapper(
+    ".view-actions button:last-of-type",
+    "..."
+  );
 
-  //   &:has(.lucide-file-text)::before {
-  //     font-size: var(--font-ui-smaller);
-  //     content: "``";
-  //   }
-  // }
-
-  .modal-setting-nav-bar div {
-    &::after {
-      content: "<";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  .view-actions button:last-of-type {
-    &::after {
-      content: "...";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  // .workspace-left-content[aria-label*="Back"] {
-  //   &::after {
-  //     font-size: var(--font-ui-small);
-  //     content: "<";
-  //   }
-  // }
-
-  // TODO: Function factory for whatever this is
   .mod-settings {
-    div.installed-plugins-container
-      > div.setting-items
-      .setting-item-control
-      :last-of-type:not(.checkbox-container) {
-      &::after {
-        content: "*_*";
-      }
-
-      svg {
-        display: none;
-      }
-    }
-
-    div.installed-plugins-container
-      > div.setting-items
-      .setting-item-control
-      :nth-of-type(4n + 3):not(.checkbox-container, :last-of-type) {
-      &::after {
-        content: ":3";
-      }
-
-      svg {
-        display: none;
-      }
-    }
-
-    div.installed-plugins-container
-      > div.setting-items
-      .setting-item-control
-      :nth-of-type(4n + 2):not(.checkbox-containerm, :last-of-type) {
-      &::after {
-        content: "[%]";
-      }
-
-      svg {
-        display: none;
-      }
-    }
-
-    div.installed-plugins-container
-      > div.setting-items
-      .setting-item-control
-      :nth-of-type(4n + 1):not(.checkbox-containerm, :last-of-type) {
-      &::after {
-        content: "[*]";
-      }
-
-      svg {
-        display: none;
-      }
-    }
-
-    .setting-restore-hotkey-button {
-      &::after {
-        content: "[0]";
-      }
-
-      svg {
-        display: none;
-      }
-    }
-
-    .setting-add-hotkey-button {
-      &::after {
-        content: "[+]";
-      }
-
-      svg {
-        display: none;
-      }
-    }
+    @include ascii-icon-sel-after-wrapper(
+      "div.installed-plugins-container > div.setting-items .setting-item-control :last-of-type:not(.checkbox-container)",
+      "*_*"
+    );
+    @include ascii-icon-sel-after-wrapper(
+      "div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 3):not(.checkbox-container, :last-of-type)",
+      ":3"
+    );
+    @include ascii-icon-sel-after-wrapper(
+      "div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 2):not(.checkbox-container, :last-of-type)",
+      "[%]"
+    );
+    @include ascii-icon-sel-after-wrapper(
+      "div.installed-plugins-container > div.setting-items .setting-item-control :nth-of-type(4n + 1):not(.checkbox-container, :last-of-type)",
+      "[*]"
+    );
+    @include ascii-icon-sel-after-wrapper(
+      ".setting-restore-hotkey-button ",
+      "[0]"
+    );
+    @include ascii-icon-sel-after-wrapper(".setting-add-hotkey-button ", "[+]");
   }
 
-  .style-settings-heading > div.setting-item-control :last-of-type {
-    &::after {
-      content: "-<";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  .style-settings-heading
-    > div.setting-item-control
-    :nth-of-type(2n + 1):not(:last-of-type) {
-    &::after {
-      content: "[0]";
-    }
-
-    svg {
-      display: none;
-    }
+  .style-settings-heading > div.setting-item-control {
+    @include ascii-icon-sel-after-wrapper(":last-of-type", "-<");
+    @include ascii-icon-sel-after-wrapper(
+      ":nth-of-type(2n + 1):not(:last-of-type)",
+      "[0]"
+    );
   }
 
   .setting-item-heading:not(.style-settings-heading)
-    > div.setting-item-control
-    :last-of-type {
-    &::after {
-      content: "./";
-    }
-
-    svg {
-      display: none;
-    }
+    > div.setting-item-control {
+    @include ascii-icon-sel-after-wrapper(":last-of-type", "./");
+    @include ascii-icon-sel-after-wrapper(":first-of-type", "[R]");
   }
 
-  .setting-item-heading:not(.style-settings-heading)
-    > div.setting-item-control
-    :first-of-type {
-    &::after {
-      content: "[R]";
-    }
-
-    svg {
-      display: none;
-    }
+  div.setting-item-control {
+    @include ascii-icon-sel-after-wrapper("> div:has(+ select + button)", "./");
+    @include ascii-icon-sel-after-wrapper("> div:has(+ input)", "[0]");
+    @include ascii-icon-sel-after-wrapper(
+      "> div:has(+ label.checkbox-container)",
+      "[i]"
+    );
+    @include ascii-icon-sel-after-wrapper("> input + div", "[0]");
+    @include ascii-icon-sel-after-wrapper("> label.checkbox-container", "[0]");
   }
 
-  div.setting-item-control > div:has(+ select + button) {
-    &::after {
-      content: "./";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  div.setting-item-control > div:has(+ input) {
-    &::after {
-      content: "[0]";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  div.setting-item-control > div:has(+ label.checkbox-container) {
-    &::after {
-      content: "[i]";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  div.setting-item-control > input + div,
-  div.setting-item-control > label.checkbox-container + div {
-    &::after {
-      content: "[0]";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  .style-settings-collapse-indicator {
-    &::after {
-      content: ">";
-    }
-
-    svg {
-      display: none;
-    }
-  }
+  @include ascii-icon-sel-after-wrapper(
+    ".style-settings-collapse-indicator",
+    ">"
+  );
 
   .workspace-tab-header-status-icon.mod-pinned {
     &::after {
@@ -493,67 +333,20 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
     }
   }
 
-  .workspace-tab-header-tab-list span {
-    &::after {
-      font-size: var(--font-ui-small);
-      content: "...";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  .sidebar-toggle-button.mod-left div {
-    &::after {
-      font-size: var(--font-ui-small);
-      content: "{";
-    }
-
-    svg {
-      display: none;
-    }
-  }
+  @include ascii-icon-sel-after-wrapper(
+    ".workspace-tab-header-tab-list span",
+    "..."
+  );
+  @include ascii-icon-sel-after-wrapper(
+    ".sidebar-toggle-button.mod-left div",
+    "{"
+  );
 
   // Unexplained cursed 180 degree rotation
-  .sidebar-toggle-button.mod-right div {
-    &::after {
-      font-size: var(--font-ui-small);
-      content: "{";
-    }
-
-    svg {
-      display: none;
-    }
-  }
-
-  // @include ascii-aria-icon("Uninstall", "*_*");
-  // @include ascii-aria-icon("Options", "[*]");
-  // @include ascii-aria-icon("Hotkeys", "[%]");
-  // @include ascii-aria-icon("Customise this command", "[~]");
-  // @include ascii-aria-icon("Customize this command", "[~]");
-  // @include ascii-aria-icon("Export settings", ".>");
-  // @include ascii-aria-icon("Donate", "<3");
-  // @include ascii-aria-icon("Reload", "[R]");
-  // @include ascii-aria-icon("folder", "./");
-  // @include ascii-aria-icon("Restore default", "[0]");
-  // @include ascii-aria-icon("Reset all settings to default", "[0]");
-
-  // @include ascii-aria-icon("Change sort order", "|'|");
-  // @include ascii-aria-icon("New note", "[N]");
-  // @include ascii-aria-icon("Expand", "[+]");
-  // @include ascii-aria-icon("Collapse", "[-]");
-  // @include ascii-aria-icon("Auto-reveal current file", "[>]");
-  // @include ascii-aria-icon("Auto-scroll to current section", "[>]");
-  // @include ascii-aria-icon("Show search filter", "?/");
-  // @include ascii-aria-icon("Bookmark the active tab", "[B]");
-  // @include ascii-aria-icon("New bookmark group", "{+}");
-
-  // [aria-label*="New bookmark group"]::after,
-  // [aria-label*="Collapse"]::after,
-  // [aria-label*="Expand"]::after {
-  //   letter-spacing: -2px;
-  // }
+  @include ascii-icon-sel-after-wrapper(
+    ".sidebar-toggle-button.mod-righ div",
+    "{"
+  );
 
   .nav-buttons-container {
     gap: 4px;

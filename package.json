@@ -34,13 +34,13 @@
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-high-performance-animation": "^1.11.0",
     "stylelint-no-indistinguishable-colors": "^2.3.1",
-    "stylelint-no-unsupported-browser-features": "^8.0.5",
     "stylelint-order": "^7.0.1",
     "stylelint-plugin-defensive-css": "^1.0.4",
     "stylelint-prettier": "^5.0.3",
     "stylelint-use-logical": "^2.1.2"
   },
   "dependencies": {
+    "stylelint-no-unsupported-browser-features": "^8.1.1",
     "stylelint-scales": "^5.0.0"
   }
 }
