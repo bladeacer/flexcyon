@@ -15157,7 +15157,19 @@ span.task-id {
 }
 
 /* Modifications for HandaArchitect's banner snippet */
-body .banner.is-live-preview .internal-embed[alt=banner] div:has(img[alt=banner]) {
+body .banner img[alt=banner] {
+  z-index: 1;
+  padding: 1px;
+}
+body div.card-content-container img[alt=banner],
+body .popover .banner img[alt=banner] {
+  display: none;
+}
+body .banner .internal-embed .markdown-preview-pusher,
+body .banner span.internal-embed .image-embed img[alt=banner] {
+  display: none;
+}
+body .workspace-leaf.mod-active .banner.is-live-preview .internal-embed[alt=banner] div:has(img[alt=banner]) {
   position: absolute;
   inset-block-start: 0;
   inset-inline-end: 0;

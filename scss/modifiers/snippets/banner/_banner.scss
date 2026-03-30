@@ -5,7 +5,7 @@ body {
     padding: 1px;
   }
 
-    div.card-content-container img[alt="banner"],
+  div.card-content-container img[alt="banner"],
   .popover .banner img[alt="banner"] {
     display: none;
   }
@@ -17,7 +17,10 @@ body {
     }
   }
 
-  .banner.is-live-preview .internal-embed[alt="banner"] div:has(img[alt="banner"]) {
+  .workspace-leaf.mod-active
+    .banner.is-live-preview
+    .internal-embed[alt="banner"]
+    div:has(img[alt="banner"]) {
     position: absolute;
     inset-block-start: 0;
     inset-inline-end: 0;
