@@ -49,7 +49,7 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("#", var(--color-green));
   @include flexcyon-ascii-checkbox(".", var(--color-yellow));
   @include flexcyon-ascii-checkbox("<", var(--color-orange));
-  @include flexcyon-ascii-checkbox("$", var(--color-red));
+  @include flexcyon-ascii-checkbox("S", var(--color-red));
   @include flexcyon-ascii-checkbox("*", var(--color-purple));
   @include flexcyon-ascii-checkbox("'", var(--color-cyan));
   @include flexcyon-ascii-checkbox("@", var(--color-blue));
@@ -76,12 +76,19 @@ body.flexcyon-ascii-checkboxes-enabled {
     content: "‘";
   }
 
+  input[data-task="S"]:checked::after,
+  li[data-task="S"] > input:checked::after,
+  li[data-task="S"] > p > input:checked::after {
+    inset-block-start: 12em;
+    content: "$";
+  }
+
   input[data-task="#"]:checked::after,
   li[data-task="#"] > input:checked::after,
   li[data-task="#"] > p > input:checked::after,
-  input[data-task="$"]:checked::after,
-  li[data-task="$"] > input:checked::after,
-  li[data-task="$"] > p > input:checked::after,
+  input[data-task="S"]:checked::after,
+  li[data-task="S"] > input:checked::after,
+  li[data-task="S"] > p > input:checked::after,
   input[data-task="/"]:checked::after,
   li[data-task="/"] > input:checked::after,
   li[data-task="/"] > p > input:checked::after,

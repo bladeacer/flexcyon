@@ -1648,36 +1648,36 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::af
   background-color: inherit;
   mask-image: none;
 }
-body.flexcyon-flex-max-mode input[data-task="$"]:checked,
-body.flexcyon-flex-max-mode li[data-task="$"] > input:checked,
-body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked {
+body.flexcyon-flex-max-mode input[data-task=S]:checked,
+body.flexcyon-flex-max-mode li[data-task=S] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked {
   padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
-body.flexcyon-flex-max-mode input[data-task="$"]:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="$"] > input:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked:hover {
+body.flexcyon-flex-max-mode input[data-task=S]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=S] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked:hover {
   filter: brightness(1.25);
 }
-body.flexcyon-flex-max-mode input[data-task="$"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="$"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after {
+body.flexcyon-flex-max-mode input[data-task=S]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after {
   inset-block-start: -0.325em;
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   font-weight: 900;
   color: var(--color-red);
   text-align: center;
-  content: "$";
+  content: "S";
   background-color: inherit;
   mask-image: none;
 }
@@ -1969,12 +1969,21 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::af
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
   content: "‘";
 }
+body.flexcyon-flex-max-mode input[data-task=S]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after {
+  inset-block-start: 12em;
+  content: "$";
+}
 body.flexcyon-flex-max-mode input[data-task="#"]:checked::after,
 body.flexcyon-flex-max-mode li[data-task="#"] > input:checked::after,
 body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked::after,
-body.flexcyon-flex-max-mode input[data-task="$"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="$"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="$"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task=S]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
 body.flexcyon-flex-max-mode input[data-task="/"]:checked::after,
 body.flexcyon-flex-max-mode li[data-task="/"] > input:checked::after,
 body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked::after,
@@ -1987,9 +1996,9 @@ body.flexcyon-flex-max-mode li[data-task=">"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="$"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="$"] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked::after,
@@ -2828,14 +2837,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) di
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > input + div svg,
 body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > input + div svg {
-  display: none;
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container::after,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container::after {
-  content: "[0]";
-}
-body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) div.setting-item-control > label.checkbox-container svg,
-body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control > label.checkbox-container svg {
   display: none;
 }
 body.flexcyon-ascii-icon-set:not(.flexcyon-ensure-plugin-icon) .style-settings-collapse-indicator::after,

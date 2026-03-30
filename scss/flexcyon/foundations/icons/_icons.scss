@@ -313,7 +313,6 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
       "[i]"
     );
     @include ascii-icon-sel-after-wrapper("> input + div", "[0]");
-    @include ascii-icon-sel-after-wrapper("> label.checkbox-container", "[0]");
   }
 
   @include ascii-icon-sel-after-wrapper(
