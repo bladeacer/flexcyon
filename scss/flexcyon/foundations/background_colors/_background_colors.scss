@@ -36,27 +36,6 @@ body {
   );
 }
 
-// body.is-mobile.theme-dark,
-// body:is(.theme-dark) {
-//   --background-primary: var(--color-base-10);
-//   --background-primary-alt: var(--color-base-25);
-//   --background-secondary: var(--color-base-00);
-//   --background-secondary-alt: var(--color-base-20);
-//   --background-modifier-hover: var(--color-base-20);
-//   --background-modifier-form-field: var(--color-base-20);
-//   --background-modifier-cover: var(--color-base-15);
-//   --background-modifier-message: var(--color-base-20);
-// }
-
-// body:is(.theme-light) {
-//   --background-primary: var(--color-base-00);
-//   --background-primary-alt: var(--color-base-10);
-//   --background-secondary: var(--color-base-05);
-//   --background-secondary-alt: var(--color-base-10);
-//   --background-modifier-hover: var(--color-base-10);
-//   --background-modifier-message: var(--color-base-70);
-// }
-
 /* obsi-snip-coll start: grid-background */
 body.flexcyon-editor-grid .canvas-background,
 body.flexcyon-editor-grid .kanban-plugin div,

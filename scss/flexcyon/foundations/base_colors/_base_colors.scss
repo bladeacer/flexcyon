@@ -16,16 +16,21 @@ body.theme-dark {
 }
 
 body.theme-light {
-  // TODO: Less generic colours???
-  // TODO: Too milky base 02?
-  --flexcyon-base-01: #edebe5;
-  --flexcyon-base-02: #faf7ef;
-  --flexcyon-base-03: #dddcd6;
-  --flexcyon-base-04: #d3d3ce;
-  --flexcyon-base-05: #b4b3af;
+  // Old colours
+  // --flexcyon-base-01: #edebe5;
+  // --flexcyon-base-02: #faf7ef;
+  // --flexcyon-base-03: #dddcd6;
+  // --flexcyon-base-04: #d3d3ce;
+  // --flexcyon-base-05: #b4b3af;
 
-  /* ------------------------------ */
-  --flexcyon-base-grey-dark: #797876;
+  // Current colours
+  // Primary-ish?
+  --flexcyon-base-01: #f1f0ec;
+  --flexcyon-base-02: #effaf2;
+  --flexcyon-base-03: #e8f2eb;
+  --flexcyon-base-04: #dae1dd;
+  --flexcyon-base-05: #d4dad6;
+  --flexcyon-base-grey-dark: #929190;
   --flexcyon-base-grey-light: #080808;
 }
 
@@ -76,12 +81,4 @@ body:is(.theme-light) {
   --color-base-60: var(--flexcyon-base-grey-dark);
   --color-base-70: var(--flexcyon-base-grey-mix);
   --color-base-100: var(--flexcyon-base-grey-light);
-}
-
-body:is(.theme-light) {
-  --flexcyon-base-01-02-mix: color-mix(
-    in oklch,
-    var(--flexcyon-base-01) 70%,
-    var(--flexcyon-base-02) 30%
-  );
 }
