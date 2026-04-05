@@ -63,6 +63,10 @@ body {
       }
     }
   }
+
+  .notice {
+    color: var(--text-normal);
+  }
 }
 
 body.flexcyon-enable-alt-active-item-effect {
