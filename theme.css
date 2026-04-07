@@ -9144,7 +9144,7 @@ body:is(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold):is(
   inset-inline-end: 0;
   z-index: 2;
   inline-size: max-content;
-  padding: 8px;
+  padding: 8px 10px;
   font-size: var(--status-bar-font-size);
   user-select: none;
   content: var(--flexcyon-status-hide-until-hover-text);
@@ -9157,7 +9157,7 @@ body:is(.flexcyon-status-hide-until-hover,
 .flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar::before, body:is(.flexcyon-status-hide-until-hover,
 .flexcyon-status-hide-until-hold).flexcyon-status-centre-align .status-bar {
   position: absolute;
-  inset-inline: 32px 0;
+  inset-inline: 36px 0;
   display: flex;
   justify-content: center;
   inline-size: max-content;
@@ -9229,7 +9229,7 @@ body:not(.is-fullscreen) .status-bar {
 }
 
 body.flexcyon-status-style-card .status-bar {
-  inset-inline-end: 8px;
+  inset-inline-end: 10px;
   gap: 8px;
   margin: 4px 8px;
   background-color: transparent;
@@ -9248,7 +9248,7 @@ body.flexcyon-status-style-card .status-bar :nth-child(2n+1).status-bar-item {
 
 body.flexcyon-flex-max-mode:not(:has(.mod-active > [data-type=empty])) .status-bar::before,
 body.flexcyon-status-style-pl10k:not(:has(.mod-active > [data-type=empty])) .status-bar::before {
-  inset-inline-end: 24px;
+  inset-inline-end: 28px;
 }
 
 body:has(.mod-active > [data-type=empty]) .status-bar {
@@ -9275,19 +9275,13 @@ body.flexcyon-flex-max-mode .status-bar .status-bar-item .status-bar-item-icon,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item .status-bar-item-icon {
   transform: translateX(-1px);
 }
-body.flexcyon-flex-max-mode .status-bar .status-bar-item[style="display: none;"] + .status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar .status-bar-item[style="display: none;"] + .status-bar-item {
-  padding-inline-start: 12px;
-  border-start-start-radius: 16px;
-  border-end-start-radius: 16px;
-}
 body.flexcyon-flex-max-mode .status-bar .status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
   padding: 0;
-  padding-inline-start: 2px;
+  padding-inline-start: 4px;
 }
-body.flexcyon-flex-max-mode .status-bar .status-bar-item::after,
-body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
+body.flexcyon-flex-max-mode .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after,
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after {
   position: relative;
   inline-size: inherit;
   block-size: inherit;
@@ -9300,23 +9294,15 @@ body.flexcyon-flex-max-mode .status-bar :first-child:empty,
 body.flexcyon-flex-max-mode .status-bar :first-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :first-child:empty,
 body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
-  padding-inline-start: 4px;
+  padding-inline-start: 8px;
   border-start-start-radius: 16px;
   border-end-start-radius: 16px;
 }
 body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item,
-body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item,
-body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item {
-  margin-inline-end: 1.25vw;
+body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item {
+  margin-inline-end: 12px;
   border-start-end-radius: 16px;
   border-end-end-radius: 16px;
-}
-body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item *,
-body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item *,
-body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item *,
-body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item * {
-  margin-inline-end: 0;
 }
 body.flexcyon-flex-max-mode .status-bar :nth-child(2n+1).status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :nth-child(2n+1).status-bar-item {
@@ -9335,10 +9321,8 @@ body.flexcyon-status-style-pl10k .status-bar :nth-child(2n).status-bar-item::aft
   background-color: var(--color-base-20);
 }
 body.flexcyon-flex-max-mode .status-bar :nth-last-child(2).status-bar-item::after,
-body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item,
 body.flexcyon-flex-max-mode .status-bar :last-child.status-bar-item::after,
 body.flexcyon-status-style-pl10k .status-bar :nth-last-child(2).status-bar-item::after,
-body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :last-child.status-bar-item::after {
   background-color: transparent;
 }
