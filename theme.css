@@ -9278,15 +9278,18 @@ body.flexcyon-status-style-pl10k .status-bar .status-bar-item .status-bar-item-i
 body.flexcyon-flex-max-mode .status-bar .status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar .status-bar-item {
   padding: 0;
-  padding-inline-start: 4px;
+  padding-inline-start: 6px;
 }
-body.flexcyon-flex-max-mode .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after,
-body.flexcyon-status-style-pl10k .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after {
+body.flexcyon-flex-max-mode .status-bar .status-bar-item::after,
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item::after {
   position: relative;
   inline-size: inherit;
   block-size: inherit;
   padding: 4px;
   color: transparent;
+}
+body.flexcyon-flex-max-mode .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after,
+body.flexcyon-status-style-pl10k .status-bar .status-bar-item + .status-bar-item:not([style="display: none;"])::after {
   content: "e";
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
 }
@@ -9294,7 +9297,7 @@ body.flexcyon-flex-max-mode .status-bar :first-child:empty,
 body.flexcyon-flex-max-mode .status-bar :first-child.status-bar-item,
 body.flexcyon-status-style-pl10k .status-bar :first-child:empty,
 body.flexcyon-status-style-pl10k .status-bar :first-child.status-bar-item {
-  padding-inline-start: 8px;
+  padding-inline: 8px;
   border-start-start-radius: 16px;
   border-end-start-radius: 16px;
 }

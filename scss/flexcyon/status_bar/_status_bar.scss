@@ -256,16 +256,19 @@ body.flexcyon-status-style-pl10k {
 
     .status-bar-item {
       padding: 0;
-      padding-inline-start: 4px;
-    }
+      padding-inline-start: 6px;
 
-    .status-bar-item + .status-bar-item:not([style="display: none;"]) {
       &::after {
         position: relative;
         inline-size: inherit;
         block-size: inherit;
         padding: 4px;
         color: transparent;
+      }
+    }
+
+    .status-bar-item + .status-bar-item:not([style="display: none;"]) {
+      &::after {
         content: "e";
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 70% 50%);
       }
@@ -273,7 +276,7 @@ body.flexcyon-status-style-pl10k {
 
     :first-child:empty,
     :first-child.status-bar-item {
-      padding-inline-start: 8px;
+      padding-inline: 8px;
       border-start-start-radius: 16px;
       border-end-start-radius: 16px;
     }
