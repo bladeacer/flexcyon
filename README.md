@@ -2,7 +2,7 @@
     <a href="https://flexcyon.github.io/docs-en/">
         <img alt="English Documentation" src="https://img.shields.io/badge/english-docs-blue?style=for-the-badge">
     </a>
-    <a href="https://flexcyon.github.io/docs-en/">
+    <a href="https://flexcyon.github.io/docs-en/zh">
         <img alt="中文文档" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E6%96%87%E6%A1%A3-purple?style=for-the-badge">
     </a>
     <a href="https://matrix.to/#/#flexcyon-space:matrix.org">

@@ -1,3 +1,4 @@
+@use "./style_settings/style_settings";
 @use "./foundations/foundations";
 @use "./gutters/gutters";
 @use "./callouts/callouts";
@@ -10,7 +11,6 @@
 @use "./status_bar/status_bar";
 @use "./new_tab/new_tab";
 @use "./others/others";
-@use "./style_settings/style_settings";
 @use "./cssclasses/cssclasses";
 @use "./background_image/background_image";
 @use "./accessibility/accessibility";

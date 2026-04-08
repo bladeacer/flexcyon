@@ -1,0 +1,97 @@
+body {
+  --flexcyon-style-settings-indent-width: 4px;
+
+  div.pcr-app.visible {
+    background-color: var(--color-base-30);
+  }
+
+  .pcr-app .pcr-interaction {
+    .pcr-type {
+      color: var(--text-normal);
+      background: var(--color-base-50);
+      opacity: 0.85;
+    }
+
+    .pcr-type.active {
+      background: var(--text-accent);
+      border: unset;
+      opacity: unset;
+    }
+
+    .pcr-cancel {
+      color: var(--text-normal);
+      background: var(--color-red);
+    }
+
+    .pcr-save {
+      color: var(--text-normal);
+      background: var(--color-blue);
+    }
+  }
+}
+
+body:not(.css-settings-manager) .app-container::after {
+  inset-inline: calc(0px * 2) 2px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  inline-size: fit-content;
+  max-inline-size: 85%;
+  padding: 16px;
+  margin: 0 auto;
+  margin-block-end: 48px;
+  font-size: var(--font-ui-large);
+  content: "Flexcyon works best with the Style Settings plugin, refer to the README or docs on how to install it.";
+  background-color: var(--background-primary);
+}
+
+.themed-color-wrapper {
+  .theme-dark .pickr-reset button {
+    color: #d3d3d3aa;
+    background-color: #191d28aa;
+    scale: var(--upsize);
+  }
+
+  .theme-light .pickr-reset button {
+    color: #080808aa;
+    background-color: #edebe5aa;
+    scale: var(--upsize);
+  }
+}
+
+@mixin setting-item-heading-margin($data-level) {
+  .setting-item-heading[data-level="#{$data-level}"],
+  .setting-item-heading[data-level="#{$data-level}"]
+    + .style-settings-container {
+    margin-inline-start: calc(
+      ($data-level + 1) * var(--flexcyon-style-settings-indent-width)
+    );
+  }
+}
+
+@include setting-item-heading-margin(0);
+@include setting-item-heading-margin(1);
+@include setting-item-heading-margin(2);
+@include setting-item-heading-margin(3);
+@include setting-item-heading-margin(4);
+@include setting-item-heading-margin(5);
+@include setting-item-heading-margin(6);
+
+.style-settings-collapse-indicator svg {
+  scale: calc(var(--expand) + 20%);
+}
+
+body.flexcyon-style-settings-dim-collapsed-headings {
+  .style-settings-heading.is-collapsed {
+    opacity: calc(var(--dimmed) + 0.05);
+  }
+}
+
+.style-settings-import,
+.style-settings-export {
+  text-decoration: none;
+}
+
+.style-settings-import {
+  color: var(--color-blue);
+}
