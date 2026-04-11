@@ -1,0 +1,22 @@
+/*! 
+@settings
+name: flexcyon://accessibility
+id: flexcyon-a11y
+settings:
+  - title: About accessibility
+    type: info-text
+    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
+    collapsed: true
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
+    default: 1
+  - title: Global contrast ratio
+    type: variable-number
+    id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global saturation ratio
+    type: variable-number
+    id: flexcyon-saturation-ratio
+    default: 1
+*/

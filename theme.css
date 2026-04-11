@@ -10498,17 +10498,17 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
 name: flexcyon://about
 id: flexcyon-about
 settings:
-  - title: About theme
+  - title: About Theme
     type: info-text
     markdown: true
-    description: Flexcyon's colours are based on the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). 
+    description: flexcyon's colours are based on the Halcyon, Flexoki and Origami themes. You can find its [source code here](https://github.com/bladeacer/flexcyon). 
 
-  - title: Design principles
+  - title: Design Principles
     type: info-text
     markdown: true
     description: It aims to be *reasonably opinionated and highly customisable*. If you are interested, feel free to learn more about the theme via the ==README and the documentation==. When it comes to customising this theme, installing and using the Settings Search plugin is highly recommended.
 
-  - title: Documentation 
+  - title: Documentation
     type: info-text
     markdown: true
     description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
@@ -10518,15 +10518,15 @@ settings:
 name: flexcyon://modes
 id: flexcyon-modes
 settings:
-  - title: About modes
+  - title: About Modes
     type: info-text
     description: flexcyon offers several modes, under this page you can also configure accessibility settings
-  - title: Return to Zero mode
+  - title: Return To Zero Mode
     type: class-toggle
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
     id: flexcyon-rtz-mode
     default: false
-  - title: Flex Max mode
+  - title: Flex Max Mode
     type: class-toggle
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
     id: flexcyon-flex-max-mode
@@ -10556,10 +10556,15 @@ settings:
     id: flexcyon-editor-writing-indentation
     default: 16
     format: px
-  - title: Accessibility
-    type: heading
-    description: Toggle accessibility options
-    level: 5
+*/
+/*! 
+@settings
+name: flexcyon://accessibility
+id: flexcyon-a11y
+settings:
+  - title: About accessibility
+    type: info-text
+    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
     collapsed: true
   - title: Global brightness ratio
     type: variable-number
@@ -10573,11 +10578,16 @@ settings:
     type: variable-number
     id: flexcyon-saturation-ratio
     default: 1
-  - title: Mobile
-    type: heading
-    level: 4
-    collapsed: true
-  - title: Revert 1.11 Navigation UI
+*/
+/*! 
+@settings
+name: flexcyon://mobile
+id: flexcyon-mobile
+settings:
+  - title: About Mobile
+    type: info-text
+    description: Configure Style Settings related to mobile.
+  - title: Revert to 1.11 Navigation UI Style
     id: flexcyon-revert-nav-item-alignment
     type: class-toggle
     default: true

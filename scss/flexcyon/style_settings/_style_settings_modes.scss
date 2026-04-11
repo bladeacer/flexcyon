@@ -3,15 +3,15 @@
 name: flexcyon://modes
 id: flexcyon-modes
 settings:
-  - title: About modes
+  - title: About Modes
     type: info-text
     description: flexcyon offers several modes, under this page you can also configure accessibility settings
-  - title: Return to Zero mode
+  - title: Return To Zero Mode
     type: class-toggle
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
     id: flexcyon-rtz-mode
     default: false
-  - title: Flex Max mode
+  - title: Flex Max Mode
     type: class-toggle
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
     id: flexcyon-flex-max-mode
@@ -41,29 +41,4 @@ settings:
     id: flexcyon-editor-writing-indentation
     default: 16
     format: px
-  - title: Accessibility
-    type: heading
-    description: Toggle accessibility options
-    level: 5
-    collapsed: true
-  - title: Global brightness ratio
-    type: variable-number
-    id: flexcyon-brightness-ratio
-    default: 1
-  - title: Global contrast ratio
-    type: variable-number
-    id: flexcyon-contrast-ratio
-    default: 1
-  - title: Global saturation ratio
-    type: variable-number
-    id: flexcyon-saturation-ratio
-    default: 1
-  - title: Mobile
-    type: heading
-    level: 4
-    collapsed: true
-  - title: Revert 1.11 Navigation UI
-    id: flexcyon-revert-nav-item-alignment
-    type: class-toggle
-    default: true
 */
