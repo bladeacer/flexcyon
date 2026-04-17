@@ -5,7 +5,7 @@ id: flexcyon-editor
 settings:
   - title: About Editor
     type: info-text
-    description: Bulk of main editor related style settings
+    description: Bulk of main editor related style settings. If you cannot find a particular setting, it is mostly likely here.
   
   - title: Accent Colors
     type: heading
@@ -268,12 +268,39 @@ settings:
     type: variable-number
     default: 4
     format: px
+
+  - title: UI Font sizes
+    type: heading
+    level: 1
+    collapsed: true
+    description: Configure UI Font sizes of the theme.
+  - title: Smaller UI Font size
+    id: font-ui-smaller
+    type: variable-number
+    default: 12.9442
+    format: px
+  - title: Small UI Font size
+    id: font-ui-small
+    type: variable-number
+    default: 14.5622
+    format: px
+  - title: Medium UI Font size
+    id: font-ui-medium 
+    type: variable-number
+    default: 16.1803
+    format: px
+  - title: Large UI Font size
+    id: font-ui-large
+    type: variable-number
+    default: 17.7983
+    format: px
+
     
   - title: Headings
     type: heading
     level: 1
     collapsed: true
-    description: Configure headings of the theme.
+    description: Configure headings of the theme. Set coloured headings, soft glow for headings, heading indicators, colours, font size, font weight, line height, underline, text alignment.
 
   - id: flexcyon-coloured-headings
     title: Enable coloured headings
@@ -289,6 +316,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 1s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
     description: If the Obsidian installer version is below 1.9.0, use this option instead.
@@ -350,6 +378,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 2s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 2
     id: flexcyon-headings-indicator-h2
     type: class-toggle
@@ -410,6 +439,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 3s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 3
     id: flexcyon-headings-indicator-h3
     type: class-toggle
@@ -470,6 +500,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 4s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 4
     id: flexcyon-headings-indicator-h4
     type: class-toggle
@@ -530,6 +561,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 5s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 5
     id: flexcyon-headings-indicator-h5
     type: class-toggle
@@ -590,6 +622,7 @@ settings:
     type: heading
     level: 2
     collapsed: true
+    description: Configure Heading 6s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 6
     id: flexcyon-headings-indicator-h6
     type: class-toggle
@@ -650,6 +683,7 @@ settings:
     type: heading
     level: 1
     collapsed: true
+    description: Configure inline titles of the theme. Set font size, font weight, line height, do not display inline title.
   - title: Inline title font size
     id: inline-title-size
     type: variable-number
@@ -672,6 +706,7 @@ settings:
     type: heading
     level: 1
     collapsed: true
+    description: Configure code blocks of the theme. Set Code Block Syntax Highlighting Mode, File Extension, Prefix before File Extension.
   - title: Code Block Syntax Highlighting Mode
     type: class-select
     id: flexcyon-cb-syntax-mode
@@ -717,35 +752,11 @@ settings:
     type: variable-number
     default: 500
 
-  - title: UI Font sizes
-    type: heading
-    level: 1
-    collapsed: true
-  - title: Smaller UI Font size
-    id: font-ui-smaller
-    type: variable-number
-    default: 12.9442
-    format: px
-  - title: Small UI Font size
-    id: font-ui-small
-    type: variable-number
-    default: 14.5622
-    format: px
-  - title: Medium UI Font size
-    id: font-ui-medium 
-    type: variable-number
-    default: 16.1803
-    format: px
-  - title: Large UI Font size
-    id: font-ui-large
-    type: variable-number
-    default: 17.7983
-    format: px
-
   - title: Table
     type: heading
     level: 1
     collapsed: true 
+    description: Configure tables of the theme. Set Table border colour, width in reading mode, table header font size, table header padding, table header live preview scaling, table cell padding, table cell live preview scaling.
   - title: Table border color
     id: table-border-color
     type: variable-color
@@ -756,7 +767,7 @@ settings:
     id: flexcyon-table-reading-mode-width
     type: variable-text
     default: 100%
-  - title: Table header font size
+  - title: Table Header font size
     id: table-header-size
     type: variable-select
     default: var(--font-ui-large)
@@ -769,17 +780,17 @@ settings:
         value: var(--font-ui-medium)
       - label: Large UI Font size
         value: var(--font-ui-large)
-  - title: Table Heading Vertical Padding
+  - title: Table Header Vertical Padding
     id: flexcyon-th-verti-padding
     type: variable-number
     format: px
     default: 5
-  - title: Table Heading Horizontal Padding
+  - title: Table Header Horizontal Padding
     id: flexcyon-th-horiz-padding
     type: variable-number
     format: px
     default: 10
-  - title: Table Heading Live Preview Scaling
+  - title: Table Header Live Preview Scaling
     description: Proportion to scale Live Preview table heading padding when compared to Reading mode.
     id: flexcyon-th-live-pad-scale
     type: variable-number
