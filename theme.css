@@ -10495,7 +10495,7 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
 
 /*! 
 @settings
-name: flexcyon://about
+name: flexcyon://about-theme
 id: flexcyon-about
 settings:
   - title: About Theme
@@ -10525,7 +10525,7 @@ id: flexcyon-modes
 settings:
   - title: About Modes
     type: info-text
-    description: flexcyon offers several modes, under this page you can also configure accessibility settings
+    description: Configure opinionated modes of the theme.
   - title: Return To Zero Mode
     type: class-toggle
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
@@ -10606,10 +10606,16 @@ settings:
     type: info-text
     description: Bulk of main editor related style settings. If you cannot find a particular setting, it is mostly likely here.
 
-  - title: Accent Colors
+  - title: Colors
     type: heading
     level: 1
     collapsed: true
+    description: Configure colours used in the theme. Click on the restore default button to properly preview most colours.
+
+  - title: Accent Colors
+    type: heading
+    level: 2
+    collapsed: false
     description: Configure definitions of colours like Red, Green, Blue, etc. Configure Extended Colour Palette.
   - id: flexcyon-cyan
     title: Cyan Color
@@ -10713,9 +10719,8 @@ settings:
 
   - title: Base Colors
     type: heading
-    level: 1
-    collapsed: true
-    description: Click on the restore default button to properly preview most colours.
+    level: 2
+    collapsed: false
   - id: flexcyon-base-01
     title: Base Color 01
     type: variable-themed-color
@@ -10794,7 +10799,13 @@ settings:
     type: heading
     level: 1
     collapsed: true
-    description: Configure typography of the theme. Click on the restore default button to properly preview most colours.
+    description: Configure typography of the theme. Configure Text, Highlight Text, Headings, Inline Title and UI Font Sizes. Click on the restore default button to properly preview most colours.
+
+  - title: Text
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure text in the theme. Set colour, line height, word spacing and letter spacing. Use Settings > Apperance > Font to set Font size.
   - id: text-normal
     title: Normal Text color
     type: variable-themed-color
@@ -10827,6 +10838,12 @@ settings:
     type: variable-number
     default: 0
     format: px
+
+  - title: Highlight Text
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure highlight text in the theme. Set highlight text colour, opacity, padding and border radius.
   - title: Highlight Text Colour
     id: flexcyon-highlight-colour
     type: variable-select
@@ -10868,36 +10885,9 @@ settings:
     default: 4
     format: px
 
-  - title: UI Font sizes
-    type: heading
-    level: 1
-    collapsed: true
-    description: Configure UI Font sizes of the theme.
-  - title: Smaller UI Font size
-    id: font-ui-smaller
-    type: variable-number
-    default: 12.9442
-    format: px
-  - title: Small UI Font size
-    id: font-ui-small
-    type: variable-number
-    default: 14.5622
-    format: px
-  - title: Medium UI Font size
-    id: font-ui-medium 
-    type: variable-number
-    default: 16.1803
-    format: px
-  - title: Large UI Font size
-    id: font-ui-large
-    type: variable-number
-    default: 17.7983
-    format: px
-
-
   - title: Headings
     type: heading
-    level: 1
+    level: 2
     collapsed: true
     description: Configure headings of the theme. Set coloured headings, soft glow for headings, heading indicators, colours, font size, font weight, line height, underline, text alignment.
 
@@ -10913,7 +10903,7 @@ settings:
 
   - title: Heading 1
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 1s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 1
@@ -10975,7 +10965,7 @@ settings:
 
   - title: Heading 2
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 2s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 2
@@ -11036,7 +11026,7 @@ settings:
 
   - title: Heading 3
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 3s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 3
@@ -11097,7 +11087,7 @@ settings:
 
   - title: Heading 4
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 4s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 4
@@ -11158,7 +11148,7 @@ settings:
 
   - title: Heading 5
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 5s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 5
@@ -11219,7 +11209,7 @@ settings:
 
   - title: Heading 6
     type: heading
-    level: 2
+    level: 3
     collapsed: true
     description: Configure Heading 6s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 6
@@ -11280,7 +11270,7 @@ settings:
 
   - title: Inline title
     type: heading
-    level: 1
+    level: 2
     collapsed: true
     description: Configure inline titles of the theme. Set font size, font weight, line height, do not display inline title.
   - title: Inline title font size
@@ -11300,6 +11290,61 @@ settings:
     id: flexcyon-no-inline-title
     type: class-toggle
     default: false
+
+  - title: UI Font Sizes
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure UI Font sizes of the theme.
+  - title: Smaller UI Font size
+    id: font-ui-smaller
+    type: variable-number
+    default: 12.9442
+    format: px
+  - title: Small UI Font size
+    id: font-ui-small
+    type: variable-number
+    default: 14.5622
+    format: px
+  - title: Medium UI Font size
+    id: font-ui-medium 
+    type: variable-number
+    default: 16.1803
+    format: px
+  - title: Large UI Font size
+    id: font-ui-large
+    type: variable-number
+    default: 17.7983
+    format: px
+
+  - title: Opacity
+    type: heading
+    level: 1
+    collapsed: true
+    description: All editor opacity related style settings, consolidated.
+  - title: Opacity of dimmed elements
+    id: dimmed
+    description: Opacity of dimmed UI elements
+    type: variable-number
+    default: 0.55
+  - title: Opacity of block labels
+    id: flexcyon-block-label-opacity
+    description: Opacity of block ID labels
+    type: variable-number
+    default: 0.55
+  - title: Opacity of status bar in new tab
+    id: flexcyon-status-new-tab-opacity
+    type: variable-number
+    default: 0.55
+  - title: Callout Metadata Background Opacity
+    id: flexcyon-callout-bg-opacity
+    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
+    type: variable-text
+    default: 20%
+  - title: Highlight Active Line Opacity
+    id: flexcyon-highlight-active-line-opacity
+    type: variable-text
+    default: 7.5%
 
   - title: Code Blocks
     type: heading
@@ -11498,27 +11543,17 @@ settings:
     description: Places nav header below other content, for example placing the New Note and other icons below the file explorer.
     type: class-toggle
     default: false
-
-  - title: Workspace
-    type: heading
-    level: 1
-    collapsed: true
   - title: File line width
     id: file-line-width
     description: File line width when readable line length is enabled
     type: variable-number
     default: 50
     format: rem
-  - title: Opacity of dimmed elements
-    id: dimmed
-    description: Opacity of dimmed UI elements
-    type: variable-number
-    default: 0.55
-  - title: Opacity of block labels
-    id: flexcyon-block-label-opacity
-    description: Opacity of block ID labels
-    type: variable-number
-    default: 0.55
+
+  - title: Workspace Components
+    type: heading
+    level: 1
+    collapsed: true
   - title: Editor Top Margin
     description: Sets the top margin of the editor.
     id: flexcyon-editor-margin-top
@@ -11531,6 +11566,7 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
+
   - title: Prompts
     type: heading
     level: 2
@@ -11587,6 +11623,131 @@ settings:
     type: variable-number
     default: 12
     format: px
+
+  - title: Title Bar
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Titlebar Button Effects
+    description: Enable hover effects on titlebar buttons
+    id: flexcyon-titlebar-button-effects
+    type: class-toggle
+    default: false
+
+  - title: Status Bar
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Hide until trigger
+    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
+    type: class-select
+    id: flexcyon-status-hide-until-trigger
+    allowEmpty: false
+    default: flexcyon-status-hide-until-hover
+    options: 
+      - 
+        label: Hide until hover
+        value: flexcyon-status-hide-until-hover
+      - 
+        label: Hide until hold
+        value: flexcyon-status-hide-until-hold
+      -
+        label: None
+        value: none
+  - title: Status bar alignment
+    type: class-select
+    id: flexcyon-status-alignment
+    allowEmpty: false
+    default: flexcyon-status-right-align
+    options: 
+      - 
+        label: Centre
+        value: flexcyon-status-centre-align
+      - 
+        label: Right
+        value: flexcyon-status-right-align
+  - title: Text when hide until hover enabled
+    id: flexcyon-status-hide-until-hover-text
+    description: Text to show when hide until hover is enabled, do not leave empty
+    type: variable-text
+    default: "Show status"
+    quotes: true
+  - title: Translation for showing status bar on hover
+    id: flexcyon-status-hide-until-hover-translation
+    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 80
+    format: vw
+  - title: Transition duration for showing status bar on hover
+    id: flexcyon-status-hide-hover-duration
+    description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 325
+    format: ms
+  - title: Transition timing function for showing status bar on hover
+    description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
+    id: flexcyon-status-hide-hover-function
+    type: variable-text
+    default: ease-out
+  - title: Use text instead of icons for mode status
+    id: flexcyon-status-text-mode
+    description: Use text instead of icons for mode status
+    type: class-toggle
+    default: false
+  - title: Reading Mode Text
+    id: flexcyon-status-reading-text
+    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "READ"
+    quotes: true
+  - title: Source Mode Text
+    id: flexcyon-status-source-text
+    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "SOURCE"
+    quotes: true
+  - title: Live Preview Mode Text
+    id: flexcyon-status-live-text
+    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "LIVE"
+    quotes: true
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
+  - title: Status bar font size
+    id: status-bar-font-size
+    type: variable-number
+    default: 13.7533
+    format: px
+  - title: Select status bar style
+    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
+    type: class-select
+    id: flexcyon-status-style
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Angled
+        value: flexcyon-status-style-angled
+      - 
+        label: Cards
+        value: flexcyon-status-style-card
+      -
+        label: Powerlevel10k
+        value: flexcyon-status-style-pl10k
+
+  - title: Enable status text color
+    id: flexcyon-status-text-enable-color
+    description: Affects text colors for vim mode status text as well.
+    type: class-toggle
+    default: false
+  - title: Do not show status bar in new tab
+    id: flexcyon-no-status-in-new-tab
+    description: Does not show status bar in new empty tabs where ASCII art or actions are shown by default.
+    type: class-toggle
+    default: false
 
   - title: Animations
     type: heading
@@ -11689,6 +11850,32 @@ settings:
     type: variable-number
     default: 0.55
 
+  - title: Layout
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Select workspace layout
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
+    type: class-select
+    id: flexcyon-workspace-layout
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Cards Layout
+        value: flexcyon-workspace-card-layout
+      - 
+        label: Angled Layout
+        value: flexcyon-workspace-angled-layout
+      - 
+        label: Powerlevel10k Layout
+        value: flexcyon-workspace-pl10k-layout
+  - title: Enable TUI add-on for cards layout
+    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
+    id: flexcyon-workspace-cards-tui-ext
+    type: class-toggle
+    default: true
+
   - title: Editor Background
     type: heading
     level: 1
@@ -11726,32 +11913,6 @@ settings:
     default: 2.5
     format: px
 
-  - title: Layout
-    type: heading
-    level: 1
-    collapsed: true
-  - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
-    type: class-select
-    id: flexcyon-workspace-layout
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Cards Layout
-        value: flexcyon-workspace-card-layout
-      - 
-        label: Angled Layout
-        value: flexcyon-workspace-angled-layout
-      - 
-        label: Powerlevel10k Layout
-        value: flexcyon-workspace-pl10k-layout
-  - title: Enable TUI add-on for cards layout
-    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
-    id: flexcyon-workspace-cards-tui-ext
-    type: class-toggle
-    default: true
-
   - title: Callouts
     type: heading
     level: 1
@@ -11768,11 +11929,6 @@ settings:
     type: variable-number
     default: 1
     format: rem
-  - title: Callout Metadata Background Opacity
-    id: flexcyon-callout-bg-opacity
-    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
-    type: variable-text
-    default: 20%
   - title: Callout Vertical Margin
     id: flexcyon-callout-vertical-margin
     description: Configures the vertical margin of callouts
@@ -11882,9 +12038,14 @@ settings:
     default: 8
     format: px
 
-  - title: Checkboxes
+  - title: Lists and Checkboxes
     type: heading
     level: 1
+    collapsed: true
+
+  - title: Checkboxes
+    type: heading
+    level: 2
     collapsed: true
   - title: Enable ASCII checkboxes
     type: class-toggle
@@ -11902,7 +12063,7 @@ settings:
 
   - title: Bullet lists
     type: heading
-    level: 1
+    level: 2
     collapsed: true
   - title: Enable Rainbow bullet lists
     type: class-toggle
@@ -11911,7 +12072,7 @@ settings:
 
   - title: Numbered lists
     type: heading
-    level: 1
+    level: 2
     collapsed: true
   - title: Select Default Numbered List Style in Reading Mode
     description: Unfortunately I cannot get it to work within CodeMirror's context, because the output html is not ordered list tags which are easier to style.
@@ -12106,135 +12267,6 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Status Bar
-    type: heading
-    level: 1
-    collapsed: true
-  - title: Hide until trigger
-    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
-    type: class-select
-    id: flexcyon-status-hide-until-trigger
-    allowEmpty: false
-    default: flexcyon-status-hide-until-hover
-    options: 
-      - 
-        label: Hide until hover
-        value: flexcyon-status-hide-until-hover
-      - 
-        label: Hide until hold
-        value: flexcyon-status-hide-until-hold
-      -
-        label: None
-        value: none
-  - title: Status bar alignment
-    type: class-select
-    id: flexcyon-status-alignment
-    allowEmpty: false
-    default: flexcyon-status-right-align
-    options: 
-      - 
-        label: Centre
-        value: flexcyon-status-centre-align
-      - 
-        label: Right
-        value: flexcyon-status-right-align
-  - title: Text when hide until hover enabled
-    id: flexcyon-status-hide-until-hover-text
-    description: Text to show when hide until hover is enabled, do not leave empty
-    type: variable-text
-    default: "Show status"
-    quotes: true
-  - title: Translation for showing status bar on hover
-    id: flexcyon-status-hide-until-hover-translation
-    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
-    type: variable-number
-    default: 80
-    format: vw
-  - title: Transition duration for showing status bar on hover
-    id: flexcyon-status-hide-hover-duration
-    description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
-    type: variable-number
-    default: 325
-    format: ms
-  - title: Transition timing function for showing status bar on hover
-    description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
-    id: flexcyon-status-hide-hover-function
-    type: variable-text
-    default: ease-out
-  - title: Use text instead of icons for mode status
-    id: flexcyon-status-text-mode
-    description: Use text instead of icons for mode status
-    type: class-toggle
-    default: false
-  - title: Reading Mode Text
-    id: flexcyon-status-reading-text
-    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "READ"
-    quotes: true
-  - title: Source Mode Text
-    id: flexcyon-status-source-text
-    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "SOURCE"
-    quotes: true
-  - title: Live Preview Mode Text
-    id: flexcyon-status-live-text
-    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "LIVE"
-    quotes: true
-  - title: Show status bar on mobile
-    id: flexcyon-status-mobile-enabled
-    type: class-toggle
-    default: false
-  - title: Status bar font size
-    id: status-bar-font-size
-    type: variable-number
-    default: 13.7533
-    format: px
-  - title: Select status bar style
-    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
-    type: class-select
-    id: flexcyon-status-style
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Angled
-        value: flexcyon-status-style-angled
-      - 
-        label: Cards
-        value: flexcyon-status-style-card
-      -
-        label: Powerlevel10k
-        value: flexcyon-status-style-pl10k
-
-  - title: Enable status text color
-    id: flexcyon-status-text-enable-color
-    description: Affects text colors for vim mode status text as well.
-    type: class-toggle
-    default: false
-  - title: Do not show status bar in new tab
-    id: flexcyon-no-status-in-new-tab
-    description: Does not show status bar in new empty tabs where ASCII art or actions are shown by default.
-    type: class-toggle
-    default: false
-  - title: Opacity of status bar in new tab
-    id: flexcyon-status-new-tab-opacity
-    type: variable-number
-    default: 0.55
-
-  - title: Title Bar
-    type: heading
-    level: 1
-    collapsed: true
-  - title: Titlebar Button Effects
-    description: Enable hover effects on titlebar buttons
-    id: flexcyon-titlebar-button-effects
-    type: class-toggle
-    default: false
-
   - title: Line Numbers
     type: heading
     level: 1
@@ -12245,10 +12277,6 @@ settings:
     id: flexcyon-highlight-active-line
     type: class-toggle
     default: false
-  - title: Highlight Active Line Opacity
-    id: flexcyon-highlight-active-line-opacity
-    type: variable-text
-    default: 7.5%
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums
