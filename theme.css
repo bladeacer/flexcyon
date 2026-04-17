@@ -10594,20 +10594,18 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://main
-id: flexcyon
+name: flexcyon://editor
+id: flexcyon-editor
 settings:
-  - title: Editor
-    type: heading
-    level: 4
-    collapsed: true
-    description: Editor related style settings
+  - title: About Editor
+    type: info-text
+    description: Bulk of main editor related style settings
 
   - title: Accent Colors
     type: heading
-    level: 5
+    level: 1
     collapsed: true
-    description: Click on the restore default button to properly preview most colours.
+    description: Configure definitions of colours like Red, Green, Blue, etc. Configure Extended Colour Palette.
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
@@ -10710,7 +10708,7 @@ settings:
 
   - title: Base Colors
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Click on the restore default button to properly preview most colours.
   - id: flexcyon-base-01
@@ -10789,8 +10787,9 @@ settings:
 
   - title: Typography
     type: heading
-    level: 5
+    level: 1
     collapsed: true
+    description: Configure typography of the theme. Click on the restore default button to properly preview most colours.
   - id: text-normal
     title: Normal Text color
     type: variable-themed-color
@@ -10866,8 +10865,9 @@ settings:
 
   - title: Headings
     type: heading
-    level: 5
+    level: 1
     collapsed: true
+    description: Configure headings of the theme.
 
   - id: flexcyon-coloured-headings
     title: Enable coloured headings
@@ -10881,7 +10881,7 @@ settings:
 
   - title: Heading 1
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
@@ -10942,7 +10942,7 @@ settings:
 
   - title: Heading 2
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 2
     id: flexcyon-headings-indicator-h2
@@ -11002,7 +11002,7 @@ settings:
 
   - title: Heading 3
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 3
     id: flexcyon-headings-indicator-h3
@@ -11062,7 +11062,7 @@ settings:
 
   - title: Heading 4
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 4
     id: flexcyon-headings-indicator-h4
@@ -11122,7 +11122,7 @@ settings:
 
   - title: Heading 5
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 5
     id: flexcyon-headings-indicator-h5
@@ -11182,7 +11182,7 @@ settings:
 
   - title: Heading 6
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Enable heading indicators globally for Heading 6
     id: flexcyon-headings-indicator-h6
@@ -11242,7 +11242,7 @@ settings:
 
   - title: Inline title
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Inline title font size
     id: inline-title-size
@@ -11264,7 +11264,7 @@ settings:
 
   - title: Code Blocks
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Code Block Syntax Highlighting Mode
     type: class-select
@@ -11313,7 +11313,7 @@ settings:
 
   - title: UI Font sizes
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Smaller UI Font size
     id: font-ui-smaller
@@ -11338,7 +11338,7 @@ settings:
 
   - title: Table
     type: heading
-    level: 5
+    level: 1
     collapsed: true 
   - title: Table border color
     id: table-border-color
@@ -11409,7 +11409,7 @@ settings:
 
   - title: Files
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Enable dimmed file extensions in file explorer
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
@@ -11485,7 +11485,7 @@ settings:
 
   - title: Workspace
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: File line width
     id: file-line-width
@@ -11517,7 +11517,7 @@ settings:
     default: center
   - title: Prompts
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Prompt width
     description: Sets the width of prompts like the command prompt
@@ -11574,7 +11574,7 @@ settings:
 
   - title: Animations
     type: heading
-    level: 5
+    level: 1
     collapsed: true
 
   - title: Note Animation type
@@ -11675,7 +11675,7 @@ settings:
 
   - title: Editor Background
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Select Background Type
     description: Select the background type for the editor
@@ -11712,7 +11712,7 @@ settings:
 
   - title: Layout
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Select workspace layout
     description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
@@ -11738,7 +11738,7 @@ settings:
 
   - title: Callouts
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Callout Icon Right padding
     id: flexcyon-callout-icon-right-padding
@@ -11833,7 +11833,7 @@ settings:
 
   - title: Horizontal Rule
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Disable horizontal rules in reading mode
     description: Do not display horizontal rules in reading mode
@@ -11868,7 +11868,7 @@ settings:
 
   - title: Checkboxes
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Enable ASCII checkboxes
     type: class-toggle
@@ -11886,7 +11886,7 @@ settings:
 
   - title: Bullet lists
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Enable Rainbow bullet lists
     type: class-toggle
@@ -11895,7 +11895,7 @@ settings:
 
   - title: Numbered lists
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Select Default Numbered List Style in Reading Mode
     description: Unfortunately I cannot get it to work within CodeMirror's context, because the output html is not ordered list tags which are easier to style.
@@ -12020,7 +12020,7 @@ settings:
 
   - title: Media
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Media Embed Vertical margin
     type: variable-number
@@ -12035,7 +12035,7 @@ settings:
 
   - title: Links
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Internal Link Color
     id: flexcyon-link-color
@@ -12066,7 +12066,7 @@ settings:
 
   - title: Properties
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Do not show properties in reading mode
     id: flexcyon-metadata-display-reading-disabled
@@ -12092,7 +12092,7 @@ settings:
 
   - title: Status Bar
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Hide until trigger
     description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
@@ -12211,7 +12211,7 @@ settings:
 
   - title: Title Bar
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Titlebar Button Effects
     description: Enable hover effects on titlebar buttons
@@ -12221,7 +12221,7 @@ settings:
 
   - title: Line Numbers
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Configure and customise line numbers.
   - title: Highlight Active Line
@@ -12281,7 +12281,7 @@ settings:
 
   - title: Cursor
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Default cursor type
     description: Sets the cursor type when it is not specified by the app
@@ -12378,7 +12378,7 @@ settings:
 
   - title: Graph
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Graph View Controls Vertical Padding
     type: variable-number
@@ -12393,7 +12393,7 @@ settings:
 
   - title: View header
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: View header breadcrumb max width
     id: flexcyon-view-header-breadcrumb-max-w
@@ -12416,7 +12416,7 @@ settings:
 
   - title: Debug
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Debugging details like operating system and screen dimension.
   - title: Display device operating system details
@@ -12446,7 +12446,7 @@ settings:
 
   - title: Tabs
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Number tabs
     id: flexcyon-number-tabs
@@ -12467,7 +12467,7 @@ settings:
   - title: Icons
     description: For icon related styling
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Upscale percentage of icons 1
     id: upsize
@@ -12507,7 +12507,7 @@ settings:
 
   - title: Input
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Customise the appearance of inputs
   - title: Input border radius
@@ -12525,7 +12525,12 @@ settings:
     id: flexcyon-input-verti-padding
     default: 8
     format: px
-
+*/
+/*! 
+@settings
+name: flexcyon://settings
+id: flexcyon-settings
+settings:
   - title: Settings
     type: heading
     level: 4
