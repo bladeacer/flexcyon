@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-xyz 1.X.Y to 2.0.0 settings migration script.
+1.X.Y to 2.0.0 settings migration script.
 """
 
 import json
@@ -12,15 +12,21 @@ import ast
 
 
 def get_mapping_config():
-    """Centralized configuration for settings migration."""
+    """
+    Centralized configuration.
+    Change TARGET_PREFIX here to update all mappings at once.
+    """
+    TARGET_PREFIX = "xyz"
+
     return {
+        "target_prefix": TARGET_PREFIX,
         "suffix_groups": {
-            "xyz-modes": ["xyz-rtz-mode", "xyz-flex-max-mode", "typewriter-mode"],
-            "xyz-a11y": ["xyz-brightness-ratio"]
+            f"{TARGET_PREFIX}-modes": ["xyz-rtz-mode", "xyz-flex-max-mode", "typewriter-mode"],
+            f"{TARGET_PREFIX}-a11y": ["xyz-brightness-ratio"]
         },
         "mode_transforms": ["xyz-rtz-mode", "xyz-flex-max-mode"],
         "exact_matches": {
-            # "xyz@old-legacy-key": "xyz-core@new-standard-key"
+            # "old-legacy-key": f"{TARGET_PREFIX}-core@new-standard-key"
         }
     }
 
