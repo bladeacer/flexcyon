@@ -8,48 +8,44 @@ from migrator import SettingsMapper, get_mapping_config
 import json
 
 
-def get_test_cases(prefix):
-    """
-    Returns the centralized list of test cases.
-    Using f-strings to respect the dynamic prefix.
-    """
+def get_test_cases(p):
     return [
         {
-            "name": "Special Mode Transform (True)",
-            "input": {f"{prefix}@{prefix}-rtz-mode": True},
-            "expected": {f"{prefix}-modes@{prefix}-rtz-mode": f"{prefix}-rtz-mode"}
+            "name": "Select Group: RTZ True (Wins)",
+            "input": {f"{p}@{p}-rtz-mode": True, f"{p}@{p}-flex-max-mode": False},
+            "expected": {f"{p}-modes@{p}-select-mode": f"{p}-rtz-mode"}
         },
         {
-            "name": "Special Mode Transform (False/Discard)",
-            "input": {f"{prefix}@{prefix}-rtz-mode": False},
+            "name": "Select Group: Flex Max (Do Nothing)",
+            "input": {f"{p}@{p}-rtz-mode": False, f"{p}@{p}-flex-max-mode": True},
             "expected": {}
         },
         {
-            "name": "Special Mode Transform (True) - Flex Max",
-            "input": {f"{prefix}@{prefix}-flex-max-mode": True},
-            "expected": {f"{prefix}-modes@{prefix}-flex-max-mode": f"{prefix}-flex-max-mode"}
+            "name": "Select Group: Both False (Fallback to none)",
+            "input": {f"{p}@{p}-rtz-mode": False, f"{p}@{p}-flex-max-mode": False},
+            "expected": {f"{p}-modes@{p}-select-mode": "none"}
         },
         {
-            "name": "Standard Prefix Update - Typewriter",
-            "input": {f"{prefix}@typewriter-mode": True},
-            "expected": {f"{prefix}-modes@typewriter-mode": True}
+            "name": "Standard Bool (Typewriter True)",
+            "input": {f"{p}@{p}-typewriter-mode": True},
+            "expected": {f"{p}-modes@{p}-typewriter-mode": True}
+        },
+        {
+            "name": "Standard Bool Discard (Typewriter False)",
+            "input": {f"{p}@{p}-typewriter-mode": False},
+            "expected": {}
         },
         {
             "name": "A11y Mapping",
-            "input": {f"{prefix}@{prefix}-brightness-ratio": 0.8},
-            "expected": {f"{prefix}-a11y@{prefix}-brightness-ratio": 0.8}
-        },
-        # {
-        #     "name": "Exact Match Priority",
-        #     "input": {"xyz@old-legacy-key": "some-value"},
-        #     "expected": {f"{prefix}-core@new-standard-key": "some-value"}
-        # }
+            "input": {f"{p}@{p}-brightness-ratio": 0.8},
+            "expected": {f"{p}-a11y@{p}-brightness-ratio": 0.8}
+        }
     ]
 
 
 def generate_test_json(test_cases, filename="test.json"):
     """
-    Extracts 'input' data from all test cases and merges them into 
+    Extracts 'input' data from all test cases and merges them into
     a single raw JSON file for the main migrator.
     """
     raw_input_data = {}
