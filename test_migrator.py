@@ -12,33 +12,33 @@ def get_test_cases(p):
     return [
         {
             "name": "Select Group: RTZ True (Wins)",
-            "input": {f"{p}@{p}-rtz-mode": True, f"{p}@{p}-flex-max-mode": False},
-            "expected": {f"{p}-modes@{p}-select-mode": f"{p}-rtz-mode"}
+            "input": {f"{p}@@{p}-rtz-mode": True, f"{p}@@{p}-flex-max-mode": False},
+            "expected": {f"{p}-modes@@{p}-select-mode": f"{p}-rtz-mode"}
         },
         {
             "name": "Select Group: Flex Max (Do Nothing)",
-            "input": {f"{p}@{p}-rtz-mode": False, f"{p}@{p}-flex-max-mode": True},
+            "input": {f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": True},
             "expected": {}
         },
         {
             "name": "Select Group: Both False (Fallback to none)",
-            "input": {f"{p}@{p}-rtz-mode": False, f"{p}@{p}-flex-max-mode": False},
-            "expected": {f"{p}-modes@{p}-select-mode": "none"}
+            "input": {f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": False},
+            "expected": {f"{p}-modes@@{p}-select-mode": "none"}
         },
         {
             "name": "Standard Bool (Typewriter True)",
-            "input": {f"{p}@{p}-typewriter-mode": True},
-            "expected": {f"{p}-modes@{p}-typewriter-mode": True}
+            "input": {f"{p}@@{p}-typewriter-mode": True},
+            "expected": {f"{p}-modes@@{p}-typewriter-mode": True}
         },
         {
             "name": "Standard Bool Discard (Typewriter False)",
-            "input": {f"{p}@{p}-typewriter-mode": False},
+            "input": {f"{p}@@{p}-typewriter-mode": False},
             "expected": {}
         },
         {
             "name": "A11y Mapping",
-            "input": {f"{p}@{p}-brightness-ratio": 0.8},
-            "expected": {f"{p}-a11y@{p}-brightness-ratio": 0.8}
+            "input": {f"{p}@@{p}-brightness-ratio": 0.8},
+            "expected": {f"{p}-a11y@@{p}-brightness-ratio": 0.8}
         }
     ]
 

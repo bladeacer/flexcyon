@@ -12,7 +12,7 @@ import ast
 
 
 def get_mapping_config():
-    P = "xyz"
+    P = "flexcyon"
     return {
         "target_prefix": P,
         "suffix_groups": {
@@ -43,7 +43,7 @@ class SettingsMapper:
         if key in self.config.get("exact_matches", {}):
             return self.config["exact_matches"][key], value
 
-        name = key.split('@')[-1]
+        name = key.split('@@')[-1]
         group_prefix = self.lookup.get(name)
         if not group_prefix:
             return key, value
@@ -62,7 +62,7 @@ class SettingsMapper:
             # Check if this is a standard member
             if base_name in members:
                 if value is True:
-                    return f"{group_prefix}@{self.prefix}-{target_suffix}", name
+                    return f"{group_prefix}@@{self.prefix}-{target_suffix}", name
                 return "__SEEN_BUT_DISCARDED__", target_suffix
 
         # 2. Standard Boolean Logic (for non-group keys like typewriter)
@@ -72,7 +72,7 @@ class SettingsMapper:
             if value is False:
                 return None, None
 
-        return f"{group_prefix}@{name}", value
+        return f"{group_prefix}@@{name}", value
 
     def map_settings(self, old_data):
         new_data = {}
@@ -84,7 +84,7 @@ class SettingsMapper:
             new_k, new_v = self._apply_rules(k, v)
 
             # Detect if this key belongs to any group in the config
-            base_name = k.split('@')[-1].replace(f"{self.prefix}-", "")
+            base_name = k.split('@@')[-1].replace(f"{self.prefix}-", "")
             for target, group_cfg in self.config.get("select_groups", {}).items():
                 if base_name in group_cfg.get("members", []) or base_name in group_cfg.get("discard_if_true", []):
                     groups_mentioned.add(target)
@@ -111,7 +111,7 @@ class SettingsMapper:
                 sample_key = group_cfg.get("members", group_cfg.get("discard_if_true", []))[0]
                 group_prefix = self.lookup.get(f"{self.prefix}-{sample_key}")
                 if group_prefix:
-                    new_data[f"{group_prefix}@{self.prefix}-{target}"] = "none"
+                    new_data[f"{group_prefix}@@{self.prefix}-{target}"] = "none"
 
         return new_data
 
