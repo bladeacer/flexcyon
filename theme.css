@@ -10495,7 +10495,7 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
 
 /*! 
 @settings
-name: flexcyon://about-theme
+name: flexcyon://About-Theme
 id: flexcyon-about
 settings:
   - title: About Theme
@@ -10513,14 +10513,14 @@ settings:
     markdown: true
     description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。Translation is done on a best effort basis, though each update will have properly translated documentation before even being published.
 
-  - title: Do you have this style setting option?
+  - title: "Is this style setting option available?"
     type: info-text
     markdown: true
     description: The Style Settings Plugin has a built-in search bar. That being said, the documentation is your friend with fuzzy search. The documentation also provides usage example and more information not found here. This includes the usage of CSS Classes and Callout Metadata that the theme comes with.
 */
 /*! 
 @settings
-name: flexcyon://modes
+name: flexcyon://Modes
 id: flexcyon-modes
 settings:
   - title: About Modes
@@ -10564,7 +10564,7 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://accessibility
+name: flexcyon://Accessibility
 id: flexcyon-a11y
 settings:
   - title: About accessibility
@@ -10586,7 +10586,7 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://mobile
+name: flexcyon://Mobile
 id: flexcyon-mobile
 settings:
   - title: About Mobile
@@ -10599,12 +10599,12 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://editor
+name: flexcyon://Editor
 id: flexcyon-editor
 settings:
   - title: About Editor
     type: info-text
-    description: Bulk of main editor related style settings. If you cannot find a particular setting, it is mostly likely here.
+    description: Contains main editor related style settings. If you cannot find a particular setting, it is mostly likely here.
 
   - title: Colors
     type: heading
@@ -12572,7 +12572,7 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://settings
+name: flexcyon://Settings
 id: flexcyon-settings
 settings:
   - title: Settings
@@ -12620,7 +12620,12 @@ settings:
     type: class-toggle
     id: flexcyon-style-settings-dim-collapsed-headings
     default: true
-
+*/
+/*! 
+@settings
+name: flexcyon://Others
+id: flexcyon-others
+settings:
   - title: Plugins
     type: heading
     level: 4
