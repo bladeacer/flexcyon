@@ -1,5 +1,6 @@
 /** @type {import('stylelint').Config} */
 export default {
+  "cache": true,
   extends: [
     "stylelint-config-standard-scss", 
     "stylelint-config-recess-order"
