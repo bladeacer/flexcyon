@@ -9458,7 +9458,7 @@ body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.e
   margin-block-start: 32px;
 }
 
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
   display: inline;
   font-family: var(--flexcyon-new-tab-font-group);
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
@@ -9471,46 +9471,46 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div 
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > div.empty-state-action-list {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-action-list {
   display: none;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > .sidebar-toggle-button {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > .sidebar-toggle-button {
   display: none;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-folders-action-items.file-tree-header-fixed,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .titlebar-button-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-new-tab,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-tab-list,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-sidedock-vault-profile {
+body.flexcyon-rtz-mode .graph-controls,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed,
+body.flexcyon-rtz-mode .oz-flex-container,
+body.flexcyon-rtz-mode .nav-header,
+body.flexcyon-rtz-mode .titlebar-button-container,
+body.flexcyon-rtz-mode .view-header-left,
+body.flexcyon-rtz-mode .view-actions,
+body.flexcyon-rtz-mode .side-dock-ribbon,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile {
   opacity: 0;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-folders-action-items.file-tree-header-fixed:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .titlebar-button-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-new-tab:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-tab-list:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-sidedock-vault-profile:hover {
+body.flexcyon-rtz-mode .graph-controls:hover,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed:hover,
+body.flexcyon-rtz-mode .oz-flex-container:hover,
+body.flexcyon-rtz-mode .nav-header:hover,
+body.flexcyon-rtz-mode .titlebar-button-container:hover,
+body.flexcyon-rtz-mode .view-header-left:hover,
+body.flexcyon-rtz-mode .view-actions:hover,
+body.flexcyon-rtz-mode .side-dock-ribbon:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list:hover,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile:hover {
   opacity: unset;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar {
+body.flexcyon-rtz-mode .cm-gutter,
+body.flexcyon-rtz-mode .metadata-container,
+body.flexcyon-rtz-mode .status-bar {
   opacity: var(--dimmed);
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
+body.flexcyon-rtz-mode .cm-gutter:hover,
+body.flexcyon-rtz-mode .metadata-container:hover,
+body.flexcyon-rtz-mode .status-bar:hover {
   opacity: unset;
 }
 
@@ -10525,17 +10525,32 @@ id: flexcyon-modes
 settings:
   - title: About Modes
     type: info-text
-    description: Configure opinionated modes of the theme.
+    description: Configure modes of the theme.
+  - title: Select Mode
+    type: class-select
+    description: Select between Flex Max preset mode, Return to Zero preset mode or customise your own flexcyon experience. More about Flex Max and Return to Zero modes can be found below and in the documentation.
+    id: flexcyon-select-mode
+    allowEmpty: false
+    default: flexcyon-flex-max-mode
+    options: 
+      - 
+        label: None
+        value: none
+      -
+        label: Flex Max Mode
+        value: flexcyon-flex-max-mode
+      -
+        label: Return To Zero Mode
+        value: flexcyon-rtz-mode
+
   - title: Return To Zero Mode
-    type: class-toggle
+    type: info-text
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
-    id: flexcyon-rtz-mode
-    default: false
+
   - title: Flex Max Mode
-    type: class-toggle
+    type: info-text
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
-    id: flexcyon-flex-max-mode
-    default: true
+
   - title: Typewriter Mode
     type: class-toggle
     description: Reduce opacity of all but the active line in source and live preview mode
@@ -12623,8 +12638,8 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://Others
-id: flexcyon-others
+name: flexcyon://Plugins
+id: flexcyon-plugins
 settings:
   - title: Plugins
     type: heading
@@ -12891,7 +12906,12 @@ settings:
         value: center
       - label: Right
         value: right
-
+*/
+/*! 
+@settings
+name: flexcyon://Others
+id: flexcyon-others
+settings:
   - title: Others
     type: heading
     level: 4
