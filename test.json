@@ -1,6 +1,10 @@
 {
-  "flexcyon@@flexcyon-rtz-mode": false,
-  "flexcyon@@flexcyon-flex-max-mode": false,
-  "flexcyon@@flexcyon-typewriter-mode": false,
-  "flexcyon@@flexcyon-brightness-ratio": 0.8
+  "xyz@@xyz-rtz-mode": false,
+  "xyz@@xyz-flex-max-mode": true,
+  "xyz@@xyz-typewriter-mode": false,
+  "xyz@@xyz-typewriter-mode-opacity": "0.55",
+  "xyz@@xyz-reverse-mode": false,
+  "xyz@@xyz-editor-writing": false,
+  "xyz@@xyz-editor-writing-indentation": 16,
+  "xyz@@xyz-brightness-ratio": false
 }

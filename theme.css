@@ -10566,7 +10566,7 @@ settings:
     description: Reverses the rendering of stuff in the UI
     id: flexcyon-reverse-mode
     default: false
-  - title: Enable Writing mode globally
+  - title: Writing Mode
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
     id: flexcyon-editor-writing

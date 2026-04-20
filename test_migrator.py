@@ -11,23 +11,49 @@ import json
 def get_test_cases(p):
     return [
         {
-            "name": "Select Group: RTZ True (Wins)",
-            "input": {f"{p}@@{p}-rtz-mode": True, f"{p}@@{p}-flex-max-mode": False},
-            "expected": {f"{p}-modes@@{p}-select-mode": f"{p}-rtz-mode"}
-        },
-        {
-            "name": "Select Group: Flex Max (Do Nothing)",
-            "input": {f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": True},
+            "name": "Type Validity: Select Group Member Bad Type",
+            "input": {
+                f"{p}@@{p}-rtz-mode": "true",
+                f"{p}@@{p}-flex-max-mode": False
+            },
             "expected": {}
         },
         {
+            "name": "Type Validity: Select Group All Bad Types",
+            "input": {
+                f"{p}@@{p}-rtz-mode": 1,
+                f"{p}@@{p}-flex-max-mode": "no"
+            },
+            "expected": {}
+        },
+
+        {
+            "name": "Select Group: RTZ True (Wins)",
+            "input": {
+                f"{p}@@{p}-rtz-mode": True, f"{p}@@{p}-flex-max-mode": False
+            },
+            "expected": {f"{p}-modes@@{p}-select-mode": f"{p}-rtz-mode"}
+        },
+        {
             "name": "Select Group: Both False (Fallback to none)",
-            "input": {f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": False},
+            "input": {
+                f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": False
+            },
             "expected": {f"{p}-modes@@{p}-select-mode": "none"}
         },
         {
+            "name": "Select Group: Flex Max (Do Nothing)",
+            "input": {
+                f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": True
+            },
+            "expected": {}
+        },
+
+        {
             "name": "Standard Bool (Typewriter True)",
-            "input": {f"{p}@@{p}-typewriter-mode": True},
+            "input": {
+                f"{p}@@{p}-typewriter-mode": True
+            },
             "expected": {f"{p}-modes@@{p}-typewriter-mode": True}
         },
         {
@@ -35,11 +61,94 @@ def get_test_cases(p):
             "input": {f"{p}@@{p}-typewriter-mode": False},
             "expected": {}
         },
+
         {
-            "name": "A11y Mapping",
+            "name": "Non-Default Value Keep (Opacity)",
+            "input": {f"{p}@@{p}-typewriter-mode-opacity": 0.8},
+            "expected": {f"{p}-modes@@{p}-typewriter-mode-opacity": 0.8}
+        },
+        {
+            "name": "Default Value Discard (Opacity)",
+            "input": {f"{p}@@{p}-typewriter-mode-opacity": 0.55},
+            "expected": {}
+        },
+        {
+            "name": "Invalid Bool Value Discard (Opacity)",
+            "input": {f"{p}@@{p}-typewriter-mode-opacity": True},
+            "expected": {}
+        },
+        {
+            "name": "Invalid String Value Discard (Opacity)",
+            "input": {f"{p}@@{p}-typewriter-mode-opacity": "0.55"},
+            "expected": {}
+        },
+
+        {
+            "name": "Standard Bool (Reverse True)",
+            "input": {
+                f"{p}@@{p}-reverse-mode": True
+            },
+            "expected": {f"{p}-modes@@{p}-reverse-mode": True}
+        },
+        {
+            "name": "Standard Bool Discard (Reverse False)",
+            "input": {f"{p}@@{p}-reverse-mode": False},
+            "expected": {}
+        },
+
+        {
+            "name": "Standard Bool (Writing Mode True)",
+            "input": {
+                f"{p}@@{p}-editor-writing": True
+            },
+            "expected": {f"{p}-modes@@{p}-editor-writing": True}
+        },
+        {
+            "name": "Standard Bool Discard (Writing Mode False)",
+            "input": {
+                f"{p}@@{p}-editor-writing": False
+            },
+            "expected": {}
+        },
+
+        {
+            "name": "Non-Default Value Keep (Writing Mode Indentation)",
+            "input": {f"{p}@@{p}-editor-writing-indentation": 12},
+            "expected": {f"{p}-modes@@{p}-editor-writing-indentation": 12},
+        },
+        {
+            "name": "Default Value Discard (Indentation)",
+            "input": {f"{p}@@{p}-editor-writing-indentation": 16},
+            "expected": {}
+        },
+
+        # a11y
+
+        {
+            "name": "Non-Default Brightness Ratio",
             "input": {f"{p}@@{p}-brightness-ratio": 0.8},
             "expected": {f"{p}-a11y@@{p}-brightness-ratio": 0.8}
-        }
+        },
+        {
+            "name": "Default Brightness Ratio",
+            "input": {f"{p}@@{p}-brightness-ratio": 1.0},
+            "expected": {}
+        },
+        {
+            "name": "Type Validity: Int as Float Default (Brightness)",
+            "input": {f"{p}@@{p}-brightness-ratio": 1},
+            "expected": {}
+        },
+        {
+            "name": "Type Validity: String in Brightness Ratio (Discard)",
+            "input": {f"{p}@@{p}-brightness-ratio": "0.8"},
+            "expected": {}
+        },
+        {
+            "name": "Type Validity: Bool in Brightness Ratio (Discard)",
+            "input": {f"{p}@@{p}-brightness-ratio": False},
+            "expected": {}
+        },
     ]
 
 
