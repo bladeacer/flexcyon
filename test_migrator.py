@@ -5,7 +5,7 @@ Dynamic Unit Tests for 1.X.Y to 2.0.0 settings migration.
 """
 
 import json
-from migrator import SettingsMapper, get_mapping_config
+from migrator import SettingsMapper, get_mapping_config, get_schema
 
 
 def _std_key(p, sfx):
@@ -92,8 +92,8 @@ def _get_select_cases(g_name, g_cfg, p, lookup, types_cfg):
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
-def generate_test_cases(cfg):
-    """Orchestrates test generation with low cyclomatic complexity."""
+def generate_test_cases(cfg, schema):
+    """Orchestrates test generation using the schema's insertion order."""
     p = cfg["target_prefix"]
     types_cfg = cfg["types"]
     lookup = {s: g for g, sfxs in cfg["suffix_groups"].items() for s in sfxs}
@@ -105,28 +105,43 @@ def generate_test_cases(cfg):
     select_discs = {d for g in cfg["select_groups"].values()
                     for d in g.get("discard_if_true", [])}
 
-    for name, exp_type in types_cfg.items():
+    # Iterate through schema list to maintain order
+    for name, exp_type, default, _ in schema:
         if name in select_mems or name in select_discs:
             continue
         tests.extend(_get_std_cases(
-            name, exp_type, p, lookup[name], cfg["defaults"].get(name)
+            name, exp_type, p, lookup[name], default
         ))
 
+    # Select groups are handled after standard settings
     for g_name, g_cfg in cfg["select_groups"].items():
-        # Pass types_cfg into the select helper
         tests.extend(_get_select_cases(g_name, g_cfg, p, lookup, types_cfg))
 
     return tests
 
 
-def generate_test_json(test_cases, filename="test.json"):
-    """Merges input data from all test cases into one file."""
-    raw_input_data = {}
+def generate_test_json(test_cases, schema, prefix, filename="test.json"):
+    """Merges input data following the exact order of the schema."""
+    # 1. Pre-initialize the dict with schema keys to preserve order
+    # Each key is formatted as prefix@@prefix-suffix
+    ordered_input = {}
+    for name, _, _, _ in schema:
+        key = f"{prefix}@@{prefix}-{name}"
+        ordered_input[key] = None 
+
+    # 2. Extract values from test cases
+    raw_values = {}
     for case in test_cases:
-        raw_input_data.update(case["input"])
+        raw_values.update(case["input"])
+
+    # 3. Build the final dict using the ordered keys
+    # Only include keys that actually appeared in the test cases
+    final_output = {k: raw_values[k] for k in ordered_input if k in raw_values}
+
     with open(filename, "w") as f:
-        json.dump(raw_input_data, f, indent=2)
-    print(f"Generated {filename} with {len(raw_input_data)} keys.")
+        json.dump(final_output, f, indent=2)
+
+    print(f"Generated {filename} with {len(final_output)} keys (schema-sorted).")
 
 
 def run_unit_tests(mapper, test_cases):
@@ -149,9 +164,11 @@ if __name__ == "__main__":
     config = get_mapping_config()
     mapper = SettingsMapper(config)
 
-    cases = generate_test_cases(config)
+    schema = get_schema()
+    prefix = config["target_prefix"]
+    cases = generate_test_cases(config, schema)
 
-    generate_test_json(cases)
+    generate_test_json(cases, schema, prefix)
 
     print("-" * 40)
     run_unit_tests(mapper, cases)

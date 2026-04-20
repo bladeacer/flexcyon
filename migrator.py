@@ -21,12 +21,12 @@ import ast
 # Schema Config #
 # ------------- #
 
+def get_schema():
+    """
+    Define settings once with all metadata
+    Format: (suffix, type, default, group_suffix)
+    """
 
-def get_mapping_config():
-    P = "flexcyon"
-
-    # Define settings once with all metadata
-    # Format: (suffix, type, default, group_suffix)
     schema = [
         ("rtz-mode", bool, False, "modes"),
         ("flex-max-mode", bool, False, "modes"),
@@ -64,9 +64,17 @@ def get_mapping_config():
 
         ("ext-colors-enabled", bool, False, "editor"),
     ]
+    return schema
+
+
+def get_mapping_config():
+    P = "flexcyon"
+
+    schema = get_schema()
 
     config = {
         "target_prefix": P,
+        "schema": schema,
         "suffix_groups": {},
         "types": {s: t for s, t, d, g in schema},
         "defaults": {s: d for s, t, d, g in schema},
@@ -196,35 +204,67 @@ class SettingsMapper:
 
         return MapResult(MapResult.VALID, f"{g_prefix}@@{name}", val)
 
+    def _build_ordered_output(self, res, groups):
+        """Injects fallbacks and ensures keys match schema order."""
+        # 1. First, apply fallbacks to our raw result pool
+        data_pool = self._apply_fallbacks(res, groups)
+        ordered_final = {}
+        schema = get_schema()
+
+        # 2. Iterate through the schema to pick up keys in order
+        for sfx, _, _, group_sfx in schema:
+            # Reconstruct the target key as it would appear in the output
+            # (group_prefix)@@(target_prefix)-(suffix)
+            g_label = f"{self.prefix}-{group_sfx}"
+            target_key = f"{g_label}@@{self.prefix}-{sfx}"
+
+            if target_key in data_pool:
+                ordered_final[target_key] = data_pool.pop(target_key)
+
+        # 3. Handle Select Groups (they aren't direct schema suffixes)
+        # We append these at the end or wherever they appear in the data_pool
+        for name, status in groups.items():
+            # Select groups follow the pattern: group_label@@prefix-group_name
+            # We already know the group_label from the first member
+            m = self.cfg["select_groups"][name]["members"][0]
+            g_label = self.lookup.get(f"{self.prefix}-{m}")
+            target_key = f"{g_label}@@{self.prefix}-{name}"
+
+            if target_key in data_pool:
+                ordered_final[target_key] = data_pool.pop(target_key)
+
+        # 4. Catch-all for any weird keys remaining
+        ordered_final.update(sorted(data_pool.items()))
+
+        return ordered_final
+
     def map_settings(self, data):
-        """Coordinates individual results into a final state."""
+        """Coordinates results and returns them in schema-defined order."""
         res, groups = {}, {t: GroupStatus() for t in self.cfg["select_groups"]}
 
         for k, v in data.items():
-            base = k.split('@@')[-1].replace(f"{self.prefix}-", "")
+            # Separate the prefix from the name accurately
+            parts = k.split('@@', 1)
+            name = parts[-1]
+            base = name.replace(f"{self.prefix}-", "", 1)
 
-            # 1. Update 'mentioned' status immediately
             if base in self.select_map:
                 groups[self.select_map[base][0]].mentioned = True
 
-            # 2. Process the individual key
             out = self._process(k, v)
 
-            # 3. Update Group State based on Action
             if out.action == MapResult.VALID:
                 res[out.key] = out.value
-                # If this key belongs to a select group, mark it satisfied
                 for g_name in groups:
                     if f"{self.prefix}-{g_name}" in out.key:
                         groups[g_name].satisfied = True
-
             elif out.action == MapResult.POISON and out.group:
                 groups[out.group].poisoned = True
-
             elif out.action == MapResult.SILENCE and out.group:
                 groups[out.group].silenced = True
 
-        return self._apply_fallbacks(res, groups)
+        # Pass processed results to fallback and sorting logic
+        return self._build_ordered_output(res, groups)
 
     def _apply_fallbacks(self, data, groups):
         """Final pass to inject 'none' for unsatisfied groups."""

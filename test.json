@@ -1,4 +1,6 @@
 {
+  "flexcyon@@flexcyon-rtz-mode": "bad",
+  "flexcyon@@flexcyon-flex-max-mode": "bad",
   "flexcyon@@flexcyon-typewriter-mode": 1,
   "flexcyon@@flexcyon-typewriter-mode-opacity": "bad_string",
   "flexcyon@@flexcyon-reverse-mode": 1,
@@ -26,7 +28,5 @@
   "flexcyon@@flexcyon-pink@@light": true,
   "flexcyon@@flexcyon-accent@@dark": true,
   "flexcyon@@flexcyon-accent@@light": true,
-  "flexcyon@@flexcyon-ext-colors-enabled": 1,
-  "flexcyon@@flexcyon-rtz-mode": "bad",
-  "flexcyon@@flexcyon-flex-max-mode": "bad"
+  "flexcyon@@flexcyon-ext-colors-enabled": 1
 }
