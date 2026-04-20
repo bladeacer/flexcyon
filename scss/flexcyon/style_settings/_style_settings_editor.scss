@@ -23,6 +23,13 @@ settings:
     id: flexcyon-ext-colors-enabled
     type: class-toggle
     default: false
+  - id: flexcyon-accent
+    title: Accent Color
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: "#5770b9"
+    default-dark: "#92a871"
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
@@ -111,13 +118,6 @@ settings:
       -
         id: color-pink-rgb
         format: rgb
-  - id: flexcyon-accent
-    title: Accent Color
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: "#5770b9"
-    default-dark: "#92a871"
 
   - title: Base Colors
     type: heading
