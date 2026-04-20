@@ -30,29 +30,39 @@ def _get_std_cases(name, exp_type, p, group, default):
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
-def _get_select_cases(g_name, g_cfg, p, lookup):
+def _get_poison_val(name, types_cfg):
+    """Determines the specific 'wrong' type based on the schema."""
+    expected = types_cfg.get(name)
+    return 1 if expected is bool else True
+
+
+def _get_select_cases(g_name, g_cfg, p, lookup, types_cfg):
     """Generates logic and type tests for a select group."""
     mems, discs = g_cfg["members"], g_cfg.get("discard_if_true", [])
     all_keys = list(set(mems + discs))
     target_key = f"{lookup[mems[0]]}@@{p}-{g_name}"
     cases = []
 
+    # Individual Member Poisoning (The 2 missing cases)
     for m in all_keys:
-        cases.append((
-            f"Select Member {m} (Poison)", {_std_key(p, m): "bad"}, {}
-        ))
+        poison = _get_poison_val(m, types_cfg)
+        label = "Int Discard" if poison == 1 else "Bool Discard"
+        cases.append((f"Select Member {m} ({label})",
+                      {_std_key(p, m): poison}, {}))
 
+    # Winner logic
     for m in [m for m in mems if m not in discs]:
         cases.append((f"Win: {m}", {_std_key(p, m): True},
                       {target_key: f"{p}-{m}"}))
 
+    # Fallback and Silence logic
     cases.append((f"None: {g_name}",
                   {_std_key(p, m): False for m in all_keys},
                   {target_key: "none"}))
-
     for d in discs:
         cases.append((f"Silence: {d}", {_std_key(p, d): True}, {}))
 
+    # Multi-Poison (using a string to ensure absolute failure)
     cases.append((f"Multi-Poison: {g_name}",
                   {_std_key(p, m): "bad" for m in mems}, {}))
 
@@ -62,23 +72,27 @@ def _get_select_cases(g_name, g_cfg, p, lookup):
 def generate_test_cases(cfg):
     """Orchestrates test generation with low cyclomatic complexity."""
     p = cfg["target_prefix"]
+    types_cfg = cfg["types"]
     lookup = {s: g for g, sfxs in cfg["suffix_groups"].items() for s in sfxs}
     tests = []
+
     select_mems = {
         m for g in cfg["select_groups"].values() for m in g["members"]
     }
-    select_discs = {
-        d for g in cfg["select_groups"].values()
-        for d in g.get("discard_if_true", [])
-    }
-    for name, exp_type in cfg["types"].items():
+    select_discs = {d for g in cfg["select_groups"].values()
+                    for d in g.get("discard_if_true", [])}
+
+    for name, exp_type in types_cfg.items():
         if name in select_mems or name in select_discs:
             continue
         tests.extend(_get_std_cases(
             name, exp_type, p, lookup[name], cfg["defaults"].get(name)
         ))
+
     for g_name, g_cfg in cfg["select_groups"].items():
-        tests.extend(_get_select_cases(g_name, g_cfg, p, lookup))
+        # Pass types_cfg into the select helper
+        tests.extend(_get_select_cases(g_name, g_cfg, p, lookup, types_cfg))
+
     return tests
 
 
