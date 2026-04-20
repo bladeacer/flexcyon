@@ -10633,6 +10633,11 @@ settings:
     level: 2
     collapsed: false
     description: Configure definitions of colours like Red, Green, Blue, etc. Configure Extended Colour Palette.
+  - title: Enable Extended Color Palette
+    description: Required for extended color palette callouts to work. Flex Max enables this by default.
+    id: flexcyon-ext-colors-enabled
+    type: class-toggle
+    default: false
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
@@ -10728,10 +10733,6 @@ settings:
     format: hex
     default-light: "#5770b9"
     default-dark: "#92a871"
-  - title: Enable Extended Color Palette
-    id: flexcyon-ext-colors-enabled
-    type: class-toggle
-    default: false
 
   - title: Base Colors
     type: heading
