@@ -10,41 +10,51 @@ from migrator import SettingsMapper, get_mapping_config
 
 def _std_key(p, sfx):
     """Helper to format the input key string."""
+    # Ensure the input key matches prefix@@prefix-suffix
     return f"{p}@@{p}-{sfx}"
 
 
 def _get_std_cases(name, exp_type, p, group, default):
     """Generates tests for a single non-select setting."""
     k = _std_key(p, name)
+    # The Expected key must follow the group@@prefix-name structure
     target = f"{group}@@{p}-{name}"
-    is_num = exp_type in [(float, int), float, int]
 
-    # 1. Choose a "Valid" value that is guaranteed NOT to be the default
-    if is_num:
+    # Logic for valid_val selection
+    if exp_type is str:
+        valid_val = f"custom-{default}"
+    elif exp_type in [(float, int), float, int]:
         valid_val = 0.8 if default != 0.8 else 0.4
     else:
         valid_val = not default
 
     cases = [
         (f"Valid: {name}", {k: valid_val}, {target: valid_val}),
-        (f"String Discard: {name}", {k: "bad"}, {}),
+        (
+            f"String Discard: {name}", {k: 123 if exp_type is str else "bad"},
+            {}
+        ),
     ]
 
-    # 2. Default Value should always result in an empty dict now
     if default is not None:
+        # Default now expects empty dict per "discard if default" logic
         cases.append((f"Default: {name}", {k: default}, {}))
 
-    # 3. Type Poisoning
-    wrong_val = 1 if exp_type is bool else True
-    cases.append((f"Type Poison: {name}", {k: wrong_val}, {}))
+    if exp_type is str:
+        wrong_val = True
+    else:
+        wrong_val = 1 if exp_type is bool else "bad_string"
 
+    cases.append((f"Type Poison: {name}", {k: wrong_val}, {}))
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
 def _get_poison_val(name, types_cfg):
     """Determines the specific 'wrong' type based on the schema."""
     expected = types_cfg.get(name)
-    return 1 if expected is bool else True
+    if expected is str:
+        return True  # Boolean is poison for String
+    return 1 if expected is bool else "bad_string"
 
 
 def _get_select_cases(g_name, g_cfg, p, lookup, types_cfg):

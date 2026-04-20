@@ -35,10 +35,34 @@ def get_mapping_config():
         ("reverse-mode", bool, False, "modes"),
         ("editor-writing", bool, False, "modes"),
         ("editor-writing-indentation", (float, int), 16, "modes"),
+
         ("brightness-ratio", (float, int), 1.0, "a11y"),
         ("contrast-ratio", (float, int), 1.0, "a11y"),
         ("saturation-ratio", (float, int), 1.0, "a11y"),
         ("revert-nav-item-alignment", bool, True, "mobile"),
+
+        ("cyan@@dark", str, "#3cb9c2", "editor"),
+        ("lime-green@@dark", str, "#a1c05c", "editor"),
+        ("orange@@dark", str, "#cc8449", "editor"),
+        ("yellow@@dark", str, "#c29e42", "editor"),
+        ("purple-lilac@@dark", str, "#a461c8", "editor"),
+        ("red-salmon@@dark", str, "#c03a47", "editor"),
+        ("blue@@dark", str, "#5a8fcd", "editor"),
+        ("pink@@dark", str, "#d458a3", "editor"),
+
+        ("cyan@@light", str, "#3b9ba1", "editor"),
+        ("lime-green@@light", str, "#689523", "editor"),
+        ("orange@@light", str, "#ed8126", "editor"),
+        ("yellow@@light", str, "#e8c62a", "editor"),
+        ("purple-lilac@@light", str, "#6f49ae", "editor"),
+        ("red-salmon@@light", str, "#eb5325", "editor"),
+        ("blue@@light", str, "#5c9fe4", "editor"),
+        ("pink@@light", str, "#e389ca", "editor"),
+
+        ("accent@@dark", str, "#92a871", "editor"),
+        ("accent@@light", str, "#5770b9", "editor"),
+
+        ("ext-colors-enabled", bool, False, "editor"),
     ]
 
     config = {
@@ -133,12 +157,17 @@ class SettingsMapper:
         return isinstance(val, expected)
 
     def _process(self, key, val):
-        name = key.split('@@')[-1]
+        # Change: split only on the FIRST '@@' to separate prefix from the rest
+        parts = key.split('@@', 1)
+        name = parts[-1]
+
         g_prefix = self.lookup.get(name)
         if not g_prefix:
+            # Fallback if group is missing
             return MapResult(MapResult.VALID, key, val)
 
-        base = name.replace(f"{self.prefix}-", "")
+        # Base should be the name minus the 'prefix-' part
+        base = name.replace(f"{self.prefix}-", "", 1)
 
         # 1. Type Check
         if not self._check_type(base, val):
