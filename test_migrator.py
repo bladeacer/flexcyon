@@ -1,175 +1,143 @@
 #!/usr/bin/env python
 
 """
-Unit tests from 1.X.Y to 2.0.0 settings migration script.
+Dynamic Unit Tests for 1.X.Y to 2.0.0 settings migration.
 """
 
-from migrator import SettingsMapper, get_mapping_config
 import json
+from migrator import SettingsMapper, get_mapping_config
 
 
-def get_test_cases(p):
-    return [
-        {
-            "name": "Type Validity: Select Group Member Bad Type",
-            "input": {
-                f"{p}@@{p}-rtz-mode": "true",
-                f"{p}@@{p}-flex-max-mode": False
-            },
-            "expected": {}
-        },
-        {
-            "name": "Type Validity: Select Group All Bad Types",
-            "input": {
-                f"{p}@@{p}-rtz-mode": 1,
-                f"{p}@@{p}-flex-max-mode": "no"
-            },
-            "expected": {}
-        },
+def generate_test_cases(cfg):
+    """
+    Generates exhaustive test cases based on the provided config schema.
+    """
+    p = cfg["target_prefix"]
+    tests = []
 
-        {
-            "name": "Select Group: RTZ True (Wins)",
-            "input": {
-                f"{p}@@{p}-rtz-mode": True, f"{p}@@{p}-flex-max-mode": False
-            },
-            "expected": {f"{p}-modes@@{p}-select-mode": f"{p}-rtz-mode"}
-        },
-        {
-            "name": "Select Group: Both False (Fallback to none)",
-            "input": {
-                f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": False
-            },
-            "expected": {f"{p}-modes@@{p}-select-mode": "none"}
-        },
-        {
-            "name": "Select Group: Flex Max (Do Nothing)",
-            "input": {
-                f"{p}@@{p}-rtz-mode": False, f"{p}@@{p}-flex-max-mode": True
-            },
-            "expected": {}
-        },
+    # Reverse lookup for group mapping
+    val_to_group = {
+        sfx: g for g, sfxs in cfg["suffix_groups"].items() for sfx in sfxs
+    }
 
-        {
-            "name": "Standard Bool (Typewriter True)",
-            "input": {
-                f"{p}@@{p}-typewriter-mode": True
-            },
-            "expected": {f"{p}-modes@@{p}-typewriter-mode": True}
-        },
-        {
-            "name": "Standard Bool Discard (Typewriter False)",
-            "input": {f"{p}@@{p}-typewriter-mode": False},
-            "expected": {}
-        },
+    # 1. Generate Standard Field Tests (Non-Select Groups)
+    for name, expected_type in cfg["types"].items():
+        is_select = any(
+            name in g["members"] or name in g.get("discard_if_true", [])
+            for g in cfg["select_groups"].values()
+        )
+        if is_select:
+            continue
 
-        {
-            "name": "Non-Default Value Keep (Opacity)",
-            "input": {f"{p}@@{p}-typewriter-mode-opacity": 0.8},
-            "expected": {f"{p}-modes@@{p}-typewriter-mode-opacity": 0.8}
-        },
-        {
-            "name": "Default Value Discard (Opacity)",
-            "input": {f"{p}@@{p}-typewriter-mode-opacity": 0.55},
-            "expected": {}
-        },
-        {
-            "name": "Invalid Bool Value Discard (Opacity)",
-            "input": {f"{p}@@{p}-typewriter-mode-opacity": True},
-            "expected": {}
-        },
-        {
-            "name": "Invalid String Value Discard (Opacity)",
-            "input": {f"{p}@@{p}-typewriter-mode-opacity": "0.55"},
-            "expected": {}
-        },
+        group = val_to_group.get(name)
+        full_key = f"{p}@@{p}-{name}"
+        target_key = f"{group}@@{p}-{name}"
 
-        {
-            "name": "Standard Bool (Reverse True)",
-            "input": {
-                f"{p}@@{p}-reverse-mode": True
-            },
-            "expected": {f"{p}-modes@@{p}-reverse-mode": True}
-        },
-        {
-            "name": "Standard Bool Discard (Reverse False)",
-            "input": {f"{p}@@{p}-reverse-mode": False},
-            "expected": {}
-        },
+        # Scenario: Valid Value
+        val = 0.8 if expected_type in [(float, int), float, int] else True
+        tests.append({
+            "name": f"Type Validity: {name} (Valid)",
+            "input": {full_key: val},
+            "expected": {target_key: val}
+        })
 
-        {
-            "name": "Standard Bool (Writing Mode True)",
-            "input": {
-                f"{p}@@{p}-editor-writing": True
-            },
-            "expected": {f"{p}-modes@@{p}-editor-writing": True}
-        },
-        {
-            "name": "Standard Bool Discard (Writing Mode False)",
-            "input": {
-                f"{p}@@{p}-editor-writing": False
-            },
-            "expected": {}
-        },
+        # Scenario: Default Value Discard
+        if name in cfg["defaults"]:
+            tests.append({
+                "name": f"Default Discard: {name}",
+                "input": {full_key: cfg["defaults"][name]},
+                "expected": {}
+            })
 
-        {
-            "name": "Non-Default Value Keep (Writing Mode Indentation)",
-            "input": {f"{p}@@{p}-editor-writing-indentation": 12},
-            "expected": {f"{p}-modes@@{p}-editor-writing-indentation": 12},
-        },
-        {
-            "name": "Default Value Discard (Indentation)",
-            "input": {f"{p}@@{p}-editor-writing-indentation": 16},
+        # Scenario: Type Mismatch (String Discard)
+        tests.append({
+            "name": f"Type Validity: {name} (String Discard)",
+            "input": {full_key: "invalid_string"},
             "expected": {}
-        },
+        })
 
-        # a11y
+        # Scenario: Specific Type Mismatch (Int for Bool or Bool for Int)
+        if expected_type is bool:
+            tests.append({
+                "name": f"Type Validity: {name} (Int Discard)",
+                "input": {full_key: 1},
+                "expected": {}
+            })
+        elif expected_type in [(float, int), float, int]:
+            tests.append({
+                "name": f"Type Validity: {name} (Bool Discard)",
+                "input": {full_key: True},
+                "expected": {}
+            })
 
-        {
-            "name": "Non-Default Brightness Ratio",
-            "input": {f"{p}@@{p}-brightness-ratio": 0.8},
-            "expected": {f"{p}-a11y@@{p}-brightness-ratio": 0.8}
-        },
-        {
-            "name": "Default Brightness Ratio",
-            "input": {f"{p}@@{p}-brightness-ratio": 1.0},
+    # 2. Generate Select Group Logic Tests
+    for g_name, g_cfg in cfg["select_groups"].items():
+        members = g_cfg["members"]
+        discards = g_cfg.get("discard_if_true", [])
+        all_keys = list(set(members + discards))
+        
+        group_label = val_to_group.get(members[0])
+        target_select = f"{group_label}@@{p}-{g_name}"
+
+        # Scenario: Individual Member Type Poisoning
+        for m in all_keys:
+            m_type = cfg["types"].get(m)
+            bad_val = 1 if m_type is bool else "bad_string"
+            tests.append({
+                "name": f"Type Validity: Select Member {m} (Poison)",
+                "input": {f"{p}@@{p}-{m}": bad_val},
+                "expected": {}
+            })
+
+        # Scenario: Each member winning
+        for m in members:
+            if m in discards:
+                continue
+            tests.append({
+                "name": f"Select Group: {g_name} ({m} Wins)",
+                "input": {f"{p}@@{p}-{m}": True},
+                "expected": {target_select: f"{p}-{m}"}
+            })
+
+        # Scenario: Discard if True (Silencing)
+        for d in discards:
+            tests.append({
+                "name": f"Select Group: {g_name} ({d} Silence)",
+                "input": {f"{p}@@{p}-{d}": True},
+                "expected": {}
+            })
+
+        # Scenario: All False (Fallback to none)
+        all_false = {f"{p}@@{p}-{m}": False for m in all_keys}
+        tests.append({
+            "name": f"Select Group: {g_name} (Both False Fallback)",
+            "input": all_false,
+            "expected": {target_select: "none"}
+        })
+
+        # Scenario: Multi-Poison (The original missing test)
+        multi_poison = {f"{p}@@{p}-{m}": "bad" for m in members}
+        tests.append({
+            "name": f"Select Group: {g_name} (All Bad Types Poison)",
+            "input": multi_poison,
             "expected": {}
-        },
-        {
-            "name": "Type Validity: Int as Float Default (Brightness)",
-            "input": {f"{p}@@{p}-brightness-ratio": 1},
-            "expected": {}
-        },
-        {
-            "name": "Type Validity: String in Brightness Ratio (Discard)",
-            "input": {f"{p}@@{p}-brightness-ratio": "0.8"},
-            "expected": {}
-        },
-        {
-            "name": "Type Validity: Bool in Brightness Ratio (Discard)",
-            "input": {f"{p}@@{p}-brightness-ratio": False},
-            "expected": {}
-        },
-    ]
+        })
+
+    return tests
 
 
 def generate_test_json(test_cases, filename="test.json"):
-    """
-    Extracts 'input' data from all test cases and merges them into
-    a single raw JSON file for the main migrator.
-    """
+    """Merges input data from all test cases into one file."""
     raw_input_data = {}
     for case in test_cases:
-        # Update dictionary with the input pairs from this test case
         raw_input_data.update(case["input"])
-
     with open(filename, "w") as f:
         json.dump(raw_input_data, f, indent=2)
-
-    print(f"Successfully generated {filename} from test cases.")
+    print(f"Generated {filename} with {len(raw_input_data)} keys.")
 
 
 def run_unit_tests(mapper, test_cases):
-    """Runs individual assertions for each test case."""
+    """Execution engine for generated assertions."""
     passed = 0
     for case in test_cases:
         result = mapper.map_settings(case["input"])
@@ -181,17 +149,18 @@ def run_unit_tests(mapper, test_cases):
             print(f"   Expected: {case['expected']}")
             print(f"   Got:      {result}")
 
-    print(f"\nUnit Test Summary: {passed}/{len(test_cases)} passed.")
+    print(f"\nSummary: {passed}/{len(test_cases)} passed.")
 
 
 if __name__ == "__main__":
     config = get_mapping_config()
-    prefix = config.get("target_prefix", "xyz")
     mapper = SettingsMapper(config)
 
-    cases = get_test_cases(prefix)
+    # Automatically generate cases based on config
+    cases = generate_test_cases(config)
 
+    # Optional: generate the full JSON blob for integration testing
     generate_test_json(cases)
 
-    print("-" * 30)
+    print("-" * 40)
     run_unit_tests(mapper, cases)

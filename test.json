@@ -1,10 +1,10 @@
 {
-  "xyz@@xyz-rtz-mode": false,
-  "xyz@@xyz-flex-max-mode": true,
-  "xyz@@xyz-typewriter-mode": false,
-  "xyz@@xyz-typewriter-mode-opacity": "0.55",
-  "xyz@@xyz-reverse-mode": false,
-  "xyz@@xyz-editor-writing": false,
-  "xyz@@xyz-editor-writing-indentation": 16,
-  "xyz@@xyz-brightness-ratio": false
+  "flexcyon@@flexcyon-typewriter-mode": 1,
+  "flexcyon@@flexcyon-typewriter-mode-opacity": true,
+  "flexcyon@@flexcyon-reverse-mode": 1,
+  "flexcyon@@flexcyon-editor-writing": 1,
+  "flexcyon@@flexcyon-editor-writing-indentation": true,
+  "flexcyon@@flexcyon-brightness-ratio": true,
+  "flexcyon@@flexcyon-rtz-mode": "bad",
+  "flexcyon@@flexcyon-flex-max-mode": "bad"
 }

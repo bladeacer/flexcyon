@@ -22,7 +22,7 @@ import ast
 
 
 def get_mapping_config():
-    P = "xyz"
+    P = "flexcyon"
     return {
         "target_prefix": P,
         "suffix_groups": {
