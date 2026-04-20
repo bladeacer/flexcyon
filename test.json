@@ -5,6 +5,8 @@
   "flexcyon@@flexcyon-editor-writing": 1,
   "flexcyon@@flexcyon-editor-writing-indentation": true,
   "flexcyon@@flexcyon-brightness-ratio": true,
+  "flexcyon@@flexcyon-contrast-ratio": true,
+  "flexcyon@@flexcyon-saturation-ratio": true,
   "flexcyon@@flexcyon-rtz-mode": "bad",
   "flexcyon@@flexcyon-flex-max-mode": "bad"
 }

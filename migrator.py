@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
 """
-1.X.Y to 2.0.0 settings migration script.
+1.X.Y to 2.0.0 settings migration script, implemented using only Python
+standard library.
 
 Please supply sane settings entry value(s) else the type validation
 would discard the entry value(s).
 
-E.g. brightness-ratio of false in the JSON makes no sense
+E.g. brightness-ratio of false in the JSON makes no sense.
 """
 
 import json
@@ -23,45 +24,48 @@ import ast
 
 def get_mapping_config():
     P = "flexcyon"
-    return {
+
+    # Define settings once with all metadata
+    # Format: (suffix, type, default, group_suffix)
+    schema = [
+        ("rtz-mode", bool, False, "modes"),
+        ("flex-max-mode", bool, False, "modes"),
+        ("typewriter-mode", bool, False, "modes"),
+        ("typewriter-mode-opacity", (float, int), 0.55, "modes"),
+        ("reverse-mode", bool, False, "modes"),
+        ("editor-writing", bool, False, "modes"),
+        ("editor-writing-indentation", (float, int), 16, "modes"),
+        ("brightness-ratio", (float, int), 1.0, "a11y"),
+        ("contrast-ratio", (float, int), 1.0, "a11y"),
+        ("saturation-ratio", (float, int), 1.0, "a11y"),
+    ]
+
+    config = {
         "target_prefix": P,
-        "suffix_groups": {
-            f"{P}-modes": [
-                "rtz-mode", "flex-max-mode", "typewriter-mode",
-                "typewriter-mode-opacity", "reverse-mode",
-                "editor-writing", "editor-writing-indentation",
-            ],
-            f"{P}-a11y": ["brightness-ratio"]
-        },
-        "types": {
-            "rtz-mode": bool,
-            "flex-max-mode": bool,
-            "typewriter-mode": bool,
-            "typewriter-mode-opacity": (float, int),
-            "reverse-mode": bool,
-            "editor-writing": bool,
-            "editor-writing-indentation": (float, int),
-            "brightness-ratio": (float, int)
-        },
-        "defaults": {
-            "typewriter-mode-opacity": 0.55,
-            "editor-writing-indentation": 16,
-            "brightness-ratio": 1.0
-        },
-        "discard_if_true": [],
+        "suffix_groups": {},
+        "types": {s: t for s, t, d, g in schema},
+        "defaults": {s: d for s, t, d, g in schema},
         "select_groups": {
             "select-mode": {
                 "members": ["rtz-mode", "flex-max-mode"],
                 "discard_if_true": ["flex-max-mode"]
             }
         },
+        "discard_if_true": [],
         "exact_matches": {}
     }
 
+    # Auto-populate suffix_groups based on the schema
+    for sfx, _, _, group in schema:
+        g_key = f"{P}-{group}"
+        config["suffix_groups"].setdefault(g_key, []).append(sfx)
+
+    return config
 
 # ----------------- #
 # Main Mapper Logic #
 # ------------------ #
+
 
 class GroupStatus:
     """Tracks the state of a specific settings group during migration."""
@@ -81,11 +85,25 @@ class GroupStatus:
         )
 
 
+class MapResult:
+    """Internal signal object for the mapping pipeline."""
+    DISCARD = 0
+    VALID = 1
+    POISON = 2
+    SILENCE = 3
+
+    def __init__(self, action, key=None, value=None, group=None):
+        self.action = action
+        self.key = key
+        self.value = value
+        self.group = group
+
+
 class SettingsMapper:
-    """Handles migration with strict type safety and group state management."""
+    """Handles migration with strict typing and group management."""
 
     def __init__(self, config):
-        self.config = config
+        self.cfg = config
         self.prefix = config.get("target_prefix", "")
         self.lookup = self._build_group_lookup()
         self.select_map = self._build_select_lookup()
@@ -93,127 +111,97 @@ class SettingsMapper:
     def _build_group_lookup(self):
         return {
             f"{self.prefix}-{sfx}": group
-            for group, suffixes in self.config.get("suffix_groups", {}).items()
-            for sfx in suffixes
+            for group, sfxs in self.cfg.get("suffix_groups", {}).items()
+            for sfx in sfxs
         }
 
     def _build_select_lookup(self):
         mapping = {}
-        for target, cfg in self.config.get("select_groups", {}).items():
-            for m in cfg.get("members", []):
-                mapping[m] = {"target": target, "type": "member"}
-            for d in cfg.get("discard_if_true", []):
-                mapping[d] = {"target": target, "type": "discard"}
+        for target, g_cfg in self.cfg.get("select_groups", {}).items():
+            for m in g_cfg.get("members", []):
+                mapping[m] = (target, MapResult.VALID)
+            for d in g_cfg.get("discard_if_true", []):
+                mapping[d] = (target, MapResult.SILENCE)
         return mapping
 
-    def _is_invalid_type(self, base_name, value):
-        """Strict type checking: rejects bools when numbers are expected."""
-        expected = self.config.get("types", {}).get(base_name)
+    def _check_type(self, base, val):
+        expected = self.cfg.get("types", {}).get(base)
         if not expected:
-            return False
+            return True
+        if isinstance(val, bool):
+            return expected is bool
+        return isinstance(val, expected)
 
-        # If value is bool, it's only valid if expected is explicitly bool
-        if isinstance(value, bool):
-            return expected is not bool
-
-        # Standard check for other types
-        return not isinstance(value, expected)
-
-    def _handle_select_logic(self, base_name, value, group_prefix):
-        """Processes select logic with internal type validation."""
-        info = self.select_map.get(base_name)
-        if not info:
-            return None
-
-        target = info["target"]
-        if self._is_invalid_type(base_name, value):
-            return "__INVALID_TYPE__", target
-
-        if info["type"] == "discard" and value is True:
-            return "__FORCE_SILENCE_GROUP__", target
-
-        if value is True:
-            return (f"{group_prefix}@@{self.prefix}-{target}",
-                    f"{self.prefix}-{base_name}")
-
-        return "__DISCARD__", target
-
-    def _apply_rules(self, key, value):
-        """Pipeline to transform keys with strict signaling."""
-        if key in self.config.get("exact_matches", {}):
-            return self.config["exact_matches"][key], value
-
+    def _process(self, key, val):
         name = key.split('@@')[-1]
-        group_prefix = self.lookup.get(name)
-        if not group_prefix:
-            return key, value
+        g_prefix = self.lookup.get(name)
+        if not g_prefix:
+            return MapResult(MapResult.VALID, key, val)
 
-        base_name = name.replace(f"{self.prefix}-", "")
+        base = name.replace(f"{self.prefix}-", "")
 
-        # Select Logic Check
-        select_res = self._handle_select_logic(base_name, value, group_prefix)
-        if select_res:
-            return select_res
+        # Type Check
+        if not self._check_type(base, val):
+            # If part of a select group, notify the group of poisoning
+            target_g = self.select_map.get(base, (None,))[0]
+            return MapResult(MapResult.POISON, group=target_g)
 
-        # Type Safety (Catch bools for numeric types)
-        if self._is_invalid_type(base_name, value):
-            return "__INVALID_TYPE__", None
+        # Select Group Logic
+        if base in self.select_map:
+            target, role = self.select_map[base]
+            if role == MapResult.SILENCE and val is True:
+                return MapResult(MapResult.SILENCE, group=target)
+            if val is True:
+                new_k = f"{g_prefix}@@{self.prefix}-{target}"
+                return MapResult(
+                    MapResult.VALID, new_k, f"{self.prefix}-{base}"
+                )
+            return MapResult(MapResult.DISCARD)
 
-        # Defaults Discard
-        defaults = self.config.get("defaults", {})
-        if base_name in defaults and value == defaults[base_name]:
-            return "__DISCARD__", None
+        # Default/False Discard
+        if val == self.cfg.get("defaults", {}).get(base) or val is False:
+            return MapResult(MapResult.DISCARD)
 
-        # Logic for bool types
-        if isinstance(value, bool):
-            is_disc = base_name in self.config.get("discard_if_true", [])
-            if not value or (is_disc and value is True):
-                return "__DISCARD__", None
+        return MapResult(MapResult.VALID, f"{g_prefix}@@{name}", val)
 
-        return f"{group_prefix}@@{name}", value
+    def map_settings(self, data):
+        """Coordinates individual results into a final state."""
+        res, groups = {}, {t: GroupStatus() for t in self.cfg["select_groups"]}
 
-    def map_settings(self, old_data):
-        """Main loop with prioritized state tracking."""
-        res, groups = {}, {
-            t: GroupStatus() for t in self.config["select_groups"]
-        }
-
-        for k, v in old_data.items():
+        for k, v in data.items():
             base = k.split('@@')[-1].replace(f"{self.prefix}-", "")
-            info = self.select_map.get(base)
-            if info:
-                groups[info["target"]].mentioned = True
 
-            new_k, new_v = self._apply_rules(k, v)
+            # 1. Update 'mentioned' status immediately
+            if base in self.select_map:
+                groups[self.select_map[base][0]].mentioned = True
 
-            if new_k == "__INVALID_TYPE__":
-                if new_v in groups:
-                    groups[new_v].poisoned = True
-                continue
+            # 2. Process the individual key
+            out = self._process(k, v)
 
-            if new_k in [None, "__DISCARD__"]:
-                continue
+            # 3. Update Group State based on Action
+            if out.action == MapResult.VALID:
+                res[out.key] = out.value
+                # If this key belongs to a select group, mark it satisfied
+                for g_name in groups:
+                    if f"{self.prefix}-{g_name}" in out.key:
+                        groups[g_name].satisfied = True
 
-            if new_k == "__FORCE_SILENCE_GROUP__":
-                if new_v in groups:
-                    groups[new_v].silenced = True
-                continue
+            elif out.action == MapResult.POISON and out.group:
+                groups[out.group].poisoned = True
 
-            res[new_k] = new_v
-            for g_name in groups:
-                if f"{self.prefix}-{g_name}" in new_k:
-                    groups[g_name].satisfied = True
+            elif out.action == MapResult.SILENCE and out.group:
+                groups[out.group].silenced = True
 
         return self._apply_fallbacks(res, groups)
 
     def _apply_fallbacks(self, data, groups):
-        """Applies 'none' state to mentioned but unsatisfied groups."""
+        """Final pass to inject 'none' for unsatisfied groups."""
         for name, status in groups.items():
             if status.needs_fallback:
-                cfg = self.config["select_groups"][name]
-                m_list = cfg.get("members") or cfg.get("discard_if_true")
-                prefix = self.lookup.get(f"{self.prefix}-{m_list[0]}")
-                data[f"{prefix}@@{self.prefix}-{name}"] = "none"
+                # Retrieve group label from any member's prefix
+                m = self.cfg["select_groups"][name]["members"][0]
+                g_label = self.lookup.get(f"{self.prefix}-{m}")
+                data[f"{g_label}@@{self.prefix}-{name}"] = "none"
         return data
 
 # --------------- #
