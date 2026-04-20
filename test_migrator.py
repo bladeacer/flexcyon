@@ -18,15 +18,26 @@ def _get_std_cases(name, exp_type, p, group, default):
     k = _std_key(p, name)
     target = f"{group}@@{p}-{name}"
     is_num = exp_type in [(float, int), float, int]
+
+    # 1. Choose a "Valid" value that is guaranteed NOT to be the default
+    if is_num:
+        valid_val = 0.8 if default != 0.8 else 0.4
+    else:
+        valid_val = not default
+
     cases = [
-        (f"Valid: {name}", {k: 0.8 if is_num else True},
-         {target: 0.8 if is_num else True}),
+        (f"Valid: {name}", {k: valid_val}, {target: valid_val}),
         (f"String Discard: {name}", {k: "bad"}, {}),
     ]
+
+    # 2. Default Value should always result in an empty dict now
     if default is not None:
         cases.append((f"Default: {name}", {k: default}, {}))
+
+    # 3. Type Poisoning
     wrong_val = 1 if exp_type is bool else True
     cases.append((f"Type Poison: {name}", {k: wrong_val}, {}))
+
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
@@ -43,26 +54,28 @@ def _get_select_cases(g_name, g_cfg, p, lookup, types_cfg):
     target_key = f"{lookup[mems[0]]}@@{p}-{g_name}"
     cases = []
 
-    # Individual Member Poisoning (The 2 missing cases)
+    # Individual Member Poisoning
     for m in all_keys:
         poison = _get_poison_val(m, types_cfg)
         label = "Int Discard" if poison == 1 else "Bool Discard"
         cases.append((f"Select Member {m} ({label})",
                       {_std_key(p, m): poison}, {}))
 
-    # Winner logic
+    # Winner logic: Setting to True (Valid)
     for m in [m for m in mems if m not in discs]:
         cases.append((f"Win: {m}", {_std_key(p, m): True},
                       {target_key: f"{p}-{m}"}))
 
-    # Fallback and Silence logic
-    cases.append((f"None: {g_name}",
+    # Fallback logic: All members at False (Default)
+    # Note: If default is False, this triggers 'none' fallback
+    cases.append((f"None Fallback: {g_name}",
                   {_std_key(p, m): False for m in all_keys},
                   {target_key: "none"}))
+
     for d in discs:
         cases.append((f"Silence: {d}", {_std_key(p, d): True}, {}))
 
-    # Multi-Poison (using a string to ensure absolute failure)
+    # Multi-Poison
     cases.append((f"Multi-Poison: {g_name}",
                   {_std_key(p, m): "bad" for m in mems}, {}))
 

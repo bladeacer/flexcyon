@@ -1,11 +1,11 @@
-.PHONY: help test
+.PHONY: help migrate test run
 
 help:
 	@echo "Usage: make [target]"
 	@echo ""
 	@echo "Targets:"
 	@echo "  test         Runs unit tests, generates test.json"
-	@echo "  run          Runs script with generated test.json"
+	@echo "  run          Runs testing then migration script"
 
 test:
 	./test_migrator.py

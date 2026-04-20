@@ -38,6 +38,7 @@ def get_mapping_config():
         ("brightness-ratio", (float, int), 1.0, "a11y"),
         ("contrast-ratio", (float, int), 1.0, "a11y"),
         ("saturation-ratio", (float, int), 1.0, "a11y"),
+        ("revert-nav-item-alignment", bool, True, "mobile"),
     ]
 
     config = {
@@ -45,17 +46,16 @@ def get_mapping_config():
         "suffix_groups": {},
         "types": {s: t for s, t, d, g in schema},
         "defaults": {s: d for s, t, d, g in schema},
+        "keep_if_default": [],
         "select_groups": {
             "select-mode": {
                 "members": ["rtz-mode", "flex-max-mode"],
                 "discard_if_true": ["flex-max-mode"]
             }
         },
-        "discard_if_true": [],
         "exact_matches": {}
     }
 
-    # Auto-populate suffix_groups based on the schema
     for sfx, _, _, group in schema:
         g_key = f"{P}-{group}"
         config["suffix_groups"].setdefault(g_key, []).append(sfx)
@@ -140,13 +140,12 @@ class SettingsMapper:
 
         base = name.replace(f"{self.prefix}-", "")
 
-        # Type Check
+        # 1. Type Check
         if not self._check_type(base, val):
-            # If part of a select group, notify the group of poisoning
             target_g = self.select_map.get(base, (None,))[0]
             return MapResult(MapResult.POISON, group=target_g)
 
-        # Select Group Logic
+        # 2. Select Group Logic
         if base in self.select_map:
             target, role = self.select_map[base]
             if role == MapResult.SILENCE and val is True:
@@ -158,8 +157,12 @@ class SettingsMapper:
                 )
             return MapResult(MapResult.DISCARD)
 
-        # Default/False Discard
-        if val == self.cfg.get("defaults", {}).get(base) or val is False:
+        # 3. Dynamic Default Discard
+        # Assumes discard if val == default, unless explicitly whitelisted
+        is_default = val == self.cfg.get("defaults", {}).get(base)
+        keep_exceptions = self.cfg.get("keep_if_default", [])
+
+        if is_default and base not in keep_exceptions:
             return MapResult(MapResult.DISCARD)
 
         return MapResult(MapResult.VALID, f"{g_prefix}@@{name}", val)

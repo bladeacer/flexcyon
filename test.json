@@ -7,6 +7,7 @@
   "flexcyon@@flexcyon-brightness-ratio": true,
   "flexcyon@@flexcyon-contrast-ratio": true,
   "flexcyon@@flexcyon-saturation-ratio": true,
+  "flexcyon@@flexcyon-revert-nav-item-alignment": 1,
   "flexcyon@@flexcyon-flex-max-mode": "bad",
   "flexcyon@@flexcyon-rtz-mode": "bad"
 }
