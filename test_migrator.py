@@ -8,121 +8,77 @@ import json
 from migrator import SettingsMapper, get_mapping_config
 
 
+def _std_key(p, sfx):
+    """Helper to format the input key string."""
+    return f"{p}@@{p}-{sfx}"
+
+
+def _get_std_cases(name, exp_type, p, group, default):
+    """Generates tests for a single non-select setting."""
+    k = _std_key(p, name)
+    target = f"{group}@@{p}-{name}"
+    is_num = exp_type in [(float, int), float, int]
+    cases = [
+        (f"Valid: {name}", {k: 0.8 if is_num else True},
+         {target: 0.8 if is_num else True}),
+        (f"String Discard: {name}", {k: "bad"}, {}),
+    ]
+    if default is not None:
+        cases.append((f"Default: {name}", {k: default}, {}))
+    wrong_val = 1 if exp_type is bool else True
+    cases.append((f"Type Poison: {name}", {k: wrong_val}, {}))
+    return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
+
+
+def _get_select_cases(g_name, g_cfg, p, lookup):
+    """Generates logic and type tests for a select group."""
+    mems, discs = g_cfg["members"], g_cfg.get("discard_if_true", [])
+    all_keys = list(set(mems + discs))
+    target_key = f"{lookup[mems[0]]}@@{p}-{g_name}"
+    cases = []
+
+    for m in all_keys:
+        cases.append((
+            f"Select Member {m} (Poison)", {_std_key(p, m): "bad"}, {}
+        ))
+
+    for m in [m for m in mems if m not in discs]:
+        cases.append((f"Win: {m}", {_std_key(p, m): True},
+                      {target_key: f"{p}-{m}"}))
+
+    cases.append((f"None: {g_name}",
+                  {_std_key(p, m): False for m in all_keys},
+                  {target_key: "none"}))
+
+    for d in discs:
+        cases.append((f"Silence: {d}", {_std_key(p, d): True}, {}))
+
+    cases.append((f"Multi-Poison: {g_name}",
+                  {_std_key(p, m): "bad" for m in mems}, {}))
+
+    return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
+
+
 def generate_test_cases(cfg):
-    """
-    Generates exhaustive test cases based on the provided config schema.
-    """
+    """Orchestrates test generation with low cyclomatic complexity."""
     p = cfg["target_prefix"]
+    lookup = {s: g for g, sfxs in cfg["suffix_groups"].items() for s in sfxs}
     tests = []
-
-    # Reverse lookup for group mapping
-    val_to_group = {
-        sfx: g for g, sfxs in cfg["suffix_groups"].items() for sfx in sfxs
+    select_mems = {
+        m for g in cfg["select_groups"].values() for m in g["members"]
     }
-
-    # 1. Generate Standard Field Tests (Non-Select Groups)
-    for name, expected_type in cfg["types"].items():
-        is_select = any(
-            name in g["members"] or name in g.get("discard_if_true", [])
-            for g in cfg["select_groups"].values()
-        )
-        if is_select:
+    select_discs = {
+        d for g in cfg["select_groups"].values()
+        for d in g.get("discard_if_true", [])
+    }
+    for name, exp_type in cfg["types"].items():
+        if name in select_mems or name in select_discs:
             continue
-
-        group = val_to_group.get(name)
-        full_key = f"{p}@@{p}-{name}"
-        target_key = f"{group}@@{p}-{name}"
-
-        # Scenario: Valid Value
-        val = 0.8 if expected_type in [(float, int), float, int] else True
-        tests.append({
-            "name": f"Type Validity: {name} (Valid)",
-            "input": {full_key: val},
-            "expected": {target_key: val}
-        })
-
-        # Scenario: Default Value Discard
-        if name in cfg["defaults"]:
-            tests.append({
-                "name": f"Default Discard: {name}",
-                "input": {full_key: cfg["defaults"][name]},
-                "expected": {}
-            })
-
-        # Scenario: Type Mismatch (String Discard)
-        tests.append({
-            "name": f"Type Validity: {name} (String Discard)",
-            "input": {full_key: "invalid_string"},
-            "expected": {}
-        })
-
-        # Scenario: Specific Type Mismatch (Int for Bool or Bool for Int)
-        if expected_type is bool:
-            tests.append({
-                "name": f"Type Validity: {name} (Int Discard)",
-                "input": {full_key: 1},
-                "expected": {}
-            })
-        elif expected_type in [(float, int), float, int]:
-            tests.append({
-                "name": f"Type Validity: {name} (Bool Discard)",
-                "input": {full_key: True},
-                "expected": {}
-            })
-
-    # 2. Generate Select Group Logic Tests
+        tests.extend(_get_std_cases(
+            name, exp_type, p, lookup[name], cfg["defaults"].get(name)
+        ))
     for g_name, g_cfg in cfg["select_groups"].items():
-        members = g_cfg["members"]
-        discards = g_cfg.get("discard_if_true", [])
-        all_keys = list(set(members + discards))
-        
-        group_label = val_to_group.get(members[0])
-        target_select = f"{group_label}@@{p}-{g_name}"
-
-        # Scenario: Individual Member Type Poisoning
-        for m in all_keys:
-            m_type = cfg["types"].get(m)
-            bad_val = 1 if m_type is bool else "bad_string"
-            tests.append({
-                "name": f"Type Validity: Select Member {m} (Poison)",
-                "input": {f"{p}@@{p}-{m}": bad_val},
-                "expected": {}
-            })
-
-        # Scenario: Each member winning
-        for m in members:
-            if m in discards:
-                continue
-            tests.append({
-                "name": f"Select Group: {g_name} ({m} Wins)",
-                "input": {f"{p}@@{p}-{m}": True},
-                "expected": {target_select: f"{p}-{m}"}
-            })
-
-        # Scenario: Discard if True (Silencing)
-        for d in discards:
-            tests.append({
-                "name": f"Select Group: {g_name} ({d} Silence)",
-                "input": {f"{p}@@{p}-{d}": True},
-                "expected": {}
-            })
-
-        # Scenario: All False (Fallback to none)
-        all_false = {f"{p}@@{p}-{m}": False for m in all_keys}
-        tests.append({
-            "name": f"Select Group: {g_name} (Both False Fallback)",
-            "input": all_false,
-            "expected": {target_select: "none"}
-        })
-
-        # Scenario: Multi-Poison (The original missing test)
-        multi_poison = {f"{p}@@{p}-{m}": "bad" for m in members}
-        tests.append({
-            "name": f"Select Group: {g_name} (All Bad Types Poison)",
-            "input": multi_poison,
-            "expected": {}
-        })
-
+        tests.extend(_get_select_cases(g_name, g_cfg, p, lookup))
     return tests
 
 
@@ -156,10 +112,8 @@ if __name__ == "__main__":
     config = get_mapping_config()
     mapper = SettingsMapper(config)
 
-    # Automatically generate cases based on config
     cases = generate_test_cases(config)
 
-    # Optional: generate the full JSON blob for integration testing
     generate_test_json(cases)
 
     print("-" * 40)
