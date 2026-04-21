@@ -17,7 +17,6 @@ body {
     var(--flexcyon-callout-horiz-padding);
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
-  
   --callout-bug: var(--color-red);
   --callout-default: var(--color-blue);
   --callout-error: var(--color-red);
@@ -32,9 +31,10 @@ body {
   --callout-todo: var(--color-blue);
   --callout-warning: var(--color-orange);
 
-
   div.callout {
-    background-color: oklch(from var(--color-blue) l c h / var(--flexcyon-callout-bg-opacity));
+    background-color: oklch(
+      from var(--color-blue) l c h / var(--flexcyon-callout-bg-opacity)
+    );
 
     .callout-title {
       color: var(--callout-color);
@@ -200,13 +200,17 @@ div.callout[data-callout-metadata*="transparent-bg"] {
   div.callout[data-callout-metadata*="all-#{$color-name}"],
   div.callout[data-callout*="bg-#{$color-name}"],
   div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-    background-color: oklch(from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity));
+    background-color: oklch(
+      from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
+    );
 
     &:has([data-callout*="tui"], [data-callout-metadata*="tui"])
       div.callout-title,
     &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
       .callout-content {
-        background-color: oklch(from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity));
+      background-color: oklch(
+        from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
+      );
     }
   }
 

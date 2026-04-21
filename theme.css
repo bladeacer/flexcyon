@@ -76,10 +76,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-blue-mix-bg: oklch(
-    from var(--color-red-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-red-mix-bg: oklch(
-    from var(--color-blue-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-orange-mix: color-mix(
     in oklch,
@@ -92,10 +94,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-orange-mix-bg: oklch(
-    from var(--color-red-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-red-mix-bg: oklch(
-    from var(--color-orange-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-yellow-mix: color-mix(
     in oklch,
@@ -108,10 +112,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-yellow-mix-bg: oklch(
-    from var(--color-red-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-red-mix-bg: oklch(
-    from var(--color-yellow-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-green-mix: color-mix(
     in oklch,
@@ -124,10 +130,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-green-mix-bg: oklch(
-    from var(--color-red-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-red-mix-bg: oklch(
-    from var(--color-green-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-cyan-mix: color-mix(
     in oklch,
@@ -140,10 +148,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-cyan-mix-bg: oklch(
-    from var(--color-red-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-red-mix-bg: oklch(
-    from var(--color-cyan-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-purple-mix: color-mix(
     in oklch,
@@ -156,10 +166,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-purple-mix-bg: oklch(
-    from var(--color-red-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-red-mix-bg: oklch(
-    from var(--color-purple-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-pink-mix: color-mix(
     in oklch,
@@ -172,10 +184,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red)
   );
   --color-red-pink-mix-bg: oklch(
-    from var(--color-red-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-red-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-red-mix-bg: oklch(
-    from var(--color-pink-red-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-yellow-mix: color-mix(
     in oklch,
@@ -188,10 +202,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-yellow-mix-bg: oklch(
-    from var(--color-orange-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-orange-mix-bg: oklch(
-    from var(--color-yellow-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-green-mix: color-mix(
     in oklch,
@@ -204,10 +220,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-green-mix-bg: oklch(
-    from var(--color-orange-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-orange-mix-bg: oklch(
-    from var(--color-green-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-cyan-mix: color-mix(
     in oklch,
@@ -220,10 +238,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-cyan-mix-bg: oklch(
-    from var(--color-orange-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-orange-mix-bg: oklch(
-    from var(--color-cyan-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-blue-mix: color-mix(
     in oklch,
@@ -236,10 +256,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-blue-mix-bg: oklch(
-    from var(--color-orange-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-orange-mix-bg: oklch(
-    from var(--color-blue-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-purple-mix: color-mix(
     in oklch,
@@ -252,10 +274,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-purple-mix-bg: oklch(
-    from var(--color-orange-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-orange-mix-bg: oklch(
-    from var(--color-purple-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-pink-mix: color-mix(
     in oklch,
@@ -268,10 +292,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-orange)
   );
   --color-orange-pink-mix-bg: oklch(
-    from var(--color-orange-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-orange-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-orange-mix-bg: oklch(
-    from var(--color-pink-orange-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-green-mix: color-mix(
     in oklch,
@@ -284,10 +310,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-yellow)
   );
   --color-yellow-green-mix-bg: oklch(
-    from var(--color-yellow-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-yellow-mix-bg: oklch(
-    from var(--color-green-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-cyan-mix: color-mix(
     in oklch,
@@ -300,10 +328,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-yellow)
   );
   --color-yellow-cyan-mix-bg: oklch(
-    from var(--color-yellow-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-yellow-mix-bg: oklch(
-    from var(--color-cyan-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-blue-mix: color-mix(
     in oklch,
@@ -316,10 +346,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-yellow)
   );
   --color-yellow-blue-mix-bg: oklch(
-    from var(--color-yellow-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-yellow-mix-bg: oklch(
-    from var(--color-blue-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-purple-mix: color-mix(
     in oklch,
@@ -332,10 +364,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-yellow)
   );
   --color-yellow-purple-mix-bg: oklch(
-    from var(--color-yellow-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-yellow-mix-bg: oklch(
-    from var(--color-purple-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-pink-mix: color-mix(
     in oklch,
@@ -348,10 +382,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-yellow)
   );
   --color-yellow-pink-mix-bg: oklch(
-    from var(--color-yellow-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-yellow-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-yellow-mix-bg: oklch(
-    from var(--color-pink-yellow-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-cyan-mix: color-mix(
     in oklch,
@@ -364,10 +400,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-green)
   );
   --color-green-cyan-mix-bg: oklch(
-    from var(--color-green-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-green-mix-bg: oklch(
-    from var(--color-cyan-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-blue-mix: color-mix(
     in oklch,
@@ -380,10 +418,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-green)
   );
   --color-green-blue-mix-bg: oklch(
-    from var(--color-green-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-green-mix-bg: oklch(
-    from var(--color-blue-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-purple-mix: color-mix(
     in oklch,
@@ -396,10 +436,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-green)
   );
   --color-green-purple-mix-bg: oklch(
-    from var(--color-green-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-green-mix-bg: oklch(
-    from var(--color-purple-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-pink-mix: color-mix(
     in oklch,
@@ -412,10 +454,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-green)
   );
   --color-green-pink-mix-bg: oklch(
-    from var(--color-green-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-green-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-green-mix-bg: oklch(
-    from var(--color-pink-green-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-blue-mix: color-mix(
     in oklch,
@@ -428,10 +472,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-cyan)
   );
   --color-cyan-blue-mix-bg: oklch(
-    from var(--color-cyan-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-cyan-mix-bg: oklch(
-    from var(--color-blue-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-purple-mix: color-mix(
     in oklch,
@@ -444,10 +490,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-cyan)
   );
   --color-cyan-purple-mix-bg: oklch(
-    from var(--color-cyan-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-cyan-mix-bg: oklch(
-    from var(--color-purple-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-pink-mix: color-mix(
     in oklch,
@@ -460,10 +508,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-cyan)
   );
   --color-cyan-pink-mix-bg: oklch(
-    from var(--color-cyan-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-cyan-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-cyan-mix-bg: oklch(
-    from var(--color-pink-cyan-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-purple-mix: color-mix(
     in oklch,
@@ -476,10 +526,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-blue)
   );
   --color-blue-purple-mix-bg: oklch(
-    from var(--color-blue-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-blue-mix-bg: oklch(
-    from var(--color-purple-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-pink-mix: color-mix(
     in oklch,
@@ -492,10 +544,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-blue)
   );
   --color-blue-pink-mix-bg: oklch(
-    from var(--color-blue-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-blue-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-blue-mix-bg: oklch(
-    from var(--color-pink-blue-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-pink-mix: color-mix(
     in oklch,
@@ -508,10 +562,12 @@ body.flexcyon-ext-colors-enabled {
     var(--color-purple)
   );
   --color-purple-pink-mix-bg: oklch(
-    from var(--color-purple-pink-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-purple-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-pink-purple-mix-bg: oklch(
-    from var(--color-pink-purple-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-pink-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
 }
 
@@ -596,48 +652,45 @@ body.theme-light {
   --color-accent: oklch(var(--flexcyon-accent));
   --color-accent-hsl: oklch(var(--flexcyon-accent));
   /* cooler hue, higher chroma, lighter */
-  --color-accent-1: oklch(from var(--flexcyon-accent)
-    calc(l * 1.15)
-    calc(c * 1.02)
-    calc(h - 3)
+  --color-accent-1: oklch(
+    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
   );
   /* hue shift, lower chroma, lighter, 87.5% alpha */
-  --color-accent-2: oklch(from var(--flexcyon-accent)
-    calc(l * 1.1)
-    calc(c * 0.85)
-    calc(h - 20) / 87.5%
+  --color-accent-2: oklch(
+    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+      87.5%
   );
 }
 
 /* Willemstad theme: Accent setting theme override notice */
 .modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color] {
   display: grid;
-  width: fit-content;
-  height: fit-content;
   visibility: hidden;
-  pointer-events: none;
   grid-template-rows: 1fr 1fr 0;
+  inline-size: fit-content;
+  block-size: fit-content;
+  pointer-events: none;
 }
 .modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color]::before {
   position: relative;
+  visibility: visible;
+  grid-row: 1/2;
   font-family: var(--font-interface);
   font-size: var(--font-ui-smaller);
-  color: var(--text-error);
-  visibility: visible;
-  content: "The accent colour is overriden by the theme.";
   font-weight: bold;
+  color: var(--text-error);
   white-space: pre-wrap;
-  grid-row: 1/2;
+  content: "The accent colour is overriden by the theme.";
 }
 .modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color]::after {
   position: relative;
+  visibility: visible;
+  grid-row: 2/3;
   font-family: var(--font-interface);
   font-size: var(--font-ui-smaller);
   color: var(--text-error);
-  visibility: visible;
-  content: "Please use the Style Settings plugin to customise colours.";
   white-space: pre-wrap;
-  grid-row: 2/3;
+  content: "Please use the Style Settings plugin to customise colours.";
 }
 .modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control .clickable-icon.extra-setting-button {
   display: none;
@@ -15132,19 +15185,19 @@ span.task-id {
 
 /* In file recovery, sync version history, and publish diff */
 .diff-line.mod-left {
-  background-color: oklch(from var(--background-modifier-error) l c h/0.2);
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
 }
 
 .diff-line.mod-left .diff-changed {
-  background-color: oklch(from var(--background-modifier-error) l c h/0.4);
+  background-color: oklch(from var(--background-modifier-error) l c h/40%);
 }
 
 .diff-line.mod-right {
-  background-color: oklch(from var(--background-modifier-success) l c h/0.2);
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
 }
 
 .diff-line.mod-right .diff-changed {
-  background-color: oklch(from var(--background-modifier-success) l c h/0.4);
+  background-color: oklch(from var(--background-modifier-success) l c h/40%);
 }
 
 /* Modifications for HandaArchitect's banner snippet */

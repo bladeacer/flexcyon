@@ -1,15 +1,17 @@
 /* In file recovery, sync version history, and publish diff */
 
 .diff-line.mod-left {
-  background-color: oklch(from var(--background-modifier-error) l c h / 0.2)
+  background-color: oklch(from var(--background-modifier-error) l c h / 20%);
+}
 
-}
 .diff-line.mod-left .diff-changed {
-  background-color: oklch(from var(--background-modifier-error) l c h / 0.4);
+  background-color: oklch(from var(--background-modifier-error) l c h / 40%);
 }
+
 .diff-line.mod-right {
-  background-color: oklch(from var(--background-modifier-success) l c h / 0.2);
+  background-color: oklch(from var(--background-modifier-success) l c h / 20%);
 }
+
 .diff-line.mod-right .diff-changed {
-  background-color: oklch(from var(--background-modifier-success) l c h / 0.4);
+  background-color: oklch(from var(--background-modifier-success) l c h / 40%);
 }

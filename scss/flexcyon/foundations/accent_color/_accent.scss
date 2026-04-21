@@ -19,18 +19,16 @@ body.theme-dark,
 body.theme-light {
   --color-accent: oklch(var(--flexcyon-accent));
   --color-accent-hsl: oklch(var(--flexcyon-accent));
+
   /* cooler hue, higher chroma, lighter */
-  --color-accent-1: oklch(from var(--flexcyon-accent) 
-    calc(l * 1.15) 
-    calc(c * 1.02) 
-    calc(h - 3)
+  --color-accent-1: oklch(
+    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
   );
 
   /* hue shift, lower chroma, lighter, 87.5% alpha */
-  --color-accent-2: oklch(from var(--flexcyon-accent) 
-    calc(l * 1.1) 
-    calc(c * 0.85) 
-    calc(h - 20) / 87.5%
+  --color-accent-2: oklch(
+    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+      87.5%
   );
 }
 
@@ -40,34 +38,36 @@ body.theme-light {
   .setting-group .setting-item:nth-of-type(2) > .setting-item-control {
     input[type="color"] {
       display: grid;
-      width: fit-content;
-      height: fit-content;
       visibility: hidden;
-      pointer-events: none;
       grid-template-rows: 1fr 1fr 0;
+      inline-size: fit-content;
+      block-size: fit-content;
+      pointer-events: none;
 
       &::before {
         position: relative;
+        visibility: visible;
+        grid-row: 1/2;
         font-family: var(--font-interface);
         font-size: var(--font-ui-smaller);
-        color: var(--text-error);
-        visibility: visible;
-        content: "The accent colour is overriden by the theme.";
         font-weight: bold;
+        color: var(--text-error);
         white-space: pre-wrap;
-        grid-row: 1/2;
+        content: "The accent colour is overriden by the theme.";
       }
+
       &::after {
         position: relative;
+        visibility: visible;
+        grid-row: 2/3;
         font-family: var(--font-interface);
         font-size: var(--font-ui-smaller);
         color: var(--text-error);
-        visibility: visible;
-        content: "Please use the Style Settings plugin to customise colours.";
         white-space: pre-wrap;
-        grid-row: 2/3;
+        content: "Please use the Style Settings plugin to customise colours.";
       }
     }
+
     .clickable-icon.extra-setting-button {
       display: none;
     }

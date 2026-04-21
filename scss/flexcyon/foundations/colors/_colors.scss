@@ -70,19 +70,18 @@ body.theme-dark {
     var(--color-#{$color-1}),
     var(--color-#{$color-2})
   );
-
   --color-#{$color-2-wrapper}-mix: color-mix(
     in oklch,
     var(--color-#{$color-2}),
     var(--color-#{$color-1})
   );
-
   --color-#{$color-1-wrapper}-mix-bg: oklch(
-    from var(--color-#{$color-1-wrapper}-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-#{$color-1-wrapper}-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
-
   --color-#{$color-2-wrapper}-mix-bg: oklch(
-    from var(--color-#{$color-2-wrapper}-mix) l c h / var(--flexcyon-callout-bg-opacity)
+    from var(--color-#{$color-2-wrapper}-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
 }
 
