@@ -48,75 +48,75 @@ body.theme-light,
 body.theme-dark {
   --color-red: oklch(
     from var(--flexcyon-red-salmon)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-orange: oklch(
     from var(--flexcyon-orange)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-yellow: oklch(
     from var(--flexcyon-yellow)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-green: oklch(
     from var(--flexcyon-lime-green)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-cyan: oklch(
     from var(--flexcyon-cyan)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-blue: oklch(
     from var(--flexcyon-blue)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-purple: oklch(
     from var(--flexcyon-purple-lilac)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-pink: oklch(
     from var(--flexcyon-pink)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
 }
 
@@ -678,113 +678,122 @@ body:is(.theme-light) {
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
+  --flexcyon-grey-dark-wrapper: oklch(
+    from var(--flexcyon-base-grey-dark)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
   --color-base-00: oklch(
     from var(--flexcyon-base-01)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-05: oklch(
     from var(--flexcyon-base-01-02-mix)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-10: oklch(
     from var(--flexcyon-base-02)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-20: oklch(
     from var(--flexcyon-base-02-03-mix)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-25: oklch(
     from var(--flexcyon-base-03)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-30: oklch(
     from var(--flexcyon-base-03-04-mix)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-35: oklch(
     from var(--flexcyon-base-04)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-40: oklch(
     from var(--flexcyon-base-04-05-mix)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-50: oklch(
     from var(--flexcyon-base-05)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-60: oklch(
     from var(--flexcyon-base-grey-dark)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-70: oklch(
     from var(--flexcyon-base-grey-mix)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --color-base-100: oklch(
     from var(--flexcyon-base-grey-light)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
 }
 
@@ -1122,16 +1131,16 @@ body h6 {
 }
 
 body {
-  --flexcyon-accent-hover: var(--flexcyon-green);
+  --flexcyon-accent-hover: var(--color-green);
   --flexcyon-palette-lilac-hover: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-purple-lilac),
-    var(--flexcyon-base-grey-dark)
+    var(--color-purple),
+    var(--flexcyon-grey-dark-wrapper)
   );
   --flexcyon-palette-cyan-hover: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-cyan),
-    var(--flexcyon-base-grey-dark)
+    var(--color-cyan),
+    var(--flexcyon-grey-dark-wrapper)
   );
 }
 
@@ -2430,12 +2439,12 @@ body {
   );
   --flexcyon-editor-bg-color: oklch(
     from var(--flexcyon-editor-bg-col-def)
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) +
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
@@ -3258,11 +3267,29 @@ body textarea::selection {
 }
 
 body.theme-dark {
-  --text-normal: #d3d5d3;
+  --text-normal-col: #d3d5d3;
+  --text-normal: oklch(
+    from var(--text-normal-col)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
 }
 
 body.theme-light {
-  --text-normal: #080808;
+  --text-normal-col: #080808;
+  --text-normal: oklch(
+    from var(--text-normal-col)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
 }
 
 body {
@@ -3290,24 +3317,42 @@ body {
   --line-height-normal: 1.4;
   --line-height-tight: 1.25;
   --flexcyon-text-muted: #6f768599;
-  --text-muted: color-mix(
+  --text-muted-wrapper: color-mix(
     in oklch,
     var(--flexcyon-text-muted),
     var(--text-normal)
+  );
+  --text-muted: oklch(
+    from var(--text-muted-wrapper)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
   --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
-  --text-error: var(--flexcyon-red-salmon);
-  --text-warning: var(--flexcyon-red-salmon);
-  --text-success: var(--flexcyon-lime-green);
-  --text-selection: color-mix(
+  --text-error: var(--color-red);
+  --text-warning: var(--color-red);
+  --text-success: var(--color-green);
+  --text-sel-wrapper: color-mix(
     in oklch shorter hue,
     var(--flexcyon-base-04) 20%,
     transparent
   );
-  --bold-color: var(--flexcyon-red-salmon);
+  --text-selection: oklch(
+    from var(--text-sel-wrapper)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --bold-color: var(--color-red);
   --italic-color: var(--flexcyon-accent);
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
@@ -3330,19 +3375,19 @@ body .cm-strong.cm-quote {
   color: var(--bold-color);
 }
 body .cm-line .cm-matchingbracket {
-  color: var(--flexcyon-purple-lilac);
+  color: var(--color-purple);
 }
 body .cm-line .ͼi {
-  color: var(--flexcyon-cyan);
+  color: var(--color-cyan);
 }
 body .cm-line .ͼj {
-  color: var(--flexcyon-orange);
+  color: var(--color-orange);
 }
 body .cm-line .ͼc {
-  color: var(--flexcyon-accent);
+  color: var(--color-accent);
 }
 body .cm-line .ͼb {
-  color: var(--flexcyon-yellow);
+  color: var(--color-yellow);
 }
 body .cm-s-obsidian span.cm-formatting-highlight,
 body .cm-s-obsidian span.cm-highlight,
@@ -10901,7 +10946,7 @@ settings:
     level: 2
     collapsed: true
     description: Configure text in the theme. Set colour, line height, word spacing and letter spacing. Use Settings > Apperance > Font to set Font size.
-  - id: text-normal
+  - id: text-normal-col
     title: Normal Text color
     type: variable-themed-color
     opacity: false

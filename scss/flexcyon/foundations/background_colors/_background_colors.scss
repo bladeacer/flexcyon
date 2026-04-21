@@ -15,7 +15,12 @@ body {
     var(--color-base-05) 70%,
     var(--color-base-10) 30%
   );
-  @include m.configure-oklch("flexcyon-editor-bg-color", "flexcyon-editor-bg-col-def");
+
+  @include m.configure-oklch(
+    "flexcyon-editor-bg-color",
+    "flexcyon-editor-bg-col-def"
+  );
+
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 

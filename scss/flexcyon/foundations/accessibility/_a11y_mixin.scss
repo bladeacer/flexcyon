@@ -2,11 +2,11 @@
 @mixin configure-oklch($output-name, $input-source) {
   --#{$output-name}: oklch(
     from var(--#{$input-source})
-    calc(
-      (l * var(--flexcyon-theme-brightness-ratio)) + 
-      var(--flexcyon-theme-contrast-offset)
-    )
-    calc(c * var(--flexcyon-theme-saturation-ratio))
-    calc(h + var(--flexcyon-theme-warmth-offset))
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
 }

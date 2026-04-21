@@ -26,6 +26,7 @@ export default {
     "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh", "fr"],
 
     "scss/operator-no-newline-after": null,
+    "scss/operator-no-unspaced": null,
 
     "prettier/prettier": true,
     "csstools/use-logical": ("always" || true) || ("ignore" || false || null),

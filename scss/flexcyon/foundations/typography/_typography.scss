@@ -1,12 +1,18 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
+@use "../accessibility/a11y_mixin" as m;
+
 body.theme-dark {
-  --text-normal: #d3d5d3;
+  --text-normal-col: #d3d5d3;
+
+  @include m.configure-oklch("text-normal", "text-normal-col");
 }
 
 body.theme-light {
-  --text-normal: #080808;
+  --text-normal-col: #080808;
+
+  @include m.configure-oklch("text-normal", "text-normal-col");
 }
 
 body {
@@ -38,24 +44,30 @@ body {
   --line-height-normal: 1.4;
   --line-height-tight: 1.25;
   --flexcyon-text-muted: #6f768599;
-  --text-muted: color-mix(
+  --text-muted-wrapper: color-mix(
     in oklch,
     var(--flexcyon-text-muted),
     var(--text-normal)
   );
+
+  @include m.configure-oklch("text-muted", "text-muted-wrapper");
+
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
   --text-on-accent: var(--flexcyon-base-03);
   --text-accent-hover: var(--flexcyon-accent-hover);
-  --text-error: var(--flexcyon-red-salmon);
-  --text-warning: var(--flexcyon-red-salmon);
-  --text-success: var(--flexcyon-lime-green);
-  --text-selection: color-mix(
+  --text-error: var(--color-red);
+  --text-warning: var(--color-red);
+  --text-success: var(--color-green);
+  --text-sel-wrapper: color-mix(
     in oklch shorter hue,
     var(--flexcyon-base-04) 20%,
     transparent
   );
-  --bold-color: var(--flexcyon-red-salmon);
+
+  @include m.configure-oklch("text-selection", "text-sel-wrapper");
+
+  --bold-color: var(--color-red);
   --italic-color: var(--flexcyon-accent);
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
@@ -81,23 +93,23 @@ body {
   }
 
   .cm-line .cm-matchingbracket {
-    color: var(--flexcyon-purple-lilac);
+    color: var(--color-purple);
   }
 
   .cm-line .ͼi {
-    color: var(--flexcyon-cyan);
+    color: var(--color-cyan);
   }
 
   .cm-line .ͼj {
-    color: var(--flexcyon-orange);
+    color: var(--color-orange);
   }
 
   .cm-line .ͼc {
-    color: var(--flexcyon-accent);
+    color: var(--color-accent);
   }
 
   .cm-line .ͼb {
-    color: var(--flexcyon-yellow);
+    color: var(--color-yellow);
   }
 
   .cm-s-obsidian span.cm-formatting-highlight,

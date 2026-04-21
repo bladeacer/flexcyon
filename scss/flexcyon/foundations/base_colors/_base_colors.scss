@@ -56,6 +56,10 @@ body:is(.theme-light) {
     var(--flexcyon-base-grey-dark)
   );
 
+  @include m.configure-oklch(
+    "flexcyon-grey-dark-wrapper",
+    "flexcyon-base-grey-dark"
+  );
   @include m.configure-oklch("color-base-00", "flexcyon-base-01");
   @include m.configure-oklch("color-base-05", "flexcyon-base-01-02-mix");
   @include m.configure-oklch("color-base-10", "flexcyon-base-02");
