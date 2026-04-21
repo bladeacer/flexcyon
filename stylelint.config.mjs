@@ -16,10 +16,6 @@ export default {
     "stylelint-scales"
   ],
   rules: {
-    "prettier/prettier": true,
-
-    "csstools/use-logical": ("always" || true) || ("ignore" || false || null),
-
     "selector-class-pattern": null,
     "selector-type-no-unknown": null,
 
@@ -29,7 +25,10 @@ export default {
     "color-function-notation": "modern",
     "unit-allowed-list": ["em", "rem", "ms", "%", "deg", "px", "vw", "vh", "fr"],
 
-    // Takes a lot of performance to check, disabled by default
+    "scss/operator-no-newline-after": null,
+
+    "prettier/prettier": true,
+    "csstools/use-logical": ("always" || true) || ("ignore" || false || null),
 
     "scales/font-sizes": [
       [

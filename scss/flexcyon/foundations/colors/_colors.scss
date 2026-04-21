@@ -15,17 +15,6 @@ body.theme-dark {
   --flexcyon-pink: #d458a3;
 }
 
-body:is(.theme-dark) {
-  --color-red-rgb: 192, 58, 71;
-  --color-orange-rgb: 204, 132, 73;
-  --color-yellow-rgb: 194, 158, 66;
-  --color-green-rgb: 161, 192, 92;
-  --color-cyan-rgb: 60, 185, 194;
-  --color-blue-rgb: 90, 143, 205;
-  --color-purple-rgb: 164, 97, 200;
-  --color-pink-rgb: 212, 88, 163;
-}
-
 body.theme-light {
   --flexcyon-cyan: #3b9ba1;
   --flexcyon-lime-green: #689523;
@@ -35,17 +24,6 @@ body.theme-light {
   --flexcyon-red-salmon: #eb5325;
   --flexcyon-blue: #5c9fe4;
   --flexcyon-pink: #e389ca;
-}
-
-body:is(.theme-light) {
-  --color-red-rgb: 235, 83, 87;
-  --color-orange-rgb: 237, 129, 38;
-  --color-yellow-rgb: 232, 198, 42;
-  --color-green-rgb: 104, 149, 35;
-  --color-cyan-rgb: 59, 155, 161;
-  --color-blue-rgb: 92, 159, 228;
-  --color-purple-rgb: 111, 73, 174;
-  --color-pink-rgb: 227, 137, 202;
 }
 
 body.theme-light,

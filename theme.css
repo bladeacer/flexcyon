@@ -17,17 +17,6 @@ body.theme-dark {
   --flexcyon-pink: #d458a3;
 }
 
-body:is(.theme-dark) {
-  --color-red-rgb: 192, 58, 71;
-  --color-orange-rgb: 204, 132, 73;
-  --color-yellow-rgb: 194, 158, 66;
-  --color-green-rgb: 161, 192, 92;
-  --color-cyan-rgb: 60, 185, 194;
-  --color-blue-rgb: 90, 143, 205;
-  --color-purple-rgb: 164, 97, 200;
-  --color-pink-rgb: 212, 88, 163;
-}
-
 body.theme-light {
   --flexcyon-cyan: #3b9ba1;
   --flexcyon-lime-green: #689523;
@@ -37,17 +26,6 @@ body.theme-light {
   --flexcyon-red-salmon: #eb5325;
   --flexcyon-blue: #5c9fe4;
   --flexcyon-pink: #e389ca;
-}
-
-body:is(.theme-light) {
-  --color-red-rgb: 235, 83, 87;
-  --color-orange-rgb: 237, 129, 38;
-  --color-yellow-rgb: 232, 198, 42;
-  --color-green-rgb: 104, 149, 35;
-  --color-cyan-rgb: 59, 155, 161;
-  --color-blue-rgb: 92, 159, 228;
-  --color-purple-rgb: 111, 73, 174;
-  --color-pink-rgb: 227, 137, 202;
 }
 
 body.theme-light,
@@ -3652,7 +3630,7 @@ body.flexcyon-typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock) {
 /* obsi-snip-coll end */
 /* Callout modifications */
 body {
-  --flexcyon-callout-bg-opacity: 0.125;
+  --flexcyon-callout-bg-opacity: 12.5%;
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
@@ -13588,6 +13566,16 @@ body {
     var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
   );
   --flexcyon-canvas-blur-intensity: 1px;
+}
+
+.canvas-background pattern {
+  display: none;
+}
+
+/* obsi-snip-coll start: canvas-oklch-fix */
+body.theme-dark,
+body.theme-light {
+  --canvas-color: var(--text-normal);
   --canvas-color-1: var(--color-red);
   --canvas-color-2: var(--color-orange);
   --canvas-color-3: var(--color-yellow);
@@ -13596,16 +13584,102 @@ body {
   --canvas-color-6: var(--color-purple);
 }
 
-.canvas-background pattern {
-  display: none;
-}
-
 .canvas-controls {
   inset-block-start: 24px;
   gap: 8px;
   scale: var(--expand);
 }
 
+.canvas-node-container {
+  border: 1px solid var(--canvas-color);
+}
+
+.canvas-node-placeholder::after {
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-icon-placeholder svg {
+  color: var(--canvas-color);
+}
+
+.canvas-node {
+  --shadow-border-themed-inset: inset 0 0 0 1px var(--canvas-color);
+  --shadow-border-themed: 0 0 0 2px var(--canvas-color);
+}
+
+.canvas-node.is-selected.is-themed .canvas-node-container,
+.canvas-node.is-focused.is-themed .canvas-node-container {
+  border-color: var(--canvas-color);
+}
+
+.canvas-group-label[contenteditable=true] {
+  box-shadow: 0 0 0 2px var(--canvas-color);
+}
+
+.canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]) {
+  background-color: var(--canvas-color);
+}
+
+.canvas-edges path.canvas-display-path {
+  stroke: var(--canvas-color);
+}
+
+.canvas-edges polygon.canvas-path-end {
+  fill: var(--canvas-color);
+  stroke: var(--canvas-color);
+}
+
+.canvas-path-label.is-editing {
+  border-color: var(--canvas-color);
+  box-shadow: var(--shadow-stationary), 0 0 0 calc(3px * var(--zoom-multiplier)) var(--canvas-color);
+}
+
+.canvas-color-picker-item {
+  background-color: var(--canvas-color);
+}
+
+.canvas-color-picker-item.is-active {
+  box-shadow: 0 0 0 2px var(--canvas-color);
+}
+
+@media (hover: hover) {
+  .canvas-color-picker-item:hover {
+    box-shadow: 0 0 0 2px var(--canvas-color);
+  }
+}
+.canvas-minimap rect.is-themed {
+  fill: var(--canvas-color);
+  stroke: var(--canvas-color);
+}
+
+.canvas-minimap path.is-themed {
+  stroke: var(--canvas-color);
+}
+
+.canvas-node-group .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-node.is-themed .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-node.is-themed .canvas-node-container {
+  border-color: oklch(from var(--canvas-color) l c h/70%);
+  box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
+}
+
+.canvas-group-label {
+  color: var(--text-normal);
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-edges g.is-focused path.canvas-interaction-path,
+.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+  stroke: oklch(from var(--canvas-color) l c h/10%);
+}
+
+/* obsi-snip-coll end */
 .canvas-card-menu {
   scale: var(--upsize);
 }
