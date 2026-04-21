@@ -2449,21 +2449,127 @@ body {
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
   /* Colours */
-  --modal-sidebar-background: var(--color-base-05);
-  --background-primary: var(--color-base-10);
-  --background-primary-alt: var(--color-base-25);
-  --background-secondary: var(--color-base-00);
-  --background-secondary-alt: var(--color-base-20);
-  --background-modifier-hover: var(--color-base-20);
-  --background-modifier-form-field: var(--color-base-20);
-  --background-modifier-cover: var(--color-base-15);
-  --background-modifier-message: var(--color-base-20);
-  --background-modifier-active-hover: var(--color-base-25);
-  --background-modifier-border: var(--color-base-20);
+  --modal-sidebar-background: oklch(
+    from var(--color-base-05)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-primary: oklch(
+    from var(--color-base-10)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-primary-alt: oklch(
+    from var(--color-base-25)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-secondary: oklch(
+    from var(--color-base-00)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-secondary-alt: oklch(
+    from var(--color-base-20)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-hover: oklch(
+    from var(--color-base-20)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-form-field: oklch(
+    from var(--color-base-20)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-cover: oklch(
+    from var(--color-base-15)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-message: oklch(
+    from var(--color-base-20)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-active-hover: oklch(
+    from var(--color-base-25)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-border: oklch(
+    from var(--color-base-20)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  /* Transparent is still transparent even after a11y changes */
   --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-error: oklch(
+  --background-modifier-border-focus: oklch(
+    from var(--color-base-30)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --background-modifier-error-wrapper: oklch(
     from var(--color-red) lch / calc(var(--dimmed) + 0.3)
+  );
+  --background-modifier-error: oklch(
+    from var(--background-modifier-error-wrapper)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
   );
 }
 
