@@ -1,8 +1,10 @@
 #!/usr/bin/env python
 
 """
-1.X.Y to 2.0.0 settings migration script, implemented using only Python
+Pre-2.0.0 to 2.0.0 settings migration script, implemented using only Python
 standard library.
+
+Default values referenced are based on 1.4.0's.
 
 Please supply sane settings entry value(s) else the type validation
 would discard the entry value(s).
@@ -63,6 +65,29 @@ def get_schema():
         ("accent@@light", str, "#5770b9", "editor"),
 
         ("ext-colors-enabled", bool, False, "editor"),
+
+        ("base-01@@dark", str, "#14161c", "editor"),
+        ("base-02@@dark", str, "#191d28", "editor"),
+        ("base-03@@dark", str, "#24262c", "editor"),
+        ("base-04@@dark", str, "#4d566b", "editor"),
+        ("base-05@@dark", str, "#6f7685", "editor"),
+
+        ("base-grey-dark@@dark", str, "#898c93", "editor"),
+        ("base-grey-light@@dark", str, "#d3d5d3", "editor"),
+
+        ("base-01@@light", str, "#faf7ef", "editor"),
+        ("base-02@@light", str, "#edebe5", "editor"),
+        ("base-03@@light", str, "#dddcd6", "editor"),
+        ("base-04@@light", str, "#d3d3ce", "editor"),
+        ("base-05@@light", str, "#b4b3af", "editor"),
+
+        ("base-grey-dark@@light", str, "#797876", "editor"),
+        ("base-grey-light@@light", str, "#080808", "editor"),
+
+        ("base-grey-tab", str, "#71777f", "editor"),
+        ("base-grey-token", str, "#586582", "editor"),
+        ("base-grey-scroll", str, "#3f495e", "editor"),
+        ("base-grey-scroll-hover", str, "#5d6782", "editor"),
     ]
     return schema
 
