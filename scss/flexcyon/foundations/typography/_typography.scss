@@ -54,7 +54,10 @@ body {
 
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--color-red);
+  --text-on-accent-wrapper: var(--flexcyon-base-03);
+
+  @include m.configure-oklch("text-on-accent", "text-on-accent-wrapper");
+
   --text-accent-hover: var(--flexcyon-accent-hover);
   --text-error: var(--color-red);
   --text-warning: var(--color-red);

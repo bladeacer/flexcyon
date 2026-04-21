@@ -11,23 +11,38 @@ settings:
   - title: Theme colour contrast offset
     description: Define the contrast offset for the theme's colours.
     id: flexcyon-theme-contrast-offset
-    type: variable-number
+    type: variable-number-slider
     default: 0
+    min: -0.5
+    max: 0.5
+    step: 0.01
+
   - title: Theme colour warmth offset
     description: Define the warmth offset the theme's colours. Higher positive values yield warmer colours while lower negative values yield cool ones.
     id: flexcyon-theme-warmth-offset
-    type: variable-number
+    type: variable-number-slider
     default: 0
+    min: -180
+    max: 180
+    step: 1
+
   - title: Theme colour brightness ratio
     description: Define the brightness ratio for the theme's colours.
     id: flexcyon-theme-brightness-ratio
-    type: variable-number
+    type: variable-number-slider
     default: 1
+    min: 0
+    max: 2
+    step: 0.01
+
   - title: Theme colour saturation ratio
     description: Define the saturation ratio for the theme's colours.
     id: flexcyon-theme-saturation-ratio
-    type: variable-number
+    type: variable-number-slider
     default: 1
+    min: 0
+    max: 5
+    step: 0.01
 
   - title: Global contrast ratio
     type: variable-number
