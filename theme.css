@@ -6,6 +6,22 @@ Repository: https://github.com/bladeacer/flexcyon
 Documentation (English): https://flexcyon.github.io/docs-en
 Documentation (Chinese): https://flexcyon.github.io/docs-en/zh
 */
+/* obsi-snip-coll start: filters */
+body {
+  --flexcyon-theme-contrast-offset: 0;
+  --flexcyon-theme-brightness-ratio: 1;
+  /* a.k.a chroma ratio */
+  --flexcyon-theme-saturation-ratio: 1;
+  /* positive is warmer, negative is cooler */
+  --flexcyon-theme-warmth-offset: 0;
+  /* Example Usage */
+  --flexcyon-contrast-ratio: 1;
+  --flexcyon-brightness-ratio: 1;
+  --flexcyon-saturation-ratio: 1;
+  filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
+}
+
+/* obsi-snip-coll end */
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
@@ -30,14 +46,78 @@ body.theme-light {
 
 body.theme-light,
 body.theme-dark {
-  --color-red: var(--flexcyon-red-salmon);
-  --color-orange: var(--flexcyon-orange);
-  --color-yellow: var(--flexcyon-yellow);
-  --color-green: var(--flexcyon-lime-green);
-  --color-cyan: var(--flexcyon-cyan);
-  --color-blue: var(--flexcyon-blue);
-  --color-purple: var(--flexcyon-purple-lilac);
-  --color-pink: var(--flexcyon-pink);
+  --color-red: oklch(
+    from var(--flexcyon-red-salmon)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-orange: oklch(
+    from var(--flexcyon-orange)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-yellow: oklch(
+    from var(--flexcyon-yellow)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-green: oklch(
+    from var(--flexcyon-lime-green)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-cyan: oklch(
+    from var(--flexcyon-cyan)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-blue: oklch(
+    from var(--flexcyon-blue)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-purple: oklch(
+    from var(--flexcyon-purple-lilac)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-pink: oklch(
+    from var(--flexcyon-pink)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
 }
 
 /* obsi-snip-coll start: extended-color */
@@ -573,11 +653,6 @@ body.theme-light {
 body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --flexcyon-base-grey-tab: #71777f;
-  --flexyon-base-grey-token: #586582;
-  --flexcyon-base-grey-scroll: #3f495e;
-  --flexcyon-base-grey-scroll-hover: #5c6782;
-  /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
     in oklch,
     var(--flexcyon-base-01),
@@ -603,18 +678,114 @@ body:is(.theme-light) {
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
-  --color-base-00: var(--flexcyon-base-01);
-  --color-base-05: var(--flexcyon-base-01-02-mix);
-  --color-base-10: var(--flexcyon-base-02);
-  --color-base-20: var(--flexcyon-base-02-03-mix);
-  --color-base-25: var(--flexcyon-base-03);
-  --color-base-30: var(--flexcyon-base-03-04-mix);
-  --color-base-35: var(--flexcyon-base-04);
-  --color-base-40: var(--flexcyon-base-04-05-mix);
-  --color-base-50: var(--flexcyon-base-05);
-  --color-base-60: var(--flexcyon-base-grey-dark);
-  --color-base-70: var(--flexcyon-base-grey-mix);
-  --color-base-100: var(--flexcyon-base-grey-light);
+  --color-base-00: oklch(
+    from var(--flexcyon-base-01)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-05: oklch(
+    from var(--flexcyon-base-01-02-mix)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-10: oklch(
+    from var(--flexcyon-base-02)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-20: oklch(
+    from var(--flexcyon-base-02-03-mix)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-25: oklch(
+    from var(--flexcyon-base-03)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-30: oklch(
+    from var(--flexcyon-base-03-04-mix)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-35: oklch(
+    from var(--flexcyon-base-04)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-40: oklch(
+    from var(--flexcyon-base-04-05-mix)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-50: oklch(
+    from var(--flexcyon-base-05)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-60: oklch(
+    from var(--flexcyon-base-grey-dark)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-70: oklch(
+    from var(--flexcyon-base-grey-mix)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
+  --color-base-100: oklch(
+    from var(--flexcyon-base-grey-light)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
+  );
 }
 
 body.theme-dark {
@@ -2252,10 +2423,19 @@ body ol {
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(
+  --flexcyon-editor-bg-col-def: color-mix(
     in oklch,
     var(--color-base-05) 70%,
     var(--color-base-10) 30%
+  );
+  --flexcyon-editor-bg-color: oklch(
+    from var(--flexcyon-editor-bg-col-def)
+    calc(
+      (l * var(--flexcyon-theme-brightness-ratio)) +
+      var(--flexcyon-theme-contrast-offset)
+    )
+    calc(c * var(--flexcyon-theme-saturation-ratio))
+    calc(h + var(--flexcyon-theme-warmth-offset))
   );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
@@ -2273,9 +2453,8 @@ body {
   --background-modifier-border: var(--color-base-20);
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-error: rgb(
-    var(--color-red-rgb),
-    calc(var(--dimmed) + 0.3)
+  --background-modifier-error: oklch(
+    from var(--color-red) lch / calc(var(--dimmed) + 0.3)
   );
 }
 
@@ -9775,15 +9954,6 @@ body .modal-bg {
   filter: brightness(var(--flexcyon-modal-image-brightness)) blur(var(--flexcyon-modal-image-blur));
 }
 
-/* obsi-snip-coll start: filters */
-body {
-  --flexcyon-contrast-ratio: 1;
-  --flexcyon-brightness-ratio: 1;
-  --flexcyon-saturation-ratio: 1;
-  filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
-}
-
-/* obsi-snip-coll end */
 /* obsi-snip-coll start: cursor-type */
 body {
   --flexcyon-cursor-type: auto;
@@ -10494,15 +10664,37 @@ id: flexcyon-a11y
 settings:
   - title: About accessibility
     type: info-text
-    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
+    description: Toggle accessibility options. Current options let you configure brightness, contrast, saturation etc. for the theme's colours or globally.
     collapsed: true
-  - title: Global brightness ratio
+
+  - title: Theme colour contrast offset
+    description: Define the contrast offset for the theme's colours.
+    id: flexcyon-theme-contrast-offset
     type: variable-number
-    id: flexcyon-brightness-ratio
+    default: 0
+  - title: Theme colour warmth offset
+    description: Define the warmth offset the theme's colours. Higher positive values yield warmer colours while lower negative values yield cool ones.
+    id: flexcyon-theme-warmth-offset
+    type: variable-number
+    default: 0
+  - title: Theme colour brightness ratio
+    description: Define the brightness ratio for the theme's colours.
+    id: flexcyon-theme-brightness-ratio
+    type: variable-number
     default: 1
+  - title: Theme colour saturation ratio
+    description: Define the saturation ratio for the theme's colours.
+    id: flexcyon-theme-saturation-ratio
+    type: variable-number
+    default: 1
+
   - title: Global contrast ratio
     type: variable-number
     id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
     default: 1
   - title: Global saturation ratio
     type: variable-number
@@ -10697,30 +10889,6 @@ settings:
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
-  - id: flexcyon-base-grey-tab
-    title: Base grey tab
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#71777f"
-  - id: flexcyon-base-grey-token
-    title: Base grey token
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#586582"
-  - id: flexcyon-base-grey-scroll
-    title: Base grey scroll
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#3f495e"
-  - id: flexcyon-base-grey-scroll-hover
-    title: Base grey scroll hover
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#5d6782"
 
   - title: Typography
     type: heading

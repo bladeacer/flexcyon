@@ -5,15 +5,37 @@ id: flexcyon-a11y
 settings:
   - title: About accessibility
     type: info-text
-    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
+    description: Toggle accessibility options. Current options let you configure brightness, contrast, saturation etc. for the theme's colours or globally.
     collapsed: true
-  - title: Global brightness ratio
+
+  - title: Theme colour contrast offset
+    description: Define the contrast offset for the theme's colours.
+    id: flexcyon-theme-contrast-offset
     type: variable-number
-    id: flexcyon-brightness-ratio
+    default: 0
+  - title: Theme colour warmth offset
+    description: Define the warmth offset the theme's colours. Higher positive values yield warmer colours while lower negative values yield cool ones.
+    id: flexcyon-theme-warmth-offset
+    type: variable-number
+    default: 0
+  - title: Theme colour brightness ratio
+    description: Define the brightness ratio for the theme's colours.
+    id: flexcyon-theme-brightness-ratio
+    type: variable-number
     default: 1
+  - title: Theme colour saturation ratio
+    description: Define the saturation ratio for the theme's colours.
+    id: flexcyon-theme-saturation-ratio
+    type: variable-number
+    default: 1
+
   - title: Global contrast ratio
     type: variable-number
     id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
     default: 1
   - title: Global saturation ratio
     type: variable-number

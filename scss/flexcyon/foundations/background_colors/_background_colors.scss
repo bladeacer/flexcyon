@@ -5,14 +5,17 @@
 // And the great origami theme
 // - https://github.com/7368697661/Origami
 
+@use "../accessibility/a11y_mixin" as m;
+
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(
+  --flexcyon-editor-bg-col-def: color-mix(
     in oklch,
     var(--color-base-05) 70%,
     var(--color-base-10) 30%
   );
+  @include m.configure-oklch("flexcyon-editor-bg-color", "flexcyon-editor-bg-col-def");
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 
@@ -30,9 +33,8 @@ body {
   --background-modifier-border: var(--color-base-20);
   --background-modifier-border-hover: transparent;
   --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-error: rgb(
-    var(--color-red-rgb),
-    calc(var(--dimmed) + 0.3)
+  --background-modifier-error: oklch(
+    from var(--color-red) lch / calc(var(--dimmed) + 0.3)
   );
 }
 
