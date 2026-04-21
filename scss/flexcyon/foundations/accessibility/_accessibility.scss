@@ -8,22 +8,6 @@ body {
 
   /* positive is warmer, negative is cooler */
   --flexcyon-theme-warmth-offset: 0;
-
-  /* Example Usage */
-  // --base-hex: #92a871;
-
-  // --result-color: oklch(
-  //   from var(--base-hex)
-  //   clamp(
-  //     0,
-  //     (l * var(--flexcyon-theme-brightness-ratio)) +
-  //     var(--flexcyon-theme-contrast-offset),
-  //     1
-  //   )
-  //   clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-  //   clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
-  // );
-
   --flexcyon-contrast-ratio: 1;
   --flexcyon-brightness-ratio: 1;
   --flexcyon-saturation-ratio: 1;

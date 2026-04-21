@@ -9,6 +9,6 @@
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }

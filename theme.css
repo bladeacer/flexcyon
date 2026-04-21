@@ -14,7 +14,6 @@ body {
   --flexcyon-theme-saturation-ratio: 1;
   /* positive is warmer, negative is cooler */
   --flexcyon-theme-warmth-offset: 0;
-  /* Example Usage */
   --flexcyon-contrast-ratio: 1;
   --flexcyon-brightness-ratio: 1;
   --flexcyon-saturation-ratio: 1;
@@ -55,7 +54,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-orange: oklch(
     from var(--flexcyon-orange)
@@ -66,7 +65,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-yellow: oklch(
     from var(--flexcyon-yellow)
@@ -77,7 +76,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-green: oklch(
     from var(--flexcyon-lime-green)
@@ -88,7 +87,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-cyan: oklch(
     from var(--flexcyon-cyan)
@@ -99,7 +98,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-blue: oklch(
     from var(--flexcyon-blue)
@@ -110,7 +109,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-purple: oklch(
     from var(--flexcyon-purple-lilac)
@@ -121,7 +120,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-pink: oklch(
     from var(--flexcyon-pink)
@@ -132,7 +131,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }
 
@@ -703,7 +702,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-00: oklch(
     from var(--flexcyon-base-01)
@@ -714,7 +713,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-05: oklch(
     from var(--flexcyon-base-01-02-mix)
@@ -725,7 +724,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-10: oklch(
     from var(--flexcyon-base-02)
@@ -736,7 +735,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-20: oklch(
     from var(--flexcyon-base-02-03-mix)
@@ -747,7 +746,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-25: oklch(
     from var(--flexcyon-base-03)
@@ -758,7 +757,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-30: oklch(
     from var(--flexcyon-base-03-04-mix)
@@ -769,7 +768,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-35: oklch(
     from var(--flexcyon-base-04)
@@ -780,7 +779,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-40: oklch(
     from var(--flexcyon-base-04-05-mix)
@@ -791,7 +790,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-50: oklch(
     from var(--flexcyon-base-05)
@@ -802,7 +801,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-60: oklch(
     from var(--flexcyon-base-grey-dark)
@@ -813,7 +812,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-70: oklch(
     from var(--flexcyon-base-grey-mix)
@@ -824,7 +823,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --color-base-100: oklch(
     from var(--flexcyon-base-grey-light)
@@ -835,7 +834,7 @@ body:is(.theme-light) {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }
 
@@ -2491,7 +2490,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
@@ -2505,7 +2504,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-primary: oklch(
     from var(--color-base-10)
@@ -2516,7 +2515,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-primary-alt: oklch(
     from var(--color-base-25)
@@ -2527,7 +2526,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-secondary: oklch(
     from var(--color-base-00)
@@ -2538,7 +2537,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-secondary-alt: oklch(
     from var(--color-base-20)
@@ -2549,7 +2548,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-hover: oklch(
     from var(--color-base-20)
@@ -2560,7 +2559,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-form-field: oklch(
     from var(--color-base-20)
@@ -2571,7 +2570,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-cover: oklch(
     from var(--color-base-15)
@@ -2582,7 +2581,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-message: oklch(
     from var(--color-base-20)
@@ -2593,7 +2592,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-active-hover: oklch(
     from var(--color-base-25)
@@ -2604,7 +2603,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-border: oklch(
     from var(--color-base-20)
@@ -2615,7 +2614,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   /* Transparent is still transparent even after a11y changes */
   --background-modifier-border-hover: transparent;
@@ -2628,7 +2627,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-error: transparent;
   --background-modifier-error-hover: transparent;
@@ -3444,7 +3443,7 @@ body.theme-dark {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }
 
@@ -3459,7 +3458,7 @@ body.theme-light {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }
 
@@ -3502,7 +3501,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
@@ -3516,7 +3515,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --text-accent-hover: var(--flexcyon-accent-hover);
   --text-error: var(--color-red);
@@ -3536,7 +3535,7 @@ body {
         1
       )
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(0, calc(h - var(--flexcyon-theme-warmth-offset)), 360)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --bold-color: var(--color-red);
   --italic-color: var(--flexcyon-accent);
@@ -10899,22 +10898,24 @@ settings:
     collapsed: true
 
   - title: Theme colour contrast offset
-    description: Define the contrast offset for the theme's colours.
+    description: Define the contrast offset for the theme's colours. For dark theme greater positive values increase contrast, the opposite is true for light theme.
     id: flexcyon-theme-contrast-offset
     type: variable-number-slider
     default: 0
-    min: -0.5
-    max: 0.5
+    min: -0.3
+    max: 0.3
     step: 0.01
 
+  - title: About Theme colour offset
+    type: info-text
+    markdown: true
+    description: Because oklch is a cyclical colour space, here are some tips on getting the desired colour warmth.<br>Dark mode = very cool background, set towards -20 for cool colours, 130 towards warmer colours.<br>Light mode = somewhat warm background, set -70 toward to warmer colours, 80 towards cooler colours.<br>If you go beyond the ranges the colours would probably alternate from becoming cool to becoming warm and vice versa.<br>Do experiment with values ^_^.
+
   - title: Theme colour warmth offset
-    description: Define the warmth offset the theme's colours. Higher positive values yield warmer colours while lower negative values yield cool ones.
+    description: Define the warmth offset the theme's colours.
     id: flexcyon-theme-warmth-offset
-    type: variable-number-slider
+    type: variable-number
     default: 0
-    min: -180
-    max: 180
-    step: 1
 
   - title: Theme colour brightness ratio
     description: Define the brightness ratio for the theme's colours.
