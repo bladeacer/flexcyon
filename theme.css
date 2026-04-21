@@ -1506,6 +1506,9 @@ body {
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 }
+body .mod-checkbox {
+  text-transform: capitalize;
+}
 body .checkbox-container {
   background-color: var(--flexcyon-red-salmon);
 }
@@ -2571,6 +2574,18 @@ body {
       calc(c * var(--flexcyon-theme-saturation-ratio))
       calc(h + var(--flexcyon-theme-warmth-offset))
   );
+  --background-modifier-error-hover-wrapper: oklch(
+    from var(--color-red) lch / calc(var(--dimmed) + 0.3)
+  );
+  --background-modifier-error-hover: oklch(
+    from var(--background-modifier-error-hover-wrapper)
+      calc(
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset)
+      )
+      calc(c * var(--flexcyon-theme-saturation-ratio))
+      calc(h + var(--flexcyon-theme-warmth-offset))
+  );
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -3439,7 +3454,7 @@ body {
   );
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--flexcyon-base-03);
+  --text-on-accent: var(--color-red);
   --text-accent-hover: var(--flexcyon-accent-hover);
   --text-error: var(--color-red);
   --text-warning: var(--color-red);

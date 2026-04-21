@@ -7,6 +7,10 @@ body {
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 
+  .mod-checkbox {
+    text-transform: capitalize;
+  }
+
   .checkbox-container {
     background-color: var(--flexcyon-red-salmon);
   }

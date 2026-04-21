@@ -45,6 +45,10 @@ body {
     from var(--color-red) lch / calc(var(--dimmed) + 0.3)
   );
   @include m.configure-oklch("background-modifier-error", "background-modifier-error-wrapper");
+  --background-modifier-error-hover-wrapper: oklch(
+    from var(--color-red) lch / calc(var(--dimmed) + 0.3)
+  );
+  @include m.configure-oklch("background-modifier-error-hover", "background-modifier-error-hover-wrapper");
 }
 
 /* obsi-snip-coll start: grid-background */
