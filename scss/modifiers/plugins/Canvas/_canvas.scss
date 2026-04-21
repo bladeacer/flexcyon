@@ -3,6 +3,12 @@ body {
     var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
   );
   --flexcyon-canvas-blur-intensity: 1px;
+  --canvas-color-1: var(--color-red);
+  --canvas-color-2: var(--color-orange);
+  --canvas-color-3: var(--color-yellow);
+  --canvas-color-4: var(--color-green);
+  --canvas-color-5: var(--color-cyan);
+  --canvas-color-6: var(--color-purple);
 }
 
 .canvas-background {
