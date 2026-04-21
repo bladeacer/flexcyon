@@ -6,6 +6,21 @@ Repository: https://github.com/bladeacer/flexcyon
 Documentation (English): https://flexcyon.github.io/docs-en
 Documentation (Chinese): https://flexcyon.github.io/docs-en/zh
 */
+/* obsi-snip-coll start: filters */
+body {
+  --flexcyon-theme-contrast-offset: 0;
+  --flexcyon-theme-brightness-ratio: 1;
+  /* a.k.a chroma ratio */
+  --flexcyon-theme-saturation-ratio: 1;
+  /* positive is warmer, negative is cooler */
+  --flexcyon-theme-warmth-offset: 0;
+  --flexcyon-contrast-ratio: 1;
+  --flexcyon-brightness-ratio: 1;
+  --flexcyon-saturation-ratio: 1;
+  filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
+}
+
+/* obsi-snip-coll end */
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
@@ -15,17 +30,6 @@ body.theme-dark {
   --flexcyon-red-salmon: #c03a47;
   --flexcyon-blue: #5a8fcd;
   --flexcyon-pink: #d458a3;
-}
-
-body:is(.theme-dark) {
-  --color-red-rgb: 192, 58, 71;
-  --color-orange-rgb: 204, 132, 73;
-  --color-yellow-rgb: 194, 158, 66;
-  --color-green-rgb: 161, 192, 92;
-  --color-cyan-rgb: 60, 185, 194;
-  --color-blue-rgb: 90, 143, 205;
-  --color-purple-rgb: 164, 97, 200;
-  --color-pink-rgb: 212, 88, 163;
 }
 
 body.theme-light {
@@ -39,27 +43,96 @@ body.theme-light {
   --flexcyon-pink: #e389ca;
 }
 
-body:is(.theme-light) {
-  --color-red-rgb: 235, 83, 87;
-  --color-orange-rgb: 237, 129, 38;
-  --color-yellow-rgb: 232, 198, 42;
-  --color-green-rgb: 104, 149, 35;
-  --color-cyan-rgb: 59, 155, 161;
-  --color-blue-rgb: 92, 159, 228;
-  --color-purple-rgb: 111, 73, 174;
-  --color-pink-rgb: 227, 137, 202;
-}
-
 body.theme-light,
 body.theme-dark {
-  --color-red: var(--flexcyon-red-salmon);
-  --color-orange: var(--flexcyon-orange);
-  --color-yellow: var(--flexcyon-yellow);
-  --color-green: var(--flexcyon-lime-green);
-  --color-cyan: var(--flexcyon-cyan);
-  --color-blue: var(--flexcyon-blue);
-  --color-purple: var(--flexcyon-purple-lilac);
-  --color-pink: var(--flexcyon-pink);
+  --color-red: oklch(
+    from var(--flexcyon-red-salmon)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-orange: oklch(
+    from var(--flexcyon-orange)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-yellow: oklch(
+    from var(--flexcyon-yellow)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-green: oklch(
+    from var(--flexcyon-lime-green)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-cyan: oklch(
+    from var(--flexcyon-cyan)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-blue: oklch(
+    from var(--flexcyon-blue)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-purple: oklch(
+    from var(--flexcyon-purple-lilac)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-pink: oklch(
+    from var(--flexcyon-pink)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
 }
 
 /* obsi-snip-coll start: extended-color */
@@ -70,616 +143,504 @@ body.flexcyon-ext-colors-enabled {
     var(--color-red),
     var(--color-blue)
   );
-  --color-red-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-blue-red-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-red)
   );
-  --color-blue-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-blue-mix-bg: oklch(
+    from var(--color-red-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-blue-red-mix-bg: oklch(
+    from var(--color-blue-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-orange-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-orange)
   );
-  --color-red-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-orange-red-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-red)
   );
-  --color-orange-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-orange-mix-bg: oklch(
+    from var(--color-red-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-orange-red-mix-bg: oklch(
+    from var(--color-orange-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-yellow-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-yellow)
   );
-  --color-red-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-yellow-red-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-red)
   );
-  --color-yellow-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-yellow-mix-bg: oklch(
+    from var(--color-red-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-yellow-red-mix-bg: oklch(
+    from var(--color-yellow-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-green-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-green)
   );
-  --color-red-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-green-red-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-red)
   );
-  --color-green-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-green-mix-bg: oklch(
+    from var(--color-red-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-green-red-mix-bg: oklch(
+    from var(--color-green-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-cyan-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-cyan)
   );
-  --color-red-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-cyan-red-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-red)
   );
-  --color-cyan-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-cyan-mix-bg: oklch(
+    from var(--color-red-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-cyan-red-mix-bg: oklch(
+    from var(--color-cyan-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-purple-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-purple)
   );
-  --color-red-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-red-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-red)
   );
-  --color-purple-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-purple-mix-bg: oklch(
+    from var(--color-red-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-red-mix-bg: oklch(
+    from var(--color-purple-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-red-pink-mix: color-mix(
     in oklch,
     var(--color-red),
     var(--color-pink)
   );
-  --color-red-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-red), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-red-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-red)
   );
-  --color-pink-red-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-red))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-red-pink-mix-bg: oklch(
+    from var(--color-red-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-red-mix-bg: oklch(
+    from var(--color-pink-red-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-yellow-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-yellow)
   );
-  --color-orange-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-yellow-orange-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-orange)
   );
-  --color-yellow-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-yellow-mix-bg: oklch(
+    from var(--color-orange-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-yellow-orange-mix-bg: oklch(
+    from var(--color-yellow-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-green-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-green)
   );
-  --color-orange-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-green-orange-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-orange)
   );
-  --color-green-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-green-mix-bg: oklch(
+    from var(--color-orange-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-green-orange-mix-bg: oklch(
+    from var(--color-green-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-cyan-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-cyan)
   );
-  --color-orange-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-cyan-orange-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-orange)
   );
-  --color-cyan-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-cyan-mix-bg: oklch(
+    from var(--color-orange-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-cyan-orange-mix-bg: oklch(
+    from var(--color-cyan-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-blue-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-blue)
   );
-  --color-orange-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-blue-orange-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-orange)
   );
-  --color-blue-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-blue-mix-bg: oklch(
+    from var(--color-orange-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-blue-orange-mix-bg: oklch(
+    from var(--color-blue-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-purple-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-purple)
   );
-  --color-orange-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-orange-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-orange)
   );
-  --color-purple-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-purple-mix-bg: oklch(
+    from var(--color-orange-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-orange-mix-bg: oklch(
+    from var(--color-purple-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-orange-pink-mix: color-mix(
     in oklch,
     var(--color-orange),
     var(--color-pink)
   );
-  --color-orange-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-orange), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-orange-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-orange)
   );
-  --color-pink-orange-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-orange))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-orange-pink-mix-bg: oklch(
+    from var(--color-orange-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-orange-mix-bg: oklch(
+    from var(--color-pink-orange-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-green-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-green)
   );
-  --color-yellow-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-green-yellow-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-yellow)
   );
-  --color-green-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-yellow-green-mix-bg: oklch(
+    from var(--color-yellow-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-green-yellow-mix-bg: oklch(
+    from var(--color-green-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-cyan-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-cyan)
   );
-  --color-yellow-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-cyan-yellow-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-yellow)
   );
-  --color-cyan-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-yellow-cyan-mix-bg: oklch(
+    from var(--color-yellow-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-cyan-yellow-mix-bg: oklch(
+    from var(--color-cyan-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-blue-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-blue)
   );
-  --color-yellow-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-blue-yellow-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-yellow)
   );
-  --color-blue-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-yellow-blue-mix-bg: oklch(
+    from var(--color-yellow-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-blue-yellow-mix-bg: oklch(
+    from var(--color-blue-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-purple-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-purple)
   );
-  --color-yellow-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-yellow-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-yellow)
   );
-  --color-purple-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-yellow-purple-mix-bg: oklch(
+    from var(--color-yellow-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-yellow-mix-bg: oklch(
+    from var(--color-purple-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-yellow-pink-mix: color-mix(
     in oklch,
     var(--color-yellow),
     var(--color-pink)
   );
-  --color-yellow-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-yellow), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-yellow-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-yellow)
   );
-  --color-pink-yellow-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-yellow))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-yellow-pink-mix-bg: oklch(
+    from var(--color-yellow-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-yellow-mix-bg: oklch(
+    from var(--color-pink-yellow-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-cyan-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-cyan)
   );
-  --color-green-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-cyan-green-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-green)
   );
-  --color-cyan-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-green-cyan-mix-bg: oklch(
+    from var(--color-green-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-cyan-green-mix-bg: oklch(
+    from var(--color-cyan-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-blue-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-blue)
   );
-  --color-green-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-blue-green-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-green)
   );
-  --color-blue-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-green-blue-mix-bg: oklch(
+    from var(--color-green-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-blue-green-mix-bg: oklch(
+    from var(--color-blue-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-purple-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-purple)
   );
-  --color-green-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-green-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-green)
   );
-  --color-purple-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-green-purple-mix-bg: oklch(
+    from var(--color-green-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-green-mix-bg: oklch(
+    from var(--color-purple-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-green-pink-mix: color-mix(
     in oklch,
     var(--color-green),
     var(--color-pink)
   );
-  --color-green-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-green), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-green-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-green)
   );
-  --color-pink-green-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-green))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-green-pink-mix-bg: oklch(
+    from var(--color-green-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-green-mix-bg: oklch(
+    from var(--color-pink-green-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-blue-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-blue)
   );
-  --color-cyan-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-blue-cyan-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-cyan)
   );
-  --color-blue-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-cyan-blue-mix-bg: oklch(
+    from var(--color-cyan-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-blue-cyan-mix-bg: oklch(
+    from var(--color-blue-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-purple-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-purple)
   );
-  --color-cyan-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-cyan-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-cyan)
   );
-  --color-purple-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-cyan-purple-mix-bg: oklch(
+    from var(--color-cyan-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-cyan-mix-bg: oklch(
+    from var(--color-purple-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-cyan-pink-mix: color-mix(
     in oklch,
     var(--color-cyan),
     var(--color-pink)
   );
-  --color-cyan-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-cyan), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-cyan-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-cyan)
   );
-  --color-pink-cyan-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-cyan))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-cyan-pink-mix-bg: oklch(
+    from var(--color-cyan-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-cyan-mix-bg: oklch(
+    from var(--color-pink-cyan-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-purple-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-purple)
   );
-  --color-blue-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-purple-blue-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-blue)
   );
-  --color-purple-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-blue-purple-mix-bg: oklch(
+    from var(--color-blue-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-purple-blue-mix-bg: oklch(
+    from var(--color-purple-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-blue-pink-mix: color-mix(
     in oklch,
     var(--color-blue),
     var(--color-pink)
   );
-  --color-blue-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-blue), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-blue-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-blue)
   );
-  --color-pink-blue-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-blue))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-blue-pink-mix-bg: oklch(
+    from var(--color-blue-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-blue-mix-bg: oklch(
+    from var(--color-pink-blue-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
   --color-purple-pink-mix: color-mix(
     in oklch,
     var(--color-purple),
     var(--color-pink)
   );
-  --color-purple-pink-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-purple), var(--color-pink))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-pink-purple-mix: color-mix(
     in oklch,
     var(--color-pink),
     var(--color-purple)
   );
-  --color-pink-purple-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-pink), var(--color-purple))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-purple-pink-mix-bg: oklch(
+    from var(--color-purple-pink-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-pink-purple-mix-bg: oklch(
+    from var(--color-pink-purple-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
 }
 
@@ -707,11 +668,6 @@ body.theme-light {
 body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
-  --flexcyon-base-grey-tab: #71777f;
-  --flexyon-base-grey-token: #586582;
-  --flexcyon-base-grey-scroll: #3f495e;
-  --flexcyon-base-grey-scroll-hover: #5c6782;
-  /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
     in oklch,
     var(--flexcyon-base-01),
@@ -737,50 +693,206 @@ body:is(.theme-light) {
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
-  --color-base-00: var(--flexcyon-base-01);
-  --color-base-05: var(--flexcyon-base-01-02-mix);
-  --color-base-10: var(--flexcyon-base-02);
-  --color-base-20: var(--flexcyon-base-02-03-mix);
-  --color-base-25: var(--flexcyon-base-03);
-  --color-base-30: var(--flexcyon-base-03-04-mix);
-  --color-base-35: var(--flexcyon-base-04);
-  --color-base-40: var(--flexcyon-base-04-05-mix);
-  --color-base-50: var(--flexcyon-base-05);
-  --color-base-60: var(--flexcyon-base-grey-dark);
-  --color-base-70: var(--flexcyon-base-grey-mix);
-  --color-base-100: var(--flexcyon-base-grey-light);
+  --flexcyon-grey-dark-wrapper: oklch(
+    from var(--flexcyon-base-grey-dark)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-00: oklch(
+    from var(--flexcyon-base-01)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-05: oklch(
+    from var(--flexcyon-base-01-02-mix)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-10: oklch(
+    from var(--flexcyon-base-02)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-20: oklch(
+    from var(--flexcyon-base-02-03-mix)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-25: oklch(
+    from var(--flexcyon-base-03)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-30: oklch(
+    from var(--flexcyon-base-03-04-mix)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-35: oklch(
+    from var(--flexcyon-base-04)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-40: oklch(
+    from var(--flexcyon-base-04-05-mix)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-50: oklch(
+    from var(--flexcyon-base-05)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-60: oklch(
+    from var(--flexcyon-base-grey-dark)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-70: oklch(
+    from var(--flexcyon-base-grey-mix)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-base-100: oklch(
+    from var(--flexcyon-base-grey-light)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
 }
 
 body.theme-dark {
   --flexcyon-accent: #92a871;
-  --flexcyon-accent-h: 105.5;
-  --flexcyon-accent-s: 77.5%;
-  --flexcyon-accent-l: 59.5%;
 }
 
 body.theme-light {
   --flexcyon-accent: #5770b9;
-  --flexcyon-accent-h: 225;
-  --flexcyon-accent-s: 41%;
-  --flexcyon-accent-l: 53%;
-}
-
-body {
-  --accent-h: var(--flexcyon-accent-h);
-  --accent-s: var(--flexcyon-accent-s);
-  --accent-l: var(--flexcyon-accent-l);
 }
 
 body.theme-dark,
 body.theme-light {
-  --color-accent-1: hsl(
-    calc(var(--accent-h) - 3) calc(var(--accent-s) * 1.02)
-      calc(var(--accent-l) * 1.15)
+  --color-accent: oklch(var(--flexcyon-accent));
+  --color-accent-hsl: oklch(var(--flexcyon-accent));
+  /* cooler hue, higher chroma, lighter */
+  --color-accent-1: oklch(
+    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
   );
-  --color-accent-2: hsl(
-    calc(var(--accent-h) - 20) calc(var(--accent-s) * 0.85)
-      calc(var(--accent-l) * 1.1) / 87.5%
+  /* hue shift, lower chroma, lighter, 87.5% alpha */
+  --color-accent-2: oklch(
+    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+      87.5%
   );
+}
+
+/* Willemstad theme: Accent setting theme override notice */
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color] {
+  display: grid;
+  visibility: hidden;
+  grid-template-rows: 1fr 1fr 0;
+  inline-size: fit-content;
+  block-size: fit-content;
+  pointer-events: none;
+}
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color]::before {
+  position: relative;
+  visibility: visible;
+  grid-row: 1/2;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  font-weight: bold;
+  color: var(--text-error);
+  white-space: pre-wrap;
+  content: "The accent colour is overriden by the theme.";
+}
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control input[type=color]::after {
+  position: relative;
+  visibility: visible;
+  grid-row: 2/3;
+  font-family: var(--font-interface);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-error);
+  white-space: pre-wrap;
+  content: "Please use the Style Settings plugin to customise colours.";
+}
+.modal.mod-settings .vertical-tab-content .setting-group .setting-item:nth-of-type(2) > .setting-item-control .clickable-icon.extra-setting-button {
+  display: none;
 }
 
 body {
@@ -1060,16 +1172,16 @@ body h6 {
 }
 
 body {
-  --flexcyon-accent-hover: var(--flexcyon-green);
+  --flexcyon-accent-hover: var(--color-green);
   --flexcyon-palette-lilac-hover: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-purple-lilac),
-    var(--flexcyon-base-grey-dark)
+    var(--color-purple),
+    var(--flexcyon-grey-dark-wrapper)
   );
   --flexcyon-palette-cyan-hover: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-cyan),
-    var(--flexcyon-base-grey-dark)
+    var(--color-cyan),
+    var(--flexcyon-grey-dark-wrapper)
   );
 }
 
@@ -1434,6 +1546,9 @@ body {
   --checkbox-border-color: var(--flexcyon-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
+}
+body .mod-checkbox {
+  text-transform: capitalize;
 }
 body .checkbox-container {
   background-color: var(--flexcyon-red-salmon);
@@ -2361,31 +2476,161 @@ body ol {
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(
+  --flexcyon-editor-bg-col-def: color-mix(
     in oklch,
     var(--color-base-05) 70%,
     var(--color-base-10) 30%
   );
+  --flexcyon-editor-bg-color: oklch(
+    from var(--flexcyon-editor-bg-col-def)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
   /* Colours */
-  --modal-sidebar-background: var(--color-base-05);
-  --background-primary: var(--color-base-10);
-  --background-primary-alt: var(--color-base-25);
-  --background-secondary: var(--color-base-00);
-  --background-secondary-alt: var(--color-base-20);
-  --background-modifier-hover: var(--color-base-20);
-  --background-modifier-form-field: var(--color-base-20);
-  --background-modifier-cover: var(--color-base-15);
-  --background-modifier-message: var(--color-base-20);
-  --background-modifier-active-hover: var(--color-base-25);
-  --background-modifier-border: var(--color-base-20);
-  --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-error: rgb(
-    var(--color-red-rgb),
-    calc(var(--dimmed) + 0.3)
+  --modal-sidebar-background: oklch(
+    from var(--color-base-05)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
+  --background-primary: oklch(
+    from var(--color-base-10)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-primary-alt: oklch(
+    from var(--color-base-25)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-secondary: oklch(
+    from var(--color-base-00)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-secondary-alt: oklch(
+    from var(--color-base-20)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-hover: oklch(
+    from var(--color-base-20)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-form-field: oklch(
+    from var(--color-base-20)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-cover: oklch(
+    from var(--color-base-15)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-message: oklch(
+    from var(--color-base-20)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-active-hover: oklch(
+    from var(--color-base-25)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-border: oklch(
+    from var(--color-base-20)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  /* Transparent is still transparent even after a11y changes */
+  --background-modifier-border-hover: transparent;
+  --background-modifier-border-focus: oklch(
+    from var(--color-base-30)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --background-modifier-error: transparent;
+  --background-modifier-error-hover: transparent;
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -3188,11 +3433,33 @@ body textarea::selection {
 }
 
 body.theme-dark {
-  --text-normal: #d3d5d3;
+  --text-normal-col: #d3d5d3;
+  --text-normal: oklch(
+    from var(--text-normal-col)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
 }
 
 body.theme-light {
-  --text-normal: #080808;
+  --text-normal-col: #080808;
+  --text-normal: oklch(
+    from var(--text-normal-col)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
 }
 
 body {
@@ -3220,24 +3487,57 @@ body {
   --line-height-normal: 1.4;
   --line-height-tight: 1.25;
   --flexcyon-text-muted: #6f768599;
-  --text-muted: color-mix(
+  --text-muted-wrapper: color-mix(
     in oklch,
     var(--flexcyon-text-muted),
     var(--text-normal)
   );
+  --text-muted: oklch(
+    from var(--text-muted-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   --text-faint: var(--flexcyon-text-muted);
   --text-accent: var(--flexcyon-accent);
-  --text-on-accent: var(--flexcyon-base-03);
+  --text-on-accent-wrapper: var(--flexcyon-base-03);
+  --text-on-accent: oklch(
+    from var(--text-on-accent-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   --text-accent-hover: var(--flexcyon-accent-hover);
-  --text-error: var(--flexcyon-red-salmon);
-  --text-warning: var(--flexcyon-red-salmon);
-  --text-success: var(--flexcyon-lime-green);
-  --text-selection: color-mix(
+  --text-error: var(--color-red);
+  --text-warning: var(--color-red);
+  --text-success: var(--color-green);
+  --text-sel-wrapper: color-mix(
     in oklch shorter hue,
     var(--flexcyon-base-04) 20%,
     transparent
   );
-  --bold-color: var(--flexcyon-red-salmon);
+  --text-selection: oklch(
+    from var(--text-sel-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --bold-color: var(--color-red);
   --italic-color: var(--flexcyon-accent);
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
@@ -3260,19 +3560,19 @@ body .cm-strong.cm-quote {
   color: var(--bold-color);
 }
 body .cm-line .cm-matchingbracket {
-  color: var(--flexcyon-purple-lilac);
+  color: var(--color-purple);
 }
 body .cm-line .ͼi {
-  color: var(--flexcyon-cyan);
+  color: var(--color-cyan);
 }
 body .cm-line .ͼj {
-  color: var(--flexcyon-orange);
+  color: var(--color-orange);
 }
 body .cm-line .ͼc {
-  color: var(--flexcyon-accent);
+  color: var(--color-accent);
 }
 body .cm-line .ͼb {
-  color: var(--flexcyon-yellow);
+  color: var(--color-yellow);
 }
 body .cm-s-obsidian span.cm-formatting-highlight,
 body .cm-s-obsidian span.cm-highlight,
@@ -3739,7 +4039,7 @@ body.flexcyon-typewriter-mode .cm-line:not(.cm-active, .HyperMD-codeblock) {
 /* obsi-snip-coll end */
 /* Callout modifications */
 body {
-  --flexcyon-callout-bg-opacity: 20%;
+  --flexcyon-callout-bg-opacity: 12.5%;
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
@@ -3754,6 +4054,25 @@ body {
     var(--flexcyon-callout-horiz-padding);
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
+  --callout-bug: var(--color-red);
+  --callout-default: var(--color-blue);
+  --callout-error: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-fail: var(--color-red);
+  --callout-important: var(--color-cyan);
+  --callout-info: var(--color-blue);
+  --callout-question: var(--color-orange);
+  --callout-success: var(--color-green);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-todo: var(--color-blue);
+  --callout-warning: var(--color-orange);
+}
+body div.callout {
+  background-color: oklch(from var(--color-blue) l c h/var(--flexcyon-callout-bg-opacity));
+}
+body div.callout .callout-title {
+  color: var(--callout-color);
 }
 body div.callout .callout-icon {
   padding-inline-end: var(--flexcyon-callout-icon-right-padding);
@@ -3904,7 +4223,7 @@ div.callout[data-callout*=all-yellow],
 div.callout[data-callout-metadata*=all-yellow],
 div.callout[data-callout*=bg-yellow],
 div.callout[data-callout-metadata*=bg-yellow] {
-  background-color: rgb(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-yellow) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -3913,7 +4232,7 @@ div.callout[data-callout*=bg-yellow]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-yellow]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-yellow]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-yellow) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-yellow] div.callout-title,
@@ -3931,7 +4250,7 @@ div.callout[data-callout*=all-blue],
 div.callout[data-callout-metadata*=all-blue],
 div.callout[data-callout*=bg-blue],
 div.callout[data-callout-metadata*=bg-blue] {
-  background-color: rgb(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-blue) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -3940,7 +4259,7 @@ div.callout[data-callout*=bg-blue]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-blue]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-blue]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-blue) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-blue] div.callout-title,
@@ -3958,7 +4277,7 @@ div.callout[data-callout*=all-purple],
 div.callout[data-callout-metadata*=all-purple],
 div.callout[data-callout*=bg-purple],
 div.callout[data-callout-metadata*=bg-purple] {
-  background-color: rgb(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-purple) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -3967,7 +4286,7 @@ div.callout[data-callout*=bg-purple]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-purple]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-purple]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-purple) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-purple] div.callout-title,
@@ -3985,7 +4304,7 @@ div.callout[data-callout*=all-red],
 div.callout[data-callout-metadata*=all-red],
 div.callout[data-callout*=bg-red],
 div.callout[data-callout-metadata*=bg-red] {
-  background-color: rgb(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-red) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -3994,7 +4313,7 @@ div.callout[data-callout*=bg-red]:has([data-callout*=tui], [data-callout-metadat
 div.callout[data-callout*=bg-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-red]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-red]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-red) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-red] div.callout-title,
@@ -4012,7 +4331,7 @@ div.callout[data-callout*=all-cyan],
 div.callout[data-callout-metadata*=all-cyan],
 div.callout[data-callout*=bg-cyan],
 div.callout[data-callout-metadata*=bg-cyan] {
-  background-color: rgb(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-cyan) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4021,7 +4340,7 @@ div.callout[data-callout*=bg-cyan]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-cyan]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-cyan]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-cyan) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-cyan] div.callout-title,
@@ -4039,7 +4358,7 @@ div.callout[data-callout*=all-pink],
 div.callout[data-callout-metadata*=all-pink],
 div.callout[data-callout*=bg-pink],
 div.callout[data-callout-metadata*=bg-pink] {
-  background-color: rgb(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-pink) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4048,7 +4367,7 @@ div.callout[data-callout*=bg-pink]:has([data-callout*=tui], [data-callout-metada
 div.callout[data-callout*=bg-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-pink]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-pink]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-pink) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-pink] div.callout-title,
@@ -4066,7 +4385,7 @@ div.callout[data-callout*=all-green],
 div.callout[data-callout-metadata*=all-green],
 div.callout[data-callout*=bg-green],
 div.callout[data-callout-metadata*=bg-green] {
-  background-color: rgb(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-green) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4075,7 +4394,7 @@ div.callout[data-callout*=bg-green]:has([data-callout*=tui], [data-callout-metad
 div.callout[data-callout*=bg-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-green]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-green]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-green) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-green] div.callout-title,
@@ -4093,7 +4412,7 @@ div.callout[data-callout*=all-orange],
 div.callout[data-callout-metadata*=all-orange],
 div.callout[data-callout*=bg-orange],
 div.callout[data-callout-metadata*=bg-orange] {
-  background-color: rgb(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-orange) l c h/var(--flexcyon-callout-bg-opacity));
 }
 div.callout[data-callout*=all-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title, div.callout[data-callout*=all-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=all-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
@@ -4102,7 +4421,7 @@ div.callout[data-callout*=bg-orange]:has([data-callout*=tui], [data-callout-meta
 div.callout[data-callout*=bg-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
 div.callout[data-callout-metadata*=bg-orange]:has([data-callout*=tui], [data-callout-metadata*=tui]) div.callout-title,
 div.callout[data-callout-metadata*=bg-orange]:has(.callout[data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
-  background-color: rgb(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+  background-color: oklch(from var(--color-orange) l c h/var(--flexcyon-callout-bg-opacity));
 }
 
 div.callout[data-callout*=all-orange] div.callout-title,
@@ -9458,7 +9777,7 @@ body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.e
   margin-block-start: 32px;
 }
 
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
   display: inline;
   font-family: var(--flexcyon-new-tab-font-group);
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
@@ -9471,46 +9790,46 @@ body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div 
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > div.empty-state-action-list {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-action-list {
   display: none;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-leaf > div > div > div.empty-state > .sidebar-toggle-button {
+body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > .sidebar-toggle-button {
   display: none;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-folders-action-items.file-tree-header-fixed,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .titlebar-button-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-new-tab,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-tab-list,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-sidedock-vault-profile {
+body.flexcyon-rtz-mode .graph-controls,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed,
+body.flexcyon-rtz-mode .oz-flex-container,
+body.flexcyon-rtz-mode .nav-header,
+body.flexcyon-rtz-mode .titlebar-button-container,
+body.flexcyon-rtz-mode .view-header-left,
+body.flexcyon-rtz-mode .view-actions,
+body.flexcyon-rtz-mode .side-dock-ribbon,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile {
   opacity: 0;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .graph-controls:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-folders-action-items.file-tree-header-fixed:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .oz-flex-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .nav-header:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .titlebar-button-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-header-left:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .view-actions:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .side-dock-ribbon:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-new-tab:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-tab-header-tab-list:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .workspace-sidedock-vault-profile:hover {
+body.flexcyon-rtz-mode .graph-controls:hover,
+body.flexcyon-rtz-mode .oz-folders-action-items.file-tree-header-fixed:hover,
+body.flexcyon-rtz-mode .oz-flex-container:hover,
+body.flexcyon-rtz-mode .nav-header:hover,
+body.flexcyon-rtz-mode .titlebar-button-container:hover,
+body.flexcyon-rtz-mode .view-header-left:hover,
+body.flexcyon-rtz-mode .view-actions:hover,
+body.flexcyon-rtz-mode .side-dock-ribbon:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-new-tab:hover,
+body.flexcyon-rtz-mode .workspace-tab-header-tab-list:hover,
+body.flexcyon-rtz-mode .workspace-sidedock-vault-profile:hover {
   opacity: unset;
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar {
+body.flexcyon-rtz-mode .cm-gutter,
+body.flexcyon-rtz-mode .metadata-container,
+body.flexcyon-rtz-mode .status-bar {
   opacity: var(--dimmed);
 }
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .cm-gutter:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .metadata-container:hover,
-body.flexcyon-rtz-mode:not(.flexcyon-flex-max-mode) .status-bar:hover {
+body.flexcyon-rtz-mode .cm-gutter:hover,
+body.flexcyon-rtz-mode .metadata-container:hover,
+body.flexcyon-rtz-mode .status-bar:hover {
   opacity: unset;
 }
 
@@ -9865,15 +10184,6 @@ body .modal-bg {
   filter: brightness(var(--flexcyon-modal-image-brightness)) blur(var(--flexcyon-modal-image-blur));
 }
 
-/* obsi-snip-coll start: filters */
-body {
-  --flexcyon-contrast-ratio: 1;
-  --flexcyon-brightness-ratio: 1;
-  --flexcyon-saturation-ratio: 1;
-  filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
-}
-
-/* obsi-snip-coll end */
 /* obsi-snip-coll start: cursor-type */
 body {
   --flexcyon-cursor-type: auto;
@@ -10495,7 +10805,7 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
 
 /*! 
 @settings
-name: flexcyon://about
+name: flexcyon://About-Theme
 id: flexcyon-about
 settings:
   - title: About Theme
@@ -10511,26 +10821,46 @@ settings:
   - title: Documentation
     type: info-text
     markdown: true
-    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
+    description: For more information, check out the [documentation here](https://flexcyon.github.io/docs-en/). 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。Translation is done on a best effort basis, though each update will have properly translated documentation before even being published.
+
+  - title: "Is this style setting option available?"
+    type: info-text
+    markdown: true
+    description: The Style Settings Plugin has a built-in search bar. That being said, the documentation is your friend with fuzzy search. The documentation also provides usage example and more information not found here. This includes the usage of CSS Classes and Callout Metadata that the theme comes with.
 */
 /*! 
 @settings
-name: flexcyon://modes
+name: flexcyon://Modes
 id: flexcyon-modes
 settings:
   - title: About Modes
     type: info-text
-    description: flexcyon offers several modes, under this page you can also configure accessibility settings
+    description: Configure modes of the theme.
+  - title: Select Mode
+    type: class-select
+    description: Select between Flex Max preset mode, Return to Zero preset mode or customise your own flexcyon experience. More about Flex Max and Return to Zero modes can be found below and in the documentation.
+    id: flexcyon-select-mode
+    allowEmpty: false
+    default: flexcyon-flex-max-mode
+    options: 
+      - 
+        label: None
+        value: none
+      -
+        label: Flex Max Mode
+        value: flexcyon-flex-max-mode
+      -
+        label: Return To Zero Mode
+        value: flexcyon-rtz-mode
+
   - title: Return To Zero Mode
-    type: class-toggle
+    type: info-text
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
-    id: flexcyon-rtz-mode
-    default: false
+
   - title: Flex Max Mode
-    type: class-toggle
+    type: info-text
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
-    id: flexcyon-flex-max-mode
-    default: true
+
   - title: Typewriter Mode
     type: class-toggle
     description: Reduce opacity of all but the active line in source and live preview mode
@@ -10546,7 +10876,7 @@ settings:
     description: Reverses the rendering of stuff in the UI
     id: flexcyon-reverse-mode
     default: false
-  - title: Enable Writing mode globally
+  - title: Writing Mode
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
     id: flexcyon-editor-writing
@@ -10559,20 +10889,59 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://accessibility
+name: flexcyon://Accessibility
 id: flexcyon-a11y
 settings:
   - title: About accessibility
     type: info-text
-    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
+    description: Toggle accessibility options. Current options let you configure brightness, contrast, saturation etc. for the theme's colours or globally.
     collapsed: true
-  - title: Global brightness ratio
+
+  - title: Theme colour contrast offset
+    description: Define the contrast offset for the theme's colours. For dark theme greater positive values increase contrast, the opposite is true for light theme.
+    id: flexcyon-theme-contrast-offset
+    type: variable-number-slider
+    default: 0
+    min: -0.3
+    max: 0.3
+    step: 0.01
+
+  - title: About Theme colour offset
+    type: info-text
+    markdown: true
+    description: Because oklch is a cyclical colour space, here are some tips on getting the desired colour warmth.<br>Dark mode = very cool background, set towards -20 for cool colours, 130 towards warmer colours.<br>Light mode = somewhat warm background, set -70 toward to warmer colours, 80 towards cooler colours.<br>If you go beyond the ranges the colours would probably alternate from becoming cool to becoming warm and vice versa.<br>Do experiment with values ^_^.
+
+  - title: Theme colour warmth offset
+    description: Define the warmth offset the theme's colours.
+    id: flexcyon-theme-warmth-offset
     type: variable-number
-    id: flexcyon-brightness-ratio
+    default: 0
+
+  - title: Theme colour brightness ratio
+    description: Define the brightness ratio for the theme's colours.
+    id: flexcyon-theme-brightness-ratio
+    type: variable-number-slider
     default: 1
+    min: 0
+    max: 2
+    step: 0.01
+
+  - title: Theme colour saturation ratio
+    description: Define the saturation ratio for the theme's colours.
+    id: flexcyon-theme-saturation-ratio
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 5
+    step: 0.01
+
   - title: Global contrast ratio
     type: variable-number
     id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
     default: 1
   - title: Global saturation ratio
     type: variable-number
@@ -10581,33 +10950,51 @@ settings:
 */
 /*! 
 @settings
-name: flexcyon://mobile
+name: flexcyon://Mobile
 id: flexcyon-mobile
 settings:
   - title: About Mobile
     type: info-text
     description: Configure Style Settings related to mobile.
-  - title: Revert to 1.11 Navigation UI Style
+  - title: Revert to 1.11 Navigation UI
     id: flexcyon-revert-nav-item-alignment
     type: class-toggle
     default: true
+  - title: About Revert to Pre 1.11 UI
+    description: Only works as intended for Obsidian versions equal to or greater than 1.11.
 */
 /*! 
 @settings
-name: flexcyon://main
-id: flexcyon
+name: flexcyon://Editor
+id: flexcyon-editor
 settings:
-  - title: Editor
+  - title: About Editor
+    type: info-text
+    description: Contains main editor related style settings. If you cannot find a particular setting, it is mostly likely here.
+
+  - title: Colors
     type: heading
-    level: 4
+    level: 1
     collapsed: true
-    description: Editor related style settings
+    description: Configure colours used in the theme. Click on the restore default button to properly preview most colours.
 
   - title: Accent Colors
     type: heading
-    level: 5
-    collapsed: true
-    description: Click on the restore default button to properly preview most colours.
+    level: 2
+    collapsed: false
+    description: Configure definitions of colours like Red, Green, Blue, etc. Configure Extended Colour Palette.
+  - title: Enable Extended Color Palette
+    description: Required for extended color palette callouts to work. Flex Max enables this by default.
+    id: flexcyon-ext-colors-enabled
+    type: class-toggle
+    default: false
+  - id: flexcyon-accent
+    title: Accent Color
+    type: variable-themed-color
+    opacity: false
+    format: hex
+    default-light: "#5770b9"
+    default-dark: "#92a871"
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
@@ -10679,7 +11066,7 @@ settings:
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "5c9fe4"
+    default-light: "#5c9fe4"
     default-dark: "#5a8fcd"
     alt-format:
       -
@@ -10696,64 +11083,52 @@ settings:
       -
         id: color-pink-rgb
         format: rgb
-  - id: flexcyon-accent
-    title: Accent Color
-    type: variable-themed-color
-    opacity: false
-    format: hex
-    default-light: "#5770b9"
-    default-dark: "#92a871"
-  - title: Enable Extended Color Palette
-    id: flexcyon-ext-colors-enabled
-    type: class-toggle
-    default: false
 
   - title: Base Colors
     type: heading
-    level: 5
-    collapsed: true
-    description: Click on the restore default button to properly preview most colours.
+    level: 2
+    collapsed: false
   - id: flexcyon-base-01
     title: Base Color 01
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#faf7ef"
+    default-light: "#f1f0ec"
     default-dark: "#14161c"
   - id: flexcyon-base-02
     title: Base Color 02
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#edebe5"
+    default-light: "#effaf2"
     default-dark: "#191d28"
   - id: flexcyon-base-03
     title: Base Color 03
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#dddcd6"
+    default-light: "#e8f2eb"
     default-dark: "#24262c"
   - id: flexcyon-base-04
     title: Base Color 04
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#d3d3ce"
+    default-light: "#dae1dd"
     default-dark: "#4d566b"
   - id: flexcyon-base-05
     title: Base Color 05
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#b4b3af"
+    default-light: "#d4dad6"
     default-dark: "#6f7685"
   - id: flexcyon-base-grey-dark
     title: Base dark grey
     type: variable-themed-color
     opacity: false
     format: hex
-    default-light: "#797876"
+    default-light: "#929190"
     default-dark: "#898c93"
   - id: flexcyon-base-grey-light
     title: Base light grey
@@ -10762,36 +11137,19 @@ settings:
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
-  - id: flexcyon-base-grey-tab
-    title: Base grey tab
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#71777f"
-  - id: flexcyon-base-grey-token
-    title: Base grey token
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#586582"
-  - id: flexcyon-base-grey-scroll
-    title: Base grey scroll
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#3f495e"
-  - id: flexcyon-base-grey-scroll-hover
-    title: Base grey scroll hover
-    type: variable-color
-    opacity: false
-    format: hex
-    default: "#5d6782"
 
   - title: Typography
     type: heading
-    level: 5
+    level: 1
     collapsed: true
-  - id: text-normal
+    description: Configure typography of the theme. Configure Text, Highlight Text, Headings, Inline Title and UI Font Sizes. Click on the restore default button to properly preview most colours.
+
+  - title: Text
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure text in the theme. Set colour, line height, word spacing and letter spacing. Use Settings > Apperance > Font to set Font size.
+  - id: text-normal-col
     title: Normal Text color
     type: variable-themed-color
     opacity: false
@@ -10823,6 +11181,12 @@ settings:
     type: variable-number
     default: 0
     format: px
+
+  - title: Highlight Text
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure highlight text in the theme. Set highlight text colour, opacity, padding and border radius.
   - title: Highlight Text Colour
     id: flexcyon-highlight-colour
     type: variable-select
@@ -10866,8 +11230,9 @@ settings:
 
   - title: Headings
     type: heading
-    level: 5
+    level: 2
     collapsed: true
+    description: Configure headings of the theme. Set coloured headings, soft glow for headings, heading indicators, colours, font size, font weight, line height, underline, text alignment.
 
   - id: flexcyon-coloured-headings
     title: Enable coloured headings
@@ -10881,8 +11246,9 @@ settings:
 
   - title: Heading 1
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 1s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
     description: If the Obsidian installer version is below 1.9.0, use this option instead.
@@ -10942,8 +11308,9 @@ settings:
 
   - title: Heading 2
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 2s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 2
     id: flexcyon-headings-indicator-h2
     type: class-toggle
@@ -11002,8 +11369,9 @@ settings:
 
   - title: Heading 3
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 3s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 3
     id: flexcyon-headings-indicator-h3
     type: class-toggle
@@ -11062,8 +11430,9 @@ settings:
 
   - title: Heading 4
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 4s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 4
     id: flexcyon-headings-indicator-h4
     type: class-toggle
@@ -11122,8 +11491,9 @@ settings:
 
   - title: Heading 5
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 5s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 5
     id: flexcyon-headings-indicator-h5
     type: class-toggle
@@ -11182,8 +11552,9 @@ settings:
 
   - title: Heading 6
     type: heading
-    level: 6
+    level: 3
     collapsed: true
+    description: Configure Heading 6s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 6
     id: flexcyon-headings-indicator-h6
     type: class-toggle
@@ -11242,8 +11613,9 @@ settings:
 
   - title: Inline title
     type: heading
-    level: 5
+    level: 2
     collapsed: true
+    description: Configure inline titles of the theme. Set font size, font weight, line height, do not display inline title.
   - title: Inline title font size
     id: inline-title-size
     type: variable-number
@@ -11262,10 +11634,66 @@ settings:
     type: class-toggle
     default: false
 
+  - title: UI Font Sizes
+    type: heading
+    level: 2
+    collapsed: true
+    description: Configure UI Font sizes of the theme.
+  - title: Smaller UI Font size
+    id: font-ui-smaller
+    type: variable-number
+    default: 12.9442
+    format: px
+  - title: Small UI Font size
+    id: font-ui-small
+    type: variable-number
+    default: 14.5622
+    format: px
+  - title: Medium UI Font size
+    id: font-ui-medium 
+    type: variable-number
+    default: 16.1803
+    format: px
+  - title: Large UI Font size
+    id: font-ui-large
+    type: variable-number
+    default: 17.7983
+    format: px
+
+  - title: Opacity
+    type: heading
+    level: 1
+    collapsed: true
+    description: All editor opacity related style settings, consolidated.
+  - title: Opacity of dimmed elements
+    id: dimmed
+    description: Opacity of dimmed UI elements
+    type: variable-number
+    default: 0.55
+  - title: Opacity of block labels
+    id: flexcyon-block-label-opacity
+    description: Opacity of block ID labels
+    type: variable-number
+    default: 0.55
+  - title: Opacity of status bar in new tab
+    id: flexcyon-status-new-tab-opacity
+    type: variable-number
+    default: 0.55
+  - title: Callout Metadata Background Opacity
+    id: flexcyon-callout-bg-opacity
+    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
+    type: variable-text
+    default: 20%
+  - title: Highlight Active Line Opacity
+    id: flexcyon-highlight-active-line-opacity
+    type: variable-text
+    default: 7.5%
+
   - title: Code Blocks
     type: heading
-    level: 5
+    level: 1
     collapsed: true
+    description: Configure code blocks of the theme. Set Code Block Syntax Highlighting Mode, File Extension, Prefix before File Extension.
   - title: Code Block Syntax Highlighting Mode
     type: class-select
     id: flexcyon-cb-syntax-mode
@@ -11311,35 +11739,11 @@ settings:
     type: variable-number
     default: 500
 
-  - title: UI Font sizes
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Smaller UI Font size
-    id: font-ui-smaller
-    type: variable-number
-    default: 12.9442
-    format: px
-  - title: Small UI Font size
-    id: font-ui-small
-    type: variable-number
-    default: 14.5622
-    format: px
-  - title: Medium UI Font size
-    id: font-ui-medium 
-    type: variable-number
-    default: 16.1803
-    format: px
-  - title: Large UI Font size
-    id: font-ui-large
-    type: variable-number
-    default: 17.7983
-    format: px
-
   - title: Table
     type: heading
-    level: 5
+    level: 1
     collapsed: true 
+    description: Configure tables of the theme. Set Table border colour, width in reading mode, table header font size, table header padding, table header live preview scaling, table cell padding, table cell live preview scaling.
   - title: Table border color
     id: table-border-color
     type: variable-color
@@ -11350,7 +11754,7 @@ settings:
     id: flexcyon-table-reading-mode-width
     type: variable-text
     default: 100%
-  - title: Table header font size
+  - title: Table Header font size
     id: table-header-size
     type: variable-select
     default: var(--font-ui-large)
@@ -11363,17 +11767,17 @@ settings:
         value: var(--font-ui-medium)
       - label: Large UI Font size
         value: var(--font-ui-large)
-  - title: Table Heading Vertical Padding
+  - title: Table Header Vertical Padding
     id: flexcyon-th-verti-padding
     type: variable-number
     format: px
     default: 5
-  - title: Table Heading Horizontal Padding
+  - title: Table Header Horizontal Padding
     id: flexcyon-th-horiz-padding
     type: variable-number
     format: px
     default: 10
-  - title: Table Heading Live Preview Scaling
+  - title: Table Header Live Preview Scaling
     description: Proportion to scale Live Preview table heading padding when compared to Reading mode.
     id: flexcyon-th-live-pad-scale
     type: variable-number
@@ -11409,7 +11813,7 @@ settings:
 
   - title: Files
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Enable dimmed file extensions in file explorer
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
@@ -11482,27 +11886,17 @@ settings:
     description: Places nav header below other content, for example placing the New Note and other icons below the file explorer.
     type: class-toggle
     default: false
-
-  - title: Workspace
-    type: heading
-    level: 5
-    collapsed: true
   - title: File line width
     id: file-line-width
     description: File line width when readable line length is enabled
     type: variable-number
     default: 50
     format: rem
-  - title: Opacity of dimmed elements
-    id: dimmed
-    description: Opacity of dimmed UI elements
-    type: variable-number
-    default: 0.55
-  - title: Opacity of block labels
-    id: flexcyon-block-label-opacity
-    description: Opacity of block ID labels
-    type: variable-number
-    default: 0.55
+
+  - title: Workspace Components
+    type: heading
+    level: 1
+    collapsed: true
   - title: Editor Top Margin
     description: Sets the top margin of the editor.
     id: flexcyon-editor-margin-top
@@ -11515,9 +11909,10 @@ settings:
     id: flexcyon-top-actions-alignment
     type: variable-text
     default: center
+
   - title: Prompts
     type: heading
-    level: 6
+    level: 2
     collapsed: true
   - title: Prompt width
     description: Sets the width of prompts like the command prompt
@@ -11572,9 +11967,134 @@ settings:
     default: 12
     format: px
 
+  - title: Title Bar
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Titlebar Button Effects
+    description: Enable hover effects on titlebar buttons
+    id: flexcyon-titlebar-button-effects
+    type: class-toggle
+    default: false
+
+  - title: Status Bar
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Hide until trigger
+    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
+    type: class-select
+    id: flexcyon-status-hide-until-trigger
+    allowEmpty: false
+    default: flexcyon-status-hide-until-hover
+    options: 
+      - 
+        label: Hide until hover
+        value: flexcyon-status-hide-until-hover
+      - 
+        label: Hide until hold
+        value: flexcyon-status-hide-until-hold
+      -
+        label: None
+        value: none
+  - title: Status bar alignment
+    type: class-select
+    id: flexcyon-status-alignment
+    allowEmpty: false
+    default: flexcyon-status-right-align
+    options: 
+      - 
+        label: Centre
+        value: flexcyon-status-centre-align
+      - 
+        label: Right
+        value: flexcyon-status-right-align
+  - title: Text when hide until hover enabled
+    id: flexcyon-status-hide-until-hover-text
+    description: Text to show when hide until hover is enabled, do not leave empty
+    type: variable-text
+    default: "Show status"
+    quotes: true
+  - title: Translation for showing status bar on hover
+    id: flexcyon-status-hide-until-hover-translation
+    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 80
+    format: vw
+  - title: Transition duration for showing status bar on hover
+    id: flexcyon-status-hide-hover-duration
+    description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
+    type: variable-number
+    default: 325
+    format: ms
+  - title: Transition timing function for showing status bar on hover
+    description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
+    id: flexcyon-status-hide-hover-function
+    type: variable-text
+    default: ease-out
+  - title: Use text instead of icons for mode status
+    id: flexcyon-status-text-mode
+    description: Use text instead of icons for mode status
+    type: class-toggle
+    default: false
+  - title: Reading Mode Text
+    id: flexcyon-status-reading-text
+    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "READ"
+    quotes: true
+  - title: Source Mode Text
+    id: flexcyon-status-source-text
+    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "SOURCE"
+    quotes: true
+  - title: Live Preview Mode Text
+    id: flexcyon-status-live-text
+    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
+    type: variable-text
+    default: "LIVE"
+    quotes: true
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
+  - title: Status bar font size
+    id: status-bar-font-size
+    type: variable-number
+    default: 13.7533
+    format: px
+  - title: Select status bar style
+    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
+    type: class-select
+    id: flexcyon-status-style
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Angled
+        value: flexcyon-status-style-angled
+      - 
+        label: Cards
+        value: flexcyon-status-style-card
+      -
+        label: Powerlevel10k
+        value: flexcyon-status-style-pl10k
+
+  - title: Enable status text color
+    id: flexcyon-status-text-enable-color
+    description: Affects text colors for vim mode status text as well.
+    type: class-toggle
+    default: false
+  - title: Do not show status bar in new tab
+    id: flexcyon-no-status-in-new-tab
+    description: Does not show status bar in new empty tabs where ASCII art or actions are shown by default.
+    type: class-toggle
+    default: false
+
   - title: Animations
     type: heading
-    level: 5
+    level: 1
     collapsed: true
 
   - title: Note Animation type
@@ -11673,9 +12193,35 @@ settings:
     type: variable-number
     default: 0.55
 
+  - title: Layout
+    type: heading
+    level: 2
+    collapsed: true
+  - title: Select workspace layout
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
+    type: class-select
+    id: flexcyon-workspace-layout
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Cards Layout
+        value: flexcyon-workspace-card-layout
+      - 
+        label: Angled Layout
+        value: flexcyon-workspace-angled-layout
+      - 
+        label: Powerlevel10k Layout
+        value: flexcyon-workspace-pl10k-layout
+  - title: Enable TUI add-on for cards layout
+    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
+    id: flexcyon-workspace-cards-tui-ext
+    type: class-toggle
+    default: true
+
   - title: Editor Background
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Select Background Type
     description: Select the background type for the editor
@@ -11710,35 +12256,9 @@ settings:
     default: 2.5
     format: px
 
-  - title: Layout
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
-    type: class-select
-    id: flexcyon-workspace-layout
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Cards Layout
-        value: flexcyon-workspace-card-layout
-      - 
-        label: Angled Layout
-        value: flexcyon-workspace-angled-layout
-      - 
-        label: Powerlevel10k Layout
-        value: flexcyon-workspace-pl10k-layout
-  - title: Enable TUI add-on for cards layout
-    description: Makes Files, properties and other items adopt styling inspired by TUIs. 
-    id: flexcyon-workspace-cards-tui-ext
-    type: class-toggle
-    default: true
-
   - title: Callouts
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Callout Icon Right padding
     id: flexcyon-callout-icon-right-padding
@@ -11752,11 +12272,6 @@ settings:
     type: variable-number
     default: 1
     format: rem
-  - title: Callout Metadata Background Opacity
-    id: flexcyon-callout-bg-opacity
-    description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
-    type: variable-text
-    default: 20%
   - title: Callout Vertical Margin
     id: flexcyon-callout-vertical-margin
     description: Configures the vertical margin of callouts
@@ -11833,7 +12348,7 @@ settings:
 
   - title: Horizontal Rule
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Disable horizontal rules in reading mode
     description: Do not display horizontal rules in reading mode
@@ -11866,9 +12381,14 @@ settings:
     default: 8
     format: px
 
+  - title: Lists and Checkboxes
+    type: heading
+    level: 1
+    collapsed: true
+
   - title: Checkboxes
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Enable ASCII checkboxes
     type: class-toggle
@@ -11886,7 +12406,7 @@ settings:
 
   - title: Bullet lists
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Enable Rainbow bullet lists
     type: class-toggle
@@ -11895,7 +12415,7 @@ settings:
 
   - title: Numbered lists
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Select Default Numbered List Style in Reading Mode
     description: Unfortunately I cannot get it to work within CodeMirror's context, because the output html is not ordered list tags which are easier to style.
@@ -12020,7 +12540,7 @@ settings:
 
   - title: Media
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Media Embed Vertical margin
     type: variable-number
@@ -12035,7 +12555,7 @@ settings:
 
   - title: Links
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Internal Link Color
     id: flexcyon-link-color
@@ -12066,7 +12586,7 @@ settings:
 
   - title: Properties
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Do not show properties in reading mode
     id: flexcyon-metadata-display-reading-disabled
@@ -12090,138 +12610,9 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Status Bar
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Hide until trigger
-    description: Select whether the status bar is hidden, and if it is whether to hover or to press and hold to unhide it.
-    type: class-select
-    id: flexcyon-status-hide-until-trigger
-    allowEmpty: false
-    default: flexcyon-status-hide-until-hover
-    options: 
-      - 
-        label: Hide until hover
-        value: flexcyon-status-hide-until-hover
-      - 
-        label: Hide until hold
-        value: flexcyon-status-hide-until-hold
-      -
-        label: None
-        value: none
-  - title: Status bar alignment
-    type: class-select
-    id: flexcyon-status-alignment
-    allowEmpty: false
-    default: flexcyon-status-right-align
-    options: 
-      - 
-        label: Centre
-        value: flexcyon-status-centre-align
-      - 
-        label: Right
-        value: flexcyon-status-right-align
-  - title: Text when hide until hover enabled
-    id: flexcyon-status-hide-until-hover-text
-    description: Text to show when hide until hover is enabled, do not leave empty
-    type: variable-text
-    default: "Show status"
-    quotes: true
-  - title: Translation for showing status bar on hover
-    id: flexcyon-status-hide-until-hover-translation
-    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
-    type: variable-number
-    default: 80
-    format: vw
-  - title: Transition duration for showing status bar on hover
-    id: flexcyon-status-hide-hover-duration
-    description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
-    type: variable-number
-    default: 325
-    format: ms
-  - title: Transition timing function for showing status bar on hover
-    description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
-    id: flexcyon-status-hide-hover-function
-    type: variable-text
-    default: ease-out
-  - title: Use text instead of icons for mode status
-    id: flexcyon-status-text-mode
-    description: Use text instead of icons for mode status
-    type: class-toggle
-    default: false
-  - title: Reading Mode Text
-    id: flexcyon-status-reading-text
-    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "READ"
-    quotes: true
-  - title: Source Mode Text
-    id: flexcyon-status-source-text
-    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "SOURCE"
-    quotes: true
-  - title: Live Preview Mode Text
-    id: flexcyon-status-live-text
-    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
-    type: variable-text
-    default: "LIVE"
-    quotes: true
-  - title: Show status bar on mobile
-    id: flexcyon-status-mobile-enabled
-    type: class-toggle
-    default: false
-  - title: Status bar font size
-    id: status-bar-font-size
-    type: variable-number
-    default: 13.7533
-    format: px
-  - title: Select status bar style
-    description: Angled status bar style is inspired by Powerlevel10k. Cards has a more pronounced border radius.
-    type: class-select
-    id: flexcyon-status-style
-    allowEmpty: true
-    default: none
-    options: 
-      - 
-        label: Angled
-        value: flexcyon-status-style-angled
-      - 
-        label: Cards
-        value: flexcyon-status-style-card
-      -
-        label: Powerlevel10k
-        value: flexcyon-status-style-pl10k
-
-  - title: Enable status text color
-    id: flexcyon-status-text-enable-color
-    description: Affects text colors for vim mode status text as well.
-    type: class-toggle
-    default: false
-  - title: Do not show status bar in new tab
-    id: flexcyon-no-status-in-new-tab
-    description: Does not show status bar in new empty tabs where ASCII art or actions are shown by default.
-    type: class-toggle
-    default: false
-  - title: Opacity of status bar in new tab
-    id: flexcyon-status-new-tab-opacity
-    type: variable-number
-    default: 0.55
-
-  - title: Title Bar
-    type: heading
-    level: 5
-    collapsed: true
-  - title: Titlebar Button Effects
-    description: Enable hover effects on titlebar buttons
-    id: flexcyon-titlebar-button-effects
-    type: class-toggle
-    default: false
-
   - title: Line Numbers
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Configure and customise line numbers.
   - title: Highlight Active Line
@@ -12229,10 +12620,6 @@ settings:
     id: flexcyon-highlight-active-line
     type: class-toggle
     default: false
-  - title: Highlight Active Line Opacity
-    id: flexcyon-highlight-active-line-opacity
-    type: variable-text
-    default: 7.5%
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums
@@ -12281,7 +12668,7 @@ settings:
 
   - title: Cursor
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Default cursor type
     description: Sets the cursor type when it is not specified by the app
@@ -12378,7 +12765,7 @@ settings:
 
   - title: Graph
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Graph View Controls Vertical Padding
     type: variable-number
@@ -12393,7 +12780,7 @@ settings:
 
   - title: View header
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: View header breadcrumb max width
     id: flexcyon-view-header-breadcrumb-max-w
@@ -12416,7 +12803,7 @@ settings:
 
   - title: Debug
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Debugging details like operating system and screen dimension.
   - title: Display device operating system details
@@ -12446,7 +12833,7 @@ settings:
 
   - title: Tabs
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Number tabs
     id: flexcyon-number-tabs
@@ -12467,7 +12854,7 @@ settings:
   - title: Icons
     description: For icon related styling
     type: heading
-    level: 5
+    level: 1
     collapsed: true
   - title: Upscale percentage of icons 1
     id: upsize
@@ -12507,7 +12894,7 @@ settings:
 
   - title: Input
     type: heading
-    level: 5
+    level: 1
     collapsed: true
     description: Customise the appearance of inputs
   - title: Input border radius
@@ -12525,7 +12912,12 @@ settings:
     id: flexcyon-input-verti-padding
     default: 8
     format: px
-
+*/
+/*! 
+@settings
+name: flexcyon://Settings
+id: flexcyon-settings
+settings:
   - title: Settings
     type: heading
     level: 4
@@ -12571,7 +12963,12 @@ settings:
     type: class-toggle
     id: flexcyon-style-settings-dim-collapsed-headings
     default: true
-
+*/
+/*! 
+@settings
+name: flexcyon://Plugins
+id: flexcyon-plugins
+settings:
   - title: Plugins
     type: heading
     level: 4
@@ -12837,7 +13234,12 @@ settings:
         value: center
       - label: Right
         value: right
-
+*/
+/*! 
+@settings
+name: flexcyon://Others
+id: flexcyon-others
+settings:
   - title: Others
     type: heading
     level: 4
@@ -13586,12 +13988,114 @@ body {
   display: none;
 }
 
+/* obsi-snip-coll start: canvas-oklch-fix */
+body.theme-dark,
+body.theme-light {
+  --canvas-color: var(--text-normal);
+  --canvas-color-1: var(--color-red);
+  --canvas-color-2: var(--color-orange);
+  --canvas-color-3: var(--color-yellow);
+  --canvas-color-4: var(--color-green);
+  --canvas-color-5: var(--color-cyan);
+  --canvas-color-6: var(--color-purple);
+}
+
 .canvas-controls {
   inset-block-start: 24px;
   gap: 8px;
   scale: var(--expand);
 }
 
+.canvas-node-container {
+  border: 1px solid var(--canvas-color);
+}
+
+.canvas-node-placeholder::after {
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-icon-placeholder svg {
+  color: var(--canvas-color);
+}
+
+.canvas-node {
+  --shadow-border-themed-inset: inset 0 0 0 1px var(--canvas-color);
+  --shadow-border-themed: 0 0 0 2px var(--canvas-color);
+}
+
+.canvas-node.is-selected.is-themed .canvas-node-container,
+.canvas-node.is-focused.is-themed .canvas-node-container {
+  border-color: var(--canvas-color);
+}
+
+.canvas-group-label[contenteditable=true] {
+  box-shadow: 0 0 0 2px var(--canvas-color);
+}
+
+.canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]) {
+  background-color: var(--canvas-color);
+}
+
+.canvas-edges path.canvas-display-path {
+  stroke: var(--canvas-color);
+}
+
+.canvas-edges polygon.canvas-path-end {
+  fill: var(--canvas-color);
+  stroke: var(--canvas-color);
+}
+
+.canvas-path-label.is-editing {
+  border-color: var(--canvas-color);
+  box-shadow: var(--shadow-stationary), 0 0 0 calc(3px * var(--zoom-multiplier)) var(--canvas-color);
+}
+
+.canvas-color-picker-item {
+  background-color: var(--canvas-color);
+}
+
+.canvas-color-picker-item.is-active {
+  box-shadow: 0 0 0 2px var(--canvas-color);
+}
+
+@media (hover: hover) {
+  .canvas-color-picker-item:hover {
+    box-shadow: 0 0 0 2px var(--canvas-color);
+  }
+}
+.canvas-minimap rect.is-themed {
+  fill: var(--canvas-color);
+  stroke: var(--canvas-color);
+}
+
+.canvas-minimap path.is-themed {
+  stroke: var(--canvas-color);
+}
+
+.canvas-node-group .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-node.is-themed .canvas-node-content {
+  background-color: oklch(from var(--canvas-color) l c h/7%);
+}
+
+.canvas-node.is-themed .canvas-node-container {
+  border-color: oklch(from var(--canvas-color) l c h/70%);
+  box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
+}
+
+.canvas-group-label {
+  color: var(--text-normal);
+  background-color: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-edges g.is-focused path.canvas-interaction-path,
+.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+  stroke: oklch(from var(--canvas-color) l c h/10%);
+}
+
+/* obsi-snip-coll end */
 .canvas-card-menu {
   scale: var(--upsize);
 }
@@ -15167,6 +15671,23 @@ span.task-id {
 
 .mod-extended-graph-toggle.is-active {
   background-color: color-mix(in oklch, var(--text-accent) 20%, transparent 80%);
+}
+
+/* In file recovery, sync version history, and publish diff */
+.diff-line.mod-left {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+.diff-line.mod-left .diff-changed {
+  background-color: oklch(from var(--background-modifier-error) l c h/40%);
+}
+
+.diff-line.mod-right {
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
+}
+
+.diff-line.mod-right .diff-changed {
+  background-color: oklch(from var(--background-modifier-success) l c h/40%);
 }
 
 /* Modifications for HandaArchitect's banner snippet */

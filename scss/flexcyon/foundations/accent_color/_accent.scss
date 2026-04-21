@@ -7,32 +7,69 @@
 
 body.theme-dark {
   --flexcyon-accent: #92a871;
-  --flexcyon-accent-h: 105.5;
-  --flexcyon-accent-s: 77.5%;
-  --flexcyon-accent-l: 59.5%;
 }
 
 body.theme-light {
   --flexcyon-accent: #5770b9;
-  --flexcyon-accent-h: 225;
-  --flexcyon-accent-s: 41%;
-  --flexcyon-accent-l: 53%;
 }
 
-body {
-  --accent-h: var(--flexcyon-accent-h);
-  --accent-s: var(--flexcyon-accent-s);
-  --accent-l: var(--flexcyon-accent-l);
-}
+// TODO: Fully commit to the oklch theme wide.
 
 body.theme-dark,
 body.theme-light {
-  --color-accent-1: hsl(
-    calc(var(--accent-h) - 3) calc(var(--accent-s) * 1.02)
-      calc(var(--accent-l) * 1.15)
+  --color-accent: oklch(var(--flexcyon-accent));
+  --color-accent-hsl: oklch(var(--flexcyon-accent));
+
+  /* cooler hue, higher chroma, lighter */
+  --color-accent-1: oklch(
+    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
   );
-  --color-accent-2: hsl(
-    calc(var(--accent-h) - 20) calc(var(--accent-s) * 0.85)
-      calc(var(--accent-l) * 1.1) / 87.5%
+
+  /* hue shift, lower chroma, lighter, 87.5% alpha */
+  --color-accent-2: oklch(
+    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+      87.5%
   );
+}
+
+/* Willemstad theme: Accent setting theme override notice */
+
+.modal.mod-settings .vertical-tab-content {
+  .setting-group .setting-item:nth-of-type(2) > .setting-item-control {
+    input[type="color"] {
+      display: grid;
+      visibility: hidden;
+      grid-template-rows: 1fr 1fr 0;
+      inline-size: fit-content;
+      block-size: fit-content;
+      pointer-events: none;
+
+      &::before {
+        position: relative;
+        visibility: visible;
+        grid-row: 1/2;
+        font-family: var(--font-interface);
+        font-size: var(--font-ui-smaller);
+        font-weight: bold;
+        color: var(--text-error);
+        white-space: pre-wrap;
+        content: "The accent colour is overriden by the theme.";
+      }
+
+      &::after {
+        position: relative;
+        visibility: visible;
+        grid-row: 2/3;
+        font-family: var(--font-interface);
+        font-size: var(--font-ui-smaller);
+        color: var(--text-error);
+        white-space: pre-wrap;
+        content: "Please use the Style Settings plugin to customise colours.";
+      }
+    }
+
+    .clickable-icon.extra-setting-button {
+      display: none;
+    }
+  }
 }

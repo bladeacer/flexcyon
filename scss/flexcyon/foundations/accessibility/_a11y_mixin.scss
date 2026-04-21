@@ -1,0 +1,14 @@
+// Interpolates the names into the variable declaration
+@mixin configure-oklch($output-name, $input-source) {
+  --#{$output-name}: oklch(
+    from var(--#{$input-source})
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+}

@@ -1,8 +1,12 @@
 /* Callout modifications */
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+
+// TODO: @use top of file credits
+
+// TODO: fix remaining rgb calls in theme
 body {
-  --flexcyon-callout-bg-opacity: 20%;
+  --flexcyon-callout-bg-opacity: 12.5%;
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
@@ -17,8 +21,29 @@ body {
     var(--flexcyon-callout-horiz-padding);
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
+  --callout-bug: var(--color-red);
+  --callout-default: var(--color-blue);
+  --callout-error: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-fail: var(--color-red);
+  --callout-important: var(--color-cyan);
+  --callout-info: var(--color-blue);
+  --callout-question: var(--color-orange);
+  --callout-success: var(--color-green);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-todo: var(--color-blue);
+  --callout-warning: var(--color-orange);
 
   div.callout {
+    background-color: oklch(
+      from var(--color-blue) l c h / var(--flexcyon-callout-bg-opacity)
+    );
+
+    .callout-title {
+      color: var(--callout-color);
+    }
+
     .callout-icon {
       padding-inline-end: var(--flexcyon-callout-icon-right-padding);
     }
@@ -179,18 +204,16 @@ div.callout[data-callout-metadata*="transparent-bg"] {
   div.callout[data-callout-metadata*="all-#{$color-name}"],
   div.callout[data-callout*="bg-#{$color-name}"],
   div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-    background-color: rgb(
-      var(--#{$color-var}-rgb),
-      var(--flexcyon-callout-bg-opacity)
+    background-color: oklch(
+      from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
     );
 
     &:has([data-callout*="tui"], [data-callout-metadata*="tui"])
       div.callout-title,
     &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
       .callout-content {
-      background-color: rgb(
-        var(--#{$color-var}-rgb),
-        var(--flexcyon-callout-bg-opacity)
+      background-color: oklch(
+        from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
       );
     }
   }

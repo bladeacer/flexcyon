@@ -4,6 +4,9 @@
 // - https://github.com/kepano/flexoki-obsidian
 // And the great origami theme
 // - https://github.com/7368697661/Origami
+
+@use "../accessibility/a11y_mixin" as m;
+
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
@@ -13,17 +16,6 @@ body.theme-dark {
   --flexcyon-red-salmon: #c03a47;
   --flexcyon-blue: #5a8fcd;
   --flexcyon-pink: #d458a3;
-}
-
-body:is(.theme-dark) {
-  --color-red-rgb: 192, 58, 71;
-  --color-orange-rgb: 204, 132, 73;
-  --color-yellow-rgb: 194, 158, 66;
-  --color-green-rgb: 161, 192, 92;
-  --color-cyan-rgb: 60, 185, 194;
-  --color-blue-rgb: 90, 143, 205;
-  --color-purple-rgb: 164, 97, 200;
-  --color-pink-rgb: 212, 88, 163;
 }
 
 body.theme-light {
@@ -37,27 +29,16 @@ body.theme-light {
   --flexcyon-pink: #e389ca;
 }
 
-body:is(.theme-light) {
-  --color-red-rgb: 235, 83, 87;
-  --color-orange-rgb: 237, 129, 38;
-  --color-yellow-rgb: 232, 198, 42;
-  --color-green-rgb: 104, 149, 35;
-  --color-cyan-rgb: 59, 155, 161;
-  --color-blue-rgb: 92, 159, 228;
-  --color-purple-rgb: 111, 73, 174;
-  --color-pink-rgb: 227, 137, 202;
-}
-
 body.theme-light,
 body.theme-dark {
-  --color-red: var(--flexcyon-red-salmon);
-  --color-orange: var(--flexcyon-orange);
-  --color-yellow: var(--flexcyon-yellow);
-  --color-green: var(--flexcyon-lime-green);
-  --color-cyan: var(--flexcyon-cyan);
-  --color-blue: var(--flexcyon-blue);
-  --color-purple: var(--flexcyon-purple-lilac);
-  --color-pink: var(--flexcyon-pink);
+  @include m.configure-oklch("color-red", "flexcyon-red-salmon");
+  @include m.configure-oklch("color-orange", "flexcyon-orange");
+  @include m.configure-oklch("color-yellow", "flexcyon-yellow");
+  @include m.configure-oklch("color-green", "flexcyon-lime-green");
+  @include m.configure-oklch("color-cyan", "flexcyon-cyan");
+  @include m.configure-oklch("color-blue", "flexcyon-blue");
+  @include m.configure-oklch("color-purple", "flexcyon-purple-lilac");
+  @include m.configure-oklch("color-pink", "flexcyon-pink");
 }
 
 /* obsi-snip-coll start: extended-color */
@@ -70,22 +51,18 @@ body.theme-dark {
     var(--color-#{$color-1}),
     var(--color-#{$color-2})
   );
-  --color-#{$color-1-wrapper}-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-#{$color-1}), var(--color-#{$color-2}))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
-  );
   --color-#{$color-2-wrapper}-mix: color-mix(
     in oklch,
     var(--color-#{$color-2}),
     var(--color-#{$color-1})
   );
-  --color-#{$color-2-wrapper}-mix-bg: color-mix(
-    in oklch,
-    color-mix(in oklch, var(--color-#{$color-2}), var(--color-#{$color-1}))
-      var(--flexcyon-callout-bg-opacity),
-    transparent
+  --color-#{$color-1-wrapper}-mix-bg: oklch(
+    from var(--color-#{$color-1-wrapper}-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
+  );
+  --color-#{$color-2-wrapper}-mix-bg: oklch(
+    from var(--color-#{$color-2-wrapper}-mix) l c h /
+      var(--flexcyon-callout-bg-opacity)
   );
 }
 

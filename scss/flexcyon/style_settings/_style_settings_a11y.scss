@@ -1,19 +1,58 @@
 /*! 
 @settings
-name: flexcyon://accessibility
+name: flexcyon://Accessibility
 id: flexcyon-a11y
 settings:
   - title: About accessibility
     type: info-text
-    description: Toggle accessibility options. Current options let you configure brightness contrast and saturation.
+    description: Toggle accessibility options. Current options let you configure brightness, contrast, saturation etc. for the theme's colours or globally.
     collapsed: true
-  - title: Global brightness ratio
+
+  - title: Theme colour contrast offset
+    description: Define the contrast offset for the theme's colours. For dark theme greater positive values increase contrast, the opposite is true for light theme.
+    id: flexcyon-theme-contrast-offset
+    type: variable-number-slider
+    default: 0
+    min: -0.3
+    max: 0.3
+    step: 0.01
+
+  - title: About Theme colour offset
+    type: info-text
+    markdown: true
+    description: Because oklch is a cyclical colour space, here are some tips on getting the desired colour warmth.<br>Dark mode = very cool background, set towards -20 for cool colours, 130 towards warmer colours.<br>Light mode = somewhat warm background, set -70 toward to warmer colours, 80 towards cooler colours.<br>If you go beyond the ranges the colours would probably alternate from becoming cool to becoming warm and vice versa.<br>Do experiment with values ^_^.
+
+  - title: Theme colour warmth offset
+    description: Define the warmth offset the theme's colours.
+    id: flexcyon-theme-warmth-offset
     type: variable-number
-    id: flexcyon-brightness-ratio
+    default: 0
+
+  - title: Theme colour brightness ratio
+    description: Define the brightness ratio for the theme's colours.
+    id: flexcyon-theme-brightness-ratio
+    type: variable-number-slider
     default: 1
+    min: 0
+    max: 2
+    step: 0.01
+
+  - title: Theme colour saturation ratio
+    description: Define the saturation ratio for the theme's colours.
+    id: flexcyon-theme-saturation-ratio
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 5
+    step: 0.01
+
   - title: Global contrast ratio
     type: variable-number
     id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
     default: 1
   - title: Global saturation ratio
     type: variable-number

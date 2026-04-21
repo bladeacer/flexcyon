@@ -1,0 +1,308 @@
+/*! 
+@settings
+name: flexcyon://Others
+id: flexcyon-others
+settings:
+  - title: Others
+    type: heading
+    level: 4
+    collapsed: true
+    description: Vim mode text, new tab appearance
+  - title: Vim Mode Text
+    description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable Vim Mode Text
+    id: flexcyon-vim-mode-text-enable
+    description: Enable text for displaying current vim mode
+    type: class-toggle
+    default: true
+  - title: Vim mode text left positioning
+    id: flexcyon-vim-left-positioning
+    type: variable-number
+    description: How far from the left of the screen the current vim mode text is (as the number gets greater, the text moves to the right of the screen)
+    default: 6
+    format: px
+  - title: Vim mode text bottom positioning
+    id: flexcyon-vim-bottom-positioning
+    type: variable-number
+    description: How far from the bottom of the screen the current vim mode text is (as the number gets greater, the text moves higher up the screen)
+    default: -4
+    format: px
+  - title: Insert Mode Text
+    description: Text to display when in insert mode
+    id: flexcyon-vim-insert-text
+    type: variable-text
+    default: "INSERT"
+    quotes: true
+  - title: Normal Mode Text
+    description: Text to display when in normal mode
+    id: flexcyon-vim-normal-text
+    type: variable-text
+    default: "NORMAL"
+    quotes: true
+  - title: Command Mode Text
+    description: Text to display when in command mode
+    id: flexcyon-vim-command-text
+    type: variable-text
+    default: "COMMAND"
+    quotes: true
+
+  - title: New Tab Appearance
+    type: heading
+    level: 5
+    collapsed: true
+    description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values. 
+  - title: Add before empty state title
+    type: class-select
+    id: flexcyon-new-tab-mod
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: ASCII art
+        value: flexcyon-ascii-enable
+      - 
+        label: Quote
+        value: flexcyon-quote-enable
+  - title: New tab font group
+    id: flexcyon-new-tab-font-group
+    type: variable-select
+    default: var(--font-monospace)
+    options: 
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
+  - title: Background for add before empty state title
+    description: Background color for the add before empty state title, accepts CSS variables.
+    type: variable-text
+    id: flexcyon-new-tab-bg-wrapper
+    default: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan))
+  - title: Quote
+    id: flexcyon-quote-val
+    description: The quote that will be displayed
+    type: variable-text
+    default: "This is a placeholder quote\ain the Flexcyon Theme."
+    quotes: true
+  - title: Quote Attribution Prefix
+    id: flexcyon-quote-credit-prefix
+    description: The prefix before the quote attribution
+    type: variable-text
+    default: "-"
+    quotes: true
+  - title: Quote Attribution
+    id: flexcyon-quote-credit
+    description: The quote attribution
+    type: variable-text
+    default: "bladeacer"
+    quotes: true
+  - title: Quote font size
+    id: flexcyon-quote-font-size
+    type: variable-number
+    default: 24
+    format: px
+
+  - title: ASCII Art
+    id: flexcyon-ascii-art
+    description: ASCII art to display in new tab. Will also appear in other parts of the UI like core Slides plugin pause presentation mode.
+    type: variable-text
+    default: " \a\
+    _______________                                       \a\
+    ___  ____/__  /________  ____________  ______________ \a\
+    __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+    _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+    /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                    /____/                \a\a\a "
+    quotes: true
+
+  - title: ASCII art font size limit
+    description: The maximum size of the ASCII art
+    id: flexcyon-ascii-max-font-size
+    type: variable-number
+    default: 14
+    format: px
+  - title: ASCII art line height
+    description: The line height of the ASCII art and quotes.
+    id: flexcyon-ascii-line-height
+    type: variable-number
+    default: 1.5
+  - title: ASCII art scaling factor
+    description: The scale of the ASCII art
+    id: flexcyon-ascii-scaling-factor
+    type: variable-number
+    default: 1
+  - title: ASCII art text alignment
+    id: flexcyon-ascii-alignment
+    type: variable-select
+    default: left
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
+  - title: Disable Empty State title
+    id: flexcyon-empty-state-title-disable
+    description: Toggle the empty state title
+    type: class-toggle
+    default: true
+  - title: Disable Empty State Actions
+    id: flexcyon-empty-state-actions-disable
+    description: Toggle the empty state actions
+    type: class-toggle
+    default: true
+
+  - title: Side Dock
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Enable side dock icon effects
+    id: flexcyon-sidedock-icon-effects
+    description: Enable the colors, dim till hover effects for side dock icons
+    type: class-toggle
+    default: false
+  - title: Side Dock Ribbon Width
+    description: Configure the width of the workspace ribbon on the left.
+    id: ribbon-width
+    type: variable-number
+    default: 48
+    format: px
+  - title: Place workspace ribbon at the top
+    id: flexcyon-ribbon-top
+    type: class-toggle
+    default: false
+  - title: Place vault switcher at the top
+    id: flexcyon-vault-switch-top
+    type: class-toggle
+    default: false
+  - title: Reverse order of vault switcher and actions
+    id: flexcyon-vault-reverse
+    type: class-toggle
+    default: false
+
+  - title: Tooltip radius
+    type: heading
+    level: 5
+    collapsed: true
+  - title: Small radius
+    id: radius-s
+    type: variable-number
+    default: 2
+    format: px
+  - title: Medium radius
+    id: radius-m
+    type: variable-number
+    default: 4
+    format: px
+  - title: Large radius
+    id: radius-l
+    type: variable-number
+    default: 6
+    format: px
+  - title: Extra large radius
+    id: radius-xl
+    type: variable-number
+    default: 8
+    format: px
+
+  - title: Sidebar Background
+    type: heading
+    description: Configure background images in the left and right sidebars
+    level: 5
+    collapsed: true
+  - title: Select background in sidebar
+    description: Overrides background image declaration below, configures in both left and right sidebar
+    type: class-select
+    id: flexcyon-sidebar-bg
+    allowEmpty: true
+    default: none
+    options: 
+      - 
+        label: Grid
+        value: flexcyon-sidebar-bg-grid
+      - 
+        label: Dotted
+        value: flexcyon-sidebar-bg-dots
+      - 
+        label: Rhombus
+        value: flexcyon-sidebar-bg-rhombus
+
+  - title: Left sidebar background image url
+    id: flexcyon-bg-image-sidebar-left-url
+    type: variable-text
+    default: url("")
+  - title: Right sidebar background image url
+    id: flexcyon-bg-image-sidebar-right-url
+    type: variable-text
+    default: url("")
+  - title: Sidebar Background image blend mode
+    id: flexcyon-bg-image-blend-mode
+    type: variable-text
+    default: darken
+  - title: Sidebar Background image repeat
+    id: flexcyon-bg-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Sidebar Background image blur
+    id: flexcyon-bg-image-blur
+    type: variable-number
+    default: 0
+    format: px
+  - title: Sidebar Background image brightness
+    id: flexcyon-bg-image-brightness
+    type: variable-text
+    default: unset
+  - title: Sidebar Background image size
+    id: flexcyon-bg-image-size
+    type: variable-text
+    default: cover
+  - title: Sidebar Background image position
+    id: flexcyon-bg-image-position
+    type: variable-text
+    default: center
+
+  - title: Modal Background
+    type: heading
+    description: Configure background images in the background of settings menu, prompts etc
+    level: 5
+    collapsed: true
+  - title: Modal Background image url
+    id: flexcyon-modal-bg-url
+    type: variable-text
+    default: url("")
+  - title: Modal background image blend mode
+    id: flexcyon-modal-image-blend-mode
+    type: variable-text
+    default: darken
+  - title: Modal Background image repeat
+    id: flexcyon-modal-image-repeat
+    type: variable-text
+    default: no-repeat
+  - title: Modal Background image blur
+    id: flexcyon-modal-image-blur
+    type: variable-number
+    default: 0
+    format: px
+  - title: Modal Background image brightness
+    id: flexcyon-modal-image-brightness
+    type: variable-text
+    default: unset
+  - title: Modal Background image size
+    id: flexcyon-modal-image-size
+    type: variable-text
+    default: cover
+  - title: Modal Background image position
+    id: flexcyon-modal-image-position
+    type: variable-text
+    default: center
+  - title: Modal Background darkness intensity
+    description: Sets how dark the modal background is. A higher value dims background content better.
+    id: flexcyon-modal-dark-intensity
+    type: variable-number
+    default: 1
+*/

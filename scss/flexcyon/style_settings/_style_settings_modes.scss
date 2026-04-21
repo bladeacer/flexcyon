@@ -1,21 +1,36 @@
 /*! 
 @settings
-name: flexcyon://modes
+name: flexcyon://Modes
 id: flexcyon-modes
 settings:
   - title: About Modes
     type: info-text
-    description: flexcyon offers several modes, under this page you can also configure accessibility settings
+    description: Configure modes of the theme.
+  - title: Select Mode
+    type: class-select
+    description: Select between Flex Max preset mode, Return to Zero preset mode or customise your own flexcyon experience. More about Flex Max and Return to Zero modes can be found below and in the documentation.
+    id: flexcyon-select-mode
+    allowEmpty: false
+    default: flexcyon-flex-max-mode
+    options: 
+      - 
+        label: None
+        value: none
+      -
+        label: Flex Max Mode
+        value: flexcyon-flex-max-mode
+      -
+        label: Return To Zero Mode
+        value: flexcyon-rtz-mode
+
   - title: Return To Zero Mode
-    type: class-toggle
+    type: info-text
     description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
-    id: flexcyon-rtz-mode
-    default: false
+
   - title: Flex Max Mode
-    type: class-toggle
+    type: info-text
     description: An extremely opinionated set up which showcases the unique customisation in this theme, with features working out of the box. If some options are not too your taste you can disable this mode and customise the theme more yourself, it will reset the theme to a clean slate customisations wise. There are also other default options enabled which you may or may not like. Refer to the documentation for the list of options it enables on your behalf.
-    id: flexcyon-flex-max-mode
-    default: true
+
   - title: Typewriter Mode
     type: class-toggle
     description: Reduce opacity of all but the active line in source and live preview mode
@@ -31,7 +46,7 @@ settings:
     description: Reverses the rendering of stuff in the UI
     id: flexcyon-reverse-mode
     default: false
-  - title: Enable Writing mode globally
+  - title: Writing Mode
     type: class-toggle
     description: Like the corresponding callout metadata option but applied globally instead
     id: flexcyon-editor-writing

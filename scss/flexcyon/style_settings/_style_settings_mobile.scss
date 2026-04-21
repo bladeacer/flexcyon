@@ -1,13 +1,15 @@
 /*! 
 @settings
-name: flexcyon://mobile
+name: flexcyon://Mobile
 id: flexcyon-mobile
 settings:
   - title: About Mobile
     type: info-text
     description: Configure Style Settings related to mobile.
-  - title: Revert to 1.11 Navigation UI Style
+  - title: Revert to 1.11 Navigation UI
     id: flexcyon-revert-nav-item-alignment
     type: class-toggle
     default: true
+  - title: About Revert to Pre 1.11 UI
+    description: Only works as intended for Obsidian versions equal to or greater than 1.11.
 */

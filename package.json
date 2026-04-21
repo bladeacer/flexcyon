@@ -1,18 +1,20 @@
 {
   "name": "flexcyon",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "lint-once": "stylelint '**/*.scss'",
-    "fix": "stylelint '**/*.scss' --fix",
-    "lint": "onchange '**/*.scss' -- npm run lint-once",
-    "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
+    "lint": "onchange 'scss/**/*.scss' -- node scripts/lint.mjs {{changed}}",
+    "lint-once": "node scripts/lint.mjs",
+    "fix": "node scripts/lint.mjs --fix",
+
+    "dev": "sass --watch --no-source-map scss/theme.scss theme.css", 
     "compile-once": "sass --no-source-map scss/theme.scss theme.css",
-    "pre-push": "npm run fix && npm run lint-once && npm run compile-once"
+
+    "pre-push": "node scripts/lint.mjs --fix && $npm_execpath run compile-once"
   },
   "repository": {
     "type": "git",

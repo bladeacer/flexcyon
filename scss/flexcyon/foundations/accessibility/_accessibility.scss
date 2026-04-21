@@ -1,5 +1,13 @@
 /* obsi-snip-coll start: filters */
 body {
+  --flexcyon-theme-contrast-offset: 0;
+  --flexcyon-theme-brightness-ratio: 1;
+
+  /* a.k.a chroma ratio */
+  --flexcyon-theme-saturation-ratio: 1;
+
+  /* positive is warmer, negative is cooler */
+  --flexcyon-theme-warmth-offset: 0;
   --flexcyon-contrast-ratio: 1;
   --flexcyon-brightness-ratio: 1;
   --flexcyon-saturation-ratio: 1;

@@ -5,6 +5,8 @@
 // As well as the origami theme for the light theme colour palette
 // - https://github.com/7368697661/Origami
 
+@use "../accessibility/a11y_mixin" as m;
+
 body.theme-dark {
   --flexcyon-base-01: #14161c;
   --flexcyon-base-02: #191d28;
@@ -16,15 +18,6 @@ body.theme-dark {
 }
 
 body.theme-light {
-  // Old colours
-  // --flexcyon-base-01: #edebe5;
-  // --flexcyon-base-02: #faf7ef;
-  // --flexcyon-base-03: #dddcd6;
-  // --flexcyon-base-04: #d3d3ce;
-  // --flexcyon-base-05: #b4b3af;
-
-  // Current colours
-  // Primary-ish?
   --flexcyon-base-01: #f1f0ec;
   --flexcyon-base-02: #effaf2;
   --flexcyon-base-03: #e8f2eb;
@@ -37,13 +30,6 @@ body.theme-light {
 body:is(.is-mobile, .is-phone):is(.theme-light, .theme-dark),
 body:is(.theme-dark),
 body:is(.theme-light) {
-  // Define colours properly??
-  --flexcyon-base-grey-tab: #71777f;
-  --flexyon-base-grey-token: #586582;
-  --flexcyon-base-grey-scroll: #3f495e;
-  --flexcyon-base-grey-scroll-hover: #5c6782;
-
-  /* ------------------------------ */
   --flexcyon-base-01-02-mix: color-mix(
     in oklch,
     var(--flexcyon-base-01),
@@ -69,16 +55,21 @@ body:is(.theme-light) {
     var(--flexcyon-base-grey-light),
     var(--flexcyon-base-grey-dark)
   );
-  --color-base-00: var(--flexcyon-base-01);
-  --color-base-05: var(--flexcyon-base-01-02-mix);
-  --color-base-10: var(--flexcyon-base-02);
-  --color-base-20: var(--flexcyon-base-02-03-mix);
-  --color-base-25: var(--flexcyon-base-03);
-  --color-base-30: var(--flexcyon-base-03-04-mix);
-  --color-base-35: var(--flexcyon-base-04);
-  --color-base-40: var(--flexcyon-base-04-05-mix);
-  --color-base-50: var(--flexcyon-base-05);
-  --color-base-60: var(--flexcyon-base-grey-dark);
-  --color-base-70: var(--flexcyon-base-grey-mix);
-  --color-base-100: var(--flexcyon-base-grey-light);
+
+  @include m.configure-oklch(
+    "flexcyon-grey-dark-wrapper",
+    "flexcyon-base-grey-dark"
+  );
+  @include m.configure-oklch("color-base-00", "flexcyon-base-01");
+  @include m.configure-oklch("color-base-05", "flexcyon-base-01-02-mix");
+  @include m.configure-oklch("color-base-10", "flexcyon-base-02");
+  @include m.configure-oklch("color-base-20", "flexcyon-base-02-03-mix");
+  @include m.configure-oklch("color-base-25", "flexcyon-base-03");
+  @include m.configure-oklch("color-base-30", "flexcyon-base-03-04-mix");
+  @include m.configure-oklch("color-base-35", "flexcyon-base-04");
+  @include m.configure-oklch("color-base-40", "flexcyon-base-04-05-mix");
+  @include m.configure-oklch("color-base-50", "flexcyon-base-05");
+  @include m.configure-oklch("color-base-60", "flexcyon-base-grey-dark");
+  @include m.configure-oklch("color-base-70", "flexcyon-base-grey-mix");
+  @include m.configure-oklch("color-base-100", "flexcyon-base-grey-light");
 }

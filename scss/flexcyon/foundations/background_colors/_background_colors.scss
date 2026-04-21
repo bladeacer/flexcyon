@@ -5,35 +5,51 @@
 // And the great origami theme
 // - https://github.com/7368697661/Origami
 
+@use "../accessibility/a11y_mixin" as m;
+
 body {
   --flexcyon-editor-bg-width: 15px;
   --flexcyon-editor-dot-size: 2.5px;
-  --flexcyon-editor-bg-color: color-mix(
+  --flexcyon-editor-bg-col-def: color-mix(
     in oklch,
     var(--color-base-05) 70%,
     var(--color-base-10) 30%
   );
+
+  @include m.configure-oklch(
+    "flexcyon-editor-bg-color",
+    "flexcyon-editor-bg-col-def"
+  );
+
   --flexcyon-editor-bg-color-2: var(--color-base-20);
   --flexcyon-editor-bg-rotation: 0deg;
 
   /* Colours */
-  --modal-sidebar-background: var(--color-base-05);
-  --background-primary: var(--color-base-10);
-  --background-primary-alt: var(--color-base-25);
-  --background-secondary: var(--color-base-00);
-  --background-secondary-alt: var(--color-base-20);
-  --background-modifier-hover: var(--color-base-20);
-  --background-modifier-form-field: var(--color-base-20);
-  --background-modifier-cover: var(--color-base-15);
-  --background-modifier-message: var(--color-base-20);
-  --background-modifier-active-hover: var(--color-base-25);
-  --background-modifier-border: var(--color-base-20);
-  --background-modifier-border-hover: transparent;
-  --background-modifier-border-focus: var(--color-base-30);
-  --background-modifier-error: rgb(
-    var(--color-red-rgb),
-    calc(var(--dimmed) + 0.3)
+  @include m.configure-oklch("modal-sidebar-background", "color-base-05");
+  @include m.configure-oklch("background-primary", "color-base-10");
+  @include m.configure-oklch("background-primary-alt", "color-base-25");
+  @include m.configure-oklch("background-secondary", "color-base-00");
+  @include m.configure-oklch("background-secondary-alt", "color-base-20");
+  @include m.configure-oklch("background-modifier-hover", "color-base-20");
+  @include m.configure-oklch("background-modifier-form-field", "color-base-20");
+  @include m.configure-oklch("background-modifier-cover", "color-base-15");
+  @include m.configure-oklch("background-modifier-message", "color-base-20");
+  @include m.configure-oklch(
+    "background-modifier-active-hover",
+    "color-base-25"
   );
+  @include m.configure-oklch("background-modifier-border", "color-base-20");
+
+  /* Transparent is still transparent even after a11y changes */
+  --background-modifier-border-hover: transparent;
+
+  @include m.configure-oklch(
+    "background-modifier-border-focus",
+    "color-base-30"
+  );
+
+  --background-modifier-error: transparent;
+  --background-modifier-error-hover: transparent;
 }
 
 /* obsi-snip-coll start: grid-background */
