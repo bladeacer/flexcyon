@@ -26,7 +26,7 @@ import ast
 def get_schema():
     """
     Define settings once with all metadata
-    Format: (suffix, type, default, group_suffix)
+    Format: (suffix, type, default, group_suffix, use_prefix?)
     """
 
     schema = [
@@ -88,6 +88,10 @@ def get_schema():
         ("base-grey-token", str, "#586582", "editor"),
         ("base-grey-scroll", str, "#3f495e", "editor"),
         ("base-grey-scroll-hover", str, "#5d6782", "editor"),
+
+        ("text-normal@@dark", str, "#d3d5d3", "editor", False),
+        ("text-normal@@light", str, "#080808", "editor", False),
+
     ]
     return schema
 
@@ -95,21 +99,29 @@ def get_schema():
 def get_mapping_config():
     P = "flexcyon"
 
-    schema = get_schema()
+    raw_schema = get_schema()
+
+    normalized = [row if len(row) == 5 else (*row, True) for row in raw_schema]
 
     config = {
         "target_prefix": P,
-        "schema": schema,
+        "schema": normalized,
         "suffix_groups": {},
-        "types": {s: t for s, t, d, g in schema},
-        "defaults": {s: d for s, t, d, g in schema},
+        "types": {s: t for s, t, d, g, p in normalized},
+        "defaults": {s: d for s, t, d, g, p in normalized},
+        "prefix_map": {s: p for s, t, d, g, p in normalized},
         "select_groups": {
             "select-mode": {
                 "members": ["rtz-mode", "flex-max-mode"],
                 "discard_if_true": ["flex-max-mode"]
             }
         },
-        "exact_matches": {},
+
+        "replacements": {
+            "text-normal@@dark": "text-normal-col@@dark",
+            "text-normal@@light": "text-normal-col@@light"
+        },
+
         "keep_if_default": [],
         "discard_if_true": [],
         "discard_always": [
@@ -118,7 +130,7 @@ def get_mapping_config():
         ]
     }
 
-    for sfx, _, _, group in schema:
+    for sfx, _, _, group, _ in normalized:
         g_key = f"{P}-{group}"
         config["suffix_groups"].setdefault(g_key, []).append(sfx)
 
@@ -167,21 +179,35 @@ class SettingsMapper:
     def __init__(self, config):
         self.cfg = config
         self.prefix = config.get("target_prefix", "")
+        self.prefix_map = config.get("prefix_map", {})
+        self.replacements = config.get("replacements", {})
+        self.lookup = self._build_group_lookup()
+        self.select_map = self._build_select_lookup()
 
-        # Flatten all discard_always entries (Global + Group-specific)
         self.always_discard = set(config.get("discard_always", []))
         for g_cfg in config.get("select_groups", {}).values():
             self.always_discard.update(g_cfg.get("discard_always", []))
 
-        self.lookup = self._build_group_lookup()
-        self.select_map = self._build_select_lookup()
+    def _get_full_name(self, suffix, original_base=None):
+        """Standardizes the name based on the schema's use_prefix rule."""
+        # 1. Identify the base key for the prefix lookup
+        # If original_base is provided (from a replacement), use that rule.
+        # Otherwise, extract it from the suffix.
+        lookup_key = original_base if original_base else suffix.split('@@', 1)[0]
+
+        # 2. Check the prefix map (defaults to True if not found)
+        should_prefix = self.prefix_map.get(lookup_key, True)
+
+        return f"{self.prefix}-{suffix}" if should_prefix else suffix
 
     def _build_group_lookup(self):
-        return {
-            f"{self.prefix}-{sfx}": group
-            for group, sfxs in self.cfg.get("suffix_groups", {}).items()
-            for sfx in sfxs
-        }
+        """Maps full 1.X names to their 2.0 Group Prefixes."""
+        lookup = {}
+        for group, sfxs in self.cfg.get("suffix_groups", {}).items():
+            for sfx in sfxs:
+                # We map the 'expected' full name to the group label
+                lookup[self._get_full_name(sfx)] = group
+        return lookup
 
     def _build_select_lookup(self):
         mapping = {}
@@ -190,89 +216,90 @@ class SettingsMapper:
                 mapping[m] = (target, MapResult.VALID)
             for d in g_cfg.get("discard_if_true", []):
                 mapping[d] = (target, MapResult.SILENCE)
-            for a in g_cfg.get("discard_always", []):
-                mapping[a] = (target, MapResult.DISCARD)
         return mapping
-
-    def _check_type(self, base, val):
-        expected = self.cfg.get("types", {}).get(base)
-        if not expected:
-            return True
-        if isinstance(val, bool):
-            return expected is bool
-        return isinstance(val, expected)
 
     def _process(self, key, val):
         parts = key.split('@@', 1)
         name = parts[-1]
-        base = name.replace(f"{self.prefix}-", "", 1)
 
-        # 0. Priority Discard: Handle "discard_always" first
+        # 1. Clean the base (strip xyz- only if it is at the very start)
+        base = name[len(self.prefix) + 1:] if name.startswith(f"{self.prefix}-") else name
+
+        # 2. Type/Discard checks on the ORIGINAL base
         if base in self.always_discard:
             return MapResult(MapResult.DISCARD)
 
-        g_prefix = self.lookup.get(name)
-        if not g_prefix:
-            return MapResult(MapResult.VALID, key, val)
-
-        # 1. Type Check
         if not self._check_type(base, val):
             target_g = self.select_map.get(base, (None,))[0]
             return MapResult(MapResult.POISON, group=target_g)
 
-        # 2. Select Group Logic
+        # 3. Apply replacement to base (Do this once)
+        final_base = self.replacements.get(base, base)
+
+        # 4. Handle Select Groups
         if base in self.select_map:
             target, role = self.select_map[base]
             if role == MapResult.SILENCE and val is True:
                 return MapResult(MapResult.SILENCE, group=target)
             if val is True:
-                new_k = f"{g_prefix}@@{self.prefix}-{target}"
+                # We find the group label for the original member
+                g_pref = self.lookup.get(self._get_full_name(base))
+                new_k = f"{g_pref}@@{self.prefix}-{target}"
                 return MapResult(
                     MapResult.VALID, new_k, f"{self.prefix}-{base}"
                 )
             return MapResult(MapResult.DISCARD)
 
-        # 3. Dynamic Default Discard
-        is_default = val == self.cfg.get("defaults", {}).get(base)
-        keep_exceptions = self.cfg.get("keep_if_default", [])
-
-        if is_default and base not in keep_exceptions:
+        # 5. Default check (Uses original base for default lookup)
+        if val == self.cfg.get("defaults", {}).get(base) and \
+           base not in self.cfg.get("keep_if_default", []):
             return MapResult(MapResult.DISCARD)
 
-        return MapResult(MapResult.VALID, f"{g_prefix}@@{name}", val)
+        # 6. Group Lookup
+        # Find the group for the ORIGINAL base
+        g_prefix = self.lookup.get(self._get_full_name(base))
+        if not g_prefix:
+            return MapResult(MapResult.VALID, key, val)
+
+        # 7. Final Construction
+        final_name = self._get_full_name(final_base, original_base=base)
+
+        return MapResult(MapResult.VALID, f"{g_prefix}@@{final_name}", val)
+
+    def _check_type(self, base, val):
+        expected = self.cfg.get("types", {}).get(base)
+        if not expected:
+            return True
+        return isinstance(val, bool) if expected is bool else isinstance(val, expected)
 
     def _build_ordered_output(self, res, groups):
-        """Injects fallbacks and ensures keys match schema order."""
-        # 1. First, apply fallbacks to our raw result pool
         data_pool = self._apply_fallbacks(res, groups)
         ordered_final = {}
-        schema = get_schema()
 
-        # 2. Iterate through the schema to pick up keys in order
-        for sfx, _, _, group_sfx in schema:
-            # Reconstruct the target key as it would appear in the output
-            # (group_prefix)@@(target_prefix)-(suffix)
+        for row in self.cfg["schema"]:
+            sfx, _, _, group_sfx, _ = row
             g_label = f"{self.prefix}-{group_sfx}"
-            target_key = f"{g_label}@@{self.prefix}-{sfx}"
+
+            target_base = self.replacements.get(sfx, sfx)
+            target_name = self._get_full_name(target_base)
+            target_key = f"{g_label}@@{target_name}"
 
             if target_key in data_pool:
                 ordered_final[target_key] = data_pool.pop(target_key)
 
-        # 3. Handle Select Groups (they aren't direct schema suffixes)
-        # We append these at the end or wherever they appear in the data_pool
+            orig_name = self._get_full_name(sfx)
+            orig_key = f"{g_label}@@{orig_name}"
+            if orig_key in data_pool:
+                ordered_final[orig_key] = data_pool.pop(orig_key)
+
         for name, status in groups.items():
-            # Select groups follow the pattern: group_label@@prefix-group_name
-            # We already know the group_label from the first member
             m = self.cfg["select_groups"][name]["members"][0]
-            g_label = self.lookup.get(f"{self.prefix}-{m}")
+            g_label = self.lookup.get(self._get_full_name(m))
             target_key = f"{g_label}@@{self.prefix}-{name}"
-
             if target_key in data_pool:
                 ordered_final[target_key] = data_pool.pop(target_key)
 
-        # 4. Catch-all for any weird keys remaining
         ordered_final.update(sorted(data_pool.items()))
-
         return ordered_final
 
     def map_settings(self, data):
