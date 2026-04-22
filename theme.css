@@ -43,6 +43,29 @@ body.theme-light {
   --flexcyon-pink: #e389ca;
 }
 
+/* Defined for backwards compatibility, when possible prefer using base --color-x variables like var(--color-red) directly */
+body:is(.theme-dark) {
+  --color-cyan-rgb: 60, 185, 194;
+  --color-green-rgb: 161, 192, 92;
+  --color-orange-rgb: 204, 132, 73;
+  --color-yellow-rgb: 194, 158, 66;
+  --color-purple-rgb: 164, 97, 200;
+  --color-red-rgb: 192, 58, 71;
+  --color-blue-rgb: 90, 143, 205;
+  --color-pink-rgb: 212, 88, 163;
+}
+
+body:is(.theme-light) {
+  --color-red-rgb: 235, 83, 37;
+  --color-orange-rgb: 237, 129, 38;
+  --color-yellow-rgb: 232, 198, 42;
+  --color-green-rgb: 104, 149, 35;
+  --color-cyan-rgb: 59, 155, 161;
+  --color-blue-rgb: 92, 159, 228;
+  --color-purple-rgb: 111, 73, 174;
+  --color-pink-rgb: 227, 137, 202;
+}
+
 body.theme-light,
 body.theme-dark {
   --color-red: oklch(
@@ -1186,42 +1209,42 @@ body {
 }
 
 body.theme-dark {
-  --code-background: var(--flexcyon-base-01);
+  --code-background: var(--color-base-00);
 }
 
 body.theme-light {
-  --code-background: var(--flexcyon-base-01-02-mix);
+  --code-background: var(--color-base-05);
 }
 
 body {
   /* ------------------------------ */
   --flexcyon-code-variable: var(--flexcyon-base-grey-dark);
-  --flexcyon-code-function: var(--flexcyon-yellow);
-  --flexcyon-code-operator: var(--flexcyon-orange);
-  --flexcyon-code-error: var(--flexcyon-red-salmon);
-  --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
-  --code-normal: var(--flexcyon-cyan);
+  --flexcyon-code-function: var(--color-yellow);
+  --flexcyon-code-operator: var(--color-orange);
+  --flexcyon-code-error: var(--color-red);
+  --flexcyon-code-keyword: var(--color-purple);
+  --code-normal: var(--color-cyan);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
   --code-important: var(--flexcyon-code-error);
   --code-keyword: var(--flexcyon-code-keyword);
   --code-property: var(--text-muted);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: var(--flexcyon-purple-lilac);
-  --code-string: var(--flexcyon-lime-green);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-punctuation: var(--color-purple);
+  --code-string: var(--color-green);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --flexcyon-code-file-ext-font-w: 500;
   --flexcyon-codeblock-fmt-ext: lowercase;
   --flexcyon-code-file-ext-prefix: ".";
 }
 body .cm-s-obsidian span.cm-inline-code {
-  color: var(--flexcyon-orange);
+  color: var(--color-orange);
 }
 body .markdown-source-view.mod-cm6 .code-block-flair {
   padding: 2px 8px;
 }
 body .cm-def {
-  color: var(--flexcyon-yellow);
+  color: var(--color-yellow);
 }
 body :is(.cm-comment.cm-hmd-internal-link,
 .cm-comment.cm-link,
@@ -1247,33 +1270,33 @@ mark {
 }
 
 body.flexcyon-syntax-catppuccin {
-  --flexcyon-code-variable: var(--flexcyon-cyan);
-  --flexcyon-code-function: var(--flexcyon-yellow);
-  --flexcyon-code-operator: var(--flexcyon-blue);
-  --flexcyon-code-error: var(--flexcyon-red-salmon);
-  --flexcyon-code-keyword: var(--flexcyon-cyan);
+  --flexcyon-code-variable: var(--color-cyan);
+  --flexcyon-code-function: var(--color-yellow);
+  --flexcyon-code-operator: var(--color-blue);
+  --flexcyon-code-error: var(--color-red);
+  --flexcyon-code-keyword: var(--color-cyan);
   --code-normal: var(--text-normal);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
   --code-important: var(--flexcyon-code-error);
   --code-keyword: var(--flexcyon-code-keyword);
-  --code-property: var(--flexcyon-cyan);
+  --code-property: var(--color-cyan);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: rgb(var(--color-red-rgb), var(--dimmed));
-  --code-string: var(--flexcyon-lime-green);
-  --code-tag: var(--flexcyon-base-grey-dark);
-  --code-value: var(--flexcyon-yellow);
+  --code-punctuation: oklch(from var(--color-red) l c h / var(--dimmed));
+  --code-string: var(--color-green);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
+  --code-value: var(--color-yellow);
 }
 body.flexcyon-syntax-catppuccin .cm-def {
-  color: var(--flexcyon-blue);
+  color: var(--color-blue);
 }
 
 body.flexcyon-syntax-lego {
   --flexcyon-code-variable: var(--text-normal);
   --flexcyon-code-function: var(--text-accent);
-  --flexcyon-code-operator: var(--flexcyon-pink);
-  --flexcyon-code-error: var(--flexcyon-orange);
-  --flexcyon-code-keyword: var(--flexcyon-red-salmon);
+  --flexcyon-code-operator: var(--color-pink);
+  --flexcyon-code-error: var(--color-orange);
+  --flexcyon-code-keyword: var(--color-red);
   --code-normal: var(--text-normal);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
@@ -1282,12 +1305,12 @@ body.flexcyon-syntax-lego {
   --code-property: var(--text-normal);
   --code-operator: var(--flexcyon-code-operator);
   --code-punctuation: var(--text-normal);
-  --code-string: var(--flexcyon-cyan);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-string: var(--color-cyan);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --code-value: var(--text-normal);
 }
 body.flexcyon-syntax-lego .cm-def {
-  color: var(--flexcyon-blue);
+  color: var(--color-blue);
 }
 
 body.flexcyon-syntax-monochrome {
@@ -1305,7 +1328,7 @@ body.flexcyon-syntax-monochrome {
   --code-operator: var(--flexcyon-code-operator);
   --code-punctuation: var(--text-normal);
   --code-string: var(--text-normal);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --code-value: var(--text-normal);
 }
 body.flexcyon-syntax-monochrome .cm-def {
@@ -1447,7 +1470,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :first-child.view
 }
 
 body {
-  --metadata-label-text-color: var(--flexcyon-purple-lilac);
+  --metadata-label-text-color: var(--color-purple);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-meta-container-padding-left: 14px;
 }
@@ -1501,49 +1524,41 @@ body.flexcyon-metadata-display-editing-disabled {
 
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-forward,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-forward {
-  color: var(--color-cyan);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-cyan)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-binary,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-binary {
-  color: var(--color-blue);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-blue)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-text,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-text {
-  color: var(--color-green);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-green)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-list,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-list {
-  color: var(--color-orange);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-orange)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-tags,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-tags {
-  color: var(--color-red);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-red)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-check-square,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-check-square {
-  color: var(--color-yellow);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-yellow)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-calendar,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-calendar {
-  color: var(--text-accent);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--text-accent)/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-metadata-rainbow-icons .metadata-container .lucide-file-question,
 body.flexcyon-metadata-rainbow-icons .workspace-leaf-content[data-type=all-properties] .lucide-file-question {
-  color: var(--color-purple);
-  opacity: calc(var(--dimmed) + 0.2);
+  color: oklch(from var(--color-purple)/calc(var(--dimmed) + 0.2));
 }
 
 body {
-  --checkbox-color: var(--flexcyon-purple-lilac);
+  --checkbox-color: var(--color-purple);
   --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
-  --checkbox-border-color: var(--flexcyon-blue);
+  --checkbox-border-color: var(--color-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 }
@@ -1551,10 +1566,10 @@ body .mod-checkbox {
   text-transform: capitalize;
 }
 body .checkbox-container {
-  background-color: var(--flexcyon-red-salmon);
+  background-color: var(--color-red);
 }
 body .checkbox-container.is-enabled {
-  background-color: var(--flexcyon-lime-green);
+  background-color: var(--color-green);
 }
 
 body.flexcyon-flex-max-mode input[data-task="!"]:checked,
@@ -2454,15 +2469,15 @@ body h3[data-heading*="find section #"] a.tag {
 }
 
 body.theme-dark {
-  --list-marker-color: var(--flexcyon-purple-lilac);
+  --list-marker-color: var(--color-purple);
   --list-marker-color-hover: var(--flexcyon-palette-lilac-hover);
-  --list-marker-color-collapsed: var(--flexcyon-lime-green);
+  --list-marker-color-collapsed: var(--color-green);
 }
 
 body.theme-light {
-  --list-marker-color: var(--flexcyon-cyan);
+  --list-marker-color: var(--color-cyan);
   --list-marker-color-hover: var(--flexcyon-palette-cyan-hover);
-  --list-marker-color-collapsed: var(--flexcyon-lime-green);
+  --list-marker-color-collapsed: var(--color-green);
 }
 
 body {
@@ -3156,9 +3171,9 @@ body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .wor
 }
 
 body {
-  --graph-line: var(--flexcyon-base-03);
-  --graph-node-unresolved: var(--flexcyon-red-salmon);
-  --graph-node-tag: var(--flexcyon-purple-lilac);
+  --graph-line: var(--color-base-25);
+  --graph-node-unresolved: var(--color-red);
+  --graph-node-tag: var(--color-purple);
   --graph-control-verti-padding: 6px;
   --graph-control-horiz-padding: 12px;
 }
@@ -3503,9 +3518,9 @@ body {
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
-  --text-faint: var(--flexcyon-text-muted);
-  --text-accent: var(--flexcyon-accent);
-  --text-on-accent-wrapper: var(--flexcyon-base-03);
+  --text-faint: var(--text-muted);
+  --text-accent: var(--color-accent);
+  --text-on-accent-wrapper: var(--color-base-25);
   --text-on-accent: oklch(
     from var(--text-on-accent-wrapper)
       clamp(
@@ -5459,7 +5474,7 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
   display: block;
   visibility: visible;
   padding: 2px;
-  color: rgb(var(--callout-color));
+  color: var(--callout-color);
   content: ">";
 }
 .markdown-reading-view .callout[data-callout*="$pop"]:not(:hover),
@@ -11002,10 +11017,6 @@ settings:
     format: hex
     default-light: "#3b9ba1"
     default-dark: "#3cb9c2"
-    alt-format:
-      -
-        id: color-cyan-rgb
-        format: rgb
   - id: flexcyon-lime-green
     title: Green Color
     type: variable-themed-color
@@ -11013,10 +11024,6 @@ settings:
     format: hex
     default-light: "#689523"
     default-dark: "#a1c05c"
-    alt-format:
-      -
-        id: color-green-rgb
-        format: rgb
   - id: flexcyon-orange
     title: Orange Color
     type: variable-themed-color
@@ -11024,10 +11031,6 @@ settings:
     format: hex
     default-light: "#ed8126"
     default-dark: "#cc8449"
-    alt-format:
-      -
-        id: color-orange-rgb
-        format: rgb
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
@@ -11035,10 +11038,6 @@ settings:
     format: hex
     default-light: "#e8c62a"
     default-dark: "#c29e42"
-    alt-format:
-      -
-        id: color-yellow-rgb
-        format: rgb
   - id: flexcyon-purple-lilac
     title: Purple Color
     type: variable-themed-color
@@ -11046,10 +11045,6 @@ settings:
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
-    alt-format:
-      -
-        id: color-purple-rgb
-        format: rgb
   - id: flexcyon-red-salmon
     title: Red Color
     type: variable-themed-color
@@ -11057,10 +11052,6 @@ settings:
     format: hex
     default-light: "#eb5325"
     default-dark: "#c03a47"
-    alt-format:
-      -
-        id: color-red-rgb
-        format: rgb
   - id: flexcyon-blue
     title: Blue Color
     type: variable-themed-color
@@ -11068,10 +11059,6 @@ settings:
     format: hex
     default-light: "#5c9fe4"
     default-dark: "#5a8fcd"
-    alt-format:
-      -
-        id: color-blue-rgb
-        format: rgb
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
@@ -11079,10 +11066,6 @@ settings:
     format: hex
     default-light: "#e389ca"
     default-dark: "#d458a3"
-    alt-format:
-      -
-        id: color-pink-rgb
-        format: rgb
 
   - title: Base Colors
     type: heading
@@ -13755,54 +13738,174 @@ body .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
 body :is(.hltr-pink,
 mark.hltr-pink,
 .markdown-preview-view mark.hltr-pink) {
-  background: rgb(var(--color-pink-rgb), 65%);
+  --flexcyon-hltr-wrapper-pink: oklch(
+    from var(--color-pink) l c h / 65%
+  );
+  --flexcyon-hltr-pink: oklch(
+    from var(--flexcyon-hltr-wrapper-pink)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-pink);
 }
 body :is(.hltr-red,
 mark.hltr-red,
 .markdown-preview-view mark.hltr-red) {
-  background: rgb(var(--color-red-rgb), 65%);
+  --flexcyon-hltr-wrapper-red: oklch(
+    from var(--color-red) l c h / 65%
+  );
+  --flexcyon-hltr-red: oklch(
+    from var(--flexcyon-hltr-wrapper-red)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-red);
 }
 body :is(.hltr-orange,
 mark.hltr-orange,
 .markdown-preview-view mark.hltr-orange) {
-  background: rgb(var(--color-orange-rgb), 65%);
+  --flexcyon-hltr-wrapper-orange: oklch(
+    from var(--color-orange) l c h / 65%
+  );
+  --flexcyon-hltr-orange: oklch(
+    from var(--flexcyon-hltr-wrapper-orange)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-orange);
 }
 body :is(.hltr-yellow,
 mark.hltr-yellow,
 .markdown-preview-view mark.hltr-yellow) {
-  background: rgb(var(--color-yellow-rgb), 65%);
+  --flexcyon-hltr-wrapper-yellow: oklch(
+    from var(--color-yellow) l c h / 65%
+  );
+  --flexcyon-hltr-yellow: oklch(
+    from var(--flexcyon-hltr-wrapper-yellow)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-yellow);
 }
 body :is(.hltr-green,
 mark.hltr-green,
 .markdown-preview-view mark.hltr-green) {
-  background: rgb(var(--color-green-rgb), 65%);
+  --flexcyon-hltr-wrapper-green: oklch(
+    from var(--color-green) l c h / 65%
+  );
+  --flexcyon-hltr-green: oklch(
+    from var(--flexcyon-hltr-wrapper-green)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-green);
 }
 body :is(.hltr-cyan,
 mark.hltr-cyan,
 .markdown-preview-view mark.hltr-cyan) {
-  background: rgb(var(--color-cyan-rgb), 65%);
+  --flexcyon-hltr-wrapper-cyan: oklch(
+    from var(--color-cyan) l c h / 65%
+  );
+  --flexcyon-hltr-cyan: oklch(
+    from var(--flexcyon-hltr-wrapper-cyan)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-cyan);
 }
 body :is(.hltr-blue,
 mark.hltr-blue,
 .markdown-preview-view mark.hltr-blue) {
-  background: rgb(var(--color-blue-rgb), 65%);
+  --flexcyon-hltr-wrapper-blue: oklch(
+    from var(--color-blue) l c h / 65%
+  );
+  --flexcyon-hltr-blue: oklch(
+    from var(--flexcyon-hltr-wrapper-blue)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-blue);
 }
 body :is(.hltr-purple,
 mark.hltr-purple,
 .markdown-preview-view mark.hltr-purple) {
-  background: rgb(var(--color-purple-rgb), 65%);
+  --flexcyon-hltr-wrapper-purple: oklch(
+    from var(--color-purple) l c h / 65%
+  );
+  --flexcyon-hltr-purple: oklch(
+    from var(--flexcyon-hltr-wrapper-purple)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  background: var(--flexcyon-hltr-purple);
 }
 
 body.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
-  background-image: linear-gradient(to right, 0, var(--lowlight-background) 10%, rgb(var(--mono-rgb-0), 0) 10%, rgb(var(--mono-rgb-0), 0) 25%, var(--lowlight-background) 40%) !important;
+  --mono-oklch-0: oklch(0%, 0, 0deg)
+    background-image: linear-gradient(
+      to right,
+      0,
+      var(--lowlight-background) 10%,
+      transparent 10%,
+      transparent 25%,
+      var(--lowlight-background) 40%
+    ) !important;
 }
 
 body.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:only-of-type) {
   --floating-background: var(--background-primary);
   --floating-size: 20%;
   padding-block-end: 0.1em;
-  background-image: linear-gradient(to right, 0, rgb(var(--mono-rgb-0), 0) var(--floating-size), var(--floating-background) var(--floating-size)) !important;
+  background-image: linear-gradient(to right, 0, transparent var(--floating-size), var(--floating-background) var(--floating-size)) !important;
 }
 
 body.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark),
@@ -14558,9 +14661,9 @@ div.bases-cards-cover:not([style*=background-image]) * {
 }
 
 body {
-  --prompt-border-color: var(--flexcyon-base-02-03-mix);
-  --search-clear-button-color: var(--flexcyon-red-salmon);
-  --search-icon-color: var(--flexcyon-accent);
+  --prompt-border-color: var(--color-base-20);
+  --search-clear-button-color: var(--color-red);
+  --search-icon-color: var(--color-accent);
   --flexcyon-search-container-verti-padding: 8px;
   --flexcyon-search-container-horiz-padding: 16px;
   --flexcyon-suggestion-verti-padding: 8px;

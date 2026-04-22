@@ -2,7 +2,7 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 body {
-  --metadata-label-text-color: var(--flexcyon-purple-lilac);
+  --metadata-label-text-color: var(--color-purple);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-meta-container-padding-left: 14px;
 
@@ -74,43 +74,35 @@ body.flexcyon-metadata-rainbow-icons {
   .metadata-container,
   .workspace-leaf-content[data-type="all-properties"] {
     .lucide-forward {
-      color: var(--color-cyan);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-cyan) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-binary {
-      color: var(--color-blue);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-blue) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-text {
-      color: var(--color-green);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-green) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-list {
-      color: var(--color-orange);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-orange) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-tags {
-      color: var(--color-red);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-red) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-check-square {
-      color: var(--color-yellow);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-yellow) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-calendar {
-      color: var(--text-accent);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--text-accent) / calc(var(--dimmed) + 0.2));
     }
 
     .lucide-file-question {
-      color: var(--color-purple);
-      opacity: calc(var(--dimmed) + 0.2);
+      color: oklch(from var(--color-purple) / calc(var(--dimmed) + 0.2));
     }
   }
 }

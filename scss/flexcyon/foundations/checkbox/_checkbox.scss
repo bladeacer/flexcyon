@@ -1,9 +1,9 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 body {
-  --checkbox-color: var(--flexcyon-purple-lilac);
+  --checkbox-color: var(--color-purple);
   --checkbox-color-hover: var(--flexcyon-palette-lilac-hover);
-  --checkbox-border-color: var(--flexcyon-blue);
+  --checkbox-border-color: var(--color-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
 
@@ -12,11 +12,11 @@ body {
   }
 
   .checkbox-container {
-    background-color: var(--flexcyon-red-salmon);
+    background-color: var(--color-red);
   }
 
   .checkbox-container.is-enabled {
-    background-color: var(--flexcyon-lime-green);
+    background-color: var(--color-green);
   }
 }
 

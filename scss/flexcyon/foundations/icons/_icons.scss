@@ -140,40 +140,6 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   );
 }
 
-// TODO: Move this in the new opinionated setup
-
-// body.flexcyon-flex-max-mode,
-// body.flexcyon-settings-coloured-icons {
-//   [aria-label^="Uninstall"] {
-//     color: rgb(var(--color-red-rgb), 0.9);
-//   }
-
-//   [aria-label^="Options"] {
-//     color: rgb(var(--color-blue-rgb), 0.9);
-//   }
-
-//   [aria-label^="Customise this command"],
-//   [aria-label^="Customize this command"],
-//   [aria-label^="Hotkeys"],
-//   [aria-label^="Open snippets folder"],
-//   [aria-label^="Open plugins folder"] {
-//     color: rgb(var(--color-green-rgb), 0.9);
-//   }
-
-//   [aria-label^="Donate to support"] {
-//     color: rgb(var(--color-pink-rgb), 0.9);
-//   }
-
-//   [aria-label^="Reload plugins"],
-//   [aria-label^="Reload snippets"] {
-//     color: rgb(var(--color-cyan-rgb), 0.9);
-//   }
-
-//   [aria-label^="Restore default"] {
-//     color: rgb(var(--color-purple-rgb), 0.9);
-//   }
-// }
-
 body.is-mobile .vertical-tab-content {
   background-color: var(--color-base-05);
 }

@@ -52,9 +52,9 @@ body {
 
   @include m.configure-oklch("text-muted", "text-muted-wrapper");
 
-  --text-faint: var(--flexcyon-text-muted);
-  --text-accent: var(--flexcyon-accent);
-  --text-on-accent-wrapper: var(--flexcyon-base-03);
+  --text-faint: var(--text-muted);
+  --text-accent: var(--color-accent);
+  --text-on-accent-wrapper: var(--color-base-25);
 
   @include m.configure-oklch("text-on-accent", "text-on-accent-wrapper");
 

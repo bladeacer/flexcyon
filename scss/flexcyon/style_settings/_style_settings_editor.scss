@@ -37,10 +37,6 @@ settings:
     format: hex
     default-light: "#3b9ba1"
     default-dark: "#3cb9c2"
-    alt-format:
-      -
-        id: color-cyan-rgb
-        format: rgb
   - id: flexcyon-lime-green
     title: Green Color
     type: variable-themed-color
@@ -48,10 +44,6 @@ settings:
     format: hex
     default-light: "#689523"
     default-dark: "#a1c05c"
-    alt-format:
-      -
-        id: color-green-rgb
-        format: rgb
   - id: flexcyon-orange
     title: Orange Color
     type: variable-themed-color
@@ -59,10 +51,6 @@ settings:
     format: hex
     default-light: "#ed8126"
     default-dark: "#cc8449"
-    alt-format:
-      -
-        id: color-orange-rgb
-        format: rgb
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
@@ -70,10 +58,6 @@ settings:
     format: hex
     default-light: "#e8c62a"
     default-dark: "#c29e42"
-    alt-format:
-      -
-        id: color-yellow-rgb
-        format: rgb
   - id: flexcyon-purple-lilac
     title: Purple Color
     type: variable-themed-color
@@ -81,10 +65,6 @@ settings:
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
-    alt-format:
-      -
-        id: color-purple-rgb
-        format: rgb
   - id: flexcyon-red-salmon
     title: Red Color
     type: variable-themed-color
@@ -92,10 +72,6 @@ settings:
     format: hex
     default-light: "#eb5325"
     default-dark: "#c03a47"
-    alt-format:
-      -
-        id: color-red-rgb
-        format: rgb
   - id: flexcyon-blue
     title: Blue Color
     type: variable-themed-color
@@ -103,10 +79,6 @@ settings:
     format: hex
     default-light: "#5c9fe4"
     default-dark: "#5a8fcd"
-    alt-format:
-      -
-        id: color-blue-rgb
-        format: rgb
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
@@ -114,10 +86,6 @@ settings:
     format: hex
     default-light: "#e389ca"
     default-dark: "#d458a3"
-    alt-format:
-      -
-        id: color-pink-rgb
-        format: rgb
 
   - title: Base Colors
     type: heading

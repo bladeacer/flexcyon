@@ -1,13 +1,24 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
+@use "../../../flexcyon/foundations/accessibility/a11y_mixin" as m;
+
 @mixin hltr-wrapper($color) {
   :is(
     .hltr-#{$color},
     mark.hltr-#{$color},
     .markdown-preview-view mark.hltr-#{$color}
   ) {
-    background: rgb(var(--color-#{$color}-rgb), 65%);
+    --flexcyon-hltr-wrapper-#{$color}: oklch(
+      from var(--color-#{$color}) l c h / 65%
+    );
+
+    @include m.configure-oklch(
+      "flexcyon-hltr-#{$color}",
+      "flexcyon-hltr-wrapper-#{$color}"
+    );
+
+    background: var(--flexcyon-hltr-#{$color});
   }
 }
 
@@ -25,15 +36,15 @@ body {
 body.highlightr-lowlight
   :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
-
-  background-image: linear-gradient(
-    to right,
-    0,
-    var(--lowlight-background) 10%,
-    rgb(var(--mono-rgb-0), 0) 10%,
-    rgb(var(--mono-rgb-0), 0) 25%,
-    var(--lowlight-background) 40%
-  ) !important;
+  --mono-oklch-0: oklch(0%, 0, 0deg)
+    background-image: linear-gradient(
+      to right,
+      0,
+      var(--lowlight-background) 10%,
+      transparent 10%,
+      transparent 25%,
+      var(--lowlight-background) 40%
+    ) !important;
 }
 
 body.highlightr-floating
@@ -45,7 +56,7 @@ body.highlightr-floating
   background-image: linear-gradient(
     to right,
     0,
-    rgb(var(--mono-rgb-0), 0) var(--floating-size),
+    transparent var(--floating-size),
     var(--floating-background) var(--floating-size)
   ) !important;
 }

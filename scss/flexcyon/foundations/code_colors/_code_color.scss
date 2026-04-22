@@ -6,36 +6,36 @@
 // - https://github.com/7368697661/Origami
 
 body.theme-dark {
-  --code-background: var(--flexcyon-base-01);
+  --code-background: var(--color-base-00);
 }
 
 body.theme-light {
-  --code-background: var(--flexcyon-base-01-02-mix);
+  --code-background: var(--color-base-05);
 }
 
 body {
   /* ------------------------------ */
   --flexcyon-code-variable: var(--flexcyon-base-grey-dark);
-  --flexcyon-code-function: var(--flexcyon-yellow);
-  --flexcyon-code-operator: var(--flexcyon-orange);
-  --flexcyon-code-error: var(--flexcyon-red-salmon);
-  --flexcyon-code-keyword: var(--flexcyon-purple-lilac);
-  --code-normal: var(--flexcyon-cyan);
+  --flexcyon-code-function: var(--color-yellow);
+  --flexcyon-code-operator: var(--color-orange);
+  --flexcyon-code-error: var(--color-red);
+  --flexcyon-code-keyword: var(--color-purple);
+  --code-normal: var(--color-cyan);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
   --code-important: var(--flexcyon-code-error);
   --code-keyword: var(--flexcyon-code-keyword);
   --code-property: var(--text-muted);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: var(--flexcyon-purple-lilac);
-  --code-string: var(--flexcyon-lime-green);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-punctuation: var(--color-purple);
+  --code-string: var(--color-green);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --flexcyon-code-file-ext-font-w: 500;
   --flexcyon-codeblock-fmt-ext: lowercase;
   --flexcyon-code-file-ext-prefix: ".";
 
   .cm-s-obsidian span.cm-inline-code {
-    color: var(--flexcyon-orange);
+    color: var(--color-orange);
   }
 
   .markdown-source-view.mod-cm6 .code-block-flair {
@@ -43,7 +43,7 @@ body {
   }
 
   .cm-def {
-    color: var(--flexcyon-yellow);
+    color: var(--color-yellow);
   }
 
   :is(
@@ -78,34 +78,34 @@ mark {
 }
 
 body.flexcyon-syntax-catppuccin {
-  --flexcyon-code-variable: var(--flexcyon-cyan);
-  --flexcyon-code-function: var(--flexcyon-yellow);
-  --flexcyon-code-operator: var(--flexcyon-blue);
-  --flexcyon-code-error: var(--flexcyon-red-salmon);
-  --flexcyon-code-keyword: var(--flexcyon-cyan);
+  --flexcyon-code-variable: var(--color-cyan);
+  --flexcyon-code-function: var(--color-yellow);
+  --flexcyon-code-operator: var(--color-blue);
+  --flexcyon-code-error: var(--color-red);
+  --flexcyon-code-keyword: var(--color-cyan);
   --code-normal: var(--text-normal);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
   --code-important: var(--flexcyon-code-error);
   --code-keyword: var(--flexcyon-code-keyword);
-  --code-property: var(--flexcyon-cyan);
+  --code-property: var(--color-cyan);
   --code-operator: var(--flexcyon-code-operator);
-  --code-punctuation: rgb(var(--color-red-rgb), var(--dimmed));
-  --code-string: var(--flexcyon-lime-green);
-  --code-tag: var(--flexcyon-base-grey-dark);
-  --code-value: var(--flexcyon-yellow);
+  --code-punctuation: oklch(from var(--color-red) l c h / var(--dimmed));
+  --code-string: var(--color-green);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
+  --code-value: var(--color-yellow);
 
   .cm-def {
-    color: var(--flexcyon-blue);
+    color: var(--color-blue);
   }
 }
 
 body.flexcyon-syntax-lego {
   --flexcyon-code-variable: var(--text-normal);
   --flexcyon-code-function: var(--text-accent);
-  --flexcyon-code-operator: var(--flexcyon-pink);
-  --flexcyon-code-error: var(--flexcyon-orange);
-  --flexcyon-code-keyword: var(--flexcyon-red-salmon);
+  --flexcyon-code-operator: var(--color-pink);
+  --flexcyon-code-error: var(--color-orange);
+  --flexcyon-code-keyword: var(--color-red);
   --code-normal: var(--text-normal);
   --code-comment: var(--text-faint);
   --code-function: var(--flexcyon-code-function);
@@ -114,12 +114,12 @@ body.flexcyon-syntax-lego {
   --code-property: var(--text-normal);
   --code-operator: var(--flexcyon-code-operator);
   --code-punctuation: var(--text-normal);
-  --code-string: var(--flexcyon-cyan);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-string: var(--color-cyan);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --code-value: var(--text-normal);
 
   .cm-def {
-    color: var(--flexcyon-blue);
+    color: var(--color-blue);
   }
 }
 
@@ -138,7 +138,7 @@ body.flexcyon-syntax-monochrome {
   --code-operator: var(--flexcyon-code-operator);
   --code-punctuation: var(--text-normal);
   --code-string: var(--text-normal);
-  --code-tag: var(--flexcyon-base-grey-dark);
+  --code-tag: var(--flexcyon-grey-dark-wrapper);
   --code-value: var(--text-normal);
 
   .cm-def {

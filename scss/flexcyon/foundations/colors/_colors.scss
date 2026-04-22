@@ -29,6 +29,29 @@ body.theme-light {
   --flexcyon-pink: #e389ca;
 }
 
+/* Defined for backwards compatibility, when possible prefer using base --color-x variables like var(--color-red) directly */
+body:is(.theme-dark) {
+  --color-cyan-rgb: 60, 185, 194;
+  --color-green-rgb: 161, 192, 92;
+  --color-orange-rgb: 204, 132, 73;
+  --color-yellow-rgb: 194, 158, 66;
+  --color-purple-rgb: 164, 97, 200;
+  --color-red-rgb: 192, 58, 71;
+  --color-blue-rgb: 90, 143, 205;
+  --color-pink-rgb: 212, 88, 163;
+}
+
+body:is(.theme-light) {
+  --color-red-rgb: 235, 83, 37;
+  --color-orange-rgb: 237, 129, 38;
+  --color-yellow-rgb: 232, 198, 42;
+  --color-green-rgb: 104, 149, 35;
+  --color-cyan-rgb: 59, 155, 161;
+  --color-blue-rgb: 92, 159, 228;
+  --color-purple-rgb: 111, 73, 174;
+  --color-pink-rgb: 227, 137, 202;
+}
+
 body.theme-light,
 body.theme-dark {
   @include m.configure-oklch("color-red", "flexcyon-red-salmon");
