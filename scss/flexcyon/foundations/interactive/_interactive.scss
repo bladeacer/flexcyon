@@ -14,7 +14,7 @@ body.theme-light {
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-accent) 75%,
+    var(--text-accent) 75%,
     transparent
   );
   --flexcyon-block-label-opacity: 0.55;

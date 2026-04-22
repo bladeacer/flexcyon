@@ -71,7 +71,7 @@ body {
   @include m.configure-oklch("text-selection", "text-sel-wrapper");
 
   --bold-color: var(--color-red);
-  --italic-color: var(--flexcyon-accent);
+  --italic-color: var(--text-accent);
   --flexcyon-highlight-verti-padding: 1px;
   --flexcyon-highlight-horiz-padding: 2.5px;
   --flexcyon-highlight-border-radius: 4px;

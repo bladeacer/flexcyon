@@ -3,8 +3,8 @@
 body {
   --blockquote-color: color-mix(
     in oklch,
-    var(--flexcyon-yellow) 75%,
-    var(--flexcyon-text-normal)
+    var(--color-yellow) 75%,
+    var(--text-normal)
   );
 
   .cm-em.cm-quote {
