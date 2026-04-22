@@ -3,13 +3,15 @@
 body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
-  --modal-border-color: var(--flexcyon-base-02);
+  --modal-border-color: var(--color-base-10);
   --toggle-thumb-color: var(--text-on-accent);
   --ribbon-width: 48px;
   --file-line-width: 50rem;
   --vault-name-color: var(--interactive-accent);
   --ribbon-background-collapsed: var(--ribbon-background);
   --workspace-background-translucent: unset;
+
+  // TODO: oklch wrapper this as well.
   --hr-color: #393e48;
   --flexcyon-cust-hr-str-horiz-padding: 8px;
   --flexcyon-cust-hr-str-font-size: 1.118em;

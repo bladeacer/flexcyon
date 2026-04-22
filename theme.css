@@ -877,6 +877,7 @@ body.theme-light {
   --color-accent-1: oklch(
     from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
   );
+  --interactive-accent: var(--color-accent-1);
   /* hue shift, lower chroma, lighter, 87.5% alpha */
   --color-accent-2: oklch(
     from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
@@ -1340,8 +1341,8 @@ body.flexcyon-codeblock-prefix-ext .HyperMD-codeblock span.code-block-flair::bef
 }
 
 body {
-  --tab-text-color: var(--flexcyon-base-05);
-  --tab-text-color-focused: var(--flexcyon-base-05);
+  --tab-text-color: var(--color-base-50);
+  --tab-text-color-focused: var(--color-base-50);
   --tab-text-color-active: var(--text-accent);
   --tab-text-color-focused-active: var(--text-accent);
   --tab-text-color-focused-active-current: var(--text-accent);
@@ -3214,8 +3215,8 @@ body.flexcyon-workspace-angled-layout div.graph-controls.is-close {
 body {
   --nav-item-color: var(--text-muted);
   --nav-item-color-active: var(--interactive-accent);
-  --nav-item-color-selected: var(--flexcyon-orange);
-  --nav-item-background-selected: var(--flexcyon-base-03);
+  --nav-item-color-selected: var(--color-orange);
+  --nav-item-background-selected: var(--color-base-25);
 }
 
 body {
@@ -3370,7 +3371,7 @@ body.flexcyon-alt-link-style .cm-s-obsidian span.cm-hmd-external-link a {
 }
 
 body {
-  --drag-ghost-background: var(--flexcyon-base-03);
+  --drag-ghost-background: var(--color-base-25);
   --drag-ghost-text-color: var(--interactive-accent);
 }
 
@@ -3444,7 +3445,7 @@ body {
 body .metadata-input-longtext::selection,
 body input::selection,
 body textarea::selection {
-  background-color: var(--flexcyon-base-03-04-mix);
+  background-color: var(--color-base-30);
 }
 
 body.theme-dark {
@@ -3538,7 +3539,7 @@ body {
   --text-success: var(--color-green);
   --text-sel-wrapper: color-mix(
     in oklch shorter hue,
-    var(--flexcyon-base-04) 20%,
+    var(--color-base-35) 20%,
     transparent
   );
   --text-selection: oklch(
@@ -9892,7 +9893,7 @@ body.flexcyon-remove-tab-headers .workspace-tabs .workspace-tab-header .workspac
 body {
   --flexcyon-top-actions-alignment: center;
   --flexcyon-media-embed-vertical-margin: 8px;
-  --modal-border-color: var(--flexcyon-base-02);
+  --modal-border-color: var(--color-base-10);
   --toggle-thumb-color: var(--text-on-accent);
   --ribbon-width: 48px;
   --file-line-width: 50rem;
