@@ -17,8 +17,8 @@ body.theme-light {
 
 body.theme-dark,
 body.theme-light {
-  --color-accent: oklch(var(--flexcyon-accent));
-  --color-accent-hsl: oklch(var(--flexcyon-accent));
+  --color-accent: oklch(from var(--flexcyon-accent) l c h);
+  --color-accent-hsl: oklch(from var(--flexcyon-accent) l c h);
 
   /* cooler hue, higher chroma, lighter */
   --color-accent-1: oklch(

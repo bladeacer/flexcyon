@@ -42,5 +42,15 @@
   "flexcyon@@flexcyon-base-04@@light": "#d3d3ce",
   "flexcyon@@flexcyon-base-05@@light": "#b4b3af",
   "flexcyon@@flexcyon-base-grey-dark@@light": "#797876",
-  "flexcyon@@flexcyon-base-grey-light@@light": "#080808"
+  "flexcyon@@flexcyon-base-grey-light@@light": "#080808",
+  "flexcyon@@flexcyon-text-muted": "#6f768599",
+  "flexcyon@@line-height-normal": 1.4,
+  "flexcyon@@line-height-tight": 1.25,
+  "flexcyon@@flexcyon-w-spacing": 0,
+  "flexcyon@@flexcyon-l-spacing": 0,
+  "flexcyon@@flexcyon-highlight-colour": "var(--color-cyan)",
+  "flexcyon@@flexcyon-highlight-opacity": "22.5%",
+  "flexcyon@@flexcyon-highlight-verti-padding": 1,
+  "flexcyon@@flexcyon-highlight-horiz-padding": 2.5,
+  "flexcyon@@flexcyon-highlight-border-radius": 4
 }

@@ -92,6 +92,20 @@ def get_schema():
         ("text-normal@@dark", str, "#d3d5d3", "editor", False),
         ("text-normal@@light", str, "#080808", "editor", False),
 
+        ("text-muted", str, "#6f768599", "editor"),
+
+        ("line-height-normal", (float, int), 1.4, "editor", False),
+        ("line-height-tight", (float, int), 1.25, "editor", False),
+
+        ("w-spacing", (float, int), 0, "editor"),
+        ("l-spacing", (float, int), 0, "editor"),
+
+        ("highlight-colour", str, "var(--color-cyan)", "editor"),
+        ("highlight-opacity", str, "22.5%", "editor"),
+        ("highlight-verti-padding", (float, int), 1, "editor"),
+        ("highlight-horiz-padding", (float, int), 2.5, "editor"),
+        ("highlight-border-radius", (float, int), 4, "editor"),
+
     ]
     return schema
 
@@ -241,13 +255,16 @@ class SettingsMapper:
             target, role = self.select_map[base]
             if role == MapResult.SILENCE and val is True:
                 return MapResult(MapResult.SILENCE, group=target)
-            if val is True:
-                # We find the group label for the original member
+
+            is_selected = (val is True) or (val in self.cfg["select_groups"].get(
+                target, {}).get("members", [])
+                                            )
+            if is_selected:
                 g_pref = self.lookup.get(self._get_full_name(base))
                 new_k = f"{g_pref}@@{self.prefix}-{target}"
-                return MapResult(
-                    MapResult.VALID, new_k, f"{self.prefix}-{base}"
-                )
+                # If it's a string selection, the value IS the member name
+                final_val = f"{self.prefix}-{val}" if isinstance(val, str) else f"{self.prefix}-{base}"
+                return MapResult(MapResult.VALID, new_k, final_val)
             return MapResult(MapResult.DISCARD)
 
         # 5. Default check (Uses original base for default lookup)
