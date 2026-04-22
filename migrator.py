@@ -103,14 +103,19 @@ def get_mapping_config():
         "suffix_groups": {},
         "types": {s: t for s, t, d, g in schema},
         "defaults": {s: d for s, t, d, g in schema},
-        "keep_if_default": [],
         "select_groups": {
             "select-mode": {
                 "members": ["rtz-mode", "flex-max-mode"],
                 "discard_if_true": ["flex-max-mode"]
             }
         },
-        "exact_matches": {}
+        "exact_matches": {},
+        "keep_if_default": [],
+        "discard_if_true": [],
+        "discard_always": [
+            "base-grey-tab", "base-grey-token",
+            "base-grey-scroll", "base-grey-scroll-hover"
+        ]
     }
 
     for sfx, _, _, group in schema:
@@ -162,6 +167,12 @@ class SettingsMapper:
     def __init__(self, config):
         self.cfg = config
         self.prefix = config.get("target_prefix", "")
+
+        # Flatten all discard_always entries (Global + Group-specific)
+        self.always_discard = set(config.get("discard_always", []))
+        for g_cfg in config.get("select_groups", {}).values():
+            self.always_discard.update(g_cfg.get("discard_always", []))
+
         self.lookup = self._build_group_lookup()
         self.select_map = self._build_select_lookup()
 
@@ -179,6 +190,8 @@ class SettingsMapper:
                 mapping[m] = (target, MapResult.VALID)
             for d in g_cfg.get("discard_if_true", []):
                 mapping[d] = (target, MapResult.SILENCE)
+            for a in g_cfg.get("discard_always", []):
+                mapping[a] = (target, MapResult.DISCARD)
         return mapping
 
     def _check_type(self, base, val):
@@ -190,17 +203,17 @@ class SettingsMapper:
         return isinstance(val, expected)
 
     def _process(self, key, val):
-        # Change: split only on the FIRST '@@' to separate prefix from the rest
         parts = key.split('@@', 1)
         name = parts[-1]
+        base = name.replace(f"{self.prefix}-", "", 1)
+
+        # 0. Priority Discard: Handle "discard_always" first
+        if base in self.always_discard:
+            return MapResult(MapResult.DISCARD)
 
         g_prefix = self.lookup.get(name)
         if not g_prefix:
-            # Fallback if group is missing
             return MapResult(MapResult.VALID, key, val)
-
-        # Base should be the name minus the 'prefix-' part
-        base = name.replace(f"{self.prefix}-", "", 1)
 
         # 1. Type Check
         if not self._check_type(base, val):
@@ -220,7 +233,6 @@ class SettingsMapper:
             return MapResult(MapResult.DISCARD)
 
         # 3. Dynamic Default Discard
-        # Assumes discard if val == default, unless explicitly whitelisted
         is_default = val == self.cfg.get("defaults", {}).get(base)
         keep_exceptions = self.cfg.get("keep_if_default", [])
 

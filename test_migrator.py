@@ -9,18 +9,38 @@ from migrator import SettingsMapper, get_mapping_config, get_schema
 
 
 def _std_key(p, sfx):
-    """Helper to format the input key string."""
-    # Ensure the input key matches prefix@@prefix-suffix
     return f"{p}@@{p}-{sfx}"
 
 
-def _get_std_cases(name, exp_type, p, group, default):
-    """Generates tests for a single non-select setting."""
+def _get_all_poison_samples(name, types_cfg):
+    """
+    Returns a list of (type_name, value) tuples for every type
+    NOT allowed by the schema for this key.
+    """
+    expected = types_cfg.get(name)
+    if not isinstance(expected, tuple):
+        expected = (expected,)
+
+    # Define our pool of standard test types
+    samples = [
+        ("bool", True),
+        ("int", 123),
+        ("float", 45.67),
+        ("str", "poison_string")
+    ]
+
+    # Filter out samples that match any of the expected types
+    poisons = []
+    for t_name, val in samples:
+        if not any(isinstance(val, t) for t in expected):
+            poisons.append((t_name, val))
+    return poisons
+
+
+def _get_std_cases(name, exp_type, p, group, default, types_cfg):
     k = _std_key(p, name)
-    # The Expected key must follow the group@@prefix-name structure
     target = f"{group}@@{p}-{name}"
 
-    # Logic for valid_val selection
     if exp_type is str:
         valid_val = f"custom-{default}"
     elif exp_type in [(float, int), float, int]:
@@ -28,147 +48,145 @@ def _get_std_cases(name, exp_type, p, group, default):
     else:
         valid_val = not default
 
-    cases = [
-        (f"Valid: {name}", {k: valid_val}, {target: valid_val}),
-        (
-            f"String Discard: {name}", {k: 123 if exp_type is str else "bad"},
+    cases = [(f"Valid: {name}", {k: valid_val}, {target: valid_val})]
+
+    # Add exhaustive bad type cases
+    for t_name, p_val in _get_all_poison_samples(name, types_cfg):
+        cases.append((
+            f"Bad Type [{t_name}]: {name}",
+            {k: p_val},
             {}
-        ),
-    ]
+        ))
 
     if default is not None:
-        # Default now expects empty dict per "discard if default" logic
         cases.append((f"Default: {name}", {k: default}, {}))
 
-    if exp_type is str:
-        wrong_val = True
-    else:
-        wrong_val = 1 if exp_type is bool else "bad_string"
-
-    cases.append((f"Type Poison: {name}", {k: wrong_val}, {}))
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
-def _get_poison_val(name, types_cfg):
-    """Determines the specific 'wrong' type based on the schema."""
-    expected = types_cfg.get(name)
-    if expected is str:
-        return True  # Boolean is poison for String
-    return 1 if expected is bool else "bad_string"
-
-
 def _get_select_cases(g_name, g_cfg, p, lookup, types_cfg):
-    """Generates logic and type tests for a select group."""
-    mems, discs = g_cfg["members"], g_cfg.get("discard_if_true", [])
-    all_keys = list(set(mems + discs))
+    mems = g_cfg["members"]
+    discs = g_cfg.get("discard_if_true", [])
+    always = g_cfg.get("discard_always", [])
+    active_keys = list(set(mems + discs))
     target_key = f"{lookup[mems[0]]}@@{p}-{g_name}"
     cases = []
 
-    # Individual Member Poisoning
-    for m in all_keys:
-        poison = _get_poison_val(m, types_cfg)
-        label = "Int Discard" if poison == 1 else "Bool Discard"
-        cases.append((f"Select Member {m} ({label})",
-                      {_std_key(p, m): poison}, {}))
+    # 1. Exhaustive Type Poisoning for all active keys
+    for m in active_keys:
+        for t_name, p_val in _get_all_poison_samples(m, types_cfg):
+            cases.append((
+                f"Select Poison {m} [{t_name}]",
+                {_std_key(p, m): p_val},
+                {}
+            ))
 
-    # Winner logic: Setting to True (Valid)
+    # 2. Winner logic
     for m in [m for m in mems if m not in discs]:
         cases.append((f"Win: {m}", {_std_key(p, m): True},
                       {target_key: f"{p}-{m}"}))
 
-    # Fallback logic: All members at False (Default)
-    # Note: If default is False, this triggers 'none' fallback
-    cases.append((f"None Fallback: {g_name}",
-                  {_std_key(p, m): False for m in all_keys},
+    # 3. Always Discard
+    for a in always:
+        cases.append((f"Group Discard: {a}", {_std_key(p, a): True}, {}))
+
+    # 4. Fallback Logic
+    all_known = list(set(active_keys + always))
+    cases.append((f"Fallback: {g_name}",
+                  {_std_key(p, m): False for m in all_known},
                   {target_key: "none"}))
 
+    # 5. Silence Logic
     for d in discs:
         cases.append((f"Silence: {d}", {_std_key(p, d): True}, {}))
-
-    # Multi-Poison
-    cases.append((f"Multi-Poison: {g_name}",
-                  {_std_key(p, m): "bad" for m in mems}, {}))
 
     return [{"name": n, "input": i, "expected": e} for n, i, e in cases]
 
 
 def generate_test_cases(cfg, schema):
-    """Orchestrates test generation using the schema's insertion order."""
     p = cfg["target_prefix"]
     types_cfg = cfg["types"]
     lookup = {s: g for g, sfxs in cfg["suffix_groups"].items() for s in sfxs}
     tests = []
 
-    select_mems = {
-        m for g in cfg["select_groups"].values() for m in g["members"]
-    }
-    select_discs = {d for g in cfg["select_groups"].values()
-                    for d in g.get("discard_if_true", [])}
+    always_discards = set(cfg.get("discard_always", []))
+    for g in cfg["select_groups"].values():
+        always_discards.update(g.get("discard_always", []))
 
-    # Iterate through schema list to maintain order
+    mems = {m for g in cfg["select_groups"].values() for m in g["members"]}
+    discs = {d for g in cfg["select_groups"].values()
+             for d in g.get("discard_if_true", [])}
+
     for name, exp_type, default, _ in schema:
-        if name in select_mems or name in select_discs:
+        if name in always_discards or name in mems or name in discs:
             continue
         tests.extend(_get_std_cases(
-            name, exp_type, p, lookup[name], default
+            name, exp_type, p, lookup[name], default, types_cfg
         ))
 
-    # Select groups are handled after standard settings
     for g_name, g_cfg in cfg["select_groups"].items():
         tests.extend(_get_select_cases(g_name, g_cfg, p, lookup, types_cfg))
 
+    for a in cfg.get("discard_always", []):
+        tests.append({
+            "name": f"Global Discard: {a}",
+            "input": {_std_key(p, a): "discard_me"},
+            "expected": {}
+        })
     return tests
 
 
+def run_unit_tests(mapper, test_cases):
+    passed = 0
+    print(f"{'RESULT':<8} | {'TEST NAME':<50}")
+    print("-" * 65)
+
+    for case in test_cases:
+        result = mapper.map_settings(case["input"])
+        if result == case["expected"]:
+            print(f"PASS     | {case['name']}")
+            passed += 1
+        else:
+            print(f"FAIL     | {case['name']}")
+
+            input_val = list(case['input'].values())[0]
+            print(f"   -> Input Val: {input_val} ({type(input_val).__name__})")
+            print(f"   -> Expected:  {case['expected']}")
+            print(f"   -> Got:       {result}")
+
+    print("-" * 65)
+    print(f"Summary: {passed}/{len(test_cases)} passed.")
+
+
 def generate_test_json(test_cases, schema, prefix, filename="test.json"):
-    """Merges input data following the exact order of the schema."""
-    # 1. Pre-initialize the dict with schema keys to preserve order
-    # Each key is formatted as prefix@@prefix-suffix
+    """Merges input data following schema order."""
     ordered_input = {}
     for name, _, _, _ in schema:
         key = f"{prefix}@@{prefix}-{name}"
-        ordered_input[key] = None 
+        ordered_input[key] = None
 
-    # 2. Extract values from test cases
     raw_values = {}
     for case in test_cases:
         raw_values.update(case["input"])
 
-    # 3. Build the final dict using the ordered keys
-    # Only include keys that actually appeared in the test cases
-    final_output = {k: raw_values[k] for k in ordered_input if k in raw_values}
+    final_output = {
+        k: raw_values[k] for k in ordered_input if k in raw_values
+    }
 
     with open(filename, "w") as f:
         json.dump(final_output, f, indent=2)
 
-    print(f"Generated {filename} with {len(final_output)} keys (schema-sorted).")
-
-
-def run_unit_tests(mapper, test_cases):
-    """Execution engine for generated assertions."""
-    passed = 0
-    for case in test_cases:
-        result = mapper.map_settings(case["input"])
-        if result == case["expected"]:
-            print(f"PASS: {case['name']}")
-            passed += 1
-        else:
-            print(f"FAIL: {case['name']}")
-            print(f"   Expected: {case['expected']}")
-            print(f"   Got:      {result}")
-
-    print(f"\nSummary: {passed}/{len(test_cases)} passed.")
+    print(f"Generated {filename} ({len(final_output)} keys).")
 
 
 if __name__ == "__main__":
     config = get_mapping_config()
     mapper = SettingsMapper(config)
-
     schema = get_schema()
     prefix = config["target_prefix"]
-    cases = generate_test_cases(config, schema)
 
+    cases = generate_test_cases(config, schema)
     generate_test_json(cases, schema, prefix)
 
-    print("-" * 40)
+    print("\nStarting Exhaustive Migration Tests...\n")
     run_unit_tests(mapper, cases)
