@@ -106,6 +106,56 @@ def get_schema():
         ("highlight-horiz-padding", (float, int), 2.5, "editor"),
         ("highlight-border-radius", (float, int), 4, "editor"),
 
+        ("coloured-headings", bool, True, "editor"),
+        ("headings-glow-enabled", bool, False, "editor"),
+
+        ("headings-indicator-h1", bool, False, "editor"),
+        ("h1-color", str, "var(--color-blue)", "editor"),
+        ("h1-size", (float, int), 1.818, "editor", False),
+        ("h1-weight", (float, int), 700, "editor", False),
+        ("h1-line-height", (float, int), 1.61, "editor", False),
+        ("h1-underline-enabled", bool, False, "editor"),
+        ("heading-1-alignment", str, "left", "editor"),
+
+        ("headings-indicator-h2", bool, False, "editor"),
+        ("h2-color", str, "var(--color-purple)", "editor"),
+        ("h2-size", (float, int), 1.618, "editor", False),
+        ("h2-weight", (float, int), 675, "editor", False),
+        ("h2-line-height", (float, int), 1.51, "editor", False),
+        ("h2-underline-enabled", bool, False, "editor"),
+        ("heading-2-alignment", str, "left", "editor"),
+
+        ("headings-indicator-h3", bool, False, "editor"),
+        ("h3-color", str, "var(--color-cyan)", "editor"),
+        ("h3-size", (float, int), 1.418, "editor", False),
+        ("h3-weight", (float, int), 650, "editor", False),
+        ("h3-line-height", (float, int), 1.41, "editor", False),
+        ("h3-underline-enabled", bool, False, "editor"),
+        ("heading-3-alignment", str, "left", "editor"),
+
+        ("headings-indicator-h4", bool, False, "editor"),
+        ("h4-color", str, "var(--color-pink)", "editor"),
+        ("h4-size", (float, int), 1.218, "editor", False),
+        ("h4-weight", (float, int), 625, "editor", False),
+        ("h4-line-height", (float, int), 1.31, "editor", False),
+        ("h4-underline-enabled", bool, False, "editor"),
+        ("heading-4-alignment", str, "left", "editor"),
+
+        ("headings-indicator-h5", bool, False, "editor"),
+        ("h5-color", str, "var(--color-green)", "editor"),
+        ("h5-size", (float, int), 1.118, "editor", False),
+        ("h5-weight", (float, int), 600, "editor", False),
+        ("h5-line-height", (float, int), 1.21, "editor", False),
+        ("h5-underline-enabled", bool, False, "editor"),
+        ("heading-5-alignment", str, "left", "editor"),
+
+        ("headings-indicator-h6", bool, False, "editor"),
+        ("h6-color", str, "var(--color-yellow)", "editor"),
+        ("h6-size", (float, int), 1.018, "editor", False),
+        ("h6-weight", (float, int), 575, "editor", False),
+        ("h6-line-height", (float, int), 1.21, "editor", False),
+        ("h6-underline-enabled", bool, False, "editor"),
+        ("heading-6-alignment", str, "left", "editor"),
     ]
     return schema
 
