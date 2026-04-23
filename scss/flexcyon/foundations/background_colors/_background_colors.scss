@@ -27,9 +27,9 @@ body {
   /* Colours */
   @include m.configure-oklch("modal-sidebar-background", "color-base-05");
   @include m.configure-oklch("background-primary", "color-base-10");
-  @include m.configure-oklch("background-primary-alt", "color-base-25");
+  @include m.configure-oklch("background-primary-alt", "color-base-20");
   @include m.configure-oklch("background-secondary", "color-base-00");
-  @include m.configure-oklch("background-secondary-alt", "color-base-20");
+  @include m.configure-oklch("background-secondary-alt", "color-base-25");
   @include m.configure-oklch("background-modifier-hover", "color-base-20");
   @include m.configure-oklch("background-modifier-form-field", "color-base-20");
   @include m.configure-oklch("background-modifier-cover", "color-base-15");

@@ -2534,7 +2534,7 @@ body {
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-primary-alt: oklch(
-    from var(--color-base-25)
+    from var(--color-base-20)
       clamp(
         0,
         (l * var(--flexcyon-theme-brightness-ratio)) +
@@ -2556,7 +2556,7 @@ body {
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-secondary-alt: oklch(
-    from var(--color-base-20)
+    from var(--color-base-25)
       clamp(
         0,
         (l * var(--flexcyon-theme-brightness-ratio)) +
@@ -13085,9 +13085,6 @@ settings:
       -
         label: Right aligned bottom
         value: flexcyon-canvas-menu-rcenter-bottom
-      -
-        label: Right aligned center align
-        value: flexcyon-canvas-menu-rcenter-align
 
   - title: Various Complements
     type: heading
@@ -14215,17 +14212,21 @@ body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .c
 }
 
 body.flexcyon-canvas-menu-bottom-left .canvas-card-menu {
+  inset-block-end: unset;
   inset-inline-start: 1%;
   transform: none;
 }
 
 body.flexcyon-canvas-menu-bottom-right .canvas-card-menu {
+  inset-block-end: unset;
   inset-inline-start: 89%;
   transform: none;
 }
 
 body.flexcyon-canvas-menu-top-center .canvas-card-menu {
   inset-block-end: 94%;
+  inset-inline-start: unset;
+  transform: none;
 }
 
 body.flexcyon-canvas-menu-top-left .canvas-card-menu {
@@ -14263,13 +14264,6 @@ body.flexcyon-canvas-menu-lcenter-bottom .canvas-card-menu {
 
 body.flexcyon-canvas-menu-rcenter-bottom .canvas-card-menu {
   inset-block-end: 7.5%;
-  inset-inline-start: 96.1%;
-  flex-direction: column;
-  transform: none;
-}
-
-body.flexcyon-canvas-menu-rcenter-align .canvas-card-menu {
-  inset-block-end: 40%;
   inset-inline-start: 96.1%;
   flex-direction: column;
   transform: none;
