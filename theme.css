@@ -10978,6 +10978,11 @@ settings:
     default: true
   - title: About Revert to Pre 1.11 UI
     description: Only works as intended for Obsidian versions equal to or greater than 1.11.
+
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
 */
 /*! 
 @settings
@@ -12044,10 +12049,6 @@ settings:
     type: variable-text
     default: "LIVE"
     quotes: true
-  - title: Show status bar on mobile
-    id: flexcyon-status-mobile-enabled
-    type: class-toggle
-    default: false
   - title: Status bar font size
     id: status-bar-font-size
     type: variable-number

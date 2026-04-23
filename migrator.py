@@ -23,11 +23,18 @@ import ast
 # Schema Config #
 # ------------- #
 
+def get_prefix():
+    P = "flexcyon"
+    return P
+
+
 def get_schema():
     """
     Define settings once with all metadata
     Format: (suffix, type, default, group_suffix, use_prefix?)
     """
+
+    P = get_prefix()
 
     schema = [
         ("rtz-mode", bool, False, "modes"),
@@ -42,6 +49,7 @@ def get_schema():
         ("contrast-ratio", (float, int), 1.0, "a11y"),
         ("saturation-ratio", (float, int), 1.0, "a11y"),
         ("revert-nav-item-alignment", bool, True, "mobile"),
+        ("status-mobile-enabled", bool, False, "mobile"),
 
         ("cyan@@dark", str, "#3cb9c2", "editor"),
         ("lime-green@@dark", str, "#a1c05c", "editor"),
@@ -206,12 +214,37 @@ def get_schema():
         ("file-line-width", (float, int), 50, "editor", False),
         ("editor-margin-top", (float, int), 50, "editor"),
         ("top-actions-alignment", str, "center", "editor"),
+
+        ("prompt-width", (float, int), 700, "editor", False),
+        ("prompt-max-width", (float, int), 80, "editor", False),
+        ("prompt-max-height", (float, int), 70, "editor", False),
+        ("prompt-alignment", str, "none", "editor"),
+        ("suggestion-verti-padding", (float, int), 8, "editor"),
+        ("suggestion-horiz-padding", (float, int), 12, "editor"),
+        ("titlebar-button-effects", bool, False, "editor"),
+        (
+            "status-hide-until-trigger", str,
+            f"{P}-status-hide-until-hover", "editor"
+        ),
+        ("status-alignment", str, f"{P}-status-right-align", "editor"),
+        ("status-hide-until-hover-text", str, "Show status", "editor"),
+        ("status-hide-hover-translation", (float, int), 80, "editor"),
+        ("status-hide-hover-duration", (float, int), 325, "editor"),
+        ("status-hide-hover-function", str, "ease-out", "editor"),
+        ("status-text-mode", bool, False, "editor"),
+        ("status-reading-text", str, "READ", "editor"),
+        ("status-source-text", str, "SOURCE", "editor"),
+        ("status-live-text", str, "LIVE", "editor"),
+        ("status-bar-font-size", (float, int), 13.7533, "editor", False),
+        ("status-style", str, "none", "editor"),
+        ("status-text-enable-color", bool, False, "editor"),
+        ("no-status-in-new-tab", bool, False, "editor"),
     ]
     return schema
 
 
 def get_mapping_config():
-    P = "flexcyon"
+    P = get_prefix()
 
     raw_schema = get_schema()
 

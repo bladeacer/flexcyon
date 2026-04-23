@@ -12,4 +12,9 @@ settings:
     default: true
   - title: About Revert to Pre 1.11 UI
     description: Only works as intended for Obsidian versions equal to or greater than 1.11.
+
+  - title: Show status bar on mobile
+    id: flexcyon-status-mobile-enabled
+    type: class-toggle
+    default: false
 */
