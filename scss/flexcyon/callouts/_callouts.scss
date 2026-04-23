@@ -7,6 +7,7 @@ body {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
+  --flexcyon-callout-horizontal-margin: 0em;
   --flexcyon-callout-pop-animation-duration: 200ms;
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
@@ -52,7 +53,8 @@ body {
 
   .markdown-source-view.mod-cm6 .callout,
   .callout {
-    margin: var(--flexcyon-callout-vertical-margin) 0;
+    margin: var(--flexcyon-callout-vertical-margin)
+      var(--flexcyon-callout-horizontal-margin);
   }
 }
 

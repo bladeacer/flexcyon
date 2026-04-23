@@ -260,6 +260,22 @@ def get_schema():
         ("editor-bg-rotation", (float, int), 0, "editor"),
         ("editor-bg-width", (float, int), 15, "editor"),
         ("editor-dot-size", (float, int), 2.5, "editor"),
+
+        ("callout-icon-right-padding", (float, int), 4, "editor"),
+        ("callout-first-codeblock-margin-top", (float, int), 1, "editor"),
+        ("callout-vertical-margin", (float, int), 1, "editor"),
+        ("callout-horizontal-margin", (float, int), 0, "editor"),
+        ("callout-verti-padding", (float, int), 12, "editor"),
+        ("callout-horiz-padding", (float, int), 24, "editor"),
+        ("callout-radius", (float, int), 2, "editor", False),
+        ("callout-radix", (float, int), 16, "editor"),
+        ("callout-style", str, "none", "editor"),
+        ("tui-no-icons", bool, False, "editor"),
+        ("tui-no-icons", bool, False, "editor"),
+        ("callouts-flashcard-width", (float, int), 250, "editor"),
+        ("callouts-flashcard-height", (float, int), 250, "editor"),
+        ("callout-flashcard-animation-duration", (float, int), 500, "editor"),
+        ("callout-pop-animation-duration", (float, int), 200, "editor"),
     ]
     return schema
 

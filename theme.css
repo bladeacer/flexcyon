@@ -4059,6 +4059,7 @@ body {
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
+  --flexcyon-callout-horizontal-margin: 0em;
   --flexcyon-callout-pop-animation-duration: 200ms;
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
@@ -4098,7 +4099,7 @@ body div.callout .callout-content :first-child:is(pre, img, iframe) {
 }
 body .markdown-source-view.mod-cm6 .callout,
 body .callout {
-  margin: var(--flexcyon-callout-vertical-margin) 0;
+  margin: var(--flexcyon-callout-vertical-margin) var(--flexcyon-callout-horizontal-margin);
 }
 
 /* obsi-snip-coll start: tategaki */
@@ -12290,6 +12291,12 @@ settings:
     description: Configures the vertical margin of callouts
     type: variable-number
     default: 1
+    format: em
+  - title: Callout Horizontal Margin
+    id: flexcyon-callout-horizontal-margin
+    description: Configures the horizontal margin of callouts
+    type: variable-number
+    default: 0
     format: em
   - title: Callout Vertical Padding
     id: flexcyon-callout-verti-padding

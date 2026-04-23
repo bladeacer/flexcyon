@@ -1305,6 +1305,12 @@ settings:
     type: variable-number
     default: 1
     format: em
+  - title: Callout Horizontal Margin
+    id: flexcyon-callout-horizontal-margin
+    description: Configures the horizontal margin of callouts
+    type: variable-number
+    default: 0
+    format: em
   - title: Callout Vertical Padding
     id: flexcyon-callout-verti-padding
     description: Configures the vertical padding of callouts

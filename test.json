@@ -178,5 +178,19 @@
   "flexcyon@@flexcyon-bg-type": "none",
   "flexcyon@@flexcyon-editor-bg-rotation": 0,
   "flexcyon@@flexcyon-editor-bg-width": 15,
-  "flexcyon@@flexcyon-editor-dot-size": 2.5
+  "flexcyon@@flexcyon-editor-dot-size": 2.5,
+  "flexcyon@@flexcyon-callout-icon-right-padding": 4,
+  "flexcyon@@flexcyon-callout-first-codeblock-margin-top": 1,
+  "flexcyon@@flexcyon-callout-vertical-margin": 1,
+  "flexcyon@@flexcyon-callout-horizontal-margin": 0,
+  "flexcyon@@flexcyon-callout-verti-padding": 12,
+  "flexcyon@@flexcyon-callout-horiz-padding": 24,
+  "flexcyon@@callout-radius": 2,
+  "flexcyon@@flexcyon-callout-radix": 16,
+  "flexcyon@@flexcyon-callout-style": "none",
+  "flexcyon@@flexcyon-tui-no-icons": false,
+  "flexcyon@@flexcyon-callouts-flashcard-width": 250,
+  "flexcyon@@flexcyon-callouts-flashcard-height": 250,
+  "flexcyon@@flexcyon-callout-flashcard-animation-duration": 500,
+  "flexcyon@@flexcyon-callout-pop-animation-duration": 200
 }
