@@ -685,7 +685,7 @@ settings:
     id: flexcyon-callout-bg-opacity
     description: Configures the opacity of callouts when they have metadata of <all-*> or <bg-*>
     type: variable-text
-    default: 20%
+    default: 12.5%
   - title: Highlight Active Line Opacity
     id: flexcyon-highlight-active-line-opacity
     type: variable-text
@@ -888,29 +888,35 @@ settings:
     description: Places nav header below other content, for example placing the New Note and other icons below the file explorer.
     type: class-toggle
     default: false
+
+  - title: Workspace Components
+    type: heading
+    level: 1
+    collapsed: true
   - title: File line width
     id: file-line-width
     description: File line width when readable line length is enabled
     type: variable-number
     default: 50
     format: rem
-
-  - title: Workspace Components
-    type: heading
-    level: 1
-    collapsed: true
   - title: Editor Top Margin
     description: Sets the top margin of the editor.
     id: flexcyon-editor-margin-top
     type: variable-number
     default: 18
     format: px
-
   - title: Top Actions Alignment
-    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.). Defaults to left if an invalid value is given.
+    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.).
     id: flexcyon-top-actions-alignment
-    type: variable-text
+    type: variable-select
     default: center
+    options: 
+      - label: Left
+        value: left
+      - label: Center
+        value: center
+      - label: Right
+        value: right
 
   - title: Prompts
     type: heading
