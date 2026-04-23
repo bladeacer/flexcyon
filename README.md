@@ -102,8 +102,7 @@ added then.
 
 Beta or insider versions of Obsidian will not be officially supported, although
 the theme should (hopefully) not break too much.
-> If significant issues are found, do open an issue here. I (bladeacer) will try to
-> troubleshoot them once the beta or insider version of Obsidian has a public equivalent.
+> If significant issues are found, do open an issue here. I (bladeacer) will try to troubleshoot them once the beta or insider version of Obsidian has a public equivalent.
 
 You can also find this in the documentation.
 
@@ -151,8 +150,7 @@ Refer to the documentation for the full set of features in Flexcyon.
 
 #### What this theme does not have
 
-- multiple colour schemes (though you can override the existing one with your
-  own, see [Style Settings](#style-settings))
+- multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
 - alternate checkboxes
 - embedded fonts, svgs
 
@@ -160,8 +158,7 @@ Refer to the documentation for the full set of features in Flexcyon.
 
 View [supported plugins and snippets here](https://flexcyon.github.io/docs-en/README/page-3/)
 
-For plugins/snippets that are not styled yet, feel free to open a Pull Request/
-Feature Request/start a Discussion on it.
+For plugins/snippets that are not styled yet, feel free to open a Pull Request/ Feature Request/start a Discussion on it.
 
 #### Snippet collection
 
@@ -180,10 +177,7 @@ Methods of communication are listed in order of preference.
 
 ## Contributing
 
-When contributing do open an issue at
-[the repository](https://github.com/bladeacer/flexcyon/issues) or
-[start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) first.
-
+When contributing do open an issue at [the repository](https://github.com/bladeacer/flexcyon/issues) or [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) first.
 
 You can create your own fork before making a pull request.
 > Before doing this, do open an issue at this repository first.
@@ -198,27 +192,25 @@ write is detected in source files
 - `npm run fix`: Equivalent to running `stylelint --fix`. Run this only after
 your file changes are saved.
 
-If you prefer to use CSS instead of SCSS, place your proposed code changes or
-snippets in the `css/` folder. The maintainer will try to integrate them.
+> You can use pnpm/bun equivalents and it should run the same way.
 
-Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md)
-and [Contributing Guide](./CONTRIBUTING.md).
+If you prefer to use CSS instead of SCSS, place your proposed code changes or snippets in the `css/` folder. The maintainer will try to integrate them.
+
+Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contributing Guide](./CONTRIBUTING.md).
 
 ## Style Settings
 
-Documentation for style settings of this theme can be found [here](https://flexcyon.github.io/docs-en/Styling/Style-Settings/)
+Documentation for style settings of this theme can be found [here](https://flexcyon.github.io/docs-en/Styling/Style-Settings/).
 
-Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings)
+Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings).
 
 ## License
 
-This theme is licensed under the [MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE)
+This theme is licensed under the [MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE).
 
 ## Credits
 
-Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and
-[tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not
-be possible.
+Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and [tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
 
 The code of conduct was adopted from the
 [Contributor Covenant](https://www.contributor-covenant.org/)
