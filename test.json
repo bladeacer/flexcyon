@@ -161,5 +161,22 @@
   "flexcyon@@status-bar-font-size": 13.7533,
   "flexcyon@@flexcyon-status-style": "none",
   "flexcyon@@flexcyon-status-text-enable-color": false,
-  "flexcyon@@flexcyon-no-status-in-new-tab": false
+  "flexcyon@@flexcyon-no-status-in-new-tab": false,
+  "flexcyon@@flexcyon-anim-type": "none",
+  "flexcyon@@flexcyon-modal-anim-type": "none",
+  "flexcyon@@flexcyon-anim-duration": 300,
+  "flexcyon@@flexcyon-anim-easing": "ease-in-out",
+  "flexcyon@@flexcyon-anim-slide-amount": 56.6311,
+  "flexcyon@@flexcyon-anim-style-settings-contain": false,
+  "flexcyon@@flexcyon-anim-start-scale-amt": 0.33,
+  "flexcyon@@flexcyon-anim-start-opacity": 0.55,
+  "flexcyon@@flexcyon-workspace-layout": "none",
+  "flexcyon@@flexcyon-workspace-cards-tui-ext": true,
+  "flexcyon@@flexcyon-view-header-breadcrumb-max-w": 12.5,
+  "flexcyon@@flexcyon-mode-view-header-title-verti-padding": 4,
+  "flexcyon@@flexcyon-mode-view-header-title-horiz-padding": 12,
+  "flexcyon@@flexcyon-bg-type": "none",
+  "flexcyon@@flexcyon-editor-bg-rotation": 0,
+  "flexcyon@@flexcyon-editor-bg-width": 15,
+  "flexcyon@@flexcyon-editor-dot-size": 2.5
 }

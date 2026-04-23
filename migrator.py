@@ -239,6 +239,27 @@ def get_schema():
         ("status-style", str, "none", "editor"),
         ("status-text-enable-color", bool, False, "editor"),
         ("no-status-in-new-tab", bool, False, "editor"),
+
+        ("anim-type", str, "none", "editor"),
+        ("modal-anim-type", str, "none", "editor"),
+        ("anim-duration", (float, int), 300, "editor"),
+        ("anim-easing", str, "ease-in-out", "editor"),
+        ("anim-slide-amount", (float, int), 56.6311, "editor"),
+        ("anim-style-settings-contain", bool, False, "editor"),
+        ("anim-start-scale-amt", (float, int), 0.33, "editor"),
+        ("anim-start-opacity", (float, int), 0.55, "editor"),
+
+        ("workspace-layout", str, "none", "editor"),
+        ("workspace-cards-tui-ext", bool, True, "editor"),
+
+        ("view-header-breadcrumb-max-w", (float, int), 12.5, "editor"),
+        ("mode-view-header-title-verti-padding", (float, int), 4, "editor"),
+        ("mode-view-header-title-horiz-padding", (float, int), 12, "editor"),
+
+        ("bg-type", str, "none", "editor"),
+        ("editor-bg-rotation", (float, int), 0, "editor"),
+        ("editor-bg-width", (float, int), 15, "editor"),
+        ("editor-dot-size", (float, int), 2.5, "editor"),
     ]
     return schema
 

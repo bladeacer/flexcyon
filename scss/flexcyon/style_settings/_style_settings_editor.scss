@@ -690,6 +690,11 @@ settings:
     id: flexcyon-highlight-active-line-opacity
     type: variable-text
     default: 7.5%
+  - title: Animation initial opacity
+    id: flexcyon-anim-start-opacity
+    description: Initial opacity for all animations. When set to 1, the fade in animatin does not visually show anything.
+    type: variable-number
+    default: 0.55
 
   - title: Code Blocks
     type: heading
@@ -917,6 +922,29 @@ settings:
         value: center
       - label: Right
         value: right
+
+  - title: View Header
+    type: heading
+    level: 2
+    collapsed: true
+  - title: View header breadcrumb max width
+    id: flexcyon-view-header-breadcrumb-max-w
+    description: Max width of view header breadcrumb
+    type: variable-number
+    default: 12.5
+    format: vw
+  - title: Mode View Header Title Vertical Padding
+    id: flexcyon-mode-view-header-title-verti-padding
+    description: Vertical paddding of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 4
+    format: px
+  - title: Mode View Header Title Horizontal Padding
+    id: flexcyon-mode-view-header-title-horiz-padding
+    description: Horizontal padding of View Header title in modes like Angled and Powerlevel10k
+    type: variable-number
+    default: 12
+    format: px
 
   - title: Prompts
     type: heading
@@ -1191,11 +1219,6 @@ settings:
     description: Initial scaling for scale up animation.
     type: variable-number
     default: 0.33
-  - title: Animation initial opacity
-    id: flexcyon-anim-start-opacity
-    description: Initial opacity for all animations. When set to 1, the fade in animatin does not visually show anything.
-    type: variable-number
-    default: 0.55
 
   - title: Layout
     type: heading
@@ -1782,28 +1805,6 @@ settings:
     default: 12
     format: px
 
-  - title: View header
-    type: heading
-    level: 1
-    collapsed: true
-  - title: View header breadcrumb max width
-    id: flexcyon-view-header-breadcrumb-max-w
-    description: Max width of view header breadcrumb
-    type: variable-number
-    default: 12.5
-    format: vw
-  - title: Mode View Header Title Vertical Padding
-    id: flexcyon-mode-view-header-title-verti-padding
-    description: Vertical paddding of View Header title in modes like Angled and Powerlevel10k
-    type: variable-number
-    default: 4
-    format: px
-  - title: Mode View Header Title Horizontal Padding
-    id: flexcyon-mode-view-header-title-horiz-padding
-    description: Horizontal padding of View Header title in modes like Angled and Powerlevel10k
-    type: variable-number
-    default: 12
-    format: px
 
   - title: Debug
     type: heading
