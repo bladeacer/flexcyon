@@ -3521,7 +3521,7 @@ body {
   );
   --text-faint: var(--text-muted);
   --text-accent: var(--color-accent);
-  --text-on-accent-wrapper: var(--color-base-25);
+  --text-on-accent-wrapper: var(--color-red);
   --text-on-accent: oklch(
     from var(--text-on-accent-wrapper)
       clamp(
