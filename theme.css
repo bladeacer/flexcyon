@@ -2669,7 +2669,17 @@ body {
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
-  --background-modifier-error: transparent;
+  --background-modifier-error: oklch(
+    from var(--color-red)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   --background-modifier-error-hover: transparent;
 }
 
@@ -8048,7 +8058,7 @@ body .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is
 }
 body .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-header-inner:hover,
 body .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active) > .workspace-tab-header-inner {
-  border-block-end: 1px solid var(--interactive-accent);
+  border-block-end: 2px solid var(--interactive-accent);
 }
 body .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-header-inner {
   border-block-end: 1px solid var(--background-secondary);
@@ -14035,8 +14045,8 @@ body div.workspace-leaf-content[data-type*=calendar] .fc-header-toolbar {
 body div.workspace-leaf-content[data-type*=calendar] .fc-header-toolbar .fc-button-group {
   flex-direction: row;
 }
-body .fc .fc-button-primary:focus {
-  box-shadow: 0 0 0 0.15rem var(--text-faint);
+body .modal-content form input[id=taskStatus] + p span button {
+  border: none !important;
 }
 
 body.flexcyon-workspace-angled-layout .oz-explorer-container .oz-file-tree-files div,
@@ -14540,6 +14550,10 @@ body {
   --flexcyon-bases-cards-label-opacity: 0.85;
 }
 
+.bases-toolbar:not(:active, :hover, :focus, :focus-within) {
+  opacity: var(--dimmed);
+}
+
 .bases-embed,
 .workspace-leaf-content[data-type=bases] .view-content {
   padding: var(--flexcyon-bases-padding-verti) var(--flexcyon-bases-padding-horiz);
@@ -14552,13 +14566,13 @@ body {
   inline-size: min(100% - 8px, 99.5%);
 }
 
+.bases-tr {
+  border-inline-end: 0.5px solid var(--table-border-color);
+}
+
 .workspace-leaf-content[data-type=markdown] .block-language-base .bases-view,
 .workspace-leaf-content[data-type=markdown] .bases-embed .bases-view {
   border: none;
-}
-.workspace-leaf-content[data-type=markdown] .block-language-base .bases-view .bases-tr,
-.workspace-leaf-content[data-type=markdown] .bases-embed .bases-view .bases-tr {
-  border-inline-end: 0.5px solid var(--text-faint);
 }
 
 span.bases-embed .bases-view .bases-tr {
@@ -14568,6 +14582,9 @@ span.bases-embed .bases-view .bases-tr {
 .bases-view {
   flex-grow: var(--flexcyon-bases-card-flex-grow);
   transition: flex-grow calc(var(--flexcyon-bases-card-delay-factor) * var(--flexcyon-anim-duration)) ease-in-out;
+}
+.bases-view > div {
+  border-inline: 0.5px solid var(--table-border-color);
 }
 
 .bases-cards-item {

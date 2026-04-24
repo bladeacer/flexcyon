@@ -80,8 +80,8 @@ body {
     }
   }
 
-  .fc .fc-button-primary:focus {
-    box-shadow: 0 0 0 0.15rem var(--text-faint);
+  .modal-content form input[id="taskStatus"] + p span button {
+    border: none !important;
   }
 }
 

@@ -23,6 +23,10 @@ body {
   --flexcyon-bases-cards-label-opacity: 0.85;
 }
 
+.bases-toolbar:not(:active, :hover, :focus, :focus-within) {
+  opacity: var(--dimmed);
+}
+
 .bases-embed,
 .workspace-leaf-content[data-type="bases"] .view-content {
   padding: var(--flexcyon-bases-padding-verti)
@@ -37,14 +41,20 @@ body {
   inline-size: min(calc(100% - 8px), 99.5%);
 }
 
+// .bases-tr,
+// .bases-tbody,
+// .bases-thead {
+//   max-inline-size: min(calc(100% - 8px), 99.5%) !important;
+// }
+
+.bases-tr {
+  border-inline-end: 0.5px solid var(--table-border-color);
+}
+
 .workspace-leaf-content[data-type="markdown"] .block-language-base,
 .workspace-leaf-content[data-type="markdown"] .bases-embed {
   .bases-view {
     border: none;
-
-    .bases-tr {
-      border-inline-end: 0.5px solid var(--text-faint);
-    }
   }
 }
 
@@ -63,6 +73,10 @@ span.bases-embed {
       var(--flexcyon-bases-card-delay-factor) * var(--flexcyon-anim-duration)
     )
     ease-in-out;
+
+  > div {
+    border-inline: 0.5px solid var(--table-border-color);
+  }
 }
 
 .bases-cards-item {

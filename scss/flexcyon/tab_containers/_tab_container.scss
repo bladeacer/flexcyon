@@ -55,7 +55,7 @@ body {
     .workspace-tab-header > .workspace-tab-header-inner:hover,
     .workspace-tab-header:is(.mod-active, .is-active)
       > .workspace-tab-header-inner {
-      border-block-end: 1px solid var(--interactive-accent);
+      border-block-end: 2px solid var(--interactive-accent);
     }
 
     .workspace-tab-header > .workspace-tab-header-inner {

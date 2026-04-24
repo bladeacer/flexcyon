@@ -47,8 +47,8 @@ body {
     "background-modifier-border-focus",
     "color-base-30"
   );
+  @include m.configure-oklch("background-modifier-error", "color-red");
 
-  --background-modifier-error: transparent;
   --background-modifier-error-hover: transparent;
 }
 
