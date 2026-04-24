@@ -875,12 +875,12 @@ body.theme-light {
   --color-accent-hsl: oklch(from var(--flexcyon-accent) l c h);
   /* cooler hue, higher chroma, lighter */
   --color-accent-1: oklch(
-    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
+    from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
   --interactive-accent: var(--color-accent-1);
   /* hue shift, lower chroma, lighter, 87.5% alpha */
   --color-accent-2: oklch(
-    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+    from var(--flexcyon-accent) calc(l * 1.05) calc(c * 0.85) calc(h - 20) /
       87.5%
   );
 }
@@ -1568,6 +1568,9 @@ body {
   --checkbox-border-color: var(--color-blue);
   --checkbox-border-color-hover: var(--flexcyon-palette-lilac-hover);
   --flexcyon-ascii-checkboxes-font-size: 1.2rem;
+  --toggle-thumb-active-opacity: var(--dimmed);
+  --toggle-border-width: 4px;
+  --toggle-thumb-radius: 16px;
 }
 body .mod-checkbox {
   text-transform: capitalize;
@@ -1577,6 +1580,21 @@ body .checkbox-container {
 }
 body .checkbox-container.is-enabled {
   background-color: var(--color-green);
+}
+
+.modal .checkbox-container:active::after {
+  inline-size: var(--toggle-thumb-width);
+  block-size: var(--toggle-thumb-height);
+  margin-block-start: calc(var(--toggle-border-width) * 0);
+}
+
+.modal .checkbox-container.is-enabled:active::after {
+  inset-inline-start: unset;
+}
+
+.modal .checkbox-container::after {
+  inset-block-start: 0;
+  margin: var(--toggle-border-width) 0;
 }
 
 body.flexcyon-flex-max-mode input[data-task="!"]:checked,

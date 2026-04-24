@@ -22,13 +22,13 @@ body.theme-light {
 
   /* cooler hue, higher chroma, lighter */
   --color-accent-1: oklch(
-    from var(--flexcyon-accent) calc(l * 1.15) calc(c * 1.02) calc(h - 3)
+    from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
   --interactive-accent: var(--color-accent-1);
 
   /* hue shift, lower chroma, lighter, 87.5% alpha */
   --color-accent-2: oklch(
-    from var(--flexcyon-accent) calc(l * 1.1) calc(c * 0.85) calc(h - 20) /
+    from var(--flexcyon-accent) calc(l * 1.05) calc(c * 0.85) calc(h - 20) /
       87.5%
   );
 }
