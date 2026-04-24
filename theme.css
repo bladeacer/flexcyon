@@ -10656,16 +10656,16 @@ body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
   color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container {
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control .checkbox-container,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control .checkbox-container,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control .checkbox-container {
   font-weight: bolder;
   background-color: var(--color-base-05);
   box-shadow: unset;
 }
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container::after,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container::after {
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control .checkbox-container::after,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control .checkbox-container::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control .checkbox-container::after {
   inline-size: fit-content;
   block-size: fit-content;
   color: var(--color-red);
@@ -10675,9 +10675,9 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) di
   box-shadow: unset;
   transform: translateY(-10%);
 }
-body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
-body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control div.checkbox-container.is-enabled::after,
-body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control div.checkbox-container.is-enabled::after {
+body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control .checkbox-container.is-enabled::after,
+body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not([class*=iconic]) div.setting-item-control .checkbox-container.is-enabled::after,
+body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) div.setting-item-control .checkbox-container.is-enabled::after {
   color: var(--color-green);
   content: ":)";
   transform: translate(16px, -10%);
@@ -12905,7 +12905,7 @@ settings:
     type: variable-text
     default: 110%
   - title: Smiley Toggle Icons 
-    description: Display smiley toggle icons in the UI
+    description: Display smiley toggle icons in the UI.
     id: flexcyon-settings-smiley-icons-enabled
     type: class-toggle
     default: false

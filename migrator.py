@@ -308,6 +308,39 @@ def get_schema():
         ("metadata-rainbow-icons", bool, False, "editor"),
         ("meta-container-padding-left", (float, int), 14, "editor"),
         ("metadata-no-properties-title", bool, False, "editor"),
+
+        ("highlight-active-line", bool, False, "editor"),
+        ("enable-rel-nums", bool, False, "editor"),
+        ("no-num-with-relative", bool, False, "editor"),
+        ("relative-num-only", bool, False, "editor"),
+        ("select-relative-num", str, "none", "editor"),
+        ("repl-active-line-num-str", bool, False, "editor"),
+        ("repl-active-line-str", str, "->", "editor"),
+        ("repl-active-str-space", (float, int), 0, "editor"),
+
+        ("cursor-type", str, "auto", "editor"),
+        ("enable-smooth-cursor", bool, True, "editor"),
+        ("cursor-duration", (float, int), 42.5, "editor"),
+        ("cursor-timing-fn", str, "ease-in", "editor"),
+        ("cursor-min-width", str, "unset", "editor"),
+
+        ("graph-control-verti-padding", (float, int), 6, "editor", False),
+        ("graph-control-horiz-padding", (float, int), 12, "editor", False),
+
+        ("display-os", bool, False, "editor"),
+        ("os-detail-padding-l", (float, int), 12, "editor"),
+        ("os-detail-padding-r", (float, int), 8, "editor"),
+        ("display-screen-dimens", bool, False, "editor"),
+        ("screen-dimens-padding-l", (float, int), 16, "editor"),
+
+        ("number-tabs", bool, False, "editor"),
+        ("remove-tab-headers", bool, False, "editor"),
+        ("reverse-tab-header-container", bool, False, "editor"),
+
+        ("upsize", str, "103%", "editor", False),
+        ("expand", str, "110%", "editor", False),
+        ("settings-smiley-icons-enabled", bool, False, "editor"),
+        ("ascii-icon-set", bool, False, "editor"),
     ]
     return schema
 

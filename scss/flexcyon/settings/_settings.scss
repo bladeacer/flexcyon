@@ -307,13 +307,13 @@ body.flexcyon-settings-smiley-icons-enabled.flexcyon-ensure-plugin-icon:not(
   ),
 body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) {
   div.setting-item-control {
-    div.checkbox-container {
+    .checkbox-container {
       font-weight: bolder;
       background-color: var(--color-base-05);
       box-shadow: unset;
     }
 
-    div.checkbox-container::after {
+    .checkbox-container::after {
       inline-size: fit-content;
       block-size: fit-content;
       color: var(--color-red);
@@ -324,7 +324,7 @@ body.flexcyon-settings-smiley-icons-enabled:not(.flexcyon-ensure-plugin-icon) {
       transform: translateY(-10%);
     }
 
-    div.checkbox-container.is-enabled::after {
+    .checkbox-container.is-enabled::after {
       color: var(--color-green);
       content: ":)";
       transform: translate(16px, -10%);
