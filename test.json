@@ -245,5 +245,8 @@
   "flexcyon@@upsize": "103%",
   "flexcyon@@expand": "110%",
   "flexcyon@@flexcyon-settings-smiley-icons-enabled": false,
-  "flexcyon@@flexcyon-ascii-icon-set": false
+  "flexcyon@@flexcyon-ascii-icon-set": false,
+  "flexcyon@@flexcyon-ensure-plugin-icon": true,
+  "flexcyon@@flexcyon-settings-coloured-icons": false,
+  "flexcyon@@flexcyon-stylised-pins": true
 }

@@ -2933,6 +2933,33 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions :nth-of-type(8n + 7):h
   color: var(--color-red);
 }
 
+body.flexcyon-flex-max-mode div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:last-of-type,
+body.flexcyon-settings-coloured-icons div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:last-of-type {
+  color: oklch(from var(--color-red) l c h/90%);
+}
+body.flexcyon-flex-max-mode div.setting-group > div.setting-items > div > div.setting-item-control > div:first-of-type:not(:last-of-type),
+body.flexcyon-flex-max-mode div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:first-of-type,
+body.flexcyon-settings-coloured-icons div.setting-group > div.setting-items > div > div.setting-item-control > div:first-of-type:not(:last-of-type),
+body.flexcyon-settings-coloured-icons div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:first-of-type {
+  color: oklch(from var(--color-blue) l c h/90%);
+}
+body.flexcyon-flex-max-mode .setting-add-hotkey-button,
+body.flexcyon-flex-max-mode .extra-setting-button.mod-hotkeys,
+body.flexcyon-flex-max-mode div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:nth-of-type(2),
+body.flexcyon-settings-coloured-icons .setting-add-hotkey-button,
+body.flexcyon-settings-coloured-icons .extra-setting-button.mod-hotkeys,
+body.flexcyon-settings-coloured-icons div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:nth-of-type(2) {
+  color: oklch(from var(--color-green) l c h/90%);
+}
+body.flexcyon-flex-max-mode div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:nth-of-type(3):not(:last-of-type),
+body.flexcyon-settings-coloured-icons div.setting-group.installed-plugins-container > div.setting-items > div > div.setting-item-control > div:nth-of-type(3):not(:last-of-type) {
+  color: oklch(from var(--color-pink) l c h/90%);
+}
+body.flexcyon-flex-max-mode .setting-restore-hotkey-button,
+body.flexcyon-settings-coloured-icons .setting-restore-hotkey-button {
+  color: oklch(from var(--color-purple) l c h/90%);
+}
+
 body.is-mobile .vertical-tab-content {
   background-color: var(--color-base-05);
 }
@@ -12920,7 +12947,7 @@ settings:
     type: class-toggle
     default: true
   - title: Coloured Icons in Settings
-    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
+    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc. Current implementation might not work with earlier Obsidian versions.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: false

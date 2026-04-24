@@ -1893,7 +1893,7 @@ settings:
     type: class-toggle
     default: true
   - title: Coloured Icons in Settings
-    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc.
+    description: Display coloured icons for buttons in setting like uninstall, options, hotkeys, etc. Current implementation might not work with earlier Obsidian versions.
     id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: false

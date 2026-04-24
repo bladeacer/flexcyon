@@ -140,6 +140,64 @@ body.flexcyon-sidedock-icon-effects div.side-dock-actions {
   );
 }
 
+// TODO: Decouple this from aria-label
+
+body.flexcyon-flex-max-mode,
+body.flexcyon-settings-coloured-icons {
+  div.setting-group.installed-plugins-container
+    > div.setting-items
+    > div
+    > div.setting-item-control
+    > div:last-of-type {
+    color: oklch(from var(--color-red) l c h / 90%);
+  }
+
+  div.setting-group
+    > div.setting-items
+    > div
+    > div.setting-item-control
+    > div:first-of-type:not(:last-of-type),
+  div.setting-group.installed-plugins-container
+    > div.setting-items
+    > div
+    > div.setting-item-control
+    > div:first-of-type {
+    color: oklch(from var(--color-blue) l c h / 90%);
+  }
+
+  .setting-add-hotkey-button,
+  .extra-setting-button.mod-hotkeys,
+  div.setting-group.installed-plugins-container
+    > div.setting-items
+    > div
+    > div.setting-item-control
+    > div:nth-of-type(2) {
+    color: oklch(from var(--color-green) l c h / 90%);
+  }
+
+  div.setting-group.installed-plugins-container
+    > div.setting-items
+    > div
+    > div.setting-item-control
+    > div:nth-of-type(3):not(:last-of-type) {
+    color: oklch(from var(--color-pink) l c h / 90%);
+  }
+
+  .setting-restore-hotkey-button {
+    color: oklch(from var(--color-purple) l c h / 90%);
+  }
+
+  // [aria-label^="Open snippets folder"],
+  // [aria-label^="Open plugins folder"] {
+  //   color: rgb(var(--color-green-rgb), 0.9);
+  // }
+
+  // [aria-label^="Reload plugins"],
+  // [aria-label^="Reload snippets"] {
+  //   color: rgb(var(--color-cyan-rgb), 0.9);
+  // }
+}
+
 body.is-mobile .vertical-tab-content {
   background-color: var(--color-base-05);
 }

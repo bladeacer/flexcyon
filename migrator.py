@@ -341,6 +341,9 @@ def get_schema():
         ("expand", str, "110%", "editor", False),
         ("settings-smiley-icons-enabled", bool, False, "editor"),
         ("ascii-icon-set", bool, False, "editor"),
+        ("ensure-plugin-icon", bool, True, "editor"),
+        ("settings-coloured-icons", bool, False, "editor"),
+        ("stylised-pins", bool, True, "editor"),
     ]
     return schema
 
