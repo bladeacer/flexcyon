@@ -7,6 +7,10 @@ body {
 
 /* obsi-snip-coll end */
 
+body.cm-fat-cursor-mark {
+  background-color: var(--interactive-accent);
+}
+
 /* obsi-snip-coll start: smooth-cursor */
 
 body.flexcyon-enable-smooth-cursor {
