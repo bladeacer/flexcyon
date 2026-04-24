@@ -276,6 +276,32 @@ def get_schema():
         ("callouts-flashcard-height", (float, int), 250, "editor"),
         ("callout-flashcard-animation-duration", (float, int), 500, "editor"),
         ("callout-pop-animation-duration", (float, int), 200, "editor"),
+
+        ("hr-no-reading", bool, False, "editor"),
+        ("hr-color", str, "#393e48", "editor", False),
+        ("cust-str-hr", bool, False, "editor"),
+        ("cust-hr-str", str, "f", "editor"),
+        ("cust-hr-str-font-size", (float, int), 1.118, "editor"),
+        ("cust-hr-str-horiz-padding", (float, int), 8, "editor"),
+
+        ("ascii-checkboxes-enabled", bool, False, "editor"),
+        ("ascii-checkboxes-font-size", (float, int), 1.2, "editor"),
+        ("clip-path-checkboxes-enabled", bool, False, "editor"),
+        ("rainbow-bullet-points", bool, False, "editor"),
+        ("default-ol-style", str, "decimal", "editor"),
+
+        ("media-embed-vertical-margin", (float, int), 8, "editor"),
+        ("img-border-radius", (float, int), 15, "editor", False),
+
+        ("link-color@@dark", str, "#a461c8", "editor"),
+        ("link-external-link-color@@dark", str, "#5a8fcd", "editor"),
+        ("link-unresolved-color@@dark", str, "#a461c8", "editor"),
+
+        ("link-color@@light", str, "#6f49ae", "editor"),
+        ("link-external-link-color@@light", str, "#5c9fe4", "editor"),
+        ("link-unresolved-color@@light", str, "#6f49ae", "editor"),
+        ("alt-link-style", bool, False, "editor"),
+        ("alt-link-opacity", str, "55%", "editor"),
     ]
     return schema
 

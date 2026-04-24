@@ -695,6 +695,10 @@ settings:
     description: Initial opacity for all animations. When set to 1, the fade in animatin does not visually show anything.
     type: variable-number
     default: 0.55
+  - title: Alternate link styling opacity
+    id: flexcyon-alt-link-opacity
+    type: variable-text
+    default: 55%
 
   - title: Code Blocks
     type: heading
@@ -1582,8 +1586,8 @@ settings:
     format: px
   - title: Image Border Radius
     type: variable-number
-    id: img-border-radius
-    default: 15
+    id: flexcyon-img-border-radius
+    default: 16
     format: px
 
   - title: Links
@@ -1612,10 +1616,6 @@ settings:
     id: flexcyon-alt-link-style
     type: class-toggle
     default: false
-  - title: Alternate link styling opacity
-    id: flexcyon-alt-link-opacity
-    type: variable-text
-    default: 55%
 
   - title: Properties
     type: heading

@@ -1,0 +1,8 @@
+body {
+  --flexcyon-img-border-radius: 16px;
+
+  .image-embed img,
+  .image-container img {
+    border-radius: var(--flexcyon-img-border-radius);
+  }
+}
