@@ -302,6 +302,12 @@ def get_schema():
         ("link-unresolved-color@@light", str, "#6f49ae", "editor"),
         ("alt-link-style", bool, False, "editor"),
         ("alt-link-opacity", str, "55%", "editor"),
+
+        ("metadata-display-reading-disabled", bool, False, "editor"),
+        ("metadata-display-editing-disabled", bool, False, "editor"),
+        ("metadata-rainbow-icons", bool, False, "editor"),
+        ("meta-container-padding-left", (float, int), 14, "editor"),
+        ("metadata-no-properties-title", bool, False, "editor"),
     ]
     return schema
 

@@ -213,5 +213,10 @@
   "flexcyon@@flexcyon-link-external-link-color@@light": "#5c9fe4",
   "flexcyon@@flexcyon-link-unresolved-color@@light": "#6f49ae",
   "flexcyon@@flexcyon-alt-link-style": false,
-  "flexcyon@@flexcyon-alt-link-opacity": "55%"
+  "flexcyon@@flexcyon-alt-link-opacity": "55%",
+  "flexcyon@@flexcyon-metadata-display-reading-disabled": false,
+  "flexcyon@@flexcyon-metadata-display-editing-disabled": false,
+  "flexcyon@@flexcyon-metadata-rainbow-icons": false,
+  "flexcyon@@flexcyon-meta-container-padding-left": 14,
+  "flexcyon@@flexcyon-metadata-no-properties-title": false
 }
