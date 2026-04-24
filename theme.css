@@ -2573,7 +2573,7 @@ body {
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
   --background-modifier-hover: oklch(
-    from var(--color-base-20)
+    from var(--color-base-25)
       clamp(
         0,
         (l * var(--flexcyon-theme-brightness-ratio)) +
@@ -9951,7 +9951,7 @@ body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.search-settin
 body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active {
   padding-inline-start: 0.75rem;
   color: var(--text-accent);
-  background: linear-gradient(to right, transparent 0%, var(--text-on-accent) 7.5%, var(--text-on-accent) 87.5%, transparent 100%);
+  background: linear-gradient(to right, transparent 0%, var(--color-base-20) 7.5%, var(--color-base-20) 87.5%, transparent 100%);
 }
 body.flexcyon-enable-alt-active-item-effect .vertical-tab-nav-item.is-active:hover {
   font-weight: bold;

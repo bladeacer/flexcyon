@@ -30,7 +30,7 @@ body {
   @include m.configure-oklch("background-primary-alt", "color-base-20");
   @include m.configure-oklch("background-secondary", "color-base-00");
   @include m.configure-oklch("background-secondary-alt", "color-base-25");
-  @include m.configure-oklch("background-modifier-hover", "color-base-20");
+  @include m.configure-oklch("background-modifier-hover", "color-base-25");
   @include m.configure-oklch("background-modifier-form-field", "color-base-20");
   @include m.configure-oklch("background-modifier-cover", "color-base-15");
   @include m.configure-oklch("background-modifier-message", "color-base-20");
