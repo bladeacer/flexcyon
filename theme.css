@@ -3759,15 +3759,10 @@ body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) 
 body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
   content: "'";
 }
-body .markdown-source-view.is-readable-line-width .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-body .markdown-source-view.is-readable-line-width .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-body .markdown-source-view.is-readable-line-width .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-  transform: translateX(calc(0.065 * var(--file-line-width)));
-}
-body .markdown-source-view:not(.is-readable-line-width) .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-body .markdown-source-view:not(.is-readable-line-width) .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-body .markdown-source-view:not(.is-readable-line-width) .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-  transform: translateX(50px);
+body .markdown-source-view .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
+body .markdown-source-view .inline-title:has(+ .cm-contentContainer > .cm-gutters),
+body .markdown-source-view .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+  transform: translateX(54px);
 }
 
 body.theme-dark .cm-gutterElement.cm-active {

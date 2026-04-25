@@ -19,20 +19,13 @@ body {
     }
   }
 
-  // Opinionated translation so inline title and metadata container are aligned to main content text in live preview when line numbers/gutter is enabled.
-  .markdown-source-view.is-readable-line-width {
-    .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-    .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-    .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-      transform: translateX(calc(0.065 * var(--file-line-width)));
-    }
-  }
+  // Opinionated translation so inline title and metadata container are aligned to main content text in live preview when line numbers/gutter is enabled. 54px is the magic number for gutter width + padding accounted for.
 
-  .markdown-source-view:not(.is-readable-line-width) {
+  .markdown-source-view {
     .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
     .inline-title:has(+ .cm-contentContainer > .cm-gutters),
     .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-      transform: translateX(50px);
+      transform: translateX(54px);
     }
   }
 }
