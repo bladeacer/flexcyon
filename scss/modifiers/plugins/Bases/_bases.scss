@@ -231,3 +231,13 @@ div.bases-cards-cover:not([style*="background-image"]) {
 .bases-list-container {
   min-block-size: unset;
 }
+
+body.flexcyon-hide-until-hover-bases-title-sidebar {
+  .mod-left-split,
+  .mod-right-split {
+    .bases-table-header:not(:hover, :active, :focus, :focus-within)
+      .bases-table-header-name {
+      display: none;
+    }
+  }
+}
