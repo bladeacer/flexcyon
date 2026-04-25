@@ -142,6 +142,8 @@ body.flexcyon-enable-rel-nums:not(.is-mobile) {
   @include write-relative-lines(10);
 }
 
+// TODO: Use Unicode character instead for Greek/Chinese
+
 // Lower Greek letters
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) {
   @include target-relative-line-abv(1, "α", 0.925);
