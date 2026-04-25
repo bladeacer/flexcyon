@@ -61,7 +61,7 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
 
 /* obsi-snip-coll end */
 
-body.flexcyon-flex-max-mode,
+/* obsi-snip-coll start: wrap-long-filenames */
 body.flexcyon-wrap-long-filenames {
   .tree-item-inner {
     overflow: visible;
@@ -69,6 +69,8 @@ body.flexcyon-wrap-long-filenames {
     white-space: collapse;
   }
 }
+
+/* obsi-snip-coll end */
 
 @mixin nth-nav-folder-colors($color-map: (), $is-bg: 0) {
   $max-index: 0;

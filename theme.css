@@ -3579,7 +3579,8 @@ body.theme-light {
   );
 }
 
-body {
+body.theme-dark,
+body.theme-light {
   --flexcyon-highlight-colour: var(--color-cyan);
   --flexcyon-highlight-opacity: 22.5%;
   --text-highlight-bg: oklch(
@@ -3653,59 +3654,79 @@ body {
   --font-ui-medium: 16.1803px;
   --font-ui-large: 17.7983px;
 }
-body .cm-em.cm-quote {
+body.theme-dark .cm-em.cm-quote,
+body.theme-light .cm-em.cm-quote {
   color: var(--italic-color);
 }
-body .cm-formatting-em,
-body .cm-formatting-strong,
-body .cm-formatting-code,
-body .cm-formatting-math {
+body.theme-dark .cm-formatting-em,
+body.theme-dark .cm-formatting-strong,
+body.theme-dark .cm-formatting-code,
+body.theme-dark .cm-formatting-math,
+body.theme-light .cm-formatting-em,
+body.theme-light .cm-formatting-strong,
+body.theme-light .cm-formatting-code,
+body.theme-light .cm-formatting-math {
   opacity: calc(var(--dimmed) + 0.25);
 }
-body .cm-strong.cm-quote {
+body.theme-dark .cm-strong.cm-quote,
+body.theme-light .cm-strong.cm-quote {
   color: var(--bold-color);
 }
-body .cm-line .cm-matchingbracket {
+body.theme-dark .cm-line .cm-matchingbracket,
+body.theme-light .cm-line .cm-matchingbracket {
   color: var(--color-purple);
 }
-body .cm-line .ͼi {
+body.theme-dark .cm-line .ͼi,
+body.theme-light .cm-line .ͼi {
   color: var(--color-cyan);
 }
-body .cm-line .ͼj {
+body.theme-dark .cm-line .ͼj,
+body.theme-light .cm-line .ͼj {
   color: var(--color-orange);
 }
-body .cm-line .ͼc {
+body.theme-dark .cm-line .ͼc,
+body.theme-light .cm-line .ͼc {
   color: var(--color-accent);
 }
-body .cm-line .ͼb {
+body.theme-dark .cm-line .ͼb,
+body.theme-light .cm-line .ͼb {
   color: var(--color-yellow);
 }
-body .cm-s-obsidian span.cm-formatting-highlight,
-body .cm-s-obsidian span.cm-highlight,
-body .cm-highlight + .cm-widgetBuffer + .math,
-body .markdown-source-view:is(.is-live-preview) mark {
+body.theme-dark .cm-s-obsidian span.cm-formatting-highlight,
+body.theme-dark .cm-s-obsidian span.cm-highlight,
+body.theme-dark .cm-highlight + .cm-widgetBuffer + .math,
+body.theme-dark .markdown-source-view:is(.is-live-preview) mark,
+body.theme-light .cm-s-obsidian span.cm-formatting-highlight,
+body.theme-light .cm-s-obsidian span.cm-highlight,
+body.theme-light .cm-highlight + .cm-widgetBuffer + .math,
+body.theme-light .markdown-source-view:is(.is-live-preview) mark {
   padding: var(--flexcyon-highlight-verti-padding) var(--flexcyon-highlight-horiz-padding);
   font-weight: 525;
   color: var(--text-normal);
   background-color: var(--text-highlight-bg);
   border-radius: var(--flexcyon-highlight-border-radius);
 }
-body .cm-s-obsidian span.cm-formatting-highlight {
+body.theme-dark .cm-s-obsidian span.cm-formatting-highlight,
+body.theme-light .cm-s-obsidian span.cm-formatting-highlight {
   color: var(--text-highlight-bg);
   background-color: inherit;
   border-radius: 0;
 }
-body .tooltip {
+body.theme-dark .tooltip,
+body.theme-light .tooltip {
   color: var(--text-normal);
   background-color: var(--color-base-00);
 }
-body .textLayer .highlight {
+body.theme-dark .textLayer .highlight,
+body.theme-light .textLayer .highlight {
   --highlight-bg-color: var(--text-highlight-bg);
 }
-body .textLayer .mod-focused {
+body.theme-dark .textLayer .mod-focused,
+body.theme-light .textLayer .mod-focused {
   background-color: var(--text-highlight-bg);
 }
-body .annotatationLayer .mod-focused {
+body.theme-dark .annotatationLayer .mod-focused,
+body.theme-light .annotatationLayer .mod-focused {
   background-color: oklch(from var(--text-highlight-bg) l c h/10%);
   border: var(--size-4-1) solid oklch(from var(--text-highlight-bg) l c h/80%);
 }
@@ -8742,13 +8763,14 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled .novel-word-count--active .nav-f
 }
 
 /* obsi-snip-coll end */
-body.flexcyon-flex-max-mode .tree-item-inner,
+/* obsi-snip-coll start: wrap-long-filenames */
 body.flexcyon-wrap-long-filenames .tree-item-inner {
   overflow: visible;
   text-overflow: clip;
   white-space: collapse;
 }
 
+/* obsi-snip-coll end */
 body.flexcyon-rainbow-folders .tree-item-children {
   border-inline-start: none;
 }
@@ -10865,7 +10887,7 @@ body .modal-content {
 body {
   --flexcyon-img-border-radius: 16px;
 }
-body .image-embed img,
+body .image-embed:not[alt*=banner] img,
 body .image-container img {
   border-radius: var(--flexcyon-img-border-radius);
 }
@@ -13051,7 +13073,7 @@ settings:
     default: true
   - title: Prevent accidental unpins
     id: flexcyon-prevent-accidental-unpin
-    description: Stylise pin icons in the sidebars
+    description: Stylise pin icons in the sidebars. Unpin with right click menu or Ctrl + W.
     type: class-toggle
     default: true
 

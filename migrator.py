@@ -344,6 +344,11 @@ def get_schema():
         ("ensure-plugin-icon", bool, True, "editor"),
         ("settings-coloured-icons", bool, False, "editor"),
         ("stylised-pins", bool, True, "editor"),
+        ("prevent-accidental-unpin", bool, True, "editor"),
+
+        ("input-radius", (float, int), 0, "editor", False),
+        ("input-verti-padding", (float, int), 4, "editor"),
+        ("input-horiz-padding", (float, int), 8, "editor"),
     ]
     return schema
 

@@ -15,7 +15,8 @@ body.theme-light {
   @include m.configure-oklch("text-normal", "text-normal-col");
 }
 
-body {
+body.theme-dark,
+body.theme-light {
   --flexcyon-highlight-colour: var(--color-cyan);
   --flexcyon-highlight-opacity: 22.5%;
   --text-highlight-bg: oklch(

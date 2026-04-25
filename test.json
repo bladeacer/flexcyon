@@ -248,5 +248,9 @@
   "flexcyon@@flexcyon-ascii-icon-set": false,
   "flexcyon@@flexcyon-ensure-plugin-icon": true,
   "flexcyon@@flexcyon-settings-coloured-icons": false,
-  "flexcyon@@flexcyon-stylised-pins": true
+  "flexcyon@@flexcyon-stylised-pins": true,
+  "flexcyon@@flexcyon-prevent-accidental-unpin": true,
+  "flexcyon@@input-radius": 0,
+  "flexcyon@@flexcyon-input-verti-padding": 4,
+  "flexcyon@@flexcyon-input-horiz-padding": 8
 }
