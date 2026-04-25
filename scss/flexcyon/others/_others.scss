@@ -193,3 +193,25 @@ body.flexcyon-vault-reverse {
     flex-direction: row-reverse;
   }
 }
+
+.drag-ghost-hidden::before {
+  background-color: oklch(from var(--interactive-accent) l c h / 30%);
+}
+
+.workspace-leaf.is-highlighted::before {
+  background-color: oklch(from var(--interactive-accent) l c h / 25%);
+}
+
+@media (hover: hover) {
+  .card.u-clickable:hover {
+    background-color: oklch(from var(--interactive-accent) l c h / 10%);
+  }
+}
+
+.card.is-selected {
+  background-color: oklch(from var(--interactive-accent) l c h / 20%);
+}
+
+.tree-item-self.is-being-dragged-over {
+  background: oklch(from var(--interactive-accent) l c h / 10%);
+}

@@ -49,6 +49,8 @@ body {
   );
   @include m.configure-oklch("background-modifier-error", "color-red");
 
+  // @include m.configure-oklch("background-modifier-error-rgb", "color-red");
+
   --background-modifier-error-hover: transparent;
 }
 

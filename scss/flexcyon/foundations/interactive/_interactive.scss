@@ -7,7 +7,7 @@ body.theme-light {
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
   --interactive-accent: oklch(from var(--text-accent) l c h / 80%);
-  --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --interactive-accent-hsl: var(--interactive-accent);
   --interactive-accent-hover: color-mix(
     in oklch shorter hue,
     var(--text-accent) 75%,

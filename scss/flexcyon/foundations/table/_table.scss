@@ -19,6 +19,7 @@ body {
   --flexcyon-th-horiz-padding: 10px;
   --flexcyon-th-live-pad-scale: 0.2;
   --flexcyon-th-table-alignment: left;
+  --table-selection: oklch(from var(--color-accent) l c h / 10%);
 
   .el-table td,
   td div.table-cell-wrapper {

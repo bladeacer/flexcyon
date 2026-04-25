@@ -1,0 +1,27 @@
+body {
+  .pdf-container .textLayer ::selection,
+  .markdown-source-view.mod-cm6 .pdf-container .textLayer ::selection {
+    background-color: var(--color-accent);
+  }
+
+  .pdf-container
+    .annotationlayer
+    :is(.linkannotation, .buttonwidgetannotation.pushbutton):not(.hasborder)
+    > a:hover {
+    background-color: oklch(from var(--color-accent) l c h / 10%);
+  }
+
+  .pdf-container .annotationLayer .linkAnnotation.hasBorder:hover {
+    background-color: oklch(from var(--color-accent) l c h / 10%);
+  }
+
+  .pdf-container .textLayer .highlight.selected {
+    background-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent);
+  }
+
+  .pdf-container .textLayer .highlight:not(.selected) {
+    background-color: var(--color-yellow);
+    box-shadow: 0 0 0 2px var(--color-yellow);
+  }
+}

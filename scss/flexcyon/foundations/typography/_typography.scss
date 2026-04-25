@@ -55,11 +55,7 @@ body {
   --text-error: var(--color-red);
   --text-warning: var(--color-red);
   --text-success: var(--color-green);
-  --text-sel-wrapper: color-mix(
-    in oklch shorter hue,
-    var(--color-base-35) 20%,
-    transparent
-  );
+  --text-sel-wrapper: oklch(from var(--color-accent) l c h / 30%);
 
   @include m.configure-oklch("text-selection", "text-sel-wrapper");
 
@@ -129,5 +125,19 @@ body {
   .tooltip {
     color: var(--text-normal);
     background-color: var(--color-base-00);
+  }
+
+  .textLayer .highlight {
+    --highlight-bg-color: var(--text-highlight-bg);
+  }
+
+  .textLayer .mod-focused {
+    background-color: var(--text-highlight-bg);
+  }
+
+  .annotatationLayer .mod-focused {
+    background-color: oklch(from var(--text-highlight-bg) l c h / 10%);
+    border: var(--size-4-1) solid
+      oklch(from var(--text-highlight-bg) l c h / 80%);
   }
 }

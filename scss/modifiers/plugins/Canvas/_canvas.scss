@@ -1,7 +1,4 @@
 body {
-  --color-accent: hsl(
-    var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
-  );
   --flexcyon-canvas-blur-intensity: 1px;
 }
 
@@ -121,6 +118,20 @@ body.theme-light {
 .canvas-edges g.is-focused path.canvas-interaction-path,
 .canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
   stroke: oklch(from var(--canvas-color) l c h / 10%);
+}
+
+.canvas-placeholder-message,
+.canvas-selection {
+  background-color: oklch(from var(--color-accent) l c h / 10%);
+}
+
+.canvas-selection.mod-group-selection {
+  background-color: oklch(from var(--color-accent) l c h / 3%);
+  border-color: oklch(from var(--color-accent) l c h / 30%);
+}
+
+.canvas-node.is-dummy .canvas-node-container {
+  background-color: oklch(from var(--color-accent) l c h / 20%);
 }
 
 /* obsi-snip-coll end */

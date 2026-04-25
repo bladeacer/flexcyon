@@ -376,6 +376,18 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not(
   }
 }
 
+body.flexcyon-prevent-accidental-unpin {
+  .mod-pinned,
+  .workspace
+    .mod-root
+    .workspace-tab-header
+    .workspace-tab-header-inner-close-button:has(
+      + .workspace-tab-header-status-container
+    ) {
+    pointer-events: none;
+  }
+}
+
 body.flexcyon-stylised-pins
   :is(.mod-left-split, .mod-right-split)
   .workspace-tab-header-container-inner {

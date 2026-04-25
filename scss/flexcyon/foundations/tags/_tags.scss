@@ -7,12 +7,10 @@ body {
   --tag-color: var(--flexcyon-cyan);
   --tag-color-hover: var(--flexcyon-palette-cyan-hover);
   --tag-decoration-hover: underline;
-  --tag-background: color-mix(in oklch, var(--tag-color) 25%, transparent);
-  --tag-background-hover: color-mix(
-    in oklch,
-    var(--tag-color-hover) 25%,
-    transparent
-  );
+  --tag-background: oklch(from var(--tag-color) l c h / 10%);
+  --tag-background-hover: oklch(from var(--tag-color-hover) l c h / 20%);
+  --tag-border-color: oklch(from var(--tag-color-hover) l c h / 15%);
+  --tag-border-color-hover: oklch(from var(--tag-color-hover) l c h / 15%);
 
   h3[data-heading*="find section #"] a.tag {
     all: unset;
@@ -20,9 +18,5 @@ body {
 }
 
 .is-mobile {
-  --tag-background: color-mix(
-    in oklch shorter hue,
-    var(--tag-color) 25%,
-    transparent
-  );
+  --tag-background: oklch(from var(--tag-color) l c h / 25%);
 }

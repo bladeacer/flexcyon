@@ -23,6 +23,10 @@ body {
   --flexcyon-bases-cards-label-opacity: 0.85;
 }
 
+.bases-view.is-being-dragged-over::after {
+  background-color: oklch(from var(--interactive-accent) l c h / 10%);
+}
+
 .bases-toolbar:not(:active, :hover, :focus, :focus-within) {
   opacity: var(--dimmed);
 }

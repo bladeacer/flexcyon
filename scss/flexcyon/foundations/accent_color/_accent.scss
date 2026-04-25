@@ -5,6 +5,8 @@
 // As well as the origami theme for the light theme colour palette
 // - https://github.com/7368697661/Origami
 
+@use "../accessibility/a11y_mixin" as m;
+
 body.theme-dark {
   --flexcyon-accent: #92a871;
 }
@@ -17,19 +19,23 @@ body.theme-light {
 
 body.theme-dark,
 body.theme-light {
-  --color-accent: oklch(from var(--flexcyon-accent) l c h);
-  --color-accent-hsl: oklch(from var(--flexcyon-accent) l c h);
+  @include m.configure-oklch("color-accent", "flexcyon-accent");
+  @include m.configure-oklch("color-accent-hsl", "flexcyon-accent");
 
   /* cooler hue, higher chroma, lighter */
-  --color-accent-1: oklch(
+  --color-accent-1-wrapper: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
 
+  @include m.configure-oklch("color-accent-1", "color-accent-1-wrapper");
+
   /* hue shift, lower chroma, lighter, 87.5% alpha */
-  --color-accent-2: oklch(
+  --color-accent-2-wrapper: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 0.85) calc(h - 20) /
       87.5%
   );
+
+  @include m.configure-oklch("color-accent-2", "color-accent-2-wrapper");
 }
 
 /* Willemstad theme: Accent setting theme override notice */

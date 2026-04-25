@@ -1,0 +1,7 @@
+.publish-upload-item::before {
+  background-color: oklch(from var(--background-modifier-success) l c h / 20%);
+}
+
+.publish-upload-item.mod-failed::before {
+  background-color: oklch(from var(--background-modifier-error) l c h / 20%);
+}

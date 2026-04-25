@@ -60,6 +60,10 @@ body {
       transform: translateY(-0.75px);
     }
   }
+
+  .metadata-property-value.is-being-dragged-over::after {
+    background-color: oklch(from var(--interactive-accent) l c h / 10%);
+  }
 }
 
 body.flexcyon-metadata-display-reading-disabled {

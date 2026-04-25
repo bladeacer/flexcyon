@@ -77,4 +77,8 @@ body.flexcyon-prompt-align-bottom-center {
   .search-info-container:has(~ .search-result-container .search-empty-state) {
     display: none;
   }
+
+  .suggestion-item.mod-complex.suggestion-secret-key.is-selected {
+    background-color: oklch(from var(--color-accent) l c h / 15%);
+  }
 }

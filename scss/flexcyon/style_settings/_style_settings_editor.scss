@@ -1897,8 +1897,18 @@ settings:
     id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: false
+
+  - title: Pins
+    type: heading
+    level: 1
+    collapsed: true
   - title: Stylised pin icons
     id: flexcyon-stylised-pins
+    description: Stylise pin icons in the sidebars
+    type: class-toggle
+    default: true
+  - title: Prevent accidental unpins
+    id: flexcyon-prevent-accidental-unpin
     description: Stylise pin icons in the sidebars
     type: class-toggle
     default: true

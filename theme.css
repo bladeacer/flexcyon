@@ -871,16 +871,58 @@ body.theme-light {
 
 body.theme-dark,
 body.theme-light {
-  --color-accent: oklch(from var(--flexcyon-accent) l c h);
-  --color-accent-hsl: oklch(from var(--flexcyon-accent) l c h);
+  --color-accent: oklch(
+    from var(--flexcyon-accent)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
+  --color-accent-hsl: oklch(
+    from var(--flexcyon-accent)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   /* cooler hue, higher chroma, lighter */
-  --color-accent-1: oklch(
+  --color-accent-1-wrapper: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
+  --color-accent-1: oklch(
+    from var(--color-accent-1-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
   /* hue shift, lower chroma, lighter, 87.5% alpha */
-  --color-accent-2: oklch(
+  --color-accent-2-wrapper: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 0.85) calc(h - 20) /
       87.5%
+  );
+  --color-accent-2: oklch(
+    from var(--color-accent-2-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
 }
 
@@ -1518,6 +1560,9 @@ body .metadata-properties-heading:focus::before {
 body .metadata-container .svg-icon,
 body .workspace-leaf-content[data-type=all-properties] .svg-icon {
   transform: translateY(-0.75px);
+}
+body .metadata-property-value.is-being-dragged-over::after {
+  background-color: oklch(from var(--interactive-accent) l c h/10%);
 }
 
 body.flexcyon-metadata-display-reading-disabled {
@@ -2472,12 +2517,10 @@ body {
   --tag-color: var(--flexcyon-cyan);
   --tag-color-hover: var(--flexcyon-palette-cyan-hover);
   --tag-decoration-hover: underline;
-  --tag-background: color-mix(in oklch, var(--tag-color) 25%, transparent);
-  --tag-background-hover: color-mix(
-    in oklch,
-    var(--tag-color-hover) 25%,
-    transparent
-  );
+  --tag-background: oklch(from var(--tag-color) l c h / 10%);
+  --tag-background-hover: oklch(from var(--tag-color-hover) l c h / 20%);
+  --tag-border-color: oklch(from var(--tag-color-hover) l c h / 15%);
+  --tag-border-color-hover: oklch(from var(--tag-color-hover) l c h / 15%);
 }
 body.is-mobile h3[data-heading*="find section #"] a.tag,
 body h3[data-heading*="find section #"] a.tag {
@@ -2485,11 +2528,7 @@ body h3[data-heading*="find section #"] a.tag {
 }
 
 .is-mobile {
-  --tag-background: color-mix(
-    in oklch shorter hue,
-    var(--tag-color) 25%,
-    transparent
-  );
+  --tag-background: oklch(from var(--tag-color) l c h / 25%);
 }
 
 body.theme-dark {
@@ -2792,7 +2831,7 @@ body.theme-light {
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
   --interactive-accent: oklch(from var(--text-accent) l c h / 80%);
-  --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+  --interactive-accent-hsl: var(--interactive-accent);
   --interactive-accent-hover: color-mix(
     in oklch shorter hue,
     var(--text-accent) 75%,
@@ -3195,6 +3234,11 @@ body.flexcyon-ascii-icon-set.flexcyon-ensure-plugin-icon:not([class*=iconic]) .n
   gap: 4px;
 }
 
+body.flexcyon-prevent-accidental-unpin .mod-pinned,
+body.flexcyon-prevent-accidental-unpin .workspace .mod-root .workspace-tab-header .workspace-tab-header-inner-close-button:has(+ .workspace-tab-header-status-container) {
+  pointer-events: none;
+}
+
 body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon + div + div.workspace-tab-header-status-container {
   inline-size: 0;
 }
@@ -3450,6 +3494,7 @@ body {
   --flexcyon-th-horiz-padding: 10px;
   --flexcyon-th-live-pad-scale: 0.2;
   --flexcyon-th-table-alignment: left;
+  --table-selection: oklch(from var(--color-accent) l c h / 10%);
 }
 body .el-table td,
 body td div.table-cell-wrapper {
@@ -3586,11 +3631,7 @@ body {
   --text-error: var(--color-red);
   --text-warning: var(--color-red);
   --text-success: var(--color-green);
-  --text-sel-wrapper: color-mix(
-    in oklch shorter hue,
-    var(--color-base-35) 20%,
-    transparent
-  );
+  --text-sel-wrapper: oklch(from var(--color-accent) l c h / 30%);
   --text-selection: oklch(
     from var(--text-sel-wrapper)
       clamp(
@@ -3657,6 +3698,16 @@ body .cm-s-obsidian span.cm-formatting-highlight {
 body .tooltip {
   color: var(--text-normal);
   background-color: var(--color-base-00);
+}
+body .textLayer .highlight {
+  --highlight-bg-color: var(--text-highlight-bg);
+}
+body .textLayer .mod-focused {
+  background-color: var(--text-highlight-bg);
+}
+body .annotatationLayer .mod-focused {
+  background-color: oklch(from var(--text-highlight-bg) l c h/10%);
+  border: var(--size-4-1) solid oklch(from var(--text-highlight-bg) l c h/80%);
 }
 
 body {
@@ -8645,6 +8696,23 @@ body {
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
+.nav-folder.is-being-dragged-over {
+  background: oklch(from var(--interactive-accent-hsl) l c h/10%);
+}
+
+.file-tree .mod-changed.is-selected {
+  background-color: oklch(from var(--interactive-accent-hsl) l c h/20%);
+}
+
+.file-tree .mod-new.is-selected {
+  background-color: oklch(from var(--background-modifier-success)/20%);
+}
+
+.file-tree .mod-deleted.is-selected,
+.file-tree .mod-to-delete.is-selected {
+  background-color: oklch(from var(--background-modifier-error)/20%);
+}
+
 /* obsi-snip-coll start: file-exts */
 body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag {
@@ -10074,6 +10142,27 @@ body.flexcyon-vault-switch-top .workspace-split:has(> .workspace-sidedock-vault-
 body.flexcyon-reverse-mode .workspace-sidedock-vault-profile,
 body.flexcyon-vault-reverse .workspace-sidedock-vault-profile {
   flex-direction: row-reverse;
+}
+
+.drag-ghost-hidden::before {
+  background-color: oklch(from var(--interactive-accent) l c h/30%);
+}
+
+.workspace-leaf.is-highlighted::before {
+  background-color: oklch(from var(--interactive-accent) l c h/25%);
+}
+
+@media (hover: hover) {
+  .card.u-clickable:hover {
+    background-color: oklch(from var(--interactive-accent) l c h/10%);
+  }
+}
+.card.is-selected {
+  background-color: oklch(from var(--interactive-accent) l c h/20%);
+}
+
+.tree-item-self.is-being-dragged-over {
+  background: oklch(from var(--interactive-accent) l c h/10%);
 }
 
 .app-container .view-content:has(.tategaki) .markdown-preview-section {
@@ -12950,8 +13039,18 @@ settings:
     id: flexcyon-settings-coloured-icons
     type: class-toggle
     default: false
+
+  - title: Pins
+    type: heading
+    level: 1
+    collapsed: true
   - title: Stylised pin icons
     id: flexcyon-stylised-pins
+    description: Stylise pin icons in the sidebars
+    type: class-toggle
+    default: true
+  - title: Prevent accidental unpins
+    id: flexcyon-prevent-accidental-unpin
     description: Stylise pin icons in the sidebars
     type: class-toggle
     default: true
@@ -14159,9 +14258,6 @@ div.dataview-error-box p.dataview-error-message {
 }
 
 body {
-  --color-accent: hsl(
-    var(--accent-h) var(--accent-s) var(--accent-l) / var(--dimmed)
-  );
   --flexcyon-canvas-blur-intensity: 1px;
 }
 
@@ -14274,6 +14370,20 @@ body.theme-light {
 .canvas-edges g.is-focused path.canvas-interaction-path,
 .canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
   stroke: oklch(from var(--canvas-color) l c h/10%);
+}
+
+.canvas-placeholder-message,
+.canvas-selection {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+
+.canvas-selection.mod-group-selection {
+  background-color: oklch(from var(--color-accent) l c h/3%);
+  border-color: oklch(from var(--color-accent) l c h/30%);
+}
+
+.canvas-node.is-dummy .canvas-node-container {
+  background-color: oklch(from var(--color-accent) l c h/20%);
 }
 
 /* obsi-snip-coll end */
@@ -14584,6 +14694,10 @@ body {
   --flexcyon-bases-cards-label-opacity: 0.85;
 }
 
+.bases-view.is-being-dragged-over::after {
+  background-color: oklch(from var(--interactive-accent) l c h/10%);
+}
+
 .bases-toolbar:not(:active, :hover, :focus, :focus-within) {
   opacity: var(--dimmed);
 }
@@ -14800,6 +14914,9 @@ body.flexcyon-prompt-align-bottom-center .modal-container .prompt {
 }
 .workspace-leaf-content[data-type=search] .search-info-container:has(~ .search-result-container .search-empty-state) {
   display: none;
+}
+.workspace-leaf-content[data-type=search] .suggestion-item.mod-complex.suggestion-secret-key.is-selected {
+  background-color: oklch(from var(--color-accent) l c h/15%);
 }
 
 .view-content.webviewer-content {
@@ -15873,6 +15990,33 @@ span.task-id {
 
 .diff-line.mod-right .diff-changed {
   background-color: oklch(from var(--background-modifier-success) l c h/40%);
+}
+
+body .pdf-container .textLayer ::selection,
+body .markdown-source-view.mod-cm6 .pdf-container .textLayer ::selection {
+  background-color: var(--color-accent);
+}
+body .pdf-container .annotationlayer :is(.linkannotation, .buttonwidgetannotation.pushbutton):not(.hasborder) > a:hover {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+body .pdf-container .annotationLayer .linkAnnotation.hasBorder:hover {
+  background-color: oklch(from var(--color-accent) l c h/10%);
+}
+body .pdf-container .textLayer .highlight.selected {
+  background-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px var(--interactive-accent);
+}
+body .pdf-container .textLayer .highlight:not(.selected) {
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 0 2px var(--color-yellow);
+}
+
+.publish-upload-item::before {
+  background-color: oklch(from var(--background-modifier-success) l c h/20%);
+}
+
+.publish-upload-item.mod-failed::before {
+  background-color: oklch(from var(--background-modifier-error) l c h/20%);
 }
 
 /* Modifications for HandaArchitect's banner snippet */
