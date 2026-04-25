@@ -1520,7 +1520,7 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :first-child.view
 body {
   --metadata-label-text-color: var(--color-purple);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
-  --flexcyon-meta-container-padding-left: 14px;
+  --flexcyon-meta-container-padding-left: 0;
 }
 body .metadata-container {
   padding-inline-start: var(--flexcyon-meta-container-padding-left);
@@ -1560,6 +1560,10 @@ body .metadata-properties-heading:focus::before {
 body .metadata-container .svg-icon,
 body .workspace-leaf-content[data-type=all-properties] .svg-icon {
   transform: translateY(-0.75px);
+}
+body .markdown-source-view .metadata-container,
+body .markdown-preview-view .metadata-container {
+  transform: translateX(0);
 }
 body .metadata-property-value.is-being-dragged-over::after {
   background-color: oklch(from var(--interactive-accent) l c h/10%);
@@ -3272,7 +3276,7 @@ body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .wor
 }
 
 body {
-  --graph-line: var(--color-base-25);
+  --graph-line: var(--text-faint);
   --graph-node-unresolved: var(--color-red);
   --graph-node-tag: var(--color-purple);
   --graph-control-verti-padding: 6px;
@@ -3754,6 +3758,16 @@ body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) 
 }
 body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
   content: "'";
+}
+body .markdown-source-view.is-readable-line-width .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
+body .markdown-source-view.is-readable-line-width .inline-title:has(+ .cm-contentContainer > .cm-gutters),
+body .markdown-source-view.is-readable-line-width .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+  transform: translateX(calc(0.065 * var(--file-line-width)));
+}
+body .markdown-source-view:not(.is-readable-line-width) .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
+body .markdown-source-view:not(.is-readable-line-width) .inline-title:has(+ .cm-contentContainer > .cm-gutters),
+body .markdown-source-view:not(.is-readable-line-width) .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+  transform: translateX(50px);
 }
 
 body.theme-dark .cm-gutterElement.cm-active {
@@ -12800,7 +12814,7 @@ settings:
   - title: Metadata container left padding
     id: flexcyon-meta-container-padding-left
     type: variable-number
-    default: 14
+    default: 0
     format: px
   - title: Do not show properties title
     id: flexcyon-metadata-no-properties-title

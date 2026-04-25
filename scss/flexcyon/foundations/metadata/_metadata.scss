@@ -4,7 +4,7 @@
 body {
   --metadata-label-text-color: var(--color-purple);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
-  --flexcyon-meta-container-padding-left: 14px;
+  --flexcyon-meta-container-padding-left: 0;
 
   .metadata-container {
     padding-inline-start: var(--flexcyon-meta-container-padding-left);
@@ -59,6 +59,11 @@ body {
     .svg-icon {
       transform: translateY(-0.75px);
     }
+  }
+
+  .markdown-source-view .metadata-container,
+  .markdown-preview-view .metadata-container {
+    transform: translateX(0);
   }
 
   .metadata-property-value.is-being-dragged-over::after {
