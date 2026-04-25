@@ -829,7 +829,7 @@ settings:
   - title: Enable dimmed file extensions in file explorer
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
-    default: false
+    default: true
   - title: Dimmed File Extensions font size
     id: flexcyon-exp-dimmed-nav-size
     type: variable-number

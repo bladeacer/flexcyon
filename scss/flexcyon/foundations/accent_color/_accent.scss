@@ -24,7 +24,6 @@ body.theme-light {
   --color-accent-1: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
-  --interactive-accent: var(--color-accent-1);
 
   /* hue shift, lower chroma, lighter, 87.5% alpha */
   --color-accent-2: oklch(

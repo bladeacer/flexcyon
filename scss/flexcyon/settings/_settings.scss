@@ -93,20 +93,13 @@ body {
   }
 }
 
-// body.theme-dark .community-item {
-//   background-color: var(--color-base-00);
-// }
-
-// body.theme-light .community-item {
-//   background-color: var(--color-base-05);
-// }
-
 body.flexcyon-no-settings-icons {
   .mod-settings .vertical-tab-nav-item-icon {
     display: none;
   }
 }
 
+// TODO: Add a style settings option for this, defaults to true.
 body.flexcyon-no-keychain-setting-item {
   .mod-settings .vertical-tab-nav-item[data-setting-id="keychain"] {
     display: none;
@@ -160,13 +153,14 @@ body.flexcyon-workspace-card-layout {
   }
 }
 
-body.flexcyon-settings-comm-item-enabled {
+body.flexcyon-flex-max-mode:not(.is-phone),
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) {
   div.community-modal-search-results div.community-item {
     opacity: var(--flexcyon-comm-item-opacity);
   }
 
   div.community-modal-search-results div.community-item.is-selected {
-    font-weight: bold;
+    font-weight: 525;
     border: unset;
     opacity: unset;
   }
@@ -179,72 +173,38 @@ body.flexcyon-settings-comm-item-enabled {
     background-color: var(--text-accent);
   }
 
-  div.community-item.is-selected div.community-item-name span.flair.mod-pop {
-    color: var(--text-normal);
-    background-color: var(--color-base-25);
+  .community-item.is-selected {
+    background-color: var(--color-base-20);
   }
 
   .community-item-name {
-    inline-size: 75%;
+    inline-size: 60%;
+    overflow: visible;
+    text-overflow: clip;
     color: var(--color-blue);
-    overflow-wrap: break-word;
+    white-space: normal;
   }
 
   .community-item-downloads,
   .community-modal-info-downloads {
-    color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
+    color: oklch(
+      from var(--color-cyan) l c h / var(--flexcyon-comm-item-opacity)
+    );
   }
 
   .community-item-updated {
-    color: rgb(
-      var(--color-blue-rgb),
-      calc(var(--flexcyon-comm-item-opacity) - 0.1)
+    color: oklch(
+      from var(--color-cyan) l c h /
+        calc(var(--flexcyon-comm-item-opacity) - 0.1)
     );
   }
 
   .community-modal-info-version {
-    color: rgb(
-      var(--color-green-rgb),
-      calc(var(--flexcyon-comm-item-opacity) - 0.1)
+    color: oklch(
+      from var(--color-green) / calc(var(--flexcyon-comm-item-opacity) - 0.1)
     );
   }
 }
-
-// body.theme-light.flexcyon-flex-max-mode:not(.is-phone),
-// body.theme-light.flexcyon-settings-comm-item-enabled:not(.is-phone) {
-//   .community-item.is-selected {
-//     background-color: var(--background-primary);
-//     border: none;
-
-//     span.flair.mod-pop {
-//       background-color: rgb(var(--color-blue-rgb), var(--dimmed));
-//     }
-
-//     .community-item-name {
-//       font-weight: bold;
-//       color: var(--color-red);
-//     }
-
-//     .community-item-author {
-//       font-weight: bold;
-//       color: var(--color-yellow);
-//     }
-
-//     .community-item-downloads {
-//       font-weight: bold;
-//       color: var(--color-purple);
-//     }
-
-//     .community-item-updated {
-//       font-weight: bold;
-//       color: var(--color-green);
-//     }
-
-//     .community-item-desc {
-//       color: var(--text-normal);
-//     }
-//   }
-// }
 
 // body.theme-light.flexcyon-settings-comm-item-enabled .community-item-name {
 //   color: var(--color-yellow);

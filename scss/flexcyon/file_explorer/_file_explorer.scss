@@ -4,9 +4,8 @@ body {
 }
 
 /* obsi-snip-coll start: file-exts */
-body.flexcyon-flex-max-mode,
 body.flexcyon-file-exp-dimmed-file-exts-enabled {
-  .nav-files-container > div > div,
+  :not(.novel-word-count--active) .nav-files-container > div > div,
   .nav-folder:not(.is-collapsed) > div > div {
     div[data-path$=".md"] {
       > div.nav-file-tag {
@@ -33,6 +32,12 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled {
           content: ".";
         }
       }
+    }
+  }
+
+  .novel-word-count--active .nav-files-container div div {
+    div[data-path$=".md"].nav-file-title::after {
+      content: ".md  " attr(data-novel-word-count-plugin);
     }
   }
 }

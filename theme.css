@@ -877,7 +877,6 @@ body.theme-light {
   --color-accent-1: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 1.1) calc(h - 10)
   );
-  --interactive-accent: var(--color-accent-1);
   /* hue shift, lower chroma, lighter, 87.5% alpha */
   --color-accent-2: oklch(
     from var(--flexcyon-accent) calc(l * 1.05) calc(c * 0.85) calc(h - 20) /
@@ -2792,11 +2791,7 @@ body.theme-dark,
 body.theme-light {
   --interactive-normal: var(--color-base-05);
   --interactive-hover: var(--background-primary);
-  --interactive-accent: color-mix(
-    in oklch,
-    var(--text-accent) 80%,
-    transparent 20%
-  );
+  --interactive-accent: oklch(from var(--text-accent) l c h / 80%);
   --interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --interactive-accent-hover: color-mix(
     in oklch shorter hue,
@@ -3542,10 +3537,9 @@ body.theme-light {
 body {
   --flexcyon-highlight-colour: var(--color-cyan);
   --flexcyon-highlight-opacity: 22.5%;
-  --text-highlight-bg: color-mix(
-    in oklch,
-    var(--flexcyon-highlight-colour) var(--flexcyon-highlight-opacity),
-    transparent
+  --text-highlight-bg: oklch(
+    from var(--flexcyon-highlight-colour) l c h /
+      var(--flexcyon-highlight-opacity)
   );
   --flexcyon-w-spacing: 0px;
   --flexcyon-l-spacing: 0px;
@@ -8652,22 +8646,16 @@ body {
 }
 
 /* obsi-snip-coll start: file-exts */
-body.flexcyon-flex-max-mode .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
-body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag {
   display: none;
 }
-body.flexcyon-flex-max-mode .nav-files-container > div > div div[data-path$=".md"]::after,
-body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"]::after,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div[data-path$=".md"]::after,
+body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"]::after,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"]::after {
   content: ".md";
   opacity: var(--dimmed);
 }
-body.flexcyon-flex-max-mode .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
-body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag {
   padding: unset;
   margin: unset;
@@ -8677,11 +8665,12 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) >
   text-transform: lowercase;
   opacity: var(--dimmed);
 }
-body.flexcyon-flex-max-mode .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
-body.flexcyon-flex-max-mode .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
+body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
 body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before {
   content: ".";
+}
+body.flexcyon-file-exp-dimmed-file-exts-enabled .novel-word-count--active .nav-files-container div div div[data-path$=".md"].nav-file-title::after {
+  content: ".md  " attr(data-novel-word-count-plugin);
 }
 
 /* obsi-snip-coll end */
@@ -10648,39 +10637,49 @@ body.flexcyon-workspace-card-layout .community-modal-readme {
   margin-block-start: 32px;
 }
 
-body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item {
+body.flexcyon-flex-max-mode:not(.is-phone) div.community-modal-search-results div.community-item,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) div.community-modal-search-results div.community-item {
   opacity: var(--flexcyon-comm-item-opacity);
 }
-body.flexcyon-settings-comm-item-enabled div.community-modal-search-results div.community-item.is-selected {
-  font-weight: bold;
+body.flexcyon-flex-max-mode:not(.is-phone) div.community-modal-search-results div.community-item.is-selected,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) div.community-modal-search-results div.community-item.is-selected {
+  font-weight: 525;
   border: unset;
   opacity: unset;
 }
-body.flexcyon-settings-comm-item-enabled div.community-item div.community-item-name span.flair.mod-pop {
+body.flexcyon-flex-max-mode:not(.is-phone) div.community-item div.community-item-name span.flair.mod-pop,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) div.community-item div.community-item-name span.flair.mod-pop {
   position: absolute;
   inset-block-start: 0.7rem;
   inset-inline-end: 0.5rem;
   color: var(--color-base-25);
   background-color: var(--text-accent);
 }
-body.flexcyon-settings-comm-item-enabled div.community-item.is-selected div.community-item-name span.flair.mod-pop {
-  color: var(--text-normal);
-  background-color: var(--color-base-25);
+body.flexcyon-flex-max-mode:not(.is-phone) .community-item.is-selected,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item.is-selected {
+  background-color: var(--color-base-20);
 }
-body.flexcyon-settings-comm-item-enabled .community-item-name {
-  inline-size: 75%;
+body.flexcyon-flex-max-mode:not(.is-phone) .community-item-name,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item-name {
+  inline-size: 60%;
+  overflow: visible;
+  text-overflow: clip;
   color: var(--color-blue);
-  overflow-wrap: break-word;
+  white-space: normal;
 }
-body.flexcyon-settings-comm-item-enabled .community-item-downloads,
-body.flexcyon-settings-comm-item-enabled .community-modal-info-downloads {
-  color: rgb(var(--color-cyan-rgb), var(--flexcyon-comm-item-opacity));
+body.flexcyon-flex-max-mode:not(.is-phone) .community-item-downloads,
+body.flexcyon-flex-max-mode:not(.is-phone) .community-modal-info-downloads,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item-downloads,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-modal-info-downloads {
+  color: oklch(from var(--color-cyan) l c h/var(--flexcyon-comm-item-opacity));
 }
-body.flexcyon-settings-comm-item-enabled .community-item-updated {
-  color: rgb(var(--color-blue-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+body.flexcyon-flex-max-mode:not(.is-phone) .community-item-updated,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-item-updated {
+  color: oklch(from var(--color-cyan) l c h/calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
-body.flexcyon-settings-comm-item-enabled .community-modal-info-version {
-  color: rgb(var(--color-green-rgb), calc(var(--flexcyon-comm-item-opacity) - 0.1));
+body.flexcyon-flex-max-mode:not(.is-phone) .community-modal-info-version,
+body.flexcyon-settings-comm-item-enabled:not(.is-phone) .community-modal-info-version {
+  color: oklch(from var(--color-green)/calc(var(--flexcyon-comm-item-opacity) - 0.1));
 }
 
 body.flexcyon-flex-max-mode:not([class*=iconic]) div.setting-item-control .checkbox-container,
@@ -11883,7 +11882,7 @@ settings:
   - title: Enable dimmed file extensions in file explorer
     id: flexcyon-file-exp-dimmed-file-exts-enabled 
     type: class-toggle
-    default: false
+    default: true
   - title: Dimmed File Extensions font size
     id: flexcyon-exp-dimmed-nav-size
     type: variable-number
@@ -12992,7 +12991,7 @@ settings:
     description: Enable installed tooltip effects such as subtle dimming of community items and fixing positioning of installed tooltip in community items.
     id: flexcyon-settings-comm-item-enabled
     type: class-toggle
-    default: false
+    default: true
   - title: Opacity of community items (unselected)
     id: flexcyon-comm-item-opacity
     type: variable-number
