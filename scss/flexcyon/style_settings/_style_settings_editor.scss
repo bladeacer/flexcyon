@@ -1051,24 +1051,24 @@ settings:
         value: flexcyon-status-right-align
   - title: Text when hide until hover enabled
     id: flexcyon-status-hide-until-hover-text
-    description: Text to show when hide until hover is enabled, do not leave empty
+    description: Text to show when hide until hover/hold is enabled, do not leave empty
     type: variable-text
     default: "Show status"
     quotes: true
   - title: Translation for showing status bar on hover
     id: flexcyon-status-hide-until-hover-translation
-    description: Translation for showing status bar on hover, requires hide until hover to be enabled.
+    description: Translation for showing status bar on hover/hold.
     type: variable-number
     default: 80
     format: vw
   - title: Transition duration for showing status bar on hover
     id: flexcyon-status-hide-hover-duration
-    description: Transition duration for showing status bar on hover, requires hide until hover to be enabled.
+    description: Transition duration for showing status bar on hover/hold.
     type: variable-number
     default: 325
     format: ms
   - title: Transition timing function for showing status bar on hover
-    description: Transition timing function for showing status bar on hover, requires hide until hover to be enabled.
+    description: Transition timing function for showing status bar on hover/hold.
     id: flexcyon-status-hide-hover-function
     type: variable-text
     default: ease-out
@@ -1079,19 +1079,19 @@ settings:
     default: false
   - title: Reading Mode Text
     id: flexcyon-status-reading-text
-    description: Text to display when in reading mode, needs use text instead of icons for mode status enabled.
+    description: Text to display when in reading mode.
     type: variable-text
     default: "READ"
     quotes: true
   - title: Source Mode Text
     id: flexcyon-status-source-text
-    description: Text to display when in source mode, needs use text instead of icons for mode status enabled.
+    description: Text to display when in source mode.
     type: variable-text
     default: "SOURCE"
     quotes: true
   - title: Live Preview Mode Text
     id: flexcyon-status-live-text
-    description: Text to display when in live preview mode, needs use text instead of icons for mode status enabled.
+    description: Text to display when in live preview mode.
     type: variable-text
     default: "LIVE"
     quotes: true

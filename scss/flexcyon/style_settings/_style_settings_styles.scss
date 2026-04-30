@@ -96,8 +96,8 @@ body.flexcyon-style-settings-dim-collapsed-headings {
   color: var(--color-blue);
 }
 
-@mixin no-color-toggle-heading($heading_no) {
-  .setting-item[data-id*="flexcyon-h#{$heading-no}-color"] {
+@mixin no-selector-dim($selector, $setting-name) {
+  .style-settings-container .setting-item[data-id*="#{$selector}"] {
     cursor: not-allowed;
     opacity: var(--dimmed);
 
@@ -106,16 +106,119 @@ body.flexcyon-style-settings-dim-collapsed-headings {
     }
 
     &::before {
-      content: "This setting requires coloured headings to be enabled first.";
+      content: "This setting requires #{$setting-name} to be enabled first.";
     }
   }
 }
 
+@mixin no-selector-dim-alt($selector, $setting-name) {
+  .style-settings-container .setting-item[data-id*="#{$selector}"] {
+    cursor: not-allowed;
+    opacity: var(--dimmed);
+
+    .setting-item-control {
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "This setting requires #{$setting-name} to be disabled first.";
+    }
+  }
+}
+
+$setting-name-1: "'Enable coloured headings'";
+
 body:not(.flexcyon-coloured-headings) {
-  @include no-color-toggle-heading(1);
-  @include no-color-toggle-heading(2);
-  @include no-color-toggle-heading(3);
-  @include no-color-toggle-heading(4);
-  @include no-color-toggle-heading(5);
-  @include no-color-toggle-heading(6);
+  @include no-selector-dim("flexcyon-h1-color", $setting-name-1);
+  @include no-selector-dim("flexcyon-h2-color", $setting-name-1);
+  @include no-selector-dim("flexcyon-h3-color", $setting-name-1);
+  @include no-selector-dim("flexcyon-h4-color", $setting-name-1);
+  @include no-selector-dim("flexcyon-h5-color", $setting-name-1);
+  @include no-selector-dim("flexcyon-h6-color", $setting-name-1);
+}
+
+$setting-name-2: "'Enable Relative Line Numbers'";
+
+body:not(.flexcyon-enable-rel-nums) {
+  @include no-selector-dim("flexcyon-no-num-with-relative", $setting-name-2);
+  @include no-selector-dim("flexcyon-relative-num-only", $setting-name-2);
+  @include no-selector-dim("flexcyon-select-relative-num", $setting-name-2);
+}
+
+$setting-name-3: "'Enable Smooth Cursor'";
+
+body:not(.flexcyon-enable-smooth-cursor) {
+  @include no-selector-dim("flexcyon-cursor-duration", $setting-name-3);
+  @include no-selector-dim("flexcyon-cursor-timing-fn", $setting-name-3);
+  @include no-selector-dim("flexcyon-cursor-min-width", $setting-name-3);
+}
+
+$setting-name-4: "Typewriter Mode";
+
+body:not(.flexcyon-typewriter-mode) {
+  @include no-selector-dim("flexcyon-typewriter-mode-opacity", $setting-name-4);
+}
+
+$setting-name-5: "Writing Mode";
+
+body:not(.flexcyon-editor-writing) {
+  @include no-selector-dim(
+    "flexcyon-editor-writing-indentation",
+    $setting-name-5
+  );
+}
+
+$setting-name-6: "'Do not display inline title'";
+
+body.flexcyon-no-inline-title {
+  @include no-selector-dim-alt("inline-title-size", $setting-name-6);
+  @include no-selector-dim-alt("inline-title-weight", $setting-name-6);
+  @include no-selector-dim-alt("inline-title-line-height", $setting-name-6);
+}
+
+$setting-name-7: "'Enable dimmed file extensions in file explorer'";
+
+body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) {
+  @include no-selector-dim("flexcyon-exp-dimmed-nav-size", $setting-name-7);
+}
+
+$setting-name-8: "'Enable Active File Indicator'";
+
+body:not(.flexcyon-enable-active-indicator) {
+  @include no-selector-dim("flexcyon-active-indicator", $setting-name-8);
+}
+
+$setting-name-9: "'Rainbow folders' folder style";
+
+body:not(.flexcyon-rainbow-folders) {
+  @include no-selector-dim("flexcyon-is-bg-rainbow", $setting-name-9);
+}
+
+$setting-name-10: "'Hide until hover' or 'Hide until hold'";
+
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) {
+  @include no-selector-dim(
+    "flexcyon-status-hide-until-hover-text",
+    $setting-name-10
+  );
+  @include no-selector-dim(
+    "flexcyon-status-hide-until-hover-translation",
+    $setting-name-10
+  );
+  @include no-selector-dim(
+    "flexcyon-status-hide-hover-duration",
+    $setting-name-10
+  );
+  @include no-selector-dim(
+    "flexcyon-status-hide-hover-function",
+    $setting-name-10
+  );
+}
+
+$setting-name-11: "'Use text instead of icons for mode status'";
+
+body:not(.flexcyon-status-text-mode) {
+  @include no-selector-dim("flexcyon-status-reading-text", $setting-name-11);
+  @include no-selector-dim("flexcyon-status-source-text", $setting-name-11);
+  @include no-selector-dim("flexcyon-status-live-text", $setting-name-11);
 }
