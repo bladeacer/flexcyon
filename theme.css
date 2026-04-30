@@ -11006,6 +11006,67 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
   color: var(--color-blue);
 }
 
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h1-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h1-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h1-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h2-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h2-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h2-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h3-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h3-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h3-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h4-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h4-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h4-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h5-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h5-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h5-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h6-color] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h6-color] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-coloured-headings) .setting-item[data-id*=flexcyon-h6-color]::before {
+  content: "This setting requires coloured headings to be enabled first.";
+}
+
 /*! 
 @settings
 name: flexcyon://About-Theme

@@ -95,3 +95,27 @@ body.flexcyon-style-settings-dim-collapsed-headings {
 .style-settings-import {
   color: var(--color-blue);
 }
+
+@mixin no-color-toggle-heading($heading_no) {
+  .setting-item[data-id*="flexcyon-h#{$heading-no}-color"] {
+    cursor: not-allowed;
+    opacity: var(--dimmed);
+
+    .setting-item-control {
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "This setting requires coloured headings to be enabled first.";
+    }
+  }
+}
+
+body:not(.flexcyon-coloured-headings) {
+  @include no-color-toggle-heading(1);
+  @include no-color-toggle-heading(2);
+  @include no-color-toggle-heading(3);
+  @include no-color-toggle-heading(4);
+  @include no-color-toggle-heading(5);
+  @include no-color-toggle-heading(6);
+}
