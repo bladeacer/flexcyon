@@ -8096,13 +8096,9 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
 }
 
 /* obsi-snip-coll end */
-body.flexcyon-flex-max-mode,
 body.flexcyon-settings-scrollbar-removed {
   --scrollbar-bg: transparent;
 }
-body.flexcyon-flex-max-mode div.community-modal-search-results-wrapper ::-webkit-scrollbar-thumb,
-body.flexcyon-flex-max-mode div.modal.mod-settings .vertical-tab-header ::-webkit-scrollbar-thumb,
-body.flexcyon-flex-max-mode div.modal-content.vertical-tabs-container ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.community-modal-search-results-wrapper ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.modal.mod-settings .vertical-tab-header ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.modal-content.vertical-tabs-container ::-webkit-scrollbar-thumb {
@@ -12148,6 +12144,10 @@ settings:
     id: flexcyon-alt-link-opacity
     type: variable-text
     default: 55%
+  - title: Opacity of community items (unselected)
+    id: flexcyon-comm-item-opacity
+    type: variable-number
+    default: 0.89
 
   - title: Code Blocks
     type: heading
@@ -13390,7 +13390,7 @@ id: flexcyon-settings
 settings:
   - title: Settings
     type: heading
-    level: 4
+    level: 1
     collapsed: true
     description: Customise the appearance of settings
   - title: Enable community item effects
@@ -13398,10 +13398,6 @@ settings:
     id: flexcyon-settings-comm-item-enabled
     type: class-toggle
     default: true
-  - title: Opacity of community items (unselected)
-    id: flexcyon-comm-item-opacity
-    type: variable-number
-    default: 0.89
   - title: Installed tooltip left margin
     description: Control the left margin of the installed tooltip
     id: flexcyon-settings-installed-tooltip-left-margin
@@ -13412,7 +13408,7 @@ settings:
     id: flexcyon-settings-scrollbar-removed
     description: Do not show scrollbar in settings where it is not necessary.
     type: class-toggle
-    default: false
+    default: true
   - title: Enable alternate active item effect in settings
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
@@ -13420,7 +13416,7 @@ settings:
 
   - title: Style Settings
     type: heading
-    level: 5
+    level: 2
     collapsed: true
     description: Configure the appearance for style settings
   - title: Indentation width between style setting headings

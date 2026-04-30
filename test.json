@@ -214,6 +214,7 @@
   "flexcyon@@flexcyon-link-unresolved-color@@light": "#6f49ae",
   "flexcyon@@flexcyon-alt-link-style": false,
   "flexcyon@@flexcyon-alt-link-opacity": "55%",
+  "flexcyon@@flexcyon-comm-item-opacity": 0.89,
   "flexcyon@@flexcyon-metadata-display-reading-disabled": false,
   "flexcyon@@flexcyon-metadata-display-editing-disabled": false,
   "flexcyon@@flexcyon-metadata-rainbow-icons": false,
@@ -252,5 +253,11 @@
   "flexcyon@@flexcyon-prevent-accidental-unpin": true,
   "flexcyon@@input-radius": 0,
   "flexcyon@@flexcyon-input-verti-padding": 4,
-  "flexcyon@@flexcyon-input-horiz-padding": 8
+  "flexcyon@@flexcyon-input-horiz-padding": 8,
+  "flexcyon@@flexcyon-settings-comm-item-enabled": true,
+  "flexcyon@@flexcyon-settings-installed-tooltip-left-margin": 1,
+  "flexcyon@@flexcyon-settings-scrollbar-removed": false,
+  "flexcyon@@flexcyon-enable-alt-active-item-effect": true,
+  "flexcyon@@flexcyon-style-settings-indent-width": 4,
+  "flexcyon@@flexcyon-style-settings-dim-collapsed-headings": true
 }

@@ -699,6 +699,10 @@ settings:
     id: flexcyon-alt-link-opacity
     type: variable-text
     default: 55%
+  - title: Opacity of community items (unselected)
+    id: flexcyon-comm-item-opacity
+    type: variable-number
+    default: 0.89
 
   - title: Code Blocks
     type: heading
