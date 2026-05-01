@@ -26,63 +26,63 @@ settings:
   - id: flexcyon-accent
     title: Accent Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#5770b9"
     default-dark: "#92a871"
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#3b9ba1"
     default-dark: "#3cb9c2"
   - id: flexcyon-lime-green
     title: Green Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#689523"
     default-dark: "#a1c05c"
   - id: flexcyon-orange
     title: Orange Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#ed8126"
     default-dark: "#cc8449"
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e8c62a"
     default-dark: "#c29e42"
   - id: flexcyon-purple-lilac
     title: Purple Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
   - id: flexcyon-red-salmon
     title: Red Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#eb5325"
     default-dark: "#c03a47"
   - id: flexcyon-blue
     title: Blue Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#5c9fe4"
     default-dark: "#5a8fcd"
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e389ca"
     default-dark: "#d458a3"
@@ -94,49 +94,49 @@ settings:
   - id: flexcyon-base-01
     title: Base Color 01
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#f1f0ec"
     default-dark: "#14161c"
   - id: flexcyon-base-02
     title: Base Color 02
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#effaf2"
     default-dark: "#191d28"
   - id: flexcyon-base-03
     title: Base Color 03
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e8f2eb"
     default-dark: "#24262c"
   - id: flexcyon-base-04
     title: Base Color 04
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#dae1dd"
     default-dark: "#4d566b"
   - id: flexcyon-base-05
     title: Base Color 05
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#d4dad6"
     default-dark: "#6f7685"
   - id: flexcyon-base-grey-dark
     title: Base dark grey
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#929190"
     default-dark: "#898c93"
   - id: flexcyon-base-grey-light
     title: Base light grey
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
@@ -155,7 +155,7 @@ settings:
   - id: text-normal-col
     title: Normal Text color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
@@ -1399,7 +1399,7 @@ settings:
   - title: Horizontal Rule Colour
     id: hr-color
     type: variable-color
-    opacity: false
+    opacity: true
     format: hex
     default: "#393e48"
   - title: Add custom string inside horizontal rules
@@ -1799,6 +1799,10 @@ settings:
     id: flexcyon-cursor-min-width
     type: variable-text
     default: unset
+  - title: Disable Vim Block Cursor Blink
+    id: flexcyon-disable-vim-cursor-blink
+    type: class-toggle
+    default: false
 
   - title: Graph
     type: heading

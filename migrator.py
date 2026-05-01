@@ -360,6 +360,62 @@ def get_schema():
         ("enable-alt-active-item-effect", bool, True, "settings"),
         ("style-settings-indent-width", (float, int), 4, "settings"),
         ("style-settings-dim-collapsed-headings", bool, True, "settings"),
+
+        ("oz-fta-folder-font-size", (float, int), 0.925, "plugins", False),
+        (
+            "oz-fta-folder-pane-file-name-color", str,
+            "#080808", "plugins", False
+        ),
+        (
+            "oz-fta-all-panes-active-text-color", str,
+            "#080808", "plugins", False
+        ),
+        ("oz-fta-file-font-size", (float, int), 0.9, "plugins", False),
+        (
+            "oz-fta-file-pane-file-name-color", str,
+            "#6f768599", "plugins", False
+        ),
+        ("oz-file-tree-header-disabled", bool, False, "plugins"),
+        ("oz-alternate-folder-count", bool, False, "plugins"),
+        ("oz-dimmed-file-exts-enabled", bool, False, "plugins"),
+
+        ("fc-dimmed-items-opacity", (float, int), 0.89, "plugins"),
+
+        (
+            "dataview-dataview-horizontal-padding", (float, int),
+            0.89, "plugins"
+        ),
+
+        ("canvas-blur-inactive-nodes", bool, False, "plugins"),
+        ("canvas-blur-intensity", (float, int), 1, "plugins"),
+        ("canvas-menu-alignment", str, "none", "plugins"),
+
+        ("var-comps-sugg-vert-padding", (float, int), 7, "plugins"),
+        ("var-comps-sugg-horiz-padding", (float, int), 12, "plugins"),
+        ("var-comps-sugg-compact-mode", bool, False, "plugins"),
+
+        ("omnisearch-no-icons", bool, False, "plugins"),
+        ("omnisearch-body-margin-left", (float, int), 1.45, "plugins"),
+
+        ("bases-padding-verti", (float, int), 16, "plugins"),
+        ("bases-padding-horiz", (float, int), 16, "plugins"),
+        ("bases-embed-padding", (float, int), 4, "plugins", False),
+        ("bases-cards-label-opacity", (float, int), 0.85, "plugins"),
+        (
+            "bases-no-img-str", str,
+            "No image path could be found for this file", "plugins", False
+        ),
+        ("bases-border-r", (float, int), 16, "plugins", False),
+        ("bases-cards-group-padding", (float, int), 16, "plugins", False),
+        ("bases-card-padding-top", (float, int), 8, "plugins"),
+        ("bases-card-padding-right", (float, int), 0, "plugins"),
+        ("bases-card-padding-bottom", (float, int), 0, "plugins"),
+        ("bases-card-padding-left", (float, int), 2, "plugins"),
+        ("bases-card-flex-grow", (float, int), 0.55, "plugins"),
+
+        ("bases-td-padding-l", (float, int), 2, "plugins"),
+        ("bases-table-content-alignment", str, "left", "plugins"),
+        ("hide-until-hover-bases-title-sidebar", str, "left", "plugins"),
     ]
     return schema
 
@@ -387,7 +443,10 @@ def get_mapping_config():
 
         "replacements": {
             "text-normal@@dark": "text-normal-col@@dark",
-            "text-normal@@light": "text-normal-col@@light"
+            "text-normal@@light": "text-normal-col@@light",
+            "flexcyon-dataview-horizontal-padding":
+            "flexcyon-dataview-error-horizontal-padding",
+            "bases-no-img-str": "flexcyon-bases-no-img-str"
         },
 
         "keep_if_default": [],

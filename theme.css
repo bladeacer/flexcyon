@@ -10363,8 +10363,22 @@ body {
 }
 
 /* obsi-snip-coll end */
-body.cm-fat-cursor-mark {
+body .ͼo.cm-focused > .cm-scroller > .cm-cursorLayer > .cm-fat-cursor {
   background-color: var(--interactive-accent);
+  color: inherit;
+}
+
+body.flexcyon-disable-vim-cursor-blink .cm-cursorLayer {
+  animation: none !important;
+}
+
+.cm-animate-fat-cursor {
+  color: inherit;
+}
+
+.cm-fat-cursor-mark {
+  background-color: var(--interactive-accent);
+  color: inherit;
 }
 
 /* obsi-snip-coll start: smooth-cursor */
@@ -11278,6 +11292,37 @@ body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[dat
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
 }
 
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration]::before {
+  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn]::before {
+  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width]::before {
+  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
+}
+
 /*! 
 @settings
 name: flexcyon://About-Theme
@@ -11471,63 +11516,63 @@ settings:
   - id: flexcyon-accent
     title: Accent Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#5770b9"
     default-dark: "#92a871"
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#3b9ba1"
     default-dark: "#3cb9c2"
   - id: flexcyon-lime-green
     title: Green Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#689523"
     default-dark: "#a1c05c"
   - id: flexcyon-orange
     title: Orange Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#ed8126"
     default-dark: "#cc8449"
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e8c62a"
     default-dark: "#c29e42"
   - id: flexcyon-purple-lilac
     title: Purple Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#6f49ae"
     default-dark: "#a461c8"
   - id: flexcyon-red-salmon
     title: Red Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#eb5325"
     default-dark: "#c03a47"
   - id: flexcyon-blue
     title: Blue Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#5c9fe4"
     default-dark: "#5a8fcd"
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e389ca"
     default-dark: "#d458a3"
@@ -11539,49 +11584,49 @@ settings:
   - id: flexcyon-base-01
     title: Base Color 01
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#f1f0ec"
     default-dark: "#14161c"
   - id: flexcyon-base-02
     title: Base Color 02
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#effaf2"
     default-dark: "#191d28"
   - id: flexcyon-base-03
     title: Base Color 03
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#e8f2eb"
     default-dark: "#24262c"
   - id: flexcyon-base-04
     title: Base Color 04
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#dae1dd"
     default-dark: "#4d566b"
   - id: flexcyon-base-05
     title: Base Color 05
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#d4dad6"
     default-dark: "#6f7685"
   - id: flexcyon-base-grey-dark
     title: Base dark grey
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#929190"
     default-dark: "#898c93"
   - id: flexcyon-base-grey-light
     title: Base light grey
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
@@ -11600,7 +11645,7 @@ settings:
   - id: text-normal-col
     title: Normal Text color
     type: variable-themed-color
-    opacity: false
+    opacity: true
     format: hex
     default-light: "#080808"
     default-dark: "#d3d5d3"
@@ -12844,7 +12889,7 @@ settings:
   - title: Horizontal Rule Colour
     id: hr-color
     type: variable-color
-    opacity: false
+    opacity: true
     format: hex
     default: "#393e48"
   - title: Add custom string inside horizontal rules
@@ -13244,6 +13289,10 @@ settings:
     id: flexcyon-cursor-min-width
     type: variable-text
     default: unset
+  - title: Disable Vim Block Cursor Blink
+    id: flexcyon-disable-vim-cursor-blink
+    type: class-toggle
+    default: false
 
   - title: Graph
     type: heading
@@ -13437,12 +13486,12 @@ id: flexcyon-plugins
 settings:
   - title: Plugins
     type: heading
-    level: 4
+    level: 1
     collapsed: true
     description: Style settings related to supported plugins
   - title: Alternate file tree 
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Folders font size
     id: oz-fta-folder-font-size
@@ -13461,6 +13510,7 @@ settings:
     id: oz-fta-all-panes-active-text-color
     type: variable-themed-color
     format: hex
+    opacity: true
     default-light: "#080808"
     default-dark: "#d3d5d3"
   - title: Files font size
@@ -13497,25 +13547,26 @@ settings:
 
   - title: Full Calendar
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Opacity of dimmed full calendar items 
     id: flexcyon-fc-dimmed-items-opacity
     type: variable-number
     default: 0.89
+
   - title: Dataview
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Horizontal padding of dataview error messages
-    id: flexcyon-dataview-horizontal-padding
+    id: flexcyon-dataview-error-horizontal-padding
     type: variable-number
     default: 8
     format: px
 
   - title: Canvas
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Blur inactive Canvas nodes
     id: flexcyon-canvas-blur-inactive-nodes
@@ -13570,7 +13621,7 @@ settings:
 
   - title: Various Complements
     type: heading
-    level: 5
+    level: 2
     collapsed: true
     description: For configuring the Various Complements Plugin
   - title: Vertical Suggestion Padding
@@ -13591,7 +13642,7 @@ settings:
 
   - title: Omnisearch
     type: heading
-    level: 5
+    level: 2
     collapsed: true
     description: For configuring the Omnisearch Plugin
   - title: Disable Omnisearch Icons
@@ -13607,7 +13658,7 @@ settings:
 
   - title: Bases
     type: heading
-    level: 5
+    level: 2
     collapsed: true
     description: For configuring the core Bases plugin
   - title: Bases View Vertical Padding
@@ -13630,7 +13681,7 @@ settings:
     format: px
   - title: Bases Cards View
     type: heading
-    level: 6
+    level: 3
     collapsed: false
   - title: Bases Card Label Opacity
     id: flexcyon-bases-cards-label-opacity
@@ -13638,7 +13689,7 @@ settings:
     type: variable-number
     default: 0.85
   - title: Default string when Card View item image not found
-    id: bases-no-img-str
+    id: flexcyon-bases-no-img-str
     type: variable-text
     default: "No image path could be found for this file"
     quotes: true
@@ -13679,7 +13730,7 @@ settings:
     default: 0.55
   - title: Bases Table View
     type: heading
-    level: 6
+    level: 3
     collapsed: false
   - title: Bases Table Cell left padding
     id: flexcyon-bases-td-padding-l
@@ -13709,13 +13760,13 @@ id: flexcyon-others
 settings:
   - title: Others
     type: heading
-    level: 4
+    level: 1
     collapsed: true
     description: Vim mode text, new tab appearance
   - title: Vim Mode Text
     description: Text to display modes when using built-in vim bindings, inherits style and color from status bar style
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Enable Vim Mode Text
     id: flexcyon-vim-mode-text-enable
@@ -13755,7 +13806,7 @@ settings:
 
   - title: New Tab Appearance
     type: heading
-    level: 5
+    level: 2
     collapsed: true
     description: Customise the appearance of new tabs. Type backslash character and a to pass it as a newline in ASCII art and other input values. 
   - title: Add before empty state title
@@ -13863,7 +13914,7 @@ settings:
 
   - title: Side Dock
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Enable side dock icon effects
     id: flexcyon-sidedock-icon-effects
@@ -13891,7 +13942,7 @@ settings:
 
   - title: Tooltip radius
     type: heading
-    level: 5
+    level: 2
     collapsed: true
   - title: Small radius
     id: radius-s
@@ -13917,7 +13968,7 @@ settings:
   - title: Sidebar Background
     type: heading
     description: Configure background images in the left and right sidebars
-    level: 5
+    level: 2
     collapsed: true
   - title: Select background in sidebar
     description: Overrides background image declaration below, configures in both left and right sidebar
@@ -13973,7 +14024,7 @@ settings:
   - title: Modal Background
     type: heading
     description: Configure background images in the background of settings menu, prompts etc
-    level: 5
+    level: 2
     collapsed: true
   - title: Modal Background image url
     id: flexcyon-modal-bg-url
@@ -14553,11 +14604,11 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 body {
-  --flexcyon-dataview-horizontal-padding: 8px;
+  --flexcyon-dataview-error-horizontal-padding: 8px;
 }
 
 div.dataview-error-box p.dataview-error-message {
-  padding: 0 var(--flexcyon-dataview-horizontal-padding);
+  padding: 0 var(--flexcyon-dataview-error-horizontal-padding);
 }
 
 .obsidian-vault-statistics--item {
@@ -14977,7 +15028,7 @@ div.mermaid svg .nodes node * {
 }
 
 body {
-  --bases-no-img-str: "No image path could be found for this file";
+  --flexcyon-bases-no-img-str: "No image path could be found for this file";
   --bases-border-r: 16px;
   --bases-cards-group-padding: 16px;
   --bases-embed-padding: 4px;
@@ -15058,7 +15109,7 @@ div.bases-cards-cover:not([style*=background-image])::after {
   margin: 30% auto;
   color: var(--text-muted);
   text-align: center;
-  content: var(--bases-no-img-str);
+  content: var(--flexcyon-bases-no-img-str);
 }
 div.bases-cards-cover:not([style*=background-image]) * {
   background-image: none;
