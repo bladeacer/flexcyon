@@ -811,14 +811,6 @@ $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], 
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
 $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
 
-.markdown-rendered:has(
-  :is([data-callout*="tui"], [data-callout-metadata*="tui"]):not(
-    :is(#{$flexcyon-tui-exclusions})
-  )
-) {
-  margin-block-start: -24px;
-}
-
 body.flexcyon-tui-no-icons
   .callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
 body.flexcyon-tui-no-icons
@@ -948,6 +940,7 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 
   .callout-content {
     padding: 4px 12px;
+    background-color: var(--background-primary);
   }
 }
 
@@ -974,6 +967,7 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 
     .callout-content {
       padding: 4px 12px;
+      background-color: var(--background-primary);
     }
   }
 }

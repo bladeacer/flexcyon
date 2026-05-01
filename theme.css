@@ -7002,10 +7002,6 @@ div.callout[data-callout-metadata*=center-img] img {
 
 /* obsi-snip-coll end */
 /* obsi-snip-coll start: tui-callout */
-.markdown-rendered:has(:is([data-callout*=tui], [data-callout-metadata*=tui]):not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain]))) {
-  margin-block-start: -24px;
-}
-
 body.flexcyon-tui-no-icons .callout[data-callout*=tui]:not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain])) .callout-icon,
 body.flexcyon-tui-no-icons .callout[data-callout-metadata*=tui]:not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain])) .callout-icon,
 body.flexcyon-tui-callouts.flexcyon-tui-no-icons .callout:not(:is([data-callout*=vertical], [data-callout*=plain], [data-callout-metadata*=vertical], [data-callout-metadata*=plain])) .callout-icon {
@@ -7313,6 +7309,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-yellow]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7334,6 +7331,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-yellow]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-yellow]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-blue]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7355,6 +7353,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-blue]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-blue]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-purple]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7376,6 +7375,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-purple]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-purple]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-red]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7397,6 +7397,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-red]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-red]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-cyan]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7418,6 +7419,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-cyan]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-cyan]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-pink]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7439,6 +7441,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-pink]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-pink]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-green]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7460,6 +7463,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-green]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-green]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 .callout[data-callout*=plain-orange]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
@@ -7481,6 +7485,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-orange]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-orange]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
+  background-color: var(--background-primary);
 }
 
 /* obsi-snip-coll end */
@@ -10364,8 +10369,8 @@ body {
 
 /* obsi-snip-coll end */
 body .ͼo.cm-focused > .cm-scroller > .cm-cursorLayer > .cm-fat-cursor {
-  background-color: var(--interactive-accent);
   color: inherit;
+  background-color: var(--interactive-accent);
 }
 
 body.flexcyon-disable-vim-cursor-blink .cm-cursorLayer {
@@ -10377,8 +10382,8 @@ body.flexcyon-disable-vim-cursor-blink .cm-cursorLayer {
 }
 
 .cm-fat-cursor-mark {
-  background-color: var(--interactive-accent);
   color: inherit;
+  background-color: var(--interactive-accent);
 }
 
 /* obsi-snip-coll start: smooth-cursor */
@@ -11290,37 +11295,6 @@ body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[dat
 }
 body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-live-text]::before {
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
-}
-
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] {
-  cursor: not-allowed;
-  opacity: var(--dimmed);
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] .setting-item-control {
-  pointer-events: none;
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration]::before {
-  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] {
-  cursor: not-allowed;
-  opacity: var(--dimmed);
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] .setting-item-control {
-  pointer-events: none;
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn]::before {
-  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] {
-  cursor: not-allowed;
-  opacity: var(--dimmed);
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] .setting-item-control {
-  pointer-events: none;
-}
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width]::before {
-  content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
 }
 
 /*! 

@@ -222,11 +222,3 @@ body:not(.flexcyon-status-text-mode) {
   @include no-selector-dim("flexcyon-status-source-text", $setting-name-11);
   @include no-selector-dim("flexcyon-status-live-text", $setting-name-11);
 }
-
-$setting-name-12: "'Enable Smooth Cursor'";
-
-body:not(.flexcyon-enable-smooth-cursor) {
-  @include no-selector-dim("flexcyon-cursor-duration", $setting-name-12);
-  @include no-selector-dim("flexcyon-cursor-timing-fn", $setting-name-12);
-  @include no-selector-dim("flexcyon-cursor-min-width", $setting-name-12);
-}
