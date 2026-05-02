@@ -82,7 +82,8 @@ settings:
     type: variable-text
     id: flexcyon-new-tab-bg-wrapper
     default-dark: linear-gradient(to right, var(--text-accent), var(--color-purple))
-    default-light: linear-gradient(to right, var(--text-accent), var(--color-green))
+    default-light: linear-gradient(to right, var(--color-green), var(--text-accent))
+
   - title: Quote
     id: flexcyon-quote-val
     description: The quote that will be displayed

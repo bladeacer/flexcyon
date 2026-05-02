@@ -9823,8 +9823,8 @@ body.theme-dark {
 body.theme-light {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
-    var(--text-accent),
-    var(--color-green)
+    var(--color-green),
+    var(--text-accent)
   );
 }
 
@@ -11295,6 +11295,149 @@ body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[dat
 }
 body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-live-text]::before {
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
+}
+
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning]::before {
+  content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning]::before {
+  content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text]::before {
+  content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text]::before {
+  content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text]::before {
+  content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
+}
+
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val]::before {
+  content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix]::before {
+  content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit]::before {
+  content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size]::before {
+  content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
+}
+
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art]::before {
+  content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size]::before {
+  content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height]::before {
+  content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor]::before {
+  content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment] {
+  cursor: not-allowed;
+  opacity: var(--dimmed);
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment] .setting-item-control {
+  pointer-events: none;
+}
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment]::before {
+  content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
 
 /*! 
@@ -13811,7 +13954,8 @@ settings:
     type: variable-text
     id: flexcyon-new-tab-bg-wrapper
     default-dark: linear-gradient(to right, var(--text-accent), var(--color-purple))
-    default-light: linear-gradient(to right, var(--text-accent), var(--color-green))
+    default-light: linear-gradient(to right, var(--color-green), var(--text-accent))
+
   - title: Quote
     id: flexcyon-quote-val
     description: The quote that will be displayed

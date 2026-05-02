@@ -222,3 +222,35 @@ body:not(.flexcyon-status-text-mode) {
   @include no-selector-dim("flexcyon-status-source-text", $setting-name-11);
   @include no-selector-dim("flexcyon-status-live-text", $setting-name-11);
 }
+
+$setting-name-12: "'Enable Vim Mode Text'";
+
+body:not(.flexcyon-vim-mode-text-enable) {
+  @include no-selector-dim("flexcyon-vim-left-positioning", $setting-name-12);
+  @include no-selector-dim("flexcyon-vim-bottom-positioning", $setting-name-12);
+  @include no-selector-dim("flexcyon-vim-insert-text", $setting-name-12);
+  @include no-selector-dim("flexcyon-vim-normal-text", $setting-name-12);
+  @include no-selector-dim("flexcyon-vim-command-text", $setting-name-12);
+}
+
+$setting-name-13: "'Quote' in 'Add before empty state title'";
+
+body:not(.flexcyon-quote-enable) {
+  @include no-selector-dim("flexcyon-quote-val", $setting-name-13);
+  @include no-selector-dim("flexcyon-quote-credit-prefix", $setting-name-13);
+  @include no-selector-dim("flexcyon-quote-credit", $setting-name-13);
+  @include no-selector-dim("flexcyon-quote-font-size", $setting-name-13);
+}
+
+$setting-name-14: "'ASCII art' in 'Add before empty state title'";
+
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) {
+  @include no-selector-dim("flexcyon-ascii-art", $setting-name-14);
+  @include no-selector-dim(
+    "flexcyon-ascii-art-max-font-size",
+    $setting-name-14
+  );
+  @include no-selector-dim("flexcyon-ascii-line-height", $setting-name-14);
+  @include no-selector-dim("flexcyon-ascii-scaling-factor", $setting-name-14);
+  @include no-selector-dim("flexcyon-ascii-alignment", $setting-name-14);
+}

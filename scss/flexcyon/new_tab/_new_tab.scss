@@ -10,8 +10,8 @@ body.theme-dark {
 body.theme-light {
   --flexcyon-new-tab-bg-wrapper: linear-gradient(
     to right,
-    var(--text-accent),
-    var(--color-green)
+    var(--color-green),
+    var(--text-accent)
   );
 }
 

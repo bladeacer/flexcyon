@@ -416,6 +416,35 @@ def get_schema():
         ("bases-td-padding-l", (float, int), 2, "plugins"),
         ("bases-table-content-alignment", str, "left", "plugins"),
         ("hide-until-hover-bases-title-sidebar", str, "left", "plugins"),
+
+        ("vim-mode-text-enable", bool, True, "others"),
+        ("vim-left-positioning", (float, int), 6, "others"),
+        ("vim-bottom-positioning", (float, int), -4, "others"),
+        ("vim-insert-text", str, "INSERT", "others"),
+        ("vim-normal-text", str, "NORMAL", "others"),
+        ("vim-command-text", str, "COMMAND", "others"),
+
+        ("new-tab-mod", str, "none", "others"),
+        ("new-tab-font-group", str, "var(--font-monospace)", "others"),
+        (
+            "flexcyon-new-tab-bg-wrapper", str,
+            "linear-gradient(to right, var(--text-accent), var(--color-purple))",
+            "others"
+        ),
+        (
+            "quote-val", str,
+            "This is a placeholder quote\ain the Flexcyon Theme.", "others"
+        ),
+        ("quote-credit-prefix", str, "-", "others"),
+        ("quote-credit", str, "bladeacer", "others"),
+        ("quote-font-size", (float, int), 24, "others"),
+
+        ("ascii-max-font-size", (float, int), 14, "others"),
+        ("ascii-line-height", (float, int), 1.5, "others"),
+        ("ascii-scaling-factor", (float, int), 1, "others"),
+        ("ascii-alignment", str, "left", "others"),
+        ("empty-state-title-disable", bool, True, "others"),
+        ("empty-state-actions-disable", bool, True, "others"),
     ]
     return schema
 
@@ -446,7 +475,8 @@ def get_mapping_config():
             "text-normal@@light": "text-normal-col@@light",
             "flexcyon-dataview-horizontal-padding":
             "flexcyon-dataview-error-horizontal-padding",
-            "bases-no-img-str": "flexcyon-bases-no-img-str"
+            "bases-no-img-str": "flexcyon-bases-no-img-str",
+            "flexcyon-new-tab-bg-wrapper": "flexcyon-new-tab-bg-wrapper@@dark"
         },
 
         "keep_if_default": [],
