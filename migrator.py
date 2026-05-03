@@ -445,6 +445,35 @@ def get_schema():
         ("ascii-alignment", str, "left", "others"),
         ("empty-state-title-disable", bool, True, "others"),
         ("empty-state-actions-disable", bool, True, "others"),
+
+        ("sidedock-icon-effects", bool, True, "others"),
+        ("ribbon-top", bool, False, "others"),
+        ("ribbon-vault-switch", bool, False, "others"),
+        ("ribbon-vault-reverse", bool, False, "others"),
+
+        ("radius-s", (float, int), 2, "others", False),
+        ("radius-m", (float, int), 4, "others", False),
+        ("radius-l", (float, int), 6, "others", False),
+        ("radius-xl", (float, int), 8, "others", False),
+
+        ("sidebar-bg", str, "none", "others"),
+        ("bg-image-sidebar-left-url", str, 'url("")', "others"),
+        ("bg-image-sidebar-right-url", str, 'url("")', "others"),
+        ("bg-image-blend-mode", str, "darken", "others"),
+        ("bg-image-repeat", str, "no-repeat", "others"),
+        ("bg-image-blur", (float, int), 0, "others"),
+        ("bg-image-brightness", str, "unset", "others"),
+        ("bg-image-size", str, "cover", "others"),
+        ("bg-image-position", str, "center", "others"),
+
+        ("modal-bg-url", str, 'url("")', "others"),
+        ("modal-image-blend-mode", str, "darken", "others"),
+        ("modal-image-repeat", str, "no-repeat", "others"),
+        ("modal-image-blur", (float, int), 0, "others"),
+        ("modal-image-brightness", str, "unset", "others"),
+        ("modal-image-size", str, "cover", "others"),
+        ("modal-image-position", str, "center", "others"),
+        ("modal-dark-intensity", (float, int), 1, "others"),
     ]
     return schema
 
