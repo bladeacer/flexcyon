@@ -227,7 +227,8 @@ body.show-ribbon {
       .workspace-tab-header.is-active[data-type="#{$type}"]
     )
     + .workspace-tab-container {
-    padding-block-start: 2px;
+    padding-block-start: 4px;
+    margin-block-start: 4px;
     border: 2px solid
       oklch(from var(--color-#{$color}) l c h / calc(var(--dimmed) - 0.15));
 
@@ -236,7 +237,7 @@ body.show-ribbon {
       inset-block-start: 44px;
       inset-inline-start: 32px;
       z-index: 1;
-      padding: 0 8px;
+      padding: 2px 8px;
       color: oklch(from var(--color-#{$color}) l c h / 85%);
       content: "#{$content}";
       background-color: var(--color-base-00);

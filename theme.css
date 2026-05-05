@@ -3249,7 +3249,12 @@ body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-ta
 body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon + div + div.workspace-tab-header-status-container .mod-pinned {
   --icon-size: var(--icon-xs);
   color: var(--color-accent-2);
-  transform: translate(-3px, -11px);
+  transform: translate(-3px, -9px);
+}
+body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon:has(+ div + div.workspace-tab-header-status-container .mod-pinned) {
+  padding-inline-start: 4px;
+  margin-block-start: 4px;
+  transform: translateX(-2px);
 }
 
 body.flexcyon-stylised-pins.flexcyon-vertical-nav :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon:has(+ div + div.workspace-tab-header-status-container > .mod-pinned) {
@@ -8307,7 +8312,8 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-c
   margin-block-start: 4px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-blue) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
@@ -8315,13 +8321,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-blue) l c h/85%);
   content: "Files";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
@@ -8329,13 +8336,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-purple) l c h/85%);
   content: "Alternate File Tree";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
@@ -8343,13 +8351,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-cyan) l c h/85%);
   content: "Bookmarks";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-pink) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
@@ -8357,13 +8366,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-pink) l c h/85%);
   content: "All Properties";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-green) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
@@ -8371,13 +8381,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-green) l c h/85%);
   content: "Outline";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-yellow) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
@@ -8385,13 +8396,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-yellow) l c h/85%);
   content: "Full Calendar | Sidebar";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-orange) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
@@ -8399,13 +8411,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-orange) l c h/85%);
   content: "Backlinks";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-red) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
@@ -8413,13 +8426,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-red) l c h/85%);
   content: "Review Queue";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-blue) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
@@ -8427,13 +8441,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-blue) l c h/85%);
   content: "Properties";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
@@ -8441,13 +8456,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-purple) l c h/85%);
   content: "Outgoing Links";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
@@ -8455,13 +8471,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-cyan) l c h/85%);
   content: "Graph View";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-pink) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
@@ -8469,13 +8486,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-pink) l c h/85%);
   content: "Full Calendar";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-green) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
@@ -8483,13 +8501,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-green) l c h/85%);
   content: "Local Graph";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-yellow) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
@@ -8497,13 +8516,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-yellow) l c h/85%);
   content: "Calendar";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container::before {
@@ -8511,13 +8531,14 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-purple) l c h/85%);
   content: "Tags";
   background-color: var(--color-base-00);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container {
-  padding-block-start: 2px;
+  padding-block-start: 4px;
+  margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container::before {
@@ -8525,7 +8546,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   inset-block-start: 44px;
   inset-inline-start: 32px;
   z-index: 1;
-  padding: 0 8px;
+  padding: 2px 8px;
   color: oklch(from var(--color-cyan) l c h/85%);
   content: "Bases";
   background-color: var(--color-base-00);
@@ -13368,12 +13389,12 @@ settings:
     collapsed: true
   - title: Stylised pin icons
     id: flexcyon-stylised-pins
-    description: Stylise pin icons in the sidebars
+    description: Stylise pin icons in the sidebars.
     type: class-toggle
     default: true
   - title: Prevent accidental unpins
     id: flexcyon-prevent-accidental-unpin
-    description: Stylise pin icons in the sidebars. Unpin with right click menu or Ctrl + W.
+    description: Unpin with right click menu or Ctrl + W.
     type: class-toggle
     default: true
 
