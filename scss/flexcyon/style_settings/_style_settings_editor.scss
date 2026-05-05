@@ -1666,7 +1666,7 @@ settings:
     description: Does not display line numbers for lines which have relative line numbers displayed. 
     type: class-toggle
     id: flexcyon-no-num-with-relative
-    default: false
+    default: true
   - title: Only display relative line numbers
     description: Overrides previous configuration option.
     type: class-toggle
@@ -1675,6 +1675,7 @@ settings:
   - title: Configure Relative Line Number Style
     type: class-select
     id: flexcyon-select-relative-num
+    description: Configure the style of numerals used for relative line numbers. Greek requires a font that supports Unicode (UTF-8 charset), Chinese requires a system font that supports CJK (whether as a fallback or main font).
     allowEmpty: true
     default: none
     options: 
@@ -1688,7 +1689,7 @@ settings:
         label: Chinese
         value: flexcyon-chinese-rel-nums
   - title: Replace active line number with string
-    description: Customise the active line number with your own string, defaults to "->"
+    description: Customise the active line number with your own string.
     type: class-toggle
     id: flexcyon-repl-active-line-num-str
     default: false

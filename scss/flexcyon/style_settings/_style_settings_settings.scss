@@ -34,6 +34,11 @@ settings:
     level: 2
     collapsed: true
     description: Configure the appearance for style settings
+  - title: Hide Keychain item in Style Settings
+    description: Hides Keychain Style Setting item.
+    id: flexcyon-no-keychain-setting-item
+    type: class-toggle
+    default: true
   - title: Indentation width between style setting headings
     type: variable-number
     id: flexcyon-style-settings-indent-width

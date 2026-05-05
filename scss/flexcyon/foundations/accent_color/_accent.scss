@@ -15,8 +15,6 @@ body.theme-light {
   --flexcyon-accent: #5770b9;
 }
 
-// TODO: Fully commit to the oklch theme wide.
-
 body.theme-dark,
 body.theme-light {
   @include m.configure-oklch("color-accent", "flexcyon-accent");

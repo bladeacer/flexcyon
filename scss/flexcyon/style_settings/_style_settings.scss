@@ -1,7 +1,3 @@
-/* TODO: Modularise more parts into separate .scss files. Makes settings more searchable like Willemstad theme. */
-
-/* TODO: Note the ASCII art default is very sensitive and breaks with whitespace change. */
-
 @use "./style_settings_styles";
 @use "./style_settings_about";
 @use "./style_settings_modes";
@@ -10,4 +6,6 @@
 @use "./style_settings_editor";
 @use "./style_settings_settings";
 @use "./style_settings_plugins";
+
+/* Note the ASCII art default is very sensitive and breaks with whitespace change. */
 @use "./style_settings_others";

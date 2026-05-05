@@ -10911,8 +10911,6 @@ body .image-container img {
   border-radius: var(--flexcyon-img-border-radius);
 }
 
-/* TODO: Modularise more parts into separate .scss files. Makes settings more searchable like Willemstad theme. */
-/* TODO: Note the ASCII art default is very sensitive and breaks with whitespace change. */
 body {
   --flexcyon-style-settings-indent-width: 4px;
 }
@@ -13273,7 +13271,7 @@ settings:
     description: Does not display line numbers for lines which have relative line numbers displayed. 
     type: class-toggle
     id: flexcyon-no-num-with-relative
-    default: false
+    default: true
   - title: Only display relative line numbers
     description: Overrides previous configuration option.
     type: class-toggle
@@ -13282,6 +13280,7 @@ settings:
   - title: Configure Relative Line Number Style
     type: class-select
     id: flexcyon-select-relative-num
+    description: Configure the style of numerals used for relative line numbers. Greek requires a font that supports Unicode (UTF-8 charset), Chinese requires a system font that supports CJK (whether as a fallback or main font).
     allowEmpty: true
     default: none
     options: 
@@ -13295,7 +13294,7 @@ settings:
         label: Chinese
         value: flexcyon-chinese-rel-nums
   - title: Replace active line number with string
-    description: Customise the active line number with your own string, defaults to "->"
+    description: Customise the active line number with your own string.
     type: class-toggle
     id: flexcyon-repl-active-line-num-str
     default: false
@@ -13585,6 +13584,11 @@ settings:
     level: 2
     collapsed: true
     description: Configure the appearance for style settings
+  - title: Hide Keychain item in Style Settings
+    description: Hides Keychain Style Setting item.
+    id: flexcyon-no-keychain-setting-item
+    type: class-toggle
+    default: true
   - title: Indentation width between style setting headings
     type: variable-number
     id: flexcyon-style-settings-indent-width
@@ -13870,6 +13874,7 @@ settings:
     type: class-toggle
     default: true
 */
+/* Note the ASCII art default is very sensitive and breaks with whitespace change. */
 /*! 
 @settings
 name: flexcyon://Others

@@ -152,30 +152,28 @@ body.flexcyon-enable-rel-nums:not(.is-mobile) {
   @include write-relative-lines(10);
 }
 
-// TODO: Use Unicode character instead for Greek/Chinese
-
 // Lower Greek letters
 body.flexcyon-enable-rel-nums.flexcyon-greek-rel-nums:not(.is-mobile) {
-  @include target-relative-line-abv(1, "α", 0.925);
-  @include target-relative-line-abv(2, "β", 0.925);
-  @include target-relative-line-abv(3, "γ", 0.925);
-  @include target-relative-line-abv(4, "δ", 0.925);
-  @include target-relative-line-abv(5, "ε", 0.925);
-  @include target-relative-line-abv(6, "ζ", 0.925);
-  @include target-relative-line-abv(7, "η", 0.925);
-  @include target-relative-line-abv(8, "θ", 0.925);
-  @include target-relative-line-abv(9, "ι", 0.95);
-  @include target-relative-line-abv(10, "κ", 0.95);
-  @include target-relative-line-bel(1, "α", 0.925);
-  @include target-relative-line-bel(2, "β", 0.925);
-  @include target-relative-line-bel(3, "γ", 0.925);
-  @include target-relative-line-bel(4, "δ", 0.925);
-  @include target-relative-line-bel(5, "ε", 0.925);
-  @include target-relative-line-bel(6, "ζ", 0.925);
-  @include target-relative-line-bel(7, "η", 0.925);
-  @include target-relative-line-bel(8, "θ", 0.925);
-  @include target-relative-line-bel(9, "ι", 0.95);
-  @include target-relative-line-bel(10, "κ", 0.95);
+  @include target-relative-line-abv(1, "\03B1", 0.925);
+  @include target-relative-line-abv(2, "\03B2", 0.925);
+  @include target-relative-line-abv(3, "\03B3", 0.925);
+  @include target-relative-line-abv(4, "\03B4", 0.925);
+  @include target-relative-line-abv(5, "\03B5", 0.925);
+  @include target-relative-line-abv(6, "\03B6", 0.925);
+  @include target-relative-line-abv(7, "\03B7", 0.925);
+  @include target-relative-line-abv(8, "\03B8", 0.925);
+  @include target-relative-line-abv(9, "\03B9", 0.95);
+  @include target-relative-line-abv(10, "\03BA", 0.95);
+  @include target-relative-line-bel(1, "\03B1", 0.925);
+  @include target-relative-line-bel(2, "\03B2", 0.925);
+  @include target-relative-line-bel(3, "\03B3", 0.925);
+  @include target-relative-line-bel(4, "\03B4", 0.925);
+  @include target-relative-line-bel(5, "\03B5", 0.925);
+  @include target-relative-line-bel(6, "\03B6", 0.925);
+  @include target-relative-line-bel(7, "\03B7", 0.925);
+  @include target-relative-line-bel(8, "\03B8", 0.925);
+  @include target-relative-line-bel(9, "\03B9", 0.95);
+  @include target-relative-line-bel(10, "\03BA", 0.95);
 }
 
 // Roman numerals
@@ -202,28 +200,28 @@ body.flexcyon-enable-rel-nums.flexcyon-roman-rel-nums:not(.is-mobile) {
   @include target-relative-line-bel(10, "X");
 }
 
-// Chinese numbers
+// Chinese numerals
 body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
-  @include target-relative-line-abv(1, "一");
-  @include target-relative-line-abv(2, "二");
-  @include target-relative-line-abv(3, "三");
-  @include target-relative-line-abv(4, "四");
-  @include target-relative-line-abv(5, "五");
-  @include target-relative-line-abv(6, "六");
-  @include target-relative-line-abv(7, "七");
-  @include target-relative-line-abv(8, "八");
-  @include target-relative-line-abv(9, "九");
-  @include target-relative-line-abv(10, "十");
-  @include target-relative-line-bel(1, "一");
-  @include target-relative-line-bel(2, "二");
-  @include target-relative-line-bel(3, "三");
-  @include target-relative-line-bel(4, "四");
-  @include target-relative-line-bel(5, "五");
-  @include target-relative-line-bel(6, "六");
-  @include target-relative-line-bel(7, "七");
-  @include target-relative-line-bel(8, "八");
-  @include target-relative-line-bel(9, "九");
-  @include target-relative-line-bel(10, "十");
+  @include target-relative-line-abv(1, "\4E00");
+  @include target-relative-line-abv(2, "\4E8C");
+  @include target-relative-line-abv(3, "\4E09");
+  @include target-relative-line-abv(4, "\56DB");
+  @include target-relative-line-abv(5, "\4E94");
+  @include target-relative-line-abv(6, "\516D");
+  @include target-relative-line-abv(7, "\4E03");
+  @include target-relative-line-abv(8, "\516B");
+  @include target-relative-line-abv(9, "\4E5D");
+  @include target-relative-line-abv(10, "\5341");
+  @include target-relative-line-bel(1, "\4E00");
+  @include target-relative-line-bel(2, "\4E8C");
+  @include target-relative-line-bel(3, "\4E09");
+  @include target-relative-line-bel(4, "\56DB");
+  @include target-relative-line-bel(5, "\4E94");
+  @include target-relative-line-bel(6, "\516D");
+  @include target-relative-line-bel(7, "\4E03");
+  @include target-relative-line-bel(8, "\516B");
+  @include target-relative-line-bel(9, "\4E5D");
+  @include target-relative-line-bel(10, "\5341");
 }
 
 body.flexcyon-repl-active-line-num-str {
