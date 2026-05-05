@@ -1233,11 +1233,11 @@ settings:
     level: 2
     collapsed: true
   - title: Select workspace layout
-    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons.
+    description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons in the UI.
     type: class-select
     id: flexcyon-workspace-layout
     allowEmpty: true
-    default: none
+    default: flexcyon-workspace-pl10k-layout
     options: 
       - 
         label: Cards Layout

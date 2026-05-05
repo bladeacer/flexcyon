@@ -110,7 +110,7 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-leaf-content:not([data-type="markdown"]) {
-    margin: 8px;
+    padding: 4px 8px;
   }
 
   .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
@@ -130,11 +130,12 @@ body.flexcyon-workspace-card-layout {
   }
 
   .workspace-split.mod-vertical.mod-root .workspace-tab-container {
-    border: var(--color-base-00);
+    border: none;
   }
 
   .workspace-tabs.mod-active .workspace-tab-header-container {
-    border: 2px solid var(--text-on-accent);
+    border: 2px solid
+      oklch(from var(--text-muted) l c h / calc(0.25 * var(--dimmed)));
   }
 
   .workspace-split.mod-right-split :last-child .workspace-tab-container {
@@ -226,70 +227,21 @@ body.show-ribbon {
       .workspace-tab-header.is-active[data-type="#{$type}"]
     )
     + .workspace-tab-container {
+    padding-block-start: 2px;
     border: 2px solid
-      rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) - 0.15));
+      oklch(from var(--color-#{$color}) l c h / calc(var(--dimmed) - 0.15));
 
     &::before {
       position: absolute;
-      inset-block-start: 40px;
+      inset-block-start: 44px;
       inset-inline-start: 32px;
       z-index: 1;
       padding: 0 8px;
-      color: rgb(var(--color-#{$color}-rgb), 0.85);
+      color: oklch(from var(--color-#{$color}) l c h / 85%);
       content: "#{$content}";
       background-color: var(--color-base-00);
     }
   }
-}
-
-body.theme-dark.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-  @include tab-container-style("file-explorer", "blue", "Files");
-  @include tab-container-style(
-    "file-tree-view",
-    "purple",
-    "Alternate File Tree"
-  );
-  @include tab-container-style("bookmarks", "cyan", "Bookmarks");
-  @include tab-container-style("all-properties", "pink", "All Properties");
-  @include tab-container-style("outline", "green", "Outline");
-  @include tab-container-style(
-    "full-calendar-sidebar-view",
-    "yellow",
-    "Full Calendar | Sidebar"
-  );
-  @include tab-container-style("backlink", "orange", "Backlinks");
-  @include tab-container-style("review-queue-list-view", "red", "Review Queue");
-  @include tab-container-style("file-properties", "blue", "Properties");
-  @include tab-container-style("outgoing-link", "purple", "Outgoing Links");
-  @include tab-container-style("graph", "cyan", "Graph View");
-  @include tab-container-style("full-calendar-view", "pink", "Full Calendar");
-  @include tab-container-style("localgraph", "green", "Local Graph");
-  @include tab-container-style("calendar", "yellow", "Calendar");
-}
-
-body.theme-light.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
-  @include tab-container-style("file-explorer", "blue", "Files");
-  @include tab-container-style(
-    "file-tree-view",
-    "purple",
-    "Alternate File Tree"
-  );
-  @include tab-container-style("bookmarks", "cyan", "Bookmarks");
-  @include tab-container-style("all-properties", "pink", "All Properties");
-  @include tab-container-style("outline", "green", "Outline");
-  @include tab-container-style(
-    "full-calendar-sidebar-view",
-    "yellow",
-    "Full Calendar | Sidebar"
-  );
-  @include tab-container-style("backlink", "orange", "Backlinks");
-  @include tab-container-style("review-queue-list-view", "red", "Review Queue");
-  @include tab-container-style("file-properties", "blue", "Properties");
-  @include tab-container-style("outgoing-link", "purple", "Outgoing Links");
-  @include tab-container-style("graph", "cyan", "Graph View");
-  @include tab-container-style("full-calendar-view", "pink", "Full Calendar");
-  @include tab-container-style("localgraph", "green", "Local Graph");
-  @include tab-container-style("calendar", "yellow", "Calendar");
 }
 
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
@@ -320,9 +272,36 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext {
   .metadata-content {
     margin-block-start: 4px;
   }
+
+  @include tab-container-style("file-explorer", "blue", "Files");
+  @include tab-container-style(
+    "file-tree-view",
+    "purple",
+    "Alternate File Tree"
+  );
+  @include tab-container-style("bookmarks", "cyan", "Bookmarks");
+  @include tab-container-style("all-properties", "pink", "All Properties");
+  @include tab-container-style("outline", "green", "Outline");
+  @include tab-container-style(
+    "full-calendar-sidebar-view",
+    "yellow",
+    "Full Calendar | Sidebar"
+  );
+  @include tab-container-style("backlink", "orange", "Backlinks");
+  @include tab-container-style("review-queue-list-view", "red", "Review Queue");
+  @include tab-container-style("file-properties", "blue", "Properties");
+  @include tab-container-style("outgoing-link", "purple", "Outgoing Links");
+  @include tab-container-style("graph", "cyan", "Graph View");
+  @include tab-container-style("full-calendar-view", "pink", "Full Calendar");
+  @include tab-container-style("localgraph", "green", "Local Graph");
+  @include tab-container-style("calendar", "yellow", "Calendar");
+
+  // @include tab-container-style("tag", "blue", "Tags");
+
+  @include tab-container-style("tag", "purple", "Tags");
+  @include tab-container-style("bases", "cyan", "Bases");
 }
 
-body.flexcyon-flex-max-mode,
 body.flexcyon-workspace-pl10k-layout {
   .workspace-split.mod-sidedock .workspace-tab-header.is-active {
     aspect-ratio: cos(30deg);

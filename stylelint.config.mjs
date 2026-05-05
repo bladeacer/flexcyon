@@ -45,7 +45,7 @@ export default {
     "scales/font-weights": [500, 525, 900],
     "scales/space": [
       [
-        {"scale": [0, 1, 2, 4, 6,  8, 10, 12, 16, 24, 28, 32, 40, 48], "units": ["px"]}
+        {"scale": [0, 1, 2, 4, 6,  8, 10, 12, 16, 24, 28, 32, 40, 44, 48], "units": ["px"]}
       ]
     ],
 

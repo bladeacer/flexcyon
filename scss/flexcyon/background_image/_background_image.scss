@@ -18,13 +18,13 @@ body {
 
   @container style(--flexcyon-bg-image-sidebar-left-url: url("")) {
     .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
-      background-color: var(--color-base-05);
+      background-color: var(--background-secondary);
     }
   }
 
   @container style(--flexcyon-bg-image-sidebar-right-url: url("")) {
     .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
-      background-color: var(--color-base-05);
+      background-color: var(--background-secondary);
     }
   }
 
