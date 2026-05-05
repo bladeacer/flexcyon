@@ -1,0 +1,9 @@
+/*
+ * Sample CSS file entry, here for demo purposes only.
+ *
+ * If you would like to contribute in CSS and not SCSS to the theme, append it to the bottom of this file.
+ */
+
+body {
+  background-color: var(--color-red);
+}
