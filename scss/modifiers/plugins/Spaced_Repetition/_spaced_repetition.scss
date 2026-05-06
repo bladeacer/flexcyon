@@ -1,5 +1,5 @@
-.sr-bg-green {
-  background-color: rgb(var(--color-green-rgb), 0.925) !important;
+gsr-bg-green {
+  background-color: oklch(from var(--color-green) l c h / 92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
@@ -8,7 +8,7 @@
 }
 
 .sr-bg-blue {
-  background-color: rgb(var(--color-blue-rgb), 0.925) !important;
+  background-color: oklch(from var(--color-blue) l c h / 92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
@@ -17,7 +17,7 @@
 }
 
 .sr-bg-red {
-  background-color: rgb(var(--color-red-rgb), 0.925) !important;
+  background-color: oklch(from var(--color-red) l c h / 92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,

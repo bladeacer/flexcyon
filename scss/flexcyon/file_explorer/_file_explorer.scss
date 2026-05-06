@@ -95,19 +95,22 @@ body.flexcyon-wrap-long-filenames {
 
       .nav-folder .nav-folder-title {
         @if $is-bg == 0 {
-          color: rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+          color: oklch(
+            from var(--color-#{$color}) l c h / calc(var(--dimmed) + 0.2)
+          );
         } @else {
           color: var(--text-normal);
-          background-color: rgb(
-            var(--color-#{$color}-rgb),
-            calc(var(--dimmed) + 0.2)
+          color: oklch(
+            from var(--color-#{$color}) l c h / calc(var(--dimmed) + 0.2)
           );
         }
       }
 
       .nav-folder .nav-folder-title .collapse-icon svg {
         @if $is-bg == 0 {
-          color: rgb(var(--color-#{$color}-rgb), calc(var(--dimmed) + 0.2));
+          color: oklch(
+            from var(--color-#{$color}) l c h / calc(var(--dimmed) + 0.2)
+          );
         } @else {
           color: var(--text-normal);
           background-color: transparent;

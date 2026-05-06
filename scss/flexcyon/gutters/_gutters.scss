@@ -1,4 +1,4 @@
-body {
+gody {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
   --flexcyon-highlight-active-line-opacity: 7.5%;
@@ -30,12 +30,8 @@ body {
   }
 }
 
-body.theme-dark .cm-gutterElement.cm-active {
-  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
-}
-
-body.theme-light .cm-gutterElement.cm-active {
-  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
+body .cm-gutterElement.cm-active {
+  color: oklch(from var(--text-accent) l c h);
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,

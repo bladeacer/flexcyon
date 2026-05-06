@@ -54,16 +54,12 @@ body {
     box-shadow: 0 0 0 1px var(--interactive-accent);
   }
 
-  .metadata-container,
-  .workspace-leaf-content[data-type="all-properties"] {
-    .svg-icon {
-      transform: translateY(-0.75px);
+  .markdown-preview-view > div > div > div,
+  .markdown-source-view > div > div > div {
+    .inline-title,
+    .metadata-container {
+      margin-inline-start: 48px;
     }
-  }
-
-  .markdown-source-view .metadata-container,
-  .markdown-preview-view .metadata-container {
-    transform: translateX(0);
   }
 
   .metadata-property-value.is-being-dragged-over::after {

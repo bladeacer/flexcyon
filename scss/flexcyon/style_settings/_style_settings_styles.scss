@@ -47,14 +47,14 @@ body:not(.css-settings-manager) .app-container::after {
 
 .themed-color-wrapper {
   .theme-dark .pickr-reset button {
-    color: #d3d3d3aa;
-    background-color: #191d28aa;
+    color: oklch(from #d3d3d3aa l c h);
+    background-color: oklch(from #191d28aa l c h);
     scale: var(--upsize);
   }
 
   .theme-light .pickr-reset button {
-    color: #080808aa;
-    background-color: #edebe5aa;
+    color: oklch(from #080808aa l c h);
+    background-color: oklch(from #edebe5aa l c h);
     scale: var(--upsize);
   }
 }

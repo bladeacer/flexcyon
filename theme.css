@@ -1557,13 +1557,11 @@ body .text-icon-button:focus,
 body .metadata-properties-heading:focus::before {
   box-shadow: 0 0 0 1px var(--interactive-accent);
 }
-body .metadata-container .svg-icon,
-body .workspace-leaf-content[data-type=all-properties] .svg-icon {
-  transform: translateY(-0.75px);
-}
-body .markdown-source-view .metadata-container,
-body .markdown-preview-view .metadata-container {
-  transform: translateX(0);
+body .markdown-preview-view > div > div > div .inline-title,
+body .markdown-preview-view > div > div > div .metadata-container,
+body .markdown-source-view > div > div > div .inline-title,
+body .markdown-source-view > div > div > div .metadata-container {
+  margin-inline-start: 48px;
 }
 body .metadata-property-value.is-being-dragged-over::after {
   background-color: oklch(from var(--interactive-accent) l c h/10%);
@@ -3609,8 +3607,8 @@ body.theme-light {
   --flexcyon-text-muted: #6f768599;
   --text-muted-wrapper: color-mix(
     in oklch,
-    oklch(from var(--flexcyon-text-muted) l c h / var(--dimmed)),
-    oklch(from var(--text-normal) l c h / var(--dimmed))
+    oklch(from var(--flexcyon-text-muted) l c h),
+    oklch(from var(--text-normal) l c h)
   );
   --text-muted: oklch(
     from var(--text-muted-wrapper)
@@ -3747,35 +3745,31 @@ body {
   --radius-x1: 8px;
 }
 
-body {
+gody {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
   --flexcyon-highlight-active-line-opacity: 7.5%;
   --flexcyon-typewriter-mode-opacity: 0.55;
 }
-body .cm-gutterElement.cm-active {
+gody .cm-gutterElement.cm-active {
   font-size: var(--font-ui-medium);
   font-weight: 900;
   color: var(--text-accent);
 }
-body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement {
+gody .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement {
   background-color: var(--background-primary);
 }
-body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
+gody .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
   content: "'";
 }
-body .markdown-source-view .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-body .markdown-source-view .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-body .markdown-source-view .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+gody .markdown-source-view .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
+gody .markdown-source-view .inline-title:has(+ .cm-contentContainer > .cm-gutters),
+gody .markdown-source-view .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
   transform: translateX(54px);
 }
 
-body.theme-dark .cm-gutterElement.cm-active {
-  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.15));
-}
-
-body.theme-light .cm-gutterElement.cm-active {
-  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.15));
+body .cm-gutterElement.cm-active {
+  color: oklch(from var(--text-accent) l c h);
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
@@ -8293,7 +8287,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .sidebar-to
   padding-block-start: 8px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .workspace-split:not(.mod-left-split, .mod-right-split) .metadata-container {
-  border: 2px solid rgb(var(--color-purple-rgb), calc(var(--dimmed) - 0.15));
+  border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading {
   position: absolute;
@@ -8301,7 +8295,7 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-p
   inset-inline-start: 32px;
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading * {
-  color: rgb(var(--color-purple-rgb), 0.9);
+  color: oklch(from var(--color-purple) l c h/90%);
 }
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading div.collapse-indicator,
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-properties-heading .metadata-properties-title {
@@ -8311,12 +8305,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-p
 body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .metadata-content {
   margin-block-start: 4px;
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-blue) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-explorer]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8326,12 +8320,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Files";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-tree-view]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8341,12 +8335,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Alternate File Tree";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=bookmarks]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8356,12 +8350,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Bookmarks";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-pink) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=all-properties]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8371,12 +8365,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "All Properties";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-green) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=outline]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8386,12 +8380,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Outline";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-yellow) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=full-calendar-sidebar-view]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8401,12 +8395,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Full Calendar | Sidebar";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-orange) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=backlink]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8416,12 +8410,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Backlinks";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-red) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=review-queue-list-view]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8431,12 +8425,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Review Queue";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-blue) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=file-properties]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8446,12 +8440,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Properties";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=outgoing-link]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8461,12 +8455,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Outgoing Links";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=graph]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8476,12 +8470,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Graph View";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-pink) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=full-calendar-view]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8491,12 +8485,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Full Calendar";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-green) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=localgraph]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8506,12 +8500,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Local Graph";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-yellow) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=calendar]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8521,12 +8515,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Calendar";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-purple) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=tag]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8536,12 +8530,12 @@ body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedo
   content: "Tags";
   background-color: var(--color-base-00);
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container {
   padding-block-start: 4px;
   margin-block-start: 4px;
   border: 2px solid oklch(from var(--color-cyan) l c h/calc(var(--dimmed) - 0.15));
 }
-body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(.workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container::before {
+body.flexcyon-workspace-card-layout.flexcyon-workspace-cards-tui-ext .mod-sidedock .workspace-tab-header-container:has(> .workspace-tab-header-container-inner > .workspace-tab-header.is-active[data-type=bases]) + .workspace-tab-container::before {
   position: absolute;
   inset-block-start: 44px;
   inset-inline-start: 32px;
@@ -8660,80 +8654,80 @@ body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8
   color: var(--color-purple);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-purple) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-purple) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder-title {
   color: var(--color-cyan);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-cyan) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-cyan) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder-title {
   color: var(--color-blue);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-blue) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-blue) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder-title {
   color: var(--color-pink);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-pink) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-pink) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder-title {
   color: var(--color-green);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-green) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-green) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder-title {
   color: var(--color-yellow);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-yellow) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-yellow) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder-title {
   color: var(--color-orange);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-orange) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-orange) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder-title .collapse-icon svg,
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder-title {
   color: var(--color-red);
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title {
-  color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-red) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title .collapse-icon svg {
-  color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-red) l c h/calc(var(--dimmed) + 0.2));
 }
 
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder-title .collapse-icon svg,
@@ -8743,7 +8737,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-purple-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-purple) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 0) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8756,7 +8750,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-cyan-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-cyan) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 1) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8769,7 +8763,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-blue-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-blue) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 2) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8782,7 +8776,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-pink-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-pink) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 3) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8795,7 +8789,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-green-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-green) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 4) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8808,7 +8802,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-yellow-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-yellow) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 5) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8821,7 +8815,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-orange-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-orange) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 6) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -8834,7 +8828,7 @@ body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .n
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title {
   color: var(--text-normal);
-  background-color: rgb(var(--color-red-rgb), calc(var(--dimmed) + 0.2));
+  color: oklch(from var(--color-red) l c h/calc(var(--dimmed) + 0.2));
 }
 body.flexcyon-rainbow-folders.flexcyon-is-bg-rainbow .nav-files-container div .nav-folder:nth-of-type(8n + 7) .nav-folder .nav-folder-title .collapse-icon svg {
   color: var(--text-normal);
@@ -10823,13 +10817,13 @@ body:not(.css-settings-manager) .app-container::after {
 }
 
 .themed-color-wrapper .theme-dark .pickr-reset button {
-  color: rgba(211, 211, 211, 0.6666666667);
-  background-color: rgba(25, 29, 40, 0.6666666667);
+  color: oklch(from rgba(211, 211, 211, 0.6666666667) l c h);
+  background-color: oklch(from rgba(25, 29, 40, 0.6666666667) l c h);
   scale: var(--upsize);
 }
 .themed-color-wrapper .theme-light .pickr-reset button {
-  color: rgba(8, 8, 8, 0.6666666667);
-  background-color: rgba(237, 235, 229, 0.6666666667);
+  color: oklch(from rgba(8, 8, 8, 0.6666666667) l c h);
+  background-color: oklch(from rgba(237, 235, 229, 0.6666666667) l c h);
   scale: var(--upsize);
 }
 
@@ -14542,8 +14536,8 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
   transform: skewX(-5deg);
 }
 
-.sr-bg-green {
-  background-color: rgb(var(--color-green-rgb), 0.925) !important;
+gsr-bg-green {
+  background-color: oklch(from var(--color-green) l c h/92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
@@ -14552,7 +14546,7 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 .sr-bg-blue {
-  background-color: rgb(var(--color-blue-rgb), 0.925) !important;
+  background-color: oklch(from var(--color-blue) l c h/92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
@@ -14561,7 +14555,7 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
 }
 
 .sr-bg-red {
-  background-color: rgb(var(--color-red-rgb), 0.925) !important;
+  background-color: oklch(from var(--color-red) l c h/92.5%) !important;
 }
 
 .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
@@ -14897,46 +14891,62 @@ div.mermaid svg .nodes node * {
   filter: none;
 }
 
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g :is(*) {
   fill: var(--text-normal) !important;
   fill-opacity: var(--dimmed) !important;
   stroke: var(--text-faint) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.red :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.red :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.red :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.red :is(*) {
-  fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
-  stroke: var(--color-red-rgb) !important;
+  fill: oklch(from var(--color-red) l c h/var(--dimmed)) !important;
+  stroke: var(--color-red) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.purple :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.purple :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.purple :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.purple :is(*) {
-  fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
-  stroke: var(--color-purple-rgb) !important;
+  fill: oklch(from var(--color-purple) l c h/var(--dimmed)) !important;
+  stroke: var(--color-purple) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.cyan :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.cyan :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.cyan :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.cyan :is(*) {
-  fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
-  stroke: var(--color-cyan-rgb) !important;
+  fill: oklch(from var(--color-cyan) l c h/var(--dimmed)) !important;
+  stroke: var(--color-cyan) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.yellow :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.yellow :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.yellow :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.yellow :is(*) {
-  fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
-  stroke: var(--color-yellow-rgb) !important;
+  fill: oklch(from var(--color-yellow) l c h/var(--dimmed)) !important;
+  stroke: var(--color-yellow) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.blue :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.blue :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.blue :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.blue :is(*) {
-  fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
-  stroke: var(--color-blue-rgb) !important;
+  fill: oklch(from var(--color-blue) l c h/var(--dimmed)) !important;
+  stroke: var(--color-blue) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.green :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.green :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.green :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.green :is(*) {
-  fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
-  stroke: var(--color-green-rgb) !important;
+  fill: oklch(from var(--color-green) l c h/var(--dimmed)) !important;
+  stroke: var(--color-green) !important;
 }
+.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.orange :is(*),
+.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.orange :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.orange :is(*),
 .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.orange :is(*) {
-  fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
-  stroke: var(--color-orange-rgb) !important;
+  fill: oklch(from var(--color-orange) l c h/var(--dimmed)) !important;
+  stroke: var(--color-orange) !important;
 }
 
 .mermaid > svg[aria-roledescription=flowchart] g.root,
@@ -14979,45 +14989,6 @@ div.mermaid svg .nodes node * {
   fill: var(--background-secondary) !important;
   fill-opacity: calc(var(--dimmed) - 0.25) !important;
   stroke: var(--text-faint) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes {
-  /* Colorize individual nodes with classes */
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.red :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.red :is(*) {
-  fill: rgb(var(--color-red-rgb), var(--dimmed)) !important;
-  stroke: var(--color-red-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.purple :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.purple :is(*) {
-  fill: rgb(var(--color-purple-rgb), var(--dimmed)) !important;
-  stroke: var(--color-purple-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.cyan :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.cyan :is(*) {
-  fill: rgb(var(--color-cyan-rgb), var(--dimmed)) !important;
-  stroke: var(--color-cyan-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.yellow :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.yellow :is(*) {
-  fill: rgb(var(--color-yellow-rgb), var(--dimmed)) !important;
-  stroke: var(--color-yellow-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.blue :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.blue :is(*) {
-  fill: rgb(var(--color-blue-rgb), var(--dimmed)) !important;
-  stroke: var(--color-blue-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.green :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.green :is(*) {
-  fill: rgb(var(--color-green-rgb), var(--dimmed)) !important;
-  stroke: var(--color-green-rgb) !important;
-}
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.orange :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.orange :is(*) {
-  fill: rgb(var(--color-orange-rgb), var(--dimmed)) !important;
-  stroke: var(--color-orange-rgb) !important;
 }
 
 .mermaid {

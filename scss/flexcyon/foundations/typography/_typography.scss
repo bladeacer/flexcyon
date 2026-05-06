@@ -40,8 +40,8 @@ body.theme-light {
   --flexcyon-text-muted: #6f768599;
   --text-muted-wrapper: color-mix(
     in oklch,
-    oklch(from var(--flexcyon-text-muted) l c h / var(--dimmed)),
-    oklch(from var(--text-normal) l c h / var(--dimmed))
+    oklch(from var(--flexcyon-text-muted) l c h),
+    oklch(from var(--text-normal) l c h)
   );
 
   @include m.configure-oklch("text-muted", "text-muted-wrapper");
