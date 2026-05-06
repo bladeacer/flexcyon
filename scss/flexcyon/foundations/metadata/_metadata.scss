@@ -54,14 +54,6 @@ body {
     box-shadow: 0 0 0 1px var(--interactive-accent);
   }
 
-  .markdown-preview-view > div > div > div,
-  .markdown-source-view > div > div > div {
-    .inline-title,
-    .metadata-container {
-      margin-inline-start: 48px;
-    }
-  }
-
   .metadata-property-value.is-being-dragged-over::after {
     background-color: oklch(from var(--interactive-accent) l c h / 10%);
   }

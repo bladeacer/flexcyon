@@ -1557,12 +1557,6 @@ body .text-icon-button:focus,
 body .metadata-properties-heading:focus::before {
   box-shadow: 0 0 0 1px var(--interactive-accent);
 }
-body .markdown-preview-view > div > div > div .inline-title,
-body .markdown-preview-view > div > div > div .metadata-container,
-body .markdown-source-view > div > div > div .inline-title,
-body .markdown-source-view > div > div > div .metadata-container {
-  margin-inline-start: 48px;
-}
 body .metadata-property-value.is-being-dragged-over::after {
   background-color: oklch(from var(--interactive-accent) l c h/10%);
 }
@@ -3745,31 +3739,29 @@ body {
   --radius-x1: 8px;
 }
 
-gody {
+body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
   --flexcyon-highlight-active-line-opacity: 7.5%;
   --flexcyon-typewriter-mode-opacity: 0.55;
 }
-gody .cm-gutterElement.cm-active {
+body .cm-gutterElement.cm-active {
   font-size: var(--font-ui-medium);
   font-weight: 900;
   color: var(--text-accent);
 }
-gody .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement {
+body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement {
   background-color: var(--background-primary);
 }
-gody .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
+body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
   content: "'";
 }
-gody .markdown-source-view .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-gody .markdown-source-view .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-gody .markdown-source-view .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-  transform: translateX(54px);
+body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .inline-title:has(+ div + .cm-contentContainer > .cm-gutters),
+body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .inline-title:has(+ .cm-contentContainer > .cm-gutters) {
+  padding-inline-start: 50px;
 }
-
-body .cm-gutterElement.cm-active {
-  color: oklch(from var(--text-accent) l c h);
+body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+  padding-inline-start: 52px;
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
@@ -8109,16 +8101,21 @@ body.flexcyon-settings-scrollbar-removed div.modal-content.vertical-tabs-contain
   display: none;
 }
 
+body {
+  --flexcyon-scrollbar-width: 12px;
+}
+
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-  inline-size: 8px;
+  inline-size: var(--flexcyon-scrollbar-width);
   background-color: var(--scrollbar-bg);
 }
 
-.markdown-preview-view {
+body:not(.is-mobile) .workspace-leaf.mod-active .nav-files-container,
+body:not(.is-mobile) .workspace-leaf.mod-active .markdown-preview-view {
   will-change: scroll-position;
 }
-
-.markdown-preview-view > .markdown-preview-pusher {
+body:not(.is-mobile) .workspace-leaf.mod-active .nav-files-container > div,
+body:not(.is-mobile) .workspace-leaf.mod-active .markdown-preview-view > .markdown-preview-pusher {
   will-change: margin-bottom;
 }
 

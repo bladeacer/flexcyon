@@ -1,4 +1,4 @@
-gody {
+body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
   --flexcyon-highlight-active-line-opacity: 7.5%;
@@ -19,19 +19,23 @@ gody {
     }
   }
 
-  // Opinionated translation so inline title and metadata container are aligned to main content text in live preview when line numbers/gutter is enabled. 54px is the magic number for gutter width + padding accounted for.
+  // Opinionated translation so inline title and metadata container are aligned to main content text in live preview when line numbers/gutter is enabled.
+  .workspace-leaf.mod-active
+    > .workspace-leaf-content
+    > .view-content
+    > .markdown-source-view
+    > .cm-editor
+    > .cm-scroller
+    > .cm-sizer {
+    > .inline-title:has(+ div + .cm-contentContainer > .cm-gutters),
+    > .inline-title:has(+ .cm-contentContainer > .cm-gutters) {
+      padding-inline-start: 50px;
+    }
 
-  .markdown-source-view {
-    .inline-title:has(+ * + .cm-contentContainer > .cm-gutters),
-    .inline-title:has(+ .cm-contentContainer > .cm-gutters),
-    .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-      transform: translateX(54px);
+    > .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
+      padding-inline-start: 52px;
     }
   }
-}
-
-body .cm-gutterElement.cm-active {
-  color: oklch(from var(--text-accent) l c h);
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,

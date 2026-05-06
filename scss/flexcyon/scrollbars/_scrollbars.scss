@@ -11,16 +11,26 @@ body.flexcyon-settings-scrollbar-removed {
   }
 }
 
+body {
+  --flexcyon-scrollbar-width: 12px;
+}
+
 body:not(.native-scrollbars) ::-webkit-scrollbar {
-  inline-size: 8px;
+  inline-size: var(--flexcyon-scrollbar-width);
   background-color: var(--scrollbar-bg);
 }
 
 // Ultra performant scrolling thanks to Kapirklaa and Floodlight
-.markdown-preview-view {
-  will-change: scroll-position;
-}
+body:not(.is-mobile) {
+  .workspace-leaf.mod-active {
+    .nav-files-container,
+    .markdown-preview-view {
+      will-change: scroll-position;
+    }
 
-.markdown-preview-view > .markdown-preview-pusher {
-  will-change: margin-bottom;
+    .nav-files-container > div,
+    .markdown-preview-view > .markdown-preview-pusher {
+      will-change: margin-bottom;
+    }
+  }
 }
