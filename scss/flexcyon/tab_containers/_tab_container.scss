@@ -64,12 +64,15 @@ body {
     }
   }
 
-  .workspace-split:not(.mod-left-split, .mod-right-split)
-    .workspace-tabs:not(.mod-stacked) {
+  .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) {
     .workspace-tab-header-container-inner {
       padding-inline-start: 0;
       margin-block-start: 0;
       margin-inline-start: -8px;
+
+      > .workspace-tab-header {
+        padding: 2px 4px 0;
+      }
     }
 
     .workspace-tab-header-inner-title {
@@ -79,13 +82,10 @@ body {
     .workspace-tab-header-inner-icon {
       padding-inline-end: 0;
     }
-
-    .workspace-tab-header-container-inner > .workspace-tab-header {
-      padding: 2px 4px 0;
-    }
   }
 
-  :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
+  .workspace-split:is(.mod-left-split, .mod-right-split)
+    .workspace-tab-header-container-inner {
     gap: 1px;
     padding-block-end: 0;
     padding-inline-start: 0;

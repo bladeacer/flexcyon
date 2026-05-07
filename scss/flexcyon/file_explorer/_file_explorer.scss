@@ -3,25 +3,28 @@ body {
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
-.nav-folder.is-being-dragged-over {
-  background: oklch(from var(--interactive-accent-hsl) l c h / 10%);
-}
+body .workspace-split:not(.is-sidedock-collapsed) {
+  .nav-folder.is-being-dragged-over {
+    background: oklch(from var(--interactive-accent-hsl) l c h / 10%);
+  }
 
-.file-tree .mod-changed.is-selected {
-  background-color: oklch(from var(--interactive-accent-hsl) l c h / 20%);
-}
+  .file-tree .mod-changed.is-selected {
+    background-color: oklch(from var(--interactive-accent-hsl) l c h / 20%);
+  }
 
-.file-tree .mod-new.is-selected {
-  background-color: oklch(from var(--background-modifier-success) / 20%);
-}
+  .file-tree .mod-new.is-selected {
+    background-color: oklch(from var(--background-modifier-success) / 20%);
+  }
 
-.file-tree .mod-deleted.is-selected,
-.file-tree .mod-to-delete.is-selected {
-  background-color: oklch(from var(--background-modifier-error) / 20%);
+  .file-tree .mod-deleted.is-selected,
+  .file-tree .mod-to-delete.is-selected {
+    background-color: oklch(from var(--background-modifier-error) / 20%);
+  }
 }
 
 /* obsi-snip-coll start: file-exts */
-body.flexcyon-file-exp-dimmed-file-exts-enabled {
+body.flexcyon-file-exp-dimmed-file-exts-enabled
+  .workspace-split:not(.is-sidedock-collapsed) {
   :not(.novel-word-count--active) .nav-files-container > div > div,
   .nav-folder:not(.is-collapsed) > div > div {
     div[data-path$=".md"] {

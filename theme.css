@@ -2853,26 +2853,24 @@ body {
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
 }
-body:not(.is-mobile) .clickable-icon {
+body .workspace-split:not(.is-sidedock-collapsed) .clickable-icon {
+  padding: 4px 8px;
   opacity: var(--dimmed);
 }
-body .clickable-icon {
-  padding: 4px 8px;
-}
-body .clickable-icon:hover {
+body .workspace-split:not(.is-sidedock-collapsed) .clickable-icon:hover {
   opacity: unset;
   scale: var(--upsize);
 }
-body .nav-buttons-container {
-  gap: 1px;
-}
-body .view-header-nav-buttons .clickable-icon,
-body .view-actions .clickable-icon {
+body .workspace-split:not(.is-sidedock-collapsed) .view-header-nav-buttons .clickable-icon,
+body .workspace-split:not(.is-sidedock-collapsed) .view-actions .clickable-icon {
   padding: 4px 8px;
 }
-body .graph-controls .clickable-icon,
-body .clickable-icon.side-dock-ribbon-action {
+body .workspace-split:not(.is-sidedock-collapsed) .graph-controls .clickable-icon,
+body .workspace-split:not(.is-sidedock-collapsed) .clickable-icon.side-dock-ribbon-action {
   padding: var(--size-2-2) var(--size-2-3);
+}
+body .nav-buttons-container {
+  gap: 1px;
 }
 body .LazyLoad.is-visible {
   block-size: unset !important;
@@ -2888,9 +2886,6 @@ body .text-snippets-class > * {
 body .text-snippets-class > * > textarea {
   inline-size: min(32em, 35vw);
   margin-block: 16px;
-}
-body [aria-label^="Collapse results"] {
-  letter-spacing: var(--less-letter-spacing);
 }
 body span.flair.mod-pop {
   margin-inline-start: var(--flexcyon-settings-installed-tooltip-left-margin);
@@ -8110,12 +8105,10 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   background-color: var(--scrollbar-bg);
 }
 
-body:not(.is-mobile) .workspace-leaf.mod-active .nav-files-container,
-body:not(.is-mobile) .workspace-leaf.mod-active .markdown-preview-view {
+.workspace-leaf.mod-active > .workspace-leaf-content[data-type=markdown] .markdown-preview-view {
   will-change: scroll-position;
 }
-body:not(.is-mobile) .workspace-leaf.mod-active .nav-files-container > div,
-body:not(.is-mobile) .workspace-leaf.mod-active .markdown-preview-view > .markdown-preview-pusher {
+.workspace-leaf.mod-active > .workspace-leaf-content[data-type=markdown] .markdown-preview-view > .markdown-preview-pusher {
   will-change: margin-bottom;
 }
 
@@ -8163,21 +8156,21 @@ body .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-he
   border-block-end: 1px solid var(--background-secondary);
   opacity: var(--dimmed);
 }
-body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-container-inner {
   padding-inline-start: 0;
   margin-block-start: 0;
   margin-inline-start: -8px;
 }
-body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
-  padding-inline-start: 8px;
-}
-body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
-  padding-inline-end: 0;
-}
-body .workspace-split:not(.mod-left-split, .mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
+body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
   padding: 2px 4px 0;
 }
-body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
+body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-inner-title {
+  padding-inline-start: 8px;
+}
+body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-inner-icon {
+  padding-inline-end: 0;
+}
+body .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
   gap: 1px;
   padding-block-end: 0;
   padding-inline-start: 0;
@@ -8589,35 +8582,32 @@ body {
   --flexcyon-exp-dimmed-nav-size: 13.3623px;
 }
 
-.nav-folder.is-being-dragged-over {
+body .workspace-split:not(.is-sidedock-collapsed) .nav-folder.is-being-dragged-over {
   background: oklch(from var(--interactive-accent-hsl) l c h/10%);
 }
-
-.file-tree .mod-changed.is-selected {
+body .workspace-split:not(.is-sidedock-collapsed) .file-tree .mod-changed.is-selected {
   background-color: oklch(from var(--interactive-accent-hsl) l c h/20%);
 }
-
-.file-tree .mod-new.is-selected {
+body .workspace-split:not(.is-sidedock-collapsed) .file-tree .mod-new.is-selected {
   background-color: oklch(from var(--background-modifier-success)/20%);
 }
-
-.file-tree .mod-deleted.is-selected,
-.file-tree .mod-to-delete.is-selected {
+body .workspace-split:not(.is-sidedock-collapsed) .file-tree .mod-deleted.is-selected,
+body .workspace-split:not(.is-sidedock-collapsed) .file-tree .mod-to-delete.is-selected {
   background-color: oklch(from var(--background-modifier-error)/20%);
 }
 
 /* obsi-snip-coll start: file-exts */
-body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag {
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"] > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"] > div.nav-file-tag {
   display: none;
 }
-body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"]::after,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"]::after {
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) :not(.novel-word-count--active) .nav-files-container > div > div div[data-path$=".md"]::after,
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) .nav-folder:not(.is-collapsed) > div > div div[data-path$=".md"]::after {
   content: ".md";
   opacity: var(--dimmed);
 }
-body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag {
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag,
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag {
   padding: unset;
   margin: unset;
   font-size: var(--flexcyon-exp-dimmed-nav-size);
@@ -8626,11 +8616,11 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) >
   text-transform: lowercase;
   opacity: var(--dimmed);
 }
-body.flexcyon-file-exp-dimmed-file-exts-enabled :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
-body.flexcyon-file-exp-dimmed-file-exts-enabled .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before {
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) :not(.novel-word-count--active) .nav-files-container > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before,
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) .nav-folder:not(.is-collapsed) > div > div div:not([data-path$=".md"]) > div.nav-file-tag::before {
   content: ".";
 }
-body.flexcyon-file-exp-dimmed-file-exts-enabled .novel-word-count--active .nav-files-container div div div[data-path$=".md"].nav-file-title::after {
+body.flexcyon-file-exp-dimmed-file-exts-enabled .workspace-split:not(.is-sidedock-collapsed) .novel-word-count--active .nav-files-container div div div[data-path$=".md"].nav-file-title::after {
   content: ".md  " attr(data-novel-word-count-plugin);
 }
 

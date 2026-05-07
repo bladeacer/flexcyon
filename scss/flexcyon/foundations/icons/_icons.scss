@@ -15,31 +15,30 @@ body {
   --icon-color-focused: var(--interactive-accent);
   --clickable-icon-radius: 0;
 
-  &:not(.is-mobile) .clickable-icon {
-    opacity: var(--dimmed);
-  }
+  .workspace-split:not(.is-sidedock-collapsed) {
+    .clickable-icon {
+      padding: 4px 8px;
+      opacity: var(--dimmed);
 
-  .clickable-icon {
-    padding: 4px 8px;
+      &:hover {
+        opacity: unset;
+        scale: var(--upsize);
+      }
+    }
 
-    &:hover {
-      opacity: unset;
-      scale: var(--upsize);
+    .view-header-nav-buttons .clickable-icon,
+    .view-actions .clickable-icon {
+      padding: 4px 8px;
+    }
+
+    .graph-controls .clickable-icon,
+    .clickable-icon.side-dock-ribbon-action {
+      padding: var(--size-2-2) var(--size-2-3);
     }
   }
 
   .nav-buttons-container {
     gap: 1px;
-  }
-
-  .view-header-nav-buttons .clickable-icon,
-  .view-actions .clickable-icon {
-    padding: 4px 8px;
-  }
-
-  .graph-controls .clickable-icon,
-  .clickable-icon.side-dock-ribbon-action {
-    padding: var(--size-2-2) var(--size-2-3);
   }
 
   .LazyLoad.is-visible {
@@ -60,10 +59,6 @@ body {
   .text-snippets-class > * > textarea {
     inline-size: min(32em, 35vw);
     margin-block: 16px;
-  }
-
-  [aria-label^="Collapse results"] {
-    letter-spacing: var(--less-letter-spacing);
   }
 
   span.flair.mod-pop {

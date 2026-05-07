@@ -21,16 +21,15 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 }
 
 // Ultra performant scrolling thanks to Kapirklaa and Floodlight
-body:not(.is-mobile) {
-  .workspace-leaf.mod-active {
-    .nav-files-container,
-    .markdown-preview-view {
-      will-change: scroll-position;
-    }
 
-    .nav-files-container > div,
-    .markdown-preview-view > .markdown-preview-pusher {
+.workspace-leaf.mod-active > .workspace-leaf-content[data-type="markdown"] {
+  .markdown-preview-view {
+    will-change: scroll-position;
+
+    & > .markdown-preview-pusher {
       will-change: margin-bottom;
     }
   }
 }
+
+// TODO: Scope other editor variables to .workspace-leaf.mod-active
