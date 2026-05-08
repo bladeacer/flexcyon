@@ -1,7 +1,5 @@
 // Display none scrollbar in settings container
 body.flexcyon-settings-scrollbar-removed {
-  --scrollbar-bg: transparent;
-
   div.community-modal-search-results-wrapper,
   div.modal.mod-settings .vertical-tab-header,
   div.modal-content.vertical-tabs-container {
@@ -13,6 +11,7 @@ body.flexcyon-settings-scrollbar-removed {
 
 body {
   --flexcyon-scrollbar-width: 12px;
+  --scrollbar-bg: transparent;
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {

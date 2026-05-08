@@ -10,6 +10,10 @@ body {
     padding-inline-start: var(--flexcyon-meta-container-padding-left);
   }
 
+  .metadata-property-value .mod-unknown {
+    color: var(--color-cyan);
+  }
+
   .cm-hmd-frontmatter.cm-atom {
     color: var(--color-cyan);
   }

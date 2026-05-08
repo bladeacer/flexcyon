@@ -19,11 +19,6 @@ settings:
     type: variable-number
     default: 1
     format: rem
-  - title: Do not show scrollbar in settings
-    id: flexcyon-settings-scrollbar-removed
-    description: Do not show scrollbar in settings where it is not necessary.
-    type: class-toggle
-    default: true
   - title: Enable alternate active item effect in settings
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle

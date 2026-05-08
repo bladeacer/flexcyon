@@ -1525,6 +1525,9 @@ body {
 body .metadata-container {
   padding-inline-start: var(--flexcyon-meta-container-padding-left);
 }
+body .metadata-property-value .mod-unknown {
+  color: var(--color-cyan);
+}
 body .cm-hmd-frontmatter.cm-atom {
   color: var(--color-cyan);
 }
@@ -8087,9 +8090,6 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
 }
 
 /* obsi-snip-coll end */
-body.flexcyon-settings-scrollbar-removed {
-  --scrollbar-bg: transparent;
-}
 body.flexcyon-settings-scrollbar-removed div.community-modal-search-results-wrapper ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.modal.mod-settings .vertical-tab-header ::-webkit-scrollbar-thumb,
 body.flexcyon-settings-scrollbar-removed div.modal-content.vertical-tabs-container ::-webkit-scrollbar-thumb {
@@ -8098,6 +8098,7 @@ body.flexcyon-settings-scrollbar-removed div.modal-content.vertical-tabs-contain
 
 body {
   --flexcyon-scrollbar-width: 12px;
+  --scrollbar-bg: transparent;
 }
 
 body:not(.native-scrollbars) ::-webkit-scrollbar {
@@ -8124,25 +8125,32 @@ body:not(.show-ribbon).flexcyon-workspace-card-layout.flexcyon-workspace-cards-t
   padding-block-start: 8px;
 }
 
+body .workspace .mod-root .mod-active:has(.workspace-tab-container > .workspace-leaf:only-child > .workspace-leaf-content[data-type=empty]) .workspace-tab-header .workspace-tab-header-inner-close-button {
+  pointer-events: none;
+}
+
 body {
   --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
 }
-body .workspace-ribbon .sidebar-toggle-button {
-  inset-block-start: -1px;
-}
 body .sidebar-toggle-button.mod-left {
+  inset-block-start: -1px;
   block-size: unset;
   padding-block-start: 12px;
   background-color: transparent;
   transform: translateY(-4px);
 }
 body .sidebar-toggle-button.mod-right {
+  inset-block-start: -1px;
   padding-block-start: 8px;
 }
-body .workspace-tab-header {
+body .is-left-sidedock-open > .mod-left-split .workspace-tab-header,
+body .is-right-sidedock-open > .mod-right-split .workspace-tab-header,
+body .mod-root .workspace-tab-header {
   padding: 0 4px;
 }
-body .workspace-tab-header-inner {
+body .is-left-sidedock-open > .mod-left-split .workspace-tab-header-inner,
+body .is-right-sidedock-open > .mod-right-split .workspace-tab-header-inner,
+body .mod-root .workspace-tab-header-inner {
   padding: 2px 8px;
 }
 body .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active) > .workspace-tab-header-inner {
@@ -8156,18 +8164,18 @@ body .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-he
   border-block-end: 1px solid var(--background-secondary);
   opacity: var(--dimmed);
 }
-body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-container-inner {
+body .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
   padding-inline-start: 0;
   margin-block-start: 0;
   margin-inline-start: -8px;
 }
-body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
+body .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
   padding: 2px 4px 0;
 }
-body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-inner-title {
+body .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
   padding-inline-start: 8px;
 }
-body .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) .workspace-tab-header-inner-icon {
+body .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
   padding-inline-end: 0;
 }
 body .workspace-split:is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
@@ -10220,11 +10228,6 @@ body {
 }
 
 /* obsi-snip-coll end */
-body .ͼo.cm-focused > .cm-scroller > .cm-cursorLayer > .cm-fat-cursor {
-  color: inherit;
-  background-color: var(--interactive-accent);
-}
-
 body.flexcyon-disable-vim-cursor-blink .cm-cursorLayer {
   animation: none !important;
 }
@@ -12879,6 +12882,21 @@ settings:
     default: 8
     format: px
 
+  - title: Scrollbars
+    type: heading
+    level: 1
+    collapsed: true
+  - title: Scrollbar width
+    type: variable-number
+    id: flexcyon-scrollbar-width
+    default: 12
+    format: px
+  - title: Do not show scrollbar in settings
+    id: flexcyon-settings-scrollbar-removed
+    description: Do not show scrollbar in settings where it is not necessary.
+    type: class-toggle
+    default: true
+
   - title: Lists and Checkboxes
     type: heading
     level: 1
@@ -13421,11 +13439,6 @@ settings:
     type: variable-number
     default: 1
     format: rem
-  - title: Do not show scrollbar in settings
-    id: flexcyon-settings-scrollbar-removed
-    description: Do not show scrollbar in settings where it is not necessary.
-    type: class-toggle
-    default: true
   - title: Enable alternate active item effect in settings
     id: flexcyon-enable-alt-active-item-effect
     type: class-toggle
@@ -16335,6 +16348,14 @@ body .pdf-container .textLayer .highlight:not(.selected) {
 
 .publish-upload-item.mod-failed::before {
   background-color: oklch(from var(--background-modifier-error) l c h/20%);
+}
+
+body.banners-reloaded .banner-view-active .banner-error-container .banner-error-icon {
+  display: none;
+}
+body.banners-reloaded .banner-view-active .banner-error-container .banner-error-message::before {
+  color: var(--color-red);
+  content: "Error - ";
 }
 
 /* Modifications for HandaArchitect's banner snippet */

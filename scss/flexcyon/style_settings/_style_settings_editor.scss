@@ -1422,6 +1422,21 @@ settings:
     default: 8
     format: px
 
+  - title: Scrollbars
+    type: heading
+    level: 1
+    collapsed: true
+  - title: Scrollbar width
+    type: variable-number
+    id: flexcyon-scrollbar-width
+    default: 12
+    format: px
+  - title: Do not show scrollbar in settings
+    id: flexcyon-settings-scrollbar-removed
+    description: Do not show scrollbar in settings where it is not necessary.
+    type: class-toggle
+    default: true
+
   - title: Lists and Checkboxes
     type: heading
     level: 1

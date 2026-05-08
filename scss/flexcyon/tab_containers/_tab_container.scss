@@ -20,14 +20,24 @@ body:not(
   }
 }
 
+body
+  .workspace
+  .mod-root
+  .mod-active:has(
+    .workspace-tab-container
+      > .workspace-leaf:only-child
+      > .workspace-leaf-content[data-type="empty"]
+  )
+  .workspace-tab-header
+  .workspace-tab-header-inner-close-button {
+  pointer-events: none;
+}
+
 body {
   --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
 
-  .workspace-ribbon .sidebar-toggle-button {
-    inset-block-start: -1px;
-  }
-
   .sidebar-toggle-button.mod-left {
+    inset-block-start: -1px;
     block-size: unset;
     padding-block-start: 12px;
     background-color: transparent;
@@ -35,15 +45,20 @@ body {
   }
 
   .sidebar-toggle-button.mod-right {
+    inset-block-start: -1px;
     padding-block-start: 8px;
   }
 
-  .workspace-tab-header {
-    padding: 0 4px;
-  }
+  .is-left-sidedock-open > .mod-left-split,
+  .is-right-sidedock-open > .mod-right-split,
+  .mod-root {
+    .workspace-tab-header {
+      padding: 0 4px;
+    }
 
-  .workspace-tab-header-inner {
-    padding: 2px 8px;
+    .workspace-tab-header-inner {
+      padding: 2px 8px;
+    }
   }
 
   .workspace-tabs:not(.mod-stacked) {
@@ -64,7 +79,7 @@ body {
     }
   }
 
-  .workspace-split.mod-root .workspace-tabs.mod-active:not(.mod-stacked) {
+  .workspace-split.mod-root .workspace-tabs:not(.mod-stacked) {
     .workspace-tab-header-container-inner {
       padding-inline-start: 0;
       margin-block-start: 0;

@@ -7,11 +7,6 @@ body {
 
 /* obsi-snip-coll end */
 
-body .ͼo.cm-focused > .cm-scroller > .cm-cursorLayer > .cm-fat-cursor {
-  color: inherit;
-  background-color: var(--interactive-accent);
-}
-
 // This needs !important because the devs placed the animation duration inside the html tag :v
 body.flexcyon-disable-vim-cursor-blink {
   .cm-cursorLayer {

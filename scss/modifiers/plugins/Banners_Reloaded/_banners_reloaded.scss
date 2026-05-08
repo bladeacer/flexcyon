@@ -1,0 +1,14 @@
+body.banners-reloaded {
+  .banner-view-active {
+    .banner-error-container {
+      .banner-error-icon {
+        display: none;
+      }
+
+      .banner-error-message::before {
+        color: var(--color-red);
+        content: "Error - ";
+      }
+    }
+  }
+}

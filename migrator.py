@@ -350,13 +350,13 @@ def get_schema():
         ("input-radius", (float, int), 0, "editor", False),
         ("input-verti-padding", (float, int), 4, "editor"),
         ("input-horiz-padding", (float, int), 8, "editor"),
+        ("settings-scrollbar-removed", bool, False, "editor"),
 
         ("settings-comm-item-enabled", bool, True, "settings"),
         (
             "settings-installed-tooltip-left-margin", (float, int),
             1, "settings"
         ),
-        ("settings-scrollbar-removed", bool, False, "settings"),
         ("enable-alt-active-item-effect", bool, True, "settings"),
         ("style-settings-indent-width", (float, int), 4, "settings"),
         ("style-settings-dim-collapsed-headings", bool, True, "settings"),
