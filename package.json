@@ -10,10 +10,8 @@
     "lint": "onchange 'scss/**/*.scss' -- node scripts/lint.mjs {{changed}}",
     "lint-once": "node scripts/lint.mjs",
     "fix": "node scripts/lint.mjs --fix",
-
-    "dev": "sass --watch --no-source-map scss/theme.scss theme.css", 
+    "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
     "compile-once": "sass --no-source-map scss/theme.scss theme.css",
-
     "pre-push": "node scripts/lint.mjs --fix && $npm_execpath run compile-once"
   },
   "repository": {
@@ -30,16 +28,16 @@
   "homepage": "https://github.com/bladeacer/flexcyon",
   "devDependencies": {
     "onchange": "^7.1.0",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.3",
     "stylelint": "^16.26.1",
-    "stylelint-config-recess-order": "^7.4.0",
+    "stylelint-config-recess-order": "^7.7.0",
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-high-performance-animation": "^1.11.0",
     "stylelint-no-indistinguishable-colors": "^2.3.1",
     "stylelint-order": "^7.0.1",
-    "stylelint-plugin-defensive-css": "^1.0.4",
+    "stylelint-plugin-defensive-css": "^1.1.1",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-use-logical": "^2.1.2"
+    "stylelint-use-logical": "^2.1.3"
   },
   "dependencies": {
     "stylelint-no-unsupported-browser-features": "^8.1.1",
