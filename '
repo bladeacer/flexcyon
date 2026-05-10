@@ -68,6 +68,8 @@ body {
  * kneecaps' multi-column layout + aside float 
  */
 
+// TODO: Make this less ul specific. No !importants.
+
 /* per-note gap presets via cssclasses frontmatter */
 
 .callout-gap-0 .callout[data-callout="col"] > .callout-content,
@@ -95,14 +97,11 @@ body {
   gap: 2rem;
 }
 
-/* TODO: Fix aside rendering in live preview, if possible */
-
 /* [!aside] — float right alongside body text */
 
 .callout[data-callout="aside"] {
   float: inline-end;
   clear: inline-end;
-
   /* TODO: Make this adaptive */
   inline-size: 38%;
   margin: 0 0 1rem 1.5rem;

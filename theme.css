@@ -16901,46 +16901,43 @@ body {
  * Start of parts which were inspired by 
  * kneecaps' multi-column layout + aside float 
  */
-/* .𖥔 ݁ ˖  global gap default // edit this value to change all col callouts ⊹ ࣪ ˖ */
-/* .𖥔 ݁ ˖  per-note gap presets via cssclasses frontmatter ⊹ ࣪ ˖ */
+/* per-note gap presets via cssclasses frontmatter */
 .callout-gap-0 .callout[data-callout=col] > .callout-content,
-.callout-gap-0 .callout[data-callout=col-3] > .callout-content {
+.callout-gap-0 .callout[data-callout=multi-column] > .callout-content {
   gap: 0;
 }
 
 .callout-gap-xs .callout[data-callout=col] > .callout-content,
-.callout-gap-xs .callout[data-callout=col-3] > .callout-content {
+.callout-gap-xs .callout[data-callout=multi-column] > .callout-content {
   gap: 0.25rem;
 }
 
 .callout-gap-sm .callout[data-callout=col] > .callout-content,
-.callout-gap-sm .callout[data-callout=col-3] > .callout-content {
+.callout-gap-sm .callout[data-callout=multi-column] > .callout-content {
   gap: 0.5rem;
 }
 
 .callout-gap-md .callout[data-callout=col] > .callout-content,
-.callout-gap-md .callout[data-callout=col-3] > .callout-content {
+.callout-gap-md .callout[data-callout=multi-column] > .callout-content {
   gap: 0.75rem;
 }
 
 .callout-gap-lg .callout[data-callout=col] > .callout-content,
-.callout-gap-lg .callout[data-callout=col-3] > .callout-content {
+.callout-gap-lg .callout[data-callout=multi-column] > .callout-content {
   gap: 2rem;
 }
 
-/* ────୨ৎ──── */
-/* .𖥔 ݁ ˖  [!col] parent — transparent wrapper ⊹ ࣪ ˖ */
-/* .𖥔 ݁ ˖  flex row container ⊹ ࣪ ˖ */
-/* .𖥔 ݁ ˖  reset blockquote wrapper chrome — inner .callout keeps its own styling ⊹ ࣪ ˖ */
-/* .𖥔 ݁ ˖  [!aside] — float right alongside body text ⊹ ࣪ ˖ */
+/* TODO: Fix aside rendering in live preview, if possible */
+/* [!aside] — float right alongside body text */
 .callout[data-callout=aside] {
   float: inline-end;
   clear: inline-end;
+  /* TODO: Make this adaptive */
   inline-size: 38%;
   margin: 0 0 1rem 1.5rem;
 }
 
-/* .𖥔 ݁ ˖  clearfix — prevents float bleed past the content block ⊹ ࣪ ˖ */
+/* clearfix — prevents float bleed past the content block */
 body .workspace-leaf.mod-active .markdown-rendered::after,
 body .workspace-leaf.mod-active .cm-content::after {
   clear: both;
@@ -16948,7 +16945,7 @@ body .workspace-leaf.mod-active .cm-content::after {
   content: "";
 }
 
-/* .𖥔 ݁ ˖  mobile: revert to block ⊹ ࣪ ˖ */
+/* mobile: revert to block */
 .is-mobile .callout[data-callout=aside] {
   float: none;
   inline-size: 100%;
