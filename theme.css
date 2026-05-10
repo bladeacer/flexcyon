@@ -4191,18 +4191,66 @@ body {
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
   --callout-bug: var(--color-red);
-  --callout-default: var(--color-blue);
   --callout-error: var(--color-red);
-  --callout-example: var(--color-purple);
   --callout-fail: var(--color-red);
-  --callout-important: var(--color-cyan);
+  --callout-default: var(--color-blue);
   --callout-info: var(--color-blue);
-  --callout-question: var(--color-orange);
-  --callout-success: var(--color-green);
+  --callout-todo: var(--color-blue);
   --callout-summary: var(--color-cyan);
   --callout-tip: var(--color-cyan);
-  --callout-todo: var(--color-blue);
+  --callout-example: var(--color-purple);
+  --callout-important: var(--color-purple);
   --callout-warning: var(--color-orange);
+  --callout-question: var(--color-green);
+  --callout-success: var(--color-green);
+}
+body .callout[data-callout-metadata*=bug] {
+  --callout-color: var(--callout-bug);
+  --callout-icon: lucide-bug;
+}
+body .callout[data-callout-metadata*=error] {
+  --callout-color: var(--callout-error);
+  --callout-icon: lucide-zap;
+}
+body .callout[data-callout-metadata*=fail] {
+  --callout-color: var(--callout-fail);
+  --callout-icon: lucide-x;
+}
+body .callout[data-callout-metadata*=info] {
+  --callout-color: var(--callout-info);
+  --callout-icon: lucide-info;
+}
+body .callout[data-callout-metadata*=todo] {
+  --callout-color: var(--callout-todo);
+  --callout-icon: lucide-circle-check;
+}
+body .callout[data-callout-metadata*=summary] {
+  --callout-color: var(--callout-summary);
+  --callout-icon: lucide-clipboard-list;
+}
+body .callout[data-callout-metadata*=tip] {
+  --callout-color: var(--callout-tip);
+  --callout-icon: lucide-flame;
+}
+body .callout[data-callout-metadata*=example] {
+  --callout-color: var(--callout-example);
+  --callout-icon: lucide-list;
+}
+body .callout[data-callout-metadata*=important] {
+  --callout-color: var(--callout-important);
+  --callout-icon: lucide-flame;
+}
+body .callout[data-callout-metadata*=warning] {
+  --callout-color: var(--callout-warning);
+  --callout-icon: lucide-alert-triangle;
+}
+body .callout[data-callout-metadata*=question] {
+  --callout-color: var(--callout-question);
+  --callout-icon: lucide-help-circle;
+}
+body .callout[data-callout-metadata*=success] {
+  --callout-color: var(--callout-success);
+  --callout-icon: lucide-check;
 }
 body .callout {
   background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
@@ -8126,6 +8174,11 @@ body:not(.show-ribbon).flexcyon-workspace-card-layout.flexcyon-workspace-cards-t
   padding-block-start: 8px;
 }
 
+/* Prevent accidental closing of only child tabs which are empty type
+*
+* TODO: Can expand this to a setting toggle to apply it to all tab groups
+* which only have one child
+*/
 body .workspace .mod-root .mod-active:has(.workspace-tab-container > .workspace-leaf:only-child > .workspace-leaf-content[data-type=empty]) .workspace-tab-header .workspace-tab-header-inner-close-button {
   pointer-events: none;
 }
@@ -16408,7 +16461,8 @@ body .workspace-leaf.mod-active .banner.is-live-preview .internal-embed[alt=bann
  * - Yes that's about all the MCL features I ever used myself
  *
  * It will try to respect fitting text content for all callouts in the same column
- * before wide-x metadata.
+ * before wide-x metadata. 
+ * There is also line wrap so that column content overflowing would be placed on the next line.
  *
  * Licensed under MIT License, like the rest of the theme.
  */
@@ -16428,6 +16482,7 @@ body {
 .callout[data-callout=col] > .callout-content,
 .callout[data-callout=multi-column] > .callout-content {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--callout-gap);
 }
 .callout[data-callout=col] > .callout-content .callout,

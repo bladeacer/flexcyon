@@ -20,6 +20,12 @@ body:not(
   }
 }
 
+/* Prevent accidental closing of only child tabs which are empty type
+*
+* TODO: Can expand this to a setting toggle to apply it to all tab groups
+* which only have one child
+*/
+
 body
   .workspace
   .mod-root

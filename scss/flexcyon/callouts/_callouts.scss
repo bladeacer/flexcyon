@@ -2,6 +2,13 @@
 // The code snippets in this file are derived from the Halcyon theme
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
+@mixin callout-type-wrapper($type, $icon-str) {
+  .callout[data-callout-metadata*="#{$type}"] {
+    --callout-color: var(--callout-#{$type});
+    --callout-icon: lucide-#{$icon-str};
+  }
+}
+
 body {
   --flexcyon-callout-bg-opacity: 12.5%;
   --flexcyon-callout-icon-right-padding: 4px;
@@ -20,18 +27,40 @@ body {
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
   --callout-bug: var(--color-red);
-  --callout-default: var(--color-blue);
   --callout-error: var(--color-red);
-  --callout-example: var(--color-purple);
   --callout-fail: var(--color-red);
-  --callout-important: var(--color-cyan);
+  --callout-default: var(--color-blue);
   --callout-info: var(--color-blue);
-  --callout-question: var(--color-orange);
-  --callout-success: var(--color-green);
+  --callout-todo: var(--color-blue);
   --callout-summary: var(--color-cyan);
   --callout-tip: var(--color-cyan);
-  --callout-todo: var(--color-blue);
+  --callout-example: var(--color-purple);
+  --callout-important: var(--color-purple);
   --callout-warning: var(--color-orange);
+  --callout-question: var(--color-green);
+  --callout-success: var(--color-green);
+
+  // TODO: Do I just change default callout icons or leave them as is?
+
+  @include callout-type-wrapper("bug", "bug");
+  @include callout-type-wrapper("error", "zap");
+  @include callout-type-wrapper("fail", "x");
+  @include callout-type-wrapper("info", "info");
+
+  // Why does app.css render lucide-check-circle like this
+  // and lucide-circle-check like something else?
+  @include callout-type-wrapper("todo", "circle-check");
+
+  // Should be another icon?
+  @include callout-type-wrapper("summary", "clipboard-list");
+  @include callout-type-wrapper("tip", "flame");
+  @include callout-type-wrapper("example", "list");
+
+  // Should be another icon?
+  @include callout-type-wrapper("important", "flame");
+  @include callout-type-wrapper("warning", "alert-triangle");
+  @include callout-type-wrapper("question", "help-circle");
+  @include callout-type-wrapper("success", "check");
 
   .callout {
     background-color: oklch(

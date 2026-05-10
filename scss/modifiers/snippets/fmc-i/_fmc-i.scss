@@ -19,7 +19,8 @@
  * - Yes that's about all the MCL features I ever used myself
  *
  * It will try to respect fitting text content for all callouts in the same column
- * before wide-x metadata.
+ * before wide-x metadata. 
+ * There is also line wrap so that column content overflowing would be placed on the next line.
  *
  * Licensed under MIT License, like the rest of the theme.
  */
@@ -45,6 +46,7 @@ body {
 
   > .callout-content {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--callout-gap);
 
     .callout {
