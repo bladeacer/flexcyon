@@ -96,8 +96,19 @@ body.flexcyon-style-settings-dim-collapsed-headings {
   color: var(--color-blue);
 }
 
+.style-settings-container .setting-item[data-id="flexcyon-ascii-art"] {
+  .setting-item-control input {
+    --input-height: 48px;
+
+    inline-size: 40vw;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: collapse;
+  }
+}
+
 @mixin no-selector-dim($selector, $setting-name) {
-  .style-settings-container .setting-item[data-id*="#{$selector}"] {
+  .style-settings-container .setting-item[data-id="#{$selector}"] {
     cursor: not-allowed;
     opacity: var(--dimmed);
 
@@ -112,7 +123,7 @@ body.flexcyon-style-settings-dim-collapsed-headings {
 }
 
 @mixin no-selector-dim-alt($selector, $setting-name) {
-  .style-settings-container .setting-item[data-id*="#{$selector}"] {
+  .style-settings-container .setting-item[data-id="#{$selector}"] {
     cursor: not-allowed;
     opacity: var(--dimmed);
 

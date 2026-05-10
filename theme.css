@@ -10869,427 +10869,435 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
   color: var(--color-blue);
 }
 
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h1-color] {
+.style-settings-container .setting-item[data-id=flexcyon-ascii-art] .setting-item-control input {
+  --input-height: 48px;
+  inline-size: 40vw;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: collapse;
+}
+
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h1-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h1-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h1-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h1-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h1-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h2-color] {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h2-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h2-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h2-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h2-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h2-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h3-color] {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h3-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h3-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h3-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h3-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h3-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h4-color] {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h4-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h4-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h4-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h4-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h4-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h5-color] {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h5-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h5-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h5-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h5-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h5-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h6-color] {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h6-color] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h6-color] .setting-item-control {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h6-color] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id*=flexcyon-h6-color]::before {
+body:not(.flexcyon-coloured-headings) .style-settings-container .setting-item[data-id=flexcyon-h6-color]::before {
   content: "This setting requires 'Enable coloured headings' to be enabled first.";
 }
 
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-no-num-with-relative] {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-no-num-with-relative] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-no-num-with-relative] .setting-item-control {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-no-num-with-relative] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-no-num-with-relative]::before {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-no-num-with-relative]::before {
   content: "This setting requires 'Enable Relative Line Numbers' to be enabled first.";
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-relative-num-only] {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-relative-num-only] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-relative-num-only] .setting-item-control {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-relative-num-only] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-relative-num-only]::before {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-relative-num-only]::before {
   content: "This setting requires 'Enable Relative Line Numbers' to be enabled first.";
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-select-relative-num] {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-select-relative-num] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-select-relative-num] .setting-item-control {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-select-relative-num] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id*=flexcyon-select-relative-num]::before {
+body:not(.flexcyon-enable-rel-nums) .style-settings-container .setting-item[data-id=flexcyon-select-relative-num]::before {
   content: "This setting requires 'Enable Relative Line Numbers' to be enabled first.";
 }
 
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-duration] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration] .setting-item-control {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-duration] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-duration]::before {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-duration]::before {
   content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-timing-fn] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn] .setting-item-control {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-timing-fn] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-timing-fn]::before {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-timing-fn]::before {
   content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-min-width] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width] .setting-item-control {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-min-width] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id*=flexcyon-cursor-min-width]::before {
+body:not(.flexcyon-enable-smooth-cursor) .style-settings-container .setting-item[data-id=flexcyon-cursor-min-width]::before {
   content: "This setting requires 'Enable Smooth Cursor' to be enabled first.";
 }
 
-body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id*=flexcyon-typewriter-mode-opacity] {
+body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id=flexcyon-typewriter-mode-opacity] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id*=flexcyon-typewriter-mode-opacity] .setting-item-control {
+body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id=flexcyon-typewriter-mode-opacity] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id*=flexcyon-typewriter-mode-opacity]::before {
+body:not(.flexcyon-typewriter-mode) .style-settings-container .setting-item[data-id=flexcyon-typewriter-mode-opacity]::before {
   content: "This setting requires Typewriter Mode to be enabled first.";
 }
 
-body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id*=flexcyon-editor-writing-indentation] {
+body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id=flexcyon-editor-writing-indentation] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id*=flexcyon-editor-writing-indentation] .setting-item-control {
+body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id=flexcyon-editor-writing-indentation] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id*=flexcyon-editor-writing-indentation]::before {
+body:not(.flexcyon-editor-writing) .style-settings-container .setting-item[data-id=flexcyon-editor-writing-indentation]::before {
   content: "This setting requires Writing Mode to be enabled first.";
 }
 
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-size] {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-size] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-size] .setting-item-control {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-size] .setting-item-control {
   pointer-events: none;
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-size]::before {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-size]::before {
   content: "This setting requires 'Do not display inline title' to be disabled first.";
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-weight] {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-weight] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-weight] .setting-item-control {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-weight] .setting-item-control {
   pointer-events: none;
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-weight]::before {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-weight]::before {
   content: "This setting requires 'Do not display inline title' to be disabled first.";
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-line-height] {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-line-height] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-line-height] .setting-item-control {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-line-height] .setting-item-control {
   pointer-events: none;
 }
-body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id*=inline-title-line-height]::before {
+body.flexcyon-no-inline-title .style-settings-container .setting-item[data-id=inline-title-line-height]::before {
   content: "This setting requires 'Do not display inline title' to be disabled first.";
 }
 
-body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id*=flexcyon-exp-dimmed-nav-size] {
+body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id=flexcyon-exp-dimmed-nav-size] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id*=flexcyon-exp-dimmed-nav-size] .setting-item-control {
+body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id=flexcyon-exp-dimmed-nav-size] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id*=flexcyon-exp-dimmed-nav-size]::before {
+body:not(.flexcyon-file-exp-dimmed-file-exts-enabled) .style-settings-container .setting-item[data-id=flexcyon-exp-dimmed-nav-size]::before {
   content: "This setting requires 'Enable dimmed file extensions in file explorer' to be enabled first.";
 }
 
-body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id*=flexcyon-active-indicator] {
+body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id=flexcyon-active-indicator] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id*=flexcyon-active-indicator] .setting-item-control {
+body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id=flexcyon-active-indicator] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id*=flexcyon-active-indicator]::before {
+body:not(.flexcyon-enable-active-indicator) .style-settings-container .setting-item[data-id=flexcyon-active-indicator]::before {
   content: "This setting requires 'Enable Active File Indicator' to be enabled first.";
 }
 
-body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id*=flexcyon-is-bg-rainbow] {
+body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id=flexcyon-is-bg-rainbow] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id*=flexcyon-is-bg-rainbow] .setting-item-control {
+body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id=flexcyon-is-bg-rainbow] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id*=flexcyon-is-bg-rainbow]::before {
+body:not(.flexcyon-rainbow-folders) .style-settings-container .setting-item[data-id=flexcyon-is-bg-rainbow]::before {
   content: "This setting requires 'Rainbow folders' folder style to be enabled first.";
 }
 
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-text] {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-text] .setting-item-control {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-text]::before {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-text]::before {
   content: "This setting requires 'Hide until hover' or 'Hide until hold' to be enabled first.";
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-translation] {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-translation] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-translation] .setting-item-control {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-translation] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-until-hover-translation]::before {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-until-hover-translation]::before {
   content: "This setting requires 'Hide until hover' or 'Hide until hold' to be enabled first.";
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-duration] {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-duration] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-duration] .setting-item-control {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-duration] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-duration]::before {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-duration]::before {
   content: "This setting requires 'Hide until hover' or 'Hide until hold' to be enabled first.";
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-function] {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-function] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-function] .setting-item-control {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-function] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id*=flexcyon-status-hide-hover-function]::before {
+body:not(.flexcyon-status-hide-until-hover, .flexcyon-status-hide-until-hold) .style-settings-container .setting-item[data-id=flexcyon-status-hide-hover-function]::before {
   content: "This setting requires 'Hide until hover' or 'Hide until hold' to be enabled first.";
 }
 
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-reading-text] {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-reading-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-reading-text] .setting-item-control {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-reading-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-reading-text]::before {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-reading-text]::before {
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-source-text] {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-source-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-source-text] .setting-item-control {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-source-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-source-text]::before {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-source-text]::before {
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-live-text] {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-live-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-live-text] .setting-item-control {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-live-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id*=flexcyon-status-live-text]::before {
+body:not(.flexcyon-status-text-mode) .style-settings-container .setting-item[data-id=flexcyon-status-live-text]::before {
   content: "This setting requires 'Use text instead of icons for mode status' to be enabled first.";
 }
 
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning] {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-left-positioning] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning] .setting-item-control {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-left-positioning] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-left-positioning]::before {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-left-positioning]::before {
   content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning] {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-bottom-positioning] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning] .setting-item-control {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-bottom-positioning] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-bottom-positioning]::before {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-bottom-positioning]::before {
   content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text] {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-insert-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text] .setting-item-control {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-insert-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-insert-text]::before {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-insert-text]::before {
   content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text] {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-normal-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text] .setting-item-control {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-normal-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-normal-text]::before {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-normal-text]::before {
   content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text] {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-command-text] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text] .setting-item-control {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-command-text] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id*=flexcyon-vim-command-text]::before {
+body:not(.flexcyon-vim-mode-text-enable) .style-settings-container .setting-item[data-id=flexcyon-vim-command-text]::before {
   content: "This setting requires 'Enable Vim Mode Text' to be enabled first.";
 }
 
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val] {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-val] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val] .setting-item-control {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-val] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-val]::before {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-val]::before {
   content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix] {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit-prefix] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix] .setting-item-control {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit-prefix] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit-prefix]::before {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit-prefix]::before {
   content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit] {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit] .setting-item-control {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-credit]::before {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-credit]::before {
   content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size] {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-font-size] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size] .setting-item-control {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-font-size] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id*=flexcyon-quote-font-size]::before {
+body:not(.flexcyon-quote-enable) .style-settings-container .setting-item[data-id=flexcyon-quote-font-size]::before {
   content: "This setting requires 'Quote' in 'Add before empty state title' to be enabled first.";
 }
 
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art] {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art] .setting-item-control {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art]::before {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art]::before {
   content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size] {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art-max-font-size] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size] .setting-item-control {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art-max-font-size] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-art-max-font-size]::before {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-art-max-font-size]::before {
   content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height] {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-line-height] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height] .setting-item-control {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-line-height] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-line-height]::before {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-line-height]::before {
   content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor] {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-scaling-factor] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor] .setting-item-control {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-scaling-factor] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-scaling-factor]::before {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-scaling-factor]::before {
   content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment] {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-alignment] {
   cursor: not-allowed;
   opacity: var(--dimmed);
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment] .setting-item-control {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-alignment] .setting-item-control {
   pointer-events: none;
 }
-body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id*=flexcyon-ascii-alignment]::before {
+body:not(.flexcyon-flex-max-mode, .flexcyon-ascii-enable) .style-settings-container .setting-item[data-id=flexcyon-ascii-alignment]::before {
   content: "This setting requires 'ASCII art' in 'Add before empty state title' to be enabled first.";
 }
 
