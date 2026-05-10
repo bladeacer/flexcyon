@@ -33,9 +33,12 @@ body {
   --callout-todo: var(--color-blue);
   --callout-warning: var(--color-orange);
 
-  div.callout {
+  .callout {
     background-color: oklch(
-      from var(--color-blue) l c h / var(--flexcyon-callout-bg-opacity)
+      from var(--callout-color) l c h / var(--flexcyon-callout-bg-opacity)
+    );
+    border-color: oklch(
+      from var(--callout-color) l c h / var(--callout-border-opacity)
     );
 
     .callout-title {

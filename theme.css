@@ -4204,16 +4204,17 @@ body {
   --callout-todo: var(--color-blue);
   --callout-warning: var(--color-orange);
 }
-body div.callout {
-  background-color: oklch(from var(--color-blue) l c h/var(--flexcyon-callout-bg-opacity));
+body .callout {
+  background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
+  border-color: oklch(from var(--callout-color) l c h/var(--callout-border-opacity));
 }
-body div.callout .callout-title {
+body .callout .callout-title {
   color: var(--callout-color);
 }
-body div.callout .callout-icon {
+body .callout .callout-icon {
   padding-inline-end: var(--flexcyon-callout-icon-right-padding);
 }
-body div.callout .callout-content :first-child:is(pre, img, iframe) {
+body .callout .callout-content :first-child:is(pre, img, iframe) {
   margin-block-start: var(--flexcyon-callout-first-codeblock-margin-top);
 }
 body .markdown-source-view.mod-cm6 .callout,
@@ -16385,3 +16386,521 @@ body .workspace-leaf.mod-active .banner.is-live-preview .internal-embed[alt=bann
   inset-inline-end: 0;
   inline-size: 100%;
 }
+
+/* 
+ * Flexcyon's Multi Column implementation (FMCi)
+ *
+ * Adapted (with permission) from @kneecaps'
+ * (Obsidian Members Group, Ultra Lobster/Origami theme developer)
+ * multi-column layout + aside float snippet.
+ *
+ * I also took inspiration from efemkay's MCL
+ * (bare minimum core logic, reimplemented in SCSS).
+ *
+ * efemkay's MCL GitHub link (their project is licensed under GPLv3):
+ * https://github.com/efemkay/obsidian-modular-css-layout/
+ *
+ * Kept backwards compatibility/improvements
+ * - [x] multi-column keyword
+ * - [x] wide-0 to wide-100 keyword
+ *   - wide-0 forces the callout to use the bare minimum width which fits text content
+ *   - wide-1 does nothing but makes some people feel comfortable
+ * - Yes that's about all the MCL features I ever used myself
+ *
+ * It will try to respect fitting text content for all callouts in the same column
+ * before wide-x metadata.
+ *
+ * Licensed under MIT License, like the rest of the theme.
+ */
+body {
+  --callout-gap: 16px;
+}
+
+/* Start of parts which were inspired by efemkay's MCL */
+.callout[data-callout=col],
+.callout[data-callout=multi-column] {
+  background-color: transparent;
+}
+.callout[data-callout=col] > .callout-title,
+.callout[data-callout=multi-column] > .callout-title {
+  display: none;
+}
+.callout[data-callout=col] > .callout-content,
+.callout[data-callout=multi-column] > .callout-content {
+  display: flex;
+  gap: var(--callout-gap);
+}
+.callout[data-callout=col] > .callout-content .callout,
+.callout[data-callout=multi-column] > .callout-content .callout {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-0],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-0] {
+  flex-grow: 0;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-1],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-1] {
+  flex-grow: 1;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-2],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-2] {
+  flex-grow: 2;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-3],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-3] {
+  flex-grow: 3;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-4],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-4] {
+  flex-grow: 4;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-5],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-5] {
+  flex-grow: 5;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-6],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-6] {
+  flex-grow: 6;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-7],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-7] {
+  flex-grow: 7;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-8],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-8] {
+  flex-grow: 8;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-9],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-9] {
+  flex-grow: 9;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-10],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-10] {
+  flex-grow: 10;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-11],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-11] {
+  flex-grow: 11;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-12],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-12] {
+  flex-grow: 12;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-13],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-13] {
+  flex-grow: 13;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-14],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-14] {
+  flex-grow: 14;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-15],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-15] {
+  flex-grow: 15;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-16],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-16] {
+  flex-grow: 16;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-17],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-17] {
+  flex-grow: 17;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-18],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-18] {
+  flex-grow: 18;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-19],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-19] {
+  flex-grow: 19;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-20],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-20] {
+  flex-grow: 20;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-21],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-21] {
+  flex-grow: 21;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-22],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-22] {
+  flex-grow: 22;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-23],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-23] {
+  flex-grow: 23;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-24],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-24] {
+  flex-grow: 24;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-25],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-25] {
+  flex-grow: 25;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-26],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-26] {
+  flex-grow: 26;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-27],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-27] {
+  flex-grow: 27;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-28],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-28] {
+  flex-grow: 28;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-29],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-29] {
+  flex-grow: 29;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-30],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-30] {
+  flex-grow: 30;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-31],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-31] {
+  flex-grow: 31;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-32],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-32] {
+  flex-grow: 32;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-33],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-33] {
+  flex-grow: 33;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-34],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-34] {
+  flex-grow: 34;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-35],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-35] {
+  flex-grow: 35;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-36],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-36] {
+  flex-grow: 36;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-37],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-37] {
+  flex-grow: 37;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-38],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-38] {
+  flex-grow: 38;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-39],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-39] {
+  flex-grow: 39;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-40],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-40] {
+  flex-grow: 40;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-41],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-41] {
+  flex-grow: 41;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-42],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-42] {
+  flex-grow: 42;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-43],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-43] {
+  flex-grow: 43;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-44],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-44] {
+  flex-grow: 44;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-45],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-45] {
+  flex-grow: 45;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-46],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-46] {
+  flex-grow: 46;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-47],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-47] {
+  flex-grow: 47;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-48],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-48] {
+  flex-grow: 48;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-49],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-49] {
+  flex-grow: 49;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-50],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-50] {
+  flex-grow: 50;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-51],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-51] {
+  flex-grow: 51;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-52],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-52] {
+  flex-grow: 52;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-53],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-53] {
+  flex-grow: 53;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-54],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-54] {
+  flex-grow: 54;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-55],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-55] {
+  flex-grow: 55;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-56],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-56] {
+  flex-grow: 56;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-57],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-57] {
+  flex-grow: 57;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-58],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-58] {
+  flex-grow: 58;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-59],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-59] {
+  flex-grow: 59;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-60],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-60] {
+  flex-grow: 60;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-61],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-61] {
+  flex-grow: 61;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-62],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-62] {
+  flex-grow: 62;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-63],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-63] {
+  flex-grow: 63;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-64],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-64] {
+  flex-grow: 64;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-65],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-65] {
+  flex-grow: 65;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-66],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-66] {
+  flex-grow: 66;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-67],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-67] {
+  flex-grow: 67;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-68],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-68] {
+  flex-grow: 68;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-69],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-69] {
+  flex-grow: 69;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-70],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-70] {
+  flex-grow: 70;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-71],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-71] {
+  flex-grow: 71;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-72],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-72] {
+  flex-grow: 72;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-73],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-73] {
+  flex-grow: 73;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-74],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-74] {
+  flex-grow: 74;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-75],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-75] {
+  flex-grow: 75;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-76],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-76] {
+  flex-grow: 76;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-77],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-77] {
+  flex-grow: 77;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-78],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-78] {
+  flex-grow: 78;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-79],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-79] {
+  flex-grow: 79;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-80],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-80] {
+  flex-grow: 80;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-81],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-81] {
+  flex-grow: 81;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-82],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-82] {
+  flex-grow: 82;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-83],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-83] {
+  flex-grow: 83;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-84],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-84] {
+  flex-grow: 84;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-85],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-85] {
+  flex-grow: 85;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-86],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-86] {
+  flex-grow: 86;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-87],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-87] {
+  flex-grow: 87;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-88],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-88] {
+  flex-grow: 88;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-89],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-89] {
+  flex-grow: 89;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-90],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-90] {
+  flex-grow: 90;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-91],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-91] {
+  flex-grow: 91;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-92],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-92] {
+  flex-grow: 92;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-93],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-93] {
+  flex-grow: 93;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-94],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-94] {
+  flex-grow: 94;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-95],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-95] {
+  flex-grow: 95;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-96],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-96] {
+  flex-grow: 96;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-97],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-97] {
+  flex-grow: 97;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-98],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-98] {
+  flex-grow: 98;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-99],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-99] {
+  flex-grow: 99;
+}
+.callout[data-callout=col] > .callout-content .callout[data-callout-metadata*=wide-100],
+.callout[data-callout=multi-column] > .callout-content .callout[data-callout-metadata*=wide-100] {
+  flex-grow: 100;
+}
+
+/* End of parts which were inspired by efemkay's MCL */
+/* 
+ * Start of parts which were inspired by 
+ * kneecaps' multi-column layout + aside float 
+ */
+/* .𖥔 ݁ ˖  global gap default // edit this value to change all col callouts ⊹ ࣪ ˖ */
+/* .𖥔 ݁ ˖  per-note gap presets via cssclasses frontmatter ⊹ ࣪ ˖ */
+.callout-gap-0 .callout[data-callout=col] > .callout-content,
+.callout-gap-0 .callout[data-callout=col-3] > .callout-content {
+  gap: 0;
+}
+
+.callout-gap-xs .callout[data-callout=col] > .callout-content,
+.callout-gap-xs .callout[data-callout=col-3] > .callout-content {
+  gap: 0.25rem;
+}
+
+.callout-gap-sm .callout[data-callout=col] > .callout-content,
+.callout-gap-sm .callout[data-callout=col-3] > .callout-content {
+  gap: 0.5rem;
+}
+
+.callout-gap-md .callout[data-callout=col] > .callout-content,
+.callout-gap-md .callout[data-callout=col-3] > .callout-content {
+  gap: 0.75rem;
+}
+
+.callout-gap-lg .callout[data-callout=col] > .callout-content,
+.callout-gap-lg .callout[data-callout=col-3] > .callout-content {
+  gap: 2rem;
+}
+
+/* ────୨ৎ──── */
+/* .𖥔 ݁ ˖  [!col] parent — transparent wrapper ⊹ ࣪ ˖ */
+/* .𖥔 ݁ ˖  flex row container ⊹ ࣪ ˖ */
+/* .𖥔 ݁ ˖  reset blockquote wrapper chrome — inner .callout keeps its own styling ⊹ ࣪ ˖ */
+/* .𖥔 ݁ ˖  [!aside] — float right alongside body text ⊹ ࣪ ˖ */
+.callout[data-callout=aside] {
+  float: inline-end;
+  clear: inline-end;
+  inline-size: 38%;
+  margin: 0 0 1rem 1.5rem;
+}
+
+/* .𖥔 ݁ ˖  clearfix — prevents float bleed past the content block ⊹ ࣪ ˖ */
+body .workspace-leaf.mod-active .markdown-rendered::after,
+body .workspace-leaf.mod-active .cm-content::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* .𖥔 ݁ ˖  mobile: revert to block ⊹ ࣪ ˖ */
+.is-mobile .callout[data-callout=aside] {
+  float: none;
+  inline-size: 100%;
+  margin: 0 0 1rem;
+}
+
+/* 
+ * End of parts which were inspired by 
+ * kneecaps' multi-column layout + aside float 
+ */

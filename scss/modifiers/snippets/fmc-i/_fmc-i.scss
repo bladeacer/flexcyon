@@ -1,0 +1,153 @@
+/* 
+ * Flexcyon's Multi Column implementation (FMCi)
+ *
+ * Adapted (with permission) from @kneecaps'
+ * (Obsidian Members Group, Ultra Lobster/Origami theme developer)
+ * multi-column layout + aside float snippet.
+ *
+ * I also took inspiration from efemkay's MCL
+ * (bare minimum core logic, reimplemented in SCSS).
+ *
+ * efemkay's MCL GitHub link (their project is licensed under GPLv3):
+ * https://github.com/efemkay/obsidian-modular-css-layout/
+ *
+ * Kept backwards compatibility/improvements
+ * - [x] multi-column keyword
+ * - [x] wide-0 to wide-100 keyword
+ *   - wide-0 forces the callout to use the bare minimum width which fits text content
+ *   - wide-1 does nothing but makes some people feel comfortable
+ * - Yes that's about all the MCL features I ever used myself
+ *
+ * It will try to respect fitting text content for all callouts in the same column
+ * before wide-x metadata.
+ *
+ * Licensed under MIT License, like the rest of the theme.
+ */
+
+body {
+  --callout-gap: 16px;
+}
+
+/* Start of parts which were inspired by efemkay's MCL */
+@mixin wide-wrapper($num) {
+  .callout[data-callout-metadata*="wide-#{$num}"] {
+    flex-grow: #{$num};
+  }
+}
+
+.callout[data-callout="col"],
+.callout[data-callout="multi-column"] {
+  background-color: transparent;
+
+  > .callout-title {
+    display: none;
+  }
+
+  > .callout-content {
+    display: flex;
+    gap: var(--callout-gap);
+
+    .callout {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+
+    @for $i from 0 through 100 {
+      @include wide-wrapper($i);
+    }
+  }
+}
+
+/* End of parts which were inspired by efemkay's MCL */
+
+/* 
+ * Start of parts which were inspired by 
+ * kneecaps' multi-column layout + aside float 
+ */
+
+// TODO: Make this less ul specific. No !importants.
+
+/* .𖥔 ݁ ˖  global gap default // edit this value to change all col callouts ⊹ ࣪ ˖ */
+
+/* .𖥔 ݁ ˖  per-note gap presets via cssclasses frontmatter ⊹ ࣪ ˖ */
+
+.callout-gap-0 .callout[data-callout="col"] > .callout-content,
+.callout-gap-0 .callout[data-callout="col-3"] > .callout-content {
+  gap: 0;
+}
+
+.callout-gap-xs .callout[data-callout="col"] > .callout-content,
+.callout-gap-xs .callout[data-callout="col-3"] > .callout-content {
+  gap: 0.25rem;
+}
+
+.callout-gap-sm .callout[data-callout="col"] > .callout-content,
+.callout-gap-sm .callout[data-callout="col-3"] > .callout-content {
+  gap: 0.5rem;
+}
+
+.callout-gap-md .callout[data-callout="col"] > .callout-content,
+.callout-gap-md .callout[data-callout="col-3"] > .callout-content {
+  gap: 0.75rem;
+}
+
+.callout-gap-lg .callout[data-callout="col"] > .callout-content,
+.callout-gap-lg .callout[data-callout="col-3"] > .callout-content {
+  gap: 2rem;
+}
+
+/* ────୨ৎ──── */
+
+/* .𖥔 ݁ ˖  [!col] parent — transparent wrapper ⊹ ࣪ ˖ */
+
+// .callout[data-callout="col"]:hover,
+// .callout[data-callout="col-3"]:hover {
+//   box-shadow: none;
+//   transform: none;
+// }
+
+/* .𖥔 ݁ ˖  flex row container ⊹ ࣪ ˖ */
+
+// .callout[data-callout="col"] > .callout-content,
+// .callout[data-callout="col-3"] > .callout-content {
+//   display: flex;
+//   flex-flow: row wrap;
+//   align-items: flex-start;
+//   padding: 0;
+// }
+
+/* .𖥔 ݁ ˖  reset blockquote wrapper chrome — inner .callout keeps its own styling ⊹ ࣪ ˖ */
+
+/* .𖥔 ݁ ˖  [!aside] — float right alongside body text ⊹ ࣪ ˖ */
+
+.callout[data-callout="aside"] {
+  float: inline-end;
+  clear: inline-end;
+  inline-size: 38%;
+  margin: 0 0 1rem 1.5rem;
+}
+
+/* .𖥔 ݁ ˖  clearfix — prevents float bleed past the content block ⊹ ࣪ ˖ */
+
+body .workspace-leaf.mod-active {
+  .markdown-rendered::after,
+  .cm-content::after {
+    clear: both;
+    display: table;
+    content: "";
+  }
+}
+
+/* .𖥔 ݁ ˖  mobile: revert to block ⊹ ࣪ ˖ */
+
+.is-mobile .callout[data-callout="aside"] {
+  float: none;
+  inline-size: 100%;
+  margin: 0 0 1rem;
+}
+
+/* 
+ * End of parts which were inspired by 
+ * kneecaps' multi-column layout + aside float 
+ */
