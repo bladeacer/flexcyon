@@ -2,11 +2,7 @@ body {
   --flexcyon-canvas-blur-intensity: 1px;
 }
 
-.canvas-background {
-  pattern {
-    display: none;
-  }
-}
+$canvas-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='canvas']";
 
 /* obsi-snip-coll start: canvas-oklch-fix */
 body.theme-dark,
@@ -20,125 +16,137 @@ body.theme-light {
   --canvas-color-6: var(--color-purple);
 }
 
-.canvas-controls {
-  inset-block-start: 24px;
-  gap: 8px;
-  scale: var(--expand);
-}
+body #{$canvas-sel} {
+  .canvas-background {
+    pattern {
+      display: none;
+    }
+  }
 
-.canvas-node-container {
-  border: 1px solid var(--canvas-color);
-}
+  .canvas-controls {
+    inset-block-start: 24px;
+    gap: 8px;
+    scale: var(--expand);
+  }
 
-.canvas-node-placeholder::after {
-  background-color: oklch(from var(--canvas-color) l c h / 10%);
-}
+  .canvas-node-container {
+    border: 1px solid var(--canvas-color);
+  }
 
-.canvas-icon-placeholder svg {
-  color: var(--canvas-color);
-}
+  .canvas-node-placeholder::after {
+    background-color: oklch(from var(--canvas-color) l c h / 10%);
+  }
 
-.canvas-node {
-  --shadow-border-themed-inset: inset 0 0 0 1px var(--canvas-color);
-  --shadow-border-themed: 0 0 0 2px var(--canvas-color);
-}
+  .canvas-icon-placeholder svg {
+    color: var(--canvas-color);
+  }
 
-.canvas-node.is-selected.is-themed .canvas-node-container,
-.canvas-node.is-focused.is-themed .canvas-node-container {
-  border-color: var(--canvas-color);
-}
+  .canvas-node {
+    --shadow-border-themed-inset: inset 0 0 0 1px var(--canvas-color);
+    --shadow-border-themed: 0 0 0 2px var(--canvas-color);
+  }
 
-.canvas-group-label[contenteditable="true"] {
-  box-shadow: 0 0 0 2px var(--canvas-color);
-}
+  .canvas-node.is-selected.is-themed .canvas-node-container,
+  .canvas-node.is-focused.is-themed .canvas-node-container {
+    border-color: var(--canvas-color);
+  }
 
-.canvas-node-group.is-themed .canvas-group-label:not([contenteditable="true"]) {
-  background-color: var(--canvas-color);
-}
+  .canvas-group-label[contenteditable="true"] {
+    box-shadow: 0 0 0 2px var(--canvas-color);
+  }
 
-.canvas-edges path.canvas-display-path {
-  stroke: var(--canvas-color);
-}
+  .canvas-node-group.is-themed
+    .canvas-group-label:not([contenteditable="true"]) {
+    background-color: var(--canvas-color);
+  }
 
-.canvas-edges polygon.canvas-path-end {
-  fill: var(--canvas-color);
-  stroke: var(--canvas-color);
-}
+  .canvas-edges path.canvas-display-path {
+    stroke: var(--canvas-color);
+  }
 
-.canvas-path-label.is-editing {
-  border-color: var(--canvas-color);
-  box-shadow:
-    var(--shadow-stationary),
-    0 0 0 calc(3px * var(--zoom-multiplier)) var(--canvas-color);
-}
+  .canvas-edges polygon.canvas-path-end {
+    fill: var(--canvas-color);
+    stroke: var(--canvas-color);
+  }
 
-.canvas-color-picker-item {
-  background-color: var(--canvas-color);
-}
+  .canvas-path-label.is-editing {
+    border-color: var(--canvas-color);
+    box-shadow:
+      var(--shadow-stationary),
+      0 0 0 calc(3px * var(--zoom-multiplier)) var(--canvas-color);
+  }
 
-.canvas-color-picker-item.is-active {
-  box-shadow: 0 0 0 2px var(--canvas-color);
+  .canvas-color-picker-item {
+    background-color: var(--canvas-color);
+  }
+
+  .canvas-color-picker-item.is-active {
+    box-shadow: 0 0 0 2px var(--canvas-color);
+  }
 }
 
 @media (hover: hover) {
   .canvas-color-picker-item:hover {
     box-shadow: 0 0 0 2px var(--canvas-color);
   }
-}
 
-.canvas-minimap rect.is-themed {
-  fill: var(--canvas-color);
-  stroke: var(--canvas-color);
-}
+  .canvas-minimap rect.is-themed {
+    fill: var(--canvas-color);
+    stroke: var(--canvas-color);
+  }
 
-.canvas-minimap path.is-themed {
-  stroke: var(--canvas-color);
-}
+  .canvas-minimap path.is-themed {
+    stroke: var(--canvas-color);
+  }
 
-.canvas-node-group .canvas-node-content {
-  background-color: oklch(from var(--canvas-color) l c h / 7%);
-}
+  .canvas-node-group .canvas-node-content {
+    background-color: oklch(from var(--canvas-color) l c h / 7%);
+  }
 
-.canvas-node.is-themed .canvas-node-content {
-  background-color: oklch(from var(--canvas-color) l c h / 7%);
-}
+  .canvas-node.is-themed .canvas-node-content {
+    background-color: oklch(from var(--canvas-color) l c h / 7%);
+  }
 
-.canvas-node.is-themed .canvas-node-container {
-  border-color: oklch(from var(--canvas-color) l c h / 70%);
-  box-shadow:
-    inset 0 0 0 1px oklch(from var(--canvas-color) l c h / 70%),
-    var(--shadow-stationary);
-}
+  .canvas-node.is-themed .canvas-node-container {
+    border-color: oklch(from var(--canvas-color) l c h / 70%);
+    box-shadow:
+      inset 0 0 0 1px oklch(from var(--canvas-color) l c h / 70%),
+      var(--shadow-stationary);
+  }
 
-.canvas-group-label {
-  color: var(--text-normal);
-  background-color: oklch(from var(--canvas-color) l c h / 10%);
-}
+  .canvas-group-label {
+    color: var(--text-normal);
+    background-color: oklch(from var(--canvas-color) l c h / 10%);
+  }
 
-.canvas-edges g.is-focused path.canvas-interaction-path,
-.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
-  stroke: oklch(from var(--canvas-color) l c h / 10%);
-}
+  .canvas-edges g.is-focused path.canvas-interaction-path,
+  .canvas:not(.is-connecting)
+    .canvas-edges
+    g:hover
+    path.canvas-interaction-path {
+    stroke: oklch(from var(--canvas-color) l c h / 10%);
+  }
 
-.canvas-placeholder-message,
-.canvas-selection {
-  background-color: oklch(from var(--color-accent) l c h / 10%);
-}
+  .canvas-placeholder-message,
+  .canvas-selection {
+    background-color: oklch(from var(--color-accent) l c h / 10%);
+  }
 
-.canvas-selection.mod-group-selection {
-  background-color: oklch(from var(--color-accent) l c h / 3%);
-  border-color: oklch(from var(--color-accent) l c h / 30%);
-}
+  .canvas-selection.mod-group-selection {
+    background-color: oklch(from var(--color-accent) l c h / 3%);
+    border-color: oklch(from var(--color-accent) l c h / 30%);
+  }
 
-.canvas-node.is-dummy .canvas-node-container {
-  background-color: oklch(from var(--color-accent) l c h / 20%);
+  .canvas-node.is-dummy .canvas-node-container {
+    background-color: oklch(from var(--color-accent) l c h / 20%);
+  }
+
+  .canvas-card-menu {
+    scale: var(--upsize);
+  }
 }
 
 /* obsi-snip-coll end */
-
-.canvas-card-menu {
-  scale: var(--upsize);
-}
 
 @media (hover: hover) {
   .canvas-control-item:hover {
@@ -147,15 +155,17 @@ body.theme-light {
 }
 
 body.flexcyon-canvas-blur-inactive-nodes {
-  .canvas:has(.canvas-node.is-editing) .canvas-edges,
-  .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
-    filter: blur(var(--flexcyon-canvas-blur-intensity));
+  #{$canvas-sel} .canvas:has(> .canvas-node.is-editing) {
+    & > .canvas-edges,
+    & > .canvas-node:not(.is-editing) {
+      filter: blur(var(--flexcyon-canvas-blur-intensity));
+    }
   }
 }
 
 @mixin canvas-menu-wrapper($pos, $inset-inline-start, $inset-block-end) {
   body.flexcyon-canvas-menu-#{$pos} {
-    .canvas-card-menu {
+    #{$canvas-sel} .canvas-card-menu {
       inset-block-end: #{$inset-block-end};
       inset-inline-start: #{$inset-inline-start};
       transform: none;
@@ -171,7 +181,7 @@ body.flexcyon-canvas-blur-inactive-nodes {
 
 @mixin canvas-menu-wrapper-2($pos, $inset-inline-start, $inset-block-end) {
   body.flexcyon-canvas-menu-#{$pos} {
-    .canvas-card-menu {
+    #{$canvas-sel} .canvas-card-menu {
       inset-block-end: #{$inset-block-end};
       inset-inline-start: #{$inset-inline-start};
       flex-direction: column;

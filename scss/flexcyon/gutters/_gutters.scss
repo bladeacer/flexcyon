@@ -18,24 +18,6 @@ body {
       content: "'";
     }
   }
-
-  // Opinionated translation so inline title and metadata container are aligned to main content text in live preview when line numbers/gutter is enabled.
-  .workspace-leaf.mod-active
-    > .workspace-leaf-content
-    > .view-content
-    > .markdown-source-view
-    > .cm-editor
-    > .cm-scroller
-    > .cm-sizer {
-    > .inline-title:has(+ div + .cm-contentContainer > .cm-gutters),
-    > .inline-title:has(+ .cm-contentContainer > .cm-gutters) {
-      padding-inline-start: 50px;
-    }
-
-    > .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-      padding-inline-start: 52px;
-    }
-  }
 }
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,

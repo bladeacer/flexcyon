@@ -3754,13 +3754,6 @@ body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) 
 body .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"]) + .cm-gutterElement::before {
   content: "'";
 }
-body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .inline-title:has(+ div + .cm-contentContainer > .cm-gutters),
-body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .inline-title:has(+ .cm-contentContainer > .cm-gutters) {
-  padding-inline-start: 50px;
-}
-body .workspace-leaf.mod-active > .workspace-leaf-content > .view-content > .markdown-source-view > .cm-editor > .cm-scroller > .cm-sizer > .metadata-container:has(+ .cm-contentContainer > .cm-gutters) {
-  padding-inline-start: 52px;
-}
 
 body:not(.is-mobile) .cm-lineNumbers .cm-active,
 body:not(.is-mobile) .cm-lineNumbers *::before {
@@ -8174,15 +8167,6 @@ body:not(.show-ribbon).flexcyon-workspace-card-layout.flexcyon-workspace-cards-t
   padding-block-start: 8px;
 }
 
-/* Prevent accidental closing of only child tabs which are empty type
-*
-* TODO: Can expand this to a setting toggle to apply it to all tab groups
-* which only have one child
-*/
-body .workspace .mod-root .mod-active:has(.workspace-tab-container > .workspace-leaf:only-child > .workspace-leaf-content[data-type=empty]) .workspace-tab-header .workspace-tab-header-inner-close-button {
-  pointer-events: none;
-}
-
 body {
   --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
 }
@@ -10301,7 +10285,7 @@ body.flexcyon-enable-smooth-cursor {
   --flexcyon-cursor-timing-fn: ease-in;
   --flexcyon-cursor-min-width: unset;
 }
-body.flexcyon-enable-smooth-cursor .cm-cursor-primary {
+body.flexcyon-enable-smooth-cursor .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-cursor-primary {
   min-inline-size: var(--flexcyon-cursor-min-width);
   transition: transform var(--flexcyon-cursor-duration) var(--flexcyon-cursor-timing-fn);
 }
@@ -14672,10 +14656,6 @@ body {
   --flexcyon-canvas-blur-intensity: 1px;
 }
 
-.canvas-background pattern {
-  display: none;
-}
-
 /* obsi-snip-coll start: canvas-oklch-fix */
 body.theme-dark,
 body.theme-light {
@@ -14688,61 +14668,52 @@ body.theme-light {
   --canvas-color-6: var(--color-purple);
 }
 
-.canvas-controls {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-background pattern {
+  display: none;
+}
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-controls {
   inset-block-start: 24px;
   gap: 8px;
   scale: var(--expand);
 }
-
-.canvas-node-container {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node-container {
   border: 1px solid var(--canvas-color);
 }
-
-.canvas-node-placeholder::after {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node-placeholder::after {
   background-color: oklch(from var(--canvas-color) l c h/10%);
 }
-
-.canvas-icon-placeholder svg {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-icon-placeholder svg {
   color: var(--canvas-color);
 }
-
-.canvas-node {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node {
   --shadow-border-themed-inset: inset 0 0 0 1px var(--canvas-color);
   --shadow-border-themed: 0 0 0 2px var(--canvas-color);
 }
-
-.canvas-node.is-selected.is-themed .canvas-node-container,
-.canvas-node.is-focused.is-themed .canvas-node-container {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node.is-selected.is-themed .canvas-node-container,
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node.is-focused.is-themed .canvas-node-container {
   border-color: var(--canvas-color);
 }
-
-.canvas-group-label[contenteditable=true] {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-group-label[contenteditable=true] {
   box-shadow: 0 0 0 2px var(--canvas-color);
 }
-
-.canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]) {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-node-group.is-themed .canvas-group-label:not([contenteditable=true]) {
   background-color: var(--canvas-color);
 }
-
-.canvas-edges path.canvas-display-path {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-edges path.canvas-display-path {
   stroke: var(--canvas-color);
 }
-
-.canvas-edges polygon.canvas-path-end {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-edges polygon.canvas-path-end {
   fill: var(--canvas-color);
   stroke: var(--canvas-color);
 }
-
-.canvas-path-label.is-editing {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-path-label.is-editing {
   border-color: var(--canvas-color);
   box-shadow: var(--shadow-stationary), 0 0 0 calc(3px * var(--zoom-multiplier)) var(--canvas-color);
 }
-
-.canvas-color-picker-item {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-color-picker-item {
   background-color: var(--canvas-color);
 }
-
-.canvas-color-picker-item.is-active {
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-color-picker-item.is-active {
   box-shadow: 0 0 0 2px var(--canvas-color);
 }
 
@@ -14750,134 +14721,122 @@ body.theme-light {
   .canvas-color-picker-item:hover {
     box-shadow: 0 0 0 2px var(--canvas-color);
   }
+  .canvas-minimap rect.is-themed {
+    fill: var(--canvas-color);
+    stroke: var(--canvas-color);
+  }
+  .canvas-minimap path.is-themed {
+    stroke: var(--canvas-color);
+  }
+  .canvas-node-group .canvas-node-content {
+    background-color: oklch(from var(--canvas-color) l c h/7%);
+  }
+  .canvas-node.is-themed .canvas-node-content {
+    background-color: oklch(from var(--canvas-color) l c h/7%);
+  }
+  .canvas-node.is-themed .canvas-node-container {
+    border-color: oklch(from var(--canvas-color) l c h/70%);
+    box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
+  }
+  .canvas-group-label {
+    color: var(--text-normal);
+    background-color: oklch(from var(--canvas-color) l c h/10%);
+  }
+  .canvas-edges g.is-focused path.canvas-interaction-path,
+  .canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
+    stroke: oklch(from var(--canvas-color) l c h/10%);
+  }
+  .canvas-placeholder-message,
+  .canvas-selection {
+    background-color: oklch(from var(--color-accent) l c h/10%);
+  }
+  .canvas-selection.mod-group-selection {
+    background-color: oklch(from var(--color-accent) l c h/3%);
+    border-color: oklch(from var(--color-accent) l c h/30%);
+  }
+  .canvas-node.is-dummy .canvas-node-container {
+    background-color: oklch(from var(--color-accent) l c h/20%);
+  }
+  .canvas-card-menu {
+    scale: var(--upsize);
+  }
 }
-.canvas-minimap rect.is-themed {
-  fill: var(--canvas-color);
-  stroke: var(--canvas-color);
-}
-
-.canvas-minimap path.is-themed {
-  stroke: var(--canvas-color);
-}
-
-.canvas-node-group .canvas-node-content {
-  background-color: oklch(from var(--canvas-color) l c h/7%);
-}
-
-.canvas-node.is-themed .canvas-node-content {
-  background-color: oklch(from var(--canvas-color) l c h/7%);
-}
-
-.canvas-node.is-themed .canvas-node-container {
-  border-color: oklch(from var(--canvas-color) l c h/70%);
-  box-shadow: inset 0 0 0 1px oklch(from var(--canvas-color) l c h/70%), var(--shadow-stationary);
-}
-
-.canvas-group-label {
-  color: var(--text-normal);
-  background-color: oklch(from var(--canvas-color) l c h/10%);
-}
-
-.canvas-edges g.is-focused path.canvas-interaction-path,
-.canvas:not(.is-connecting) .canvas-edges g:hover path.canvas-interaction-path {
-  stroke: oklch(from var(--canvas-color) l c h/10%);
-}
-
-.canvas-placeholder-message,
-.canvas-selection {
-  background-color: oklch(from var(--color-accent) l c h/10%);
-}
-
-.canvas-selection.mod-group-selection {
-  background-color: oklch(from var(--color-accent) l c h/3%);
-  border-color: oklch(from var(--color-accent) l c h/30%);
-}
-
-.canvas-node.is-dummy .canvas-node-container {
-  background-color: oklch(from var(--color-accent) l c h/20%);
-}
-
 /* obsi-snip-coll end */
-.canvas-card-menu {
-  scale: var(--upsize);
-}
-
 @media (hover: hover) {
   .canvas-control-item:hover {
     color: var(--text-accent);
   }
 }
-body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-edges,
-body.flexcyon-canvas-blur-inactive-nodes .canvas:has(.canvas-node.is-editing) .canvas-node:not(.is-editing) {
+body.flexcyon-canvas-blur-inactive-nodes .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas:has(> .canvas-node.is-editing) > .canvas-edges, body.flexcyon-canvas-blur-inactive-nodes .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas:has(> .canvas-node.is-editing) > .canvas-node:not(.is-editing) {
   filter: blur(var(--flexcyon-canvas-blur-intensity));
 }
 
-body.flexcyon-canvas-menu-bottom-left .canvas-card-menu {
+body.flexcyon-canvas-menu-bottom-left .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: unset;
   inset-inline-start: 1%;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-bottom-right .canvas-card-menu {
+body.flexcyon-canvas-menu-bottom-right .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: unset;
   inset-inline-start: 89%;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-top-center .canvas-card-menu {
+body.flexcyon-canvas-menu-top-center .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 94%;
   inset-inline-start: unset;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-top-left .canvas-card-menu {
+body.flexcyon-canvas-menu-top-left .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 94%;
   inset-inline-start: 1%;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-top-right .canvas-card-menu {
+body.flexcyon-canvas-menu-top-right .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 94%;
   inset-inline-start: 87.5%;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-lcenter-center .canvas-card-menu {
+body.flexcyon-canvas-menu-lcenter-center .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 50%;
   inset-inline-start: 1%;
   flex-direction: column;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-lcenter-top .canvas-card-menu {
+body.flexcyon-canvas-menu-lcenter-top .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 82.5%;
   inset-inline-start: 1%;
   flex-direction: column;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-lcenter-bottom .canvas-card-menu {
+body.flexcyon-canvas-menu-lcenter-bottom .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 2.5%;
   inset-inline-start: 1%;
   flex-direction: column;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-rcenter-bottom .canvas-card-menu {
+body.flexcyon-canvas-menu-rcenter-bottom .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 7.5%;
   inset-inline-start: 96.1%;
   flex-direction: column;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-rcenter-center .canvas-card-menu {
+body.flexcyon-canvas-menu-rcenter-center .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 40%;
   inset-inline-start: 96.1%;
   flex-direction: column;
   transform: none;
 }
 
-body.flexcyon-canvas-menu-rcenter-top .canvas-card-menu {
+body.flexcyon-canvas-menu-rcenter-top .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-card-menu {
   inset-block-end: 82.5%;
   inset-inline-start: 96.1%;
   flex-direction: column;
@@ -14940,121 +14899,85 @@ body {
   --font-mermaid: var(--font-monospace);
 }
 
-div.mermaid svg .nodes node * {
-  stroke: var(--color-base-20);
-}
-
-.theme-dark .mermaid > svg {
+body.theme-dark .mermaid > svg {
   filter: invert(100%) hue-rotate(180deg);
 }
 
-.theme-light .mermaid > svg[aria-roledescription=flowchart-v2],
-.theme-dark .mermaid > svg[aria-roledescription=flowchart-v2] {
+body.theme-light .mermaid > svg[aria-roledescription=flowchart-v2],
+body.theme-dark .mermaid > svg[aria-roledescription=flowchart-v2] {
   filter: none;
 }
 
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid {
+  padding: 16px 8px;
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid svg .nodes node * {
+  stroke: var(--color-base-20);
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g :is(*) {
   fill: var(--text-normal) !important;
   fill-opacity: var(--dimmed) !important;
   stroke: var(--text-faint) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.red :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.red :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.red :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.red :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.red :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.red :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.red :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.red :is(*) {
   fill: oklch(from var(--color-red) l c h/var(--dimmed)) !important;
   stroke: var(--color-red) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.purple :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.purple :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.purple :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.purple :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.purple :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.purple :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.purple :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.purple :is(*) {
   fill: oklch(from var(--color-purple) l c h/var(--dimmed)) !important;
   stroke: var(--color-purple) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.cyan :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.cyan :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.cyan :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.cyan :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.cyan :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.cyan :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.cyan :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.cyan :is(*) {
   fill: oklch(from var(--color-cyan) l c h/var(--dimmed)) !important;
   stroke: var(--color-cyan) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.yellow :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.yellow :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.yellow :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.yellow :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.yellow :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.yellow :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.yellow :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.yellow :is(*) {
   fill: oklch(from var(--color-yellow) l c h/var(--dimmed)) !important;
   stroke: var(--color-yellow) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.blue :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.blue :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.blue :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.blue :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.blue :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.blue :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.blue :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.blue :is(*) {
   fill: oklch(from var(--color-blue) l c h/var(--dimmed)) !important;
   stroke: var(--color-blue) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.green :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.green :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.green :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.green :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.green :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.green :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.green :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.green :is(*) {
   fill: oklch(from var(--color-green) l c h/var(--dimmed)) !important;
   stroke: var(--color-green) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.orange :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.orange :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.orange :is(*),
-.mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.orange :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g.orange :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g.orange :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram] g.root g.nodes g.orange :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=stateDiagram-v2] g.root g.nodes g.orange :is(*) {
   fill: oklch(from var(--color-orange) l c h/var(--dimmed)) !important;
   stroke: var(--color-orange) !important;
 }
-
-.mermaid > svg[aria-roledescription=flowchart] g.root,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root {
   /* Edge labels */
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.edgeLabels div.labelBkg,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgeLabels div.labelBkg {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.edgeLabels div.labelBkg, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgeLabels div.labelBkg {
   display: contents !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.edgeLabels div.labelBkg .edgeLabel p,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgeLabels div.labelBkg .edgeLabel p {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.edgeLabels div.labelBkg .edgeLabel p, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgeLabels div.labelBkg .edgeLabel p {
   font-size: var(--font-ui-small) !important;
   vertical-align: super;
   color: var(--text-normal) !important;
   background-color: var(--background-primary) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root {
   /* Nodes */
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes {
   /* Node labels */
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes div:has(.nodeLabel),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes div:has(.nodeLabel) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes div:has(.nodeLabel), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes div:has(.nodeLabel) {
   display: block !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes div:has(.nodeLabel) .nodeLabel p,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes div:has(.nodeLabel) .nodeLabel p {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes div:has(.nodeLabel) .nodeLabel p, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes div:has(.nodeLabel) .nodeLabel p {
   color: var(--text-normal) !important;
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes,
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes {
   /* Node default colors */
 }
-.mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g :is(*),
-.mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g :is(*) {
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.nodes g :is(*), .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.nodes g :is(*) {
   fill: var(--background-secondary) !important;
   fill-opacity: calc(var(--dimmed) - 0.25) !important;
   stroke: var(--text-faint) !important;
-}
-
-.mermaid {
-  padding: 16px 8px;
 }
 
 body {

@@ -20,25 +20,6 @@ body:not(
   }
 }
 
-/* Prevent accidental closing of only child tabs which are empty type
-*
-* TODO: Can expand this to a setting toggle to apply it to all tab groups
-* which only have one child
-*/
-
-body
-  .workspace
-  .mod-root
-  .mod-active:has(
-    .workspace-tab-container
-      > .workspace-leaf:only-child
-      > .workspace-leaf-content[data-type="empty"]
-  )
-  .workspace-tab-header
-  .workspace-tab-header-inner-close-button {
-  pointer-events: none;
-}
-
 body {
   --flexcyon-side-toggle-button-no-ribbon: 11px 16px 7px 0px;
 

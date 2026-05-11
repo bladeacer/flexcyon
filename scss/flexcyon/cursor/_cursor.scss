@@ -30,7 +30,9 @@ body.flexcyon-enable-smooth-cursor {
   --flexcyon-cursor-timing-fn: ease-in;
   --flexcyon-cursor-min-width: unset;
 
-  .cm-cursor-primary {
+  .workspace-leaf.mod-active
+    .workspace-leaf-content[data-type="markdown"]
+    .cm-cursor-primary {
     min-inline-size: var(--flexcyon-cursor-min-width);
     transition: transform var(--flexcyon-cursor-duration)
       var(--flexcyon-cursor-timing-fn);

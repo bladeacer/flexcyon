@@ -2,103 +2,113 @@ body {
   --font-mermaid: var(--font-monospace);
 }
 
-div.mermaid svg .nodes node * {
-  stroke: var(--color-base-20);
-}
+$mermaid-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='markdown']";
 
-.theme-dark .mermaid > svg {
+body.theme-dark .mermaid > svg {
   filter: invert(100%) hue-rotate(180deg);
 }
 
-.theme-light .mermaid > svg[aria-roledescription="flowchart-v2"],
-.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
+body.theme-light .mermaid > svg[aria-roledescription="flowchart-v2"],
+body.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
   filter: none;
 }
 
-.mermaid > svg[aria-roledescription="flowchart"]g.root,
-.mermaid > svg[aria-roledescription="flowchart-v2"]g.root,
-.mermaid > svg[aria-roledescription="stateDiagram"]g.root,
-.mermaid > svg[aria-roledescription="stateDiagram-v2"]g.root {
-  & g.nodes {
-    & g :is(*) {
-      fill: var(--text-normal) !important;
-      fill-opacity: var(--dimmed) !important;
-      stroke: var(--text-faint) !important;
+#{$mermaid-sel} {
+  .mermaid {
+    padding: 16px 8px;
+
+    svg .nodes node * {
+      stroke: var(--color-base-20);
     }
 
-    & g.red :is(*) {
-      fill: oklch(from var(--color-red) l c h / var(--dimmed)) !important;
-      stroke: var(--color-red) !important;
-    }
+    & > svg[aria-roledescription="flowchart"]g.root,
+    & > svg[aria-roledescription="flowchart-v2"]g.root,
+    & > svg[aria-roledescription="stateDiagram"]g.root,
+    & > svg[aria-roledescription="stateDiagram-v2"]g.root {
+      & g.nodes {
+        & g :is(*) {
+          fill: var(--text-normal) !important;
+          fill-opacity: var(--dimmed) !important;
+          stroke: var(--text-faint) !important;
+        }
 
-    & g.purple :is(*) {
-      fill: oklch(from var(--color-purple) l c h / var(--dimmed)) !important;
-      stroke: var(--color-purple) !important;
-    }
+        & g.red :is(*) {
+          fill: oklch(from var(--color-red) l c h / var(--dimmed)) !important;
+          stroke: var(--color-red) !important;
+        }
 
-    & g.cyan :is(*) {
-      fill: oklch(from var(--color-cyan) l c h / var(--dimmed)) !important;
-      stroke: var(--color-cyan) !important;
-    }
+        & g.purple :is(*) {
+          fill: oklch(
+            from var(--color-purple) l c h / var(--dimmed)
+          ) !important;
+          stroke: var(--color-purple) !important;
+        }
 
-    & g.yellow :is(*) {
-      fill: oklch(from var(--color-yellow) l c h / var(--dimmed)) !important;
-      stroke: var(--color-yellow) !important;
-    }
+        & g.cyan :is(*) {
+          fill: oklch(from var(--color-cyan) l c h / var(--dimmed)) !important;
+          stroke: var(--color-cyan) !important;
+        }
 
-    & g.blue :is(*) {
-      fill: oklch(from var(--color-blue) l c h / var(--dimmed)) !important;
-      stroke: var(--color-blue) !important;
-    }
+        & g.yellow :is(*) {
+          fill: oklch(
+            from var(--color-yellow) l c h / var(--dimmed)
+          ) !important;
+          stroke: var(--color-yellow) !important;
+        }
 
-    & g.green :is(*) {
-      fill: oklch(from var(--color-green) l c h / var(--dimmed)) !important;
-      stroke: var(--color-green) !important;
-    }
+        & g.blue :is(*) {
+          fill: oklch(from var(--color-blue) l c h / var(--dimmed)) !important;
+          stroke: var(--color-blue) !important;
+        }
 
-    & g.orange :is(*) {
-      fill: oklch(from var(--color-orange) l c h / var(--dimmed)) !important;
-      stroke: var(--color-orange) !important;
-    }
-  }
-}
+        & g.green :is(*) {
+          fill: oklch(from var(--color-green) l c h / var(--dimmed)) !important;
+          stroke: var(--color-green) !important;
+        }
 
-.mermaid > svg[aria-roledescription="flowchart"]g.root,
-.mermaid > svg[aria-roledescription="flowchart-v2"]g.root {
-  /* Edge labels */
-  & g.edgeLabels {
-    & div.labelBkg {
-      display: contents !important;
-
-      & .edgeLabel p {
-        font-size: var(--font-ui-small) !important;
-        vertical-align: super;
-        color: var(--text-normal) !important;
-        background-color: var(--background-primary) !important;
-      }
-    }
-  }
-
-  /* Nodes */
-  & g.nodes {
-    /* Node labels */
-    & div:has(.nodeLabel) {
-      display: block !important;
-
-      & .nodeLabel p {
-        color: var(--text-normal) !important;
+        & g.orange :is(*) {
+          fill: oklch(
+            from var(--color-orange) l c h / var(--dimmed)
+          ) !important;
+          stroke: var(--color-orange) !important;
+        }
       }
     }
 
-    /* Node default colors */
-    & g :is(*) {
-      fill: var(--background-secondary) !important;
-      fill-opacity: calc(var(--dimmed) - 0.25) !important;
-      stroke: var(--text-faint) !important;
+    & > svg[aria-roledescription="flowchart"]g.root,
+    & > svg[aria-roledescription="flowchart-v2"]g.root {
+      /* Edge labels */
+      & g.edgeLabels {
+        & div.labelBkg {
+          display: contents !important;
+
+          & .edgeLabel p {
+            font-size: var(--font-ui-small) !important;
+            vertical-align: super;
+            color: var(--text-normal) !important;
+            background-color: var(--background-primary) !important;
+          }
+        }
+      }
+
+      /* Nodes */
+      & g.nodes {
+        /* Node labels */
+        & div:has(.nodeLabel) {
+          display: block !important;
+
+          & .nodeLabel p {
+            color: var(--text-normal) !important;
+          }
+        }
+
+        /* Node default colors */
+        & g :is(*) {
+          fill: var(--background-secondary) !important;
+          fill-opacity: calc(var(--dimmed) - 0.25) !important;
+          stroke: var(--text-faint) !important;
+        }
+      }
     }
   }
-}
-
-.mermaid {
-  padding: 16px 8px;
 }
