@@ -9273,13 +9273,13 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809px);
 }
 
-body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
   padding-block-start: 4px;
   border-block-start: unset;
 }
-body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .markdown-source-view.mod-cm6 .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
@@ -9292,8 +9292,8 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .mark
   content: var(--flexcyon-vim-insert-text);
   background-color: var(--cm-panel-bg);
 }
-body.flexcyon-flex-max-mode .markdown-source-view.mod-cm6 .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .markdown-source-view.mod-cm6 .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
   position: fixed;
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   inset-inline-start: var(--flexcyon-vim-left-positioning);
@@ -9306,37 +9306,37 @@ body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .mark
   content: var(--flexcyon-vim-normal-text);
   background-color: var(--cm-panel-bg);
 }
-body.flexcyon-flex-max-mode .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
-  inset-block-end: var(--flexcyon-vim-bottom-positioning);
-  inset-inline-start: 48px;
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller + .cm-panels .cm-panel div,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
+  color: var(--text-muted);
 }
-body.flexcyon-flex-max-mode .cm-panels .cm-panel,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels .cm-panel {
-  padding-block-start: 4px;
-  font-weight: 500;
-  background-color: var(--color-base-00);
-}
-body.flexcyon-flex-max-mode .cm-panels input,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-panels input {
-  z-index: 16;
-  font-size: 0.9rem;
-  transform: translateY(-4px);
-}
-body.flexcyon-flex-max-mode .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .markdown-source-view.mod-cm6 .cm-editor > .cm-scroller + .cm-panels .cm-panel div div:not(.cm-vim-message)::before {
   inset-block-end: var(--flexcyon-vim-bottom-positioning);
   padding-inline-end: 4px;
   font-family: var(--font-interface);
   font-size: var(--cm-font-size);
   content: var(--flexcyon-vim-command-text);
 }
-body.flexcyon-flex-max-mode .cm-editor > .cm-scroller + .cm-panels .cm-panel div,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
-  color: var(--text-muted);
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels .cm-panel,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels .cm-panel {
+  padding-block-start: 4px;
+  font-weight: 500;
+  background-color: var(--color-base-00);
 }
-body.flexcyon-flex-max-mode div.cm-vim-message,
-body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) div.cm-vim-message {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+  inset-block-end: var(--flexcyon-vim-bottom-positioning);
+  inset-inline-start: 48px;
+}
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels input,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .cm-panels input {
+  z-index: 16;
+  font-size: 0.9rem;
+  transform: translateY(-4px);
+}
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] div.cm-vim-message,
+body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] div.cm-vim-message {
   font-weight: bold;
   color: var(--color-red) !important;
 }
@@ -10391,60 +10391,58 @@ body {
 }
 body.flexcyon-anims-scale-up .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-scale-up .view-content {
+body.flexcyon-anims-scale-up .workspace-leaf.mod-active .view-content {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-slide-rtl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-slide-rtl .view-content {
+body.flexcyon-anims-slide-rtl .workspace-leaf.mod-active .view-content {
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-slide-ltr .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-slide-ltr .view-content {
+body.flexcyon-anims-slide-ltr .workspace-leaf.mod-active .view-content {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-slide-tb .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-slide-tb .view-content {
+body.flexcyon-anims-slide-tb .workspace-leaf.mod-active .view-content {
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-slide-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-slide-bt .view-content {
+body.flexcyon-anims-slide-bt .workspace-leaf.mod-active .view-content {
   animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-spin-rl .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-spin-rl .view-content {
+body.flexcyon-anims-spin-rl .workspace-leaf.mod-active .view-content {
   animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-spin-bt .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-spin-bt .view-content {
+body.flexcyon-anims-spin-bt .workspace-leaf.mod-active .view-content {
   animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-anims-fade-in .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-anims-fade-in .view-content {
+body.flexcyon-anims-fade-in .workspace-leaf.mod-active .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
 body.flexcyon-flex-max-mode .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
 [data-type=undefined]),
-body.flexcyon-flex-max-mode .view-content {
+body.flexcyon-flex-max-mode .workspace-leaf.mod-active .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-scale-up .modal .community-modal-info,
-body.flexcyon-modal-anims-scale-up .modal .vertical-tab-content,
 body.flexcyon-modal-anims-scale-up .modal,
 body.flexcyon-modal-anims-scale-up .prompt {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10454,8 +10452,6 @@ body.flexcyon-anims-modal-scale-up.flexcyon-anim-style-settings-contain .style-s
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-slide-rtl .modal .community-modal-info,
-body.flexcyon-modal-anims-slide-rtl .modal .vertical-tab-content,
 body.flexcyon-modal-anims-slide-rtl .modal,
 body.flexcyon-modal-anims-slide-rtl .prompt {
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10465,8 +10461,6 @@ body.flexcyon-anims-modal-slide-rtl.flexcyon-anim-style-settings-contain .style-
   animation: slide-in-right var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-slide-ltr .modal .community-modal-info,
-body.flexcyon-modal-anims-slide-ltr .modal .vertical-tab-content,
 body.flexcyon-modal-anims-slide-ltr .modal,
 body.flexcyon-modal-anims-slide-ltr .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10476,16 +10470,12 @@ body.flexcyon-anims-modal-slide-ltr.flexcyon-anim-style-settings-contain .style-
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-flex-max-mode .modal .community-modal-info,
-body.flexcyon-flex-max-mode .modal .vertical-tab-content,
 body.flexcyon-flex-max-mode .modal,
 body.flexcyon-flex-max-mode .style-settings-container,
 body.flexcyon-flex-max-mode .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-slide-tb .modal .community-modal-info,
-body.flexcyon-modal-anims-slide-tb .modal .vertical-tab-content,
 body.flexcyon-modal-anims-slide-tb .modal,
 body.flexcyon-modal-anims-slide-tb .prompt {
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10495,8 +10485,6 @@ body.flexcyon-anims-modal-slide-tb.flexcyon-anim-style-settings-contain .style-s
   animation: slide-in-tb var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-slide-bt .modal .community-modal-info,
-body.flexcyon-modal-anims-slide-bt .modal .vertical-tab-content,
 body.flexcyon-modal-anims-slide-bt .modal,
 body.flexcyon-modal-anims-slide-bt .prompt {
   animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10506,8 +10494,6 @@ body.flexcyon-anims-modal-slide-bt.flexcyon-anim-style-settings-contain .style-s
   animation: slide-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-spin-rl .modal .community-modal-info,
-body.flexcyon-modal-anims-spin-rl .modal .vertical-tab-content,
 body.flexcyon-modal-anims-spin-rl .modal,
 body.flexcyon-modal-anims-spin-rl .prompt {
   animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10517,8 +10503,6 @@ body.flexcyon-anims-modal-spin-rl.flexcyon-anim-style-settings-contain .style-se
   animation: spin-in-rl var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-spin-bt .modal .community-modal-info,
-body.flexcyon-modal-anims-spin-bt .modal .vertical-tab-content,
 body.flexcyon-modal-anims-spin-bt .modal,
 body.flexcyon-modal-anims-spin-bt .prompt {
   animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10528,8 +10512,6 @@ body.flexcyon-anims-modal-spin-bt.flexcyon-anim-style-settings-contain .style-se
   animation: spin-in-bt var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-modal-anims-fade-in .modal .community-modal-info,
-body.flexcyon-modal-anims-fade-in .modal .vertical-tab-content,
 body.flexcyon-modal-anims-fade-in .modal,
 body.flexcyon-modal-anims-fade-in .prompt {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);

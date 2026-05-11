@@ -3,84 +3,84 @@ body {
   --cm-font-size: calc(var(--font-ui-small) + 0.809px);
 }
 
+$cm-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='markdown']";
+
 body.flexcyon-flex-max-mode,
 body.flexcyon-vim-mode-text-enable:not(.flexcyon-status-text-enable-color) {
-  .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
-    padding-block-start: 4px;
-    border-block-start: unset;
-  }
+  #{$cm-sel} {
+    .markdown-source-view.mod-cm6 {
+      .cm-panels.cm-panels-bottom {
+        padding-block-start: 4px;
+        border-block-start: unset;
+      }
 
-  .markdown-source-view.mod-cm6
-    .cm-editor
-    .cm-scroller:not(.cm-vimMode)
-    .cm-sizer:has(+ .cm-vimCursorLayer)::before {
-    position: fixed;
-    inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    inset-inline-start: var(--flexcyon-vim-left-positioning);
-    z-index: 2;
-    block-size: 32px;
-    padding: 0 8px;
-    font-family: var(--font-interface);
-    font-size: var(--cm-font-size);
-    color: var(--text-muted);
-    content: var(--flexcyon-vim-insert-text);
-    background-color: var(--cm-panel-bg);
-  }
+      .cm-editor > .cm-scroller {
+        &:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+          position: fixed;
+          inset-block-end: var(--flexcyon-vim-bottom-positioning);
+          inset-inline-start: var(--flexcyon-vim-left-positioning);
+          z-index: 2;
+          block-size: 32px;
+          padding: 0 8px;
+          font-family: var(--font-interface);
+          font-size: var(--cm-font-size);
+          color: var(--text-muted);
+          content: var(--flexcyon-vim-insert-text);
+          background-color: var(--cm-panel-bg);
+        }
 
-  .markdown-source-view.mod-cm6
-    .cm-editor
-    .cm-scroller.cm-vimMode:not(:has(+ .cm-panels))
-    .cm-sizer:has(+ .cm-vimCursorLayer)::before {
-    position: fixed;
-    inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    inset-inline-start: var(--flexcyon-vim-left-positioning);
-    z-index: 2;
-    block-size: 32px;
-    padding: 0 8px;
-    font-family: var(--font-interface);
-    font-size: var(--cm-font-size);
-    color: var(--text-muted);
-    content: var(--flexcyon-vim-normal-text);
-    background-color: var(--cm-panel-bg);
-  }
+        &.cm-vimMode:not(:has(+ .cm-panels))
+          .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+          position: fixed;
+          inset-block-end: var(--flexcyon-vim-bottom-positioning);
+          inset-inline-start: var(--flexcyon-vim-left-positioning);
+          z-index: 2;
+          block-size: 32px;
+          padding: 0 8px;
+          font-family: var(--font-interface);
+          font-size: var(--cm-font-size);
+          color: var(--text-muted);
+          content: var(--flexcyon-vim-normal-text);
+          background-color: var(--cm-panel-bg);
+        }
 
-  .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
-    inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    inset-inline-start: 48px;
-  }
+        & + .cm-panels .cm-panel div {
+          color: var(--text-muted);
 
-  .cm-panels .cm-panel {
-    padding-block-start: 4px;
-    font-weight: 500;
-    background-color: var(--color-base-00);
-  }
+          div:not(.cm-vim-message)::before {
+            inset-block-end: var(--flexcyon-vim-bottom-positioning);
+            padding-inline-end: 4px;
+            font-family: var(--font-interface);
+            font-size: var(--cm-font-size);
+            content: var(--flexcyon-vim-command-text);
+          }
+        }
+      }
+    }
 
-  .cm-panels input {
-    z-index: 16;
-    font-size: 0.9rem;
-    transform: translateY(-4px);
-  }
+    .cm-panels {
+      .cm-panel {
+        padding-block-start: 4px;
+        font-weight: 500;
+        background-color: var(--color-base-00);
 
-  .cm-editor
-    > .cm-scroller
-    + .cm-panels
-    .cm-panel
-    div
-    div:not(.cm-vim-message)::before {
-    inset-block-end: var(--flexcyon-vim-bottom-positioning);
-    padding-inline-end: 4px;
-    font-family: var(--font-interface);
-    font-size: var(--cm-font-size);
-    content: var(--flexcyon-vim-command-text);
-  }
+        div div:not(.cm-vim-message) span:first-child {
+          inset-block-end: var(--flexcyon-vim-bottom-positioning);
+          inset-inline-start: 48px;
+        }
+      }
 
-  .cm-editor > .cm-scroller + .cm-panels .cm-panel div {
-    color: var(--text-muted);
-  }
+      input {
+        z-index: 16;
+        font-size: 0.9rem;
+        transform: translateY(-4px);
+      }
+    }
 
-  div.cm-vim-message {
-    font-weight: bold;
-    color: var(--color-red) !important;
+    div.cm-vim-message {
+      font-weight: bold;
+      color: var(--color-red) !important;
+    }
   }
 }
 

@@ -69,8 +69,6 @@ body {
 
 @mixin anims-modal-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
   body.flexcyon-modal-anims-#{$anim-class} {
-    .modal .community-modal-info,
-    .modal .vertical-tab-content,
     .modal,
     .prompt {
       animation: $anim-type var(--flexcyon-anim-duration)
@@ -86,8 +84,6 @@ body {
 
   @if $is-flex-max == 1 {
     body.flexcyon-flex-max-mode {
-      .modal .community-modal-info,
-      .modal .vertical-tab-content,
       .modal,
       .style-settings-container,
       .prompt {
@@ -107,7 +103,7 @@ body {
         [data-type="file-explorer"],
         [data-type="undefined"]
       ),
-    .view-content {
+    .workspace-leaf.mod-active .view-content {
       animation: $anim-type var(--flexcyon-anim-duration)
         var(--flexcyon-anim-easing);
     }
@@ -121,7 +117,7 @@ body {
           [data-type="file-explorer"],
           [data-type="undefined"]
         ),
-      .view-content {
+      .workspace-leaf.mod-active .view-content {
         animation: $anim-type
           var(--flexcyon-anim-duration)
           var(--flexcyon-anim-easing);

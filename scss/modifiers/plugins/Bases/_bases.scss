@@ -45,12 +45,6 @@ body {
   inline-size: min(calc(100% - 8px), 99.5%);
 }
 
-// .bases-tr,
-// .bases-tbody,
-// .bases-thead {
-//   max-inline-size: min(calc(100% - 8px), 99.5%) !important;
-// }
-
 .bases-tr {
   border-inline-end: 0.5px solid var(--table-border-color);
 }
