@@ -7136,160 +7136,136 @@ body .callout[data-callout*=tui]:not(:is([data-callout*=vertical], [data-callout
 }
 
 /* obsi-snip-coll end */
-div.callout[data-callout*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-yellow] .callout-title, div.callout[data-callout-metadata*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-yellow);
 }
-div.callout[data-callout*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-yellow] .callout-content, div.callout[data-callout-metadata*=border-yellow]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-yellow);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-yellow]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-yellow]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-yellow], div.callout[data-callout-metadata*=border-yellow]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-yellow);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-blue] .callout-title, div.callout[data-callout-metadata*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-blue);
 }
-div.callout[data-callout*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-blue] .callout-content, div.callout[data-callout-metadata*=border-blue]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-blue);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-blue]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-blue]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-blue], div.callout[data-callout-metadata*=border-blue]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-blue);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-purple] .callout-title, div.callout[data-callout-metadata*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-purple);
 }
-div.callout[data-callout*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-purple] .callout-content, div.callout[data-callout-metadata*=border-purple]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-purple);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-purple]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-purple]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-purple], div.callout[data-callout-metadata*=border-purple]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-purple);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-red] .callout-title, div.callout[data-callout-metadata*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-red);
 }
-div.callout[data-callout*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-red] .callout-content, div.callout[data-callout-metadata*=border-red]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-red);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-red]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-red]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-red], div.callout[data-callout-metadata*=border-red]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-red);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-cyan] .callout-title, div.callout[data-callout-metadata*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-cyan);
 }
-div.callout[data-callout*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-cyan] .callout-content, div.callout[data-callout-metadata*=border-cyan]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-cyan);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-cyan]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-cyan]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-cyan], div.callout[data-callout-metadata*=border-cyan]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-cyan);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-pink] .callout-title, div.callout[data-callout-metadata*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-pink);
 }
-div.callout[data-callout*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-pink] .callout-content, div.callout[data-callout-metadata*=border-pink]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-pink);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-pink]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-pink]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-pink], div.callout[data-callout-metadata*=border-pink]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-pink);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-green] .callout-title, div.callout[data-callout-metadata*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-green);
 }
-div.callout[data-callout*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-green] .callout-content, div.callout[data-callout-metadata*=border-green]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-green);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-green]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-green]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-green], div.callout[data-callout-metadata*=border-green]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-green);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title,
-div.callout[data-callout-metadata*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
+div.callout[data-callout*=border-orange] .callout-title, div.callout[data-callout-metadata*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-title {
   color: var(--color-orange);
 }
-div.callout[data-callout*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content,
-div.callout[data-callout-metadata*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
+div.callout[data-callout*=border-orange] .callout-content, div.callout[data-callout-metadata*=border-orange]:is([data-callout*=tui], [data-callout-metadata*=tui]) .callout-content {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-orange);
   border-radius: var(--flexcyon-callout-radix);
 }
 
-div.callout[data-callout*=border-orange]:not([data-callout*=tui], [data-callout-metadata*=tui]),
-div.callout[data-callout-metadata*=border-orange]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
+div.callout[data-callout*=border-orange], div.callout[data-callout-metadata*=border-orange]:not([data-callout*=tui], [data-callout-metadata*=tui]) {
   z-index: 1;
   padding: 8px 16px;
   border: 1px solid var(--color-orange);
@@ -7298,28 +7274,24 @@ div.callout[data-callout-metadata*=border-orange]:not([data-callout*=tui], [data
 
 /* obsi-snip-coll start: plain-callout */
 body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
-.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])),
-.callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) {
+.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])), .callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) {
   padding: 0;
   background-color: var(--background-primary);
   border: 1px solid var(--color-blue);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
 body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title,
-.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title,
-.callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title {
+.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title, .callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title {
   padding: 4px 12px;
   color: var(--background-primary);
   background-color: var(--color-blue);
 }
 body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title .callout-icon,
-.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title .callout-icon,
-.callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title .callout-icon {
+.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title .callout-icon, .callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-title .callout-icon {
   display: none;
 }
 body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
-.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
-.callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
+.callout[data-callout*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content, .callout[data-callout-metadata*=pln]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
 }
 
@@ -7502,8 +7474,7 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 /* obsi-snip-coll end */
 /* obsi-snip-coll start: vertical-callout */
 body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])), .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7512,8 +7483,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
 body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7522,19 +7492,16 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   writing-mode: vertical-lr;
 }
 body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
 body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-yellow], .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7542,8 +7509,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-yellow);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-yellow] .callout-title, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7551,18 +7517,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-yellow);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-yellow] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-yellow] .callout-content, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-blue], .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7570,8 +7533,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-blue);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-blue] .callout-title, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7579,18 +7541,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-blue);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-blue] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-blue] .callout-content, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-purple], .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7598,8 +7557,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-purple);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-purple] .callout-title, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7607,18 +7565,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-purple);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-purple] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-purple] .callout-content, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-red], .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7626,8 +7581,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-red);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-red] .callout-title, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7635,18 +7589,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-red);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-red] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-red] .callout-content, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-cyan], .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7654,8 +7605,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-cyan);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-cyan] .callout-title, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7663,18 +7613,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-cyan);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-cyan] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-cyan] .callout-content, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-pink], .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7682,8 +7629,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-pink);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-pink] .callout-title, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7691,18 +7637,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-pink);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-pink] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-pink] .callout-content, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-green], .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7710,8 +7653,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-green);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-green] .callout-title, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7719,18 +7661,15 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-green);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-green] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-green] .callout-content, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }
 
-.callout[data-callout*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+.callout[data-callout*=vert-orange], .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -7738,8 +7677,7 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   border: 1px solid var(--color-orange);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 }
-.callout[data-callout*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+.callout[data-callout*=vert-orange] .callout-title, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
   justify-content: center;
   padding: 8px 12px;
   text-overflow: hidden;
@@ -7747,12 +7685,10 @@ body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*
   background-color: var(--color-orange);
   writing-mode: vertical-lr;
 }
-.callout[data-callout*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+.callout[data-callout*=vert-orange] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
   color: var(--background-primary);
 }
-.callout[data-callout*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+.callout[data-callout*=vert-orange] .callout-content, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
   padding: 4px 12px;
   margin-inline-start: 12px;
 }

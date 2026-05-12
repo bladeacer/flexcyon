@@ -883,11 +883,12 @@ body #{$tui-sel} {
 
 /* obsi-snip-coll end */
 
-$border-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
+$border-tui-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
 
 @mixin border-wrapper($color) {
-  div.callout[data-callout*="border-#{$color}"]:is(#{$border-sel}),
-  div.callout[data-callout-metadata*="border-#{$color}"]:is(#{$border-sel}) {
+  $border-sel: 'div.callout[data-callout*="border-#{$color}"], div.callout[data-callout-metadata*="border-#{$color}"]';
+
+  #{$border-sel}:is(#{$border-tui-sel}) {
     .callout-title {
       color: var(--color-#{$color});
     }
@@ -899,8 +900,8 @@ $border-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
       border-radius: var(--flexcyon-callout-radix);
     }
   }
-  div.callout[data-callout*="border-#{$color}"]:not(#{$border-sel}),
-  div.callout[data-callout-metadata*="border-#{$color}"]:not(#{$border-sel}) {
+
+  #{$border-sel}:not(#{$border-tui-sel}) {
     z-index: 1;
     padding: 8px 16px;
     border: 1px solid var(--color-#{$color});
@@ -918,26 +919,29 @@ $border-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
 @include border-wrapper("orange");
 
 /* obsi-snip-coll start: plain-callout */
-body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
-.callout[data-callout*="pln"]:not(:is(#{$flexcyon-plain-exclusions})),
-.callout[data-callout-metadata*="pln"]:not(:is(#{$flexcyon-plain-exclusions})) {
-  padding: 0;
-  background-color: var(--background-primary);
-  border: 1px solid var(--color-blue);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+$pln-sel: '.callout[data-callout*="pln"], .callout[data-callout-metadata*="pln"]';
 
-  .callout-title {
-    padding: 4px 12px;
-    color: var(--background-primary);
-    background-color: var(--color-blue);
+body.flexcyon-plain-callouts .callout,
+#{$pln-sel} {
+  &:not(:is(#{$flexcyon-plain-exclusions})) {
+    padding: 0;
+    background-color: var(--background-primary);
+    border: 1px solid var(--color-blue);
+    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
-    .callout-icon {
-      display: none;
+    .callout-title {
+      padding: 4px 12px;
+      color: var(--background-primary);
+      background-color: var(--color-blue);
+
+      .callout-icon {
+        display: none;
+      }
     }
-  }
 
-  .callout-content {
-    padding: 4px 12px;
+    .callout-content {
+      padding: 4px 12px;
+    }
   }
 }
 
@@ -981,44 +985,42 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 /* obsi-snip-coll end */
 
 /* obsi-snip-coll start: vertical-callout */
-body.flexcyon-vert-callouts .callout:not(:is(#{$flexcyon-vert-exclusions})),
-.callout[data-callout*="vertical"]:not(:is(#{$flexcyon-vert-exclusions})),
-.callout[data-callout-metadata*="vertical"]:not(
-    :is(#{$flexcyon-vert-exclusions})
-  ) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-blue);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+$vert-sel: '.callout[data-callout*="vertical"], .callout[data-callout-metadata*="vertical"]';
 
-  .callout-title {
-    justify-content: center;
-    padding: 8px 12px;
-    text-overflow: hidden;
-    color: var(--background-primary);
-    background-color: var(--color-blue);
-    writing-mode: vertical-lr;
+body.flexcyon-vert-callouts .callout,
+#{$vert-sel} {
+  &:not(:is(#{$flexcyon-vert-exclusions})) {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    letter-spacing: 2px;
+    border: 1px solid var(--color-blue);
+    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
-    .callout-icon svg {
+    .callout-title {
+      justify-content: center;
+      padding: 8px 12px;
+      text-overflow: hidden;
       color: var(--background-primary);
-    }
-  }
+      background-color: var(--color-blue);
+      writing-mode: vertical-lr;
 
-  .callout-content {
-    padding: 4px 12px;
-    margin-inline-start: 12px;
+      .callout-icon svg {
+        color: var(--background-primary);
+      }
+    }
+
+    .callout-content {
+      padding: 4px 12px;
+      margin-inline-start: 12px;
+    }
   }
 }
 
 @mixin vert-wrapper($color) {
-  .callout[data-callout*="vert-#{$color}"]:not(
-      :is(#{$flexcyon-vert-exclusions})
-    ),
-  .callout[data-callout-metadata*="vert-#{$color}"]:not(
-      :is(#{$flexcyon-vert-exclusions})
-    ) {
+  $vert-col-sel: '.callout[data-callout*="vert-#{$color}"], .callout[data-callout-metadata*="vert-#{$color}"]';
+
+  #{$vert-col-sel}:not(:is(#{$flexcyon-vert-exclusions})) {
     display: flex;
     flex-direction: row;
     padding: 0;
