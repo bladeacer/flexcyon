@@ -36,13 +36,6 @@
     <img alt="Theme Logo" src="./docs/1280-x-640-social-preview.png">
 </div>
 
-<!-- <div align="center"> -->
-<!--     <img alt="Dark mode theme thumbnail" src="./docs/dark_thumb.webp"> -->
-<!-- </div> -->
-
-<!-- <div align="center"> -->
-<!--     <img alt="Light mode theme thumbnail" src="./docs/light_thumb.webp"> -->
-<!-- </div> -->
 
 ## About Flexcyon
 
@@ -57,26 +50,12 @@ There is also a light mode colour scheme combining
 [Origami theme's](https://github.com/7368697661/Origami) and Flexoki light's
 colour schemes.
 
-<!-- ## Screenshots -->
-
-<!-- <div align="center"> -->
-<!--     <img alt="Figure 1: ASCII Art, Dimmed File Extensions" src="./docs/showcase1.png" style="width: 47.5%;"> -->
-<!--     <img alt="Figure 2: Vim Status Mode, Coloured Headings, Hide Until Hover Status Bar" src="./docs/showcase2.png" style="width: 47.5%;"> -->
-<!-- </div> -->
-<!-- <div align="center"> -->
-<!--     <img alt="Figure 3: Dimmed Inactive Settings navigation, smiley and coloured icons" src="./docs/showcase3.png" style="width: 47.5%;"> -->
-<!--     <img alt="Figure 5: ASCII checkboxes" src="./docs/ascii_checkboxes1.png" style="width: 47.5%;"> -->
-<!-- </div> -->
-<!-- <div align="center"> -->
-<!--     <img alt="Figure 4: Light Mode with Powerlevel10k layout and status style" src="./docs/showcase4.png" style="width: 95%;"> -->
-<!-- </div> -->
-
 ## Installation via community store (recommended)
 
 To install this theme via the community store, navigate to `Settings > Appearance`
 
 1. Under `Themes`, click Manage
-2. `Type "Flexcyon in the search bar > Select it > Click "Install and Use"`
+2. `Type "Flexcyon" in the search bar > Select it > Click "Install and Use"`
 
 Installation of [Style Settings](#style-settings) is highly recommended for this
 theme, as most customisation and functionality is built around it.
@@ -102,7 +81,9 @@ added then.
 
 Beta or insider versions of Obsidian will not be officially supported, although
 the theme should (hopefully) not break too much.
-> If significant issues are found, do open an issue here. I (bladeacer) will try to troubleshoot them once the beta or insider version of Obsidian has a public equivalent.
+> If significant issues are found, do open an issue here. I (bladeacer) will try
+> to troubleshoot them once the beta or insider version of Obsidian has a public
+> equivalent.
 
 You can also find this in the documentation.
 
@@ -110,7 +91,7 @@ You can also find this in the documentation.
 
 Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.github.io/docs-en/).
 
-如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档。
+如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档.
 
 ## Design Principles
 
@@ -158,7 +139,7 @@ Refer to the documentation for the full set of features in Flexcyon.
 
 View [supported plugins and snippets here](https://flexcyon.github.io/docs-en/README/page-3/)
 
-For plugins/snippets that are not styled yet, feel free to open a Pull Request/ Feature Request/start a Discussion on it.
+For plugins/snippets that are not styled yet, feel free to open a Pull Request/Feature Request/start a Discussion on it.
 
 #### Snippet collection
 
@@ -177,26 +158,7 @@ Methods of communication are listed in order of preference.
 
 ## Contributing
 
-When contributing do open an issue at [the repository](https://github.com/bladeacer/flexcyon/issues) or [start a GitHub discussion](https://github.com/bladeacer/flexcyon/discussions) first.
-
-You can create your own fork before making a pull request.
-> Before doing this, do open an issue at this repository first.
-
-This repository comes with some scripts. The important ones include:
-
-- `npm run dev`: SCSS to CSS compiler, assumes you have
-[Sass](https://sass-lang.com/) (Dart, Node) installed
-- `npm run lint`: Lints the entire SCSS codebase. Reruns linting when a file
-write is detected in source files
-- `npm run lint-once`: As its namesake says, lints the codebase once
-- `npm run fix`: Equivalent to running `stylelint --fix`. Run this only after
-your file changes are saved.
-
-> You can use pnpm/bun equivalents and it should run the same way.
-
-If you prefer to use CSS instead of SCSS, place your proposed code changes or snippets in the `css/` folder. The maintainer will try to integrate them.
-
-Do note that this repository has its own [Code of Conduct](./CODE_OF_CONDUCT.md) and [Contributing Guide](./CONTRIBUTING.md).
+Refer to the [documentation on contributing](https://flexcyon.github.io/docs-en/contributing/).
 
 ## Style Settings
 
