@@ -91,8 +91,17 @@ body {
 }
 
 /* obsi-snip-coll start: tategaki */
-div.callout[data-callout*="tategaki"],
-div.callout[data-callout-metadata*="tategaki"] {
+$tategaki-sel: 'div.callout[data-callout*="tategaki"], div.callout[data-callout-metadata*="tategaki"]';
+
+@mixin tategaki-heading-helper($heading-no) {
+  #{$heading-no} {
+    margin-block-start: 0;
+    line-height: 1.61;
+    letter-spacing: var(--#{$heading_no}-size);
+  }
+}
+
+#{$tategaki-sel} {
   div.callout-content {
     max-inline-size: 95%;
     padding-block: 2vh 1vh;
@@ -104,42 +113,27 @@ div.callout[data-callout-metadata*="tategaki"] {
     letter-spacing: var(--font-ui-large);
     writing-mode: vertical-rl;
 
-    h1 {
-      letter-spacing: var(--h1-size);
-    }
-
-    h2 {
-      letter-spacing: var(--h2-size);
-    }
-
-    h3 {
-      letter-spacing: var(--h3-size);
-    }
-
-    h4 {
-      letter-spacing: var(--h4-size);
-    }
-
-    h5 {
-      letter-spacing: var(--h5-size);
-    }
-
-    h6 {
-      letter-spacing: var(--h6-size);
-    }
-
-    :is(h1, h2, h3, h4, h5, h6) {
-      margin-block-start: 0;
-      line-height: 1.61;
-    }
+    @include tategaki-heading-helper("h1");
+    @include tategaki-heading-helper("h2");
+    @include tategaki-heading-helper("h3");
+    @include tategaki-heading-helper("h4");
+    @include tategaki-heading-helper("h5");
+    @include tategaki-heading-helper("h6");
   }
 }
 
 /* obsi-snip-coll end */
 
 /* obsi-snip-coll start: vertical-ltr */
-div.callout[data-callout*="vert-ltr"],
-div.callout[data-callout-metadata*="vert-ltr"] {
+$vert-ltr-sel: 'div.callout[data-callout*="vert-ltr"], div.callout[data-callout-metadata*="vert-lr"]';
+
+@mixin vert-ltr-heading-helper($heading-no) {
+  #{$heading-no} {
+    min-block-size: auto !important;
+  }
+}
+
+#{$vert-ltr-sel} {
   div.callout-content {
     max-inline-size: 95%;
     min-block-size: max-content !important;
@@ -152,47 +146,28 @@ div.callout[data-callout-metadata*="vert-ltr"] {
     letter-spacing: var(--font-ui-large);
     writing-mode: vertical-lr;
 
-    h1 {
-      letter-spacing: var(--h1-size);
-    }
-
-    h2 {
-      letter-spacing: var(--h2-size);
-    }
-
-    h3 {
-      letter-spacing: var(--h3-size);
-    }
-
-    h4 {
-      letter-spacing: var(--h4-size);
-    }
-
-    h5 {
-      letter-spacing: var(--h5-size);
-    }
-
-    h6 {
-      letter-spacing: var(--h6-size);
-    }
-
-    :is(h1, h2, h3, h4, h5, h6) {
-      min-block-size: auto !important;
-      margin-block-start: 0;
-      line-height: 1.61;
-    }
+    @include tategaki-heading-helper("h1");
+    @include tategaki-heading-helper("h2");
+    @include tategaki-heading-helper("h3");
+    @include tategaki-heading-helper("h4");
+    @include tategaki-heading-helper("h5");
+    @include tategaki-heading-helper("h6");
+    @include vert-ltr-heading-helper("h1");
+    @include vert-ltr-heading-helper("h2");
+    @include vert-ltr-heading-helper("h3");
+    @include vert-ltr-heading-helper("h4");
+    @include vert-ltr-heading-helper("h5");
+    @include vert-ltr-heading-helper("h6");
   }
 }
 
 /* obsi-snip-coll end */
 
 /* obsi-snip-coll start: no-icon */
+#{$tategaki-sel},
+#{$vert-ltr-sel},
 div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
-div.callout[data-callout*="tategaki"],
-div.callout[data-callout-metadata*="tategaki"],
-div.callout[data-callout*="vert-ltr"],
-div.callout[data-callout-metadata*="vert-ltr"],
 div.callout[data-callout*="no-icon"],
 div.callout[data-callout-metadata*="no-icon"] {
   .callout-icon {
@@ -203,12 +178,10 @@ div.callout[data-callout-metadata*="no-icon"] {
 /* obsi-snip-coll end */
 
 /* obsi-snip-coll start: no-title */
-div.callout[data-callout-metadata*="tategaki"],
-div.callout[data-callout*="tategaki"],
+#{$tategaki-sel},
+#{$vert-ltr-sel},
 div.callout[data-callout-metadata*="empty"],
 div.callout[data-callout*="empty"],
-div.callout[data-callout-metadata*="vert-ltr"],
-div.callout[data-callout*="vert-ltr"],
 div.callout[data-callout*="no-title"],
 div.callout[data-callout-metadata*="no-title"] {
   .callout-title-inner,
@@ -380,6 +353,7 @@ div.callout[data-callout-metadata*="center-content"] {
 
 @include callout-text-transform(uppercase);
 @include callout-text-transform(lowercase);
+@include callout-text-transform(capitalize);
 @include callout-text-transform(caps);
 
 /* obsi-snip-coll end */
@@ -463,9 +437,10 @@ body.is-mobile {
   visibility: visible;
 }
 
+$pop-sel: '.callout[data-callout*="$pop"], .callout[data-callout-metadata*="$pop"]';
+
 .markdown-reading-view {
-  .callout[data-callout*="$pop"],
-  .callout[data-callout-metadata*="$pop"] {
+  #{$pop-sel} {
     position: absolute;
     z-index: 999;
     display: block;
@@ -480,35 +455,33 @@ body.is-mobile {
       margin-block-start: 2px;
       margin-inline-start: 24px;
     }
-  }
 
-  .callout[data-callout*="$pop"]:hover::before,
-  .callout[data-callout-metadata*="$pop"]:hover::before {
-    display: block;
-    border: none;
-    transition: hover var(--flexcyon-callout-pop-animation-duration) ease;
-  }
+    &:hover::before {
+      display: block;
+      border: none;
+      transition: hover var(--flexcyon-callout-pop-animation-duration) ease;
+    }
 
-  .callout[data-callout*="$pop"]::before,
-  .callout[data-callout-metadata*="$pop"]::before {
-    position: absolute;
-    z-index: 1;
-    display: block;
-    visibility: visible;
-    padding: 2px;
-    color: var(--callout-color);
-    content: ">";
-  }
+    &::before {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      visibility: visible;
+      padding: 2px;
+      color: var(--callout-color);
+      content: ">";
+    }
 
-  .callout[data-callout*="$pop"]:not(:hover),
-  .callout[data-callout-metadata*="$pop"]:not(:hover) {
-    visibility: hidden;
+    &:not(:hover) {
+      visibility: hidden;
+    }
   }
 }
 
 /* obsi-snip-coll start: tilt */
-div.callout[data-callout*="tilt-all"],
-div.callout[data-callout-metadata*="tilt-all"],
+$tilt-all-sel: 'div.callout[data-callout*="tilt-all"], div.callout[data-callout-metadata*="tilt-all"], ';
+
+#{$tilt-all-sel},
 div.callout[data-callout*="tilt-title"],
 div.callout[data-callout-metadata*="tilt-title"] {
   .callout-title {
@@ -516,8 +489,7 @@ div.callout[data-callout-metadata*="tilt-title"] {
   }
 }
 
-div.callout[data-callout*="tilt-all"],
-div.callout[data-callout-metadata*="tilt-all"],
+#{$tilt-all-sel},
 div.callout[data-callout*="tilt-content"],
 div.callout[data-callout-metadata*="tilt-content"] {
   .callout-content {
@@ -827,7 +799,8 @@ div.callout[data-callout-metadata*="center-img"] {
 }
 
 /* obsi-snip-coll start: lucide-icons */
-// Requires at least Obsidian 1.9.12
+
+/* Note: Requires at least Obsidian 1.9.12 */
 .callout[data-callout*="lucide"] {
   --callout-icon: attr(data-callout);
 }
@@ -842,81 +815,79 @@ div.callout[data-callout-metadata*="center-img"] {
 $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], [data-callout-metadata*='vertical'], [data-callout-metadata*='plain']";
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
 $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
+$tui-sel: '.callout[data-callout*="tui"], .callout[data-callout-metadata*="tui"], ';
 
-body.flexcyon-tui-no-icons
-  .callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
-body.flexcyon-tui-no-icons
-  .callout[data-callout-metadata*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
-body.flexcyon-tui-callouts.flexcyon-tui-no-icons
-  .callout:not(:is(#{$flexcyon-tui-exclusions})) {
-  .callout-icon {
-    display: none;
+body.flexcyon-tui-no-icons {
+  &.flexcyon-tui-callouts,
+  #{$tui-sel} {
+    &:not(:is(#{$flexcyon-tui-exclusions})) {
+      .callout-icon {
+        display: none;
+      }
+    }
   }
 }
 
-body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
-.callout[data-callout*="tui"]:not(:is(#{$flexcyon-tui-exclusions})),
-.callout[data-callout-metadata*="tui"]:not(:is(#{$flexcyon-tui-exclusions})) {
-  padding: 0;
-  margin: 0;
-  background-color: var(--background-primary);
-
-  --callout-color: var(--text-faint);
-
-  .callout-fold {
-    display: none;
-  }
-
-  .callout-title {
-    z-index: 2;
-    inline-size: max-content;
-    padding: 0 8px;
-    color: var(--text-faint);
+body.flexcyon-tui-callouts,
+body #{$tui-sel} {
+  &:not(:is(#{$flexcyon-tui-exclusions})) {
+    padding: 0;
+    margin: 0;
     background-color: var(--background-primary);
-    transform: translate(24px, 50%);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-size: inherit;
-      color: unset;
+    --callout-color: var(--text-faint);
+
+    .callout-fold {
+      display: none;
     }
 
-    div {
-      transform: translateY(-2px);
+    .callout-title {
+      z-index: 2;
+      inline-size: max-content;
+      padding: 0 8px;
+      color: var(--text-faint);
+      background-color: var(--background-primary);
+      transform: translate(24px, 50%);
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        color: unset;
+      }
+
+      div {
+        transform: translateY(-2px);
+      }
+
+      &:not(:has(~ .callout-content)) {
+        block-size: 40px;
+      }
     }
-  }
 
-  &.is-collapsed .callout-title {
-    min-block-size: 40px;
-  }
+    &.is-collapsed .callout-title {
+      min-block-size: 40px;
+    }
 
-  .callout-title:not(:has(~ .callout-content)) {
-    block-size: 40px;
-  }
-
-  .callout-content {
-    z-index: 1;
-    padding: 8px 16px;
-    border: 1px solid var(--text-faint);
-    border-radius: var(--flexcyon-callout-radix);
+    .callout-content {
+      z-index: 1;
+      padding: 8px 16px;
+      border: 1px solid var(--text-faint);
+      border-radius: var(--flexcyon-callout-radix);
+    }
   }
 }
 
 /* obsi-snip-coll end */
 
+$border-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
+
 @mixin border-wrapper($color) {
-  div.callout[data-callout*="border-#{$color}"]:is(
-      [data-callout*="tui"],
-      [data-callout-metadata*="tui"]
-    ),
-  div.callout[data-callout-metadata*="border-#{$color}"]:is(
-      [data-callout*="tui"],
-      [data-callout-metadata*="tui"]
-    ) {
+  div.callout[data-callout*="border-#{$color}"]:is(#{$border-sel}),
+  div.callout[data-callout-metadata*="border-#{$color}"]:is(#{$border-sel}) {
     .callout-title {
       color: var(--color-#{$color});
     }
@@ -928,14 +899,8 @@ body.flexcyon-tui-callouts .callout:not(:is(#{$flexcyon-tui-exclusions})),
       border-radius: var(--flexcyon-callout-radix);
     }
   }
-  div.callout[data-callout*="border-#{$color}"]:not(
-      [data-callout*="tui"],
-      [data-callout-metadata*="tui"]
-    ),
-  div.callout[data-callout-metadata*="border-#{$color}"]:not(
-      [data-callout*="tui"],
-      [data-callout-metadata*="tui"]
-    ) {
+  div.callout[data-callout*="border-#{$color}"]:not(#{$border-sel}),
+  div.callout[data-callout-metadata*="border-#{$color}"]:not(#{$border-sel}) {
     z-index: 1;
     padding: 8px 16px;
     border: 1px solid var(--color-#{$color});
