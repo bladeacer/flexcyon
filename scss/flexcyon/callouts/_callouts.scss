@@ -957,6 +957,7 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout*="pln"]:not(:is(#{$flexcyon-plain-exclusions})),
 .callout[data-callout-metadata*="pln"]:not(:is(#{$flexcyon-plain-exclusions})) {
   padding: 0;
+  background-color: var(--background-primary);
   border: 1px solid var(--color-blue);
   border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
@@ -972,7 +973,6 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 
   .callout-content {
     padding: 4px 12px;
-    background-color: var(--background-primary);
   }
 }
 
@@ -984,6 +984,7 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
       :is(#{$flexcyon-plain-exclusions})
     ) {
     padding: 0;
+    background-color: var(--background-primary);
     border: 1px solid var(--color-#{$color});
     border-radius: calc(0.5 * var(--flexcyon-callout-radix));
 
@@ -999,7 +1000,6 @@ body.flexcyon-plain-callouts .callout:not(:is(#{$flexcyon-plain-exclusions})),
 
     .callout-content {
       padding: 4px 12px;
-      background-color: var(--background-primary);
     }
   }
 }
