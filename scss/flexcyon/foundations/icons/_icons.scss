@@ -179,18 +179,6 @@ body.flexcyon-settings-coloured-icons {
   .setting-restore-hotkey-button {
     color: oklch(from var(--color-purple) l c h / 90%);
   }
-
-  // TODO: Decouple this from aria-label
-
-  // [aria-label^="Open snippets folder"],
-  // [aria-label^="Open plugins folder"] {
-  //   color: rgb(var(--color-green-rgb), 0.9);
-  // }
-
-  // [aria-label^="Reload plugins"],
-  // [aria-label^="Reload snippets"] {
-  //   color: rgb(var(--color-cyan-rgb), 0.9);
-  // }
 }
 
 body.is-mobile .vertical-tab-content {
@@ -207,7 +195,6 @@ body.flexcyon-workspace-angled-layout {
   }
 }
 
-// can pass selectors as string
 @mixin ascii-icon-sel-after-wrapper($selector, $content) {
   #{$selector} {
     &::after {
@@ -383,47 +370,35 @@ body.flexcyon-prevent-accidental-unpin {
   }
 }
 
-body.flexcyon-stylised-pins
-  :is(.mod-left-split, .mod-right-split)
-  .workspace-tab-header-container-inner {
-  .workspace-tab-header-inner-icon
-    + div
-    + div.workspace-tab-header-status-container {
+$workspace-inner-sel: ":is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner";
+$workspace-status-sel: ".workspace-tab-header-inner-icon + div + div.workspace-tab-header-status-container";
+$workspace-status-pin-sel: ".workspace-tab-header-inner-icon:has(+ div + div.workspace-tab-header-status-container > .mod-pinned)";
+
+body.flexcyon-stylised-pins #{$workspace-inner-sel} {
+  #{$workspace-status-sel} {
     inline-size: 0;
-  }
 
-  .workspace-tab-header-inner-icon
-    + div
-    + div.workspace-tab-header-status-container
     .mod-pinned {
-    --icon-size: var(--icon-xs);
+      --icon-size: var(--icon-xs);
 
-    color: var(--color-accent-2);
-    transform: translate(-3px, -9px);
+      color: var(--color-accent-2);
+      transform: translate(-3px, -9px);
+    }
   }
 
-  .workspace-tab-header-inner-icon:has(
-    + div + div.workspace-tab-header-status-container .mod-pinned
-  ) {
+  #{$workspace-status-pin-sel} {
     padding-inline-start: 4px;
     margin-block-start: 4px;
     transform: translateX(-2px);
   }
 }
 
-body.flexcyon-stylised-pins.flexcyon-vertical-nav
-  :is(.mod-left-split, .mod-right-split)
-  .workspace-tab-header-container-inner {
-  .workspace-tab-header-inner-icon:has(
-    + div + div.workspace-tab-header-status-container > .mod-pinned
-  ) {
+body.flexcyon-stylised-pins.flexcyon-vertical-nav #{$workspace-inner-sel} {
+  #{$workspace-status-pin-sel} {
     transform: translateY(8px);
   }
 
-  .workspace-tab-header-inner-icon
-    + div
-    + div.workspace-tab-header-status-container
-    .mod-pinned {
+  #{$workspace-status-sel} .mod-pinned {
     --icon-size: var(--icon-xs);
 
     color: var(--color-accent-2);
@@ -439,10 +414,7 @@ body.flexcyon-reverse-tab-header-content .workspace-tab-header-inner {
   flex-direction: row-reverse;
 }
 
-body
-  :is(.mod-left-split, .mod-right-split)
-  .workspace-tab-header-container
-  .workspace-tab-header-container-inner {
+body #{$workspace-inner-sel} {
   gap: 1px;
   padding: unset;
   margin: unset;

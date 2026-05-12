@@ -3241,7 +3241,7 @@ body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-ta
   color: var(--color-accent-2);
   transform: translate(-3px, -9px);
 }
-body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon:has(+ div + div.workspace-tab-header-status-container .mod-pinned) {
+body.flexcyon-stylised-pins :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner .workspace-tab-header-inner-icon:has(+ div + div.workspace-tab-header-status-container > .mod-pinned) {
   padding-inline-start: 4px;
   margin-block-start: 4px;
   transform: translateX(-2px);
@@ -3264,7 +3264,7 @@ body.flexcyon-reverse-tab-header-content .workspace-tab-header-inner {
   flex-direction: row-reverse;
 }
 
-body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container .workspace-tab-header-container-inner {
+body :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
   gap: 1px;
   padding: unset;
   margin: unset;
