@@ -78,16 +78,48 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("@", var(--color-blue));
   @include flexcyon-ascii-checkbox("%", var(--color-pink));
   @include flexcyon-ascii-checkbox("+", var(--color-green));
-  @include flexcyon-ascii-checkbox("-", var(--color-yellow));
-  @include flexcyon-ascii-checkbox("/", var(--color-orange));
+
+  // @include flexcyon-ascii-checkbox("-", var(--color-yellow));
+  // @include flexcyon-ascii-checkbox("/", var(--color-orange));
+
+  $cancel-sel: 'input[data-task="-"]:checked, li[data-task="-"] > input:checked, li[data-task="-"] > p > input:checked';
+
+  #{$cancel-sel} {
+    padding-inline-end: 4px;
+    background-color: inherit;
+    border: 2px solid var(--color-red);
+    border-radius: 50%;
+
+    &::after {
+      inset-block-start: -0.3rem;
+      margin-inline-start: -7.5%;
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.15rem);
+      font-weight: 900;
+      color: var(--color-red);
+      text-align: center;
+      letter-spacing: -3px;
+      content: "-----";
+      background-color: inherit;
+      mask-image: none;
+      transform: rotate(45deg);
+    }
+  }
+
+  $slash-sel: 'input[data-task="/"]:checked, li[data-task="/"] > input:checked, li[data-task="/"] > p > input:checked';
+
+  #{$slash-sel} {
+    padding-inline-end: 4px;
+    background-color: inherit;
+    border: 1px dashed var(--color-orange);
+  }
+
   @include flexcyon-ascii-checkbox("~", var(--color-red));
 
-  input[data-task="?"]:checked::after,
-  li[data-task="?"] > input:checked::after,
-  li[data-task="?"] > p > input:checked::after,
-  input[data-task="!"]:checked::after,
-  li[data-task="!"] > input:checked::after,
-  li[data-task="!"] > p > input:checked::after {
+  $question-sel: 'input[data-task="?"]:checked::after, li[data-task="?"] > input:checked::after, li[data-task="?"] > p > input:checked::after';
+  $exclaim-sel: 'input[data-task="!"]:checked::after, li[data-task="!"] > input:checked::after, li[data-task="!"] > p > input:checked::after';
+
+  #{$question-sel},
+  #{$exclaim-sel} {
     inset-block-start: -0.15em;
   }
 
@@ -112,9 +144,6 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="S"]:checked::after,
   li[data-task="S"] > input:checked::after,
   li[data-task="S"] > p > input:checked::after,
-  input[data-task="/"]:checked::after,
-  li[data-task="/"] > input:checked::after,
-  li[data-task="/"] > p > input:checked::after,
   input[data-task="<"]:checked::after,
   li[data-task="<"] > input:checked::after,
   li[data-task="<"] > p > input:checked::after,
@@ -162,16 +191,6 @@ body.flexcyon-ascii-checkboxes-enabled {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   }
 
-  input[data-task="-"]:checked::after,
-  li[data-task="-"] > input:checked::after,
-  li[data-task="-"] > p > input:checked::after {
-    inset-block-start: -0.3rem;
-    margin-inline-start: -7.5%;
-    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
-    letter-spacing: var(--less-letter-spacing);
-    content: "--";
-  }
-
   input[data-task='"']:checked,
   li[data-task='"'] > input:checked,
   li[data-task='"'] > p > input:checked {
@@ -195,21 +214,20 @@ body.flexcyon-ascii-checkboxes-enabled {
   li[data-task="i"] > p > input:checked {
     padding-inline-end: 4px;
     background-color: inherit;
-    border: none;
+    border: 2px solid var(--color-cyan);
+    border-radius: 50%;
 
     &::after {
-      inset-block-start: -0.075rem;
-      padding-block-start: 10%;
-      margin-inline-start: -1px;
-      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
+      inset-block-start: 0.01rem;
+      margin-block-start: 1px;
+      margin-inline-start: -7.5%;
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
       font-weight: 900;
       line-height: 1;
       color: var(--color-cyan);
       text-align: center;
       content: "i";
       background-color: inherit;
-      border: 1.5px solid var(--color-blue);
-      border-radius: 50%;
       mask-image: none;
       scale: var(--upsize);
     }

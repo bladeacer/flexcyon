@@ -93,15 +93,13 @@ $callout-sel: '.callout[data-callout-metadata*="col"], .callout[data-callout*="m
 @include gap-wrapper("md", 0.75rem);
 @include gap-wrapper("lg", 2rem);
 
-/* TODO: Fix aside rendering in live preview, if possible */
+/* [!aside] — float right alongside body text, place above paragraph where aside callout contents will render beside, only works in reading mode. */
 
-/* [!aside] — float right alongside body text */
+$aside-sel: '.callout[data-callout*="aside"], .callout[data-callout-metadata*="aside"]';
 
-.callout[data-callout*="aside"] {
+.markdown-reading-view #{$aside-sel} {
   float: inline-end;
   clear: inline-end;
-
-  /* TODO: Make this adaptive */
   inline-size: 38%;
   margin: 0 0 1rem 1.5rem;
 }
@@ -119,7 +117,7 @@ body .workspace-leaf.mod-active {
 
 /* mobile: revert to block */
 
-.is-mobile .callout[data-callout="aside"] {
+.is-mobile .markdown-reading-view #{$aside-sel} {
   float: none;
   inline-size: 100%;
   margin: 0 0 1rem;

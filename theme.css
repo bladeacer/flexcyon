@@ -2036,71 +2036,38 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked::af
   background-color: inherit;
   mask-image: none;
 }
-body.flexcyon-flex-max-mode input[data-task="-"]:checked,
-body.flexcyon-flex-max-mode li[data-task="-"] > input:checked,
-body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked,
+body.flexcyon-flex-max-mode input[data-task="-"]:checked, body.flexcyon-flex-max-mode li[data-task="-"] > input:checked, body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
   padding-inline-end: 4px;
   background-color: inherit;
-  border: none;
+  border: 2px solid var(--color-red);
+  border-radius: 50%;
 }
-body.flexcyon-flex-max-mode input[data-task="-"]:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="-"] > input:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked:hover {
-  filter: brightness(1.25);
-}
-body.flexcyon-flex-max-mode input[data-task="-"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="-"]:checked::after, body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after, body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
-  inset-block-start: -0.325em;
-  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  inset-block-start: -0.3rem;
+  margin-inline-start: -7.5%;
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.15rem);
   font-weight: 900;
-  color: var(--color-yellow);
+  color: var(--color-red);
   text-align: center;
-  content: "-";
+  letter-spacing: -3px;
+  content: "-----";
   background-color: inherit;
   mask-image: none;
+  transform: rotate(45deg);
 }
-body.flexcyon-flex-max-mode input[data-task="/"]:checked,
-body.flexcyon-flex-max-mode li[data-task="/"] > input:checked,
-body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked,
+body.flexcyon-flex-max-mode input[data-task="/"]:checked, body.flexcyon-flex-max-mode li[data-task="/"] > input:checked, body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked {
   padding-inline-end: 4px;
   background-color: inherit;
-  border: none;
-}
-body.flexcyon-flex-max-mode input[data-task="/"]:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="/"] > input:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked:hover {
-  filter: brightness(1.25);
-}
-body.flexcyon-flex-max-mode input[data-task="/"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="/"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked::after {
-  inset-block-start: -0.325em;
-  font-size: var(--flexcyon-ascii-checkboxes-font-size);
-  font-weight: 900;
-  color: var(--color-orange);
-  text-align: center;
-  content: "/";
-  background-color: inherit;
-  mask-image: none;
+  border: 1px dashed var(--color-orange);
 }
 body.flexcyon-flex-max-mode input[data-task="~"]:checked,
 body.flexcyon-flex-max-mode li[data-task="~"] > input:checked,
@@ -2135,12 +2102,8 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="~"] > p > input:checked::af
   background-color: inherit;
   mask-image: none;
 }
-body.flexcyon-flex-max-mode input[data-task="?"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="?"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked::after,
-body.flexcyon-flex-max-mode input[data-task="!"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="!"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="?"]:checked::after, body.flexcyon-flex-max-mode li[data-task="?"] > input:checked::after, body.flexcyon-flex-max-mode li[data-task="?"] > p > input:checked::after,
+body.flexcyon-flex-max-mode input[data-task="!"]:checked::after, body.flexcyon-flex-max-mode li[data-task="!"] > input:checked::after, body.flexcyon-flex-max-mode li[data-task="!"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="?"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="?"] > p > input:checked::after,
@@ -2174,9 +2137,6 @@ body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked::after,
 body.flexcyon-flex-max-mode input[data-task=S]:checked::after,
 body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after,
 body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
-body.flexcyon-flex-max-mode input[data-task="/"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="/"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked::after,
 body.flexcyon-flex-max-mode input[data-task="<"]:checked::after,
 body.flexcyon-flex-max-mode li[data-task="<"] > input:checked::after,
 body.flexcyon-flex-max-mode li[data-task="<"] > p > input:checked::after,
@@ -2189,9 +2149,6 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::af
 body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="/"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="<"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="<"] > p > input:checked::after,
@@ -2248,18 +2205,6 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked::af
   inset-block-start: -0.1rem;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
 }
-body.flexcyon-flex-max-mode input[data-task="-"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
-  inset-block-start: -0.3rem;
-  margin-inline-start: -7.5%;
-  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.2rem);
-  letter-spacing: var(--less-letter-spacing);
-  content: "--";
-}
 body.flexcyon-flex-max-mode input[data-task='"']:checked,
 body.flexcyon-flex-max-mode li[data-task='"'] > input:checked,
 body.flexcyon-flex-max-mode li[data-task='"'] > p > input:checked,
@@ -2292,7 +2237,8 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked {
   padding-inline-end: 4px;
   background-color: inherit;
-  border: none;
+  border: 2px solid var(--color-cyan);
+  border-radius: 50%;
 }
 body.flexcyon-flex-max-mode input[data-task=i]:checked::after,
 body.flexcyon-flex-max-mode li[data-task=i] > input:checked::after,
@@ -2300,18 +2246,16 @@ body.flexcyon-flex-max-mode li[data-task=i] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
-  inset-block-start: -0.075rem;
-  padding-block-start: 10%;
-  margin-inline-start: -1px;
-  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.425rem);
+  inset-block-start: 0.01rem;
+  margin-block-start: 1px;
+  margin-inline-start: -7.5%;
+  font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
   font-weight: 900;
   line-height: 1;
   color: var(--color-cyan);
   text-align: center;
   content: "i";
   background-color: inherit;
-  border: 1.5px solid var(--color-blue);
-  border-radius: 50%;
   mask-image: none;
   scale: var(--upsize);
 }
@@ -17009,12 +16953,10 @@ body {
   gap: 2rem;
 }
 
-/* TODO: Fix aside rendering in live preview, if possible */
-/* [!aside] — float right alongside body text */
-.callout[data-callout*=aside] {
+/* [!aside] — float right alongside body text, place above paragraph where aside callout contents will render beside, only works in reading mode. */
+.markdown-reading-view .callout[data-callout*=aside], .callout[data-callout-metadata*=aside] {
   float: inline-end;
   clear: inline-end;
-  /* TODO: Make this adaptive */
   inline-size: 38%;
   margin: 0 0 1rem 1.5rem;
 }
@@ -17028,7 +16970,7 @@ body .workspace-leaf.mod-active .cm-content::after {
 }
 
 /* mobile: revert to block */
-.is-mobile .callout[data-callout=aside] {
+.is-mobile .markdown-reading-view .callout[data-callout*=aside], .callout[data-callout-metadata*=aside] {
   float: none;
   inline-size: 100%;
   margin: 0 0 1rem;
