@@ -1,32 +1,36 @@
+$gutter-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='markdown']";
+
 body {
   --flexcyon-repl-active-line-str: "->";
   --flexcyon-repl-active-str-space: 0px;
   --flexcyon-highlight-active-line-opacity: 7.5%;
   --flexcyon-typewriter-mode-opacity: 0.55;
 
-  .cm-gutterElement.cm-active {
-    font-size: var(--font-ui-medium);
-    font-weight: 900;
-    color: var(--text-accent);
-  }
+  #{$gutter-sel} {
+    .cm-gutterElement {
+      &.cm-active {
+        font-size: var(--font-ui-medium);
+        font-weight: 900;
+        color: var(--text-accent);
+      }
 
-  .cm-gutterElement[style*="height: 0px"]:not([style*="visibility: hidden"])
-    + .cm-gutterElement {
-    background-color: var(--background-primary);
+      &[style*="height: 0px"]:not([style*="visibility: hidden"])
+        + .cm-gutterElement {
+        background-color: var(--background-primary);
 
-    &::before {
-      content: "'";
+        &::before {
+          content: "'";
+        }
+      }
     }
   }
 }
 
-body:not(.is-mobile) .cm-lineNumbers .cm-active,
-body:not(.is-mobile) .cm-lineNumbers *::before {
-  font-size: calc(var(--font-ui-small) + 0.01rem);
-}
-
-body:not(.is-mobile) .cm-lineNumbers .cm-active {
-  padding-inline-end: 4px;
+body:not(.is-mobile) {
+  #{$gutter-sel} .cm-lineNumbers > .cm-gutterElement {
+    padding-inline-end: 4px;
+    font-size: calc(var(--font-ui-small) + 0.01rem);
+  }
 }
 
 @mixin hide-preceding-lines($lines-to-hide) {
@@ -42,14 +46,20 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
       }
     }
 
-    .cm-lineNumbers .cm-active #{$sibling-selector},
-    .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active) {
-      font-size: 0;
+    #{$gutter-sel} {
+      .cm-lineNumbers {
+        & > .cm-active #{$sibling-selector},
+        & > .cm-gutterElement:has(#{$sibling-selector-1} .cm-active) {
+          font-size: 0;
+        }
+      }
     }
   }
 
-  .cm-lineNumbers *:has(+ .cm-active) {
-    font-size: 0;
+  #{$gutter-sel} {
+    .cm-lineNumbers > .cm-gutterElement:has(+ .cm-active) {
+      font-size: 0;
+    }
   }
 }
 
@@ -61,10 +71,12 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
     $sibling-selector: $sibling-selector + " + *";
 
     @if $j != $lines-to-hide {
-      .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-        --flexcyon-rel-bel-#{$j + 1}: "#{$j + 1}";
+      #{$gutter-sel} {
+        .cm-lineNumbers > .cm-active #{$sibling-selector}::before {
+          --flexcyon-rel-bel-#{$j + 1}: "#{$j + 1}";
 
-        content: var(--flexcyon-rel-bel-#{$j + 1});
+          content: var(--flexcyon-rel-bel-#{$j + 1});
+        }
       }
     }
 
@@ -72,10 +84,13 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
       $sibling-selector-1: $sibling-selector-1 + "* +";
     }
 
-    .cm-lineNumbers *:has(#{$sibling-selector-1} .cm-active)::before {
-      --flexcyon-rel-abv-#{$j}: "#{$j}";
+    #{$gutter-sel} {
+      .cm-lineNumbers
+        > .cm-gutterElement:has(#{$sibling-selector-1} .cm-active)::before {
+        --flexcyon-rel-abv-#{$j}: "#{$j}";
 
-      content: var(--flexcyon-rel-abv-#{$j});
+        content: var(--flexcyon-rel-abv-#{$j});
+      }
     }
   }
 }
@@ -88,13 +103,20 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
       $sibling-selector: $sibling-selector + "* +";
     }
   }
-  .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
-    --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+
+  #{$gutter-sel} {
+    .cm-lineNumbers
+      > .cm-gutterElement:has(#{$sibling-selector} .cm-active)::before {
+      --flexcyon-rel-abv-#{$line-no}: "#{$content}";
+    }
   }
 
   @if $mod-font-size != 0 {
-    .cm-lineNumbers *:has(#{$sibling-selector} .cm-active)::before {
-      font-size: #{$mod-font-size}rem;
+    #{$gutter-sel} {
+      .cm-lineNumbers
+        > .cm-gutterElement:has(#{$sibling-selector} .cm-active)::before {
+        font-size: #{$mod-font-size}rem;
+      }
     }
   }
 }
@@ -106,13 +128,17 @@ body:not(.is-mobile) .cm-lineNumbers .cm-active {
     $sibling-selector: $sibling-selector + " + *";
   }
 
-  .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-    --flexcyon-rel-bel-#{$line-no}: "#{$content}";
+  #{$gutter-sel} {
+    .cm-lineNumbers > .cm-active #{$sibling-selector}::before {
+      --flexcyon-rel-bel-#{$line-no}: "#{$content}";
+    }
   }
 
   @if $mod-font-size != 0 {
-    .cm-lineNumbers .cm-active #{$sibling-selector}::before {
-      font-size: #{$mod-font-size}rem;
+    #{$gutter-sel} {
+      .cm-lineNumbers > .cm-active #{$sibling-selector}::before {
+        font-size: #{$mod-font-size}rem;
+      }
     }
   }
 }
@@ -124,8 +150,10 @@ body.flexcyon-enable-rel-nums.flexcyon-no-num-with-relative:not(.is-mobile) {
 
 // Do not display other lines which are not relative line numbers
 body.flexcyon-enable-rel-nums.flexcyon-relative-num-only:not(.is-mobile) {
-  .cm-lineNumbers .cm-gutterElement:not(.cm-active) {
-    font-size: 0;
+  #{$gutter-sel} {
+    .cm-lineNumbers > .cm-gutterElement:not(.cm-active) {
+      font-size: 0;
+    }
   }
 }
 
@@ -207,33 +235,39 @@ body.flexcyon-enable-rel-nums.flexcyon-chinese-rel-nums:not(.is-mobile) {
 }
 
 body.flexcyon-repl-active-line-num-str {
-  .cm-gutterElement.cm-active {
-    font-size: 0;
+  #{$gutter-sel} {
+    .cm-gutterElement.cm-active {
+      font-size: 0;
 
-    &::before {
-      font-size: calc(var(--font-ui-medium) + 0.07rem);
-      letter-spacing: var(--flexcyon-repl-active-str-space);
-      content: var(--flexcyon-repl-active-line-str);
+      &::before {
+        font-size: calc(var(--font-ui-medium) + 0.07rem);
+        letter-spacing: var(--flexcyon-repl-active-str-space);
+        content: var(--flexcyon-repl-active-line-str);
+      }
     }
   }
 }
 
 body.flexcyon-highlight-active-line {
-  .cm-active.cm-line,
-  .cm-active > span.cm-quote {
-    background-color: color-mix(
-      in oklch,
-      var(--text-accent) var(--flexcyon-highlight-active-line-opacity),
-      transparent
-    );
+  #{$gutter-sel} {
+    .cm-active.cm-line,
+    .cm-active > span.cm-quote {
+      background-color: color-mix(
+        in oklch,
+        var(--text-accent) var(--flexcyon-highlight-active-line-opacity),
+        transparent
+      );
+    }
   }
 }
 
 /* obsi-snip-coll start: typewriter-mode */
 .typewriter-mode,
 body.flexcyon-typewriter-mode {
-  .cm-line:not(.cm-active, .HyperMD-codeblock) {
-    opacity: var(--flexcyon-typewriter-mode-opacity);
+  #{$gutter-sel} {
+    .cm-line:not(.cm-active, .HyperMD-codeblock) {
+      opacity: var(--flexcyon-typewriter-mode-opacity);
+    }
   }
 }
 
