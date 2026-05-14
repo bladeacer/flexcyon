@@ -3,6 +3,7 @@
   "version": "1.4.0",
   "minAppVersion": "1.6.3",
   "author": "bladeacer",
+  "authorUrl": "https://bladeacer.gitlab.io/portfolio",
   "screenshot": "./docs/512-x-288-logo.png",
   "modes": ["light", "dark"],
   "fundingUrl": "https://github.com/sponsors/bladeacer"

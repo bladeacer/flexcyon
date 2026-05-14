@@ -73,7 +73,6 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox(".", var(--color-yellow));
   @include flexcyon-ascii-checkbox("<", var(--color-orange));
   @include flexcyon-ascii-checkbox("S", var(--color-red));
-  @include flexcyon-ascii-checkbox("*", var(--color-purple));
   @include flexcyon-ascii-checkbox("'", var(--color-cyan));
   @include flexcyon-ascii-checkbox("@", var(--color-blue));
   @include flexcyon-ascii-checkbox("%", var(--color-pink));
@@ -93,7 +92,7 @@ body.flexcyon-ascii-checkboxes-enabled {
     &::after {
       inset-block-start: -0.3rem;
       margin-inline-start: -7.5%;
-      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.15rem);
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
       font-weight: 900;
       color: var(--color-red);
       text-align: center;
@@ -117,41 +116,60 @@ body.flexcyon-ascii-checkboxes-enabled {
 
   $question-sel: 'input[data-task="?"]:checked::after, li[data-task="?"] > input:checked::after, li[data-task="?"] > p > input:checked::after';
   $exclaim-sel: 'input[data-task="!"]:checked::after, li[data-task="!"] > input:checked::after, li[data-task="!"] > p > input:checked::after';
+  $single-quote-sel: 'input[data-task="\'"]:checked::after, li[data-task="\'"] > input:checked::after, li[data-task="\'"] > p > input:checked::after';
+  $dollar-sel: 'input[data-task="S"]:checked::after, li[data-task="S"] > input:checked::after, li[data-task="S"] > p > input:checked::after';
+  $tag-sel: 'input[data-task="#"]:checked::after, li[data-task="#"] > input:checked::after, li[data-task="#"] > p > input:checked::after';
+  $forward-sel: 'input[data-task=">"]:checked::after, li[data-task=">"] > input:checked::after, li[data-task=">"] > p > input:checked::after';
+  $schedule-sel: 'input[data-task="<"]:checked::after, li[data-task="<"] > input:checked::after, li[data-task="<"] > p > input:checked::after';
+  $asterisk-sel: 'input[data-task="a"]:checked, li[data-task="a"] > input:checked, li[data-task="a"] > p > input:checked';
+  $double-quote-sel: 'input[data-task='\"']:checked, li[data-task='\"'] > input:checked, li[data-task='\"'] > p > input:checked';
 
   #{$question-sel},
   #{$exclaim-sel} {
     inset-block-start: -0.15em;
   }
 
-  input[data-task="'"]:checked::after,
-  li[data-task="'"] > input:checked::after,
-  li[data-task="'"] > p > input:checked::after {
+  #{$single-quote-sel} {
     inset-block-start: -0.175rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
     content: "‘";
   }
 
-  input[data-task="S"]:checked::after,
-  li[data-task="S"] > input:checked::after,
-  li[data-task="S"] > p > input:checked::after {
+  #{$dollar-sel} {
     inset-block-start: 12em;
+    font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
     content: "$";
   }
 
-  input[data-task="#"]:checked::after,
-  li[data-task="#"] > input:checked::after,
-  li[data-task="#"] > p > input:checked::after,
-  input[data-task="S"]:checked::after,
-  li[data-task="S"] > input:checked::after,
-  li[data-task="S"] > p > input:checked::after,
-  input[data-task="<"]:checked::after,
-  li[data-task="<"] > input:checked::after,
-  li[data-task="<"] > p > input:checked::after,
-  input[data-task=">"]:checked::after,
-  li[data-task=">"] > input:checked::after,
-  li[data-task=">"] > p > input:checked::after {
+  #{$dollar-sel},
+  #{$tag-sel} {
     inset-block-start: -0.175rem;
-    transform: scaleY(1.1);
+  }
+
+  #{$forward-sel},
+  #{$schedule-sel} {
+    inset-block-start: -0.1rem;
+  }
+
+  #{$asterisk-sel} {
+    padding-inline-end: 4px;
+    background-color: inherit;
+    border: none;
+
+    &:hover {
+      filter: brightness(1.25);
+    }
+
+    &::after {
+      inset-block-start: -0.1em;
+      font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.75rem);
+      font-weight: 900;
+      color: var(--color-purple);
+      text-align: center;
+      content: "*";
+      background-color: inherit;
+      mask-image: none;
+    }
   }
 
   input[data-task="."]:checked::after,
@@ -173,14 +191,14 @@ body.flexcyon-ascii-checkboxes-enabled {
   input[data-task="@"]:checked::after,
   li[data-task="@"] > input:checked::after,
   li[data-task="@"] > p > input:checked::after {
-    inset-block-start: -0.125rem;
+    inset-block-start: -0.2rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
   }
 
   input[data-task="%"]:checked::after,
   li[data-task="%"] > input:checked::after,
   li[data-task="%"] > p > input:checked::after {
-    inset-block-start: -0.05rem;
+    inset-block-start: 0.05rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
   }
 
@@ -191,9 +209,7 @@ body.flexcyon-ascii-checkboxes-enabled {
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.05rem);
   }
 
-  input[data-task='"']:checked,
-  li[data-task='"'] > input:checked,
-  li[data-task='"'] > p > input:checked {
+  #{$double-quote-sel} {
     padding-inline-end: 4px;
     background-color: inherit;
     border: none;
@@ -219,11 +235,9 @@ body.flexcyon-ascii-checkboxes-enabled {
 
     &::after {
       inset-block-start: 0.01rem;
-      margin-block-start: 1px;
       margin-inline-start: -7.5%;
       font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
       font-weight: 900;
-      line-height: 1;
       color: var(--color-cyan);
       text-align: center;
       content: "i";
@@ -268,6 +282,13 @@ body.flexcyon-clip-path-checkboxes-enabled {
       39% 35%
     )
   );
+
+  $star-sel: 'input[data-task="s"]:checked, li[data-task="s"] > input:checked, li[data-task="s"] > p > input:checked';
+
+  #{$star-sel} {
+    scale: 1.25;
+  }
+
   @include flexcyon-clip-path-checkbox("c", var(--color-cyan), circle());
   @include flexcyon-clip-path-checkbox(
     "h",
@@ -275,7 +296,7 @@ body.flexcyon-clip-path-checkboxes-enabled {
     polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
   );
   @include flexcyon-clip-path-checkbox(
-    "m",
+    "M",
     var(--color-pink),
     polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)
   );
@@ -286,7 +307,7 @@ body.flexcyon-clip-path-checkboxes-enabled {
   );
   @include flexcyon-clip-path-checkbox("r", var(--color-yellow), rect());
   @include flexcyon-clip-path-checkbox(
-    "d",
+    "D",
     var(--color-orange),
     polygon(25% 0%, 75% 0%, 100% 25%, 50% 90%, 0% 25%)
   );
