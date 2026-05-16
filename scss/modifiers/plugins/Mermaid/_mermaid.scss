@@ -2,7 +2,7 @@ body {
   --font-mermaid: var(--font-monospace);
 }
 
-$mermaid-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='markdown']";
+$mermaid-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='markdown'], .slides-container";
 
 body.theme-dark .mermaid > svg {
   filter: invert(100%) hue-rotate(180deg);
@@ -107,6 +107,10 @@ body.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
           fill: var(--background-secondary) !important;
           fill-opacity: calc(var(--dimmed) - 0.25) !important;
           stroke: var(--text-faint) !important;
+        }
+
+        .node circle {
+          fill: var(--background-secondary) !important;
         }
       }
     }

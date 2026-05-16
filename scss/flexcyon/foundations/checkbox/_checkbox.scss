@@ -78,9 +78,6 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("%", var(--color-pink));
   @include flexcyon-ascii-checkbox("+", var(--color-green));
 
-  // @include flexcyon-ascii-checkbox("-", var(--color-yellow));
-  // @include flexcyon-ascii-checkbox("/", var(--color-orange));
-
   $cancel-sel: 'input[data-task="-"]:checked, li[data-task="-"] > input:checked, li[data-task="-"] > p > input:checked';
 
   #{$cancel-sel} {
@@ -267,7 +264,7 @@ body.flexcyon-ascii-checkboxes-enabled {
 body.flexcyon-flex-max-mode,
 body.flexcyon-clip-path-checkboxes-enabled {
   @include flexcyon-clip-path-checkbox(
-    "s",
+    "*",
     var(--color-purple),
     polygon(
       50% 0%,
@@ -283,13 +280,23 @@ body.flexcyon-clip-path-checkboxes-enabled {
     )
   );
 
-  $star-sel: 'input[data-task="s"]:checked, li[data-task="s"] > input:checked, li[data-task="s"] > p > input:checked';
+  $star-sel: 'input[data-task="*"]:checked, li[data-task="*"] > input:checked, li[data-task="*"] > p > input:checked';
 
   #{$star-sel} {
     scale: 1.25;
   }
 
-  @include flexcyon-clip-path-checkbox("c", var(--color-cyan), circle());
+  @include flexcyon-clip-path-checkbox(
+    "b",
+    var(--text-accent),
+    polygon(15% 0%, 85% 0%, 85% 100%, 50% 70%, 15% 100%)
+  );
+  @include flexcyon-clip-path-checkbox(
+    "t",
+    var(--color-green),
+    polygon(50% 0%, 100% 100%, 0% 100%)
+  );
+  @include flexcyon-clip-path-checkbox("C", var(--color-cyan), circle());
   @include flexcyon-clip-path-checkbox(
     "h",
     var(--color-blue),
