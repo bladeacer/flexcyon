@@ -1970,38 +1970,88 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="%"] > p > input:checked::af
   background-color: inherit;
   mask-image: none;
 }
-body.flexcyon-flex-max-mode input[data-task="+"]:checked,
-body.flexcyon-flex-max-mode li[data-task="+"] > input:checked,
-body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked {
+body.flexcyon-flex-max-mode input[data-task=p]:checked,
+body.flexcyon-flex-max-mode li[data-task=p] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=p] > p > input:checked,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=p]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > p > input:checked {
   padding-inline-end: 4px;
   background-color: inherit;
   border: none;
 }
-body.flexcyon-flex-max-mode input[data-task="+"]:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="+"] > input:checked:hover,
-body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked:hover,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked:hover {
+body.flexcyon-flex-max-mode input[data-task=p]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=p] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=p] > p > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=p]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > p > input:checked:hover {
   filter: brightness(1.25);
 }
-body.flexcyon-flex-max-mode input[data-task="+"]:checked::after,
-body.flexcyon-flex-max-mode li[data-task="+"] > input:checked::after,
-body.flexcyon-flex-max-mode li[data-task="+"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task="+"]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task="+"] > p > input:checked::after {
+body.flexcyon-flex-max-mode input[data-task=p]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=p] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=p] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=p]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > p > input:checked::after {
   inset-block-start: -0.325em;
   font-size: var(--flexcyon-ascii-checkboxes-font-size);
   font-weight: 900;
-  color: var(--color-green);
+  color: var(--color-blue);
   text-align: center;
-  content: "+";
+  content: "p";
   background-color: inherit;
   mask-image: none;
+}
+body.flexcyon-flex-max-mode input[data-task=m]:checked,
+body.flexcyon-flex-max-mode li[data-task=m] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=m] > p > input:checked,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=m]:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > input:checked,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > p > input:checked {
+  padding-inline-end: 4px;
+  background-color: inherit;
+  border: none;
+}
+body.flexcyon-flex-max-mode input[data-task=m]:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=m] > input:checked:hover,
+body.flexcyon-flex-max-mode li[data-task=m] > p > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=m]:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > input:checked:hover,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > p > input:checked:hover {
+  filter: brightness(1.25);
+}
+body.flexcyon-flex-max-mode input[data-task=m]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=m] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=m] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=m]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > p > input:checked::after {
+  inset-block-start: -0.325em;
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  font-weight: 900;
+  color: var(--color-red);
+  text-align: center;
+  content: "m";
+  background-color: inherit;
+  mask-image: none;
+}
+body.flexcyon-flex-max-mode input[data-task=p]:checked::after, body.flexcyon-flex-max-mode li[data-task=p] > input:checked::after, body.flexcyon-flex-max-mode li[data-task=p] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=p]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=p] > p > input:checked::after {
+  inset-block-start: -0.15rem;
+  content: "+";
+}
+body.flexcyon-flex-max-mode input[data-task=m]:checked::after, body.flexcyon-flex-max-mode li[data-task=m] > input:checked::after, body.flexcyon-flex-max-mode li[data-task=m] > p > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled input[data-task=m]:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > input:checked::after,
+body.flexcyon-ascii-checkboxes-enabled li[data-task=m] > p > input:checked::after {
+  inset-block-start: -0.15rem;
+  margin-inline-start: -1px;
+  font-size: var(--flexcyon-ascii-checkboxes-font-size);
+  letter-spacing: -1.5px;
+  content: "--";
 }
 body.flexcyon-flex-max-mode input[data-task="-"]:checked, body.flexcyon-flex-max-mode li[data-task="-"] > input:checked, body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked,
@@ -2017,13 +2067,13 @@ body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
   inset-block-start: -0.3rem;
-  margin-inline-start: -7.5%;
+  margin-inline-start: 5%;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
   font-weight: 900;
   color: var(--color-red);
   text-align: center;
-  letter-spacing: -3px;
-  content: "-----";
+  letter-spacing: -4px;
+  content: "---------";
   background-color: inherit;
   mask-image: none;
   transform: rotate(45deg);
@@ -2091,15 +2141,12 @@ body.flexcyon-flex-max-mode input[data-task=S]:checked::after, body.flexcyon-fle
 body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after {
-  inset-block-start: 12em;
+  inset-block-start: -0.05rem;
+  margin-inline-start: 5%;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
   content: "$";
 }
-body.flexcyon-flex-max-mode input[data-task=S]:checked::after, body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after, body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
 body.flexcyon-flex-max-mode input[data-task="#"]:checked::after, body.flexcyon-flex-max-mode li[data-task="#"] > input:checked::after, body.flexcyon-flex-max-mode li[data-task="#"] > p > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > input:checked::after,
-body.flexcyon-ascii-checkboxes-enabled li[data-task=S] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="#"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="#"] > p > input:checked::after {
@@ -2226,8 +2273,8 @@ body.flexcyon-flex-max-mode li[data-task=i] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=i]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task=i] > p > input:checked::after {
-  inset-block-start: 0.01rem;
-  margin-inline-start: -7.5%;
+  inset-block-start: 0.02rem;
+  margin-inline-start: -5%;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
   font-weight: 900;
   color: var(--color-cyan);
@@ -2246,7 +2293,7 @@ body.flexcyon-clip-path-checkboxes-enabled li[data-task="*"] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task="*"] > p > input:checked {
   padding-inline-end: 4px;
   font-weight: 900;
-  background-color: var(--color-purple);
+  background-color: var(--color-yellow);
   border: none;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
@@ -2274,7 +2321,7 @@ body.flexcyon-clip-path-checkboxes-enabled li[data-task=b] > p > input:checked {
   font-weight: 900;
   background-color: var(--text-accent);
   border: none;
-  clip-path: polygon(15% 0%, 85% 0%, 85% 100%, 50% 70%, 15% 100%);
+  clip-path: polygon(12.5% 0%, 82.5% 0%, 82.5% 100%, 50% 75%, 12.5% 100%);
 }
 body.flexcyon-flex-max-mode input[data-task=b]:checked::after,
 body.flexcyon-flex-max-mode li[data-task=b] > input:checked::after,
@@ -2302,6 +2349,46 @@ body.flexcyon-flex-max-mode li[data-task=t] > p > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled input[data-task=t]:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=t] > input:checked::after,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=t] > p > input:checked::after {
+  display: none;
+}
+body.flexcyon-flex-max-mode input[data-task=u]:checked,
+body.flexcyon-flex-max-mode li[data-task=u] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=u] > p > input:checked,
+body.flexcyon-clip-path-checkboxes-enabled input[data-task=u]:checked,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=u] > input:checked,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=u] > p > input:checked {
+  padding-inline-end: 4px;
+  font-weight: 900;
+  background-color: var(--color-green);
+  border: none;
+  clip-path: polygon(50% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%);
+}
+body.flexcyon-flex-max-mode input[data-task=u]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=u] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=u] > p > input:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled input[data-task=u]:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=u] > input:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=u] > p > input:checked::after {
+  display: none;
+}
+body.flexcyon-flex-max-mode input[data-task=d]:checked,
+body.flexcyon-flex-max-mode li[data-task=d] > input:checked,
+body.flexcyon-flex-max-mode li[data-task=d] > p > input:checked,
+body.flexcyon-clip-path-checkboxes-enabled input[data-task=d]:checked,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > input:checked,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > p > input:checked {
+  padding-inline-end: 4px;
+  font-weight: 900;
+  background-color: var(--color-red);
+  border: none;
+  clip-path: polygon(25% 0%, 75% 0%, 75% 50%, 100% 50%, 50% 100%, 0% 50%, 25% 50%);
+}
+body.flexcyon-flex-max-mode input[data-task=d]:checked::after,
+body.flexcyon-flex-max-mode li[data-task=d] > input:checked::after,
+body.flexcyon-flex-max-mode li[data-task=d] > p > input:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled input[data-task=d]:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > input:checked::after,
+body.flexcyon-clip-path-checkboxes-enabled li[data-task=d] > p > input:checked::after {
   display: none;
 }
 body.flexcyon-flex-max-mode input[data-task=C]:checked,
@@ -2332,7 +2419,7 @@ body.flexcyon-clip-path-checkboxes-enabled li[data-task=h] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=h] > p > input:checked {
   padding-inline-end: 4px;
   font-weight: 900;
-  background-color: var(--color-blue);
+  background-color: var(--color-orange);
   border: none;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
@@ -2392,7 +2479,7 @@ body.flexcyon-clip-path-checkboxes-enabled li[data-task=r] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=r] > p > input:checked {
   padding-inline-end: 4px;
   font-weight: 900;
-  background-color: var(--color-yellow);
+  background-color: var(--color-purple);
   border: none;
   clip-path: rect();
 }
@@ -2412,7 +2499,7 @@ body.flexcyon-clip-path-checkboxes-enabled li[data-task=D] > input:checked,
 body.flexcyon-clip-path-checkboxes-enabled li[data-task=D] > p > input:checked {
   padding-inline-end: 4px;
   font-weight: 900;
-  background-color: var(--color-orange);
+  background-color: var(--color-cyan);
   border: none;
   clip-path: polygon(25% 0%, 75% 0%, 100% 25%, 50% 90%, 0% 25%);
 }

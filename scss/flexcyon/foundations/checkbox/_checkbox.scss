@@ -76,7 +76,27 @@ body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("'", var(--color-cyan));
   @include flexcyon-ascii-checkbox("@", var(--color-blue));
   @include flexcyon-ascii-checkbox("%", var(--color-pink));
-  @include flexcyon-ascii-checkbox("+", var(--color-green));
+  @include flexcyon-ascii-checkbox("p", var(--color-blue));
+  @include flexcyon-ascii-checkbox("m", var(--color-red));
+
+  $plus-sel: 'input[data-task="p"]:checked, li[data-task="p"] > input:checked, li[data-task="p"] > p > input:checked';
+  #{$plus-sel} {
+    &::after {
+      inset-block-start: -0.15rem;
+      content: "+";
+    }
+  }
+
+  $minus-sel: 'input[data-task="m"]:checked, li[data-task="m"] > input:checked, li[data-task="m"] > p > input:checked';
+  #{$minus-sel} {
+    &::after {
+      inset-block-start: -0.15rem;
+      margin-inline-start: -1px;
+      font-size: var(--flexcyon-ascii-checkboxes-font-size);
+      letter-spacing: -1.5px;
+      content: "--";
+    }
+  }
 
   $cancel-sel: 'input[data-task="-"]:checked, li[data-task="-"] > input:checked, li[data-task="-"] > p > input:checked';
 
@@ -88,13 +108,13 @@ body.flexcyon-ascii-checkboxes-enabled {
 
     &::after {
       inset-block-start: -0.3rem;
-      margin-inline-start: -7.5%;
+      margin-inline-start: 5%;
       font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
       font-weight: 900;
       color: var(--color-red);
       text-align: center;
-      letter-spacing: -3px;
-      content: "-----";
+      letter-spacing: -4px;
+      content: "---------";
       background-color: inherit;
       mask-image: none;
       transform: rotate(45deg);
@@ -129,16 +149,16 @@ body.flexcyon-ascii-checkboxes-enabled {
   #{$single-quote-sel} {
     inset-block-start: -0.175rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
-    content: "‘";
+    content: "\2018";
   }
 
   #{$dollar-sel} {
-    inset-block-start: 12em;
+    inset-block-start: -0.05rem;
+    margin-inline-start: 5%;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.1rem);
     content: "$";
   }
 
-  #{$dollar-sel},
   #{$tag-sel} {
     inset-block-start: -0.175rem;
   }
@@ -216,7 +236,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       font-weight: 900;
       color: var(--color-green);
       text-align: center;
-      content: "“";
+      content: "\201C";
       background-color: inherit;
       mask-image: none;
     }
@@ -231,8 +251,8 @@ body.flexcyon-ascii-checkboxes-enabled {
     border-radius: 50%;
 
     &::after {
-      inset-block-start: 0.01rem;
-      margin-inline-start: -7.5%;
+      inset-block-start: 0.02rem;
+      margin-inline-start: -5%;
       font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.5rem);
       font-weight: 900;
       color: var(--color-cyan);
@@ -265,7 +285,7 @@ body.flexcyon-flex-max-mode,
 body.flexcyon-clip-path-checkboxes-enabled {
   @include flexcyon-clip-path-checkbox(
     "*",
-    var(--color-purple),
+    var(--color-yellow),
     polygon(
       50% 0%,
       61% 35%,
@@ -289,17 +309,27 @@ body.flexcyon-clip-path-checkboxes-enabled {
   @include flexcyon-clip-path-checkbox(
     "b",
     var(--text-accent),
-    polygon(15% 0%, 85% 0%, 85% 100%, 50% 70%, 15% 100%)
+    polygon(12.5% 0%, 82.5% 0%, 82.5% 100%, 50% 75%, 12.5% 100%)
   );
   @include flexcyon-clip-path-checkbox(
     "t",
     var(--color-green),
     polygon(50% 0%, 100% 100%, 0% 100%)
   );
+  @include flexcyon-clip-path-checkbox(
+    "u",
+    var(--color-green),
+    polygon(50% 0%, 100% 50%, 75% 50%, 75% 100%, 25% 100%, 25% 50%, 0% 50%)
+  );
+  @include flexcyon-clip-path-checkbox(
+    "d",
+    var(--color-red),
+    polygon(25% 0%, 75% 0%, 75% 50%, 100% 50%, 50% 100%, 0% 50%, 25% 50%)
+  );
   @include flexcyon-clip-path-checkbox("C", var(--color-cyan), circle());
   @include flexcyon-clip-path-checkbox(
     "h",
-    var(--color-blue),
+    var(--color-orange),
     polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
   );
   @include flexcyon-clip-path-checkbox(
@@ -312,10 +342,10 @@ body.flexcyon-clip-path-checkboxes-enabled {
     var(--color-green),
     polygon(50% 0%, 100% 100%, 0% 100%)
   );
-  @include flexcyon-clip-path-checkbox("r", var(--color-yellow), rect());
+  @include flexcyon-clip-path-checkbox("r", var(--color-purple), rect());
   @include flexcyon-clip-path-checkbox(
     "D",
-    var(--color-orange),
+    var(--color-cyan),
     polygon(25% 0%, 75% 0%, 100% 25%, 50% 90%, 0% 25%)
   );
   @include flexcyon-clip-path-checkbox(
