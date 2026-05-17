@@ -63,7 +63,6 @@ body {
   }
 }
 
-// TODO: Make this comply more with alternate checkboxes reference
 body.flexcyon-flex-max-mode,
 body.flexcyon-ascii-checkboxes-enabled {
   @include flexcyon-ascii-checkbox("!", var(--color-purple));
@@ -149,7 +148,6 @@ body.flexcyon-ascii-checkboxes-enabled {
   #{$single-quote-sel} {
     inset-block-start: -0.175rem;
     font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
-    content: "\2018";
   }
 
   #{$dollar-sel} {
@@ -236,7 +234,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       font-weight: 900;
       color: var(--color-green);
       text-align: center;
-      content: "\201C";
+      content: '"';
       background-color: inherit;
       mask-image: none;
     }

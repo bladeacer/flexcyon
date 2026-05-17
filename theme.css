@@ -2135,7 +2135,6 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="'"] > p > input:checked::after {
   inset-block-start: -0.175rem;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) + 0.3rem);
-  content: "‘";
 }
 body.flexcyon-flex-max-mode input[data-task=S]:checked::after, body.flexcyon-flex-max-mode li[data-task=S] > input:checked::after, body.flexcyon-flex-max-mode li[data-task=S] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task=S]:checked::after,
@@ -2252,7 +2251,7 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task=\"] > p > input:checked::aft
   font-weight: 900;
   color: var(--color-green);
   text-align: center;
-  content: "“";
+  content: '"';
   background-color: inherit;
   mask-image: none;
 }
@@ -4236,54 +4235,78 @@ body {
   --callout-warning: var(--color-orange);
   --callout-question: var(--color-green);
   --callout-success: var(--color-green);
+  --callout-quote: var(--color-green);
+  --callout-cite: var(--color-green);
 }
+body .callout[data-callout*=bug],
 body .callout[data-callout-metadata*=bug] {
   --callout-color: var(--callout-bug);
   --callout-icon: lucide-bug;
 }
+body .callout[data-callout*=error],
 body .callout[data-callout-metadata*=error] {
   --callout-color: var(--callout-error);
-  --callout-icon: lucide-zap;
+  --callout-icon: lucide-circle-alert;
 }
+body .callout[data-callout*=fail],
 body .callout[data-callout-metadata*=fail] {
   --callout-color: var(--callout-fail);
   --callout-icon: lucide-x;
 }
+body .callout[data-callout*=info],
 body .callout[data-callout-metadata*=info] {
   --callout-color: var(--callout-info);
   --callout-icon: lucide-info;
 }
+body .callout[data-callout*=todo],
 body .callout[data-callout-metadata*=todo] {
   --callout-color: var(--callout-todo);
   --callout-icon: lucide-circle-check;
 }
+body .callout[data-callout*=summary],
 body .callout[data-callout-metadata*=summary] {
   --callout-color: var(--callout-summary);
   --callout-icon: lucide-clipboard-list;
 }
+body .callout[data-callout*=tip],
 body .callout[data-callout-metadata*=tip] {
   --callout-color: var(--callout-tip);
   --callout-icon: lucide-flame;
 }
+body .callout[data-callout*=example],
 body .callout[data-callout-metadata*=example] {
   --callout-color: var(--callout-example);
   --callout-icon: lucide-list;
 }
+body .callout[data-callout*=important],
 body .callout[data-callout-metadata*=important] {
   --callout-color: var(--callout-important);
-  --callout-icon: lucide-flame;
+  --callout-icon: lucide-star;
 }
+body .callout[data-callout*=warning],
 body .callout[data-callout-metadata*=warning] {
   --callout-color: var(--callout-warning);
   --callout-icon: lucide-alert-triangle;
 }
+body .callout[data-callout*=question],
 body .callout[data-callout-metadata*=question] {
   --callout-color: var(--callout-question);
   --callout-icon: lucide-help-circle;
 }
+body .callout[data-callout*=success],
 body .callout[data-callout-metadata*=success] {
   --callout-color: var(--callout-success);
   --callout-icon: lucide-check;
+}
+body .callout[data-callout*=cite],
+body .callout[data-callout-metadata*=cite] {
+  --callout-color: var(--callout-cite);
+  --callout-icon: lucide-quote;
+}
+body .callout[data-callout*=quote],
+body .callout[data-callout-metadata*=quote] {
+  --callout-color: var(--callout-quote);
+  --callout-icon: lucide-quote;
 }
 body .callout {
   background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
@@ -4294,6 +4317,7 @@ body .callout .callout-title {
 }
 body .callout .callout-icon {
   padding-inline-end: var(--flexcyon-callout-icon-right-padding);
+  margin-block-start: -0.5px;
 }
 body .callout .callout-content :first-child:is(pre, img, iframe) {
   margin-block-start: var(--flexcyon-callout-first-codeblock-margin-top);

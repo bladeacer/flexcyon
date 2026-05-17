@@ -3,6 +3,7 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
 
 @mixin callout-type-wrapper($type, $icon-str) {
+  .callout[data-callout*="#{$type}"],
   .callout[data-callout-metadata*="#{$type}"] {
     --callout-color: var(--callout-#{$type});
     --callout-icon: lucide-#{$icon-str};
@@ -39,11 +40,11 @@ body {
   --callout-warning: var(--color-orange);
   --callout-question: var(--color-green);
   --callout-success: var(--color-green);
-
-  // TODO: Do I just change default callout icons or leave them as is?
+  --callout-quote: var(--color-green);
+  --callout-cite: var(--color-green);
 
   @include callout-type-wrapper("bug", "bug");
-  @include callout-type-wrapper("error", "zap");
+  @include callout-type-wrapper("error", "circle-alert");
   @include callout-type-wrapper("fail", "x");
   @include callout-type-wrapper("info", "info");
 
@@ -57,10 +58,12 @@ body {
   @include callout-type-wrapper("example", "list");
 
   // Should be another icon?
-  @include callout-type-wrapper("important", "flame");
+  @include callout-type-wrapper("important", "star");
   @include callout-type-wrapper("warning", "alert-triangle");
   @include callout-type-wrapper("question", "help-circle");
   @include callout-type-wrapper("success", "check");
+  @include callout-type-wrapper("cite", "quote");
+  @include callout-type-wrapper("quote", "quote");
 
   .callout {
     background-color: oklch(
@@ -76,6 +79,7 @@ body {
 
     .callout-icon {
       padding-inline-end: var(--flexcyon-callout-icon-right-padding);
+      margin-block-start: -0.5px;
     }
 
     .callout-content :first-child:is(pre, img, iframe) {
