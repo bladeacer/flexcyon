@@ -11317,7 +11317,7 @@ settings:
 
   - title: Return To Zero Mode
     type: info-text
-    description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options. Will not work with Flex Max mode enabled.
+    description: Extreme minimalism inspired by Shimmering Focus theme. Will override some Style Settings options.
 
   - title: Flex Max Mode
     type: info-text
@@ -11368,7 +11368,7 @@ settings:
     max: 0.3
     step: 0.01
 
-  - title: About Theme colour offset
+  - title: About Theme colour warmth offset
     type: info-text
     markdown: true
     description: Because oklch is a cyclical colour space, here are some tips on getting the desired colour warmth.<br>Dark mode = very cool background, set towards -20 for cool colours, 130 towards warmer colours.<br>Light mode = somewhat warm background, set -70 toward to warmer colours, 80 towards cooler colours.<br>If you go beyond the ranges the colours would probably alternate from becoming cool to becoming warm and vice versa.<br>Do experiment with values ^_^.
