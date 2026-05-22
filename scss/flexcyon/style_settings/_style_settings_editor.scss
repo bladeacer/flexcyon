@@ -855,7 +855,7 @@ settings:
     type: class-toggle
     default: false
   - title: Select folder style
-    description: Select the folder style, sometimes need to restart or force reload for it to take effect properly. Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
+    description: Alternate folder style Adds padding for active file item, makes collapse icons and borders blue for active folders.
     type: class-select
     id: flexcyon-folder-style
     allowEmpty: true
@@ -919,7 +919,7 @@ settings:
     default: 18
     format: px
   - title: Top Actions Alignment
-    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.).
+    description: Alignment of the top actions (the ones with icons that allow you to make a new note, new folder etc.)
     id: flexcyon-top-actions-alignment
     type: variable-select
     default: center
