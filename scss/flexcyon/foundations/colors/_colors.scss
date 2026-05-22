@@ -7,24 +7,37 @@
 
 @use "../accessibility/a11y_mixin" as m;
 
+// TODO: Update style settings, docs on new changed colours
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
   --flexcyon-orange: #cc8449;
   --flexcyon-yellow: #c29e42;
-  --flexcyon-purple-lilac: #a461c8;
-  --flexcyon-red-salmon: #c03a47;
+
+  // --flexcyon-purple-lilac: #a461c8;
+  --flexcyon-purple-lilac: #d89ff5;
+
+  // --flexcyon-red-salmon: #c03a47;
+  --flexcyon-red-salmon: #ff9880;
   --flexcyon-blue: #5a8fcd;
-  --flexcyon-pink: #d458a3;
+
+  // --flexcyon-pink: #d458a3;
+  --flexcyon-pink: #ff91cb;
 }
 
 body.theme-light {
   --flexcyon-cyan: #3b9ba1;
-  --flexcyon-lime-green: #689523;
+
+  // --flexcyon-lime-green: #689523;
+  --flexcyon-lime-green: #599100;
   --flexcyon-orange: #ed8126;
-  --flexcyon-yellow: #e8c62a;
+
+  // --flexcyon-yellow: #e8c62a;
+  --flexcyon-yellow: #9b8211;
   --flexcyon-purple-lilac: #6f49ae;
-  --flexcyon-red-salmon: #eb5325;
+
+  // --flexcyon-red-salmon: #eb5325;
+  --flexcyon-red-salmon: #c03a47;
   --flexcyon-blue: #5c9fe4;
   --flexcyon-pink: #e389ca;
 }
