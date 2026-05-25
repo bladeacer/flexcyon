@@ -35,11 +35,11 @@ body.theme-dark {
 body.theme-light {
   --flexcyon-cyan: #3b9ba1;
   --flexcyon-lime-green: #599100;
-  --flexcyon-orange: #ed8126;
+  --flexcyon-orange: #a37e11;
   --flexcyon-yellow: #9b8211;
   --flexcyon-purple-lilac: #6f49ae;
   --flexcyon-red-salmon: #c03a47;
-  --flexcyon-blue: #5c9fe4;
+  --flexcyon-blue: #3085dd;
   --flexcyon-pink: #d451a0;
 }
 
@@ -862,7 +862,7 @@ body:is(.theme-light) {
 }
 
 body.theme-dark {
-  --flexcyon-accent: #92a871;
+  --flexcyon-accent: #a5bc84;
 }
 
 body.theme-light {
