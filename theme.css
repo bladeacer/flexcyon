@@ -24,11 +24,11 @@ body {
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
-  --flexcyon-orange: #cc8449;
+  --flexcyon-orange: #ddad49;
   --flexcyon-yellow: #c29e42;
   --flexcyon-purple-lilac: #d89ff5;
   --flexcyon-red-salmon: #ff9880;
-  --flexcyon-blue: #5a8fcd;
+  --flexcyon-blue: #7ab8fe;
   --flexcyon-pink: #ff91cb;
 }
 
@@ -40,7 +40,7 @@ body.theme-light {
   --flexcyon-purple-lilac: #6f49ae;
   --flexcyon-red-salmon: #c03a47;
   --flexcyon-blue: #5c9fe4;
-  --flexcyon-pink: #e389ca;
+  --flexcyon-pink: #d451a0;
 }
 
 /* Defined for backwards compatibility, when possible prefer using base --color-x variables like var(--color-red) directly */
