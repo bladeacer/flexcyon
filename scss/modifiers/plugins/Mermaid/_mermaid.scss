@@ -21,10 +21,10 @@ body.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
       stroke: var(--color-base-20);
     }
 
-    & > svg[aria-roledescription="flowchart"]g.root,
-    & > svg[aria-roledescription="flowchart-v2"]g.root,
-    & > svg[aria-roledescription="stateDiagram"]g.root,
-    & > svg[aria-roledescription="stateDiagram-v2"]g.root {
+    & > svg[aria-roledescription="flowchart"],
+    & > svg[aria-roledescription="flowchart-v2"],
+    & > svg[aria-roledescription="stateDiagram"],
+    & > svg[aria-roledescription="stateDiagram-v2"] {
       & g.nodes {
         & g :is(*) {
           fill: var(--text-normal) !important;
@@ -75,8 +75,8 @@ body.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
       }
     }
 
-    & > svg[aria-roledescription="flowchart"]g.root,
-    & > svg[aria-roledescription="flowchart-v2"]g.root {
+    & > svg[aria-roledescription="flowchart"],
+    & > svg[aria-roledescription="flowchart-v2"] {
       /* Edge labels */
       & g.edgeLabels {
         & div.labelBkg {
