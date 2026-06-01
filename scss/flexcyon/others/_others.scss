@@ -15,6 +15,11 @@ body {
   --flexcyon-cust-hr-str-font-size: 1.118em;
   --flexcyon-cust-hr-str: "f";
 
+  button.mod-cta,
+  button.mod-warning {
+    color: var(--background-primary);
+  }
+
   &:not(.is-mobile) div.nav-buttons-container {
     justify-content: var(--flexcyon-top-actions-alignment);
     opacity: calc(var(--dimmed) + 0.2);

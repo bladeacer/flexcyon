@@ -2756,7 +2756,20 @@ body {
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
-  --background-modifier-error-hover: transparent;
+  --flexcyon-bg-modifier-hover-error-wrapper: oklch(
+    from var(--color-red) l c h / var(--dimmed)
+  );
+  --background-modifier-error-hover: oklch(
+    from var(--flexcyon-bg-modifier-hover-error-wrapper)
+      clamp(
+        0,
+        (l * var(--flexcyon-theme-brightness-ratio)) +
+          var(--flexcyon-theme-contrast-offset),
+        1
+      )
+      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
+      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
+  );
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -9877,6 +9890,10 @@ body {
   --flexcyon-cust-hr-str-font-size: 1.118em;
   --flexcyon-cust-hr-str: "f";
 }
+body button.mod-cta,
+body button.mod-warning {
+  color: var(--background-primary);
+}
 body:not(.is-mobile) div.nav-buttons-container {
   justify-content: var(--flexcyon-top-actions-alignment);
   opacity: calc(var(--dimmed) + 0.2);
@@ -16283,9 +16300,14 @@ body .workspace-leaf.mod-active .banner.is-live-preview .internal-embed[alt=bann
  * Adapted (with permission) from @kneecaps'
  * (Obsidian Members Group, Ultra Lobster/Origami theme developer)
  * multi-column layout + aside float snippet.
+ * 
  *
  * I also took inspiration from efemkay's MCL
- * (bare minimum core logic, reimplemented in SCSS).
+ * (bare minimum core logic, reimplemented in SCSS)
+ * and the Wikipedia theme's infoboxes by Bluemoondragon07
+ *
+ * Bluemoondragon07's Wikipedia theme (MIT Licensed):
+ * https://github.com/bluemoondragon07/Wikipedia-Theme
  *
  * efemkay's MCL GitHub link (their project is licensed under GPLv3):
  * https://github.com/efemkay/obsidian-modular-css-layout/
@@ -16304,6 +16326,10 @@ body .workspace-leaf.mod-active .banner.is-live-preview .internal-embed[alt=bann
  */
 body {
   --callout-gap: 16px;
+  --infobox-width: 37.5%;
+  --infobox-margin: 1em 0px 1em 1em;
+  --infobox-margin-left: 1em 1em 1em 0px;
+  --infobox-position: right;
 }
 
 /* Start of parts which were inspired by efemkay's MCL */
@@ -17039,6 +17065,7 @@ body {
 /* 
  * Start of parts which were inspired by 
  * kneecaps' multi-column layout + aside float 
+ * and Bluemoondragon07's Wikipedia Theme
  */
 /* per-note gap presets via cssclasses frontmatter */
 .callout-gap-0 .callout[data-callout-metadata*=col] > .callout-content, .callout-gap-0 .callout[data-callout*=multi-column] > .callout-content, .callout-gap-0 .callout[data-callout*=col] > .callout-content, .callout-gap-0 .callout[data-callout*=multi-column] > .callout-content {
@@ -17061,30 +17088,16 @@ body {
   gap: 2rem;
 }
 
-/* [!aside] — float right alongside body text, place above paragraph where aside callout contents will render beside, only works in reading mode. */
-.markdown-reading-view .callout[data-callout*=aside], .callout[data-callout-metadata*=aside] {
-  float: inline-end;
-  clear: inline-end;
-  inline-size: 38%;
-  margin: 0 0 1rem 1.5rem;
-}
-
-/* clearfix — prevents float bleed past the content block */
-body .workspace-leaf.mod-active .markdown-rendered::after,
-body .workspace-leaf.mod-active .cm-content::after {
-  clear: both;
-  display: table;
-  content: "";
-}
-
-/* mobile: revert to block */
-.is-mobile .markdown-reading-view .callout[data-callout*=aside], .callout[data-callout-metadata*=aside] {
-  float: none;
-  inline-size: 100%;
-  margin: 0 0 1rem;
+/* [!aside] or [!infobox] — float right alongside body text, place above paragraph where aside callout contents will render beside */
+.callout[data-callout*=aside], .callout[data-callout-metadata*=aside], .callout[data-callout*=infobox], .callout[data-callout-metadata*=infobox] {
+  float: var(--infobox-position);
+  clear: var(--infobox-position);
+  inline-size: var(--infobox-width);
+  margin: var(--infobox-margin);
 }
 
 /* 
  * End of parts which were inspired by 
  * kneecaps' multi-column layout + aside float 
+ * and Bluemoondragon07's Wikipedia Theme
  */

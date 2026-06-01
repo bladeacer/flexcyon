@@ -4,9 +4,14 @@
  * Adapted (with permission) from @kneecaps'
  * (Obsidian Members Group, Ultra Lobster/Origami theme developer)
  * multi-column layout + aside float snippet.
+ * 
  *
  * I also took inspiration from efemkay's MCL
- * (bare minimum core logic, reimplemented in SCSS).
+ * (bare minimum core logic, reimplemented in SCSS)
+ * and the Wikipedia theme's infoboxes by Bluemoondragon07
+ *
+ * Bluemoondragon07's Wikipedia theme (MIT Licensed):
+ * https://github.com/bluemoondragon07/Wikipedia-Theme
  *
  * efemkay's MCL GitHub link (their project is licensed under GPLv3):
  * https://github.com/efemkay/obsidian-modular-css-layout/
@@ -26,6 +31,10 @@
 
 body {
   --callout-gap: 16px;
+  --infobox-width: 37.5%;
+  --infobox-margin: 1em 0px 1em 1em;
+  --infobox-margin-left: 1em 1em 1em 0px;
+  --infobox-position: right;
 }
 
 /* Start of parts which were inspired by efemkay's MCL */
@@ -73,6 +82,7 @@ $callout-sel: '.callout[data-callout-metadata*="col"], .callout[data-callout*="m
 /* 
  * Start of parts which were inspired by 
  * kneecaps' multi-column layout + aside float 
+ * and Bluemoondragon07's Wikipedia Theme
  */
 
 /* per-note gap presets via cssclasses frontmatter */
@@ -93,37 +103,19 @@ $callout-sel: '.callout[data-callout-metadata*="col"], .callout[data-callout*="m
 @include gap-wrapper("md", 0.75rem);
 @include gap-wrapper("lg", 2rem);
 
-/* [!aside] — float right alongside body text, place above paragraph where aside callout contents will render beside, only works in reading mode. */
+/* [!aside] or [!infobox] — float right alongside body text, place above paragraph where aside callout contents will render beside */
 
-$aside-sel: '.callout[data-callout*="aside"], .callout[data-callout-metadata*="aside"]';
+$aside-sel: '.callout[data-callout*="aside"], .callout[data-callout-metadata*="aside"], .callout[data-callout*="infobox"], .callout[data-callout-metadata*="infobox"]';
 
-.markdown-reading-view #{$aside-sel} {
-  float: inline-end;
-  clear: inline-end;
-  inline-size: 38%;
-  margin: 0 0 1rem 1.5rem;
-}
-
-/* clearfix — prevents float bleed past the content block */
-
-body .workspace-leaf.mod-active {
-  .markdown-rendered::after,
-  .cm-content::after {
-    clear: both;
-    display: table;
-    content: "";
-  }
-}
-
-/* mobile: revert to block */
-
-.is-mobile .markdown-reading-view #{$aside-sel} {
-  float: none;
-  inline-size: 100%;
-  margin: 0 0 1rem;
+#{$aside-sel} {
+  float: var(--infobox-position);
+  clear: var(--infobox-position);
+  inline-size: var(--infobox-width);
+  margin: var(--infobox-margin);
 }
 
 /* 
  * End of parts which were inspired by 
  * kneecaps' multi-column layout + aside float 
+ * and Bluemoondragon07's Wikipedia Theme
  */

@@ -49,9 +49,14 @@ body {
   );
   @include m.configure-oklch("background-modifier-error", "color-red");
 
-  // @include m.configure-oklch("background-modifier-error-rgb", "color-red");
+  --flexcyon-bg-modifier-hover-error-wrapper: oklch(
+    from var(--color-red) l c h / var(--dimmed)
+  );
 
-  --background-modifier-error-hover: transparent;
+  @include m.configure-oklch(
+    "background-modifier-error-hover",
+    "flexcyon-bg-modifier-hover-error-wrapper"
+  );
 }
 
 /* obsi-snip-coll start: grid-background */
