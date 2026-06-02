@@ -18,35 +18,19 @@ body.is-mobile {
 }
 
 body.flexcyon-revert-nav-item-alignment.is-mobile {
-  &.is-phone {
-    .nav-buttons-container {
-      inset-block: unset;
-    }
-
-    .nav-header ~ div:last-child {
-      padding-block-start: 48px;
-    }
-  }
-
-  .nav-files-container {
-    overflow-y: scroll;
-    overscroll-behavior: contain;
-  }
-
   .workspace-drawer-header {
     padding-block-end: 8px;
   }
 
-  .workspace-drawer-inner {
+  .workspace-drawer-active-tab-container,
+  .workspace-drawer-inner,
+  .workspace-drawer-tab-options {
     flex-direction: column-reverse;
   }
 
+  .nav-files-container,
+  .workspace-leaf,
   .workspace-leaf-content {
-    overflow-y: scroll;
-    overscroll-behavior: contain;
-  }
-
-  .workspace-leaf {
     overflow-y: scroll;
     overscroll-behavior: contain;
   }
@@ -56,8 +40,17 @@ body.flexcyon-revert-nav-item-alignment.is-mobile {
   }
 
   .workspace-drawer-active-tab-container {
-    flex-direction: column-reverse;
     gap: 2px;
+  }
+
+  &.is-phone {
+    .nav-buttons-container {
+      inset-block: unset;
+    }
+
+    .nav-header ~ div:last-child {
+      padding-block-start: 48px;
+    }
   }
 }
 
