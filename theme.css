@@ -10698,6 +10698,9 @@ body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-leaf-content {
   overflow-y: scroll;
   overscroll-behavior: contain;
 }
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-tab-options-list {
+  position: relative;
+}
 body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-active-tab-content > * {
   block-size: unset;
 }
@@ -10709,6 +10712,9 @@ body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-buttons-containe
 }
 body.flexcyon-revert-nav-item-alignment.is-mobile.is-phone .nav-header ~ div:last-child {
   padding-block-start: 48px;
+}
+body.flexcyon-revert-nav-item-alignment.is-mobile .workspace-drawer-tab-options.is-collapsed .workspace-drawer-tab-options-list {
+  display: none;
 }
 
 /* obsi-snip-coll end */

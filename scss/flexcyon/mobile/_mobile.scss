@@ -35,6 +35,10 @@ body.flexcyon-revert-nav-item-alignment.is-mobile {
     overscroll-behavior: contain;
   }
 
+  .workspace-drawer-tab-options-list {
+    position: relative;
+  }
+
   .workspace-drawer-active-tab-content > * {
     block-size: unset;
   }
@@ -51,6 +55,11 @@ body.flexcyon-revert-nav-item-alignment.is-mobile {
     .nav-header ~ div:last-child {
       padding-block-start: 48px;
     }
+  }
+
+  .workspace-drawer-tab-options.is-collapsed
+    .workspace-drawer-tab-options-list {
+    display: none;
   }
 }
 
