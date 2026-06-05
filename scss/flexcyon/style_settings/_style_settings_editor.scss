@@ -165,6 +165,56 @@ settings:
     opacity: true
     format: hex
     default: "#6f768599"
+  - title: Bold Text Colour
+    id: bold-color
+    type: variable-select
+    default: var(--color-red)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
+  - title: Italic Text Colour
+    id: italic-color
+    type: variable-select
+    default: var(--text-accent)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Default line height
     id: line-height-normal
     type: variable-number
@@ -278,6 +328,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 1 font size
     id: h1-size
     type: variable-number
@@ -339,6 +393,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 2 font size
     id: h2-size
     type: variable-number
@@ -400,6 +458,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 3 font size
     id: h3-size
     type: variable-number
@@ -461,6 +523,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 4 font size
     id: h4-size
     type: variable-number
@@ -522,6 +588,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 5 font size
     id: h5-size
     type: variable-number
@@ -583,6 +653,10 @@ settings:
         value: var(--color-yellow)
       - label: Green
         value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Heading 6 font size
     id: h6-size
     type: variable-number
