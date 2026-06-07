@@ -91,6 +91,28 @@ body.theme-dark .mermaid > svg[aria-roledescription="flowchart-v2"] {
         }
       }
 
+      & g.root {
+        .cluster {
+          rect {
+            fill: var(--background-secondary) !important;
+            stroke: transparent !important;
+          }
+
+          span {
+            color: var(--text-normal) !important;
+          }
+        }
+
+        g.edgePaths path {
+          stroke: var(--text-normal) !important;
+        }
+      }
+
+      .marker {
+        fill: var(--text-normal) !important;
+        stroke: var(--text-normal) !important;
+      }
+
       /* Nodes */
       & g.nodes {
         /* Node labels */

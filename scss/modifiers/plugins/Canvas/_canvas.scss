@@ -1,5 +1,6 @@
 body {
   --flexcyon-canvas-blur-intensity: 1px;
+  --text-on-accent-inverted: var(--text-normal);
 }
 
 $canvas-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='canvas']";
@@ -7,7 +8,7 @@ $canvas-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='canv
 /* obsi-snip-coll start: canvas-oklch-fix */
 body.theme-dark,
 body.theme-light {
-  --canvas-color: var(--text-normal);
+  --canvas-color: var(--text-normal) !important;
   --canvas-color-1: var(--color-red);
   --canvas-color-2: var(--color-orange);
   --canvas-color-3: var(--color-yellow);
@@ -62,6 +63,10 @@ body #{$canvas-sel} {
 
   .canvas-edges path.canvas-display-path {
     stroke: var(--canvas-color);
+  }
+
+  .canvas-edges g.is-themed.mod-canvas-color-custom {
+    --canvas-color: var(--text-normal) !important;
   }
 
   .canvas-edges polygon.canvas-path-end {

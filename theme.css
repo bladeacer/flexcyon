@@ -14657,12 +14657,13 @@ div.dataview-error-box p.dataview-error-message {
 
 body {
   --flexcyon-canvas-blur-intensity: 1px;
+  --text-on-accent-inverted: var(--text-normal);
 }
 
 /* obsi-snip-coll start: canvas-oklch-fix */
 body.theme-dark,
 body.theme-light {
-  --canvas-color: var(--text-normal);
+  --canvas-color: var(--text-normal) !important;
   --canvas-color-1: var(--color-red);
   --canvas-color-2: var(--color-orange);
   --canvas-color-3: var(--color-yellow);
@@ -14704,6 +14705,9 @@ body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canva
 }
 body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-edges path.canvas-display-path {
   stroke: var(--canvas-color);
+}
+body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-edges g.is-themed.mod-canvas-color-custom {
+  --canvas-color: var(--text-normal) !important;
 }
 body .workspace-leaf.mod-active .workspace-leaf-content[data-type=canvas] .canvas-edges polygon.canvas-path-end {
   fill: var(--canvas-color);
@@ -14961,6 +14965,20 @@ body.theme-dark .mermaid > svg[aria-roledescription=flowchart-v2] {
   vertical-align: super;
   color: var(--text-normal) !important;
   background-color: var(--background-primary) !important;
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root .cluster rect, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root .cluster rect, .slides-container .mermaid > svg[aria-roledescription=flowchart] g.root .cluster rect, .slides-container .mermaid > svg[aria-roledescription=flowchart-v2] g.root .cluster rect {
+  fill: var(--background-secondary) !important;
+  stroke: transparent !important;
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root .cluster span, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root .cluster span, .slides-container .mermaid > svg[aria-roledescription=flowchart] g.root .cluster span, .slides-container .mermaid > svg[aria-roledescription=flowchart-v2] g.root .cluster span {
+  color: var(--text-normal) !important;
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] g.root g.edgePaths path, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgePaths path, .slides-container .mermaid > svg[aria-roledescription=flowchart] g.root g.edgePaths path, .slides-container .mermaid > svg[aria-roledescription=flowchart-v2] g.root g.edgePaths path {
+  stroke: var(--text-normal) !important;
+}
+.workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart] .marker, .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2] .marker, .slides-container .mermaid > svg[aria-roledescription=flowchart] .marker, .slides-container .mermaid > svg[aria-roledescription=flowchart-v2] .marker {
+  fill: var(--text-normal) !important;
+  stroke: var(--text-normal) !important;
 }
 .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart], .workspace-leaf.mod-active .workspace-leaf-content[data-type=markdown] .mermaid > svg[aria-roledescription=flowchart-v2], .slides-container .mermaid > svg[aria-roledescription=flowchart], .slides-container .mermaid > svg[aria-roledescription=flowchart-v2] {
   /* Nodes */
