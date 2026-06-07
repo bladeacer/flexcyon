@@ -16349,6 +16349,24 @@ body.banners-reloaded .banner-view-active .banner-error-container .banner-error-
   content: "Error - ";
 }
 
+.lemons-search--preview {
+  inset-inline: 36px 0;
+  display: flex;
+  justify-content: center;
+  inline-size: max-content;
+  max-inline-size: var(--file-line-width);
+  margin: 0 auto;
+}
+.lemons-search--preview div.preview-text,
+.lemons-search--preview div img {
+  max-inline-size: calc(var(--file-line-width) - 2rem);
+  padding: 32px 36px;
+}
+
+div.modal.lemons-search--modal > div.modal-close-button.mod-raised.clickable-icon {
+  z-index: 1;
+}
+
 /* Modifications for HandaArchitect's banner snippet */
 body .banner img[alt=banner] {
   z-index: 1;
