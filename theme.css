@@ -3409,7 +3409,7 @@ body.theme-dark {
 body.theme-light {
   --flexcyon-link-color: #6f49ae;
   --flexcyon-link-unresolved-color: #6f49ae;
-  --flexcyon-external-link-color: #5c9fe4;
+  --flexcyon-external-link-color: #3085dd;
 }
 
 body {
@@ -11463,7 +11463,7 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#5770b9"
+    default-light: "#4B65B4"
     default-dark: "#92a871"
   - id: flexcyon-cyan
     title: Cyan Color
@@ -11477,21 +11477,21 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#689523"
+    default-light: "#599100"
     default-dark: "#a1c05c"
   - id: flexcyon-orange
     title: Orange Color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#ed8126"
+    default-light: "#a37e11"
     default-dark: "#cc8449"
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#e8c62a"
+    default-light: "#9b8211"
     default-dark: "#c29e42"
   - id: flexcyon-purple-lilac
     title: Purple Color
@@ -11505,21 +11505,21 @@ settings:
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#eb5325"
-    default-dark: "#c03a47"
+    default-light: "#c03a47"
+    default-dark: "#ff9880"
   - id: flexcyon-blue
     title: Blue Color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#5c9fe4"
+    default-light: "#3085dd"
     default-dark: "#5a8fcd"
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
     opacity: true
     format: hex
-    default-light: "#e389ca"
+    default-light: "#d451a0"
     default-dark: "#d458a3"
 
   - title: Base Colors
@@ -13132,7 +13132,7 @@ settings:
     id: flexcyon-external-link-color
     type: variable-themed-color
     format: hex
-    default-light: "#5c9fe4"
+    default-light: "#3085dd"
     default-dark: "#5a8fcd"
   - title: Unresolved Link Color
     id: flexcyon-link-unresolved-color
@@ -16372,12 +16372,12 @@ body.banners-reloaded .banner-view-active .banner-error-container .banner-error-
   display: flex;
   justify-content: center;
   inline-size: max-content;
-  max-inline-size: var(--file-line-width);
+  max-inline-size: min(var(--file-line-width), 50vw);
   margin: 0 auto;
 }
 .lemons-search--preview div.preview-text,
 .lemons-search--preview div img {
-  max-inline-size: calc(var(--file-line-width) - 2rem);
+  max-inline-size: min(var(--file-line-width) - 2rem, 50vw);
   padding: 32px 36px;
 }
 
