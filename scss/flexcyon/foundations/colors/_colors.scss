@@ -7,42 +7,26 @@
 
 @use "../accessibility/a11y_mixin" as m;
 
-// TODO: Update style settings, docs on new changed colours
+// TODO: Update docs on new changed colours
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;
   --flexcyon-lime-green: #a1c05c;
-
-  // --flexcyon-orange: #cc8449;
   --flexcyon-orange: #ddad49;
   --flexcyon-yellow: #c29e42;
-
-  // --flexcyon-purple-lilac: #a461c8;
   --flexcyon-purple-lilac: #d89ff5;
-
-  // --flexcyon-red-salmon: #c03a47;
   --flexcyon-red-salmon: #ff9880;
-
-  // --flexcyon-blue: #5a8fcd;
   --flexcyon-blue: #7ab8fe;
-
-  // --flexcyon-pink: #d458a3;
   --flexcyon-pink: #ff91cb;
 }
 
 body.theme-light {
   --flexcyon-cyan: #3b9ba1;
   --flexcyon-lime-green: #599100;
-
-  // --flexcyon-orange: #a37e11;
   --flexcyon-orange: #a37e11;
   --flexcyon-yellow: #9b8211;
   --flexcyon-purple-lilac: #6f49ae;
   --flexcyon-red-salmon: #c03a47;
-
-  // --flexcyon-blue: #3085dd;
   --flexcyon-blue: #3085dd;
-
-  // --flexcyon-pink: #d451a0;
   --flexcyon-pink: #d451a0;
 }
 

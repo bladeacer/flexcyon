@@ -3401,9 +3401,9 @@ body.flexcyon-titlebar-button-effects .titlebar-button:hover {
 }
 
 body.theme-dark {
-  --flexcyon-link-color: #a461c8;
-  --flexcyon-link-unresolved-color: #a461c8;
-  --flexcyon-external-link-color: #5a8fcd;
+  --flexcyon-link-color: #d89ff5;
+  --flexcyon-link-unresolved-color: #d89ff5;
+  --flexcyon-external-link-color: #7ab8fe;
 }
 
 body.theme-light {
@@ -11464,7 +11464,7 @@ settings:
     opacity: true
     format: hex
     default-light: "#4B65B4"
-    default-dark: "#92a871"
+    default-dark: "#a5bc84"
   - id: flexcyon-cyan
     title: Cyan Color
     type: variable-themed-color
@@ -11485,7 +11485,7 @@ settings:
     opacity: true
     format: hex
     default-light: "#a37e11"
-    default-dark: "#cc8449"
+    default-dark: "#ddad49"
   - id: flexcyon-yellow
     title: Yellow Color
     type: variable-themed-color
@@ -11499,7 +11499,7 @@ settings:
     opacity: true
     format: hex
     default-light: "#6f49ae"
-    default-dark: "#a461c8"
+    default-dark: "#d89ff5"
   - id: flexcyon-red-salmon
     title: Red Color
     type: variable-themed-color
@@ -11513,14 +11513,14 @@ settings:
     opacity: true
     format: hex
     default-light: "#3085dd"
-    default-dark: "#5a8fcd"
+    default-dark: "#7ab8fe"
   - id: flexcyon-pink
     title: Pink Color
     type: variable-themed-color
     opacity: true
     format: hex
     default-light: "#d451a0"
-    default-dark: "#d458a3"
+    default-dark: "#ff91cb"
 
   - title: Base Colors
     type: heading
@@ -13126,20 +13126,20 @@ settings:
     id: flexcyon-link-color
     type: variable-themed-color
     default-light: "#6f49ae"
-    default-dark: "#a461c8"
+    default-dark: "#d89ff5"
     format: hex
   - title: External Color
     id: flexcyon-external-link-color
     type: variable-themed-color
     format: hex
     default-light: "#3085dd"
-    default-dark: "#5a8fcd"
+    default-dark: "#7ab8fe"
   - title: Unresolved Link Color
     id: flexcyon-link-unresolved-color
     type: variable-themed-color
     format: hex
     default-light: "#6f49ae"
-    default-dark: "#a461c8"
+    default-dark: "#d89ff5"
   - title: Enable alternate link styling
     id: flexcyon-alt-link-style
     type: class-toggle
