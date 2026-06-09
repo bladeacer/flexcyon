@@ -10225,6 +10225,10 @@ body.flexcyon-disable-vim-cursor-blink .cm-cursorLayer {
   background-color: var(--interactive-accent);
 }
 
+body .is-flashing {
+  color: inherit;
+}
+
 /* obsi-snip-coll start: smooth-cursor */
 body.flexcyon-enable-smooth-cursor {
   --flexcyon-cursor-duration: 42.5ms;
