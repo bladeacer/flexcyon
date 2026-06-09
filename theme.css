@@ -10387,12 +10387,6 @@ body.flexcyon-anims-fade-in .workspace-leaf.mod-active .view-content {
   animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
-body.flexcyon-flex-max-mode .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type=file-explorer],
-[data-type=undefined]),
-body.flexcyon-flex-max-mode .workspace-leaf.mod-active .view-content {
-  animation: fade-in var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-}
-
 body.flexcyon-modal-anims-scale-up .modal,
 body.flexcyon-modal-anims-scale-up .prompt {
   animation: scale-up var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
@@ -10417,12 +10411,6 @@ body.flexcyon-modal-anims-slide-ltr .prompt {
 }
 
 body.flexcyon-anims-modal-slide-ltr.flexcyon-anim-style-settings-contain .style-settings-container {
-  animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
-}
-
-body.flexcyon-flex-max-mode .modal,
-body.flexcyon-flex-max-mode .style-settings-container,
-body.flexcyon-flex-max-mode .prompt {
   animation: slide-in-left var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
 }
 
@@ -12655,8 +12643,10 @@ settings:
     type: class-select
     id: flexcyon-anim-type
     allowEmpty: true
-    default: none
+    default: flexcyon-anims-fade-in
     options: 
+      - label: None
+        value: none
       - 
         label: Slide in Left to Right
         value: flexcyon-anims-slide-ltr
@@ -12687,8 +12677,10 @@ settings:
     type: class-select
     id: flexcyon-modal-anim-type
     allowEmpty: true
-    default: none
+    default: flexcyon-modal-anims-slide-ltr
     options: 
+      - label: None
+        value: none
       - 
         label: Slide in Left to Right
         value: flexcyon-modal-anims-slide-ltr

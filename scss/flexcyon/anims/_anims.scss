@@ -81,18 +81,6 @@ body {
         var(--flexcyon-anim-easing);
     }
   }
-
-  @if $is-flex-max == 1 {
-    body.flexcyon-flex-max-mode {
-      .modal,
-      .style-settings-container,
-      .prompt {
-        animation: $anim-type
-          var(--flexcyon-anim-duration)
-          var(--flexcyon-anim-easing);
-      }
-    }
-  }
 }
 
 @mixin anims-wrapper($anim-class, $anim-type, $is-flex-max: 0) {
@@ -108,22 +96,6 @@ body {
         var(--flexcyon-anim-easing);
     }
   }
-
-  @if $is-flex-max == 1 {
-    body.flexcyon-flex-max-mode {
-      .mod-stacked
-        .workspace-leaf.mod-active
-        .workspace-leaf-content:not(
-          [data-type="file-explorer"],
-          [data-type="undefined"]
-        ),
-      .workspace-leaf.mod-active .view-content {
-        animation: $anim-type
-          var(--flexcyon-anim-duration)
-          var(--flexcyon-anim-easing);
-      }
-    }
-  }
 }
 
 @include anims-wrapper(scale-up, scale-up);
@@ -133,10 +105,10 @@ body {
 @include anims-wrapper(slide-bt, slide-in-bt);
 @include anims-wrapper(spin-rl, spin-in-rl);
 @include anims-wrapper(spin-bt, spin-in-bt);
-@include anims-wrapper(fade-in, fade-in, 1);
+@include anims-wrapper(fade-in, fade-in);
 @include anims-modal-wrapper(scale-up, scale-up);
 @include anims-modal-wrapper(slide-rtl, slide-in-right);
-@include anims-modal-wrapper(slide-ltr, slide-in-left, 1);
+@include anims-modal-wrapper(slide-ltr, slide-in-left);
 @include anims-modal-wrapper(slide-tb, slide-in-tb);
 @include anims-modal-wrapper(slide-bt, slide-in-bt);
 @include anims-modal-wrapper(spin-rl, spin-in-rl);

@@ -1216,8 +1216,10 @@ settings:
     type: class-select
     id: flexcyon-anim-type
     allowEmpty: true
-    default: none
+    default: flexcyon-anims-fade-in
     options: 
+      - label: None
+        value: none
       - 
         label: Slide in Left to Right
         value: flexcyon-anims-slide-ltr
@@ -1248,8 +1250,10 @@ settings:
     type: class-select
     id: flexcyon-modal-anim-type
     allowEmpty: true
-    default: none
+    default: flexcyon-modal-anims-slide-ltr
     options: 
+      - label: None
+        value: none
       - 
         label: Slide in Left to Right
         value: flexcyon-modal-anims-slide-ltr
