@@ -100,7 +100,7 @@ body.flexcyon-style-settings-dim-collapsed-headings {
   .setting-item-control input {
     --input-height: 48px;
 
-    inline-size: 40vw;
+    inline-size: min(40vw, 300px);
     overflow: visible;
     text-overflow: clip;
     white-space: collapse;

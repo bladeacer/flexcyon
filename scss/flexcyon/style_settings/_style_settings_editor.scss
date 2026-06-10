@@ -1308,7 +1308,7 @@ settings:
 
   - title: Layout
     type: heading
-    level: 2
+    level: 1
     collapsed: true
   - title: Select workspace layout
     description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons in the UI.
@@ -1527,7 +1527,7 @@ settings:
   - title: Enable ASCII checkboxes
     type: class-toggle
     id: flexcyon-ascii-checkboxes-enabled
-    default: false
+    default: true
   - title: ASCII checkboxes font size
     id: flexcyon-ascii-checkboxes-font-size
     type: variable-number

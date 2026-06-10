@@ -9759,7 +9759,7 @@ body.flexcyon-empty-state-actions-disable .workspace-leaf > div > div > div.empt
 }
 
 body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
-  display: inline;
+  display: inline-block;
   font-family: var(--flexcyon-new-tab-font-group);
   font-size: var(--flexcyon-quote-font-size);
   font-weight: bold;
@@ -9779,7 +9779,7 @@ body.flexcyon-quote-enable .workspace-leaf > div > div > div.empty-state > div.e
 }
 
 body.flexcyon-rtz-mode .workspace-leaf > div > div > div.empty-state > div.empty-state-container::before {
-  display: inline;
+  display: inline-block;
   font-family: var(--flexcyon-new-tab-font-group);
   font-size: calc(10 * var(--flexcyon-ascii-max-font-size));
   font-weight: bold;
@@ -10830,7 +10830,7 @@ body.flexcyon-style-settings-dim-collapsed-headings .style-settings-heading.is-c
 
 .style-settings-container .setting-item[data-id=flexcyon-ascii-art] .setting-item-control input {
   --input-height: 48px;
-  inline-size: 40vw;
+  inline-size: min(40vw, 300px);
   overflow: visible;
   text-overflow: clip;
   white-space: collapse;
@@ -12735,7 +12735,7 @@ settings:
 
   - title: Layout
     type: heading
-    level: 2
+    level: 1
     collapsed: true
   - title: Select workspace layout
     description: Select the workspace layout. Card layout adds solid rounded borders. Angled layout is tilted stuff. Powerlevel10k one has plenty of polygons in the UI.
@@ -12954,7 +12954,7 @@ settings:
   - title: Enable ASCII checkboxes
     type: class-toggle
     id: flexcyon-ascii-checkboxes-enabled
-    default: false
+    default: true
   - title: ASCII checkboxes font size
     id: flexcyon-ascii-checkboxes-font-size
     type: variable-number
@@ -13868,8 +13868,7 @@ settings:
     description: Background color for the add before empty state title, accepts CSS variables.
     type: variable-text
     id: flexcyon-new-tab-bg-wrapper
-    default-dark: linear-gradient(to right, var(--text-accent), var(--color-purple))
-    default-light: linear-gradient(to right, var(--color-green), var(--text-accent))
+    default: linear-gradient(to right, var(--color-green), var(--text-accent))
 
   - title: Quote
     id: flexcyon-quote-val

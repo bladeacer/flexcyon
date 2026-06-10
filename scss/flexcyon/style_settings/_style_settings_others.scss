@@ -81,8 +81,7 @@ settings:
     description: Background color for the add before empty state title, accepts CSS variables.
     type: variable-text
     id: flexcyon-new-tab-bg-wrapper
-    default-dark: linear-gradient(to right, var(--text-accent), var(--color-purple))
-    default-light: linear-gradient(to right, var(--color-green), var(--text-accent))
+    default: linear-gradient(to right, var(--color-green), var(--text-accent))
 
   - title: Quote
     id: flexcyon-quote-val
