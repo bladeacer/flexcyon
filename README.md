@@ -93,6 +93,15 @@ Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.git
 
 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档.
 
+## Migrating to Style Settings to 2.0
+
+There has been a fair bit of structural changes to the theme's Style Settings.
+
+Click here to see the 2.0 migration guide.
+
+> If you do not wish to migrate your old settings, or you are only using the default settings;
+> you can just upgrade the theme and click the reset button on all associated setting sections.
+
 ## Design Principles
 
 This theme tries to:
