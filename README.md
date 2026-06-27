@@ -5,14 +5,16 @@
     <a href="https://flexcyon.github.io/docs-en/zh">
         <img alt="中文文档" src="https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E6%96%87%E6%A1%A3-purple?">
     </a>
+    <a href="https://flexcyon.github.io/docs-en/ko">
+        <img alt="Flexcyon 한국어 문서" src="https://img.shields.io/badge/Flexcyon-%ED%95%9C%EA%B5%AD%EC%96%B4%20%EB%AC%B8%EC%84%9C-cyan?label=Flexcyon">
+    </a>
     <a href="https://matrix.to/#/#flexcyon-space:matrix.org">
         <img alt="Matrix Space" src="https://img.shields.io/matrix/flexcyon-space%3Amatrix.org?&logo=matrix&label=Matrix%20Space">
     </a>
 </div>
 
 <div align="center">
-    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
-    <a href="https://www.moritzjung.dev/obsidian-stats/themes/flexcyon">
+    <a href="https://community.obsidian.md/themes/flexcyon">
         <img src="https://img.shields.io/badge/dynamic/json?query=%24%5B%22flexcyon%22%5D.download&url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&&label=Downloads&logo=obsidian" referrerpolicy="noreferrer">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/releases/latest">
@@ -93,14 +95,18 @@ Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.git
 
 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档.
 
-## Migrating to Style Settings to 2.0
+[The Korean translation of the documentation can be found here.](https://flexcyon.github.io/docs-en/ko/)
+It is maintained by [@OneVth](https://github.com/OneVth)
 
-There has been a fair bit of structural changes to the theme's Style Settings.
 
-Click here to see the 2.0 migration guide.
+<!-- ## Migrating to Style Settings to 2.0 -->
 
-> If you do not wish to migrate your old settings, or you are only using the default settings;
-> you can just upgrade the theme and click the reset button on all associated setting sections.
+<!-- There has been a fair bit of structural changes to the theme's Style Settings. -->
+
+<!-- Click here to see the 2.0 migration guide. -->
+
+<!-- > If you do not wish to migrate your old settings, or you are only using the default settings; -->
+<!-- > you can just upgrade the theme and click the reset button on all associated setting sections. -->
 
 ## Design Principles
 
