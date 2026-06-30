@@ -74,20 +74,11 @@ To install this theme via BRAT, navigate to `Settings > Community Plugins > Brow
 
 ### Supported versions
 
-Flexcyon is officially supported from [Obsidian Version 1.6.3](https://obsidian.md/changelog/2024-06-08-desktop-v1.6.3/)
+Flexcyon is officially supported from
+[Obsidian Version 1.6.3](https://obsidian.md/changelog/2024-06-08-desktop-v1.6.3/)
 onwards.
 
-[Obsidian 1.6](https://obsidian.md/changelog/2024-06-07-desktop-v1.6.2/) and above
-was chosen to be the minimum version supported as support for RTL languages was
-added then.
-
-Beta or insider versions of Obsidian will not be officially supported, although
-the theme should (hopefully) not break too much.
-> If significant issues are found, do open an issue here. I (bladeacer) will try
-> to troubleshoot them once the beta or insider version of Obsidian has a public
-> equivalent.
-
-You can also find this in the documentation.
+[More details in the documentation](https://flexcyon.github.io/docs-en/readme/support_vers/#supported-versions).
 
 ## Documentation
 
@@ -95,8 +86,8 @@ Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.git
 
 如果您更熟悉中文, 请 [单击此处](https://flexcyon.github.io/docs-en/zh/) 查看中文文档.
 
-[The Korean translation of the documentation can be found here.](https://flexcyon.github.io/docs-en/ko/)
-It is maintained by [@OneVth](https://github.com/OneVth)
+[Korean documentation can be found here.](https://flexcyon.github.io/docs-en/ko/)
+It is maintained by [@OneVth](https://github.com/OneVth).
 
 
 <!-- ## Migrating to Style Settings to 2.0 -->
@@ -125,7 +116,7 @@ This theme tries to:
 
 ## Features
 
-Refer to the documentation for the full set of features in Flexcyon.
+Refer to [the documentation](https://flexcyon.github.io/docs-en/) for the full set of features in Flexcyon.
 
 #### What this theme has
 
@@ -146,7 +137,8 @@ Refer to the documentation for the full set of features in Flexcyon.
 
 #### What this theme does not have
 
-- multiple colour schemes (though you can override the existing one with your own, see [Style Settings](#style-settings))
+- multiple colour schemes (though you can override the existing one
+with your own, see [Style Settings](#style-settings))
 - alternate checkboxes
 - embedded fonts, svgs
 
@@ -158,7 +150,8 @@ For plugins/snippets that are not styled yet, feel free to open a Pull Request/F
 
 #### Snippet collection
 
-Some of the theme's snippets like ASCII Art and its callouts can be [found here](https://github.com/bladeacer/obsi-snip-coll).
+Some of the theme's snippets like ASCII Art and its callouts
+can be [found here](https://github.com/bladeacer/obsi-snip-coll).
 
 #### Questions, Issues?
 
@@ -177,19 +170,23 @@ Refer to the [documentation on contributing](https://flexcyon.github.io/docs-en/
 
 ## Style Settings
 
-Documentation for style settings of this theme can be found [here](https://flexcyon.github.io/docs-en/Styling/Style-Settings/).
+Documentation for style settings of this theme can be found
+[here](https://flexcyon.github.io/docs-en/Styling/Style-Settings/).
 
-Documentation on installing and using style settings can be found [here](https://github.com/mgmeyers/obsidian-style-settings).
+Documentation on installing and using style settings can be found
+[here](https://github.com/mgmeyers/obsidian-style-settings).
 
 ## License
 
-This theme is licensed under the [MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE).
+This theme is licensed under the
+[MIT License](https://github.com/bladeacer/flexcyon/blob/master/LICENSE).
 
 ## Credits
 
-Without these [contributors](https://flexcyon.github.io/docs-en/credits/) and [tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
+Without these [contributors](https://flexcyon.github.io/docs-en/credits/)
+and [tools](https://flexcyon.github.io/docs-en/credits/page-1/), flexcyon would not be possible.
 
 The code of conduct was adopted from the
-[Contributor Covenant](https://www.contributor-covenant.org/)
+[Contributor Covenant](https://www.contributor-covenant.org/).
 
-The contributing guide was adopted from [conduct](https://github.com/sindresorhus/conduct)
+The contributing guide was adopted from [conduct](https://github.com/sindresorhus/conduct).
