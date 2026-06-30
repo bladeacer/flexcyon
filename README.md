@@ -89,7 +89,6 @@ Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.git
 [Korean documentation can be found here.](https://flexcyon.github.io/docs-en/ko/)
 It is maintained by [@OneVth](https://github.com/OneVth).
 
-
 <!-- ## Migrating to Style Settings to 2.0 -->
 
 <!-- There has been a fair bit of structural changes to the theme's Style Settings. -->

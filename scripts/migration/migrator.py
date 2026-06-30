@@ -792,7 +792,7 @@ Examples:
     parser.add_argument("input_file", nargs="?", help="Input file or stdin")
     parser.add_argument("--no-write", action="store_true", help="Stdout only")
     parser.add_argument(
-        "--output", default="new_settings.json", help="Out file"
+        "--output", default="./scripts/migration/new_settings.json", help="Out file"
     )
     return parser
 

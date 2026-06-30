@@ -9,11 +9,11 @@ help:
 	@echo "  watch        Watches for file changes and runs 'make run' automatically"
 
 test:
-	./test_migrator.py
+	./scripts/migration/test_migrator.py scripts/migration/test.json
 
 run:
 	$(MAKE) test
-	./migrator.py test.json
+	./scripts/migration/migrator.py scripts/migration/test.json
 
 watch:
-	./fs.py
+	./scripts/fs.py

@@ -181,7 +181,7 @@ def run_unit_tests(mapper, test_cases):
     print(f"Summary: {passed}/{len(test_cases)} passed.")
 
 
-def generate_test_json(test_cases, schema, prefix, filename="test.json"):
+def generate_test_json(test_cases, schema, prefix, filename="./scripts/migration/test.json"):
     """Merges input data following schema order."""
     prefix_map = {row[0]: (row[4] if len(row) > 4 else True) for row in schema}
     ordered_input = {}
