@@ -8,9 +8,6 @@
     <a href="https://flexcyon.github.io/docs-en/ko">
         <img alt="Flexcyon 한국어 문서" src="https://img.shields.io/badge/Flexcyon-%ED%95%9C%EA%B5%AD%EC%96%B4%20%EB%AC%B8%EC%84%9C-cyan?label=Flexcyon">
     </a>
-    <a href="https://matrix.to/#/#flexcyon-space:matrix.org">
-        <img alt="Matrix Space" src="https://img.shields.io/matrix/flexcyon-space%3Amatrix.org?&logo=matrix&label=Matrix%20Space">
-    </a>
 </div>
 
 <div align="center">
@@ -24,6 +21,9 @@
 </div>
 
 <div align="center">
+    <a href="https://matrix.to/#/#flexcyon-space:matrix.org">
+        <img alt="Matrix Space" src="https://img.shields.io/matrix/flexcyon-space%3Amatrix.org?&logo=matrix&label=Matrix%20Space">
+    </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
         <img src="https://img.shields.io/github/license/bladeacer/flexcyon?" referrerpolicy="noreferrer"> 
     </a>
