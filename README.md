@@ -89,14 +89,14 @@ Huge thanks to GitHub Pages for [hosting the documentation](https://flexcyon.git
 [Korean documentation can be found here.](https://flexcyon.github.io/docs-en/ko/)
 It is maintained by [@OneVth](https://github.com/OneVth).
 
-<!-- ## Migrating to Style Settings to 2.0 -->
+## Migrating to Style Settings to 2.0
 
-<!-- There has been a fair bit of structural changes to the theme's Style Settings. -->
+There has been a fair bit of structural changes to the theme's Style Settings.
 
-<!-- Click here to see the 2.0 migration guide. -->
+Click here to see the [2.0 migration guide and use the migration tool](https://flexcyon.github.io/docs-en/changelogs/2.0-migration/).
 
-<!-- > If you do not wish to migrate your old settings, or you are only using the default settings; -->
-<!-- > you can just upgrade the theme and click the reset button on all associated setting sections. -->
+> If you do not wish to migrate your old settings, or you are only using the default settings;
+> you can just upgrade the theme and click the reset button on all associated setting sections.
 
 ## Design Principles
 
