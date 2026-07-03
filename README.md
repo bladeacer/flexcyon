@@ -15,9 +15,11 @@
         <img src="https://img.shields.io/badge/dynamic/json?query=%24%5B%22flexcyon%22%5D.download&url=https%3A%2F%2Freleases.obsidian.md%2Fstats%2Ftheme&&label=Downloads&logo=obsidian" referrerpolicy="noreferrer">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/releases/latest">
-        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?&sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
+        <img src="https://img.shields.io/github/v/release/bladeacer/flexcyon?sort=semver&logo=semantic-release" referrerpolicy="noreferrer">
     </a>
-    <img alt="Min App Version" src="https://img.shields.io/github/manifest-json/minAppVersion/bladeacer/flexcyon?&logo=semver">
+    <a href="https://flexcyon.github.io/docs-en/readme/support_vers/">
+        <img alt="Min App Version" src="https://img.shields.io/github/manifest-json/minAppVersion/bladeacer/flexcyon?logo=semver">
+    </a>
 </div>
 
 <div align="center">
@@ -25,18 +27,16 @@
         <img alt="Matrix Space" src="https://img.shields.io/matrix/flexcyon-space%3Amatrix.org?&logo=matrix&label=Matrix%20Space">
     </a>
     <a href="https://github.com/bladeacer/flexcyon/blob/master/LICENSE">
-        <img src="https://img.shields.io/github/license/bladeacer/flexcyon?" referrerpolicy="noreferrer"> 
+        <img src="https://img.shields.io/github/license/bladeacer/flexcyon" referrerpolicy="noreferrer"> 
     </a>
     <a href="https://github.com/flexcyon/docs-en">
-        <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/flexcyon/docs-en/github-pages?&logo=github">
+        <img alt="GitHub deployments" src="https://img.shields.io/github/deployments/flexcyon/docs-en/github-pages?logo=github">
     </a>
 </div>
 
 <br>
 
-<div align="center">
-    <img alt="Theme Logo" src="./docs/1280-x-640-social-preview.png">
-</div>
+<img alt="Theme Logo" src="./docs/1280-x-640-social-preview.png">
 
 
 ## About Flexcyon
