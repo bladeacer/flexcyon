@@ -2046,22 +2046,21 @@ body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked {
   background-color: inherit;
   border: 2px solid var(--color-red);
   border-radius: 50%;
+  transform: rotate(45deg);
 }
 body.flexcyon-flex-max-mode input[data-task="-"]:checked::after, body.flexcyon-flex-max-mode li[data-task="-"] > input:checked::after, body.flexcyon-flex-max-mode li[data-task="-"] > p > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="-"]:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > input:checked::after,
 body.flexcyon-ascii-checkboxes-enabled li[data-task="-"] > p > input:checked::after {
-  inset-block-start: -0.3rem;
-  margin-inline-start: 5%;
   font-size: calc(var(--flexcyon-ascii-checkboxes-font-size) - 0.2rem);
   font-weight: 900;
   color: var(--color-red);
   text-align: center;
-  letter-spacing: -4px;
-  content: "---------";
+  letter-spacing: -3.5px;
+  content: "------";
   background-color: inherit;
   mask-image: none;
-  transform: rotate(45deg);
+  transform: translate(-15%, -17.5%);
 }
 body.flexcyon-flex-max-mode input[data-task="/"]:checked, body.flexcyon-flex-max-mode li[data-task="/"] > input:checked, body.flexcyon-flex-max-mode li[data-task="/"] > p > input:checked,
 body.flexcyon-ascii-checkboxes-enabled input[data-task="/"]:checked,
