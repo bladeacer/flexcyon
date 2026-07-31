@@ -2,6 +2,7 @@
 export default {
   "cache": true,
   extends: [
+    "stylelint-config-obsidianmd", 
     "stylelint-config-standard-scss", 
     "stylelint-config-recess-order"
   ],

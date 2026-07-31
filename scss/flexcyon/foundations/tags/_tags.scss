@@ -13,7 +13,16 @@ body {
   --tag-border-color-hover: oklch(from var(--tag-color-hover) l c h / 15%);
 
   h3[data-heading*="find section #"] a.tag {
-    all: unset;
+    padding: 0;
+    margin: 0;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 }
 

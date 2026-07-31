@@ -24,6 +24,9 @@ importers:
       stylelint:
         specifier: ^16.26.1
         version: 16.26.1
+      stylelint-config-obsidianmd:
+        specifier: ^0.1.0
+        version: 0.1.0(stylelint@16.26.1)
       stylelint-config-recess-order:
         specifier: ^7.7.0
         version: 7.7.0(stylelint-order@7.0.1(stylelint@16.26.1))(stylelint@16.26.1)
@@ -685,6 +688,12 @@ packages:
     resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
     engines: {node: '>=8'}
 
+  stylelint-config-obsidianmd@0.1.0:
+    resolution: {integrity: sha512-TY2khNT+vN9aMPhGjdmS0t0CHRKyGSfzz3+kpyzzFkyOAILtjWjCEiKGmK3q9RYkkK2EncS5RuYB0EYScDEEkg==}
+    engines: {node: '>= 22'}
+    peerDependencies:
+      stylelint: ^17.0.0
+
   stylelint-config-recess-order@7.7.0:
     resolution: {integrity: sha512-TWRkg+BrwHOki4pi9y1emWgx6pFwZXOYZhNsbEObke/mzYUJVJvDEzJJQXhH7ajslQJGcrExy8ZvJqDiUbhFpA==}
     peerDependencies:
@@ -707,6 +716,12 @@ packages:
     peerDependencies:
       stylelint: ^16.23.0
 
+  stylelint-config-recommended@18.0.0:
+    resolution: {integrity: sha512-mxgT2XY6YZ3HWWe3Di8umG6aBmWmHTblTgu/f10rqFXnyWxjKWwNdjSWkgkwCtxIKnqjSJzvFmPT5yabVIRxZg==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      stylelint: ^17.0.0
+
   stylelint-config-standard-scss@16.0.0:
     resolution: {integrity: sha512-/FHECLUu+med/e6OaPFpprG86ShC4SYT7Tzb2PTVdDjJsehhFBOioSlWqYFqJxmGPIwO3AMBxNo+kY3dxrbczA==}
     engines: {node: '>=20'}
@@ -722,6 +737,12 @@ packages:
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.23.0
+
+  stylelint-config-standard@40.0.0:
+    resolution: {integrity: sha512-EznGJxOUhtWck2r6dJpbgAdPATIzvpLdK9+i5qPd4Lx70es66TkBPljSg4wN3Qnc6c4h2n+WbUrUynQ3fanjHw==}
+    engines: {node: '>=20.19.0'}
+    peerDependencies:
+      stylelint: ^17.0.0
 
   stylelint-high-performance-animation@1.11.0:
     resolution: {integrity: sha512-bo+VfSH5RmjVmu61BZeN4cBK+PGHpG5jfvaUsw0db+1sAqKuEGjzmxEbf271/Jq3HJHj8wyi/rCg1IcxxnIiiQ==}
@@ -1405,6 +1426,12 @@ snapshots:
     dependencies:
       ansi-regex: 5.0.1
 
+  stylelint-config-obsidianmd@0.1.0(stylelint@16.26.1):
+    dependencies:
+      stylelint: 16.26.1
+      stylelint-config-standard: 40.0.0(stylelint@16.26.1)
+      stylelint-no-unsupported-browser-features: 8.1.1(stylelint@16.26.1)
+
   stylelint-config-recess-order@7.7.0(stylelint-order@7.0.1(stylelint@16.26.1))(stylelint@16.26.1):
     dependencies:
       stylelint: 16.26.1
@@ -1423,6 +1450,10 @@ snapshots:
     dependencies:
       stylelint: 16.26.1
 
+  stylelint-config-recommended@18.0.0(stylelint@16.26.1):
+    dependencies:
+      stylelint: 16.26.1
+
   stylelint-config-standard-scss@16.0.0(postcss@8.5.24)(stylelint@16.26.1):
     dependencies:
       stylelint: 16.26.1
@@ -1435,6 +1466,11 @@ snapshots:
     dependencies:
       stylelint: 16.26.1
       stylelint-config-recommended: 17.0.0(stylelint@16.26.1)
+
+  stylelint-config-standard@40.0.0(stylelint@16.26.1):
+    dependencies:
+      stylelint: 16.26.1
+      stylelint-config-recommended: 18.0.0(stylelint@16.26.1)
 
   stylelint-high-performance-animation@1.11.0(stylelint@16.26.1):
     dependencies:
