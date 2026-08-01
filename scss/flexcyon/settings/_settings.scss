@@ -5,6 +5,13 @@ body {
   --setting-items-radius: unset;
   --flexcyon-comm-item-opacity: 0.89;
   --flexcyon-comm-text-padding: 4px 16px;
+  --setting-items-padding-x: 0px;
+  --setting-items-padding-y: 16px;
+
+  .setting-item-name {
+    font-size: var(--font-ui-medium);
+    line-height: var(--line-height-tight);
+  }
 
   .mod-community-modal .modal-sidebar .setting-item.mod-toggle {
     padding: 4px 16px;
@@ -65,11 +72,9 @@ body {
     border-block-start: none;
   }
 
-  .setting-item.setting-item-heading {
-    .setting-item-name {
-      padding-inline-end: 4px;
-      line-height: 1.51;
-    }
+  .setting-group .setting-item-heading {
+    padding: 16px 0;
+    margin-block-end: 0;
   }
 
   .setting-item + div > .setting-item-heading,
@@ -77,8 +82,12 @@ body {
     margin-block-start: 1.5em;
   }
 
-  .setting-group .setting-item-heading {
-    padding: 0;
+  .setting-group.mod-hotkeys > .setting-items > .setting-item {
+    --setting-items-padding-y: 16px;
+  }
+
+  .setting-group .setting-item:not(.setting-item-heading)::before {
+    display: none;
   }
 
   .setting-group .setting-group-search {
