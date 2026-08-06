@@ -1963,6 +1963,11 @@ settings:
     description: Places tab header container at the bottom instead of the top of the screen, does not do anything for Stacked Tabs.
     type: class-toggle
     default: false
+  - title: Dim Inactive Stacked Tab Content
+    id: flexcyon-dim-inactive-stacked-tab-content
+    description: Dims content of inactive tabs when stacked tabs is enabled.
+    type: class-toggle
+    default: true
 
   - title: Icons
     description: For icon related styling

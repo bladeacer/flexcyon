@@ -150,3 +150,17 @@ body.flexcyon-workspace-pl10k-layout {
     border-end-start-radius: 16px;
   }
 }
+
+body
+  .mod-stacked
+  .workspace-tab-header:not(.mod-active)
+  > .workspace-tab-header-inner {
+  opacity: var(--dimmed);
+}
+
+body.flexcyon-dim-inactive-stacked-tab-content
+  .mod-stacked
+  .workspace-leaf:not(.mod-active)
+  .workspace-leaf-content {
+  opacity: var(--dimmed);
+}

@@ -1502,6 +1502,14 @@ body.flexcyon-workspace-pl10k-layout .view-header-title-parent :first-child.view
   border-end-start-radius: 16px;
 }
 
+body .mod-stacked .workspace-tab-header:not(.mod-active) > .workspace-tab-header-inner {
+  opacity: var(--dimmed);
+}
+
+body.flexcyon-dim-inactive-stacked-tab-content .mod-stacked .workspace-leaf:not(.mod-active) .workspace-leaf-content {
+  opacity: var(--dimmed);
+}
+
 body {
   --metadata-label-text-color: var(--color-purple);
   --metadata-label-text-color-hover: var(--flexcyon-palette-lilac-hover);
@@ -13407,6 +13415,11 @@ settings:
     description: Places tab header container at the bottom instead of the top of the screen, does not do anything for Stacked Tabs.
     type: class-toggle
     default: false
+  - title: Dim Inactive Stacked Tab Content
+    id: flexcyon-dim-inactive-stacked-tab-content
+    description: Dims content of inactive tabs when stacked tabs is enabled.
+    type: class-toggle
+    default: true
 
   - title: Icons
     description: For icon related styling
