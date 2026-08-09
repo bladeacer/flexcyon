@@ -8,6 +8,10 @@ body {
   --setting-items-padding-x: 0px;
   --setting-items-padding-y: 16px;
 
+  .modal.mod-settings .vertical-tab-header .setting-search-container {
+    padding: 16px 16px 2px;
+  }
+
   .setting-item-name {
     font-size: var(--font-ui-medium);
     line-height: var(--line-height-tight);

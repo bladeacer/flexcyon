@@ -3683,7 +3683,7 @@ body.theme-light {
   );
   --text-faint: var(--text-muted);
   --text-accent: var(--color-accent);
-  --text-on-accent-wrapper: var(--text-normal);
+  --text-on-accent-wrapper: var(--color-base-00);
   --text-on-accent: oklch(
     from var(--text-on-accent-wrapper)
       clamp(
@@ -10484,6 +10484,9 @@ body {
   --flexcyon-comm-text-padding: 4px 16px;
   --setting-items-padding-x: 0px;
   --setting-items-padding-y: 16px;
+}
+body .modal.mod-settings .vertical-tab-header .setting-search-container {
+  padding: 16px 16px 2px;
 }
 body .setting-item-name {
   font-size: var(--font-ui-medium);

@@ -48,7 +48,7 @@ body.theme-light {
 
   --text-faint: var(--text-muted);
   --text-accent: var(--color-accent);
-  --text-on-accent-wrapper: var(--text-normal);
+  --text-on-accent-wrapper: var(--color-base-00);
 
   @include m.configure-oklch("text-on-accent", "text-on-accent-wrapper");
 
