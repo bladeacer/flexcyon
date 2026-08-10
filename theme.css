@@ -2786,6 +2786,7 @@ body {
       clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
       clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
   );
+  --slider-track-background: var(--color-base-25);
 }
 
 /* obsi-snip-coll start: grid-background */
@@ -9977,6 +9978,12 @@ body.flexcyon-hr-no-reading .markdown-reading-view .el-hr {
   display: none;
 }
 
+body.flexcyon-flex-max-mode .canvas-node-container .el-hr::before,
+body.flexcyon-flex-max-mode .canvas-node-container .hr::before,
+body.flexcyon-cust-str-hr .canvas-node-container .el-hr::before,
+body.flexcyon-cust-str-hr .canvas-node-container .hr::before {
+  background-color: var(--color-base-25);
+}
 body.flexcyon-flex-max-mode .el-hr::before,
 body.flexcyon-flex-max-mode .hr::before,
 body.flexcyon-cust-str-hr .el-hr::before,
@@ -14338,159 +14345,6 @@ body .markdown-source-view.mod-cm6 .cm-embed-block.cm-lang-minitabs:hover {
   border-radius: 8px 8px 0 0;
 }
 
-body :is(.hltr-pink,
-mark.hltr-pink,
-.markdown-preview-view mark.hltr-pink) {
-  --flexcyon-hltr-wrapper-pink: oklch(
-    from var(--color-pink) l c h / 65%
-  );
-  --flexcyon-hltr-pink: oklch(
-    from var(--flexcyon-hltr-wrapper-pink)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-pink);
-}
-body :is(.hltr-red,
-mark.hltr-red,
-.markdown-preview-view mark.hltr-red) {
-  --flexcyon-hltr-wrapper-red: oklch(
-    from var(--color-red) l c h / 65%
-  );
-  --flexcyon-hltr-red: oklch(
-    from var(--flexcyon-hltr-wrapper-red)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-red);
-}
-body :is(.hltr-orange,
-mark.hltr-orange,
-.markdown-preview-view mark.hltr-orange) {
-  --flexcyon-hltr-wrapper-orange: oklch(
-    from var(--color-orange) l c h / 65%
-  );
-  --flexcyon-hltr-orange: oklch(
-    from var(--flexcyon-hltr-wrapper-orange)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-orange);
-}
-body :is(.hltr-yellow,
-mark.hltr-yellow,
-.markdown-preview-view mark.hltr-yellow) {
-  --flexcyon-hltr-wrapper-yellow: oklch(
-    from var(--color-yellow) l c h / 65%
-  );
-  --flexcyon-hltr-yellow: oklch(
-    from var(--flexcyon-hltr-wrapper-yellow)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-yellow);
-}
-body :is(.hltr-green,
-mark.hltr-green,
-.markdown-preview-view mark.hltr-green) {
-  --flexcyon-hltr-wrapper-green: oklch(
-    from var(--color-green) l c h / 65%
-  );
-  --flexcyon-hltr-green: oklch(
-    from var(--flexcyon-hltr-wrapper-green)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-green);
-}
-body :is(.hltr-cyan,
-mark.hltr-cyan,
-.markdown-preview-view mark.hltr-cyan) {
-  --flexcyon-hltr-wrapper-cyan: oklch(
-    from var(--color-cyan) l c h / 65%
-  );
-  --flexcyon-hltr-cyan: oklch(
-    from var(--flexcyon-hltr-wrapper-cyan)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-cyan);
-}
-body :is(.hltr-blue,
-mark.hltr-blue,
-.markdown-preview-view mark.hltr-blue) {
-  --flexcyon-hltr-wrapper-blue: oklch(
-    from var(--color-blue) l c h / 65%
-  );
-  --flexcyon-hltr-blue: oklch(
-    from var(--flexcyon-hltr-wrapper-blue)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-blue);
-}
-body :is(.hltr-purple,
-mark.hltr-purple,
-.markdown-preview-view mark.hltr-purple) {
-  --flexcyon-hltr-wrapper-purple: oklch(
-    from var(--color-purple) l c h / 65%
-  );
-  --flexcyon-hltr-purple: oklch(
-    from var(--flexcyon-hltr-wrapper-purple)
-      clamp(
-        0,
-        (l * var(--flexcyon-theme-brightness-ratio)) +
-          var(--flexcyon-theme-contrast-offset),
-        1
-      )
-      clamp(0, calc(c * var(--flexcyon-theme-saturation-ratio)), 0.4)
-      clamp(1, calc(h + var(--flexcyon-theme-warmth-offset)), 359)
-  );
-  background: var(--flexcyon-hltr-purple);
-}
-
 body.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
   --mono-oklch-0: oklch(0%, 0, 0deg)
@@ -14513,7 +14367,11 @@ body.highlightr-floating mark[class*=hltr]:last-of-type:not(mark[class*=hltr]:on
 
 body.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark),
 body.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
-  padding-block: 0;
+  padding: 0;
+}
+
+body.highlightr-realistic {
+  --flexcyon-highlight-border-radius: 0.8em 0.3em;
 }
 
 body table.calendar thead tr th {

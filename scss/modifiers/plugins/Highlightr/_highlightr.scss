@@ -3,36 +3,6 @@
 
 @use "../../../flexcyon/foundations/accessibility/a11y_mixin" as m;
 
-@mixin hltr-wrapper($color) {
-  :is(
-    .hltr-#{$color},
-    mark.hltr-#{$color},
-    .markdown-preview-view mark.hltr-#{$color}
-  ) {
-    --flexcyon-hltr-wrapper-#{$color}: oklch(
-      from var(--color-#{$color}) l c h / 65%
-    );
-
-    @include m.configure-oklch(
-      "flexcyon-hltr-#{$color}",
-      "flexcyon-hltr-wrapper-#{$color}"
-    );
-
-    background: var(--flexcyon-hltr-#{$color});
-  }
-}
-
-body {
-  @include hltr-wrapper("pink");
-  @include hltr-wrapper("red");
-  @include hltr-wrapper("orange");
-  @include hltr-wrapper("yellow");
-  @include hltr-wrapper("green");
-  @include hltr-wrapper("cyan");
-  @include hltr-wrapper("blue");
-  @include hltr-wrapper("purple");
-}
-
 body.highlightr-lowlight
   :is(mark, span.cm-highlight, .markdown-preview-view mark) {
   --lowlight-background: var(--background-primary);
@@ -65,5 +35,9 @@ body.highlightr-rounded
   :is(mark, span.cm-highlight, .markdown-preview-view mark),
 body.highlightr-realistic
   :is(mark, span.cm-highlight, .markdown-preview-view mark) {
-  padding-block: 0;
+  padding: 0;
+}
+
+body.highlightr-realistic {
+  --flexcyon-highlight-border-radius: 0.8em 0.3em;
 }
