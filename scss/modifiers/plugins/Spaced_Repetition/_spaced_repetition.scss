@@ -1,26 +1,51 @@
-gsr-bg-green {
-  background-color: oklch(from var(--color-green) l c h / 92.5%) !important;
-}
+body {
+  gsr-bg-green {
+    background-color: oklch(from var(--color-green) l c h / 92.5%) !important;
+  }
 
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
-.sr-response-button.sr-bg-green:hover {
-  background-color: var(--color-green) !important;
-}
+  .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
+  .sr-response-button.sr-bg-green:hover {
+    background-color: var(--color-green) !important;
+  }
 
-.sr-bg-blue {
-  background-color: oklch(from var(--color-blue) l c h / 92.5%) !important;
-}
+  .sr-bg-blue {
+    background-color: oklch(from var(--color-blue) l c h / 92.5%) !important;
+  }
 
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
-.sr-response-button.sr-bg-blue:hover {
-  background-color: var(--color-blue) !important;
-}
+  .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
+  .sr-response-button.sr-bg-blue:hover {
+    background-color: var(--color-blue) !important;
+  }
 
-.sr-bg-red {
-  background-color: oklch(from var(--color-red) l c h / 92.5%) !important;
-}
+  .sr-bg-red {
+    background-color: oklch(from var(--color-red) l c h / 92.5%) !important;
+  }
 
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
-.sr-response-button.sr-bg-red:hover {
-  background-color: var(--color-red) !important;
+  .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
+  .sr-response-button.sr-bg-red:hover {
+    background-color: var(--color-red) !important;
+  }
+
+  .sr-view > .modal-header-button > svg {
+    display: none;
+  }
+
+  .sr-deck-info.sr-bg-blue {
+    background-color: var(--color-base-20) !important;
+    border-radius: var(--radius-xl);
+  }
+
+  &:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) {
+    .sr-response-button.sr-again-button::after,
+    .sr-response-button.sr-hard-button::after,
+    .sr-response-button.sr-good-button::after,
+    .sr-response-button.sr-easy-button::after,
+    .sr-response-button.show-answer-button::after {
+      background-color: var(--color-base-20);
+    }
+  }
+
+  .sr-response {
+    flex-wrap: wrap;
+  }
 }

@@ -10492,6 +10492,9 @@ body {
   --setting-items-padding-x: 0px;
   --setting-items-padding-y: 16px;
 }
+body .modal.mod-settings .search-input-container::before {
+  inset-block-start: calc((var(--input-height) - var(--search-icon-size)) / 2 - 0px);
+}
 body .modal.mod-settings .vertical-tab-header .setting-search-container {
   padding: 16px 16px 2px;
 }
@@ -14471,31 +14474,43 @@ body.flexcyon-workspace-angled-layout div.oz-folder-line {
   transform: skewX(-5deg);
 }
 
-gsr-bg-green {
+body gsr-bg-green {
   background-color: oklch(from var(--color-green) l c h/92.5%) !important;
 }
-
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
-.sr-response-button.sr-bg-green:hover {
+body .sr-deck-list .sr-tree-item-row:hover .sr-bg-green,
+body .sr-response-button.sr-bg-green:hover {
   background-color: var(--color-green) !important;
 }
-
-.sr-bg-blue {
+body .sr-bg-blue {
   background-color: oklch(from var(--color-blue) l c h/92.5%) !important;
 }
-
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
-.sr-response-button.sr-bg-blue:hover {
+body .sr-deck-list .sr-tree-item-row:hover .sr-bg-blue,
+body .sr-response-button.sr-bg-blue:hover {
   background-color: var(--color-blue) !important;
 }
-
-.sr-bg-red {
+body .sr-bg-red {
   background-color: oklch(from var(--color-red) l c h/92.5%) !important;
 }
-
-.sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
-.sr-response-button.sr-bg-red:hover {
+body .sr-deck-list .sr-tree-item-row:hover .sr-bg-red,
+body .sr-response-button.sr-bg-red:hover {
   background-color: var(--color-red) !important;
+}
+body .sr-view > .modal-header-button > svg {
+  display: none;
+}
+body .sr-deck-info.sr-bg-blue {
+  background-color: var(--color-base-20) !important;
+  border-radius: var(--radius-xl);
+}
+body:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) .sr-response-button.sr-again-button::after,
+body:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) .sr-response-button.sr-hard-button::after,
+body:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) .sr-response-button.sr-good-button::after,
+body:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) .sr-response-button.sr-easy-button::after,
+body:not(.is-mobile) .sr-card-container:not(.sr-custom-hotkeys) .sr-response-button.show-answer-button::after {
+  background-color: var(--color-base-20);
+}
+body .sr-response {
+  flex-wrap: wrap;
 }
 
 .BC-trail,

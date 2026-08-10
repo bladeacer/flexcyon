@@ -8,6 +8,12 @@ body {
   --setting-items-padding-x: 0px;
   --setting-items-padding-y: 16px;
 
+  .modal.mod-settings .search-input-container::before {
+    inset-block-start: calc(
+      (var(--input-height) - var(--search-icon-size)) / 2 - 0px
+    );
+  }
+
   .modal.mod-settings .vertical-tab-header .setting-search-container {
     padding: 16px 16px 2px;
   }
