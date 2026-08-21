@@ -17,7 +17,6 @@ body {
     margin-block: 16px;
   }
 
-
   .modal.mod-settings .search-input-container::before {
     inset-block-start: calc(
       (var(--input-height) - var(--search-icon-size)) / 2 - 0px
@@ -357,7 +356,6 @@ body.is-mobile .vertical-tab-content {
   }
 }
 
-
 @mixin ascii-icon-small-after-wrapper($selector, $content) {
   #{$selector} {
     &::after {
@@ -520,4 +518,3 @@ body.flexcyon-prevent-accidental-unpin {
     pointer-events: none;
   }
 }
-

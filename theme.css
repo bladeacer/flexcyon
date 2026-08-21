@@ -3143,11 +3143,23 @@ body {
 
 body {
   --table-border-color: #6f768566;
-  --table-header-background: var(--color-base-20);
-  --table-row-alt-background: var(--color-base-15);
+  --table-header-background: color-mix(
+    in oklch,
+    var(--color-base-30) 15%,
+    var(--color-base-10)
+  );
+  --table-row-alt-background: color-mix(
+    in oklch,
+    var(--color-base-20) 15%,
+    var(--color-base-10)
+  );
   --table-column-alt-background: var(--table-background);
   --table-add-button-background: var(--color-base-15);
-  --table-background: var(--background-primary);
+  --table-background: color-mix(
+    in oklch,
+    var(--color-base-30) 15%,
+    var(--color-base-10)
+  );
   --table-header-background-hover: var(--table-background);
   --table-header-size: var(--font-ui-large);
   --table-text-size: var(--font-ui-medium);
