@@ -7,9 +7,10 @@
 @use "callout-modules/vertical-ltr";
 @use "callout-modules/no_icon";
 @use "callout-modules/no_title";
+@use "callout-modules/bg-transaparent";
+@use "callout-modules/color";
 
 body {
-  --flexcyon-callout-bg-opacity: 12.5%;
   --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-pop-animation-duration: 200ms;
   --flexcyon-callouts-flashcard-width: 250px;
@@ -19,58 +20,6 @@ body {
   --callout-radius: 2px;
   --flexcyon-callout-radix: 16px;
 }
-
-/* obsi-snip-coll start: bg-transparent */
-div.callout[data-callout*="bg-transparent"],
-div.callout[data-callout-metadata*="bg-transparent"],
-div.callout[data-callout*="transparent-bg"],
-div.callout[data-callout-metadata*="transparent-bg"] {
-  background-color: transparent;
-}
-
-/* obsi-snip-coll end */
-
-/* obsi-snip-coll start: color */
-@mixin callout-color($color-name, $color-var) {
-  div.callout[data-callout*="all-#{$color-name}"],
-  div.callout[data-callout-metadata*="all-#{$color-name}"],
-  div.callout[data-callout*="bg-#{$color-name}"],
-  div.callout[data-callout-metadata*="bg-#{$color-name}"] {
-    background-color: oklch(
-      from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
-    );
-
-    &:has([data-callout*="tui"], [data-callout-metadata*="tui"])
-      div.callout-title,
-    &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
-      .callout-content {
-      background-color: oklch(
-        from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
-      );
-    }
-  }
-
-  div.callout[data-callout*="all-#{$color-name}"],
-  div.callout[data-callout-metadata*="all-#{$color-name}"],
-  div.callout[data-callout*="title-#{$color-name}"],
-  div.callout[data-callout-metadata*="title-#{$color-name}"] {
-    div.callout-title,
-    div.callout-icon .svg-icon {
-      color: var(--#{$color-var});
-    }
-  }
-}
-
-@include callout-color("yellow", "color-yellow");
-@include callout-color("blue", "color-blue");
-@include callout-color("purple", "color-purple");
-@include callout-color("red", "color-red");
-@include callout-color("cyan", "color-cyan");
-@include callout-color("pink", "color-pink");
-@include callout-color("green", "color-green");
-@include callout-color("orange", "color-orange");
-
-/* obsi-snip-coll end */
 
 /* obsi-snip-coll start: centre-text */
 div.callout[data-callout*="center-all"],

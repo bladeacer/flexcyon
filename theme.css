@@ -4082,18 +4082,6 @@ div.callout[data-callout-metadata*=no-title] .callout-title {
 }
 
 /* obsi-snip-coll end */
-body {
-  --flexcyon-callout-bg-opacity: 12.5%;
-  --flexcyon-callout-icon-right-padding: 4px;
-  --flexcyon-callout-pop-animation-duration: 200ms;
-  --flexcyon-callouts-flashcard-width: 250px;
-  --flexcyon-callouts-flashcard-height: 250px;
-  --flexcyon-callout-flashcard-animation-duration: 500ms;
-  --flexcyon-editor-writing-indentation: 16px;
-  --callout-radius: 2px;
-  --flexcyon-callout-radix: 16px;
-}
-
 /* obsi-snip-coll start: bg-transparent */
 div.callout[data-callout*=bg-transparent],
 div.callout[data-callout-metadata*=bg-transparent],
@@ -4103,6 +4091,10 @@ div.callout[data-callout-metadata*=transparent-bg] {
 }
 
 /* obsi-snip-coll end */
+body {
+  --flexcyon-callout-bg-opacity: 12.5%;
+}
+
 /* obsi-snip-coll start: color */
 div.callout[data-callout*=all-yellow],
 div.callout[data-callout-metadata*=all-yellow],
@@ -4321,6 +4313,17 @@ div.callout[data-callout-metadata*=title-orange] div.callout-icon .svg-icon {
 }
 
 /* obsi-snip-coll end */
+body {
+  --flexcyon-callout-icon-right-padding: 4px;
+  --flexcyon-callout-pop-animation-duration: 200ms;
+  --flexcyon-callouts-flashcard-width: 250px;
+  --flexcyon-callouts-flashcard-height: 250px;
+  --flexcyon-callout-flashcard-animation-duration: 500ms;
+  --flexcyon-editor-writing-indentation: 16px;
+  --callout-radius: 2px;
+  --flexcyon-callout-radix: 16px;
+}
+
 /* obsi-snip-coll start: centre-text */
 div.callout[data-callout*=center-all] div.callout-title,
 div.callout[data-callout-metadata*=center-all] div.callout-title,

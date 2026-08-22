@@ -1,0 +1,8 @@
+/* obsi-snip-coll start: bg-transparent */
+div.callout[data-callout*="bg-transparent"],
+div.callout[data-callout-metadata*="bg-transparent"],
+div.callout[data-callout*="transparent-bg"],
+div.callout[data-callout-metadata*="transparent-bg"] {
+  background-color: transparent;
+}
+/* obsi-snip-coll end */

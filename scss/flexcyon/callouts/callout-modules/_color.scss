@@ -1,0 +1,45 @@
+body {
+  --flexcyon-callout-bg-opacity: 12.5%;
+}
+
+/* obsi-snip-coll start: color */
+@mixin callout-color($color-name, $color-var) {
+  div.callout[data-callout*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="bg-#{$color-name}"],
+  div.callout[data-callout-metadata*="bg-#{$color-name}"] {
+    background-color: oklch(
+      from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
+    );
+
+    &:has([data-callout*="tui"], [data-callout-metadata*="tui"])
+      div.callout-title,
+    &:has(.callout[data-callout*="tui"], [data-callout-metadata*="tui"])
+      .callout-content {
+      background-color: oklch(
+        from var(--#{$color-var}) l c h / var(--flexcyon-callout-bg-opacity)
+      );
+    }
+  }
+
+  div.callout[data-callout*="all-#{$color-name}"],
+  div.callout[data-callout-metadata*="all-#{$color-name}"],
+  div.callout[data-callout*="title-#{$color-name}"],
+  div.callout[data-callout-metadata*="title-#{$color-name}"] {
+    div.callout-title,
+    div.callout-icon .svg-icon {
+      color: var(--#{$color-var});
+    }
+  }
+}
+
+@include callout-color("yellow", "color-yellow");
+@include callout-color("blue", "color-blue");
+@include callout-color("purple", "color-purple");
+@include callout-color("red", "color-red");
+@include callout-color("cyan", "color-cyan");
+@include callout-color("pink", "color-pink");
+@include callout-color("green", "color-green");
+@include callout-color("orange", "color-orange");
+
+/* obsi-snip-coll end */
