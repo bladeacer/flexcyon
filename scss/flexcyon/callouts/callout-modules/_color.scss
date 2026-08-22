@@ -43,3 +43,68 @@ body {
 @include callout-color("orange", "color-orange");
 
 /* obsi-snip-coll end */
+
+/* obsi-snip-coll start: extended-color-palette */
+@mixin callout-ext-color($color-1, $color-2) {
+  $color-1-wrapper: "#{$color-1}-#{$color-2}";
+  $color-2-wrapper: "#{$color-2}-#{$color-1}";
+  $color-var: "--color-#{$color-1-wrapper}-mix";
+
+  div {
+    div.callout[data-callout*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout*="bg-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="bg-#{$color-2-wrapper}"],
+    div.callout[data-callout*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout*="bg-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="bg-#{$color-1-wrapper}"] {
+      background-color: var(#{$color-var}-bg);
+    }
+
+    div.callout[data-callout*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-2-wrapper}"],
+    div.callout[data-callout*="title-#{$color-2-wrapper}"],
+    div.callout[data-callout-metadata*="title-#{$color-2-wrapper}"],
+    div.callout[data-callout*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="all-#{$color-1-wrapper}"],
+    div.callout[data-callout*="title-#{$color-1-wrapper}"],
+    div.callout[data-callout-metadata*="title-#{$color-1-wrapper}"] {
+      .callout-title,
+      .callout-icon .svg-icon {
+        color: var(#{$color-var});
+      }
+    }
+  }
+}
+
+@include callout-ext-color(red, blue);
+@include callout-ext-color(red, orange);
+@include callout-ext-color(red, yellow);
+@include callout-ext-color(red, green);
+@include callout-ext-color(red, cyan);
+@include callout-ext-color(red, purple);
+@include callout-ext-color(red, pink);
+@include callout-ext-color(orange, yellow);
+@include callout-ext-color(orange, green);
+@include callout-ext-color(orange, cyan);
+@include callout-ext-color(orange, blue);
+@include callout-ext-color(orange, purple);
+@include callout-ext-color(orange, pink);
+@include callout-ext-color(yellow, green);
+@include callout-ext-color(yellow, cyan);
+@include callout-ext-color(yellow, blue);
+@include callout-ext-color(yellow, purple);
+@include callout-ext-color(yellow, pink);
+@include callout-ext-color(green, cyan);
+@include callout-ext-color(green, blue);
+@include callout-ext-color(green, purple);
+@include callout-ext-color(green, pink);
+@include callout-ext-color(cyan, blue);
+@include callout-ext-color(cyan, purple);
+@include callout-ext-color(cyan, pink);
+@include callout-ext-color(blue, purple);
+@include callout-ext-color(blue, pink);
+@include callout-ext-color(purple, pink);
+
+/* obsi-snip-coll end */

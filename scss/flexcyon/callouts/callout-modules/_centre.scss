@@ -1,0 +1,20 @@
+/* obsi-snip-coll start: centre-text */
+div.callout[data-callout*="center-all"],
+div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout*="center-title"],
+div.callout[data-callout-metadata*="center-title"] {
+  div.callout-title {
+    justify-content: center;
+  }
+}
+
+div.callout[data-callout*="center-all"],
+div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout*="center-content"],
+div.callout[data-callout-metadata*="center-content"] {
+  div.callout-content {
+    text-align: center;
+  }
+}
+
+/* obsi-snip-coll end */

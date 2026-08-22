@@ -1,0 +1,29 @@
+/* obsi-snip-coll start: opacity-callout */
+@mixin opacity-wrapper($increment) {
+  $i: 0;
+
+  @while $i <= 1 {
+    .callout[data-callout*="title-opacity-#{$i}"],
+    .callout[data-callout-metadata*="title-opacity-#{$i}"],
+    .callout[data-callout*="all-opacity-#{$i}"],
+    .callout[data-callout-metadata*="all-opacity-#{$i}"] {
+      .callout-title {
+        opacity: #{$i};
+      }
+    }
+    .callout[data-callout*="content-opacity-#{$i}"],
+    .callout[data-callout-metadata*="content-opacity-#{$i}"],
+    .callout[data-callout*="all-opacity-#{$i}"],
+    .callout[data-callout-metadata*="all-opacity-#{$i}"] {
+      .callout-content {
+        opacity: #{$i};
+      }
+    }
+
+    $i: $i + $increment;
+  }
+}
+
+@include opacity-wrapper(0.05);
+
+/* obsi-snip-coll end */

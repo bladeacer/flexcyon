@@ -1,0 +1,283 @@
+/* obsi-snip-coll start: text-direction */
+@mixin callout-dir($dir) {
+  div.callout[data-callout*="#{$dir}-all"],
+  div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout*="#{$dir}-title"],
+  div.callout[data-callout-metadata*="#{$dir}-title"] {
+    div.callout-title *,
+    div.callout-title {
+      direction: $dir !important;
+      unicode-bidi: bidi-override;
+    }
+  }
+
+  div.callout[data-callout*="#{$dir}-all"],
+  div.callout[data-callout-metadata*="#{$dir}-all"],
+  div.callout[data-callout*="#{$dir}-content"],
+  div.callout[data-callout-metadata*="#{$dir}-content"] {
+    div.callout-content {
+      * {
+        direction: $dir !important;
+        unicode-bidi: bidi-override;
+      }
+
+      code[class*="language-"],
+      pre[class*="language-"] {
+        @if $dir == "rtl" {
+          text-align: end;
+        } @else {
+          text-align: start;
+        }
+      }
+    }
+  }
+}
+
+@include callout-dir(rtl);
+@include callout-dir(ltr);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: text-transform */
+@mixin callout-text-transform($transform) {
+  div.callout[data-callout*="#{$transform}-all"],
+  div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout*="#{$transform}-title"],
+  div.callout[data-callout-metadata*="#{$transform}-title"] {
+    div.callout-title .callout-title-inner {
+      @if $transform == "caps" {
+        text-transform: capitalize;
+      } @else {
+        text-transform: $transform;
+      }
+    }
+  }
+
+  div.callout[data-callout*="#{$transform}-all"],
+  div.callout[data-callout-metadata*="#{$transform}-all"],
+  div.callout[data-callout*="#{$transform}-content"],
+  div.callout[data-callout-metadata*="#{$transform}-content"] {
+    div.callout-content * {
+      @if $transform == "caps" {
+        text-transform: capitalize;
+      } @else {
+        text-transform: $transform;
+      }
+
+      * {
+        @if $transform == "caps" {
+          text-transform: capitalize;
+        } @else {
+          text-transform: $transform;
+        }
+      }
+
+      code[class*="language-"],
+      pre[class*="language-"] {
+        @if $transform == "caps" {
+          text-transform: capitalize;
+        } @else {
+          text-transform: $transform;
+        }
+      }
+    }
+  }
+}
+
+@include callout-text-transform(uppercase);
+@include callout-text-transform(lowercase);
+@include callout-text-transform(capitalize);
+@include callout-text-transform(caps);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: tilt */
+$tilt-all-sel: 'div.callout[data-callout*="tilt-all"], div.callout[data-callout-metadata*="tilt-all"], ';
+
+#{$tilt-all-sel},
+div.callout[data-callout*="tilt-title"],
+div.callout[data-callout-metadata*="tilt-title"] {
+  .callout-title {
+    transform: skewX(-7.5deg);
+  }
+}
+
+#{$tilt-all-sel},
+div.callout[data-callout*="tilt-content"],
+div.callout[data-callout-metadata*="tilt-content"] {
+  .callout-content {
+    transform: skewX(-7.5deg);
+  }
+}
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: font-style */
+@mixin callout-font-style($style) {
+  div.callout[data-callout*="#{$style}-all"],
+  div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout*="#{$style}-title"],
+  div.callout[data-callout-metadata*="#{$style}-title"] {
+    .callout-title {
+      font-style: $style;
+    }
+  }
+
+  div.callout[data-callout*="#{$style}-all"],
+  div.callout[data-callout-metadata*="#{$style}-all"],
+  div.callout[data-callout*="#{$style}-content"],
+  div.callout[data-callout-metadata*="#{$style}-content"] {
+    .callout-content {
+      font-style: $style;
+    }
+  }
+}
+
+@include callout-font-style(italic);
+@include callout-font-style(oblique);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: text-decoration */
+@mixin callout-text-decor($callout-name) {
+  div.callout[data-callout*="#{$callout-name}-all"],
+  div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout*="#{$callout-name}-content"],
+  div.callout[data-callout-metadata*="#{$callout-name}-content"] {
+    .callout-content {
+      text-decoration: #{$callout-name};
+    }
+  }
+
+  div.callout[data-callout*="#{$callout-name}-all"],
+  div.callout[data-callout-metadata*="#{$callout-name}-all"],
+  div.callout[data-callout*="#{$callout-name}-title"],
+  div.callout[data-callout-metadata*="#{$callout-name}-title"] {
+    .callout-title {
+      text-decoration: #{$callout-name};
+    }
+  }
+}
+
+@include callout-text-decor(dashed);
+@include callout-text-decor(dotted);
+@include callout-text-decor(double);
+@include callout-text-decor(overline);
+@include callout-text-decor(underline);
+@include callout-text-decor(line-through);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: heading-title */
+@mixin callout-title-heading($heading_no) {
+  div.callout[data-callout*="#{$heading_no}-title"],
+  div.callout[data-callout-metadata*="#{$heading_no}-title"] {
+    .callout-title {
+      font-size: var(--#{$heading_no}-size);
+      color: var(--#{$heading_no}-color);
+    }
+
+    .callout-icon svg {
+      color: var(--#{$heading_no}-color);
+    }
+  }
+}
+
+@include callout-title-heading(h1);
+@include callout-title-heading(h2);
+@include callout-title-heading(h3);
+@include callout-title-heading(h4);
+@include callout-title-heading(h5);
+@include callout-title-heading(h6);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: font-weight */
+@mixin callout-text-font-weight($font-weight) {
+  div.callout[data-callout*="w-#{$font-weight}-all"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout*="w-#{$font-weight}-title"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
+    .callout-title {
+      font-weight: $font-weight;
+    }
+  }
+
+  div.callout[data-callout*="w-#{$font-weight}-all"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+  div.callout[data-callout*="w-#{$font-weight}-content"],
+  div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
+    .callout-content {
+      font-weight: $font-weight;
+    }
+  }
+}
+
+@include callout-text-font-weight(100);
+@include callout-text-font-weight(200);
+@include callout-text-font-weight(300);
+@include callout-text-font-weight(400);
+@include callout-text-font-weight(500);
+@include callout-text-font-weight(600);
+@include callout-text-font-weight(700);
+@include callout-text-font-weight(800);
+@include callout-text-font-weight(900);
+@include callout-text-font-weight(bold);
+@include callout-text-font-weight(bolder);
+@include callout-text-font-weight(lighter);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: set-font */
+@mixin font-toggler($font-type) {
+  div.callout[data-callout*="font-#{$font-type}-all"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout*="font-#{$font-type}-title"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-title"] {
+    .callout-title {
+      font-family: var(--font-#{$font-type});
+    }
+  }
+
+  div.callout[data-callout*="font-#{$font-type}-all"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-all"],
+  div.callout[data-callout*="font-#{$font-type}-content"],
+  div.callout[data-callout-metadata*="font-#{$font-type}-content"] {
+    .callout-content {
+      font-family: var(--font-#{$font-type});
+    }
+  }
+}
+
+@include font-toggler(interface);
+@include font-toggler(text);
+@include font-toggler(monospace);
+
+/* obsi-snip-coll end */
+
+/* obsi-snip-coll start: font-size-callout */
+@mixin font-size-wrapper($size) {
+  .callout[data-callout*="title-#{$size}"],
+  .callout[data-callout-metadata*="title-#{$size}"],
+  .callout[data-callout*="all-#{$size}"],
+  .callout[data-callout-metadata*="all-#{$size}"] {
+    .callout-title {
+      font-size: var(--font-ui-#{$size});
+    }
+  }
+  .callout[data-callout*="content-#{$size}"],
+  .callout[data-callout-metadata*="content-#{$size}"],
+  .callout[data-callout*="all-#{$size}"],
+  .callout[data-callout-metadata*="all-#{$size}"] {
+    .callout-content {
+      font-size: var(--font-ui-#{$size});
+    }
+  }
+}
+
+@include font-size-wrapper(smaller);
+@include font-size-wrapper(small);
+@include font-size-wrapper(medium);
+@include font-size-wrapper(large);
+
+/* obsi-snip-coll end */
