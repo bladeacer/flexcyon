@@ -1,0 +1,7 @@
+div.callout[data-callout*="bg-grid"] .callout-content,
+div.callout[data-callout-metadata*="bg-grid"] .callout-content,
+div.callout[data-callout*="bg-dots"] .callout-content,
+div.callout[data-callout-metadata*="bg-dots"] .callout-content {
+  padding: 0 8px;
+  margin-block-start: 16px;
+}

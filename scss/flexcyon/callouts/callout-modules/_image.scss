@@ -1,0 +1,16 @@
+/* obsi-snip-coll start: centre-image */
+div.callout[data-callout*="center-img"],
+div.callout[data-callout-metadata*="center-img"] {
+  background-color: transparent;
+
+  img {
+    inset-inline: calc(16px + 4px * 2 + 4px * 2) 0;
+    display: flex;
+    justify-content: center;
+    inline-size: max-content;
+    max-inline-size: 85%;
+    margin: 0 auto;
+  }
+}
+
+/* obsi-snip-coll end */

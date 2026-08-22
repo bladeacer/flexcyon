@@ -3838,6 +3838,9 @@ body {
   --flexcyon-callout-horiz-padding: 24px;
   --callout-padding: var(--flexcyon-callout-verti-padding)
     var(--flexcyon-callout-horiz-padding);
+  --flexcyon-callout-icon-right-padding: 4px;
+  --callout-radius: 2px;
+  --flexcyon-callout-radix: 16px;
 }
 body .callout {
   background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
@@ -4091,6 +4094,14 @@ div.callout[data-callout-metadata*=transparent-bg] {
 }
 
 /* obsi-snip-coll end */
+div.callout[data-callout*=bg-grid] .callout-content,
+div.callout[data-callout-metadata*=bg-grid] .callout-content,
+div.callout[data-callout*=bg-dots] .callout-content,
+div.callout[data-callout-metadata*=bg-dots] .callout-content {
+  padding: 0 8px;
+  margin-block-start: 16px;
+}
+
 body {
   --flexcyon-callout-bg-opacity: 12.5%;
 }
@@ -6985,15 +6996,300 @@ div.callout[data-callout-metadata*=ul-disclosure-open] ul {
 }
 
 /* obsi-snip-coll end */
+/* obsi-snip-coll start: writing-mode */
 body {
-  --flexcyon-callout-icon-right-padding: 4px;
-  --flexcyon-callout-pop-animation-duration: 200ms;
+  --flexcyon-editor-writing-indentation: 16px;
+}
+
+.flexcyon-editor-writing .cm-line,
+.editor-writing .cm-line,
+div.callout[data-callout*=writing] .callout-content p,
+div.callout[data-callout-metadata*=writing] .callout-content p {
+  margin-block-end: calc(1.25 * var(--p-spacing));
+  text-indent: var(--flexcyon-editor-writing-indentation);
+  overflow-wrap: break-word;
+  white-space: initial;
+}
+
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: lucide-icons */
+/* Note: Requires at least Obsidian 1.9.12 */
+.callout[data-callout*=lucide] {
+  --callout-icon: attr(data-callout);
+}
+
+.callout[data-callout-metadata*=lucide] {
+  --callout-icon: attr(data-callout-metadata);
+}
+
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: vertical-callout */
+body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])), .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-blue);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-blue);
+  writing-mode: vertical-lr;
+}
+body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
+.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-yellow], .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-yellow);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-yellow] .callout-title, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-yellow);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-yellow] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-yellow] .callout-content, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-blue], .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-blue);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-blue] .callout-title, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-blue);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-blue] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-blue] .callout-content, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-purple], .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-purple);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-purple] .callout-title, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-purple);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-purple] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-purple] .callout-content, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-red], .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-red);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-red] .callout-title, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-red);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-red] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-red] .callout-content, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-cyan], .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-cyan);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-cyan] .callout-title, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-cyan);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-cyan] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-cyan] .callout-content, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-pink], .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-pink);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-pink] .callout-title, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-pink);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-pink] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-pink] .callout-content, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-green], .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-green);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-green] .callout-title, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-green);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-green] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-green] .callout-content, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+.callout[data-callout*=vert-orange], .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-orange);
+  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+}
+.callout[data-callout*=vert-orange] .callout-title, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
+  justify-content: center;
+  padding: 8px 12px;
+  text-overflow: hidden;
+  color: var(--background-primary);
+  background-color: var(--color-orange);
+  writing-mode: vertical-lr;
+}
+.callout[data-callout*=vert-orange] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
+  color: var(--background-primary);
+}
+.callout[data-callout*=vert-orange] .callout-content, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
+  padding: 4px 12px;
+  margin-inline-start: 12px;
+}
+
+/* obsi-snip-coll end */
+/* obsi-snip-coll start: flashcard */
+body {
   --flexcyon-callouts-flashcard-width: 250px;
   --flexcyon-callouts-flashcard-height: 250px;
   --flexcyon-callout-flashcard-animation-duration: 500ms;
-  --flexcyon-editor-writing-indentation: 16px;
-  --callout-radius: 2px;
-  --flexcyon-callout-radix: 16px;
+}
+
+div.callout[data-callout*=flashcard],
+div.callout[data-callout-metadata*=flashcard] {
+  inline-size: var(--flexcyon-callouts-flashcard-width);
+  block-size: var(--flexcyon-callouts-flashcard-height);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
+}
+div.callout[data-callout*=flashcard] .callout-content,
+div.callout[data-callout-metadata*=flashcard] .callout-content {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+div.callout[data-callout*=flashcard] .callout-title,
+div.callout[data-callout-metadata*=flashcard] .callout-title {
+  position: absolute;
+  inset-block-start: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+div.callout[data-callout*=flashcard]:hover,
+div.callout[data-callout-metadata*=flashcard]:hover {
+  transform: rotateY(180deg);
+}
+div.callout[data-callout*=flashcard]:hover .callout-title,
+div.callout[data-callout-metadata*=flashcard]:hover .callout-title {
+  opacity: 0;
+}
+div.callout[data-callout*=flashcard]:hover .callout-content,
+div.callout[data-callout-metadata*=flashcard]:hover .callout-content {
+  opacity: 1;
+}
+
+/* obsi-snip-coll end */
+body {
+  --flexcyon-callout-pop-animation-duration: 200ms;
 }
 
 body.is-mobile .markdown-reading-view .callout[data-callout*="$pop"],
@@ -7038,63 +7334,7 @@ body.is-mobile .markdown-reading-view .callout[data-callout-metadata*="$pop"] {
   visibility: hidden;
 }
 
-div.callout[data-callout*=bg-grid] .callout-content,
-div.callout[data-callout-metadata*=bg-grid] .callout-content,
-div.callout[data-callout*=bg-dots] .callout-content,
-div.callout[data-callout-metadata*=bg-dots] .callout-content {
-  padding: 0 8px;
-  margin-block-start: 16px;
-}
-
-/* obsi-snip-coll start: flashcard */
-div.callout[data-callout*=flashcard],
-div.callout[data-callout-metadata*=flashcard] {
-  inline-size: var(--flexcyon-callouts-flashcard-width);
-  block-size: var(--flexcyon-callouts-flashcard-height);
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: transform var(--flexcyon-callout-flashcard-animation-duration) ease-in-out;
-}
-div.callout[data-callout*=flashcard] .callout-content,
-div.callout[data-callout-metadata*=flashcard] .callout-content {
-  opacity: 0;
-  transform: rotateY(180deg);
-}
-div.callout[data-callout*=flashcard] .callout-title,
-div.callout[data-callout-metadata*=flashcard] .callout-title {
-  position: absolute;
-  inset-block-start: 25%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-div.callout[data-callout*=flashcard]:hover,
-div.callout[data-callout-metadata*=flashcard]:hover {
-  transform: rotateY(180deg);
-}
-div.callout[data-callout*=flashcard]:hover .callout-title,
-div.callout[data-callout-metadata*=flashcard]:hover .callout-title {
-  opacity: 0;
-}
-div.callout[data-callout*=flashcard]:hover .callout-content,
-div.callout[data-callout-metadata*=flashcard]:hover .callout-content {
-  opacity: 1;
-}
-
-/* obsi-snip-coll end */
-/* obsi-snip-coll start: writing-mode */
-.flexcyon-editor-writing .cm-line,
-.editor-writing .cm-line,
-div.callout[data-callout*=writing] .callout-content p,
-div.callout[data-callout-metadata*=writing] .callout-content p {
-  margin-block-end: calc(1.25 * var(--p-spacing));
-  text-indent: var(--flexcyon-editor-writing-indentation);
-  overflow-wrap: break-word;
-  white-space: initial;
-}
-
-/* obsi-snip-coll end */
+/* obsi-snip-coll start: centre-image */
 div.callout[data-callout*=center-img],
 div.callout[data-callout-metadata*=center-img] {
   background-color: transparent;
@@ -7107,16 +7347,6 @@ div.callout[data-callout-metadata*=center-img] img {
   inline-size: max-content;
   max-inline-size: 85%;
   margin: 0 auto;
-}
-
-/* obsi-snip-coll start: lucide-icons */
-/* Note: Requires at least Obsidian 1.9.12 */
-.callout[data-callout*=lucide] {
-  --callout-icon: attr(data-callout);
-}
-
-.callout[data-callout-metadata*=lucide] {
-  --callout-icon: attr(data-callout-metadata);
 }
 
 /* obsi-snip-coll end */
@@ -7520,228 +7750,6 @@ body.flexcyon-plain-callouts .callout:not(:is([data-callout*=vertical], [data-ca
 .callout[data-callout*=plain-orange]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content,
 .callout[data-callout-metadata*=plain-orange]:not(:is([data-callout*=vertical], [data-callout*=tui], [data-callout-metadata*=vertical], [data-callout-metadata*=tui])) .callout-content {
   padding: 4px 12px;
-}
-
-/* obsi-snip-coll end */
-/* obsi-snip-coll start: vertical-callout */
-body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])),
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])), .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-blue);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-blue);
-  writing-mode: vertical-lr;
-}
-body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-body.flexcyon-vert-callouts .callout:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content,
-.callout[data-callout*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content, .callout[data-callout-metadata*=vertical]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-yellow], .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-yellow);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-yellow] .callout-title, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-yellow);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-yellow] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-yellow] .callout-content, .callout[data-callout-metadata*=vert-yellow]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-blue], .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-blue);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-blue] .callout-title, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-blue);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-blue] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-blue] .callout-content, .callout[data-callout-metadata*=vert-blue]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-purple], .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-purple);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-purple] .callout-title, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-purple);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-purple] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-purple] .callout-content, .callout[data-callout-metadata*=vert-purple]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-red], .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-red);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-red] .callout-title, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-red);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-red] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-red] .callout-content, .callout[data-callout-metadata*=vert-red]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-cyan], .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-cyan);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-cyan] .callout-title, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-cyan);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-cyan] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-cyan] .callout-content, .callout[data-callout-metadata*=vert-cyan]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-pink], .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-pink);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-pink] .callout-title, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-pink);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-pink] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-pink] .callout-content, .callout[data-callout-metadata*=vert-pink]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-green], .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-green);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-green] .callout-title, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-green);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-green] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-green] .callout-content, .callout[data-callout-metadata*=vert-green]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
-}
-
-.callout[data-callout*=vert-orange], .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  letter-spacing: 2px;
-  border: 1px solid var(--color-orange);
-  border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-}
-.callout[data-callout*=vert-orange] .callout-title, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title {
-  justify-content: center;
-  padding: 8px 12px;
-  text-overflow: hidden;
-  color: var(--background-primary);
-  background-color: var(--color-orange);
-  writing-mode: vertical-lr;
-}
-.callout[data-callout*=vert-orange] .callout-title .callout-icon svg, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-title .callout-icon svg {
-  color: var(--background-primary);
-}
-.callout[data-callout*=vert-orange] .callout-content, .callout[data-callout-metadata*=vert-orange]:not(:is([data-callout*=tui], [data-callout*=plain], [data-callout-metadata*=tui], [data-callout-metadata*=plain])) .callout-content {
-  padding: 4px 12px;
-  margin-inline-start: 12px;
 }
 
 /* obsi-snip-coll end */

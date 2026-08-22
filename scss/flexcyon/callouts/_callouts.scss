@@ -8,169 +8,22 @@
 @use "callout-modules/no_icon";
 @use "callout-modules/no_title";
 @use "callout-modules/bg-transaparent";
+@use "callout-modules/bg-effects";
 @use "callout-modules/color";
 @use "callout-modules/centre";
 @use "callout-modules/text";
 @use "callout-modules/list";
 @use "callout-modules/opacity";
-
-body {
-  --flexcyon-callout-icon-right-padding: 4px;
-  --flexcyon-callout-pop-animation-duration: 200ms;
-  --flexcyon-callouts-flashcard-width: 250px;
-  --flexcyon-callouts-flashcard-height: 250px;
-  --flexcyon-callout-flashcard-animation-duration: 500ms;
-  --flexcyon-editor-writing-indentation: 16px;
-  --callout-radius: 2px;
-  --flexcyon-callout-radix: 16px;
-}
-
-body.is-mobile {
-  .markdown-reading-view {
-    .callout[data-callout*="$pop"],
-    .callout[data-callout-metadata*="$pop"] {
-      inline-size: max(calc(var(--file-line-width) / 2), 40vw);
-      margin-inline-start: min(-5vw, -40px);
-    }
-  }
-}
-
-.markdown-source-view .callout[data-callout-metadata*="$pop"]:not(:hover) {
-  visibility: visible;
-}
-
-$pop-sel: '.callout[data-callout*="$pop"], .callout[data-callout-metadata*="$pop"]';
-
-.markdown-reading-view {
-  #{$pop-sel} {
-    position: absolute;
-    z-index: 999;
-    display: block;
-    inline-size: calc(var(--file-line-width) / 2 + min(3vw, 40px));
-    margin-inline-start: min(-3vw, -40px);
-    backdrop-filter: blur(20px);
-    transform: translateY(-70px);
-    transition: transform hover var(--flexcyon-callout-pop-animation-duration)
-      ease;
-
-    .callout-title {
-      margin-block-start: 2px;
-      margin-inline-start: 24px;
-    }
-
-    &:hover::before {
-      display: block;
-      border: none;
-      transition: hover var(--flexcyon-callout-pop-animation-duration) ease;
-    }
-
-    &::before {
-      position: absolute;
-      z-index: 1;
-      display: block;
-      visibility: visible;
-      padding: 2px;
-      color: var(--callout-color);
-      content: ">";
-    }
-
-    &:not(:hover) {
-      visibility: hidden;
-    }
-  }
-}
-
-div.callout[data-callout*="bg-grid"] .callout-content,
-div.callout[data-callout-metadata*="bg-grid"] .callout-content,
-div.callout[data-callout*="bg-dots"] .callout-content,
-div.callout[data-callout-metadata*="bg-dots"] .callout-content {
-  padding: 0 8px;
-  margin-block-start: 16px;
-}
-
-/* obsi-snip-coll start: flashcard */
-div.callout[data-callout*="flashcard"],
-div.callout[data-callout-metadata*="flashcard"] {
-  inline-size: var(--flexcyon-callouts-flashcard-width);
-  block-size: var(--flexcyon-callouts-flashcard-height);
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  transition: transform var(--flexcyon-callout-flashcard-animation-duration)
-    ease-in-out;
-
-  .callout-content {
-    opacity: 0;
-    transform: rotateY(180deg);
-  }
-
-  .callout-title {
-    position: absolute;
-    inset-block-start: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &:hover {
-    transform: rotateY(180deg);
-
-    .callout-title {
-      opacity: 0;
-    }
-
-    .callout-content {
-      opacity: 1;
-    }
-  }
-}
-
-/* obsi-snip-coll end */
-
-/* obsi-snip-coll start: writing-mode */
-.flexcyon-editor-writing .cm-line,
-.editor-writing .cm-line,
-div.callout[data-callout*="writing"] .callout-content p,
-div.callout[data-callout-metadata*="writing"] .callout-content p {
-  margin-block-end: calc(1.25 * var(--p-spacing));
-  text-indent: var(--flexcyon-editor-writing-indentation);
-  overflow-wrap: break-word;
-  white-space: initial;
-}
-
-/* obsi-snip-coll end */
-
-div.callout[data-callout*="center-img"],
-div.callout[data-callout-metadata*="center-img"] {
-  background-color: transparent;
-
-  img {
-    inset-inline: calc(16px + 4px * 2 + 4px * 2) 0;
-    display: flex;
-    justify-content: center;
-    inline-size: max-content;
-    max-inline-size: 85%;
-    margin: 0 auto;
-  }
-}
-
-/* obsi-snip-coll start: lucide-icons */
-
-/* Note: Requires at least Obsidian 1.9.12 */
-.callout[data-callout*="lucide"] {
-  --callout-icon: attr(data-callout);
-}
-
-.callout[data-callout-metadata*="lucide"] {
-  --callout-icon: attr(data-callout-metadata);
-}
-
-/* obsi-snip-coll end */
+@use "callout-modules/writing-mode";
+@use "callout-modules/lucide-icons";
+@use "callout-modules/vertical";
+@use "callout-modules/flashcard";
+@use "callout-modules/popup";
+@use "callout-modules/image";
 
 /* obsi-snip-coll start: tui-callout */
 $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], [data-callout-metadata*='vertical'], [data-callout-metadata*='plain']";
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
-$flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
 $tui-sel: '.callout[data-callout*="tui"], .callout[data-callout-metadata*="tui"], ';
 
 body.flexcyon-tui-no-icons {
@@ -337,80 +190,5 @@ body.flexcyon-plain-callouts .callout,
 @include plain-wrapper("pink");
 @include plain-wrapper("green");
 @include plain-wrapper("orange");
-
-/* obsi-snip-coll end */
-
-/* obsi-snip-coll start: vertical-callout */
-$vert-sel: '.callout[data-callout*="vertical"], .callout[data-callout-metadata*="vertical"]';
-
-body.flexcyon-vert-callouts .callout,
-#{$vert-sel} {
-  &:not(:is(#{$flexcyon-vert-exclusions})) {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    letter-spacing: 2px;
-    border: 1px solid var(--color-blue);
-    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-
-    .callout-title {
-      justify-content: center;
-      padding: 8px 12px;
-      text-overflow: hidden;
-      color: var(--background-primary);
-      background-color: var(--color-blue);
-      writing-mode: vertical-lr;
-
-      .callout-icon svg {
-        color: var(--background-primary);
-      }
-    }
-
-    .callout-content {
-      padding: 4px 12px;
-      margin-inline-start: 12px;
-    }
-  }
-}
-
-@mixin vert-wrapper($color) {
-  $vert-col-sel: '.callout[data-callout*="vert-#{$color}"], .callout[data-callout-metadata*="vert-#{$color}"]';
-
-  #{$vert-col-sel}:not(:is(#{$flexcyon-vert-exclusions})) {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    letter-spacing: 2px;
-    border: 1px solid var(--color-#{$color});
-    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
-
-    .callout-title {
-      justify-content: center;
-      padding: 8px 12px;
-      text-overflow: hidden;
-      color: var(--background-primary);
-      background-color: var(--color-#{$color});
-      writing-mode: vertical-lr;
-
-      .callout-icon svg {
-        color: var(--background-primary);
-      }
-    }
-
-    .callout-content {
-      padding: 4px 12px;
-      margin-inline-start: 12px;
-    }
-  }
-}
-
-@include vert-wrapper("yellow");
-@include vert-wrapper("blue");
-@include vert-wrapper("purple");
-@include vert-wrapper("red");
-@include vert-wrapper("cyan");
-@include vert-wrapper("pink");
-@include vert-wrapper("green");
-@include vert-wrapper("orange");
 
 /* obsi-snip-coll end */

@@ -1,0 +1,16 @@
+/* obsi-snip-coll start: writing-mode */
+body {
+  --flexcyon-editor-writing-indentation: 16px;
+}
+
+.flexcyon-editor-writing .cm-line,
+.editor-writing .cm-line,
+div.callout[data-callout*="writing"] .callout-content p,
+div.callout[data-callout-metadata*="writing"] .callout-content p {
+  margin-block-end: calc(1.25 * var(--p-spacing));
+  text-indent: var(--flexcyon-editor-writing-indentation);
+  overflow-wrap: break-word;
+  white-space: initial;
+}
+
+/* obsi-snip-coll end */

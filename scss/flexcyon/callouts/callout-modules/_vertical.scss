@@ -1,0 +1,75 @@
+/* obsi-snip-coll start: vertical-callout */
+$flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
+$vert-sel: '.callout[data-callout*="vertical"], .callout[data-callout-metadata*="vertical"]';
+
+body.flexcyon-vert-callouts .callout,
+#{$vert-sel} {
+  &:not(:is(#{$flexcyon-vert-exclusions})) {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    letter-spacing: 2px;
+    border: 1px solid var(--color-blue);
+    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+
+    .callout-title {
+      justify-content: center;
+      padding: 8px 12px;
+      text-overflow: hidden;
+      color: var(--background-primary);
+      background-color: var(--color-blue);
+      writing-mode: vertical-lr;
+
+      .callout-icon svg {
+        color: var(--background-primary);
+      }
+    }
+
+    .callout-content {
+      padding: 4px 12px;
+      margin-inline-start: 12px;
+    }
+  }
+}
+
+@mixin vert-wrapper($color) {
+  $vert-col-sel: '.callout[data-callout*="vert-#{$color}"], .callout[data-callout-metadata*="vert-#{$color}"]';
+
+  #{$vert-col-sel}:not(:is(#{$flexcyon-vert-exclusions})) {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    letter-spacing: 2px;
+    border: 1px solid var(--color-#{$color});
+    border-radius: calc(0.5 * var(--flexcyon-callout-radix));
+
+    .callout-title {
+      justify-content: center;
+      padding: 8px 12px;
+      text-overflow: hidden;
+      color: var(--background-primary);
+      background-color: var(--color-#{$color});
+      writing-mode: vertical-lr;
+
+      .callout-icon svg {
+        color: var(--background-primary);
+      }
+    }
+
+    .callout-content {
+      padding: 4px 12px;
+      margin-inline-start: 12px;
+    }
+  }
+}
+
+@include vert-wrapper("yellow");
+@include vert-wrapper("blue");
+@include vert-wrapper("purple");
+@include vert-wrapper("red");
+@include vert-wrapper("cyan");
+@include vert-wrapper("pink");
+@include vert-wrapper("green");
+@include vert-wrapper("orange");
+
+/* obsi-snip-coll end */

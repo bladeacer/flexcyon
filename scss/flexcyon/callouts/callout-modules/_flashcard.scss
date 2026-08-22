@@ -1,0 +1,44 @@
+/* obsi-snip-coll start: flashcard */
+body {
+  --flexcyon-callouts-flashcard-width: 250px;
+  --flexcyon-callouts-flashcard-height: 250px;
+  --flexcyon-callout-flashcard-animation-duration: 500ms;
+}
+
+div.callout[data-callout*="flashcard"],
+div.callout[data-callout-metadata*="flashcard"] {
+  inline-size: var(--flexcyon-callouts-flashcard-width);
+  block-size: var(--flexcyon-callouts-flashcard-height);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transition: transform var(--flexcyon-callout-flashcard-animation-duration)
+    ease-in-out;
+
+  .callout-content {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+
+  .callout-title {
+    position: absolute;
+    inset-block-start: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    transform: rotateY(180deg);
+
+    .callout-title {
+      opacity: 0;
+    }
+
+    .callout-content {
+      opacity: 1;
+    }
+  }
+}
+
+/* obsi-snip-coll end */

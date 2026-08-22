@@ -14,6 +14,9 @@ body {
   --flexcyon-callout-horiz-padding: 24px;
   --callout-padding: var(--flexcyon-callout-verti-padding)
     var(--flexcyon-callout-horiz-padding);
+  --flexcyon-callout-icon-right-padding: 4px;
+  --callout-radius: 2px;
+  --flexcyon-callout-radix: 16px;
 
   .callout {
     background-color: oklch(
