@@ -1,0 +1,17 @@
+@use "tategaki" as t;
+@use "vertical-ltr" as vltr;
+
+/* obsi-snip-coll start: no-title */
+#{t.$tategaki-sel},
+#{vltr.$vert-ltr-sel},
+div.callout[data-callout-metadata*="empty"],
+div.callout[data-callout*="empty"],
+div.callout[data-callout*="no-title"],
+div.callout[data-callout-metadata*="no-title"] {
+  .callout-title-inner,
+  .callout-title {
+    display: none;
+  }
+}
+
+/* obsi-snip-coll end */

@@ -1,0 +1,40 @@
+@use "./tategaki" as t;
+
+/* obsi-snip-coll start: vertical-ltr */
+$vert-ltr-sel: 'div.callout[data-callout*="vert-ltr"], div.callout[data-callout-metadata*="vert-lr"]';
+
+@mixin vert-ltr-heading-helper($heading-no) {
+  #{$heading-no} {
+    min-block-size: auto !important;
+  }
+}
+
+#{$vert-ltr-sel} {
+  div.callout-content {
+    max-inline-size: 95%;
+    min-block-size: max-content !important;
+    padding-block: 2vh 1vh;
+    margin: auto;
+    overflow: scroll;
+    overscroll-behavior: contain;
+    line-height: 1.61;
+    text-indent: 1rem;
+    letter-spacing: var(--font-ui-large);
+    writing-mode: vertical-lr;
+
+    @include t.tategaki-heading-helper("h1");
+    @include t.tategaki-heading-helper("h2");
+    @include t.tategaki-heading-helper("h3");
+    @include t.tategaki-heading-helper("h4");
+    @include t.tategaki-heading-helper("h5");
+    @include t.tategaki-heading-helper("h6");
+    @include vert-ltr-heading-helper("h1");
+    @include vert-ltr-heading-helper("h2");
+    @include vert-ltr-heading-helper("h3");
+    @include vert-ltr-heading-helper("h4");
+    @include vert-ltr-heading-helper("h5");
+    @include vert-ltr-heading-helper("h6");
+  }
+}
+
+/* obsi-snip-coll end */

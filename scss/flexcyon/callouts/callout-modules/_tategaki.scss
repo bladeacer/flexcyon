@@ -1,0 +1,34 @@
+/* obsi-snip-coll start: tategaki */
+
+$tategaki-sel: 'div.callout[data-callout*="tategaki"], div.callout[data-callout-metadata*="tategaki"]';
+
+@mixin tategaki-heading-helper($heading-no) {
+  #{$heading-no} {
+    margin-block-start: 0;
+    line-height: 1.61;
+    letter-spacing: var(--#{$heading_no}-size);
+  }
+}
+
+#{$tategaki-sel} {
+  div.callout-content {
+    max-inline-size: 95%;
+    padding-block: 2vh 1vh;
+    margin: auto;
+    overflow: scroll;
+    overscroll-behavior: contain;
+    line-height: 1.61;
+    text-indent: 1rem;
+    letter-spacing: var(--font-ui-large);
+    writing-mode: vertical-rl;
+
+    @include tategaki-heading-helper("h1");
+    @include tategaki-heading-helper("h2");
+    @include tategaki-heading-helper("h3");
+    @include tategaki-heading-helper("h4");
+    @include tategaki-heading-helper("h5");
+    @include tategaki-heading-helper("h6");
+  }
+}
+
+/* obsi-snip-coll end */

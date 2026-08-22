@@ -3831,22 +3831,33 @@ body.flexcyon-typewriter-mode .workspace-leaf.mod-active .workspace-leaf-content
 /* obsi-snip-coll end */
 /* Callout modifications */
 body {
-  --flexcyon-callout-bg-opacity: 12.5%;
-  --flexcyon-callout-icon-right-padding: 4px;
   --flexcyon-callout-first-codeblock-margin-top: 1rem;
   --flexcyon-callout-vertical-margin: 1em;
   --flexcyon-callout-horizontal-margin: 0em;
-  --flexcyon-callout-pop-animation-duration: 200ms;
-  --flexcyon-callouts-flashcard-width: 250px;
-  --flexcyon-callouts-flashcard-height: 250px;
-  --flexcyon-callout-flashcard-animation-duration: 500ms;
-  --flexcyon-editor-writing-indentation: 16px;
   --flexcyon-callout-verti-padding: 12px;
   --flexcyon-callout-horiz-padding: 24px;
   --callout-padding: var(--flexcyon-callout-verti-padding)
     var(--flexcyon-callout-horiz-padding);
-  --callout-radius: 2px;
-  --flexcyon-callout-radix: 16px;
+}
+body .callout {
+  background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
+  border-color: oklch(from var(--callout-color) l c h/var(--callout-border-opacity));
+}
+body .callout .callout-title {
+  color: var(--callout-color);
+}
+body .callout .callout-icon {
+  padding-inline-end: var(--flexcyon-callout-icon-right-padding);
+  margin-block-start: -0.5px;
+}
+body .callout .callout-content :first-child:is(pre, img, iframe) {
+  margin-block-start: var(--flexcyon-callout-first-codeblock-margin-top);
+}
+body .markdown-source-view.mod-cm6 .callout,
+body .callout {
+  margin: var(--flexcyon-callout-vertical-margin) var(--flexcyon-callout-horizontal-margin);
+}
+body {
   --callout-bug: var(--color-red);
   --callout-error: var(--color-red);
   --callout-fail: var(--color-red);
@@ -3932,24 +3943,6 @@ body .callout[data-callout*=quote],
 body .callout[data-callout-metadata*=quote] {
   --callout-color: var(--callout-quote);
   --callout-icon: lucide-quote;
-}
-body .callout {
-  background-color: oklch(from var(--callout-color) l c h/var(--flexcyon-callout-bg-opacity));
-  border-color: oklch(from var(--callout-color) l c h/var(--callout-border-opacity));
-}
-body .callout .callout-title {
-  color: var(--callout-color);
-}
-body .callout .callout-icon {
-  padding-inline-end: var(--flexcyon-callout-icon-right-padding);
-  margin-block-start: -0.5px;
-}
-body .callout .callout-content :first-child:is(pre, img, iframe) {
-  margin-block-start: var(--flexcyon-callout-first-codeblock-margin-top);
-}
-body .markdown-source-view.mod-cm6 .callout,
-body .callout {
-  margin: var(--flexcyon-callout-vertical-margin) var(--flexcyon-callout-horizontal-margin);
 }
 
 /* obsi-snip-coll start: tategaki */
@@ -4089,6 +4082,18 @@ div.callout[data-callout-metadata*=no-title] .callout-title {
 }
 
 /* obsi-snip-coll end */
+body {
+  --flexcyon-callout-bg-opacity: 12.5%;
+  --flexcyon-callout-icon-right-padding: 4px;
+  --flexcyon-callout-pop-animation-duration: 200ms;
+  --flexcyon-callouts-flashcard-width: 250px;
+  --flexcyon-callouts-flashcard-height: 250px;
+  --flexcyon-callout-flashcard-animation-duration: 500ms;
+  --flexcyon-editor-writing-indentation: 16px;
+  --callout-radius: 2px;
+  --flexcyon-callout-radix: 16px;
+}
+
 /* obsi-snip-coll start: bg-transparent */
 div.callout[data-callout*=bg-transparent],
 div.callout[data-callout-metadata*=bg-transparent],
