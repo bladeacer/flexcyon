@@ -1,4 +1,4 @@
-/* obsi-snip-coll start: vertical-callout */
+/*! obsi-snip-coll start: vertical-callout */
 $flexcyon-vert-exclusions: "[data-callout*='tui'], [data-callout*='plain'], [data-callout-metadata*='tui'], [data-callout-metadata*='plain']";
 $vert-sel: '.callout[data-callout*="vertical"], .callout[data-callout-metadata*="vertical"]';
 
@@ -72,4 +72,4 @@ body.flexcyon-vert-callouts .callout,
 @include vert-wrapper("green");
 @include vert-wrapper("orange");
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

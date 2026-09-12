@@ -5,7 +5,7 @@ body {
 
 $canvas-sel: ".workspace-leaf.mod-active .workspace-leaf-content[data-type='canvas']";
 
-/* obsi-snip-coll start: canvas-oklch-fix */
+/*! obsi-snip-coll start: canvas-oklch-fix */
 body.theme-dark,
 body.theme-light {
   --canvas-color: var(--text-normal) !important;
@@ -151,7 +151,7 @@ body #{$canvas-sel} {
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
 @media (hover: hover) {
   .canvas-control-item:hover {

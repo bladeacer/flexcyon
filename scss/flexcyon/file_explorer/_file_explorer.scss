@@ -22,7 +22,7 @@ body .workspace-split:not(.is-sidedock-collapsed) {
   }
 }
 
-/* obsi-snip-coll start: file-exts */
+/*! obsi-snip-coll start: file-exts */
 body.flexcyon-file-exp-dimmed-file-exts-enabled
   .workspace-split:not(.is-sidedock-collapsed) {
   :not(.novel-word-count--active) .nav-files-container > div > div,
@@ -62,9 +62,9 @@ body.flexcyon-file-exp-dimmed-file-exts-enabled
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: wrap-long-filenames */
+/*! obsi-snip-coll start: wrap-long-filenames */
 body.flexcyon-wrap-long-filenames {
   .tree-item-inner {
     overflow: visible;
@@ -73,7 +73,7 @@ body.flexcyon-wrap-long-filenames {
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
 @mixin nth-nav-folder-colors($color-map: (), $is-bg: 0) {
   $max-index: 0;

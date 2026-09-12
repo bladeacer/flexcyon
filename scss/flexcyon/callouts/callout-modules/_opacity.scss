@@ -1,4 +1,4 @@
-/* obsi-snip-coll start: opacity-callout */
+/*! obsi-snip-coll start: opacity-callout */
 @mixin opacity-wrapper($increment) {
   $i: 0;
 
@@ -26,4 +26,4 @@
 
 @include opacity-wrapper(0.05);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

@@ -37,9 +37,14 @@ function build() {
     // Sass compressed output concatenates adjacent loud comments as `*//*!...`,
     // so the naive `*/X` -> `*/\nX` rewrite corrupted every `@settings` block
     // that followed another comment.
+    //
+    // The obsi-snip-coll snippet markers are kept loud in the scss sources so
+    // they survive compression, then stripped of `!` here — the snippet
+    // extractor expects the canonical `/* obsi-snip-coll ... */` form.
     const clean = css
       .replace(/@charset "UTF-8";\n/g, '')
       .replace(/^\uFEFF/, '')
+      .replace(/\/\*! (obsi-snip-coll )/g, '/* $1')
       .replace(/\*\/(?![\/*\n])/g, '*/\n');
     parts.push(clean);
     fs.unlinkSync(tempFile);

@@ -29,7 +29,7 @@ export default {
     "scss/operator-no-unspaced": null,
 
     "prettier/prettier": true,
-    "csstools/use-logical": ("always" || true) || ("ignore" || false || null),
+    "csstools/use-logical": ["always"],
 
     "scales/font-sizes": [
       [
@@ -45,14 +45,14 @@ export default {
     "scales/font-weights": [500, 525, 900],
     "scales/space": [
       [
-        {"scale": [0, 0.5, 1, 2, 4, 6,  8, 10, 12, 16, 24, 28, 32, 36, 40, 44, 48, 50, 52], "units": ["px"]}
+        {"scale": [0, 0.5, 1, 2, 4, 6, 8, 10, 12, 16, 24, 28, 32, 36, 40, 44, 48, 50, 52], "units": ["px"]}
       ]
     ],
 
     // Plugins
     "plugin/no-low-performance-animation-properties": true,
     "plugin/no-unsupported-browser-features": [
-        true, {
+      true, {
         "severity": "warning",
         // minAppVersion in manifest.json is Obsidian 1.6.3, 
         // last Electron update to v28.2.3 was in Obsidian 1.5.8
@@ -67,11 +67,10 @@ export default {
         "ignorePartialSupport": true
       }
     ],
-    "plugin/use-defensive-css": [true, {
-      "severity": "warning",
-      "background-repeat": true,
-      "scroll-chaining": true,
-      "vendor-prefix-grouping": true
-    }]
+
+    // Defensive CSS rules (migrated from plugin/use-defensive-css)
+    "defensive-css/require-background-repeat": [true, { "severity": "warning" }],
+    "defensive-css/require-overscroll-behavior": [true, { "severity": "warning" }],
+    "defensive-css/no-mixed-vendor-prefixes": [true, { "severity": "warning" }]
   }
 };

@@ -1,4 +1,4 @@
-/* obsi-snip-coll start: lists */
+/*! obsi-snip-coll start: lists */
 @mixin callout-list($style-type) {
   div.callout[data-callout*="li-#{$style-type}"],
   div.callout[data-callout-metadata*="li-#{$style-type}"],
@@ -78,4 +78,4 @@
 @include callout-list(upper-armenian);
 @include callout-list(disclosure-open);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

@@ -1,6 +1,6 @@
 @use "./tategaki" as t;
 
-/* obsi-snip-coll start: vertical-ltr */
+/*! obsi-snip-coll start: vertical-ltr */
 $vert-ltr-sel: 'div.callout[data-callout*="vert-ltr"], div.callout[data-callout-metadata*="vert-lr"]';
 
 @mixin vert-ltr-heading-helper($heading-no) {
@@ -37,4 +37,4 @@ $vert-ltr-sel: 'div.callout[data-callout*="vert-ltr"], div.callout[data-callout-
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

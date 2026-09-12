@@ -2,7 +2,7 @@ body {
   --flexcyon-callout-bg-opacity: 12.5%;
 }
 
-/* obsi-snip-coll start: color */
+/*! obsi-snip-coll start: color */
 @mixin callout-color($color-name, $color-var) {
   div.callout[data-callout*="all-#{$color-name}"],
   div.callout[data-callout-metadata*="all-#{$color-name}"],
@@ -42,9 +42,9 @@ body {
 @include callout-color("green", "color-green");
 @include callout-color("orange", "color-orange");
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: extended-color-palette */
+/*! obsi-snip-coll start: extended-color-palette */
 @mixin callout-ext-color($color-1, $color-2) {
   $color-1-wrapper: "#{$color-1}-#{$color-2}";
   $color-2-wrapper: "#{$color-2}-#{$color-1}";
@@ -107,4 +107,4 @@ body {
 @include callout-ext-color(blue, pink);
 @include callout-ext-color(purple, pink);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

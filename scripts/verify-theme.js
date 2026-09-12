@@ -71,12 +71,17 @@ for (const [name, { file, style }] of Object.entries(styles)) {
 
   if (style !== 'expanded') {
     const loudComments = [...css.matchAll(/\/\*[\s\S]*?\*\//g)].map((m) => m[0]);
-    const nonSettings = loudComments.filter((c) => !c.includes('@settings'));
-    if (nonSettings.length > 0) {
+    // Only Style Settings metadata and obsi-snip-coll snippet markers are
+    // meant to survive compression; any other loud comment is a mistake that
+    // silently bloats theme.css.
+    const unexpected = loudComments.filter(
+      (c) => !c.includes('@settings') && !c.includes('obsi-snip-coll'),
+    );
+    if (unexpected.length > 0) {
       fail(
         `module "${name}" (${file}) is declared style: "compressed" but keeps ` +
-          `${nonSettings.length} loud comment(s) that are not @settings metadata ` +
-          `(first: ${JSON.stringify(nonSettings[0].slice(0, 60))}). ` +
+          `${unexpected.length} loud comment(s) that are neither @settings metadata ` +
+          `nor snippet markers (first: ${JSON.stringify(unexpected[0].slice(0, 60))}). ` +
           `Use a silent comment (// or /* */) so it gets stripped.`,
       );
       continue;
@@ -123,6 +128,50 @@ if (!css.startsWith('/*!\nFlexcyon: Made by mixing')) {
       `theme.css has an orphaned comment fragment at line ${orphanLine + 1} ` +
         `(a "*/" -> next-comment join got corrupted)`,
     );
+  }
+}
+
+// 4. obsi-snip-coll snippet markers: the snippet extractor scans the built
+//    theme.css for `/* obsi-snip-coll start: name */ ... end */`, so every
+//    marker in the scss sources must survive the build in canonical form
+//    (loud in sources, stripped of "!" in the output).
+{
+  const sourceStarts = new Set();
+  for (const dir of ['scss/flexcyon', 'scss/modifiers']) {
+    const walk = (d) => {
+      for (const entry of fs.readdirSync(d, { withFileTypes: true })) {
+        const p = path.join(d, entry.name);
+        if (entry.isDirectory()) walk(p);
+        else if (entry.name.endsWith('.scss')) {
+          for (const m of fs.readFileSync(p, 'utf8').matchAll(/obsi-snip-coll\s+start:\s*([\w-]+)/g)) {
+            sourceStarts.add(m[1]);
+          }
+        }
+      }
+    };
+    walk(dir);
+  }
+
+  const builtStarts = [...css.matchAll(/\/\*\s*obsi-snip-coll\s+start:\s*([\w-]+)/g)].map((m) => m[1]);
+  const builtEnds = [...css.matchAll(/\/\*\s*obsi-snip-coll\s+end\s*\*\//g)].length;
+
+  const missing = [...sourceStarts].filter((s) => !builtStarts.includes(s));
+  if (missing.length) {
+    fail(
+      `${missing.length} obsi-snip-coll snippet marker(s) from the scss sources did not ` +
+        `survive the build: ${missing.join(', ')}`,
+    );
+  } else {
+    ok(`${builtStarts.length} snippet marker(s) present, all ${sourceStarts.size} source snippet(s) accounted for`);
+  }
+
+  if (builtStarts.length !== builtEnds) {
+    fail(`unbalanced obsi-snip-coll markers: ${builtStarts.length} start(s) vs ${builtEnds} end(s)`);
+  }
+
+  const loudInOutput = [...css.matchAll(/\/\*!\s*obsi-snip-coll/g)].length;
+  if (loudInOutput > 0) {
+    fail(`${loudInOutput} snippet marker(s) kept their "/*!" form in theme.css — the extractor expects "/*"`);
   }
 }
 

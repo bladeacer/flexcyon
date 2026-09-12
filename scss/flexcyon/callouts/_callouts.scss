@@ -21,7 +21,7 @@
 @use "callout-modules/popup";
 @use "callout-modules/image";
 
-/* obsi-snip-coll start: tui-callout */
+/*! obsi-snip-coll start: tui-callout */
 $flexcyon-tui-exclusions: "[data-callout*='vertical'], [data-callout*='plain'], [data-callout-metadata*='vertical'], [data-callout-metadata*='plain']";
 $flexcyon-plain-exclusions: "[data-callout*='vertical'], [data-callout*='tui'], [data-callout-metadata*='vertical'], [data-callout-metadata*='tui']";
 $tui-sel: '.callout[data-callout*="tui"], .callout[data-callout-metadata*="tui"], ';
@@ -90,7 +90,7 @@ body #{$tui-sel} {
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
 $border-tui-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
 
@@ -127,7 +127,7 @@ $border-tui-sel: '[data-callout*="tui"], [data-callout-metadata*="tui"]';
 @include border-wrapper("green");
 @include border-wrapper("orange");
 
-/* obsi-snip-coll start: plain-callout */
+/*! obsi-snip-coll start: plain-callout */
 $pln-sel: '.callout[data-callout*="pln"], .callout[data-callout-metadata*="pln"]';
 
 body.flexcyon-plain-callouts .callout,
@@ -191,4 +191,4 @@ body.flexcyon-plain-callouts .callout,
 @include plain-wrapper("green");
 @include plain-wrapper("orange");
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

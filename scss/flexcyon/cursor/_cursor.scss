@@ -1,11 +1,11 @@
-/* obsi-snip-coll start: cursor-type */
+/*! obsi-snip-coll start: cursor-type */
 body {
   --flexcyon-cursor-type: auto;
 
   cursor: var(--flexcyon-cursor-type);
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
 // This needs !important because the devs placed the animation duration inside the html tag :v
 body.flexcyon-disable-vim-cursor-blink {
@@ -27,7 +27,7 @@ body .is-flashing {
   color: inherit;
 }
 
-/* obsi-snip-coll start: smooth-cursor */
+/*! obsi-snip-coll start: smooth-cursor */
 
 body.flexcyon-enable-smooth-cursor {
   --flexcyon-cursor-duration: 42.5ms;
@@ -43,4 +43,4 @@ body.flexcyon-enable-smooth-cursor {
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */

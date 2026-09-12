@@ -1,4 +1,4 @@
-/* obsi-snip-coll start: text-direction */
+/*! obsi-snip-coll start: text-direction */
 @mixin callout-dir($dir) {
   div.callout[data-callout*="#{$dir}-all"],
   div.callout[data-callout-metadata*="#{$dir}-all"],
@@ -36,9 +36,9 @@
 @include callout-dir(rtl);
 @include callout-dir(ltr);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: text-transform */
+/*! obsi-snip-coll start: text-transform */
 @mixin callout-text-transform($transform) {
   div.callout[data-callout*="#{$transform}-all"],
   div.callout[data-callout-metadata*="#{$transform}-all"],
@@ -89,9 +89,9 @@
 @include callout-text-transform(capitalize);
 @include callout-text-transform(caps);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: tilt */
+/*! obsi-snip-coll start: tilt */
 $tilt-all-sel: 'div.callout[data-callout*="tilt-all"], div.callout[data-callout-metadata*="tilt-all"], ';
 
 #{$tilt-all-sel},
@@ -110,9 +110,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
   }
 }
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: font-style */
+/*! obsi-snip-coll start: font-style */
 @mixin callout-font-style($style) {
   div.callout[data-callout*="#{$style}-all"],
   div.callout[data-callout-metadata*="#{$style}-all"],
@@ -136,9 +136,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-font-style(italic);
 @include callout-font-style(oblique);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: text-decoration */
+/*! obsi-snip-coll start: text-decoration */
 @mixin callout-text-decor($callout-name) {
   div.callout[data-callout*="#{$callout-name}-all"],
   div.callout[data-callout-metadata*="#{$callout-name}-all"],
@@ -166,9 +166,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-decor(underline);
 @include callout-text-decor(line-through);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: heading-title */
+/*! obsi-snip-coll start: heading-title */
 @mixin callout-title-heading($heading_no) {
   div.callout[data-callout*="#{$heading_no}-title"],
   div.callout[data-callout-metadata*="#{$heading_no}-title"] {
@@ -190,9 +190,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-title-heading(h5);
 @include callout-title-heading(h6);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: font-weight */
+/*! obsi-snip-coll start: font-weight */
 @mixin callout-text-font-weight($font-weight) {
   div.callout[data-callout*="w-#{$font-weight}-all"],
   div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
@@ -226,9 +226,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include callout-text-font-weight(bolder);
 @include callout-text-font-weight(lighter);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: set-font */
+/*! obsi-snip-coll start: set-font */
 @mixin font-toggler($font-type) {
   div.callout[data-callout*="font-#{$font-type}-all"],
   div.callout[data-callout-metadata*="font-#{$font-type}-all"],
@@ -253,9 +253,9 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include font-toggler(text);
 @include font-toggler(monospace);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
 
-/* obsi-snip-coll start: font-size-callout */
+/*! obsi-snip-coll start: font-size-callout */
 @mixin font-size-wrapper($size) {
   .callout[data-callout*="title-#{$size}"],
   .callout[data-callout-metadata*="title-#{$size}"],
@@ -280,4 +280,4 @@ div.callout[data-callout-metadata*="tilt-content"] {
 @include font-size-wrapper(medium);
 @include font-size-wrapper(large);
 
-/* obsi-snip-coll end */
+/*! obsi-snip-coll end */
