@@ -11,8 +11,8 @@
     "lint-once": "node scripts/lint.mjs",
     "fix": "node scripts/lint.mjs --fix",
     "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
-    "compile-once": "sass --no-source-map scss/theme.scss theme.css",
-    "pre-push": "node scripts/lint.mjs --fix && $npm_execpath run compile-once"
+    "compile-once": "node scripts/build.js",
+    "pre-push": "node scripts/lint.mjs --fix && node scripts/build.js"
   },
   "repository": {
     "type": "git",
