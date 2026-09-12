@@ -29,10 +29,15 @@ function build() {
   const parts = [];
   for (const [name, tempFile] of Object.entries(tempFiles)) {
     const css = fs.readFileSync(tempFile, 'utf8');
+    // Push any rule that got glued to the tail of a loud comment (`*/body{...}`)
+    // onto its own line, without eating the `/` that opens a following comment.
+    // Sass compressed output concatenates adjacent loud comments as `*//*!...`,
+    // so the naive `*/X` -> `*/\nX` rewrite corrupted every `@settings` block
+    // that followed another comment.
     const clean = css
       .replace(/@charset "UTF-8";\n/g, '')
       .replace(/^\uFEFF/, '')
-      .replace(/\*\/[^\n]/g, match => match + '\n');
+      .replace(/\*\/(?![\/*\n])/g, '*/\n');
     parts.push(clean);
     fs.unlinkSync(tempFile);
   }
