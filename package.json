@@ -10,7 +10,7 @@
     "lint": "onchange 'scss/**/*.scss' -- node scripts/lint.mjs {{changed}}",
     "lint-once": "node scripts/lint.mjs",
     "fix": "node scripts/lint.mjs --fix",
-    "dev": "sass --watch --no-source-map scss/theme.scss theme.css",
+    "dev": "node scripts/build.js --watch",
     "compile-once": "node scripts/build.js",
     "pre-push": "node scripts/lint.mjs --fix && node scripts/build.js"
   },
@@ -29,6 +29,7 @@
   "devDependencies": {
     "onchange": "^7.1.0",
     "prettier": "^3.9.6",
+    "sass": "^1.104.0",
     "stylelint-config-obsidianmd": "^0.1.0",
     "stylelint-config-recess-order": "^7.7.0",
     "stylelint-config-standard-scss": "^17.0.0",

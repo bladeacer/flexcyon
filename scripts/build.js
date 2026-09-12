@@ -1,23 +1,43 @@
-const { execSync } = require('child_process');
+const sass = require('sass');
 const fs = require('node:fs');
 
-execSync('npx sass --no-source-map --style=expanded scss/_flexcyon.scss .tmp-flexcyon.css', { cwd: process.cwd() });
-execSync('npx sass --no-source-map --style=compressed scss/foundations.scss .tmp-foundations.css', { cwd: process.cwd() });
-execSync('npx sass --no-source-map --style=expanded scss/_modifiers.scss .tmp-modifiers.css', { cwd: process.cwd() });
+const styles = {
+  flexcyon: { file: '_flexcyon.scss', style: 'expanded' },
+  foundations: { file: 'foundations.scss', style: 'compressed' },
+  new_tab: { file: 'new_tab.scss', style: 'compressed' },
+  style_settings: { file: 'style_settings.scss', style: 'compressed' },
+  others: { file: 'others.scss', style: 'compressed' },
+  modifiers: { file: '_modifiers.scss', style: 'expanded' },
+  plugins: { file: 'plugins.scss', style: 'compressed' },
+  snippets: { file: 'snippets.scss', style: 'compressed' },
+};
 
-const flexcyonCss = fs.readFileSync('.tmp-flexcyon.css', 'utf8');
-const foundationsCss = fs.readFileSync('.tmp-foundations.css', 'utf8');
-const modifiersCss = fs.readFileSync('.tmp-modifiers.css', 'utf8');
+function build() {
+  const tempFiles = {};
+  for (const [name, { file, style }] of Object.entries(styles)) {
+    const tempFile = `.tmp-${name}.css`;
+    const srcFile = `scss/${file}`;
+    const result = sass.compile(srcFile, {
+      style,
+      sourceMap: false,
+      loadPaths: ['scss'],
+    });
+    fs.writeFileSync(tempFile, result.css);
+    tempFiles[name] = tempFile;
+  }
 
-const stripCharset = (css) => css.replace(/@charset "UTF-8";\n/g, '');
-const stripBom = (css) => css.replace(/^\uFEFF/, '');
-const fixCompressed = (css) => css.replace('*/body{', '*/\nbody{');
+  const parts = [];
+  for (const [name, tempFile] of Object.entries(tempFiles)) {
+    const css = fs.readFileSync(tempFile, 'utf8');
+    const clean = css
+      .replace(/@charset "UTF-8";\n/g, '')
+      .replace(/^\uFEFF/, '')
+      .replace(/\*\/[^\n]/g, match => match + '\n');
+    parts.push(clean);
+    fs.unlinkSync(tempFile);
+  }
 
-const flexcyonClean = stripCharset(stripBom(flexcyonCss));
-const foundationsClean = stripCharset(stripBom(fixCompressed(foundationsCss)));
-const modifiersClean = stripCharset(stripBom(modifiersCss));
-
-const header = `/*!
+  const header = `/*!
 Flexcyon: Made by mixing the Flexoki, Halcyon and Origami color scheme
 License: MIT
 Repository: https://github.com/bladeacer/flexcyon
@@ -27,8 +47,12 @@ Documentation (Chinese): https://flexcyon.github.io/docs-en/zh
 
 `;
 
-fs.writeFileSync('theme.css', header + flexcyonClean + '\n' + foundationsClean + '\n' + modifiersClean);
+  fs.writeFileSync('theme.css', header + parts.join('\n') + '\n');
+}
 
-fs.unlinkSync('.tmp-flexcyon.css');
-fs.unlinkSync('.tmp-foundations.css');
-fs.unlinkSync('.tmp-modifiers.css');
+if (process.argv.includes('--watch')) {
+  const onchange = require('onchange');
+  onchange('scss/**/*.scss', { persistent: true }, () => build());
+} else {
+  build();
+}
