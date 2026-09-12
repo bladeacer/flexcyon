@@ -10,7 +10,7 @@
 //   3. A Style Settings @settings block is missing or malformed. Obsidian
 //      silently drops all theme defaults and class toggles when they break,
 //      which is what killed heading colours and theme cssclasses before.
-//   4. The new_tab module is no longer expanded: compressed output collapses
+//   4. The ascii_art module is no longer expanded: compressed output collapses
 //      the ASCII art's `\a\` line continuations into `\ `, destroying the
 //      art's leading spaces.
 //
@@ -94,12 +94,12 @@ for (const [name, { file, style }] of Object.entries(styles)) {
 }
 
 // ---------------------------------------------------------------------------
-// 1b. The new_tab module must stay expanded (see build.js). Compressed output
+// 1b. The ascii_art module must stay expanded (see build.js). Compressed output
 //     turns the ASCII art's `\a\` + newline continuations into `\ `, which
 //     strips the leading spaces that make up the art.
 // ---------------------------------------------------------------------------
 {
-  const { file, style } = styles.new_tab;
+  const { file, style } = styles.ascii_art;
   const result = sass.compile(path.join('scss', file), {
     style,
     sourceMap: false,
@@ -107,11 +107,11 @@ for (const [name, { file, style }] of Object.entries(styles)) {
   });
   if (!result.css.includes('\\a\\\n')) {
     fail(
-      `module "new_tab" (${file}) lost the ASCII art line continuations ` +
+      `module "ascii_art" (${file}) lost the ASCII art line continuations ` +
         `("\\a\\" + newline) — it must stay style: "expanded"`,
     );
   } else {
-    ok('new_tab ASCII art line continuations preserved');
+    ok('ascii_art ASCII art line continuations preserved');
   }
 }
 

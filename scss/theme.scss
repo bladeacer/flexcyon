@@ -1,15 +1,24 @@
 /*!
-Flexcyon: Made by mixing the Flexoki, Halcyon and Origami color scheme 
+Flexcyon: Made by mixing the Flexoki, Halcyon and Origami color scheme
 License: MIT
-Repository: https://github.com/bladeacer/flexcyon 
+Repository: https://github.com/bladeacer/flexcyon
 Documentation (English): https://flexcyon.github.io/docs-en
 Documentation (Chinese): https://flexcyon.github.io/docs-en/zh
 */
 
-@use "./flexcyon";
-@use "./foundations";
-@use "./new_tab";
-@use "./style_settings";
-@use "./others";
-@use "./plugins";
-@use "./snippets";
+// Each @use target below is compiled separately by scripts/build.js and
+// concatenated (in this order) into theme.css. The compile style per entry —
+// expanded vs compressed — is declared in the styles map in build.js; keep
+// the two files in sync.
+
+// --- Whitespace-sensitive: expanded (see build.js for why) -----------------
+@use "./flexcyon/style_settings"; // expanded: loud /*! @settings metadata blocks must survive compression
+@use "./flexcyon/new_tab/new-tab-modules/ascii-art"; // expanded: ASCII art "\a\" line continuations collapse to "\ " when minified
+
+// --- Safe to minify: compressed --------------------------------------------
+@use "./flexcyon"; // core UI modules: gutters, callouts, scrollbars, settings, workspace, …
+@use "./foundations"; // colors, typography, headings, tabs, inputs, graph, …
+@use "./flexcyon/new_tab/new_tab"; // empty-state/quote/rtz-mode rules + number-tabs snippet — quoted "\a" escapes survive compression
+@use "./flexcyon/others/others"; // misc rules — no @settings metadata or ASCII art, safe to minify
+@use "./plugins"; // plugin-specific styling (Canvas, Dataview, Slides, …)
+@use "./snippets"; // obsi-snip-coll extractable snippets (banner, fmc-i)

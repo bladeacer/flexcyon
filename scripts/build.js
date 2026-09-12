@@ -1,27 +1,38 @@
 const sass = require('sass');
 const fs = require('node:fs');
 
+// Every module is compiled separately and concatenated into theme.css in the
+// order its @use appears in scss/theme.scss — which also documents, per line,
+// how each module is compiled. Keep the two files in sync.
+//
 // Every module is compiled minified. Loud /*! comments (e.g. the Style
 // Settings @settings metadata in the style_settings module) survive
 // compression on purpose; regular silent comments do not. Run
 // `node scripts/verify-theme.js` after building to enforce both.
 //
-// Exceptions that must stay expanded:
-//   - new_tab: compressed output collapses the ASCII art's `\a\` line
+// Exceptions that must stay expanded (whitespace-sensitive output):
+//   - style_settings: the @settings metadata files (and their ASCII-art
+//     default) must survive compression; only _style_settings_styles.scss
+//     (the CSS styling the Style Settings UI) is minified.
+//   - ascii_art: compressed output collapses the ASCII art's `\a\` line
 //     continuations into `\ `, destroying every line's leading spaces.
-//   - style_settings: only `_style_settings_styles.scss` is minified; the
-//     @settings metadata files (and their ASCII-art default) are kept
-//     expanded on purpose.
 const styles = {
   flexcyon: { file: '_flexcyon.scss', style: 'compressed' },
   foundations: { file: 'foundations.scss', style: 'compressed' },
-  new_tab: { file: 'new_tab.scss', style: 'expanded' },
+  ascii_art: {
+    file: 'flexcyon/new_tab/new-tab-modules/_ascii-art.scss',
+    style: 'expanded',
+  },
+  new_tab: {
+    file: 'flexcyon/new_tab/_new_tab.scss',
+    style: 'compressed',
+  },
   style_settings_styles: {
     file: 'flexcyon/style_settings/_style_settings_styles.scss',
     style: 'compressed',
   },
   style_settings: { file: 'style_settings.scss', style: 'expanded' },
-  others: { file: 'others.scss', style: 'compressed' },
+  others: { file: 'flexcyon/others/_others.scss', style: 'compressed' },
   plugins: { file: 'plugins.scss', style: 'compressed' },
   snippets: { file: 'snippets.scss', style: 'compressed' },
 };

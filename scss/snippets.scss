@@ -1,1 +1,5 @@
-@use "./modifiers/snippets/snippets";
+// Extractable snippets (obsi-snip-coll blocks), compiled compressed —
+// the obsi-snip-coll markers are kept loud in the partials so they survive
+// minification (build.js strips the "!"; verify-theme.js enforces it).
+@use "./modifiers/snippets/banner/banner";
+@use "./modifiers/snippets/fmc-i/fmc-i";
