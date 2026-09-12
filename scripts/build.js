@@ -1,13 +1,16 @@
 const sass = require('sass');
 const fs = require('node:fs');
 
+// Every module is compiled minified. Loud /*! comments (e.g. the Style
+// Settings @settings metadata in the style_settings module) survive
+// compression on purpose; regular silent comments do not. Run
+// `node scripts/verify-theme.js` after building to enforce both.
 const styles = {
-  flexcyon: { file: '_flexcyon.scss', style: 'expanded' },
+  flexcyon: { file: '_flexcyon.scss', style: 'compressed' },
   foundations: { file: 'foundations.scss', style: 'compressed' },
   new_tab: { file: 'new_tab.scss', style: 'compressed' },
   style_settings: { file: 'style_settings.scss', style: 'compressed' },
   others: { file: 'others.scss', style: 'compressed' },
-  modifiers: { file: '_modifiers.scss', style: 'expanded' },
   plugins: { file: 'plugins.scss', style: 'compressed' },
   snippets: { file: 'snippets.scss', style: 'compressed' },
 };
@@ -55,9 +58,13 @@ Documentation (Chinese): https://flexcyon.github.io/docs-en/zh
   fs.writeFileSync('theme.css', header + parts.join('\n') + '\n');
 }
 
-if (process.argv.includes('--watch')) {
-  const onchange = require('onchange');
-  onchange('scss/**/*.scss', { persistent: true }, () => build());
-} else {
-  build();
+if (require.main === module) {
+  if (process.argv.includes('--watch')) {
+    const onchange = require('onchange');
+    onchange('scss/**/*.scss', { persistent: true }, () => build());
+  } else {
+    build();
+  }
 }
+
+module.exports = { styles };

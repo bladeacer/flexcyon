@@ -12,7 +12,8 @@
     "fix": "node scripts/lint.mjs --fix",
     "dev": "node scripts/build.js --watch",
     "compile-once": "node scripts/build.js",
-    "pre-push": "node scripts/lint.mjs --fix && node scripts/build.js"
+    "verify-theme": "node scripts/verify-theme.js",
+    "pre-push": "node scripts/lint.mjs --fix && node scripts/build.js && node scripts/verify-theme.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   "homepage": "https://github.com/bladeacer/flexcyon",
   "devDependencies": {
     "onchange": "^7.1.0",
+    "postcss": "^8.5.28",
     "prettier": "^3.9.6",
     "sass": "^1.104.0",
     "stylelint-config-obsidianmd": "^0.1.0",
