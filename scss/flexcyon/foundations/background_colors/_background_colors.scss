@@ -83,9 +83,11 @@ body.flexcyon-editor-grid .view-content [class*="markdown-"] {
       transparent 1px,
       transparent var(--flexcyon-editor-bg-width)
     );
+  background-repeat: repeat;
 
   * {
     background-image: none;
+    background-repeat: no-repeat;
   }
 }
 
@@ -109,9 +111,11 @@ body.flexcyon-sidebar-bg-grid {
         transparent 1px,
         transparent var(--flexcyon-editor-bg-width)
       );
+    background-repeat: repeat;
 
     * {
       background-image: none;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -133,6 +137,7 @@ body.flexcyon-editor-dots .view-content [class*="markdown-"] {
 
   * {
     background-image: none;
+    background-repeat: no-repeat;
   }
 }
 
@@ -155,6 +160,7 @@ body.flexcyon-sidebar-bg-dots {
 
     * {
       background-image: none;
+      background-repeat: no-repeat;
     }
   }
 }
@@ -181,6 +187,7 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
       transparent 1px,
       transparent var(--flexcyon-editor-bg-width)
     );
+  background-repeat: repeat;
 
   .canvas-background {
     display: none;
@@ -188,6 +195,7 @@ body.flexcyon-editor-rhombus .view-content [class*="markdown-"] {
 
   * {
     background-image: none;
+    background-repeat: no-repeat;
   }
 }
 
@@ -211,6 +219,7 @@ body.flexcyon-sidebar-bg-rhombus {
         transparent 1px,
         transparent var(--flexcyon-editor-bg-width)
       );
+    background-repeat: repeat;
 
     .canvas-background {
       display: none;
@@ -218,6 +227,7 @@ body.flexcyon-sidebar-bg-rhombus {
 
     * {
       background-image: none;
+      background-repeat: no-repeat;
     }
   }
 }

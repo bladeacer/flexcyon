@@ -59,6 +59,7 @@ body {
       content: $data-task;
       background-color: inherit;
       mask-image: none;
+      mask-repeat: no-repeat;
     }
   }
 }
@@ -115,6 +116,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       content: "------";
       background-color: inherit;
       mask-image: none;
+      mask-repeat: no-repeat;
       transform: translate(-15%, -17.5%);
     }
   }
@@ -183,6 +185,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       content: "*";
       background-color: inherit;
       mask-image: none;
+      mask-repeat: no-repeat;
     }
   }
 
@@ -236,6 +239,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       content: '"';
       background-color: inherit;
       mask-image: none;
+      mask-repeat: no-repeat;
     }
   }
 
@@ -257,6 +261,7 @@ body.flexcyon-ascii-checkboxes-enabled {
       content: "i";
       background-color: inherit;
       mask-image: none;
+      mask-repeat: no-repeat;
       scale: var(--upsize);
     }
   }

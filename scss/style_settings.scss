@@ -1,1 +1,10 @@
-@use "./flexcyon/style_settings/style_settings";
+@use "./flexcyon/style_settings/style_settings_about";
+@use "./flexcyon/style_settings/style_settings_modes";
+@use "./flexcyon/style_settings/style_settings_a11y";
+@use "./flexcyon/style_settings/style_settings_mobile";
+@use "./flexcyon/style_settings/style_settings_editor";
+@use "./flexcyon/style_settings/style_settings_settings";
+@use "./flexcyon/style_settings/style_settings_plugins";
+
+/* Note the ASCII art default is very sensitive and breaks with whitespace change. */
+@use "./flexcyon/style_settings/style_settings_others";

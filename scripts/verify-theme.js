@@ -10,6 +10,9 @@
 //   3. A Style Settings @settings block is missing or malformed. Obsidian
 //      silently drops all theme defaults and class toggles when they break,
 //      which is what killed heading colours and theme cssclasses before.
+//   4. The new_tab module is no longer expanded: compressed output collapses
+//      the ASCII art's `\a\` line continuations into `\ `, destroying the
+//      art's leading spaces.
 //
 // Usage: node scripts/verify-theme.js
 
@@ -87,6 +90,28 @@ for (const [name, { file, style }] of Object.entries(styles)) {
       continue;
     }
     ok(`module "${name}" is fully minified`);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// 1b. The new_tab module must stay expanded (see build.js). Compressed output
+//     turns the ASCII art's `\a\` + newline continuations into `\ `, which
+//     strips the leading spaces that make up the art.
+// ---------------------------------------------------------------------------
+{
+  const { file, style } = styles.new_tab;
+  const result = sass.compile(path.join('scss', file), {
+    style,
+    sourceMap: false,
+    loadPaths: ['scss'],
+  });
+  if (!result.css.includes('\\a\\\n')) {
+    fail(
+      `module "new_tab" (${file}) lost the ASCII art line continuations ` +
+        `("\\a\\" + newline) — it must stay style: "expanded"`,
+    );
+  } else {
+    ok('new_tab ASCII art line continuations preserved');
   }
 }
 

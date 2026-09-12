@@ -15,6 +15,8 @@ body.highlightr-lowlight
       transparent 25%,
       var(--lowlight-background) 40%
     ) !important;
+
+  background-repeat: repeat;
 }
 
 body.highlightr-floating
@@ -29,6 +31,7 @@ body.highlightr-floating
     transparent var(--floating-size),
     var(--floating-background) var(--floating-size)
   ) !important;
+  background-repeat: repeat;
 }
 
 body.highlightr-rounded

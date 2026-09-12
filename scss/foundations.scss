@@ -1,1 +1,27 @@
-@use "./flexcyon/foundations/foundations";
+// The code snippets in this file are derived from the Halcyon theme
+// - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file
+
+@use "./flexcyon/foundations/accessibility/accessibility";
+@use "./flexcyon/foundations/colors/colors";
+@use "./flexcyon/foundations/base_colors/base_colors";
+@use "./flexcyon/foundations/accent_color/accent";
+@use "./flexcyon/foundations/headings/headings";
+@use "./flexcyon/foundations/hover_colors/hover_colors";
+@use "./flexcyon/foundations/code_colors/code_color";
+@use "./flexcyon/foundations/tabs/tabs";
+@use "./flexcyon/foundations/metadata/metadata";
+@use "./flexcyon/foundations/checkbox/checkbox";
+@use "./flexcyon/foundations/tags/tags";
+@use "./flexcyon/foundations/list_marker/list_marker";
+@use "./flexcyon/foundations/background_colors/background_colors";
+@use "./flexcyon/foundations/interactive/interactive";
+@use "./flexcyon/foundations/icons/icons";
+@use "./flexcyon/foundations/graph/graph";
+@use "./flexcyon/foundations/nav_item/nav_item";
+@use "./flexcyon/foundations/titlebar/titlebar";
+@use "./flexcyon/foundations/links/links";
+@use "./flexcyon/foundations/drag_ghost/drag_ghost";
+@use "./flexcyon/foundations/table/table";
+@use "./flexcyon/foundations/input/input";
+@use "./flexcyon/foundations/typography/typography";
+@use "./flexcyon/foundations/radius/radius";

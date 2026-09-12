@@ -32,6 +32,7 @@ body {
     .mod-left-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
       image-rendering: auto;
       background-image: var(--flexcyon-bg-image-sidebar-left-url);
+      background-repeat: var(--flexcyon-bg-image-repeat);
       background-position: var(--flexcyon-bg-image-position);
       background-size: var(--flexcyon-bg-image-size);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
@@ -53,6 +54,7 @@ body {
     .mod-right-split:not(.is-sidedock-collapsed) .workspace-leaf-content {
       image-rendering: auto;
       background-image: var(--flexcyon-bg-image-sidebar-right-url);
+      background-repeat: var(--flexcyon-bg-image-repeat);
       background-position: var(--flexcyon-bg-image-position);
       background-size: var(--flexcyon-bg-image-size);
       background-blend-mode: var(--flexcyon-bg-image-blend-mode);
@@ -74,6 +76,7 @@ body {
   .modal-bg {
     image-rendering: auto;
     background-image: var(--flexcyon-modal-bg-url);
+    background-repeat: var(--flexcyon-modal-image-repeat);
     background-position: var(--flexcyon-modal-image-position);
     background-size: var(--flexcyon-modal-image-size);
     background-blend-mode: var(--flexcyon-modal-image-blend-mode);
