@@ -120,20 +120,3 @@ body.flexcyon-number-tabs {
 }
 
 /*! obsi-snip-coll end */
-
-body.flexcyon-rtz-mode,
-body.flexcyon-remove-tab-headers {
-  --tab-stacked-font-size: 0px;
-
-  .workspace-tabs .workspace-tab-header {
-    --tab-width: 90px;
-
-    .workspace-tab-header-inner-title {
-      font-size: 0;
-
-      &::before {
-        margin-inline-end: 0;
-      }
-    }
-  }
-}

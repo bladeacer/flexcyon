@@ -1958,6 +1958,11 @@ settings:
     description: Removes tab headers. You can still view the original content by hovering and a tooltip will appear. Meant for RTZ mode, but can be enabled separately.
     type: class-toggle
     default: false
+  - title: Compact Inactive Tab Headers
+    id: flexcyon-compact-inactive-tab-headers
+    description: Make inactive tab headers compact until hovered on with mouse.
+    type: class-toggle
+    default: false
   - title: Reverse order of Tab Header Container and Tabs Content
     id: flexcyon-reverse-tab-header-container
     description: Places tab header container at the bottom instead of the top of the screen, does not do anything for Stacked Tabs.

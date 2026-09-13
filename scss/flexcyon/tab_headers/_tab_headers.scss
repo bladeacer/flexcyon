@@ -1,0 +1,34 @@
+body.flexcyon-rtz-mode,
+body.flexcyon-remove-tab-headers {
+  --tab-stacked-font-size: 0px;
+
+  .workspace-tabs .workspace-tab-header {
+    --tab-width: 90px;
+
+    .workspace-tab-header-inner-title {
+      font-size: 0;
+
+      &::before {
+        margin-inline-end: 0;
+      }
+    }
+  }
+}
+
+body {
+  --flexcyon-compact-tab-constraints: min(25%, 75px);
+}
+
+body.flexcyon-compact-inactive-tab-headers {
+  .workspace .mod-root .workspace-tab-header {
+    &:not(:hover, .is-active, .mod-active) {
+      max-inline-size: var(--flexcyon-compact-tab-constraints);
+    }
+
+    &:hover,
+    &.is-active,
+    &.mod-active {
+      max-inline-size: var(--tab-width);
+    }
+  }
+}
