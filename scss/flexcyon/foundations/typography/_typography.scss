@@ -2,6 +2,7 @@
 // - https://github.com/dbarenholz/halcyon-obsidian?tab=readme-ov-file */
 
 @use "../accessibility/a11y_mixin" as m;
+@use "./typography-modules/inline-title";
 
 body.theme-dark {
   --text-normal-col: #d3d5d3;

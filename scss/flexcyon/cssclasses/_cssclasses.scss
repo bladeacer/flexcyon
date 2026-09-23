@@ -73,13 +73,6 @@
 @include file-w-cls(90);
 @include file-w-cls(95);
 
-body.flexcyon-no-inline-title,
-.no-inline-title {
-  .inline-title {
-    display: none;
-  }
-}
-
 .no-view-header {
   .view-header {
     display: none;

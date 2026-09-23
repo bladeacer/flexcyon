@@ -692,6 +692,32 @@ settings:
     level: 2
     collapsed: true
     description: Configure inline titles of the theme. Set font size, font weight, line height, do not display inline title.
+  - title: Inline title colour
+    description: Colour of inline title
+    id: inline-title-color
+    type: variable-select
+    default: var(--color-blue)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Inline title font size
     id: inline-title-size
     type: variable-number
