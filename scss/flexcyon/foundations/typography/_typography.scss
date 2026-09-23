@@ -3,6 +3,8 @@
 
 @use "../accessibility/a11y_mixin" as m;
 @use "./typography-modules/inline-title";
+@use "./typography-modules/titlebar";
+@use "./typography-modules/headings";
 
 body.theme-dark {
   --text-normal-col: #d3d5d3;
