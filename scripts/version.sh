@@ -13,11 +13,11 @@ if [ -z "$VERSION_NUMBER" ]; then
 fi
 
 # Get the Custom Commit Message
-echo "Enter a commit message (leave empty for '[Chore]: Release version $VERSION_NUMBER'):"
+echo "Enter a commit message (leave empty for 'chore: Release version $VERSION_NUMBER'):"
 read COMMIT_MSG
 
 if [ -z "$COMMIT_MSG" ]; then
-    COMMIT_MSG="[Chore]: Release version $VERSION_NUMBER"
+    COMMIT_MSG="chore: Release version $VERSION_NUMBER"
 fi
 
 # Git Actions
