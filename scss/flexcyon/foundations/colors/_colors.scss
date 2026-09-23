@@ -6,6 +6,11 @@
 // - https://github.com/7368697661/Origami
 
 @use "../accessibility/a11y_mixin" as m;
+@use "./color-modules/base_colors";
+@use "./color-modules/background_colors";
+@use "./color-modules/accent_colors";
+@use "./color-modules/hover_colors";
+@use "./color-modules/code_color";
 
 body.theme-dark {
   --flexcyon-cyan: #3cb9c2;

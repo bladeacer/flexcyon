@@ -5,7 +5,7 @@
 // As well as the origami theme for the light theme colour palette
 // - https://github.com/7368697661/Origami
 
-@use "../accessibility/a11y_mixin" as m;
+@use "../../accessibility/a11y_mixin" as m;
 
 body.theme-dark {
   --flexcyon-base-01: #14161c;

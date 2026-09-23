@@ -5,7 +5,7 @@
 // And the great origami theme
 // - https://github.com/7368697661/Origami
 
-@use "../accessibility/a11y_mixin" as m;
+@use "../../accessibility/a11y_mixin" as m;
 
 body {
   --flexcyon-editor-bg-width: 15px;
