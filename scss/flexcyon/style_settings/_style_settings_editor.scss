@@ -1268,11 +1268,19 @@ settings:
         value: flexcyon-anims-slide-tl
       - label: Slide Top-Right
         value: flexcyon-anims-slide-tr
+      - label: Slide Bottom-Left
+        value: flexcyon-anims-slide-bl
+      - label: Slide Bottom-Right
+        value: flexcyon-anims-slide-br
 
       - label: Spin Right to Left
         value: flexcyon-anims-spin-rl
+      - label: Spin Left to Right
+        value: flexcyon-anims-spin-lr
       - label: Spin Bottom to Top
         value: flexcyon-anims-spin-bt
+      - label: Spin Top to Bottom
+        value: flexcyon-anims-spin-tb
       - label: Flip Horizontal (X-Axis)
         value: flexcyon-anims-flip-x
       - label: Flip Vertical (Y-Axis)
@@ -1285,12 +1293,21 @@ settings:
       - label: Swing In
         value: flexcyon-anims-swing-in
 
+      - label: Glide (3D Tilt)
+        value: flexcyon-anims-glide-in
+      - label: Aura Glow
+        value: flexcyon-anims-aura-glow
+      - label: TV Effect (Retro CRT)
+        value: flexcyon-anims-tv-effect
+      - label: Apparition (Void Magic)
+        value: flexcyon-anims-apparition
+
   - id: flexcyon-modal-anim-type
     title: Modal & Prompt Animation Type
     description: Configure transition animation for modals, quick switchers, and settings prompts.
     type: class-select
     allowEmpty: true
-    default: flexcyon-modal-anims-pop-in
+    default: flexcyon-modal-anims-pulse-in
     options:
       - label: None
         value: none
@@ -1316,11 +1333,19 @@ settings:
         value: flexcyon-modal-anims-slide-tl
       - label: Slide Top-Right
         value: flexcyon-modal-anims-slide-tr
+      - label: Slide Bottom-Left
+        value: flexcyon-modal-anims-slide-bl
+      - label: Slide Bottom-Right
+        value: flexcyon-modal-anims-slide-br
 
       - label: Spin Right to Left
         value: flexcyon-modal-anims-spin-rl
+      - label: Spin Left to Right
+        value: flexcyon-modal-anims-spin-lr
       - label: Spin Bottom to Top
         value: flexcyon-modal-anims-spin-bt
+      - label: Spin Top to Bottom
+        value: flexcyon-modal-anims-spin-tb
       - label: Flip Horizontal (X-Axis)
         value: flexcyon-modal-anims-flip-x
       - label: Flip Vertical (Y-Axis)
@@ -1332,6 +1357,15 @@ settings:
         value: flexcyon-modal-anims-bounce-in
       - label: Swing In
         value: flexcyon-modal-anims-swing-in
+
+      - label: Glide (3D Tilt)
+        value: flexcyon-modal-anims-glide-in
+      - label: Aura Glow
+        value: flexcyon-modal-anims-aura-glow
+      - label: TV Effect (Retro CRT)
+        value: flexcyon-modal-anims-tv-effect
+      - label: Apparition (Void Magic)
+        value: flexcyon-modal-anims-apparition
 
   - title: Animation duration
     id: flexcyon-anim-duration

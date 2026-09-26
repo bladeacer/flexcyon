@@ -1,7 +1,3 @@
-/* ==========================================================================
-   Variables & Configuration
-   ========================================================================== */
-
 body {
   --flexcyon-anim-duration: 300ms;
   --flexcyon-anim-easing: ease-in-out;
@@ -12,10 +8,6 @@ body {
   --flexcyon-anim-blur-amount: 8px;
   --flexcyon-anim-pop-scale: 1.05;
 }
-
-/* ==========================================================================
-   Animation Definitions (Simple Two-State)
-   ========================================================================== */
 
 @mixin anims-def($anim-name, $transform-start, $transform-end: none) {
   @keyframes #{$anim-name} {
@@ -45,10 +37,20 @@ body {
   slide-in-tr,
   translate3d(var(--flexcyon-anim-slide-amount), calc(var(--flexcyon-anim-slide-amount) * -1), 0)
 );
+@include anims-def(
+  slide-in-bl,
+  translate3d(calc(var(--flexcyon-anim-slide-amount) * -1), var(--flexcyon-anim-slide-amount), 0)
+);
+@include anims-def(
+  slide-in-br,
+  translate3d(var(--flexcyon-anim-slide-amount), var(--flexcyon-anim-slide-amount), 0)
+);
 
-// 3D Rotations & Flips
+// 3D Rotations & Spins
 @include anims-def(spin-in-rl, rotateY(var(--flexcyon-anim-rotate-amount)));
+@include anims-def(spin-in-lr, rotateY(calc(var(--flexcyon-anim-rotate-amount) * -1)));
 @include anims-def(spin-in-bt, rotateX(var(--flexcyon-anim-rotate-amount)));
+@include anims-def(spin-in-tb, rotateX(calc(var(--flexcyon-anim-rotate-amount) * -1)));
 @include anims-def(flip-in-x, perspective(800px) rotateX(-90deg));
 @include anims-def(flip-in-y, perspective(800px) rotateY(90deg));
 
@@ -57,11 +59,7 @@ body {
 @include anims-def(fade-in, none, none);
 
 
-/* ==========================================================================
-   Animation Definitions (Multi-Step / Special Effects)
-   ========================================================================== */
-
-// Pop / Spring In (Uses overshoot easing scale)
+// Pop / Spring In
 @keyframes pop-in {
   0% {
     opacity: var(--flexcyon-anim-start-opacity);
@@ -144,35 +142,117 @@ body {
 }
 
 
-/* ==========================================================================
-   Selectors & Binding Map
-   ========================================================================== */
+// "Burn My Windows" Inspired Pure CSS Implementations
+
+// Glide (Subtle 3D Tilt & Fade)
+@keyframes glide-in {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(-15deg) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0);
+  }
+}
+
+// Aura Glow (Edge-lit Pulse)
+@keyframes aura-glow-in {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 0 rgba(var(--interactive-accent-rgb, 100, 100, 255), 0.8);
+    transform: scale(0.98);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(var(--interactive-accent-rgb, 100, 100, 255), 0.6);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(var(--interactive-accent-rgb, 100, 100, 255), 0);
+    transform: scale(1);
+  }
+}
+
+// TV Effect (Retro CRT Shut-In / Open)
+@keyframes tv-effect-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.005, 0.005);
+    filter: brightness(5);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1, 0.005);
+    filter: brightness(3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+    filter: brightness(1);
+  }
+}
+
+// Apparition (Sucked In / Materialized from Void)
+@keyframes apparition-in {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-360deg);
+    filter: blur(20px);
+  }
+  80% {
+    transform: scale(1.05) rotate(15deg);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+  }
+}
+
 
 $animation-map: (
+  // Fades & Scales
+  "fade-in": fade-in,
   "scale-up": scale-up,
-  "slide-rtl": slide-in-right,
+  "pop-in": pop-in,
+  "pulse-in": pulse-in,
+
+  // Directional Slides
   "slide-ltr": slide-in-left,
+  "slide-rtl": slide-in-right,
   "slide-tb": slide-in-tb,
   "slide-bt": slide-in-bt,
   "slide-tl": slide-in-tl,
   "slide-tr": slide-in-tr,
+  "slide-bl": slide-in-bl,
+  "slide-br": slide-in-br,
+
+  // Rotations & 3D Flips
   "spin-rl": spin-in-rl,
+  "spin-lr": spin-in-lr,
   "spin-bt": spin-in-bt,
+  "spin-tb": spin-in-tb,
   "flip-x": flip-in-x,
   "flip-y": flip-in-y,
-  "fade-in": fade-in,
-  "pop-in": pop-in,
+
+  // Special Effects
   "blur-in": blur-in,
   "bounce-in": bounce-in,
   "swing-in": swing-in,
-  "pulse-in": pulse-in
+
+  // Burn My Windows
+  "glide-in": glide-in,
+  "aura-glow": aura-glow-in,
+  "tv-effect": tv-effect-in,
+  "apparition": apparition-in
 );
 
 // Helper for combined modal and settings container target rules
 @mixin apply-modal-animation($anim-type) {
   .modal,
   .prompt {
-    will-change: transform, opacity;
+    will-change: transform, opacity, filter, box-shadow;
     animation: $anim-type var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
   }
 }
@@ -180,7 +260,7 @@ $animation-map: (
 @mixin apply-workspace-animation($anim-type) {
   .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type="file-explorer"], [data-type="undefined"]),
   .workspace-leaf.mod-active .view-content {
-    will-change: transform, opacity;
+    will-change: transform, opacity, filter, box-shadow;
     animation: $anim-type var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
   }
 }
@@ -197,7 +277,7 @@ $animation-map: (
 
   body.flexcyon-anims-modal-#{$class-name}.flexcyon-anim-style-settings-contain {
     .style-settings-container {
-      will-change: transform, opacity;
+      will-change: transform, opacity, filter, box-shadow;
       animation: $animation-name var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
   }
