@@ -15,6 +15,7 @@ body {
       opacity: var(--flexcyon-anim-start-opacity);
       transform: $transform-start;
     }
+
     100% {
       opacity: 1;
       transform: $transform-end;
@@ -23,34 +24,65 @@ body {
 }
 
 // Directional Slides
-@include anims-def(slide-in-left, translateX(calc(var(--flexcyon-anim-slide-amount) * -1)));
-@include anims-def(slide-in-right, translateX(var(--flexcyon-anim-slide-amount)));
-@include anims-def(slide-in-tb, translateY(calc(var(--flexcyon-anim-slide-amount) * -1)));
+@include anims-def(
+  slide-in-left,
+  translateX(calc(var(--flexcyon-anim-slide-amount) * -1))
+);
+@include anims-def(
+  slide-in-right,
+  translateX(var(--flexcyon-anim-slide-amount))
+);
+@include anims-def(
+  slide-in-tb,
+  translateY(calc(var(--flexcyon-anim-slide-amount) * -1))
+);
 @include anims-def(slide-in-bt, translateY(var(--flexcyon-anim-slide-amount)));
 
 // Diagonal Slides
 @include anims-def(
   slide-in-tl,
-  translate3d(calc(var(--flexcyon-anim-slide-amount) * -1), calc(var(--flexcyon-anim-slide-amount) * -1), 0)
+  translate3d(
+    calc(var(--flexcyon-anim-slide-amount) * -1),
+    calc(var(--flexcyon-anim-slide-amount) * -1),
+    0
+  )
 );
 @include anims-def(
   slide-in-tr,
-  translate3d(var(--flexcyon-anim-slide-amount), calc(var(--flexcyon-anim-slide-amount) * -1), 0)
+  translate3d(
+    var(--flexcyon-anim-slide-amount),
+    calc(var(--flexcyon-anim-slide-amount) * -1),
+    0
+  )
 );
 @include anims-def(
   slide-in-bl,
-  translate3d(calc(var(--flexcyon-anim-slide-amount) * -1), var(--flexcyon-anim-slide-amount), 0)
+  translate3d(
+    calc(var(--flexcyon-anim-slide-amount) * -1),
+    var(--flexcyon-anim-slide-amount),
+    0
+  )
 );
 @include anims-def(
   slide-in-br,
-  translate3d(var(--flexcyon-anim-slide-amount), var(--flexcyon-anim-slide-amount), 0)
+  translate3d(
+    var(--flexcyon-anim-slide-amount),
+    var(--flexcyon-anim-slide-amount),
+    0
+  )
 );
 
 // 3D Rotations & Spins
 @include anims-def(spin-in-rl, rotateY(var(--flexcyon-anim-rotate-amount)));
-@include anims-def(spin-in-lr, rotateY(calc(var(--flexcyon-anim-rotate-amount) * -1)));
+@include anims-def(
+  spin-in-lr,
+  rotateY(calc(var(--flexcyon-anim-rotate-amount) * -1))
+);
 @include anims-def(spin-in-bt, rotateX(var(--flexcyon-anim-rotate-amount)));
-@include anims-def(spin-in-tb, rotateX(calc(var(--flexcyon-anim-rotate-amount) * -1)));
+@include anims-def(
+  spin-in-tb,
+  rotateX(calc(var(--flexcyon-anim-rotate-amount) * -1))
+);
 @include anims-def(flip-in-x, perspective(800px) rotateX(-90deg));
 @include anims-def(flip-in-y, perspective(800px) rotateY(90deg));
 
@@ -58,17 +90,18 @@ body {
 @include anims-def(scale-up, scale(var(--flexcyon-anim-start-scale-amt)));
 @include anims-def(fade-in, none, none);
 
-
 // Pop / Spring In
 @keyframes pop-in {
   0% {
     opacity: var(--flexcyon-anim-start-opacity);
     transform: scale(var(--flexcyon-anim-start-scale-amt));
   }
+
   70% {
     opacity: 1;
     transform: scale(var(--flexcyon-anim-pop-scale));
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -82,6 +115,7 @@ body {
     filter: blur(var(--flexcyon-anim-blur-amount));
     transform: scale(0.96);
   }
+
   100% {
     opacity: 1;
     filter: blur(0);
@@ -95,13 +129,16 @@ body {
     opacity: 0;
     transform: translateY(calc(var(--flexcyon-anim-slide-amount) * -1));
   }
+
   60% {
     opacity: 1;
     transform: translateY(12px);
   }
+
   80% {
     transform: translateY(-4px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -111,17 +148,19 @@ body {
 @keyframes swing-in {
   0% {
     opacity: 0;
-    transform-origin: top center;
     transform: rotate3d(0, 0, 1, -30deg);
+    transform-origin: top center;
   }
+
   60% {
     opacity: 1;
-    transform-origin: top center;
     transform: rotate3d(0, 0, 1, 15deg);
-  }
-  100% {
     transform-origin: top center;
+  }
+
+  100% {
     transform: rotate3d(0, 0, 1, 0deg);
+    transform-origin: top center;
   }
 }
 
@@ -131,85 +170,128 @@ body {
     opacity: var(--flexcyon-anim-start-opacity);
     transform: scale(0.92);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.03);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
 
+// Burn My Windows stuff
 
-// "Burn My Windows" Inspired Pure CSS Implementations
-
-// Glide (Subtle 3D Tilt & Fade)
+// Glide (Upstream Burn-My-Windows match: Subtle 3D perspective drift)
 @keyframes glide-in {
   0% {
     opacity: 0;
-    transform: perspective(1000px) rotateX(-15deg) translateY(-20px);
+    transform: perspective(2000px) translateY(16px) rotateX(-4deg);
+    transform-origin: center top;
   }
+
   100% {
     opacity: 1;
-    transform: perspective(1000px) rotateX(0deg) translateY(0);
+    transform: perspective(2000px) translateY(0) rotateX(0deg);
+    transform-origin: center top;
   }
 }
 
-// Aura Glow (Edge-lit Pulse)
+@keyframes glide-out {
+  0% {
+    opacity: 1;
+    transform: perspective(2000px) translateY(0) rotateX(0deg);
+    transform-origin: center top;
+  }
+
+  100% {
+    opacity: 0;
+    transform: perspective(2000px) translateY(16px) rotateX(-4deg);
+    transform-origin: center top;
+  }
+}
+
+// Aura Glow (GPU-optimized via opacity + drop-shadow filter)
+// Upstream: Soft, high-spread radiant outline expanding outward using OKLCH accent color
 @keyframes aura-glow-in {
   0% {
     opacity: 0;
-    box-shadow: 0 0 0 0 rgba(var(--interactive-accent-rgb, 100, 100, 255), 0.8);
+    filter: drop-shadow(0 0 0 oklch(from var(--interactive-accent) l c h / 0%));
     transform: scale(0.98);
   }
-  50% {
-    box-shadow: 0 0 30px 10px rgba(var(--interactive-accent-rgb, 100, 100, 255), 0.6);
+
+  45% {
+    opacity: 0.95;
+    filter: drop-shadow(
+        0 0 20px oklch(from var(--interactive-accent) l c h / 80%)
+      )
+      drop-shadow(0 0 40px oklch(from var(--interactive-accent) l c h / 40%));
   }
+
   100% {
     opacity: 1;
-    box-shadow: 0 0 0 0 rgba(var(--interactive-accent-rgb, 100, 100, 255), 0);
+    filter: drop-shadow(0 0 0 oklch(from var(--interactive-accent) l c h / 0%));
     transform: scale(1);
   }
 }
 
-// TV Effect (Retro CRT Shut-In / Open)
+// TV Effect (Retro CRT Shut-Off / Turn-On)
+// Upstream: Vertical squash to line -> horizontal contract to point -> flash bright
 @keyframes tv-effect-in {
   0% {
     opacity: 0;
-    transform: scale(0.005, 0.005);
-    filter: brightness(5);
+    filter: brightness(10) contrast(2);
+
+    // Single bright center point
+    transform: scale(0.002, 0.002);
   }
+
   40% {
     opacity: 1;
-    transform: scale(1, 0.005);
-    filter: brightness(3);
+    filter: brightness(5) contrast(1.5);
+
+    // Expand to thin horizontal line
+    transform: scale(1, 0.004);
   }
+
+  85% {
+    filter: brightness(1.2);
+
+    // Unfold vertically to near-full size
+    transform: scale(1, 1.02);
+  }
+
   100% {
     opacity: 1;
-    transform: scale(1, 1);
     filter: brightness(1);
+    transform: scale(1, 1);
   }
 }
 
-// Apparition (Sucked In / Materialized from Void)
+// Apparition
+// Upstream: Vortex suck into a point with rotation spin and heavy blur drop
 @keyframes apparition-in {
   0% {
     opacity: 0;
-    transform: scale(0) rotate(-360deg);
     filter: blur(20px);
+    transform: scale(0.05) rotate(-220deg);
+    transform-origin: 50% 50%;
   }
-  80% {
-    transform: scale(1.05) rotate(15deg);
-    filter: blur(2px);
+
+  65% {
+    opacity: 0.85;
+    filter: blur(3px);
+    transform: scale(1.05) rotate(12deg);
   }
+
   100% {
     opacity: 1;
-    transform: scale(1) rotate(0deg);
     filter: blur(0);
+    transform: scale(1) rotate(0deg);
   }
 }
-
 
 $animation-map: (
   // Fades & Scales
@@ -243,6 +325,7 @@ $animation-map: (
 
   // Burn My Windows
   "glide-in": glide-in,
+  "glide-out": glide-out,
   "aura-glow": aura-glow-in,
   "tv-effect": tv-effect-in,
   "apparition": apparition-in
@@ -252,16 +335,23 @@ $animation-map: (
 @mixin apply-modal-animation($anim-type) {
   .modal,
   .prompt {
+    animation: $anim-type var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
     will-change: transform, opacity, filter, box-shadow;
-    animation: $anim-type var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
   }
 }
 
 @mixin apply-workspace-animation($anim-type) {
-  .mod-stacked .workspace-leaf.mod-active .workspace-leaf-content:not([data-type="file-explorer"], [data-type="undefined"]),
+  .mod-stacked
+    .workspace-leaf.mod-active
+    .workspace-leaf-content:not(
+      [data-type="file-explorer"],
+      [data-type="undefined"]
+    ),
   .workspace-leaf.mod-active .view-content {
+    animation: $anim-type var(--flexcyon-anim-duration)
+      var(--flexcyon-anim-easing);
     will-change: transform, opacity, filter, box-shadow;
-    animation: $anim-type var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
   }
 }
 
@@ -277,8 +367,10 @@ $animation-map: (
 
   body.flexcyon-anims-modal-#{$class-name}.flexcyon-anim-style-settings-contain {
     .style-settings-container {
+      animation: $animation-name
+        var(--flexcyon-anim-duration)
+        var(--flexcyon-anim-easing);
       will-change: transform, opacity, filter, box-shadow;
-      animation: $animation-name var(--flexcyon-anim-duration) var(--flexcyon-anim-easing);
     }
   }
 }
