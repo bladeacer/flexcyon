@@ -1442,6 +1442,12 @@ settings:
       - 
         label: Rhombus Background
         value: flexcyon-editor-rhombus
+      - 
+        label: Circle Background
+        value: flexcyon-editor-circle
+      - 
+        label: Chess Background
+        value: flexcyon-editor-chess
   - title: Rotation value for grid and rhombus background
     description: How many degrees the grid background will be rotated
     id: flexcyon-editor-bg-rotation
@@ -1457,6 +1463,16 @@ settings:
     id: flexcyon-editor-dot-size
     type: variable-number
     default: 2.5
+    format: px
+  - title: Alternate Width for editor background
+    id: flexcyon-editor-bg-width-2
+    type: variable-number
+    default: 40
+    format: px
+  - title: Alternate dot size for editor background
+    id: flexcyon-editor-dot-size-2
+    type: variable-number
+    default: 6 
     format: px
 
   - title: Callouts
