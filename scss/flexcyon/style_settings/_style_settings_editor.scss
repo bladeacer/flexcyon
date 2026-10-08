@@ -1053,6 +1053,35 @@ settings:
     type: variable-number
     default: 12
     format: px
+  - title: View Header Text Justification
+    id: file-header-justify
+    type: variable-select
+    default: center
+    options: 
+      - label: Start
+        value: start
+      - label: Center
+        value: center
+      - label: End
+        value: end
+      - label: Flex Start
+        value: flex-start
+      - label: Flex End
+        value: flex-end
+      - label: Left
+        value: left
+      - label: Right
+        value: right
+      - label: Normal
+        value: normal
+      - label: Space Between
+        value: space-between
+      - label: Space Around
+        value: space-around
+      - label: Space Evenly
+        value: space-evenly
+      - label: Stretch
+        value: stretch
 
   - title: Prompts
     type: heading

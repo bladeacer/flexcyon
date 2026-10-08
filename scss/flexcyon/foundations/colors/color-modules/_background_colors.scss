@@ -63,14 +63,21 @@ body {
   --slider-track-background: var(--color-base-25);
 }
 
-@mixin apply-bg-pattern($name, $color-1: var(--flexcyon-editor-bg-color, var(--xyz-editor-bg-col-def, #888888)), $color-2: var(--xyz-editor-bg-color-2, #888888)) {
+@mixin apply-bg-pattern(
+  $name,
+  $color-1: var(
+      --flexcyon-editor-bg-color,
+      var(--xyz-editor-bg-col-def, #888888)
+    ),
+  $color-2: var(--xyz-editor-bg-color-2, #888888)
+) {
   body.flexcyon-editor-#{$name} .canvas-background,
   body.flexcyon-editor-#{$name} .kanban-plugin div,
   div.callout[data-callout*="bg-#{$name}"] .callout-content,
   div.callout[data-callout-metadata*="bg-#{$name}"] .callout-content,
   .editor-#{$name},
   body.flexcyon-editor-#{$name} .view-content [class*="markdown-"] {
-    @content($color-1);
+    @content ($color-1);
 
     * {
       background-image: none;
@@ -81,7 +88,7 @@ body {
   body.flexcyon-sidebar-bg-#{$name} {
     div .mod-left-split .workspace-leaf-content:not([data-type="graph"]) *,
     div .mod-right-split .workspace-leaf-content:not([data-type="graph"]) * {
-      @content($color-2);
+      @content ($color-2);
 
       * {
         background-image: none;
@@ -116,7 +123,8 @@ body {
     transparent 1px
   );
   background-repeat: repeat;
-  background-size: var(--flexcyon-editor-bg-width, 15px) var(--xyz-editor-bg-width, 15px);
+  background-size: var(--flexcyon-editor-bg-width, 15px)
+    var(--xyz-editor-bg-width, 15px);
 }
 
 @mixin pattern-rhombus($color) {
@@ -140,29 +148,45 @@ body {
 
 @mixin pattern-circle($color) {
   background-image:
-    radial-gradient(circle at 25% 25%, #{$color} 0 var(--flexcyon-editor-dot-size-2, 6px), transparent calc(var(--xyz-editor-dot-size-2, 6px) + 0.5px)),
-    radial-gradient(circle at 75% 75%, #{$color} 0 var(--flexcyon-editor-dot-size-2, 6px), transparent calc(var(--xyz-editor-dot-size-2, 6px) + 0.5px));
-  background-size: var(--flexcyon-editor-bg-width-2, 40px) var(--xyz-editor-bg-width-2, 40px);
+    radial-gradient(
+      circle at 25% 25%,
+      #{$color} 0 var(--flexcyon-editor-dot-size-2, 6px),
+      transparent calc(var(--xyz-editor-dot-size-2, 6px) + 0.5px)
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      #{$color} 0 var(--flexcyon-editor-dot-size-2, 6px),
+      transparent calc(var(--xyz-editor-dot-size-2, 6px) + 0.5px)
+    );
   background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width-2, 40px)
+    var(--xyz-editor-bg-width-2, 40px);
 }
 
 @mixin pattern-chess($color) {
-  background-image:
-    conic-gradient(#{$color} 90deg, transparent 90deg 180deg, #{$color} 180deg 270deg, transparent 270deg);
-  background-size: var(--flexcyon-editor-bg-width-2, 40px) var(--xyz-editor-bg-width-2, 40px);
+  background-image: conic-gradient(
+    #{$color} 90deg,
+    transparent 90deg 180deg,
+    #{$color} 180deg 270deg,
+    transparent 270deg
+  );
   background-repeat: repeat;
+  background-size: var(--flexcyon-editor-bg-width-2, 40px)
+    var(--xyz-editor-bg-width-2, 40px);
 }
 
 /*! obsi-snip-coll start: grid-background */
 @include apply-bg-pattern("grid") using ($color) {
   @include pattern-grid($color);
 }
+
 /*! obsi-snip-coll end */
 
 /*! obsi-snip-coll start: dotted-background */
 @include apply-bg-pattern("dots") using ($color) {
   @include pattern-dots($color);
 }
+
 /*! obsi-snip-coll end */
 
 /*! obsi-snip-coll start: rhombus-background */
@@ -173,16 +197,19 @@ body {
     display: none;
   }
 }
+
 /*! obsi-snip-coll end */
 
 /*! obsi-snip-coll start: circle-background */
 @include apply-bg-pattern("circle") using ($color) {
   @include pattern-circle($color);
 }
+
 /*! obsi-snip-coll end */
 
 /*! obsi-snip-coll start: chess-background */
 @include apply-bg-pattern("chess") using ($color) {
   @include pattern-chess($color);
 }
+
 /*! obsi-snip-coll end */
