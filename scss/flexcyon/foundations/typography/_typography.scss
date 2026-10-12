@@ -145,3 +145,16 @@ body.theme-light {
       oklch(from var(--text-highlight-bg) l c h / 80%);
   }
 }
+
+body.flexcyon-glow-active-line {
+  --flexcyon-glow-active-offset-x: 1px;
+  --flexcyon-glow-active-offset-y: 1px;
+  --flexcyon-glow-active-blur-radius: 2px;
+  --flexcyon-glow-active-color: var(--text-normal);
+
+  .cm-line.cm-active {
+    text-shadow: var(--flexcyon-glow-active-offset-x)
+      var(--flexcyon-glow-active-offset-y)
+      var(--flexcyon-glow-active-blur-radius) var(--flexcyon-glow-active-color);
+  }
+}

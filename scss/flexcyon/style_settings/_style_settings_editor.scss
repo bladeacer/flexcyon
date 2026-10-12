@@ -1875,16 +1875,60 @@ settings:
     type: class-toggle
     default: false
 
-  - title: Line Numbers
+  - title: Lines
     type: heading
     level: 1
     collapsed: true
-    description: Configure and customise line numbers.
+    description: Configure and customise active lines and line numbers.
   - title: Highlight Active Line
     description: Highlights the active line while editing.
     id: flexcyon-highlight-active-line
     type: class-toggle
     default: false
+  - title: Glow Active Line
+    description: Adds glow the active line while editing.
+    id: flexcyon-glow-active-line
+    type: class-toggle
+    default: false
+  - title: Glow Active Line x Offset
+    id: flexcyon-glow-active-offset-x
+    type: variable-number
+    default: 1
+    format: px
+  - title: Glow Active Line y Offset
+    id: flexcyon-glow-active-offset-y
+    type: variable-number
+    default: 1
+  - title: Glow Active Line Blur Intensity
+    id: flexcyon-glow-active-blur-radius
+    type: variable-number
+    default: 2
+    format: px
+  - title: Glow Active Text Colour
+    id: flexcyon-glow-active-color
+    type: variable-select
+    default: var(--text-normal)
+    options: 
+      - label: Cyan
+        value: var(--color-cyan)
+      - label: Blue
+        value: var(--color-blue)
+      - label: Purple
+        value: var(--color-purple)
+      - label: Pink
+        value: var(--color-pink)
+      - label: Red
+        value: var(--color-red)
+      - label: Orange
+        value: var(--color-orange)
+      - label: Yellow
+        value: var(--color-yellow)
+      - label: Green
+        value: var(--color-green)
+      - label: Accent
+        value: var(--text-accent)
+      - label: Normal text
+        value: var(--text-normal)
   - title: Enable Relative Line Numbers
     description: Enable Relative Line Numbers. Adapted from Shimmering Focus Theme
     id: flexcyon-enable-rel-nums
