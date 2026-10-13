@@ -632,7 +632,7 @@ settings:
     type: heading
     level: 3
     collapsed: true
-    description: Configure Heading 1s of the theme. Set heading indicators, colours, font size, font weight, line height, underline, text alignment.
+    description: Configure Heading 1s of the theme. Set heading indicators, colours, font size, font weight, font family, line height, underline, text alignment.
   - title: Enable heading indicators globally for Heading 1
     id: flexcyon-headings-indicator-h1
     type: class-toggle
@@ -692,6 +692,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 1 font group
+    id: h1-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Heading 2
     type: heading
@@ -757,6 +768,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 2 font group
+    id: h2-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Heading 3
     type: heading
@@ -822,6 +844,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 3 font group
+    id: h3-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Heading 4
     type: heading
@@ -887,6 +920,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 4 font group
+    id: h4-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Heading 5
     type: heading
@@ -952,6 +996,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 5 font group
+    id: h5-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Heading 6
     type: heading
@@ -1017,6 +1072,17 @@ settings:
         value: center
       - label: Right
         value: right
+  - title: Heading 6 font group
+    id: h6-font
+    type: variable-select
+    default: var(--font-text)
+    options:
+      - label: Monospace Font
+        value: var(--font-monospace)
+      - label: Interface Font
+        value: var(--font-interface)
+      - label: Text Font
+        value: var(--font-text)
 
   - title: Inline title
     type: heading
@@ -2939,7 +3005,7 @@ settings:
     id: flexcyon-new-tab-mod
     allowEmpty: true
     default: none
-    options: 
+    options:
       - 
         label: ASCII art
         value: flexcyon-ascii-enable
@@ -2950,7 +3016,7 @@ settings:
     id: flexcyon-new-tab-font-group
     type: variable-select
     default: var(--font-monospace)
-    options: 
+    options:
       - label: Monospace Font
         value: var(--font-monospace)
       - label: Interface Font
@@ -3022,7 +3088,7 @@ settings:
     id: flexcyon-ascii-alignment
     type: variable-select
     default: left
-    options: 
+    options:
       - label: Left
         value: left
       - label: Center
@@ -3104,7 +3170,7 @@ settings:
     id: flexcyon-sidebar-bg
     allowEmpty: true
     default: none
-    options: 
+    options:
       - 
         label: Grid
         value: flexcyon-sidebar-bg-grid

@@ -59,7 +59,7 @@ settings:
     id: flexcyon-new-tab-mod
     allowEmpty: true
     default: none
-    options: 
+    options:
       - 
         label: ASCII art
         value: flexcyon-ascii-enable
@@ -70,7 +70,7 @@ settings:
     id: flexcyon-new-tab-font-group
     type: variable-select
     default: var(--font-monospace)
-    options: 
+    options:
       - label: Monospace Font
         value: var(--font-monospace)
       - label: Interface Font
@@ -142,7 +142,7 @@ settings:
     id: flexcyon-ascii-alignment
     type: variable-select
     default: left
-    options: 
+    options:
       - label: Left
         value: left
       - label: Center
@@ -224,7 +224,7 @@ settings:
     id: flexcyon-sidebar-bg
     allowEmpty: true
     default: none
-    options: 
+    options:
       - 
         label: Grid
         value: flexcyon-sidebar-bg-grid
