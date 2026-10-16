@@ -1148,6 +1148,23 @@ settings:
         value: space-evenly
       - label: Stretch
         value: stretch
+  - title: View Header Font Size
+    id: file-header-font-size
+    type: variable-select
+    default: var(--font-ui-small)
+    options: 
+      - label: Smaller UI Font size
+        value: var(--font-ui-smaller)
+      - label: Small UI Font size
+        value: var(--font-ui-small)
+      - label: Medium UI Font size
+        value: var(--font-ui-medium)
+      - label: Large UI Font size
+        value: var(--font-ui-large)
+  - title: View Header Font Weight
+    id: file-header-font-weight
+    type: variable-number
+    default: 400
 
   - title: Prompts
     type: heading
