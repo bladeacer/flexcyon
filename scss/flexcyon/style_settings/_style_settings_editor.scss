@@ -1350,7 +1350,7 @@ settings:
     collapsed: true
 
   - id: flexcyon-anim-type
-    title: Note & View Animation Type
+    title: Note Animation Type
     description: Configure entry animation for note views and open workspace leaves.
     type: class-select
     allowEmpty: true
@@ -1417,7 +1417,7 @@ settings:
         value: flexcyon-anims-apparition
 
   - id: flexcyon-modal-anim-type
-    title: Modal & Prompt Animation Type
+    title: Modal Animation Type
     description: Configure transition animation for modals, quick switchers, and settings prompts.
     type: class-select
     allowEmpty: true
